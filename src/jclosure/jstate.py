@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import math
 from dataclasses import dataclass
@@ -21,6 +22,20 @@ class ConceptVocabulary:
     model_id: str | None = None
     model_revision: str | None = None
 
+    @property
+    def digest(self) -> str:
+        payload = json.dumps(
+            {
+                "token_ids": self.token_ids,
+                "surfaces": self.surfaces,
+                "model_id": self.model_id,
+                "model_revision": self.model_revision,
+            },
+            sort_keys=True,
+            separators=(",", ":"),
+        ).encode()
+        return hashlib.sha256(payload).hexdigest()
+
     def __post_init__(self) -> None:
         if len(self.token_ids) != len(self.surfaces):
             raise ValueError("token_ids and surfaces must have equal length")
@@ -29,9 +44,11 @@ class ConceptVocabulary:
 
     def to_json(self, path: str | Path) -> None:
         payload = {
-            "schema_version": 1,
+            "schema_version": 2,
             "model_id": self.model_id,
             "model_revision": self.model_revision,
+            "dictionary_size": len(self.token_ids),
+            "dictionary_hash": self.digest,
             "concepts": [
                 {"token_id": token_id, "surface": surface}
                 for token_id, surface in zip(self.token_ids, self.surfaces, strict=True)
@@ -120,6 +137,37 @@ def build_concept_vocabulary(
     )
 
 
+def build_nested_concept_vocabularies(
+    tokenizer: Any,
+    *,
+    sizes: tuple[int, ...] | list[int] = (4096, 8192, 16384),
+    mandatory_surfaces: tuple[str, ...] | list[str] = (),
+    model_id: str | None = None,
+    model_revision: str | None = None,
+) -> dict[int, ConceptVocabulary]:
+    """Build prefix-nested dictionaries so size sensitivity is paired."""
+
+    normalized_sizes = tuple(sorted(set(int(size) for size in sizes)))
+    if not normalized_sizes or normalized_sizes[0] <= 0:
+        raise ValueError("dictionary sizes must be positive")
+    largest = build_concept_vocabulary(
+        tokenizer,
+        size=normalized_sizes[-1],
+        mandatory_surfaces=mandatory_surfaces,
+        model_id=model_id,
+        model_revision=model_revision,
+    )
+    return {
+        size: ConceptVocabulary(
+            token_ids=largest.token_ids[:size],
+            surfaces=largest.surfaces[:size],
+            model_id=model_id,
+            model_revision=model_revision,
+        )
+        for size in normalized_sizes
+    }
+
+
 @dataclass(frozen=True)
 class JState:
     layer: int
@@ -132,6 +180,11 @@ class JState:
     activation_norm: float
     reconstruction_error: float
     variance_explained: float
+    protocol_version: str = "phase0_protocol_v1"
+    dictionary_size: int | None = None
+    dictionary_hash: str | None = None
+    position_scope: str = "explicit"
+    decomposition_provenance: str = "nonnegative_gradient_pursuit_k25"
 
     def cpu(self) -> JState:
         return JState(
@@ -145,6 +198,11 @@ class JState:
             activation_norm=self.activation_norm,
             reconstruction_error=self.reconstruction_error,
             variance_explained=self.variance_explained,
+            protocol_version=self.protocol_version,
+            dictionary_size=self.dictionary_size,
+            dictionary_hash=self.dictionary_hash,
+            position_scope=self.position_scope,
+            decomposition_provenance=self.decomposition_provenance,
         )
 
 
@@ -153,21 +211,31 @@ class JStateEncoder:
 
     def __init__(
         self,
-        directions: dict[int, torch.Tensor],
+        directions: dict[int, torch.Tensor] | None,
         vocabulary: ConceptVocabulary,
         *,
         k: int = 25,
         raw_directions: dict[int, torch.Tensor] | None = None,
+        raw_builder: Any | None = None,
+        available_layers: tuple[int, ...] | list[int] = (),
+        protocol_version: str = "phase0_protocol_v1",
+        direction_chunk_size: int = 512,
     ) -> None:
-        if not directions:
+        if not directions and raw_builder is None:
             raise ValueError("at least one layer dictionary is required")
         self.vocabulary = vocabulary
         self.k = k
+        self.protocol_version = protocol_version
+        self.direction_chunk_size = int(direction_chunk_size)
         self.directions = {
             int(layer): F.normalize(value.float(), dim=-1)
-            for layer, value in directions.items()
+            for layer, value in (directions or {}).items()
         }
-        self.raw_directions = raw_directions or directions
+        self.raw_directions = dict(raw_directions or directions or {})
+        self._raw_builder = raw_builder
+        self.available_layers = tuple(
+            sorted(set(int(layer) for layer in (*available_layers, *self.directions)))
+        )
         for layer, dictionary in self.directions.items():
             if dictionary.shape[0] != len(vocabulary.token_ids):
                 raise ValueError(f"layer {layer} dictionary and vocabulary disagree")
@@ -180,15 +248,64 @@ class JStateEncoder:
         vocabulary: ConceptVocabulary,
         *,
         k: int = 25,
+        lazy: bool = False,
+        protocol_version: str = "phase0_protocol_v1",
+        direction_chunk_size: int = 512,
     ) -> JStateEncoder:
         ids = torch.tensor(vocabulary.token_ids, dtype=torch.long)
         selected_unembedding = unembedding_weight.detach().float().cpu()[ids]
+        if lazy:
+            jacobians = {
+                int(layer): jacobian.detach().float().cpu()
+                for layer, jacobian in lens.jacobians.items()
+            }
+
+            def build(layer: int) -> torch.Tensor:
+                jacobian = jacobians[int(layer)]
+                pieces = [
+                    selected_unembedding[start : start + direction_chunk_size]
+                    @ jacobian
+                    for start in range(0, selected_unembedding.shape[0], direction_chunk_size)
+                ]
+                return torch.cat(pieces, dim=0)
+
+            return cls(
+                None,
+                vocabulary,
+                k=k,
+                raw_builder=build,
+                available_layers=tuple(jacobians),
+                protocol_version=protocol_version,
+                direction_chunk_size=direction_chunk_size,
+            )
         raw: dict[int, torch.Tensor] = {}
         for layer, jacobian in lens.jacobians.items():
             raw[int(layer)] = selected_unembedding @ jacobian.detach().float().cpu()
-        return cls(raw, vocabulary, k=k, raw_directions=raw)
+        return cls(
+            raw,
+            vocabulary,
+            k=k,
+            raw_directions=raw,
+            protocol_version=protocol_version,
+            direction_chunk_size=direction_chunk_size,
+        )
+
+    def _ensure_layer(self, layer: int) -> None:
+        layer = int(layer)
+        if layer in self.directions:
+            return
+        if self._raw_builder is None or (
+            self.available_layers and layer not in self.available_layers
+        ):
+            raise KeyError(f"no measured-J dictionary for layer {layer}")
+        raw = self._raw_builder(layer).float().cpu()
+        if raw.shape[0] != len(self.vocabulary.token_ids):
+            raise ValueError(f"layer {layer} dictionary and vocabulary disagree")
+        self.raw_directions[layer] = raw
+        self.directions[layer] = F.normalize(raw, dim=-1)
 
     def dictionary(self, layer: int, device: torch.device | str | None = None) -> torch.Tensor:
+        self._ensure_layer(layer)
         dictionary = self.directions[int(layer)]
         return dictionary if device is None else dictionary.to(device)
 
@@ -217,6 +334,9 @@ class JStateEncoder:
             activation_norm=float(torch.linalg.vector_norm(h.float())),
             reconstruction_error=decomposition.reconstruction_error,
             variance_explained=decomposition.variance_explained,
+            protocol_version=self.protocol_version,
+            dictionary_size=len(self.vocabulary.token_ids),
+            dictionary_hash=self.vocabulary.digest,
         )
 
     def decompose(self, h: torch.Tensor, layer: int) -> DecompositionResult:
@@ -278,4 +398,3 @@ def jstate_distance(a: JState, b: JState, metric: str = "dense_cosine") -> float
     if metric == "rms_log_ratio":
         return abs(math.log((a.residual_rms + 1e-12) / (b.residual_rms + 1e-12)))
     raise ValueError(f"unknown J-state distance metric: {metric}")
-

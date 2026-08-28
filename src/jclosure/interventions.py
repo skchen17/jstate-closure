@@ -18,6 +18,7 @@ InterventionKind = Literal[
     "full_patch",
     "clamp",
 ]
+PositionScope = Literal["final", "explicit", "all_non_padding", "reasoning_span"]
 
 
 @dataclass(frozen=True)
@@ -30,6 +31,9 @@ class InterventionSpec:
     target_token_id: int | None = None
     seed: int | None = None
     source: str | None = None
+    position_scope: PositionScope = "explicit"
+    protocol_version: str = "phase0_protocol_v1"
+    dictionary_size: int | None = None
 
 
 def _position_indices(length: int, positions: tuple[int, ...] | None) -> list[int]:
@@ -147,4 +151,3 @@ def non_j_direction(
 ) -> tuple[torch.Tensor, DecompositionResult]:
     stripped, decomposition = strip_j_component(vector, dictionary, k=k)
     return stripped.to(vector.dtype), decomposition
-

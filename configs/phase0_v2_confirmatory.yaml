@@ -1,0 +1,9 @@
+extends: phase0_v2_calibration.yaml
+
+run:
+  phase0_mode: confirmatory
+
+# Filled exactly once from the calibration artifact before the freeze commit.
+phase0_v2:
+  workspace_band: []
+  positive_control_layer: null

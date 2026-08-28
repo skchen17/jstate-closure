@@ -97,7 +97,7 @@ def test_trial_schema_is_versioned_and_roundtrippable():
         seed=1,
         exclusion_reason="clamp",
     ).to_dict()
-    assert record["schema_version"] == 1
+    assert record["schema_version"] == 2
     assert record["exclusion_reason"] == "clamp"
 
 

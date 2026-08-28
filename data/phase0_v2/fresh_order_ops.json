@@ -1,0 +1,6619 @@
+{
+  "items": [
+    {
+      "answer": "120",
+      "example_id": "phase0-v2-order:0000",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "112",
+        "addition"
+      ],
+      "prompt": "14 * 8 + 8 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            14,
+            8
+          ],
+          8
+        ],
+        "generator_index": 0,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "44",
+      "example_id": "phase0-v2-order:0001",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "50",
+        "subtraction"
+      ],
+      "prompt": "10 * 5 - 6 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            10,
+            5
+          ],
+          6
+        ],
+        "generator_index": 1,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "126",
+      "example_id": "phase0-v2-order:0002",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "14",
+        "multiplication"
+      ],
+      "prompt": "(5 + 9) * 9 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            5,
+            9
+          ],
+          9
+        ],
+        "generator_index": 2,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "10",
+      "example_id": "phase0-v2-order:0003",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "60",
+        "division"
+      ],
+      "prompt": "(1 + 59) / 6 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            1,
+            59
+          ],
+          6
+        ],
+        "generator_index": 3,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0004",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "20",
+        "mod"
+      ],
+      "prompt": "(13 + 7) % 9 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            13,
+            7
+          ],
+          9
+        ],
+        "generator_index": 4,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "1",
+      "example_id": "phase0-v2-order:0005",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "1",
+        "squared"
+      ],
+      "prompt": "(9 - 8)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            9,
+            8
+          ]
+        ],
+        "generator_index": 5,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "76",
+      "example_id": "phase0-v2-order:0006",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "75",
+        "addition"
+      ],
+      "prompt": "15 * 5 + 1 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            15,
+            5
+          ],
+          1
+        ],
+        "generator_index": 6,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "4",
+      "example_id": "phase0-v2-order:0007",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "4",
+        "subtraction"
+      ],
+      "prompt": "4 * 1 - 0 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            4,
+            1
+          ],
+          0
+        ],
+        "generator_index": 7,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "152",
+      "example_id": "phase0-v2-order:0008",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "19",
+        "multiplication"
+      ],
+      "prompt": "(11 + 8) * 8 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            11,
+            8
+          ],
+          8
+        ],
+        "generator_index": 8,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "5",
+      "example_id": "phase0-v2-order:0009",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "10",
+        "division"
+      ],
+      "prompt": "(7 + 3) / 2 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            7,
+            3
+          ],
+          2
+        ],
+        "generator_index": 9,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0010",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "10",
+        "mod"
+      ],
+      "prompt": "(3 + 7) % 2 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            3,
+            7
+          ],
+          2
+        ],
+        "generator_index": 10,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0011",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "0",
+        "squared"
+      ],
+      "prompt": "(7 - 7)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            7,
+            7
+          ]
+        ],
+        "generator_index": 11,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "42",
+      "example_id": "phase0-v2-order:0012",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "40",
+        "addition"
+      ],
+      "prompt": "10 * 4 + 2 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            10,
+            4
+          ],
+          2
+        ],
+        "generator_index": 12,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "8",
+      "example_id": "phase0-v2-order:0013",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "77",
+        "subtraction"
+      ],
+      "prompt": "11 * 7 - 69 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            11,
+            7
+          ],
+          69
+        ],
+        "generator_index": 13,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "198",
+      "example_id": "phase0-v2-order:0014",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "22",
+        "multiplication"
+      ],
+      "prompt": "(15 + 7) * 9 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            15,
+            7
+          ],
+          9
+        ],
+        "generator_index": 14,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "3",
+      "example_id": "phase0-v2-order:0015",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "24",
+        "division"
+      ],
+      "prompt": "(13 + 11) / 8 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            13,
+            11
+          ],
+          8
+        ],
+        "generator_index": 15,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "1",
+      "example_id": "phase0-v2-order:0016",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "16",
+        "mod"
+      ],
+      "prompt": "(9 + 7) % 5 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            9,
+            7
+          ],
+          5
+        ],
+        "generator_index": 16,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "25",
+      "example_id": "phase0-v2-order:0017",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "5",
+        "squared"
+      ],
+      "prompt": "(11 - 6)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            11,
+            6
+          ]
+        ],
+        "generator_index": 17,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "23",
+      "example_id": "phase0-v2-order:0018",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "6",
+        "addition"
+      ],
+      "prompt": "6 * 1 + 17 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            6,
+            1
+          ],
+          17
+        ],
+        "generator_index": 18,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "42",
+      "example_id": "phase0-v2-order:0019",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "50",
+        "subtraction"
+      ],
+      "prompt": "10 * 5 - 8 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            10,
+            5
+          ],
+          8
+        ],
+        "generator_index": 19,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "25",
+      "example_id": "phase0-v2-order:0020",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "5",
+        "multiplication"
+      ],
+      "prompt": "(3 + 2) * 5 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            3,
+            2
+          ],
+          5
+        ],
+        "generator_index": 20,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "9",
+      "example_id": "phase0-v2-order:0021",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "81",
+        "division"
+      ],
+      "prompt": "(64 + 17) / 9 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            64,
+            17
+          ],
+          9
+        ],
+        "generator_index": 21,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0022",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "12",
+        "mod"
+      ],
+      "prompt": "(9 + 3) % 2 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            9,
+            3
+          ],
+          2
+        ],
+        "generator_index": 22,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "9",
+      "example_id": "phase0-v2-order:0023",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "3",
+        "squared"
+      ],
+      "prompt": "(8 - 5)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            8,
+            5
+          ]
+        ],
+        "generator_index": 23,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "30",
+      "example_id": "phase0-v2-order:0024",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "15",
+        "addition"
+      ],
+      "prompt": "5 * 3 + 15 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            5,
+            3
+          ],
+          15
+        ],
+        "generator_index": 24,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "52",
+      "example_id": "phase0-v2-order:0025",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "63",
+        "subtraction"
+      ],
+      "prompt": "9 * 7 - 11 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            9,
+            7
+          ],
+          11
+        ],
+        "generator_index": 25,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "120",
+      "example_id": "phase0-v2-order:0026",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "24",
+        "multiplication"
+      ],
+      "prompt": "(17 + 7) * 5 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            17,
+            7
+          ],
+          5
+        ],
+        "generator_index": 26,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "18",
+      "example_id": "phase0-v2-order:0027",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "108",
+        "division"
+      ],
+      "prompt": "(74 + 34) / 6 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            74,
+            34
+          ],
+          6
+        ],
+        "generator_index": 27,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "3",
+      "example_id": "phase0-v2-order:0028",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "8",
+        "mod"
+      ],
+      "prompt": "(4 + 4) % 5 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            4,
+            4
+          ],
+          5
+        ],
+        "generator_index": 28,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "36",
+      "example_id": "phase0-v2-order:0029",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "6",
+        "squared"
+      ],
+      "prompt": "(7 - 1)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            7,
+            1
+          ]
+        ],
+        "generator_index": 29,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "20",
+      "example_id": "phase0-v2-order:0030",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "18",
+        "addition"
+      ],
+      "prompt": "3 * 6 + 2 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            3,
+            6
+          ],
+          2
+        ],
+        "generator_index": 30,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "56",
+      "example_id": "phase0-v2-order:0031",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "68",
+        "subtraction"
+      ],
+      "prompt": "17 * 4 - 12 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            17,
+            4
+          ],
+          12
+        ],
+        "generator_index": 31,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "42",
+      "example_id": "phase0-v2-order:0032",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "14",
+        "multiplication"
+      ],
+      "prompt": "(6 + 8) * 3 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            6,
+            8
+          ],
+          3
+        ],
+        "generator_index": 32,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "10",
+      "example_id": "phase0-v2-order:0033",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "50",
+        "division"
+      ],
+      "prompt": "(43 + 7) / 5 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            43,
+            7
+          ],
+          5
+        ],
+        "generator_index": 33,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "1",
+      "example_id": "phase0-v2-order:0034",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "10",
+        "mod"
+      ],
+      "prompt": "(5 + 5) % 9 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            5,
+            5
+          ],
+          9
+        ],
+        "generator_index": 34,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "4",
+      "example_id": "phase0-v2-order:0035",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "2",
+        "squared"
+      ],
+      "prompt": "(8 - 6)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            8,
+            6
+          ]
+        ],
+        "generator_index": 35,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "51",
+      "example_id": "phase0-v2-order:0036",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "36",
+        "addition"
+      ],
+      "prompt": "4 * 9 + 15 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            4,
+            9
+          ],
+          15
+        ],
+        "generator_index": 36,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "3",
+      "example_id": "phase0-v2-order:0037",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "3",
+        "subtraction"
+      ],
+      "prompt": "3 * 1 - 0 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            3,
+            1
+          ],
+          0
+        ],
+        "generator_index": 37,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "162",
+      "example_id": "phase0-v2-order:0038",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "18",
+        "multiplication"
+      ],
+      "prompt": "(9 + 9) * 9 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            9,
+            9
+          ],
+          9
+        ],
+        "generator_index": 38,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "9",
+      "example_id": "phase0-v2-order:0039",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "72",
+        "division"
+      ],
+      "prompt": "(26 + 46) / 8 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            26,
+            46
+          ],
+          8
+        ],
+        "generator_index": 39,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0040",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "14",
+        "mod"
+      ],
+      "prompt": "(8 + 6) % 2 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            8,
+            6
+          ],
+          2
+        ],
+        "generator_index": 40,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "81",
+      "example_id": "phase0-v2-order:0041",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "9",
+        "squared"
+      ],
+      "prompt": "(11 - 2)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            11,
+            2
+          ]
+        ],
+        "generator_index": 41,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "144",
+      "example_id": "phase0-v2-order:0042",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "135",
+        "addition"
+      ],
+      "prompt": "15 * 9 + 9 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            15,
+            9
+          ],
+          9
+        ],
+        "generator_index": 42,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "4",
+      "example_id": "phase0-v2-order:0043",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "21",
+        "subtraction"
+      ],
+      "prompt": "7 * 3 - 17 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            7,
+            3
+          ],
+          17
+        ],
+        "generator_index": 43,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "48",
+      "example_id": "phase0-v2-order:0044",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "12",
+        "multiplication"
+      ],
+      "prompt": "(9 + 3) * 4 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            9,
+            3
+          ],
+          4
+        ],
+        "generator_index": 44,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "12",
+      "example_id": "phase0-v2-order:0045",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "72",
+        "division"
+      ],
+      "prompt": "(1 + 71) / 6 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            1,
+            71
+          ],
+          6
+        ],
+        "generator_index": 45,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "4",
+      "example_id": "phase0-v2-order:0046",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "10",
+        "mod"
+      ],
+      "prompt": "(6 + 4) % 6 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            6,
+            4
+          ],
+          6
+        ],
+        "generator_index": 46,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "121",
+      "example_id": "phase0-v2-order:0047",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "11",
+        "squared"
+      ],
+      "prompt": "(16 - 5)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            16,
+            5
+          ]
+        ],
+        "generator_index": 47,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "61",
+      "example_id": "phase0-v2-order:0048",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "60",
+        "addition"
+      ],
+      "prompt": "12 * 5 + 1 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            12,
+            5
+          ],
+          1
+        ],
+        "generator_index": 48,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "4",
+      "example_id": "phase0-v2-order:0049",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "8",
+        "subtraction"
+      ],
+      "prompt": "8 * 1 - 4 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            8,
+            1
+          ],
+          4
+        ],
+        "generator_index": 49,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "176",
+      "example_id": "phase0-v2-order:0050",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "22",
+        "multiplication"
+      ],
+      "prompt": "(19 + 3) * 8 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            19,
+            3
+          ],
+          8
+        ],
+        "generator_index": 50,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "7",
+      "example_id": "phase0-v2-order:0051",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "42",
+        "division"
+      ],
+      "prompt": "(8 + 34) / 6 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            8,
+            34
+          ],
+          6
+        ],
+        "generator_index": 51,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "4",
+      "example_id": "phase0-v2-order:0052",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "16",
+        "mod"
+      ],
+      "prompt": "(10 + 6) % 6 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            10,
+            6
+          ],
+          6
+        ],
+        "generator_index": 52,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "9",
+      "example_id": "phase0-v2-order:0053",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "3",
+        "squared"
+      ],
+      "prompt": "(4 - 1)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            4,
+            1
+          ]
+        ],
+        "generator_index": 53,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "20",
+      "example_id": "phase0-v2-order:0054",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "12",
+        "addition"
+      ],
+      "prompt": "3 * 4 + 8 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            3,
+            4
+          ],
+          8
+        ],
+        "generator_index": 54,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "19",
+      "example_id": "phase0-v2-order:0055",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "20",
+        "subtraction"
+      ],
+      "prompt": "4 * 5 - 1 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            4,
+            5
+          ],
+          1
+        ],
+        "generator_index": 55,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "171",
+      "example_id": "phase0-v2-order:0056",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "19",
+        "multiplication"
+      ],
+      "prompt": "(16 + 3) * 9 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            16,
+            3
+          ],
+          9
+        ],
+        "generator_index": 56,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "13",
+      "example_id": "phase0-v2-order:0057",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "52",
+        "division"
+      ],
+      "prompt": "(16 + 36) / 4 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            16,
+            36
+          ],
+          4
+        ],
+        "generator_index": 57,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "1",
+      "example_id": "phase0-v2-order:0058",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "5",
+        "mod"
+      ],
+      "prompt": "(3 + 2) % 2 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            3,
+            2
+          ],
+          2
+        ],
+        "generator_index": 58,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "144",
+      "example_id": "phase0-v2-order:0059",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "12",
+        "squared"
+      ],
+      "prompt": "(19 - 7)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            19,
+            7
+          ]
+        ],
+        "generator_index": 59,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "30",
+      "example_id": "phase0-v2-order:0060",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "14",
+        "addition"
+      ],
+      "prompt": "7 * 2 + 16 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            7,
+            2
+          ],
+          16
+        ],
+        "generator_index": 60,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "3",
+      "example_id": "phase0-v2-order:0061",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "45",
+        "subtraction"
+      ],
+      "prompt": "5 * 9 - 42 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            5,
+            9
+          ],
+          42
+        ],
+        "generator_index": 61,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "225",
+      "example_id": "phase0-v2-order:0062",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "25",
+        "multiplication"
+      ],
+      "prompt": "(17 + 8) * 9 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            17,
+            8
+          ],
+          9
+        ],
+        "generator_index": 62,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "6",
+      "example_id": "phase0-v2-order:0063",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "18",
+        "division"
+      ],
+      "prompt": "(8 + 10) / 3 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            8,
+            10
+          ],
+          3
+        ],
+        "generator_index": 63,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0064",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "17",
+        "mod"
+      ],
+      "prompt": "(12 + 5) % 3 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            12,
+            5
+          ],
+          3
+        ],
+        "generator_index": 64,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0065",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "0",
+        "squared"
+      ],
+      "prompt": "(8 - 8)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            8,
+            8
+          ]
+        ],
+        "generator_index": 65,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "156",
+      "example_id": "phase0-v2-order:0066",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "152",
+        "addition"
+      ],
+      "prompt": "19 * 8 + 4 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            19,
+            8
+          ],
+          4
+        ],
+        "generator_index": 66,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "99",
+      "example_id": "phase0-v2-order:0067",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "102",
+        "subtraction"
+      ],
+      "prompt": "17 * 6 - 3 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            17,
+            6
+          ],
+          3
+        ],
+        "generator_index": 67,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "36",
+      "example_id": "phase0-v2-order:0068",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "9",
+        "multiplication"
+      ],
+      "prompt": "(6 + 3) * 4 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            6,
+            3
+          ],
+          4
+        ],
+        "generator_index": 68,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "15",
+      "example_id": "phase0-v2-order:0069",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "45",
+        "division"
+      ],
+      "prompt": "(26 + 19) / 3 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            26,
+            19
+          ],
+          3
+        ],
+        "generator_index": 69,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "3",
+      "example_id": "phase0-v2-order:0070",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "18",
+        "mod"
+      ],
+      "prompt": "(15 + 3) % 5 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            15,
+            3
+          ],
+          5
+        ],
+        "generator_index": 70,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "25",
+      "example_id": "phase0-v2-order:0071",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "5",
+        "squared"
+      ],
+      "prompt": "(6 - 1)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            6,
+            1
+          ]
+        ],
+        "generator_index": 71,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "53",
+      "example_id": "phase0-v2-order:0072",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "42",
+        "addition"
+      ],
+      "prompt": "6 * 7 + 11 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            6,
+            7
+          ],
+          11
+        ],
+        "generator_index": 72,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "6",
+      "example_id": "phase0-v2-order:0073",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "64",
+        "subtraction"
+      ],
+      "prompt": "16 * 4 - 58 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            16,
+            4
+          ],
+          58
+        ],
+        "generator_index": 73,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "70",
+      "example_id": "phase0-v2-order:0074",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "10",
+        "multiplication"
+      ],
+      "prompt": "(8 + 2) * 7 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            8,
+            2
+          ],
+          7
+        ],
+        "generator_index": 74,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "14",
+      "example_id": "phase0-v2-order:0075",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "70",
+        "division"
+      ],
+      "prompt": "(40 + 30) / 5 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            40,
+            30
+          ],
+          5
+        ],
+        "generator_index": 75,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "1",
+      "example_id": "phase0-v2-order:0076",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "13",
+        "mod"
+      ],
+      "prompt": "(5 + 8) % 3 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            5,
+            8
+          ],
+          3
+        ],
+        "generator_index": 76,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "81",
+      "example_id": "phase0-v2-order:0077",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "9",
+        "squared"
+      ],
+      "prompt": "(13 - 4)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            13,
+            4
+          ]
+        ],
+        "generator_index": 77,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "72",
+      "example_id": "phase0-v2-order:0078",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "55",
+        "addition"
+      ],
+      "prompt": "11 * 5 + 17 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            11,
+            5
+          ],
+          17
+        ],
+        "generator_index": 78,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "34",
+      "example_id": "phase0-v2-order:0079",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "114",
+        "subtraction"
+      ],
+      "prompt": "19 * 6 - 80 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            19,
+            6
+          ],
+          80
+        ],
+        "generator_index": 79,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "84",
+      "example_id": "phase0-v2-order:0080",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "21",
+        "multiplication"
+      ],
+      "prompt": "(18 + 3) * 4 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            18,
+            3
+          ],
+          4
+        ],
+        "generator_index": 80,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "19",
+      "example_id": "phase0-v2-order:0081",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "38",
+        "division"
+      ],
+      "prompt": "(35 + 3) / 2 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            35,
+            3
+          ],
+          2
+        ],
+        "generator_index": 81,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0082",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "14",
+        "mod"
+      ],
+      "prompt": "(8 + 6) % 6 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            8,
+            6
+          ],
+          6
+        ],
+        "generator_index": 82,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "169",
+      "example_id": "phase0-v2-order:0083",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "13",
+        "squared"
+      ],
+      "prompt": "(18 - 5)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            18,
+            5
+          ]
+        ],
+        "generator_index": 83,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "51",
+      "example_id": "phase0-v2-order:0084",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "45",
+        "addition"
+      ],
+      "prompt": "5 * 9 + 6 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            5,
+            9
+          ],
+          6
+        ],
+        "generator_index": 84,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0085",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "12",
+        "subtraction"
+      ],
+      "prompt": "3 * 4 - 12 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            3,
+            4
+          ],
+          12
+        ],
+        "generator_index": 85,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "20",
+      "example_id": "phase0-v2-order:0086",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "4",
+        "multiplication"
+      ],
+      "prompt": "(3 + 1) * 5 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            3,
+            1
+          ],
+          5
+        ],
+        "generator_index": 86,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "12",
+      "example_id": "phase0-v2-order:0087",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "72",
+        "division"
+      ],
+      "prompt": "(14 + 58) / 6 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            14,
+            58
+          ],
+          6
+        ],
+        "generator_index": 87,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0088",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "14",
+        "mod"
+      ],
+      "prompt": "(12 + 2) % 6 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            12,
+            2
+          ],
+          6
+        ],
+        "generator_index": 88,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "36",
+      "example_id": "phase0-v2-order:0089",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "6",
+        "squared"
+      ],
+      "prompt": "(14 - 8)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            14,
+            8
+          ]
+        ],
+        "generator_index": 89,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "43",
+      "example_id": "phase0-v2-order:0090",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "28",
+        "addition"
+      ],
+      "prompt": "7 * 4 + 15 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            7,
+            4
+          ],
+          15
+        ],
+        "generator_index": 90,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "4",
+      "example_id": "phase0-v2-order:0091",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "57",
+        "subtraction"
+      ],
+      "prompt": "19 * 3 - 53 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            19,
+            3
+          ],
+          53
+        ],
+        "generator_index": 91,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "91",
+      "example_id": "phase0-v2-order:0092",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "13",
+        "multiplication"
+      ],
+      "prompt": "(11 + 2) * 7 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            11,
+            2
+          ],
+          7
+        ],
+        "generator_index": 92,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "12",
+      "example_id": "phase0-v2-order:0093",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "48",
+        "division"
+      ],
+      "prompt": "(16 + 32) / 4 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            16,
+            32
+          ],
+          4
+        ],
+        "generator_index": 93,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "5",
+      "example_id": "phase0-v2-order:0094",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "21",
+        "mod"
+      ],
+      "prompt": "(19 + 2) % 8 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            19,
+            2
+          ],
+          8
+        ],
+        "generator_index": 94,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "4",
+      "example_id": "phase0-v2-order:0095",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "2",
+        "squared"
+      ],
+      "prompt": "(7 - 5)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            7,
+            5
+          ]
+        ],
+        "generator_index": 95,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "139",
+      "example_id": "phase0-v2-order:0096",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "128",
+        "addition"
+      ],
+      "prompt": "16 * 8 + 11 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            16,
+            8
+          ],
+          11
+        ],
+        "generator_index": 96,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "26",
+      "example_id": "phase0-v2-order:0097",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "75",
+        "subtraction"
+      ],
+      "prompt": "15 * 5 - 49 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            15,
+            5
+          ],
+          49
+        ],
+        "generator_index": 97,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "105",
+      "example_id": "phase0-v2-order:0098",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "15",
+        "multiplication"
+      ],
+      "prompt": "(7 + 8) * 7 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            7,
+            8
+          ],
+          7
+        ],
+        "generator_index": 98,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "17",
+      "example_id": "phase0-v2-order:0099",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "68",
+        "division"
+      ],
+      "prompt": "(39 + 29) / 4 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            39,
+            29
+          ],
+          4
+        ],
+        "generator_index": 99,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0100",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "20",
+        "mod"
+      ],
+      "prompt": "(11 + 9) % 4 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            11,
+            9
+          ],
+          4
+        ],
+        "generator_index": 100,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "49",
+      "example_id": "phase0-v2-order:0101",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "7",
+        "squared"
+      ],
+      "prompt": "(12 - 5)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            12,
+            5
+          ]
+        ],
+        "generator_index": 101,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "47",
+      "example_id": "phase0-v2-order:0102",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "40",
+        "addition"
+      ],
+      "prompt": "5 * 8 + 7 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            5,
+            8
+          ],
+          7
+        ],
+        "generator_index": 102,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "30",
+      "example_id": "phase0-v2-order:0103",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "63",
+        "subtraction"
+      ],
+      "prompt": "9 * 7 - 33 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            9,
+            7
+          ],
+          33
+        ],
+        "generator_index": 103,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "108",
+      "example_id": "phase0-v2-order:0104",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "12",
+        "multiplication"
+      ],
+      "prompt": "(8 + 4) * 9 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            8,
+            4
+          ],
+          9
+        ],
+        "generator_index": 104,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "10",
+      "example_id": "phase0-v2-order:0105",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "50",
+        "division"
+      ],
+      "prompt": "(1 + 49) / 5 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            1,
+            49
+          ],
+          5
+        ],
+        "generator_index": 105,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0106",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "10",
+        "mod"
+      ],
+      "prompt": "(8 + 2) % 4 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            8,
+            2
+          ],
+          4
+        ],
+        "generator_index": 106,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "169",
+      "example_id": "phase0-v2-order:0107",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "13",
+        "squared"
+      ],
+      "prompt": "(14 - 1)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            14,
+            1
+          ]
+        ],
+        "generator_index": 107,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "41",
+      "example_id": "phase0-v2-order:0108",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "26",
+        "addition"
+      ],
+      "prompt": "13 * 2 + 15 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            13,
+            2
+          ],
+          15
+        ],
+        "generator_index": 108,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "71",
+      "example_id": "phase0-v2-order:0109",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "117",
+        "subtraction"
+      ],
+      "prompt": "13 * 9 - 46 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            13,
+            9
+          ],
+          46
+        ],
+        "generator_index": 109,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "68",
+      "example_id": "phase0-v2-order:0110",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "17",
+        "multiplication"
+      ],
+      "prompt": "(13 + 4) * 4 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            13,
+            4
+          ],
+          4
+        ],
+        "generator_index": 110,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0111",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "8",
+        "division"
+      ],
+      "prompt": "(4 + 4) / 4 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            4,
+            4
+          ],
+          4
+        ],
+        "generator_index": 111,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0112",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "7",
+        "mod"
+      ],
+      "prompt": "(2 + 5) % 7 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            2,
+            5
+          ],
+          7
+        ],
+        "generator_index": 112,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "169",
+      "example_id": "phase0-v2-order:0113",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "13",
+        "squared"
+      ],
+      "prompt": "(17 - 4)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            17,
+            4
+          ]
+        ],
+        "generator_index": 113,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "32",
+      "example_id": "phase0-v2-order:0114",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "24",
+        "addition"
+      ],
+      "prompt": "4 * 6 + 8 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            4,
+            6
+          ],
+          8
+        ],
+        "generator_index": 114,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "33",
+      "example_id": "phase0-v2-order:0115",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "72",
+        "subtraction"
+      ],
+      "prompt": "12 * 6 - 39 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            12,
+            6
+          ],
+          39
+        ],
+        "generator_index": 115,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "85",
+      "example_id": "phase0-v2-order:0116",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "17",
+        "multiplication"
+      ],
+      "prompt": "(12 + 5) * 5 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            12,
+            5
+          ],
+          5
+        ],
+        "generator_index": 116,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "6",
+      "example_id": "phase0-v2-order:0117",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "42",
+        "division"
+      ],
+      "prompt": "(8 + 34) / 7 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            8,
+            34
+          ],
+          7
+        ],
+        "generator_index": 117,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0118",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "15",
+        "mod"
+      ],
+      "prompt": "(12 + 3) % 5 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            12,
+            3
+          ],
+          5
+        ],
+        "generator_index": 118,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "144",
+      "example_id": "phase0-v2-order:0119",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "12",
+        "squared"
+      ],
+      "prompt": "(15 - 3)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            15,
+            3
+          ]
+        ],
+        "generator_index": 119,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "57",
+      "example_id": "phase0-v2-order:0120",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "40",
+        "addition"
+      ],
+      "prompt": "5 * 8 + 17 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            5,
+            8
+          ],
+          17
+        ],
+        "generator_index": 120,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "53",
+      "example_id": "phase0-v2-order:0121",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "60",
+        "subtraction"
+      ],
+      "prompt": "12 * 5 - 7 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            12,
+            5
+          ],
+          7
+        ],
+        "generator_index": 121,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "40",
+      "example_id": "phase0-v2-order:0122",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "10",
+        "multiplication"
+      ],
+      "prompt": "(3 + 7) * 4 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            3,
+            7
+          ],
+          4
+        ],
+        "generator_index": 122,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "3",
+      "example_id": "phase0-v2-order:0123",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "12",
+        "division"
+      ],
+      "prompt": "(3 + 9) / 4 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            3,
+            9
+          ],
+          4
+        ],
+        "generator_index": 123,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0124",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "18",
+        "mod"
+      ],
+      "prompt": "(15 + 3) % 9 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            15,
+            3
+          ],
+          9
+        ],
+        "generator_index": 124,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "36",
+      "example_id": "phase0-v2-order:0125",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "6",
+        "squared"
+      ],
+      "prompt": "(11 - 5)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            11,
+            5
+          ]
+        ],
+        "generator_index": 125,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "19",
+      "example_id": "phase0-v2-order:0126",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "5",
+        "addition"
+      ],
+      "prompt": "5 * 1 + 14 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            5,
+            1
+          ],
+          14
+        ],
+        "generator_index": 126,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "1",
+      "example_id": "phase0-v2-order:0127",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "20",
+        "subtraction"
+      ],
+      "prompt": "10 * 2 - 19 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            10,
+            2
+          ],
+          19
+        ],
+        "generator_index": 127,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "171",
+      "example_id": "phase0-v2-order:0128",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "19",
+        "multiplication"
+      ],
+      "prompt": "(15 + 4) * 9 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            15,
+            4
+          ],
+          9
+        ],
+        "generator_index": 128,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "4",
+      "example_id": "phase0-v2-order:0129",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "16",
+        "division"
+      ],
+      "prompt": "(5 + 11) / 4 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            5,
+            11
+          ],
+          4
+        ],
+        "generator_index": 129,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "3",
+      "example_id": "phase0-v2-order:0130",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "21",
+        "mod"
+      ],
+      "prompt": "(15 + 6) % 9 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            15,
+            6
+          ],
+          9
+        ],
+        "generator_index": 130,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "100",
+      "example_id": "phase0-v2-order:0131",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "10",
+        "squared"
+      ],
+      "prompt": "(16 - 6)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            16,
+            6
+          ]
+        ],
+        "generator_index": 131,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "112",
+      "example_id": "phase0-v2-order:0132",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "104",
+        "addition"
+      ],
+      "prompt": "13 * 8 + 8 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            13,
+            8
+          ],
+          8
+        ],
+        "generator_index": 132,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "29",
+      "example_id": "phase0-v2-order:0133",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "48",
+        "subtraction"
+      ],
+      "prompt": "6 * 8 - 19 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            6,
+            8
+          ],
+          19
+        ],
+        "generator_index": 133,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "28",
+      "example_id": "phase0-v2-order:0134",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "7",
+        "multiplication"
+      ],
+      "prompt": "(2 + 5) * 4 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            2,
+            5
+          ],
+          4
+        ],
+        "generator_index": 134,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "18",
+      "example_id": "phase0-v2-order:0135",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "126",
+        "division"
+      ],
+      "prompt": "(120 + 6) / 7 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            120,
+            6
+          ],
+          7
+        ],
+        "generator_index": 135,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "3",
+      "example_id": "phase0-v2-order:0136",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "19",
+        "mod"
+      ],
+      "prompt": "(10 + 9) % 8 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            10,
+            9
+          ],
+          8
+        ],
+        "generator_index": 136,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "81",
+      "example_id": "phase0-v2-order:0137",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "9",
+        "squared"
+      ],
+      "prompt": "(12 - 3)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            12,
+            3
+          ]
+        ],
+        "generator_index": 137,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "111",
+      "example_id": "phase0-v2-order:0138",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "108",
+        "addition"
+      ],
+      "prompt": "18 * 6 + 3 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            18,
+            6
+          ],
+          3
+        ],
+        "generator_index": 138,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "3",
+      "example_id": "phase0-v2-order:0139",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "12",
+        "subtraction"
+      ],
+      "prompt": "6 * 2 - 9 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            6,
+            2
+          ],
+          9
+        ],
+        "generator_index": 139,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "60",
+      "example_id": "phase0-v2-order:0140",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "20",
+        "multiplication"
+      ],
+      "prompt": "(11 + 9) * 3 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            11,
+            9
+          ],
+          3
+        ],
+        "generator_index": 140,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "17",
+      "example_id": "phase0-v2-order:0141",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "51",
+        "division"
+      ],
+      "prompt": "(6 + 45) / 3 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            6,
+            45
+          ],
+          3
+        ],
+        "generator_index": 141,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "1",
+      "example_id": "phase0-v2-order:0142",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "16",
+        "mod"
+      ],
+      "prompt": "(14 + 2) % 3 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            14,
+            2
+          ],
+          3
+        ],
+        "generator_index": 142,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "16",
+      "example_id": "phase0-v2-order:0143",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "4",
+        "squared"
+      ],
+      "prompt": "(11 - 7)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            11,
+            7
+          ]
+        ],
+        "generator_index": 143,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "65",
+      "example_id": "phase0-v2-order:0144",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "54",
+        "addition"
+      ],
+      "prompt": "18 * 3 + 11 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            18,
+            3
+          ],
+          11
+        ],
+        "generator_index": 144,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "44",
+      "example_id": "phase0-v2-order:0145",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "48",
+        "subtraction"
+      ],
+      "prompt": "8 * 6 - 4 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            8,
+            6
+          ],
+          4
+        ],
+        "generator_index": 145,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "105",
+      "example_id": "phase0-v2-order:0146",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "15",
+        "multiplication"
+      ],
+      "prompt": "(9 + 6) * 7 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            9,
+            6
+          ],
+          7
+        ],
+        "generator_index": 146,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "4",
+      "example_id": "phase0-v2-order:0147",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "32",
+        "division"
+      ],
+      "prompt": "(10 + 22) / 8 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            10,
+            22
+          ],
+          8
+        ],
+        "generator_index": 147,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0148",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "14",
+        "mod"
+      ],
+      "prompt": "(10 + 4) % 6 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            10,
+            4
+          ],
+          6
+        ],
+        "generator_index": 148,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "81",
+      "example_id": "phase0-v2-order:0149",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "9",
+        "squared"
+      ],
+      "prompt": "(14 - 5)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            14,
+            5
+          ]
+        ],
+        "generator_index": 149,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "32",
+      "example_id": "phase0-v2-order:0150",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "18",
+        "addition"
+      ],
+      "prompt": "2 * 9 + 14 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            2,
+            9
+          ],
+          14
+        ],
+        "generator_index": 150,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "24",
+      "example_id": "phase0-v2-order:0151",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "55",
+        "subtraction"
+      ],
+      "prompt": "11 * 5 - 31 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            11,
+            5
+          ],
+          31
+        ],
+        "generator_index": 151,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "184",
+      "example_id": "phase0-v2-order:0152",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "23",
+        "multiplication"
+      ],
+      "prompt": "(14 + 9) * 8 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            14,
+            9
+          ],
+          8
+        ],
+        "generator_index": 152,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0153",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "6",
+        "division"
+      ],
+      "prompt": "(5 + 1) / 3 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            5,
+            1
+          ],
+          3
+        ],
+        "generator_index": 153,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "8",
+      "example_id": "phase0-v2-order:0154",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "8",
+        "mod"
+      ],
+      "prompt": "(7 + 1) % 9 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            7,
+            1
+          ],
+          9
+        ],
+        "generator_index": 154,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "36",
+      "example_id": "phase0-v2-order:0155",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "6",
+        "squared"
+      ],
+      "prompt": "(8 - 2)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            8,
+            2
+          ]
+        ],
+        "generator_index": 155,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "15",
+      "example_id": "phase0-v2-order:0156",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "10",
+        "addition"
+      ],
+      "prompt": "2 * 5 + 5 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            2,
+            5
+          ],
+          5
+        ],
+        "generator_index": 156,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "1",
+      "example_id": "phase0-v2-order:0157",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "22",
+        "subtraction"
+      ],
+      "prompt": "11 * 2 - 21 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            11,
+            2
+          ],
+          21
+        ],
+        "generator_index": 157,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "72",
+      "example_id": "phase0-v2-order:0158",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "8",
+        "multiplication"
+      ],
+      "prompt": "(3 + 5) * 9 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            3,
+            5
+          ],
+          9
+        ],
+        "generator_index": 158,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "9",
+      "example_id": "phase0-v2-order:0159",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "36",
+        "division"
+      ],
+      "prompt": "(29 + 7) / 4 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            29,
+            7
+          ],
+          4
+        ],
+        "generator_index": 159,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "4",
+      "example_id": "phase0-v2-order:0160",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "14",
+        "mod"
+      ],
+      "prompt": "(13 + 1) % 5 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            13,
+            1
+          ],
+          5
+        ],
+        "generator_index": 160,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "4",
+      "example_id": "phase0-v2-order:0161",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "2",
+        "squared"
+      ],
+      "prompt": "(5 - 3)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            5,
+            3
+          ]
+        ],
+        "generator_index": 161,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "34",
+      "example_id": "phase0-v2-order:0162",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "17",
+        "addition"
+      ],
+      "prompt": "17 * 1 + 17 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            17,
+            1
+          ],
+          17
+        ],
+        "generator_index": 162,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "37",
+      "example_id": "phase0-v2-order:0163",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "72",
+        "subtraction"
+      ],
+      "prompt": "12 * 6 - 35 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            12,
+            6
+          ],
+          35
+        ],
+        "generator_index": 163,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "126",
+      "example_id": "phase0-v2-order:0164",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "14",
+        "multiplication"
+      ],
+      "prompt": "(9 + 5) * 9 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            9,
+            5
+          ],
+          9
+        ],
+        "generator_index": 164,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0165",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "4",
+        "division"
+      ],
+      "prompt": "(3 + 1) / 2 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            3,
+            1
+          ],
+          2
+        ],
+        "generator_index": 165,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0166",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "10",
+        "mod"
+      ],
+      "prompt": "(7 + 3) % 8 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            7,
+            3
+          ],
+          8
+        ],
+        "generator_index": 166,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "9",
+      "example_id": "phase0-v2-order:0167",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "3",
+        "squared"
+      ],
+      "prompt": "(10 - 7)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            10,
+            7
+          ]
+        ],
+        "generator_index": 167,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "50",
+      "example_id": "phase0-v2-order:0168",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "36",
+        "addition"
+      ],
+      "prompt": "12 * 3 + 14 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            12,
+            3
+          ],
+          14
+        ],
+        "generator_index": 168,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "9",
+      "example_id": "phase0-v2-order:0169",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "12",
+        "subtraction"
+      ],
+      "prompt": "3 * 4 - 3 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            3,
+            4
+          ],
+          3
+        ],
+        "generator_index": 169,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "120",
+      "example_id": "phase0-v2-order:0170",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "15",
+        "multiplication"
+      ],
+      "prompt": "(9 + 6) * 8 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            9,
+            6
+          ],
+          8
+        ],
+        "generator_index": 170,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "7",
+      "example_id": "phase0-v2-order:0171",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "63",
+        "division"
+      ],
+      "prompt": "(18 + 45) / 9 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            18,
+            45
+          ],
+          9
+        ],
+        "generator_index": 171,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0172",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "10",
+        "mod"
+      ],
+      "prompt": "(8 + 2) % 5 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            8,
+            2
+          ],
+          5
+        ],
+        "generator_index": 172,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "9",
+      "example_id": "phase0-v2-order:0173",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "3",
+        "squared"
+      ],
+      "prompt": "(9 - 6)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            9,
+            6
+          ]
+        ],
+        "generator_index": 173,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "66",
+      "example_id": "phase0-v2-order:0174",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "56",
+        "addition"
+      ],
+      "prompt": "7 * 8 + 10 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            7,
+            8
+          ],
+          10
+        ],
+        "generator_index": 174,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "8",
+      "example_id": "phase0-v2-order:0175",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "91",
+        "subtraction"
+      ],
+      "prompt": "13 * 7 - 83 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            13,
+            7
+          ],
+          83
+        ],
+        "generator_index": 175,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "80",
+      "example_id": "phase0-v2-order:0176",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "20",
+        "multiplication"
+      ],
+      "prompt": "(11 + 9) * 4 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            11,
+            9
+          ],
+          4
+        ],
+        "generator_index": 176,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "15",
+      "example_id": "phase0-v2-order:0177",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "120",
+        "division"
+      ],
+      "prompt": "(4 + 116) / 8 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            4,
+            116
+          ],
+          8
+        ],
+        "generator_index": 177,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "3",
+      "example_id": "phase0-v2-order:0178",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "27",
+        "mod"
+      ],
+      "prompt": "(19 + 8) % 4 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            19,
+            8
+          ],
+          4
+        ],
+        "generator_index": 178,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "49",
+      "example_id": "phase0-v2-order:0179",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "7",
+        "squared"
+      ],
+      "prompt": "(16 - 9)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            16,
+            9
+          ]
+        ],
+        "generator_index": 179,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "49",
+      "example_id": "phase0-v2-order:0180",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "30",
+        "addition"
+      ],
+      "prompt": "5 * 6 + 19 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            5,
+            6
+          ],
+          19
+        ],
+        "generator_index": 180,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0181",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "18",
+        "subtraction"
+      ],
+      "prompt": "6 * 3 - 18 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            6,
+            3
+          ],
+          18
+        ],
+        "generator_index": 181,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "99",
+      "example_id": "phase0-v2-order:0182",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "11",
+        "multiplication"
+      ],
+      "prompt": "(3 + 8) * 9 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            3,
+            8
+          ],
+          9
+        ],
+        "generator_index": 182,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "12",
+      "example_id": "phase0-v2-order:0183",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "48",
+        "division"
+      ],
+      "prompt": "(15 + 33) / 4 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            15,
+            33
+          ],
+          4
+        ],
+        "generator_index": 183,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "8",
+      "example_id": "phase0-v2-order:0184",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "26",
+        "mod"
+      ],
+      "prompt": "(18 + 8) % 9 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            18,
+            8
+          ],
+          9
+        ],
+        "generator_index": 184,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "36",
+      "example_id": "phase0-v2-order:0185",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "6",
+        "squared"
+      ],
+      "prompt": "(9 - 3)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            9,
+            3
+          ]
+        ],
+        "generator_index": 185,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "116",
+      "example_id": "phase0-v2-order:0186",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "108",
+        "addition"
+      ],
+      "prompt": "18 * 6 + 8 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            18,
+            6
+          ],
+          8
+        ],
+        "generator_index": 186,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "68",
+      "example_id": "phase0-v2-order:0187",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "75",
+        "subtraction"
+      ],
+      "prompt": "15 * 5 - 7 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            15,
+            5
+          ],
+          7
+        ],
+        "generator_index": 187,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "108",
+      "example_id": "phase0-v2-order:0188",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "18",
+        "multiplication"
+      ],
+      "prompt": "(9 + 9) * 6 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            9,
+            9
+          ],
+          6
+        ],
+        "generator_index": 188,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "6",
+      "example_id": "phase0-v2-order:0189",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "12",
+        "division"
+      ],
+      "prompt": "(2 + 10) / 2 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            2,
+            10
+          ],
+          2
+        ],
+        "generator_index": 189,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0190",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "21",
+        "mod"
+      ],
+      "prompt": "(14 + 7) % 7 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            14,
+            7
+          ],
+          7
+        ],
+        "generator_index": 190,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "49",
+      "example_id": "phase0-v2-order:0191",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "7",
+        "squared"
+      ],
+      "prompt": "(9 - 2)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            9,
+            2
+          ]
+        ],
+        "generator_index": 191,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "123",
+      "example_id": "phase0-v2-order:0192",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "112",
+        "addition"
+      ],
+      "prompt": "16 * 7 + 11 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            16,
+            7
+          ],
+          11
+        ],
+        "generator_index": 192,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "21",
+      "example_id": "phase0-v2-order:0193",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "54",
+        "subtraction"
+      ],
+      "prompt": "6 * 9 - 33 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            6,
+            9
+          ],
+          33
+        ],
+        "generator_index": 193,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "51",
+      "example_id": "phase0-v2-order:0194",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "17",
+        "multiplication"
+      ],
+      "prompt": "(8 + 9) * 3 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            8,
+            9
+          ],
+          3
+        ],
+        "generator_index": 194,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "8",
+      "example_id": "phase0-v2-order:0195",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "16",
+        "division"
+      ],
+      "prompt": "(6 + 10) / 2 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            6,
+            10
+          ],
+          2
+        ],
+        "generator_index": 195,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "1",
+      "example_id": "phase0-v2-order:0196",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "9",
+        "mod"
+      ],
+      "prompt": "(4 + 5) % 8 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            4,
+            5
+          ],
+          8
+        ],
+        "generator_index": 196,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "9",
+      "example_id": "phase0-v2-order:0197",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "3",
+        "squared"
+      ],
+      "prompt": "(5 - 2)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            5,
+            2
+          ]
+        ],
+        "generator_index": 197,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "129",
+      "example_id": "phase0-v2-order:0198",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "128",
+        "addition"
+      ],
+      "prompt": "16 * 8 + 1 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            16,
+            8
+          ],
+          1
+        ],
+        "generator_index": 198,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "11",
+      "example_id": "phase0-v2-order:0199",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "14",
+        "subtraction"
+      ],
+      "prompt": "7 * 2 - 3 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            7,
+            2
+          ],
+          3
+        ],
+        "generator_index": 199,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "133",
+      "example_id": "phase0-v2-order:0200",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "19",
+        "multiplication"
+      ],
+      "prompt": "(16 + 3) * 7 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            16,
+            3
+          ],
+          7
+        ],
+        "generator_index": 200,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "12",
+      "example_id": "phase0-v2-order:0201",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "36",
+        "division"
+      ],
+      "prompt": "(5 + 31) / 3 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            5,
+            31
+          ],
+          3
+        ],
+        "generator_index": 201,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0202",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "17",
+        "mod"
+      ],
+      "prompt": "(14 + 3) % 3 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            14,
+            3
+          ],
+          3
+        ],
+        "generator_index": 202,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "256",
+      "example_id": "phase0-v2-order:0203",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "16",
+        "squared"
+      ],
+      "prompt": "(17 - 1)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            17,
+            1
+          ]
+        ],
+        "generator_index": 203,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "95",
+      "example_id": "phase0-v2-order:0204",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "80",
+        "addition"
+      ],
+      "prompt": "10 * 8 + 15 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            10,
+            8
+          ],
+          15
+        ],
+        "generator_index": 204,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "8",
+      "example_id": "phase0-v2-order:0205",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "8",
+        "subtraction"
+      ],
+      "prompt": "8 * 1 - 0 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            8,
+            1
+          ],
+          0
+        ],
+        "generator_index": 205,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "72",
+      "example_id": "phase0-v2-order:0206",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "12",
+        "multiplication"
+      ],
+      "prompt": "(10 + 2) * 6 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            10,
+            2
+          ],
+          6
+        ],
+        "generator_index": 206,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0207",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "10",
+        "division"
+      ],
+      "prompt": "(9 + 1) / 5 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            9,
+            1
+          ],
+          5
+        ],
+        "generator_index": 207,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0208",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "22",
+        "mod"
+      ],
+      "prompt": "(14 + 8) % 2 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            14,
+            8
+          ],
+          2
+        ],
+        "generator_index": 208,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "25",
+      "example_id": "phase0-v2-order:0209",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "5",
+        "squared"
+      ],
+      "prompt": "(8 - 3)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            8,
+            3
+          ]
+        ],
+        "generator_index": 209,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "73",
+      "example_id": "phase0-v2-order:0210",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "54",
+        "addition"
+      ],
+      "prompt": "6 * 9 + 19 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            6,
+            9
+          ],
+          19
+        ],
+        "generator_index": 210,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "92",
+      "example_id": "phase0-v2-order:0211",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "98",
+        "subtraction"
+      ],
+      "prompt": "14 * 7 - 6 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            14,
+            7
+          ],
+          6
+        ],
+        "generator_index": 211,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "40",
+      "example_id": "phase0-v2-order:0212",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "5",
+        "multiplication"
+      ],
+      "prompt": "(2 + 3) * 8 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            2,
+            3
+          ],
+          8
+        ],
+        "generator_index": 212,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "11",
+      "example_id": "phase0-v2-order:0213",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "55",
+        "division"
+      ],
+      "prompt": "(4 + 51) / 5 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            4,
+            51
+          ],
+          5
+        ],
+        "generator_index": 213,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "3",
+      "example_id": "phase0-v2-order:0214",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "17",
+        "mod"
+      ],
+      "prompt": "(13 + 4) % 7 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            13,
+            4
+          ],
+          7
+        ],
+        "generator_index": 214,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "100",
+      "example_id": "phase0-v2-order:0215",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "10",
+        "squared"
+      ],
+      "prompt": "(14 - 4)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            14,
+            4
+          ]
+        ],
+        "generator_index": 215,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "107",
+      "example_id": "phase0-v2-order:0216",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "90",
+        "addition"
+      ],
+      "prompt": "15 * 6 + 17 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            15,
+            6
+          ],
+          17
+        ],
+        "generator_index": 216,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "96",
+      "example_id": "phase0-v2-order:0217",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "112",
+        "subtraction"
+      ],
+      "prompt": "16 * 7 - 16 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            16,
+            7
+          ],
+          16
+        ],
+        "generator_index": 217,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "18",
+      "example_id": "phase0-v2-order:0218",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "9",
+        "multiplication"
+      ],
+      "prompt": "(6 + 3) * 2 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            6,
+            3
+          ],
+          2
+        ],
+        "generator_index": 218,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "10",
+      "example_id": "phase0-v2-order:0219",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "70",
+        "division"
+      ],
+      "prompt": "(64 + 6) / 7 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            64,
+            6
+          ],
+          7
+        ],
+        "generator_index": 219,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0220",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "8",
+        "mod"
+      ],
+      "prompt": "(5 + 3) % 6 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            5,
+            3
+          ],
+          6
+        ],
+        "generator_index": 220,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "144",
+      "example_id": "phase0-v2-order:0221",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "12",
+        "squared"
+      ],
+      "prompt": "(18 - 6)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            18,
+            6
+          ]
+        ],
+        "generator_index": 221,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "28",
+      "example_id": "phase0-v2-order:0222",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "12",
+        "addition"
+      ],
+      "prompt": "4 * 3 + 16 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            4,
+            3
+          ],
+          16
+        ],
+        "generator_index": 222,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0223",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "117",
+        "subtraction"
+      ],
+      "prompt": "13 * 9 - 117 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            13,
+            9
+          ],
+          117
+        ],
+        "generator_index": 223,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "69",
+      "example_id": "phase0-v2-order:0224",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "23",
+        "multiplication"
+      ],
+      "prompt": "(15 + 8) * 3 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            15,
+            8
+          ],
+          3
+        ],
+        "generator_index": 224,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0225",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "16",
+        "division"
+      ],
+      "prompt": "(3 + 13) / 8 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            3,
+            13
+          ],
+          8
+        ],
+        "generator_index": 225,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0226",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "14",
+        "mod"
+      ],
+      "prompt": "(7 + 7) % 3 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            7,
+            7
+          ],
+          3
+        ],
+        "generator_index": 226,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "25",
+      "example_id": "phase0-v2-order:0227",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "5",
+        "squared"
+      ],
+      "prompt": "(9 - 4)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            9,
+            4
+          ]
+        ],
+        "generator_index": 227,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "72",
+      "example_id": "phase0-v2-order:0228",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "60",
+        "addition"
+      ],
+      "prompt": "12 * 5 + 12 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            12,
+            5
+          ],
+          12
+        ],
+        "generator_index": 228,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "39",
+      "example_id": "phase0-v2-order:0229",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "44",
+        "subtraction"
+      ],
+      "prompt": "11 * 4 - 5 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            11,
+            4
+          ],
+          5
+        ],
+        "generator_index": 229,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "50",
+      "example_id": "phase0-v2-order:0230",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "10",
+        "multiplication"
+      ],
+      "prompt": "(5 + 5) * 5 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            5,
+            5
+          ],
+          5
+        ],
+        "generator_index": 230,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "10",
+      "example_id": "phase0-v2-order:0231",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "40",
+        "division"
+      ],
+      "prompt": "(38 + 2) / 4 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            38,
+            2
+          ],
+          4
+        ],
+        "generator_index": 231,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "2",
+      "example_id": "phase0-v2-order:0232",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "22",
+        "mod"
+      ],
+      "prompt": "(13 + 9) % 4 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            13,
+            9
+          ],
+          4
+        ],
+        "generator_index": 232,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "4",
+      "example_id": "phase0-v2-order:0233",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "2",
+        "squared"
+      ],
+      "prompt": "(6 - 4)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            6,
+            4
+          ]
+        ],
+        "generator_index": 233,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "41",
+      "example_id": "phase0-v2-order:0234",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "32",
+        "addition"
+      ],
+      "prompt": "8 * 4 + 9 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            8,
+            4
+          ],
+          9
+        ],
+        "generator_index": 234,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "33",
+      "example_id": "phase0-v2-order:0235",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "56",
+        "subtraction"
+      ],
+      "prompt": "7 * 8 - 23 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            7,
+            8
+          ],
+          23
+        ],
+        "generator_index": 235,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "180",
+      "example_id": "phase0-v2-order:0236",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "20",
+        "multiplication"
+      ],
+      "prompt": "(15 + 5) * 9 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            15,
+            5
+          ],
+          9
+        ],
+        "generator_index": 236,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "9",
+      "example_id": "phase0-v2-order:0237",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "36",
+        "division"
+      ],
+      "prompt": "(1 + 35) / 4 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            1,
+            35
+          ],
+          4
+        ],
+        "generator_index": 237,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "1",
+      "example_id": "phase0-v2-order:0238",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "11",
+        "mod"
+      ],
+      "prompt": "(7 + 4) % 5 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            7,
+            4
+          ],
+          5
+        ],
+        "generator_index": 238,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "169",
+      "example_id": "phase0-v2-order:0239",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "13",
+        "squared"
+      ],
+      "prompt": "(15 - 2)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            15,
+            2
+          ]
+        ],
+        "generator_index": 239,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "126",
+      "example_id": "phase0-v2-order:0240",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "114",
+        "addition"
+      ],
+      "prompt": "19 * 6 + 12 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            19,
+            6
+          ],
+          12
+        ],
+        "generator_index": 240,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "21",
+      "example_id": "phase0-v2-order:0241",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "36",
+        "subtraction"
+      ],
+      "prompt": "4 * 9 - 15 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            4,
+            9
+          ],
+          15
+        ],
+        "generator_index": 241,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "84",
+      "example_id": "phase0-v2-order:0242",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "14",
+        "multiplication"
+      ],
+      "prompt": "(12 + 2) * 6 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            12,
+            2
+          ],
+          6
+        ],
+        "generator_index": 242,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "8",
+      "example_id": "phase0-v2-order:0243",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "48",
+        "division"
+      ],
+      "prompt": "(33 + 15) / 6 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            33,
+            15
+          ],
+          6
+        ],
+        "generator_index": 243,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "5",
+      "example_id": "phase0-v2-order:0244",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "5",
+        "mod"
+      ],
+      "prompt": "(3 + 2) % 7 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            3,
+            2
+          ],
+          7
+        ],
+        "generator_index": 244,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "64",
+      "example_id": "phase0-v2-order:0245",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "8",
+        "squared"
+      ],
+      "prompt": "(9 - 1)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            9,
+            1
+          ]
+        ],
+        "generator_index": 245,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "58",
+      "example_id": "phase0-v2-order:0246",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "56",
+        "addition"
+      ],
+      "prompt": "8 * 7 + 2 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            8,
+            7
+          ],
+          2
+        ],
+        "generator_index": 246,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "20",
+      "example_id": "phase0-v2-order:0247",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "22",
+        "subtraction"
+      ],
+      "prompt": "11 * 2 - 2 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            11,
+            2
+          ],
+          2
+        ],
+        "generator_index": 247,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "36",
+      "example_id": "phase0-v2-order:0248",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "18",
+        "multiplication"
+      ],
+      "prompt": "(12 + 6) * 2 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            12,
+            6
+          ],
+          2
+        ],
+        "generator_index": 248,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "14",
+      "example_id": "phase0-v2-order:0249",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "28",
+        "division"
+      ],
+      "prompt": "(20 + 8) / 2 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            20,
+            8
+          ],
+          2
+        ],
+        "generator_index": 249,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    },
+    {
+      "answer": "1",
+      "example_id": "phase0-v2-order:0250",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "21",
+        "mod"
+      ],
+      "prompt": "(18 + 3) % 2 = ",
+      "template_id": "phase0-v2:mod",
+      "variables": {
+        "ast": [
+          "%",
+          [
+            "+",
+            18,
+            3
+          ],
+          2
+        ],
+        "generator_index": 250,
+        "generator_seed": 20260828,
+        "operation": "mod"
+      }
+    },
+    {
+      "answer": "0",
+      "example_id": "phase0-v2-order:0251",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "0",
+        "squared"
+      ],
+      "prompt": "(5 - 5)^2 = ",
+      "template_id": "phase0-v2:squared",
+      "variables": {
+        "ast": [
+          "square",
+          [
+            "-",
+            5,
+            5
+          ]
+        ],
+        "generator_index": 251,
+        "generator_seed": 20260828,
+        "operation": "squared"
+      }
+    },
+    {
+      "answer": "27",
+      "example_id": "phase0-v2-order:0252",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "14",
+        "addition"
+      ],
+      "prompt": "2 * 7 + 13 = ",
+      "template_id": "phase0-v2:addition",
+      "variables": {
+        "ast": [
+          "+",
+          [
+            "*",
+            2,
+            7
+          ],
+          13
+        ],
+        "generator_index": 252,
+        "generator_seed": 20260828,
+        "operation": "addition"
+      }
+    },
+    {
+      "answer": "52",
+      "example_id": "phase0-v2-order:0253",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "126",
+        "subtraction"
+      ],
+      "prompt": "18 * 7 - 74 = ",
+      "template_id": "phase0-v2:subtraction",
+      "variables": {
+        "ast": [
+          "-",
+          [
+            "*",
+            18,
+            7
+          ],
+          74
+        ],
+        "generator_index": 253,
+        "generator_seed": 20260828,
+        "operation": "subtraction"
+      }
+    },
+    {
+      "answer": "69",
+      "example_id": "phase0-v2-order:0254",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "23",
+        "multiplication"
+      ],
+      "prompt": "(19 + 4) * 3 = ",
+      "template_id": "phase0-v2:multiplication",
+      "variables": {
+        "ast": [
+          "*",
+          [
+            "+",
+            19,
+            4
+          ],
+          3
+        ],
+        "generator_index": 254,
+        "generator_seed": 20260828,
+        "operation": "multiplication"
+      }
+    },
+    {
+      "answer": "15",
+      "example_id": "phase0-v2-order:0255",
+      "facts": [],
+      "family": "order_of_operations",
+      "intermediates": [
+        "90",
+        "division"
+      ],
+      "prompt": "(33 + 57) / 6 = ",
+      "template_id": "phase0-v2:division",
+      "variables": {
+        "ast": [
+          "/",
+          [
+            "+",
+            33,
+            57
+          ],
+          6
+        ],
+        "generator_index": 255,
+        "generator_seed": 20260828,
+        "operation": "division"
+      }
+    }
+  ],
+  "schema_version": 2
+}

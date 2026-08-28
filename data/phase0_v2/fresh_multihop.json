@@ -1,0 +1,1008 @@
+{
+  "items": [
+    {
+      "answer": "shell",
+      "example_id": "phase0-v2-probe:animal-cover-turtle",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "turtle"
+      ],
+      "prompt": "Fact: The hard covering on the back of the slow reptile that can pull its head inside its body is called a",
+      "template_id": "probe-swap:animal-cover",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "scale",
+        "swap_to": "snake",
+        "upstream_name": "animal-cover-turtle"
+      }
+    },
+    {
+      "answer": "four",
+      "example_id": "phase0-v2-probe:animal-legs-buffalo2",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "buffalo"
+      ],
+      "prompt": "Fact: The number of legs on the large horned animal that roamed the American plains in huge herds is",
+      "template_id": "probe-swap:animal-legs",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "eight",
+        "swap_to": "spider",
+        "upstream_name": "animal-legs-buffalo2"
+      }
+    },
+    {
+      "answer": "trunk",
+      "example_id": "phase0-v2-probe:animal-nose-elephant",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "elephant"
+      ],
+      "prompt": "Fact: The long flexible body part that the largest land animal uses to pick things up is called a",
+      "template_id": "probe-swap:animal-nose",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "tongue",
+        "swap_to": "snake",
+        "upstream_name": "animal-nose-elephant"
+      }
+    },
+    {
+      "answer": "grape",
+      "example_id": "phase0-v2-probe:beverage-source-wine",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "wine"
+      ],
+      "prompt": "Fact: The fruit that the alcoholic drink served at communion is made from is the",
+      "template_id": "probe-swap:beverage-source",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "barley",
+        "swap_to": "beer",
+        "upstream_name": "beverage-source-wine"
+      }
+    },
+    {
+      "answer": "white",
+      "example_id": "phase0-v2-probe:bird-color-swan",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "swan"
+      ],
+      "prompt": "Fact: The color of the long-necked bird in the famous Tchaikovsky ballet is",
+      "template_id": "probe-swap:bird-color",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "brown",
+        "swap_to": "eagle",
+        "upstream_name": "bird-color-swan"
+      }
+    },
+    {
+      "answer": "America",
+      "example_id": "phase0-v2-probe:bird-country-eagle",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "eagle"
+      ],
+      "prompt": "Fact: The country whose national emblem is the bird with the white head on the Great Seal is",
+      "template_id": "probe-swap:bird-country",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "England",
+        "swap_to": "swan",
+        "upstream_name": "bird-country-eagle"
+      }
+    },
+    {
+      "answer": "night",
+      "example_id": "phase0-v2-probe:bird-time-owl",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "owl"
+      ],
+      "prompt": "Fact: The time of day when the bird that hoots and can turn its head almost all the way around hunts is",
+      "template_id": "probe-swap:bird-time",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "day",
+        "swap_to": "eagle",
+        "upstream_name": "bird-time-owl"
+      }
+    },
+    {
+      "answer": "Pennsylvania",
+      "example_id": "phase0-v2-probe:city-state-Philadelphia",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Philadelphia"
+      ],
+      "prompt": "Fact: The US state where the city famous for the Liberty Bell is located is",
+      "template_id": "probe-swap:city-state",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Washington",
+        "swap_to": "Seattle",
+        "upstream_name": "city-state-Philadelphia"
+      }
+    },
+    {
+      "answer": "yellow",
+      "example_id": "phase0-v2-probe:element-color-gold2",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "gold"
+      ],
+      "prompt": "Fact: The color of the precious metal with atomic number 79 is",
+      "template_id": "probe-swap:element-color",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "gray",
+        "swap_to": "silver",
+        "upstream_name": "element-color-gold2"
+      }
+    },
+    {
+      "answer": "Madrid",
+      "example_id": "phase0-v2-probe:ex-city-capital-Barcelona-Toronto",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Spain"
+      ],
+      "prompt": "Fact: The capital of the country where Barcelona is located is",
+      "template_id": "probe-swap:city-capital",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Ottawa",
+        "swap_to": "Canada",
+        "upstream_name": "ex-city-capital-Barcelona-Toronto"
+      }
+    },
+    {
+      "answer": "Paris",
+      "example_id": "phase0-v2-probe:ex-city-capital-Lyon-Naples",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "France"
+      ],
+      "prompt": "Fact: The capital of the country where Lyon is located is",
+      "template_id": "probe-swap:city-capital",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Rome",
+        "swap_to": "Italy",
+        "upstream_name": "ex-city-capital-Lyon-Naples"
+      }
+    },
+    {
+      "answer": "Rome",
+      "example_id": "phase0-v2-probe:ex-city-capital-Naples-Barcelona",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Italy"
+      ],
+      "prompt": "Fact: The capital of the country where Naples is located is",
+      "template_id": "probe-swap:city-capital",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Madrid",
+        "swap_to": "Spain",
+        "upstream_name": "ex-city-capital-Naples-Barcelona"
+      }
+    },
+    {
+      "answer": "Ottawa",
+      "example_id": "phase0-v2-probe:ex-city-capital-Toronto-Lyon",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Canada"
+      ],
+      "prompt": "Fact: The capital of the country where Toronto is located is",
+      "template_id": "probe-swap:city-capital",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Paris",
+        "swap_to": "France",
+        "upstream_name": "ex-city-capital-Toronto-Lyon"
+      }
+    },
+    {
+      "answer": "North",
+      "example_id": "phase0-v2-probe:ex-city-continent-Toronto-Lyon",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Canada"
+      ],
+      "prompt": "Fact: The continent of the country where Toronto is located is",
+      "template_id": "probe-swap:city-continent",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Europe",
+        "swap_to": "France",
+        "upstream_name": "ex-city-continent-Toronto-Lyon"
+      }
+    },
+    {
+      "answer": "Canadian",
+      "example_id": "phase0-v2-probe:ex-city-currency-Toronto-Beijing",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Canada"
+      ],
+      "prompt": "Fact: The currency used in the country where Toronto is located is the",
+      "template_id": "probe-swap:city-currency",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "yuan",
+        "swap_to": "China",
+        "upstream_name": "ex-city-currency-Toronto-Beijing"
+      }
+    },
+    {
+      "answer": "Canadian",
+      "example_id": "phase0-v2-probe:ex-city-currency-Toronto-Mumbai",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Canada"
+      ],
+      "prompt": "Fact: The currency used in the country where Toronto is located is the",
+      "template_id": "probe-swap:city-currency",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "rupee",
+        "swap_to": "India",
+        "upstream_name": "ex-city-currency-Toronto-Mumbai"
+      }
+    },
+    {
+      "answer": "French",
+      "example_id": "phase0-v2-probe:ex-city-language-Lyon-Naples",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "France"
+      ],
+      "prompt": "Fact: The language spoken in the country where Lyon is located is",
+      "template_id": "probe-swap:city-language",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Italian",
+        "swap_to": "Italy",
+        "upstream_name": "ex-city-language-Lyon-Naples"
+      }
+    },
+    {
+      "answer": "solid",
+      "example_id": "phase0-v2-probe:ex-element-state-26-8",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "iron"
+      ],
+      "prompt": "Fact: The state of matter at room temperature of the element with atomic number 26 is",
+      "template_id": "probe-swap:element-state",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "gas",
+        "swap_to": "oxygen",
+        "upstream_name": "ex-element-state-26-8"
+      }
+    },
+    {
+      "answer": "solid",
+      "example_id": "phase0-v2-probe:ex-element-state-26-80",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "iron"
+      ],
+      "prompt": "Fact: The state of matter at room temperature of the element with atomic number 26 is",
+      "template_id": "probe-swap:element-state",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "liquid",
+        "swap_to": "mercury",
+        "upstream_name": "ex-element-state-26-80"
+      }
+    },
+    {
+      "answer": "gas",
+      "example_id": "phase0-v2-probe:ex-element-state-8-26",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "oxygen"
+      ],
+      "prompt": "Fact: The state of matter at room temperature of the element with atomic number 8 is",
+      "template_id": "probe-swap:element-state",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "solid",
+        "swap_to": "iron",
+        "upstream_name": "ex-element-state-8-26"
+      }
+    },
+    {
+      "answer": "gas",
+      "example_id": "phase0-v2-probe:ex-element-state-8-80",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "oxygen"
+      ],
+      "prompt": "Fact: The state of matter at room temperature of the element with atomic number 8 is",
+      "template_id": "probe-swap:element-state",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "liquid",
+        "swap_to": "mercury",
+        "upstream_name": "ex-element-state-8-80"
+      }
+    },
+    {
+      "answer": "Na",
+      "example_id": "phase0-v2-probe:ex-element-symbol-11-26",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "sodium"
+      ],
+      "prompt": "Fact: The chemical symbol for the element with atomic number 11 is",
+      "template_id": "probe-swap:element-symbol",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Fe",
+        "swap_to": "iron",
+        "upstream_name": "ex-element-symbol-11-26"
+      }
+    },
+    {
+      "answer": "blue",
+      "example_id": "phase0-v2-probe:ex-planet-color-third-fourth",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Earth"
+      ],
+      "prompt": "Fact: The color of the planet third from the Sun is",
+      "template_id": "probe-swap:planet-color",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "red",
+        "swap_to": "Mars",
+        "upstream_name": "ex-planet-color-third-fourth"
+      }
+    },
+    {
+      "answer": "Berlin",
+      "example_id": "phase0-v2-probe:ex2-city-capital-Munich",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Germany"
+      ],
+      "prompt": "Fact: The capital of the country where Munich is located is",
+      "template_id": "probe-swap:city-capital",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Tokyo",
+        "swap_to": "Japan",
+        "upstream_name": "ex2-city-capital-Munich"
+      }
+    },
+    {
+      "answer": "Tokyo",
+      "example_id": "phase0-v2-probe:ex2-city-capital-Osaka",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Japan"
+      ],
+      "prompt": "Fact: The capital of the country where Osaka is located is",
+      "template_id": "probe-swap:city-capital",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Berlin",
+        "swap_to": "Germany",
+        "upstream_name": "ex2-city-capital-Osaka"
+      }
+    },
+    {
+      "answer": "South",
+      "example_id": "phase0-v2-probe:ex2-city-continent-Lima",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Peru"
+      ],
+      "prompt": "Fact: The continent of the country where Lima is located is",
+      "template_id": "probe-swap:city-continent",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Africa",
+        "swap_to": "Egypt",
+        "upstream_name": "ex2-city-continent-Lima"
+      }
+    },
+    {
+      "answer": "Australia",
+      "example_id": "phase0-v2-probe:ex2-city-continent-Sydney",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Australia"
+      ],
+      "prompt": "Fact: The continent of the country where Sydney is located is",
+      "template_id": "probe-swap:city-continent",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "South",
+        "swap_to": "Peru",
+        "upstream_name": "ex2-city-continent-Sydney"
+      }
+    },
+    {
+      "answer": "Arabic",
+      "example_id": "phase0-v2-probe:ex2-city-language-Cairo",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Egypt"
+      ],
+      "prompt": "Fact: The language spoken in the country where Cairo is located is",
+      "template_id": "probe-swap:city-language",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Russian",
+        "swap_to": "Russia",
+        "upstream_name": "ex2-city-language-Cairo"
+      }
+    },
+    {
+      "answer": "Russian",
+      "example_id": "phase0-v2-probe:ex2-city-language-Moscow",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Russia"
+      ],
+      "prompt": "Fact: The language spoken in the country where Moscow is located is",
+      "template_id": "probe-swap:city-language",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Arabic",
+        "swap_to": "Egypt",
+        "upstream_name": "ex2-city-language-Moscow"
+      }
+    },
+    {
+      "answer": "Athens",
+      "example_id": "phase0-v2-probe:ex2-language-capital-Greek",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Greece"
+      ],
+      "prompt": "Fact: The capital of the country where Greek is the primary language is",
+      "template_id": "probe-swap:language-capital",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Stockholm",
+        "swap_to": "Sweden",
+        "upstream_name": "ex2-language-capital-Greek"
+      }
+    },
+    {
+      "answer": "Budapest",
+      "example_id": "phase0-v2-probe:ex2-language-capital-Hungarian",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Hungary"
+      ],
+      "prompt": "Fact: The capital of the country where Hungarian is the primary language is",
+      "template_id": "probe-swap:language-capital",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Warsaw",
+        "swap_to": "Poland",
+        "upstream_name": "ex2-language-capital-Hungarian"
+      }
+    },
+    {
+      "answer": "Warsaw",
+      "example_id": "phase0-v2-probe:ex2-language-capital-Polish",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Poland"
+      ],
+      "prompt": "Fact: The capital of the country where Polish is the primary language is",
+      "template_id": "probe-swap:language-capital",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Athens",
+        "swap_to": "Greece",
+        "upstream_name": "ex2-language-capital-Polish"
+      }
+    },
+    {
+      "answer": "Stockholm",
+      "example_id": "phase0-v2-probe:ex2-language-capital-Swedish",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Sweden"
+      ],
+      "prompt": "Fact: The capital of the country where Swedish is the primary language is",
+      "template_id": "probe-swap:language-capital",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Budapest",
+        "swap_to": "Hungary",
+        "upstream_name": "ex2-language-capital-Swedish"
+      }
+    },
+    {
+      "answer": "London",
+      "example_id": "phase0-v2-probe:ex2-river-capital-Thames",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "England"
+      ],
+      "prompt": "Fact: The capital of the country where the Thames River reaches the sea is",
+      "template_id": "probe-swap:river-capital",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Berlin",
+        "swap_to": "Germany",
+        "upstream_name": "ex2-river-capital-Thames"
+      }
+    },
+    {
+      "answer": "cow",
+      "example_id": "phase0-v2-probe:food-animal-butter",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "butter"
+      ],
+      "prompt": "Fact: The animal that produces the yellow dairy spread used on bread is the",
+      "template_id": "probe-swap:food-animal",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "bee",
+        "swap_to": "honey",
+        "upstream_name": "food-animal-butter"
+      }
+    },
+    {
+      "answer": "bee",
+      "example_id": "phase0-v2-probe:food-animal-honey",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "honey"
+      ],
+      "prompt": "Fact: The insect that produces the sweet golden substance spread on toast is the",
+      "template_id": "probe-swap:food-animal",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "cow",
+        "swap_to": "butter",
+        "upstream_name": "food-animal-honey"
+      }
+    },
+    {
+      "answer": "vine",
+      "example_id": "phase0-v2-probe:fruit-grows-grape",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "grape"
+      ],
+      "prompt": "Fact: The kind of plant that the small round fruit used to make wine grows on is a",
+      "template_id": "probe-swap:fruit-grows",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "tree",
+        "swap_to": "apple",
+        "upstream_name": "fruit-grows-grape"
+      }
+    },
+    {
+      "answer": "red",
+      "example_id": "phase0-v2-probe:gem-color-ruby",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "ruby"
+      ],
+      "prompt": "Fact: The color of the gemstone that is the traditional birthstone for July is",
+      "template_id": "probe-swap:gem-color",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "white",
+        "swap_to": "pearl",
+        "upstream_name": "gem-color-ruby"
+      }
+    },
+    {
+      "answer": "oyster",
+      "example_id": "phase0-v2-probe:gem-source-pearl",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "pearl"
+      ],
+      "prompt": "Fact: The animal that produces the round gem traditionally worn as a necklace by brides is the",
+      "template_id": "probe-swap:gem-source",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "earth",
+        "swap_to": "diamond",
+        "upstream_name": "gem-source-pearl"
+      }
+    },
+    {
+      "answer": "December",
+      "example_id": "phase0-v2-probe:holiday-month-christmas2",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Christmas"
+      ],
+      "prompt": "Fact: The month of the holiday celebrated with a decorated evergreen tree and gift-giving is",
+      "template_id": "probe-swap:holiday-month",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "April",
+        "swap_to": "Easter",
+        "upstream_name": "holiday-month-christmas2"
+      }
+    },
+    {
+      "answer": "lips",
+      "example_id": "phase0-v2-probe:instr-body-trumpet",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "trumpet"
+      ],
+      "prompt": "Fact: The part of the body a player buzzes to play the valved brass instrument heard in jazz solos is the",
+      "template_id": "probe-swap:instr-played",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "hands",
+        "swap_to": "drums",
+        "upstream_name": "instr-body-trumpet"
+      }
+    },
+    {
+      "answer": "sticks",
+      "example_id": "phase0-v2-probe:instr-hit-drums",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "drums"
+      ],
+      "prompt": "Fact: The pair of wooden objects used to strike the instrument that keeps the beat at the back of a rock band is called",
+      "template_id": "probe-swap:instr-played",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "keys",
+        "swap_to": "piano",
+        "upstream_name": "instr-hit-drums"
+      }
+    },
+    {
+      "answer": "acid",
+      "example_id": "phase0-v2-probe:organ-acid-stomach",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "stomach"
+      ],
+      "prompt": "Fact: The strong liquid inside the organ that breaks down swallowed food is called",
+      "template_id": "probe-swap:organ-function",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "blood",
+        "swap_to": "heart",
+        "upstream_name": "organ-acid-stomach"
+      }
+    },
+    {
+      "answer": "two",
+      "example_id": "phase0-v2-probe:organ-count-kidney2",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "kidney"
+      ],
+      "prompt": "Fact: The number of the bean-shaped organs that filter blood into urine in a human body is",
+      "template_id": "probe-swap:organ-count",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "one",
+        "swap_to": "heart",
+        "upstream_name": "organ-count-kidney2"
+      }
+    },
+    {
+      "answer": "skull",
+      "example_id": "phase0-v2-probe:organ-location-brain",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "brain"
+      ],
+      "prompt": "Fact: The bony structure that encases the organ responsible for thinking and memory is the",
+      "template_id": "probe-swap:organ-location",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "ribcage",
+        "swap_to": "heart",
+        "upstream_name": "organ-location-brain"
+      }
+    },
+    {
+      "answer": "chest",
+      "example_id": "phase0-v2-probe:organ-location-heart",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "heart"
+      ],
+      "prompt": "Fact: The part of the body that contains the organ that pumps blood is the",
+      "template_id": "probe-swap:organ-location",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "head",
+        "swap_to": "brain",
+        "upstream_name": "organ-location-heart"
+      }
+    },
+    {
+      "answer": "Civil",
+      "example_id": "phase0-v2-probe:person-century-lincoln",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Lincoln"
+      ],
+      "prompt": "Fact: The war that the president who delivered the Gettysburg Address led his country through was the",
+      "template_id": "probe-swap:person-century",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Napoleonic",
+        "swap_to": "Napoleon",
+        "upstream_name": "person-century-lincoln"
+      }
+    },
+    {
+      "answer": "France",
+      "example_id": "phase0-v2-probe:person-country-napoleon",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Napoleon"
+      ],
+      "prompt": "Fact: The country whose army was led by the emperor defeated at Waterloo is",
+      "template_id": "probe-swap:person-country",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "America",
+        "swap_to": "Lincoln",
+        "upstream_name": "person-country-napoleon"
+      }
+    },
+    {
+      "answer": "England",
+      "example_id": "phase0-v2-probe:person-country-shakespeare",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Shakespeare"
+      ],
+      "prompt": "Fact: The country where the playwright who wrote Hamlet and Macbeth was born is",
+      "template_id": "probe-swap:person-country",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Germany",
+        "swap_to": "Einstein",
+        "upstream_name": "person-country-shakespeare"
+      }
+    },
+    {
+      "answer": "Charles",
+      "example_id": "phase0-v2-probe:person-firstname-darwin",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Darwin"
+      ],
+      "prompt": "Fact: The first name of the naturalist who proposed evolution by natural selection was",
+      "template_id": "probe-swap:person-firstname",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Albert",
+        "swap_to": "Einstein",
+        "upstream_name": "person-firstname-darwin"
+      }
+    },
+    {
+      "answer": "Albert",
+      "example_id": "phase0-v2-probe:person-firstname-einstein",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Einstein"
+      ],
+      "prompt": "Fact: The first name of the physicist who developed the theory of general relativity was",
+      "template_id": "probe-swap:person-firstname",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Isaac",
+        "swap_to": "Newton",
+        "upstream_name": "person-firstname-einstein"
+      }
+    },
+    {
+      "answer": "Wolfgang",
+      "example_id": "phase0-v2-probe:person-firstname-mozart",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Mozart"
+      ],
+      "prompt": "Fact: The first name of the child-prodigy composer from Salzburg who wrote The Magic Flute was",
+      "template_id": "probe-swap:person-firstname",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Charles",
+        "swap_to": "Darwin",
+        "upstream_name": "person-firstname-mozart"
+      }
+    },
+    {
+      "answer": "Isaac",
+      "example_id": "phase0-v2-probe:person-firstname-newton",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Newton"
+      ],
+      "prompt": "Fact: The first name of the scientist on whose head an apple is said to have fallen was",
+      "template_id": "probe-swap:person-firstname",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "William",
+        "swap_to": "Shakespeare",
+        "upstream_name": "person-firstname-newton"
+      }
+    },
+    {
+      "answer": "William",
+      "example_id": "phase0-v2-probe:person-firstname-shakespeare",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Shakespeare"
+      ],
+      "prompt": "Fact: The first name of the playwright who wrote Romeo and Juliet was",
+      "template_id": "probe-swap:person-firstname",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "Wolfgang",
+        "swap_to": "Mozart",
+        "upstream_name": "person-firstname-shakespeare"
+      }
+    },
+    {
+      "answer": "rings",
+      "example_id": "phase0-v2-probe:planet-rings-saturn2",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "Saturn"
+      ],
+      "prompt": "Fact: The most famous feature of the sixth planet from the Sun is its",
+      "template_id": "probe-swap:planet-feature",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "spot",
+        "swap_to": "Jupiter",
+        "upstream_name": "planet-rings-saturn2"
+      }
+    },
+    {
+      "answer": "spring",
+      "example_id": "phase0-v2-probe:season-next-winter",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "winter"
+      ],
+      "prompt": "Fact: The season that comes immediately after the coldest season of the year is",
+      "template_id": "probe-swap:season-next",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "autumn",
+        "swap_to": "summer",
+        "upstream_name": "season-next-winter"
+      }
+    },
+    {
+      "answer": "racket",
+      "example_id": "phase0-v2-probe:sport-equip-tennis",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "tennis"
+      ],
+      "prompt": "Fact: The piece of equipment used to strike the ball in the sport played at Wimbledon is a",
+      "template_id": "probe-swap:sport-equip",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "club",
+        "swap_to": "golf",
+        "upstream_name": "sport-equip-tennis"
+      }
+    },
+    {
+      "answer": "acorn",
+      "example_id": "phase0-v2-probe:tree-product-oak",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "oak"
+      ],
+      "prompt": "Fact: The small hard nut produced by the large tree that squirrels famously bury food from is the",
+      "template_id": "probe-swap:tree-product",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "cone",
+        "swap_to": "pine",
+        "upstream_name": "tree-product-oak"
+      }
+    },
+    {
+      "answer": "legs",
+      "example_id": "phase0-v2-probe:vehicle-power-bicycle",
+      "facts": [],
+      "family": "factual_two_hop",
+      "intermediates": [
+        "bicycle"
+      ],
+      "prompt": "Fact: The source of power for the two-wheeled vehicle ridden in the Tour de France is the rider's",
+      "template_id": "probe-swap:vehicle-power",
+      "variables": {
+        "source": "anthropic-probe-swap",
+        "swap_answer": "engine",
+        "swap_to": "train",
+        "upstream_name": "vehicle-power-bicycle"
+      }
+    }
+  ],
+  "schema_version": 2
+}

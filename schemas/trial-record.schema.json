@@ -16,7 +16,7 @@
     "seed"
   ],
   "properties": {
-    "schema_version": {"const": 1},
+    "schema_version": {"enum": [1, 2]},
     "run_id": {"type": "string", "minLength": 1},
     "prompt_id": {"type": "string", "minLength": 1},
     "template_id": {"type": ["string", "null"]},
@@ -28,6 +28,10 @@
     "exclusion_reason": {"type": ["string", "null"]},
     "metrics": {"type": "object"},
     "seed": {"type": "integer"}
+    ,"protocol_version": {"type": "string"}
+    ,"dictionary_size": {"type": ["integer", "null"], "minimum": 1}
+    ,"dictionary_hash": {"type": ["string", "null"]}
+    ,"position_scope": {"enum": ["final", "explicit", "all_non_padding", "reasoning_span"]}
   },
   "additionalProperties": true
 }

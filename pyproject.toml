@@ -32,10 +32,14 @@ dev = [
   "pytest==8.3.5",
   "pytest-cov==6.0.0",
   "ruff==0.11.13",
+  "mypy==1.10.0",
 ]
 
 [project.scripts]
 jclosure-validate = "jclosure.experiments.validate_lens:main"
+jclosure-validate-v2 = "jclosure.experiments.validate_lens_v2:main"
+jclosure-phase0-audit = "jclosure.experiments.phase0_audit:main"
+jclosure-freeze-v2 = "jclosure.experiments.freeze_phase0_v2:main"
 jclosure-closure = "jclosure.experiments.closure:main"
 jclosure-collisions = "jclosure.experiments.natural_collisions:main"
 jclosure-memory = "jclosure.experiments.memory_order:main"

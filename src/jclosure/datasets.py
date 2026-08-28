@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from collections import deque
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -62,6 +63,176 @@ def upstream_order_ops(data_root: str | Path) -> list[TaskExample]:
             prompt=str(item["prompt"]),
             answer=str(item["target"]),
             intermediates=tuple(str(value) for value in item["intermediates"]),
+        )
+        for item in payload["items"]
+    ]
+
+
+def normalize_prompt(prompt: str) -> str:
+    """Normalize prompts only for deterministic overlap detection."""
+
+    return re.sub(r"\s+", " ", prompt).strip().casefold()
+
+
+def fresh_probe_swap_multihop(data_root: str | Path) -> list[TaskExample]:
+    """Return probe-swap items whose normalized prompts were absent from v1.
+
+    This is a fixed, output-independent de-duplication rule.  The resulting
+    count is recorded by the freeze manifest rather than silently padded.
+    """
+
+    calibration_prompts = {
+        normalize_prompt(example.prompt) for example in upstream_multihop(data_root)
+    }
+    payload = load_upstream_json(data_root, "experiments/probe-swap.json")
+    examples: list[TaskExample] = []
+    for item in payload["items"]:
+        prompt = str(item["prompt"])
+        normalized = normalize_prompt(prompt)
+        if normalized in calibration_prompts:
+            continue
+        examples.append(
+            TaskExample(
+                example_id=f"phase0-v2-probe:{item['name']}",
+                family="factual_two_hop",
+                template_id=f"probe-swap:{item['category']}",
+                prompt=prompt,
+                answer=str(item["answer"]),
+                intermediates=(str(item["intermediate"]),),
+                variables={
+                    "source": "anthropic-probe-swap",
+                    "upstream_name": str(item["name"]),
+                    "swap_to": str(item["swap_to"]),
+                    "swap_answer": str(item["swap_answer"]),
+                },
+            )
+        )
+    return examples
+
+
+def generate_phase0_order_ops_holdout(
+    n: int = 256,
+    *,
+    seed: int = 2_026_082_8,
+    calibration_prompts: set[str] | None = None,
+) -> list[TaskExample]:
+    """Generate a balanced, integer-valued, unseen Phase 0 v2 holdout."""
+
+    if n <= 0:
+        raise ValueError("n must be positive")
+    generator = np.random.default_rng(seed)
+    operations = (
+        "addition",
+        "subtraction",
+        "multiplication",
+        "division",
+        "mod",
+        "squared",
+    )
+    blocked = {normalize_prompt(value) for value in (calibration_prompts or set())}
+    examples: list[TaskExample] = []
+    seen_ast: set[tuple[Any, ...]] = set()
+    attempts = 0
+    while len(examples) < n:
+        attempts += 1
+        if attempts > n * 1_000:
+            raise RuntimeError("unable to generate the requested unique order-ops holdout")
+        operation = operations[len(examples) % len(operations)]
+        a = int(generator.integers(2, 20))
+        b = int(generator.integers(1, 10))
+        c = int(generator.integers(2, 10))
+        if operation == "addition":
+            intermediate = a * b
+            d = int(generator.integers(1, 20))
+            prompt = f"{a} * {b} + {d} = "
+            answer = intermediate + d
+            ast = ("+", ("*", a, b), d)
+        elif operation == "subtraction":
+            intermediate = a * b
+            d = int(generator.integers(0, intermediate + 1))
+            prompt = f"{a} * {b} - {d} = "
+            answer = intermediate - d
+            ast = ("-", ("*", a, b), d)
+        elif operation == "multiplication":
+            intermediate = a + b
+            prompt = f"({a} + {b}) * {c} = "
+            answer = intermediate * c
+            ast = ("*", ("+", a, b), c)
+        elif operation == "division":
+            intermediate = c * int(generator.integers(2, 20))
+            left = int(generator.integers(1, intermediate))
+            right = intermediate - left
+            prompt = f"({left} + {right}) / {c} = "
+            answer = intermediate // c
+            ast = ("/", ("+", left, right), c)
+        elif operation == "mod":
+            intermediate = a + b
+            prompt = f"({a} + {b}) % {c} = "
+            answer = intermediate % c
+            ast = ("%", ("+", a, b), c)
+        else:
+            large, small = max(a, b), min(a, b)
+            intermediate = large - small
+            prompt = f"({large} - {small})^2 = "
+            answer = intermediate**2
+            ast = ("square", ("-", large, small))
+        normalized = normalize_prompt(prompt)
+        ast_key = tuple(ast)
+        if normalized in blocked or ast_key in seen_ast:
+            continue
+        blocked.add(normalized)
+        seen_ast.add(ast_key)
+        index = len(examples)
+        examples.append(
+            TaskExample(
+                example_id=f"phase0-v2-order:{index:04d}",
+                family="order_of_operations",
+                template_id=f"phase0-v2:{operation}",
+                prompt=prompt,
+                answer=str(answer),
+                intermediates=(str(intermediate), operation),
+                variables={
+                    "operation": operation,
+                    "ast": ast,
+                    "generator_seed": seed,
+                    "generator_index": index,
+                },
+            )
+        )
+    return examples
+
+
+def task_examples_to_json(examples: list[TaskExample]) -> dict[str, Any]:
+    return {
+        "schema_version": 2,
+        "items": [
+            {
+                "example_id": item.example_id,
+                "family": item.family,
+                "template_id": item.template_id,
+                "prompt": item.prompt,
+                "answer": item.answer,
+                "intermediates": list(item.intermediates),
+                "variables": item.variables,
+                "facts": [list(fact) for fact in item.facts],
+            }
+            for item in examples
+        ],
+    }
+
+
+def task_examples_from_json(path: str | Path) -> list[TaskExample]:
+    payload = json.loads(Path(path).read_text(encoding="utf-8"))
+    return [
+        TaskExample(
+            example_id=str(item["example_id"]),
+            family=str(item["family"]),
+            template_id=str(item["template_id"]),
+            prompt=str(item["prompt"]),
+            answer=str(item["answer"]),
+            intermediates=tuple(str(value) for value in item.get("intermediates", [])),
+            variables=dict(item.get("variables", {})),
+            facts=tuple(tuple(str(value) for value in fact) for fact in item.get("facts", [])),
         )
         for item in payload["items"]
     ]

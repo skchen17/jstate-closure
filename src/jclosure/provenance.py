@@ -21,7 +21,7 @@ import torch
 
 from jclosure.config import config_digest, public_config
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 
 def sha256_file(path: str | Path, chunk_size: int = 8 * 1024 * 1024) -> str:
@@ -179,4 +179,3 @@ def build_manifest(
         "git_commit": git_commit(repo_root),
         "environment": environment_snapshot(),
     }
-

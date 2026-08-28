@@ -1,21 +1,24 @@
 # J-State Closure and Cognitive Controller Experiment
 
 This repository tests whether the Jacobian-lens J-space is approximately a
-sufficient layer-depth state for high-level model dynamics, a broadcast bus
-whose future contents depend on non-J computation, or part of a compact
+sufficient state for tested high-level model dynamics, a broadcast bus
+whose future contents depend on computation outside measured J, or part of a compact
 recurrent augmented state. It does **not** test or make claims about
 consciousness.
 
 The implementation uses Anthropic's `jacobian-lens` reference code and pins all
-model, lens, and source revisions. The primary state is the residual activation
-at the final pre-answer token, and dynamical time is transformer layer depth.
+model, lens, and source revisions. Layer-depth closure and autoregressive
+token-time closure are distinct analyses and are never treated as equivalent.
 
 ## Measurement gate
 
-Phase 0 must demonstrate hidden-intermediate readout and a positive-control J
-intervention. Every later runner reads `results/processed/phase0_gate.json` and
-refuses confirmatory interpretation if the gate is absent or failed. A failed
-gate is a measurement failure, not evidence for any hypothesis.
+The original Phase 0 and its failed `phase0_gate.json` remain reproducible.
+Protocol v2 corrects best-across-layer item-weighted pass@k, makes position 16 a
+sensitivity rather than an exclusion, and expands order-of-operations targets.
+It is frozen before a non-overlapping holdout is evaluated. New later runners
+read `results/processed/phase0_v2_gate.json` and refuse confirmatory
+interpretation if the gate is absent or failed. A failed gate is a measurement
+failure, not evidence for any hypothesis.
 
 ## Environment
 
@@ -45,6 +48,10 @@ graph.
 ```bash
 pytest -q
 scripts/run_validation.sh
+python -m jclosure.experiments.prepare_phase0_v2
+scripts/run_validation_v2.sh
+python -m jclosure.experiments.phase0_audit
+python -m jclosure.experiments.freeze_phase0_v2
 scripts/run_closure_pilot.sh
 scripts/run_closure_confirm.sh
 scripts/run_collision_search.sh
@@ -60,5 +67,6 @@ are derived from those records.
 ## Status
 
 No model-scale result is claimed merely because the code exists. See
-`reports/PHASE0_VALIDATION.md` and `reports/FINAL_REPORT.md` for the actual
-execution status and evidence boundary.
+`reports/PHASE0_VALIDATION.md`, `reports/PHASE0_PROTOCOL_AUDIT.md`,
+`reports/PHASE0_V2_CONFIRMATORY.md`, and `reports/FINAL_REPORT.md` for the
+actual execution status and evidence boundary.

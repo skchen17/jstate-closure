@@ -1,0 +1,32 @@
+extends: qwen3_5_4b.yaml
+
+run:
+  phase0_protocol: phase0_protocol_v2
+  phase0_mode: calibration
+
+validation:
+  protocol_version: phase0_protocol_v2
+  main_positions: all_valid
+  copied_target_policy: include_and_flag
+  synonym_rule: official-compatible-declared-v2
+  workspace_layer_scope: all_block_outputs
+  discovery_fraction: 1.0
+  band_peak_fraction: 0.50
+  band_min_layers: 3
+  hit10_threshold: 0.20
+  positive_control_trials: 24
+  bootstrap_resamples: 10000
+  report_sensitivity_peak_fractions: [0.25, 0.40, 0.60]
+
+jstate:
+  concept_vocab_sizes: [4096, 8192, 16384]
+  concept_vocab_size: 4096
+  direction_chunk_size: 512
+
+phase0_v2:
+  calibration_multihop_count: 93
+  calibration_order_ops_count: 55
+  fresh_multihop_expected_count: 59
+  fresh_order_ops_count: 256
+  fresh_data_dir: data/phase0_v2
+  freeze_manifest: artifacts/phase0_protocol_v2.freeze.json

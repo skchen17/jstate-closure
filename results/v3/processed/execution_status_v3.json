@@ -1,0 +1,27 @@
+{
+  "behavioral_authorized_protocols": [],
+  "behavioral_closure": "GATED",
+  "calibration": "UNEXECUTED",
+  "failed_runs": [
+    {
+      "error": "OSError: We couldn't connect to 'https://hf-mirror.com' to load the files, and couldn't find them in the cached files.\nCheck your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.",
+      "kind": "geometry-v3",
+      "run_id": "geometry-v3-20260828T165452Z-1bf9a00a-s20260828"
+    },
+    {
+      "error": "RuntimeError: Expected a 'cuda' device type for generator but found 'cpu'",
+      "kind": "geometry-v3",
+      "run_id": "geometry-v3-20260828T165606Z-1bf9a00a-s20260828"
+    }
+  ],
+  "geometry": "FAILED",
+  "lowdim_search": "UNEXECUTED",
+  "pareto": "UNEXECUTED",
+  "protocol_version": "exploratory_protocol_v3",
+  "schema_version": 3,
+  "source_hashes": {
+    "results/v3/raw/geometry-v3-20260828T165452Z-1bf9a00a-s20260828/manifest.json": "bbcd936175dabcccb7c419286bc705fea0b9765048320683a87ce5faaa535f08",
+    "results/v3/raw/geometry-v3-20260828T165606Z-1bf9a00a-s20260828/manifest.json": "8a947d134adec500b186343ee6c9652ab16702a63b5a816a1108b52e23daf580"
+  },
+  "strongest_warranted_conclusion": "D"
+}

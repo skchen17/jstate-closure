@@ -49,6 +49,42 @@ positions.
 - Finite 4,096/8,192/16,384 direction decompositions are called measured-J and
   measured-J remainder. `E_R(M)` is evaluated on paired trials.
 
+## Exploratory protocol v3 geometry contract
+
+Protocol v3 leaves every v1/v2 artifact byte-identical and verifies a committed
+SHA-256 manifest before each run. For dictionary sizes 4,096, 8,192, and 16,384,
+it distinguishes the unnormalized dense map from the row-normalized sparse
+pursuit dictionary. It records direct singular spectra for `A` and centered
+`CA`, and analyzes
+
+`J_s(h) = (I - s s^T) C A / ||C A h||`.
+
+Analytic JVP/VJP checks, radial null, numerical/tangent null dimensions,
+naturality, and the displacement/equality/RMS Pareto frontier are measurement
+preconditions, not behavioral findings. A dense profile that is locally
+near-injective is classified as too information-rich for a compact-state claim;
+it is never counted as H1 support.
+
+`V3-Dense` requires dense cosine at least 0.995 and top-10 overlap at least 0.8.
+`V3-Sparse` independently requires support F1 at least 0.8, weighted Jaccard at
+least 0.95, union-aligned coefficient cosine at least 0.995, and reconstruction
+cosine at least 0.995. Both require activation RMS drift at most 0.02,
+natural-distribution membership, and displacement at least 0.20. Displacements
+from 0.05 up to but excluding 0.20 are sensitivity analyses only.
+
+Clamp schedules are serialized before execution. `single` modifies only L1;
+`persistent_final` uses the arm's configured L1 positions then only the final
+position at later layers; `persistent_all` repeats the L1 scope at every later
+selected layer. Records contain the resolved attention-mask-aware positions and
+the actual `(layer, position, operation)` edits.
+
+V3 calibration uses paired anchor/donor IDs across layer, dictionary, and method.
+A protocol needs at least 160/200 strict-valid trials per layer, 95% naturality
+among valid trials, fewer than 5% numerical optimizer failures, passing hook
+controls, and at least four ordered eligible layers. The behavioral runner
+refuses to run unless all source/config/data hashes match the committed Phase 3
+freeze manifest.
+
 ## Statistical contract
 
 Pilot cells target at least 100 valid interventions; confirmatory task families

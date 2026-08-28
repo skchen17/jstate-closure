@@ -52,6 +52,7 @@ jclosure-clamp-v3 = "jclosure.experiments.clamp_v3_calibration:main"
 jclosure-freeze-v3 = "jclosure.experiments.freeze_phase3_v3:main"
 jclosure-closure-v3 = "jclosure.experiments.closure_v3:main"
 jclosure-report-v3 = "jclosure.reporting_v3:main"
+jclosure-lowdim-v3 = "jclosure.experiments.lowdim_search:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

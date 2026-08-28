@@ -21,6 +21,13 @@ found no closure-eligible layer. All formal downstream runners therefore stop
 before model loading. This is a measurement/state-construction failure, not
 evidence for H1, H2, or H3.
 
+Exploratory protocol v3 does not alter that result. It first audits the geometry
+of the unnormalized dense map `A_l = W_U J_l`, its centered map, and the local
+Jacobian of the normalized dense profile. `V3-Dense` and `V3-Sparse` are separate
+operational state definitions with separate equality tests. Behavioral closure
+is disabled until a byte-frozen v3 calibration authorizes at least four ordered
+layers while retaining a natural displacement of at least 0.20.
+
 ## Environment
 
 The reference environment is Python 3.12.2, PyTorch 2.10.0+cu128, and
@@ -54,6 +61,16 @@ scripts/run_validation_v2.sh
 python -m jclosure.experiments.phase0_audit
 python -m jclosure.experiments.freeze_phase0_v2
 scripts/run_layer_calibration.sh
+PYTHONPATH=src python scripts/check_v2_hashes.py
+scripts/run_geometry_v3.sh
+scripts/build_geometry_report.sh
+scripts/run_clamp_v3_calibration.sh
+scripts/freeze_phase3_v3.sh
+scripts/run_closure_v3_pilot.sh
+scripts/run_closure_v3_confirm.sh
+scripts/run_mediation_v3.sh
+scripts/run_dictionary_v3.sh
+scripts/run_lowdim_search.sh
 scripts/run_closure_pilot.sh
 scripts/run_closure_confirm.sh
 scripts/run_dictionary_sensitivity.sh
@@ -76,3 +93,8 @@ No model-scale result is claimed merely because the code exists. See
 actual execution status and evidence boundary. The strongest warranted result is
 classification D: the Phase 0 readout passed, but strict clamp calibration failed
 at every candidate layer, so closure/controller hypotheses remain unresolved.
+
+For offline model execution, set `JCLOSURE_MODEL_DIR` to a snapshot containing
+the pinned `artifact_manifest.json` and `JCLOSURE_ARTIFACT_DIR` to the verified
+lens cache. The loaders hash-check every declared local artifact before use.
+Failed runs remain as manifests and are never silently retried.

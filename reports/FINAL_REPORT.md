@@ -74,3 +74,28 @@ quantitative results.
 - `/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/dictionary_sensitivity.py --config configs/confirm_v2.yaml`
 - `/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/token_time_closure.py --config configs/confirm_v2.yaml --limit 1`
 - `/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/modularity.py --config configs/confirm_v2.yaml`
+
+## Exploratory protocol v3 update
+
+The v1/v2 records, thresholds, reports, and 0/1400 calibration result remain
+byte-identical under the committed SHA-256 regression guard.
+
+- Geometry status: **FAILED**
+- Pareto status: **UNEXECUTED**
+- V3 clamp calibration: **UNEXECUTED**
+- Behavioral protocols authorized: **none**
+- Strongest warranted classification after v3: **D**
+
+D — geometry audit incomplete; no state-definition diagnosis is warranted.
+
+Failed v3 runs are evidence about execution only and are not interpreted as
+model behavior:
+
+- `geometry-v3-20260828T165452Z-1bf9a00a-s20260828`: OSError: We couldn't connect to 'https://hf-mirror.com' to load the files, and couldn't find them in the cached files.
+Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+- `geometry-v3-20260828T165606Z-1bf9a00a-s20260828`: RuntimeError: Expected a 'cuda' device type for generator but found 'cpu'
+
+No H1-Dense, H1-Sparse, H2, or H3 claim is permitted unless a frozen operational
+state passes calibration and the paired behavioral, mediation, rollout, and
+causal-fidelity gates. Small-perturbation records below 0.20 cannot support those
+claims.

@@ -1,0 +1,104 @@
+extends: qwen3_5_4b.yaml
+
+run:
+  stage: geometry_v3
+  protocol_version: exploratory_protocol_v3
+  geometry_states_per_family: 64
+  geometry_fit_fraction: 0.50
+  clamp_base_trials: 200
+  pilot_valid_per_cell: 100
+  confirm_valid_per_family: 500
+  shard_count: 2
+  timeouts_hours:
+    geometry: 8
+    optimization: 12
+    closure: 24
+    controller: 72
+
+geometry:
+  candidate_layers: [23, 24, 25, 26, 27, 28, 29]
+  dictionary_sizes: [4096, 8192, 16384]
+  spectrum_relative_tolerances: [0.01, 0.001, 0.0001, 0.00001]
+  formal_null_tolerance: 0.0001
+  full_local_spectrum_states: 16
+  jvp_checks_per_combination: 8
+  radial_residual_threshold: 0.00001
+  strengths: [0.01, 0.02, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.50]
+  methods:
+    - sparse_remainder
+    - isotropic_random
+    - radial
+    - approximate_dense_null
+    - norm_tangent_dense_null
+    - hard_constrained
+  pca_dimension: 128
+  nearest_neighbors: 10
+  naturality_quantile: 0.99
+  direct_svd_dtype: float32
+  tail_crosscheck_dtype: float64
+  formal_displacement: 0.20
+  sensitivity_displacement_min: 0.05
+  dense_near_injective_rank_fraction: 0.99
+  dense_near_injective_tangent_null_max: 25
+
+v3_state:
+  definitions: [V3-Dense, V3-Sparse]
+  dense:
+    cosine_threshold: 0.995
+    top10_overlap_threshold: 0.8
+  sparse:
+    support_f1_threshold: 0.8
+    weighted_jaccard_threshold: 0.95
+    coefficient_cosine_threshold: 0.995
+    reconstruction_cosine_threshold: 0.995
+  rms_drift_threshold: 0.02
+  formal_displacement_fraction: 0.20
+  small_perturbation_min_fraction: 0.05
+  naturality_valid_fraction: 0.95
+
+clamp_v3:
+  methods: [dense_local_null, dense_optimized, sparse_same_definition]
+  modes: [single, persistent_final, persistent_all]
+  position_scopes: [final, all_non_padding]
+  strict_valid_required: 160
+  attempts_per_layer_method_dictionary: 200
+  optimization_failure_max_fraction: 0.05
+  behavioral_min_eligible_layers: 4
+  future_min_layers: 3
+  method_preference: [dense_local_null, dense_optimized]
+
+lowdim:
+  dimensions: [32, 64, 128, 256, 512]
+  concept_cluster_dimensions: [64, 128, 256, 512]
+  max_dimension: 512
+  max_model_fraction: 0.20
+  phase0_retention_fraction: 0.90
+  intervention_direction_agreement: 0.80
+  intervention_effect_retention: 0.80
+  min_residual_degrees: 256
+  oracle_gap_closed: 0.80
+
+controller_v3:
+  screening_family: gru
+  screening_parameters: 20000000
+  screening_seeds: [20260828, 20260829, 20260830]
+  screening_horizon8_similarity: 0.80
+  screening_teacher_semantic_fraction: 0.80
+  horizons: [1, 2, 4, 8, 16]
+  parameter_budgets: [1000000, 5000000, 20000000, 50000000, 100000000]
+  families: [mlp, gru, transformer, state_space]
+  group_a_per_family: 4000
+  group_b_per_family: 2000
+  horizon8_similarity: 0.90
+  horizon16_similarity: 0.80
+  support_f1: 0.70
+  teacher_accuracy_fraction: 0.90
+  intervention_direction_agreement: 0.80
+
+outputs:
+  root: results/v3
+  raw: raw
+  processed: processed
+  figures: figures
+  reports: ../../reports
+  artifacts: ../../artifacts

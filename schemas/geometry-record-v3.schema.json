@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skchen17/jstate-closure/schemas/geometry-record-v3.schema.json",
+  "title": "Exploratory protocol v3 geometry record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "protocol_version",
+    "record_kind",
+    "layer",
+    "dictionary_size",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {"const": 3},
+    "protocol_version": {"const": "exploratory_protocol_v3"},
+    "record_kind": {"enum": ["map_spectrum", "local_spectrum", "pareto"]},
+    "layer": {"type": "integer"},
+    "dictionary_size": {"enum": [4096, 8192, 16384]},
+    "provenance": {"type": "object"}
+  },
+  "additionalProperties": true
+}

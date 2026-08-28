@@ -21,7 +21,8 @@ import torch
 
 from jclosure.config import config_digest, public_config
 
-SCHEMA_VERSION = 2
+# Schema v3 is additive.  Readers in ``records.py`` retain v1/v2 compatibility.
+SCHEMA_VERSION = 3
 
 
 def sha256_file(path: str | Path, chunk_size: int = 8 * 1024 * 1024) -> str:

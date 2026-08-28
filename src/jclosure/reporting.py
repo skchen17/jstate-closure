@@ -42,6 +42,13 @@ def _read_json_records(paths: list[Path]) -> pd.DataFrame:
     return pd.json_normalize(records, sep=".") if records else pd.DataFrame()
 
 
+def _portable_path(path: Path) -> str:
+    try:
+        return str(path.resolve().relative_to(repository_root()))
+    except ValueError:
+        return str(path)
+
+
 def write_execution_status(root: Path) -> dict[str, Any]:
     """Derive an auditable stage matrix without inventing downstream results."""
 
@@ -80,7 +87,7 @@ def write_execution_status(root: Path) -> dict[str, Any]:
     }
     payload = {
         "schema_version": 1,
-        "derived_from": str(gate_path) if gate_path.exists() else None,
+        "derived_from": _portable_path(gate_path) if gate_path.exists() else None,
         "phase0_gate": gate_decision,
         "stages": stages,
     }
@@ -107,10 +114,11 @@ def _save_figure(
     figure.savefig(path, dpi=180)
     plt.close(figure)
     return {
-        "figure": str(path),
+        "figure": _portable_path(path),
         "sha256": sha256_file(path),
         "sources": [
-            {"path": str(source), "sha256": sha256_file(source)} for source in source_paths
+            {"path": _portable_path(source), "sha256": sha256_file(source)}
+            for source in source_paths
         ],
     }
 

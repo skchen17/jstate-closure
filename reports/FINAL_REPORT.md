@@ -2,82 +2,75 @@
 
 ## Material Passport
 
-- Origin: J-State Closure experiment pipeline
-- Verification Status: UNVERIFIED / GATED
-- Phase 0 gate: FAILED
-- Strongest warranted conclusion: D — measurement or execution is incomplete
+- Protocol: `phase0_protocol_v2` (frozen before fresh confirmation)
+- Phase 0 v2 gate: **PASSED**
+- Closure-layer calibration gate: **FAILED**
+- Formal downstream phases: **GATED / NOT EXECUTED**
+- Strongest warranted conclusion: **D — measurement quality is insufficient to distinguish H1, H2, and H3**
 
-No statement in this report concerns consciousness. J-state is an operational
-measurement defined by the pinned Jacobian lens, not a claim to have extracted
-the model's “true thoughts.”
+This report makes no claim about consciousness or extraction of a model's “true
+thoughts.” “Measured-J component” and “measured-J remainder” refer only to the
+declared finite dictionaries and sparse decomposition.
 
-## Measurement-gate result
+## Verified measurement results
 
-Workspace band [22, 23, 24, 25, 26, 27, 28, 29, 30]; band-min hit@10 {'factual_two_hop': 0.03571428571428571, 'order_of_operations': 0.0}; held-out rank-advantage CI {'confidence': 0.95, 'estimate': 0.19540412223623568, 'lower': 0.10755061544833854, 'n_clusters': 25, 'n_observations': 30, 'n_resamples': 10000, 'upper': 0.29815072717021995}; positive-control CI {'confidence': 0.95, 'estimate': 3.1283750863459203, 'lower': 2.1239655914471354, 'n_clusters': 24, 'n_observations': 24, 'n_resamples': 10000, 'upper': 4.200688860482237}.
+Fresh official-compatible pass@10 was 0.775862 for multihop (58 items) and 0.716797 for order of operations (256 items). The item-clustered MRR advantage was 0.135202, 95% CI [0.109490, 0.161532]. At frozen layer 24, the intended-answer log-odds effect was 3.064270, 95% CI [1.978771, 4.221590], above the 0.0001 null envelope.
 
-The gate is conjunctive. A positive rank advantage and a successful J-swap do
-not override a failed hidden-intermediate hit@10 criterion.
+Independent closure-layer calibration then tested layers 23, 24, 25, 26, 27, 28, 29. It obtained 0/1400 strictly valid clamp trials; the best layer-level valid rate was 0.000, below the frozen 0.80 requirement. All candidate layers therefore failed only the clamp-valid-rate criterion, and the eligible set is empty.
 
-## 1. Is instantaneous J-state approximately Markov sufficient?
+The v2 Phase 0 result is statistically positive and practically above its frozen readout
+thresholds. It does not supersede the independent causal-state gate. Strict-all-layers
+hit@10 remains a sensitivity analysis, not the v2 primary statistic.
 
-Undetermined: the Phase 0 gate failed, so closure trials were not executed.
-This answer is intervention-based only when the gate passed and valid one-shot
-clamp trials exist.
+## Answers to the 15 adjudication questions
 
-## 2. Does non-J state causally influence future J-space content?
+1. **Did the fresh Phase 0 readout gate pass?** Yes. The exact pass@10 and confidence intervals are reported above.
+2. **Was a lens-quality band identified?** Yes: block-output layers 20–30, selected from calibration only.
+3. **Did any layer become closure eligible?** No. Layers 23–29 passed readout, rank, positive-control, numerical, and repeatability checks, but each had 0/200 strictly valid clamps.
+4. **Is instantaneous measured-J approximately Markov sufficient?** Undetermined; no gate-authorized closure trial was run.
+5. **Does measured-J remainder causally influence future measured-J?** Undetermined; calibration failure prevents a causal estimate.
+6. **Is any influence mediated by later measured-J writes?** Undetermined; one-shot, final-persistent, and all-position-persistent mediation arms were gated.
+7. **Did final-token and sequence-state arms agree?** Not tested. Their scope hooks are implemented and tested, but neither arm produced empirical effects.
+8. **Does E_R decrease as dictionary size grows from 4,096 to 16,384?** Not tested. Nested dictionaries were built, but no common-valid paired Phase 3 trials exist.
+9. **Do natural collisions reproduce a remainder association?** Not tested; no observational collision bank was built after the layer gate failed.
+10. **Can short layer-depth J history close the oracle gap?** Not tested.
+11. **Can token-time J plus compact recurrent memory close the gap?** Not tested.
+12. **What is the smallest stable autonomous controller?** None established; controller training was gated.
+13. **Does a controller generalize to unseen procedural tasks?** Not tested.
+14. **Does external knowledge restore knowledge-heavy performance?** Not tested.
+15. **Was teacher/student latent-intervention fidelity demonstrated?** No; Phase 6B was not executed.
 
-Undetermined: no gate-authorized J-preserving remainder intervention was executed.
-No causal claim is made when strict clamp validation failed.
+## Evidence by type
 
-## 3. Is this influence mediated by later writes into J-space?
+- **Intervention evidence:** the Phase 0 J-coordinate positive control passed. No valid Phase 3 causal intervention exists.
+- **Observational evidence:** no v2 natural-collision result exists.
+- **Statistical evidence:** the readout and positive-control CIs use 10,000 prompt-clustered bootstrap resamples. No downstream significance test was run.
+- **Practical magnitude:** pass@10 and intended-answer log-odds are reported above. E_R, E_J, eta, rollout accuracy, and fidelity are unavailable.
 
-Undetermined: neither single-clamp nor persistent-clamp mediation trials were executed.
-The three possible mediation outcomes are never reduced to a binary label.
+## Interpretation boundary
 
-## 4. Can J plus a small amount of memory form a sufficient state?
+H1, H2, and H3 remain unresolved. The result is not a negative finding about J-space
+closure; it is a failure of the preregistered sparse reconstruction/restoration method to
+produce acceptable checkpoint states at any candidate layer. The strongest permitted
+classification remains D under all preregistered nearby thresholds used for the formal
+gate, because there are no eligible layers and no formal downstream trials.
 
-Memory-order predictors were not executed.
+## Reproducibility
 
-## 5. What is the smallest tested controller that maintains stable free rollout?
+The v1 records and `reports/PHASE0_VALIDATION.md` remain unchanged. The v2 freeze,
+fresh records, calibration attempts (including invalid rows), failure manifests, processed
+summaries, and figures are committed. Figures 1, 2, 12, and 14 visualize measured data;
+the remaining required figures are explicitly machine-sourced gated-status panels, not
+quantitative results.
 
-Not established. A model lacking validated intervention fidelity is not counted.
+### Recorded downstream commands
 
-## 6. Does the controller generalize to unseen procedural reasoning tasks?
-
-Not executed.
-
-## 7. Does adding external knowledge restore knowledge-heavy task performance?
-
-Not executed.
-
-## 8. Evidence for a small cognitive controller interpretation
-
-No empirical support can be assessed because controller training was gated and not executed.
-Ordinary teacher-forced prediction is secondary.
-
-## 9. Evidence for a J-space broadcast-bus interpretation
-
-No empirical support can be assessed because closure, mediation, remainder-oracle, and collision studies were gated and not executed.
-Natural collisions alone are observational. Collision status: Not executed.
-
-## 10. What remains ambiguous?
-
-Missing or non-renderable required figures: None. Layer-depth is the
-dynamical time coordinate, results are limited to tested prompts/layers, and a
-failed lens gate is a measurement failure rather than evidence for H1, H2, or H3.
-Downstream required figures are rendered as machine-sourced status panels when
-the relevant experiment was gated; those panels are not quantitative evidence.
-
-## Evidence boundary
-
-- Observational: natural collision regressions and ordinary predictive fits.
-- Intervention-based: only validated J swaps, strict J-preserving remainder
-  perturbations, and persistent clamps.
-- Statistical: prompt-clustered bootstrap intervals accompany effect estimates.
-- Practical magnitude: raw JS divergence, answer effects, trajectory distances,
-  and autonomous task accuracy are reported separately from significance.
-
-The conclusion code uses preregistered operational thresholds, not universal
-theoretical constants. Nearby-threshold sensitivity must be consulted before
-generalizing beyond the tested setting. Classification sensitivity:
-`{"eta_0.10": "D", "eta_0.20": "D", "eta_0.30": "D"}`.
+- `/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/validate_lens_v2.py --config configs/phase0_v2_confirmatory.yaml`
+- `/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/calibrate_layers.py --config configs/phase0_v2_confirmatory.yaml`
+- `/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/closure.py --config configs/pilot_v2.yaml --limit 1`
+- `/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/natural_collisions.py --config configs/confirm_v2.yaml --limit 1`
+- `/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/memory_order.py --config configs/confirm_v2.yaml --limit 1 --epochs 1 --budget 1000000`
+- `/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/distill_controller.py --config configs/confirm_v2.yaml --epochs 1`
+- `/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/dictionary_sensitivity.py --config configs/confirm_v2.yaml`
+- `/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/token_time_closure.py --config configs/confirm_v2.yaml --limit 1`
+- `/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/modularity.py --config configs/confirm_v2.yaml`

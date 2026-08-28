@@ -1,0 +1,227 @@
+{
+  "figures": [
+    {
+      "figure": "results/figures/01_lens_validation_by_layer.png",
+      "manual_values": false,
+      "sha256": "8d1ffa9b8a431760fe0926e3c09fdceaf9fe7ac00da70c1c941bebb95904d31d",
+      "sources": [
+        {
+          "path": "results/processed/phase0_v2_gate.json",
+          "sha256": "4b2ba979808cd7825dd3987dafa866625e5babf461afc437fec38a5695ac16f2"
+        }
+      ],
+      "status_only": false
+    },
+    {
+      "figure": "results/figures/02_j_match_vs_remainder.png",
+      "manual_values": false,
+      "sha256": "1fe1924996f577e3b45a12c563b64ecbc7c72daa1f35b317399756bf6f7aaabe",
+      "sources": [
+        {
+          "path": "results/raw/layer-calibration-20260828T121537Z-d3f2fa00-s20260828/clamp_calibration.jsonl",
+          "sha256": "f16c86f5849e09ee4a17e1fcb5fb268a11500ffa21d8355614b078bd6cd96280"
+        },
+        {
+          "path": "results/raw/layer-calibration-20260828T121537Z-d3f2fa00-s20260828/manifest.json",
+          "sha256": "2adc0bcf3cfb0d2ccdaf5b9de0a7e7d95d4f72ca2a8f7215ba1d5a9dfbd29339"
+        }
+      ],
+      "status_only": false
+    },
+    {
+      "figure": "results/figures/03_future_j_vs_remainder.png",
+      "manual_values": false,
+      "sha256": "16500c06a2e176742684e3a091e2c27d34e5ecb71247d8e675172caaa0ba8120",
+      "sources": [
+        {
+          "path": "results/processed/execution_status_v2.json",
+          "sha256": "7efc61e4554456104fc4411c37ff5ca10b3e2b9ab4af95b00504357dbaefee09"
+        },
+        {
+          "path": "results/processed/layer_calibration.json",
+          "sha256": "a6893b7485a77f96e2e739c716b95fe19e35c168d07017400b84dd6a52e46447"
+        }
+      ],
+      "status_only": true
+    },
+    {
+      "figure": "results/figures/04_output_divergence_controls.png",
+      "manual_values": false,
+      "sha256": "1163d41d4baa6cddf5b5330f44c3eb69162fb5c8c156a2f803148ef887fa825b",
+      "sources": [
+        {
+          "path": "results/processed/execution_status_v2.json",
+          "sha256": "7efc61e4554456104fc4411c37ff5ca10b3e2b9ab4af95b00504357dbaefee09"
+        },
+        {
+          "path": "results/processed/layer_calibration.json",
+          "sha256": "a6893b7485a77f96e2e739c716b95fe19e35c168d07017400b84dd6a52e46447"
+        }
+      ],
+      "status_only": true
+    },
+    {
+      "figure": "results/figures/05_single_vs_persistent_clamp.png",
+      "manual_values": false,
+      "sha256": "f55f344a83122059b5531e87935d74bb5f0d4e06b1193bcb16be14676204fc8f",
+      "sources": [
+        {
+          "path": "results/processed/execution_status_v2.json",
+          "sha256": "7efc61e4554456104fc4411c37ff5ca10b3e2b9ab4af95b00504357dbaefee09"
+        },
+        {
+          "path": "results/processed/layer_calibration.json",
+          "sha256": "a6893b7485a77f96e2e739c716b95fe19e35c168d07017400b84dd6a52e46447"
+        }
+      ],
+      "status_only": true
+    },
+    {
+      "figure": "results/figures/06_natural_collision_scatter.png",
+      "manual_values": false,
+      "sha256": "997b05115647d823fc60d218cade192e68d72562885e1782e07a21090bff53ff",
+      "sources": [
+        {
+          "path": "results/processed/execution_status_v2.json",
+          "sha256": "7efc61e4554456104fc4411c37ff5ca10b3e2b9ab4af95b00504357dbaefee09"
+        },
+        {
+          "path": "results/processed/layer_calibration.json",
+          "sha256": "a6893b7485a77f96e2e739c716b95fe19e35c168d07017400b84dd6a52e46447"
+        }
+      ],
+      "status_only": true
+    },
+    {
+      "figure": "results/figures/07_predictor_vs_history.png",
+      "manual_values": false,
+      "sha256": "69b5c7b9d4c81219c3c1b802249bbc4e9ef4c83907c047501b178cc462be5ca9",
+      "sources": [
+        {
+          "path": "results/processed/execution_status_v2.json",
+          "sha256": "7efc61e4554456104fc4411c37ff5ca10b3e2b9ab4af95b00504357dbaefee09"
+        },
+        {
+          "path": "results/processed/layer_calibration.json",
+          "sha256": "a6893b7485a77f96e2e739c716b95fe19e35c168d07017400b84dd6a52e46447"
+        }
+      ],
+      "status_only": true
+    },
+    {
+      "figure": "results/figures/08_controller_vs_parameters.png",
+      "manual_values": false,
+      "sha256": "5af8a2a3f601e021b2b16b5605443d95b6c5cea8173236a59438453c1c16a8d2",
+      "sources": [
+        {
+          "path": "results/processed/execution_status_v2.json",
+          "sha256": "7efc61e4554456104fc4411c37ff5ca10b3e2b9ab4af95b00504357dbaefee09"
+        },
+        {
+          "path": "results/processed/layer_calibration.json",
+          "sha256": "a6893b7485a77f96e2e739c716b95fe19e35c168d07017400b84dd6a52e46447"
+        }
+      ],
+      "status_only": true
+    },
+    {
+      "figure": "results/figures/09_rollout_error_vs_horizon.png",
+      "manual_values": false,
+      "sha256": "7bfca683a5961ca90e4839f1670a94cb7b05362027decd9ea4dd87aa784d6dff",
+      "sources": [
+        {
+          "path": "results/processed/execution_status_v2.json",
+          "sha256": "7efc61e4554456104fc4411c37ff5ca10b3e2b9ab4af95b00504357dbaefee09"
+        },
+        {
+          "path": "results/processed/layer_calibration.json",
+          "sha256": "a6893b7485a77f96e2e739c716b95fe19e35c168d07017400b84dd6a52e46447"
+        }
+      ],
+      "status_only": true
+    },
+    {
+      "figure": "results/figures/10_intervention_fidelity.png",
+      "manual_values": false,
+      "sha256": "cf0f78530e3e46bf14bed41c72404b18db2643d9cc7c6f5d93404c054f05c1fb",
+      "sources": [
+        {
+          "path": "results/processed/execution_status_v2.json",
+          "sha256": "7efc61e4554456104fc4411c37ff5ca10b3e2b9ab4af95b00504357dbaefee09"
+        },
+        {
+          "path": "results/processed/layer_calibration.json",
+          "sha256": "a6893b7485a77f96e2e739c716b95fe19e35c168d07017400b84dd6a52e46447"
+        }
+      ],
+      "status_only": true
+    },
+    {
+      "figure": "results/figures/11_dictionary_size_effect.png",
+      "manual_values": false,
+      "sha256": "ec15ef2c81879cf6c49e699a12b12261f68cdaf7c9947aedd034bbe133f608b6",
+      "sources": [
+        {
+          "path": "results/processed/execution_status_v2.json",
+          "sha256": "7efc61e4554456104fc4411c37ff5ca10b3e2b9ab4af95b00504357dbaefee09"
+        },
+        {
+          "path": "results/processed/layer_calibration.json",
+          "sha256": "a6893b7485a77f96e2e739c716b95fe19e35c168d07017400b84dd6a52e46447"
+        }
+      ],
+      "status_only": true
+    },
+    {
+      "figure": "results/figures/13_token_time_history.png",
+      "manual_values": false,
+      "sha256": "2781a31b8a770312e47d0f97662b7645e44a6aeafd9a2aaa0c61dfbe299386e5",
+      "sources": [
+        {
+          "path": "results/processed/execution_status_v2.json",
+          "sha256": "7efc61e4554456104fc4411c37ff5ca10b3e2b9ab4af95b00504357dbaefee09"
+        },
+        {
+          "path": "results/processed/layer_calibration.json",
+          "sha256": "a6893b7485a77f96e2e739c716b95fe19e35c168d07017400b84dd6a52e46447"
+        }
+      ],
+      "status_only": true
+    },
+    {
+      "figure": "results/figures/12_layer_eligibility.png",
+      "manual_values": false,
+      "sha256": "a2ee83086a43ac6a41f6f5cba9006cb4f55eb6fff2c021f30ea4cc14b7c14c57",
+      "sources": [
+        {
+          "path": "results/processed/layer_calibration.json",
+          "sha256": "a6893b7485a77f96e2e739c716b95fe19e35c168d07017400b84dd6a52e46447"
+        },
+        {
+          "path": "results/raw/layer-calibration-20260828T121537Z-d3f2fa00-s20260828/manifest.json",
+          "sha256": "2adc0bcf3cfb0d2ccdaf5b9de0a7e7d95d4f72ca2a8f7215ba1d5a9dfbd29339"
+        }
+      ],
+      "status_only": false
+    },
+    {
+      "figure": "results/figures/14_clamp_attrition.png",
+      "manual_values": false,
+      "sha256": "1a8d12108715ab0ed29637191c7cc995287c28c0758a701ef25f22cb4b018864",
+      "sources": [
+        {
+          "path": "results/raw/layer-calibration-20260828T121537Z-d3f2fa00-s20260828/clamp_calibration.jsonl",
+          "sha256": "f16c86f5849e09ee4a17e1fcb5fb268a11500ffa21d8355614b078bd6cd96280"
+        },
+        {
+          "path": "results/raw/layer-calibration-20260828T121537Z-d3f2fa00-s20260828/manifest.json",
+          "sha256": "2adc0bcf3cfb0d2ccdaf5b9de0a7e7d95d4f72ca2a8f7215ba1d5a9dfbd29339"
+        }
+      ],
+      "status_only": false
+    }
+  ],
+  "manual_values": false,
+  "protocol_version": "phase0_protocol_v2",
+  "schema_version": 2
+}

@@ -1,0 +1,113 @@
+{
+  "overall_gate": "FAILED_AT_LAYER_CALIBRATION",
+  "protocol_version": "phase0_protocol_v2",
+  "reason": "No closure-eligible layer passed the frozen strict clamp calibration.",
+  "schema_version": 2,
+  "sources": [
+    {
+      "path": "results/processed/phase0_v2_gate.json",
+      "sha256": "4b2ba979808cd7825dd3987dafa866625e5babf461afc437fec38a5695ac16f2"
+    },
+    {
+      "path": "results/processed/layer_calibration.json",
+      "sha256": "a6893b7485a77f96e2e739c716b95fe19e35c168d07017400b84dd6a52e46447"
+    },
+    {
+      "path": "results/raw/closure-20260828T132531Z-617ac292-s20260828/manifest.json",
+      "sha256": "f6356fb527085bc8e831625497dbe92b0ec9d3c2a67412b71aa0e651b05ac45d"
+    },
+    {
+      "path": "results/raw/natural-collisions-20260828T132535Z-9e01c8f4-s20260828/manifest.json",
+      "sha256": "824a809ac095c27577a420db6cd748f10fc62e445ef24c1212651515cea10281"
+    },
+    {
+      "path": "results/raw/memory-order-20260828T132539Z-9e01c8f4-s20260828/manifest.json",
+      "sha256": "adf3f9982ed2732c9d7f47b9b68b0db2d5e3f74616eed24302d8c45ef8ea8c98"
+    },
+    {
+      "path": "results/raw/distill-controller-20260828T132543Z-9e01c8f4-s20260828/manifest.json",
+      "sha256": "e654f359afdd69794e541ad1785ce0ce8633a665feda70ea4a9709c1d6ca0d0e"
+    },
+    {
+      "path": "results/raw/dictionary-sensitivity-20260828T133254Z-9e01c8f4-s20260828/manifest.json",
+      "sha256": "da4272f23cfe791cd82fa1cfeb175409ba85a66bd8843d4332f66edabeccfc34"
+    },
+    {
+      "path": "results/raw/token-time-closure-20260828T132546Z-9e01c8f4-s20260828/manifest.json",
+      "sha256": "7b81062e1a740173fa130e1b3be46c4901e4ead5214a56ada91f6db08c6e775e"
+    },
+    {
+      "path": "results/raw/modularity-20260828T132550Z-9e01c8f4-s20260828/manifest.json",
+      "sha256": "d8c2e724d33a4bfa6b905fa91d79217528d163b62a9e4e249ace84472dffd51c"
+    }
+  ],
+  "stages": {
+    "closure": {
+      "manifest": "results/raw/closure-20260828T132531Z-617ac292-s20260828/manifest.json",
+      "reason": "RuntimeError: no closure-eligible layer passed strict clamp calibration; formal downstream experiments are gated",
+      "run_id": "closure-20260828T132531Z-617ac292-s20260828",
+      "runner_status": "FAILED",
+      "status": "GATED"
+    },
+    "controller_distillation": {
+      "manifest": "results/raw/distill-controller-20260828T132543Z-9e01c8f4-s20260828/manifest.json",
+      "reason": "RuntimeError: no closure-eligible layer passed strict clamp calibration; formal downstream experiments are gated",
+      "run_id": "distill-controller-20260828T132543Z-9e01c8f4-s20260828",
+      "runner_status": "FAILED",
+      "status": "GATED"
+    },
+    "dictionary_sensitivity": {
+      "manifest": "results/raw/dictionary-sensitivity-20260828T133254Z-9e01c8f4-s20260828/manifest.json",
+      "reason": "RuntimeError: no closure-eligible layer passed strict clamp calibration; formal downstream experiments are gated",
+      "run_id": "dictionary-sensitivity-20260828T133254Z-9e01c8f4-s20260828",
+      "runner_status": "FAILED",
+      "status": "GATED"
+    },
+    "layer_calibration": {
+      "eligible_layers": [],
+      "gate": "FAILED",
+      "manifest": "results/raw/layer-calibration-20260828T121537Z-d3f2fa00-s20260828/manifest.json",
+      "run_id": "layer-calibration-20260828T121537Z-d3f2fa00-s20260828",
+      "status": "COMPLETED"
+    },
+    "memory_order": {
+      "manifest": "results/raw/memory-order-20260828T132539Z-9e01c8f4-s20260828/manifest.json",
+      "reason": "RuntimeError: no closure-eligible layer passed strict clamp calibration; formal downstream experiments are gated",
+      "run_id": "memory-order-20260828T132539Z-9e01c8f4-s20260828",
+      "runner_status": "FAILED",
+      "status": "GATED"
+    },
+    "modularity": {
+      "manifest": "results/raw/modularity-20260828T132550Z-9e01c8f4-s20260828/manifest.json",
+      "reason": "RuntimeError: no closure-eligible layer passed strict clamp calibration; formal downstream experiments are gated",
+      "run_id": "modularity-20260828T132550Z-9e01c8f4-s20260828",
+      "runner_status": "FAILED",
+      "status": "GATED"
+    },
+    "natural_collisions": {
+      "manifest": "results/raw/natural-collisions-20260828T132535Z-9e01c8f4-s20260828/manifest.json",
+      "reason": "RuntimeError: no closure-eligible layer passed strict clamp calibration; formal downstream experiments are gated",
+      "run_id": "natural-collisions-20260828T132535Z-9e01c8f4-s20260828",
+      "runner_status": "FAILED",
+      "status": "GATED"
+    },
+    "phase0_v2": {
+      "gate": "PASSED",
+      "manifest": "results/raw/phase0-v2-20260828T120721Z-d3f2fa00-s20260828/manifest.json",
+      "run_id": "phase0-v2-20260828T120721Z-d3f2fa00-s20260828",
+      "status": "COMPLETED"
+    },
+    "qwen3_6_27b_confirmation": {
+      "reason": "Primary-model layer calibration did not pass; optional confirmation was not attempted.",
+      "status": "UNEXECUTED"
+    },
+    "token_time_closure": {
+      "manifest": "results/raw/token-time-closure-20260828T132546Z-9e01c8f4-s20260828/manifest.json",
+      "reason": "RuntimeError: no closure-eligible layer passed strict clamp calibration; formal downstream experiments are gated",
+      "run_id": "token-time-closure-20260828T132546Z-9e01c8f4-s20260828",
+      "runner_status": "FAILED",
+      "status": "GATED"
+    }
+  },
+  "strongest_warranted_conclusion": "D"
+}

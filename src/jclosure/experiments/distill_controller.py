@@ -16,7 +16,9 @@ from torch.utils.data import DataLoader, TensorDataset
 
 from jclosure.experiments.common import (
     initialize_context,
+    require_closure_eligible_layers,
     require_phase0_gate,
+    require_phase0_v2_gate,
     standard_parser,
 )
 from jclosure.experiments.memory_order import TraceTensors, count_parameters
@@ -446,7 +448,14 @@ def main() -> None:
         if args.dry_run:
             context.finish("DRY_RUN")
             return
-        require_phase0_gate(context)
+        if (
+            context.config.get("run", {}).get("phase0_protocol")
+            == "phase0_protocol_v2"
+        ):
+            require_phase0_v2_gate(context)
+            require_closure_eligible_layers(context)
+        else:
+            require_phase0_gate(context)
         trace_path = _trace_path(context.root, args.trace)
         traces: TraceTensors = torch.load(trace_path, map_location="cpu", weights_only=False)
         config = context.config["controller"]

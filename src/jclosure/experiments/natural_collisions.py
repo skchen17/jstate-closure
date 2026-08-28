@@ -23,8 +23,11 @@ from jclosure.experiments.closure import (
 )
 from jclosure.experiments.common import (
     concept_vocabulary_path,
+    concept_vocabulary_v2_path,
     initialize_context,
+    require_closure_eligible_layers,
     require_phase0_gate,
+    require_phase0_v2_gate,
     standard_parser,
 )
 from jclosure.jstate import ConceptVocabulary, JStateEncoder, jstate_distance
@@ -127,18 +130,45 @@ def main() -> None:
         if args.dry_run:
             context.finish("DRY_RUN")
             return
-        gate = require_phase0_gate(context)
+        use_v2 = (
+            context.config.get("run", {}).get("phase0_protocol")
+            == "phase0_protocol_v2"
+        )
+        if use_v2:
+            gate = require_phase0_v2_gate(context)
+            layer_calibration = require_closure_eligible_layers(context)
+        else:
+            gate = require_phase0_gate(context)
+            layer_calibration = None
         bundle = load_model_bundle(context.config)
         vocabulary = ConceptVocabulary.from_json(
-            concept_vocabulary_path(context)
+            concept_vocabulary_v2_path(
+                context, int(context.config["jstate"]["concept_vocab_size"])
+            )
+            if use_v2
+            else concept_vocabulary_path(context)
         )
         encoder = JStateEncoder.from_lens(
             bundle.lens,
             bundle.unembedding_weight,
             vocabulary,
             k=int(context.config["jstate"]["k"]),
+            lazy=use_v2,
+            protocol_version=(
+                "phase0_protocol_v2" if use_v2 else "phase0_protocol_v1"
+            ),
+            direction_chunk_size=int(
+                context.config["jstate"].get("direction_chunk_size", 512)
+            ),
         )
-        band = [int(value) for value in gate["workspace_band"]]
+        band = [
+            int(value)
+            for value in (
+                layer_calibration["eligible_layers"]
+                if layer_calibration is not None
+                else gate["workspace_band"]
+            )
+        ]
         target = int(context.config.get("run", {}).get("valid_per_cell", 500))
         examples = _collision_examples(context, target)
         runs = _record_clean(bundle, examples, band, args.limit or max(500, target * 4))

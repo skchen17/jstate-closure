@@ -45,6 +45,8 @@ jclosure-collisions = "jclosure.experiments.natural_collisions:main"
 jclosure-memory = "jclosure.experiments.memory_order:main"
 jclosure-distill = "jclosure.experiments.distill_controller:main"
 jclosure-report = "jclosure.reporting:main"
+jclosure-report-v2 = "jclosure.reporting_v2:main"
+jclosure-dictionary-sensitivity = "jclosure.experiments.dictionary_sensitivity:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

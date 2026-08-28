@@ -66,3 +66,14 @@ standalone initializer. Primary evaluation is autonomous rollout with predicted
 state fed back. Learned embeddings, initializers, fact encoders, transition
 bodies, and heads all count toward the parameter budget. Counterfactual
 coordinate swaps are required for causal fidelity.
+
+## Executed protocol-v2 outcome
+
+The frozen fresh Phase 0 v2 gate passed. Independent layer calibration then
+tested 200 balanced clamp constructions at each candidate layer 23–29 and found
+zero strictly valid clamps at every layer. No layer met the required 80% valid
+rate; therefore closure, mediation, dictionary sensitivity, collisions,
+layer-depth/token-time prediction, controllers, modularity, and the optional 27B
+confirmation are formally gated. The registered thresholds were not changed
+after observing this failure. See the machine summaries and generated reports
+for exact values and hashes.

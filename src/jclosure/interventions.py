@@ -48,6 +48,39 @@ def _position_indices(length: int, positions: tuple[int, ...] | None) -> list[in
     return resolved
 
 
+def resolve_position_scope(
+    sequence_length: int,
+    *,
+    scope: PositionScope,
+    positions: tuple[int, ...] | None = None,
+    attention_mask: torch.Tensor | None = None,
+    reasoning_span: tuple[int, int] | None = None,
+) -> tuple[int, ...]:
+    """Resolve a declared intervention scope to deterministic sequence indices."""
+
+    if sequence_length < 1:
+        raise ValueError("sequence_length must be positive")
+    if scope == "final":
+        return (sequence_length - 1,)
+    if scope == "explicit":
+        if positions is None:
+            raise ValueError("explicit scope requires positions")
+        return tuple(_position_indices(sequence_length, positions))
+    if scope == "reasoning_span":
+        if reasoning_span is None:
+            raise ValueError("reasoning_span scope requires [start, stop)")
+        start, stop = reasoning_span
+        if not 0 <= start < stop <= sequence_length:
+            raise ValueError("invalid reasoning_span")
+        return tuple(range(start, stop))
+    if attention_mask is None:
+        return tuple(range(sequence_length))
+    mask = attention_mask.detach().reshape(-1)
+    if len(mask) != sequence_length:
+        raise ValueError("attention_mask length does not match sequence_length")
+    return tuple(index for index, value in enumerate(mask) if bool(value.item()))
+
+
 def apply_at_positions(
     activation: torch.Tensor,
     transform,

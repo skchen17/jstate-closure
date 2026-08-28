@@ -1,0 +1,24 @@
+extends: phase0_v2_confirmatory.yaml
+
+run:
+  stage: pilot
+  phase0_protocol: phase0_protocol_v2
+  valid_per_cell: 100
+  shard_count: 2
+
+validation:
+  bootstrap_resamples: 2000
+
+statistics:
+  bootstrap_resamples: 2000
+
+closure:
+  position_scopes: [final, all_non_padding]
+  clamp_conditions: [single, persistent_final, persistent_all]
+  dictionary_sizes: [4096, 8192, 16384]
+
+controller:
+  parameter_budgets: [1000000, 5000000]
+
+reproducibility:
+  controller_seeds: [20260828]

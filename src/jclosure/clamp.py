@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 
 import torch
@@ -189,15 +189,17 @@ def persistent_clamp_transforms(
     *,
     position: int = -1,
     positions: Iterable[int] | None = (),
-) -> dict[int, callable]:
+) -> dict[int, Callable[[torch.Tensor, int], torch.Tensor]]:
     """Return layer transforms suitable for ``ResidualEditor``."""
 
-    transforms: dict[int, callable] = {}
+    transforms: dict[int, Callable[[torch.Tensor, int], torch.Tensor]] = {}
     selected_positions = None if positions is None else tuple(positions)
     for layer, clean in clean_by_layer.items():
         clean_vector = clean.detach().clone()
 
-        def transform(activation: torch.Tensor, current_layer: int, clean_ref=clean_vector):
+        def transform(
+            activation: torch.Tensor, current_layer: int, clean_ref=clean_vector
+        ):
             output = activation.clone()
             length = activation.shape[-2]
             requested = (position,) if selected_positions == () else selected_positions

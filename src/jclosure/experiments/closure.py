@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from dataclasses import dataclass
 from functools import partial
@@ -26,8 +27,11 @@ from jclosure.datasets import (
 from jclosure.decomposition import gradient_pursuit
 from jclosure.experiments.common import (
     concept_vocabulary_path,
+    concept_vocabulary_v2_path,
     initialize_context,
+    require_closure_eligible_layers,
     require_phase0_gate,
+    require_phase0_v2_gate,
     standard_parser,
 )
 from jclosure.jstate import ConceptVocabulary, JStateEncoder, jstate_distance
@@ -75,8 +79,17 @@ def _flexible_examples(root: Path) -> list[TaskExample]:
                         prompt=str(function["template"]).format(arg=argument),
                         answer=str(function["answers"][argument]),
                         intermediates=(str(argument),),
-                        variables={"argument": str(argument), "function": str(function["name"])},
-                        facts=((str(argument), str(function["name"]), str(function["answers"][argument])),),
+                        variables={
+                            "argument": str(argument),
+                            "function": str(function["name"]),
+                        },
+                        facts=(
+                            (
+                                str(argument),
+                                str(function["name"]),
+                                str(function["answers"][argument]),
+                            ),
+                        ),
                     )
                 )
     return examples
@@ -96,7 +109,9 @@ def _task_pool(context, target: int) -> list[TaskExample]:
     ]
 
 
-def _record_clean(bundle, examples: list[TaskExample], layers: list[int], limit: int | None):
+def _record_clean(
+    bundle, examples: list[TaskExample], layers: list[int], limit: int | None
+):
     clean_runs: list[CleanRun] = []
     for example in examples:
         answer_token = _single_answer_id(bundle.tokenizer, example.answer)
@@ -109,8 +124,7 @@ def _record_clean(bundle, examples: list[TaskExample], layers: list[int], limit:
         if int(torch.argmax(logits)) != answer_token:
             continue
         activations = {
-            layer: recorder.activations[layer][0, -1].float().cpu()
-            for layer in layers
+            layer: recorder.activations[layer][0, -1].float().cpu() for layer in layers
         }
         clean_runs.append(
             CleanRun(
@@ -164,12 +178,17 @@ def _natural_donor(
     candidates: list[tuple[float, float, int]] = []
     anchor_remainder = encoder.decompose(anchor.activations[layer], layer).remainder
     for index, candidate in enumerate(runs):
-        if index == anchor_index or candidate.example.template_id == anchor.example.template_id:
+        if (
+            index == anchor_index
+            or candidate.example.template_id == anchor.example.template_id
+        ):
             continue
         state = encoder.encode(candidate.activations[layer], layer)
         j_distance = jstate_distance(anchor_state, state)
         remainder = encoder.decompose(candidate.activations[layer], layer).remainder
-        remainder_distance = float(torch.linalg.vector_norm(remainder - anchor_remainder))
+        remainder_distance = float(
+            torch.linalg.vector_norm(remainder - anchor_remainder)
+        )
         candidates.append((j_distance, -remainder_distance, index))
     if not candidates:
         return (anchor_index + 1) % len(runs)
@@ -223,7 +242,12 @@ def _probe_direction(
     x = np.stack([run.activations[layer].numpy() for run in selected])
     c_values = np.array([int(run.example.variables["c"]) for run in selected])
     y = (c_values > np.median(c_values)).astype(int)
-    groups = np.array([run.example.template_id + str(int(run.example.variables["c"])) for run in selected])
+    groups = np.array(
+        [
+            run.example.template_id + str(int(run.example.variables["c"]))
+            for run in selected
+        ]
+    )
     if len(np.unique(groups)) < 2 or len(np.unique(y)) < 2:
         return None, None
     splits = min(5, len(np.unique(groups)))
@@ -232,9 +256,7 @@ def _probe_direction(
     score = float(accuracy_score(y, predictions))
     model.fit(x, y)
     direction = torch.from_numpy(model.coef_[0]).float()
-    decomposition = gradient_pursuit(
-        direction, encoder.dictionary(layer), k=encoder.k
-    )
+    decomposition = gradient_pursuit(direction, encoder.dictionary(layer), k=encoder.k)
     stripped = decomposition.remainder
     if float(torch.linalg.vector_norm(stripped)) <= 1e-12:
         return None, score
@@ -361,9 +383,10 @@ def _run_condition(
                     capture=capture,
                 )
     record_layers = [l1, *pair["future_layers"]]
-    with ResidualEditor(bundle.layers, transforms), ActivationRecorder(
-        bundle.layers, at=record_layers
-    ) as recorder:
+    with (
+        ResidualEditor(bundle.layers, transforms),
+        ActivationRecorder(bundle.layers, at=record_layers) as recorder,
+    ):
         with torch.no_grad():
             logits = bundle.forward_logits(run.input_ids)[0, -1].float().cpu()
     observed = {
@@ -395,11 +418,21 @@ def _run_condition(
         "target_log_odds_clean": token_log_odds(run.logits, run.answer_token),
         "answer_flip": answer_flip(run.logits, logits),
         "task_correct": int(torch.argmax(logits)) == run.answer_token,
-        "checkpoint_dense_cosine": None if clamp_quality is None else clamp_quality.dense_cosine,
-        "checkpoint_top10_overlap": None if clamp_quality is None else clamp_quality.top10_overlap,
-        "checkpoint_rms_drift": None if clamp_quality is None else clamp_quality.activation_rms_drift,
-        "remainder_distance": None if clamp_quality is None else clamp_quality.remainder_distance,
-        "remainder_fraction": None if clamp_quality is None else clamp_quality.remainder_fraction,
+        "checkpoint_dense_cosine": None
+        if clamp_quality is None
+        else clamp_quality.dense_cosine,
+        "checkpoint_top10_overlap": None
+        if clamp_quality is None
+        else clamp_quality.top10_overlap,
+        "checkpoint_rms_drift": None
+        if clamp_quality is None
+        else clamp_quality.activation_rms_drift,
+        "remainder_distance": None
+        if clamp_quality is None
+        else clamp_quality.remainder_distance,
+        "remainder_fraction": None
+        if clamp_quality is None
+        else clamp_quality.remainder_fraction,
         "next_layer_j_distance": next(iter(future_distances.values()), None),
         "mean_future_j_distance": float(np.mean(list(future_distances.values())))
         if future_distances
@@ -409,9 +442,7 @@ def _run_condition(
     valid = condition != "non_j" or bool(clamp_quality and clamp_quality.passed)
     return {
         "valid": valid,
-        "exclusion_reason": None
-        if valid
-        else ",".join(clamp_quality.failure_reasons),
+        "exclusion_reason": None if valid else ",".join(clamp_quality.failure_reasons),
         "metrics": metrics,
     }, observed
 
@@ -423,31 +454,65 @@ def main() -> None:
     )
     parser.add_argument("--shard-index", type=int, default=0)
     parser.add_argument("--shard-count", type=int)
+    parser.add_argument("--dictionary-size", type=int)
     args = parser.parse_args()
     context = initialize_context("closure", args)
     try:
         if args.dry_run:
             context.finish("DRY_RUN")
             return
-        gate = require_phase0_gate(context)
+        use_v2 = (
+            context.config.get("run", {}).get("phase0_protocol") == "phase0_protocol_v2"
+        )
+        if use_v2:
+            gate = require_phase0_v2_gate(context)
+            layer_calibration = require_closure_eligible_layers(context)
+        else:
+            gate = require_phase0_gate(context)
+            layer_calibration = None
         bundle = load_model_bundle(context.config)
+        dictionary_size = int(
+            args.dictionary_size or context.config["jstate"]["concept_vocab_size"]
+        )
+        allowed_dictionary_sizes = {
+            int(value)
+            for value in context.config["jstate"].get(
+                "concept_vocab_sizes", [dictionary_size]
+            )
+        }
+        if dictionary_size not in allowed_dictionary_sizes:
+            raise ValueError(
+                f"dictionary size {dictionary_size} is not declared in concept_vocab_sizes"
+            )
         vocabulary = ConceptVocabulary.from_json(
-            concept_vocabulary_path(context)
+            concept_vocabulary_v2_path(context, dictionary_size)
+            if use_v2
+            else concept_vocabulary_path(context)
         )
         encoder = JStateEncoder.from_lens(
             bundle.lens,
             bundle.unembedding_weight,
             vocabulary,
             k=int(context.config["jstate"]["k"]),
+            lazy=use_v2,
+            protocol_version=("phase0_protocol_v2" if use_v2 else "phase0_protocol_v1"),
+            direction_chunk_size=int(
+                context.config["jstate"].get("direction_chunk_size", 512)
+            ),
         )
-        band = [int(value) for value in gate["workspace_band"]]
+        band = [
+            int(value)
+            for value in (
+                layer_calibration["eligible_layers"]
+                if layer_calibration is not None
+                else gate["workspace_band"]
+            )
+        ]
         pairs = choose_layer_pairs(
             band, int(context.config["closure"]["future_min_layers"])
         )
         all_layers = sorted(
-            set(band)
-            | {pair["l0"] for pair in pairs}
-            | {pair["l1"] for pair in pairs}
+            set(band) | {pair["l0"] for pair in pairs} | {pair["l1"] for pair in pairs}
         )
         target = int(context.config.get("run", {}).get("valid_per_cell", 100))
         allowed_families = None
@@ -455,7 +520,9 @@ def main() -> None:
             confirmation = context.config["confirmation_model"]
             target = int(confirmation.get("pilot_valid_per_cell", target))
             allowed_families = set(confirmation.get("task_families", []))
-        shard_count = int(args.shard_count or context.config.get("run", {}).get("shard_count", 1))
+        shard_count = int(
+            args.shard_count or context.config.get("run", {}).get("shard_count", 1)
+        )
         examples = [
             example
             for index, example in enumerate(_task_pool(context, target))
@@ -465,16 +532,18 @@ def main() -> None:
         bank_limit = args.limit or max(target * 5, 500)
         runs = _record_clean(bundle, examples, all_layers, bank_limit)
         if len(runs) < 2:
-            raise RuntimeError("fewer than two teacher-correct, single-token-answer runs")
+            raise RuntimeError(
+                "fewer than two teacher-correct, single-token-answer runs"
+            )
         thresholds = ClampThresholds(
             dense_cosine=float(context.config["jstate"]["dense_cosine_threshold"]),
             top10_overlap=float(context.config["jstate"]["top10_overlap_threshold"]),
             rms_drift=float(context.config["jstate"]["rms_drift_threshold"]),
-            min_remainder_fraction=float(context.config["jstate"]["min_remainder_fraction"]),
+            min_remainder_fraction=float(
+                context.config["jstate"]["min_remainder_fraction"]
+            ),
         )
-        natural_scales = _median_natural_scales(
-            runs, [pair["l1"] for pair in pairs]
-        )
+        natural_scales = _median_natural_scales(runs, [pair["l1"] for pair in pairs])
         cell_valid: dict[str, int] = {}
         attempts: dict[str, int] = {}
         for pair in pairs:
@@ -525,10 +594,16 @@ def main() -> None:
                                         continue
                                     attempts[cell] = attempts.get(cell, 0) + 1
                                     if attempts[cell] > target * int(
-                                        context.config["closure"]["max_attempt_multiplier"]
+                                        context.config["closure"][
+                                            "max_attempt_multiplier"
+                                        ]
                                     ):
                                         continue
-                                    delta = None if condition == "clean" else directions[condition]
+                                    delta = (
+                                        None
+                                        if condition == "clean"
+                                        else directions[condition]
+                                    )
                                     checkpoint_scale = natural_scales.get(
                                         (run.example.family, pair["l1"]),
                                         float(directions["natural_scale"]),
@@ -545,6 +620,21 @@ def main() -> None:
                                         strength=float(strength),
                                         thresholds=thresholds,
                                     )
+                                    paired_fields = (
+                                        run.example.example_id,
+                                        runs[donor_index].example.example_id,
+                                        str(pair["l0"]),
+                                        str(pair["l1"]),
+                                        source,
+                                        str(float(strength)),
+                                        condition,
+                                        clamp_condition,
+                                        str(replicate),
+                                        str(args.shard_index),
+                                    )
+                                    paired_trial_id = hashlib.sha256(
+                                        "\x1f".join(paired_fields).encode("utf-8")
+                                    ).hexdigest()
                                     if result["valid"]:
                                         cell_valid[cell] = cell_valid.get(cell, 0) + 1
                                     output_path = (
@@ -559,7 +649,18 @@ def main() -> None:
                                         output_path,
                                         [
                                             {
-                                                "schema_version": 1,
+                                                "schema_version": 2 if use_v2 else 1,
+                                                "protocol_version": (
+                                                    "phase0_protocol_v2"
+                                                    if use_v2
+                                                    else "phase0_protocol_v1"
+                                                ),
+                                                "dictionary_size": len(
+                                                    vocabulary.token_ids
+                                                ),
+                                                "dictionary_hash": vocabulary.digest,
+                                                "paired_trial_id": paired_trial_id,
+                                                "position_scope": "final",
                                                 "run_id": context.run_id,
                                                 "prompt_id": run.example.example_id,
                                                 "template_id": run.example.template_id,
@@ -573,12 +674,16 @@ def main() -> None:
                                                 "condition": condition,
                                                 "clamp_condition": clamp_condition,
                                                 "strength": float(strength),
-                                                "donor_id": runs[donor_index].example.example_id,
+                                                "donor_id": runs[
+                                                    donor_index
+                                                ].example.example_id,
                                                 "donor_replicate": replicate,
                                                 "probe_score": probe_score,
                                                 "checkpoint_natural_scale": checkpoint_scale,
                                                 "valid": result["valid"],
-                                                "exclusion_reason": result["exclusion_reason"],
+                                                "exclusion_reason": result[
+                                                    "exclusion_reason"
+                                                ],
                                                 "metrics": result["metrics"],
                                                 "seed": context.seed,
                                             }
@@ -600,6 +705,7 @@ def main() -> None:
             layer_pairs=pairs,
             cells=len(attempts),
             cells_reaching_target=sum(value >= target for value in cell_valid.values()),
+            protocol_version=("phase0_protocol_v2" if use_v2 else "phase0_protocol_v1"),
         )
     except KeyboardInterrupt:
         context.finish("FAILED", error="KeyboardInterrupt: run cancelled")

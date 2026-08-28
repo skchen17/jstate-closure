@@ -5,6 +5,7 @@ from jclosure.interventions import (
     matched_random_direction,
     non_j_direction,
     replace_activation,
+    resolve_position_scope,
     steer_activation,
 )
 
@@ -46,5 +47,21 @@ def test_non_j_and_random_directions_are_deterministic():
     first = matched_random_direction(vector, seed=12)
     second = matched_random_direction(vector, seed=12)
     assert torch.equal(first, second)
-    assert torch.allclose(torch.linalg.vector_norm(first), torch.linalg.vector_norm(vector))
+    assert torch.allclose(
+        torch.linalg.vector_norm(first), torch.linalg.vector_norm(vector)
+    )
 
+
+def test_position_scopes_cover_final_padding_explicit_and_reasoning_span():
+    assert resolve_position_scope(5, scope="final") == (4,)
+    assert resolve_position_scope(5, scope="explicit", positions=(0, -1)) == (0, 4)
+    assert resolve_position_scope(
+        5,
+        scope="all_non_padding",
+        attention_mask=torch.tensor([0, 1, 1, 1, 1]),
+    ) == (1, 2, 3, 4)
+    assert resolve_position_scope(5, scope="reasoning_span", reasoning_span=(1, 4)) == (
+        1,
+        2,
+        3,
+    )

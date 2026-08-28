@@ -12,7 +12,9 @@ import torch
 
 from jclosure.experiments.common import (
     initialize_context,
+    require_closure_eligible_layers,
     require_phase0_gate,
+    require_phase0_v2_gate,
     standard_parser,
 )
 from jclosure.experiments.distill_controller import (
@@ -70,7 +72,14 @@ def main() -> None:
         if args.dry_run:
             context.finish("DRY_RUN")
             return
-        require_phase0_gate(context)
+        if (
+            context.config.get("run", {}).get("phase0_protocol")
+            == "phase0_protocol_v2"
+        ):
+            require_phase0_v2_gate(context)
+            require_closure_eligible_layers(context)
+        else:
+            require_phase0_gate(context)
         trace_path = _find_artifact(
             context.root,
             args.trace,

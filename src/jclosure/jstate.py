@@ -232,6 +232,8 @@ class JStateEncoder:
             for layer, value in (directions or {}).items()
         }
         self.raw_directions = dict(raw_directions or directions or {})
+        self._device_directions: dict[tuple[int, str], torch.Tensor] = {}
+        self._device_raw_directions: dict[tuple[int, str], torch.Tensor] = {}
         self._raw_builder = raw_builder
         self.available_layers = tuple(
             sorted(set(int(layer) for layer in (*available_layers, *self.directions)))
@@ -307,14 +309,31 @@ class JStateEncoder:
     def dictionary(self, layer: int, device: torch.device | str | None = None) -> torch.Tensor:
         self._ensure_layer(layer)
         dictionary = self.directions[int(layer)]
-        return dictionary if device is None else dictionary.to(device)
+        if device is None:
+            return dictionary
+        key = (int(layer), str(torch.device(device)))
+        if key not in self._device_directions:
+            self._device_directions[key] = dictionary.to(device)
+        return self._device_directions[key]
+
+    def raw_dictionary(
+        self, layer: int, device: torch.device | str | None = None
+    ) -> torch.Tensor:
+        self._ensure_layer(layer)
+        dictionary = self.raw_directions[int(layer)]
+        if device is None:
+            return dictionary
+        key = (int(layer), str(torch.device(device)))
+        if key not in self._device_raw_directions:
+            self._device_raw_directions[key] = dictionary.to(device)
+        return self._device_raw_directions[key]
 
     def encode(self, h: torch.Tensor, layer: int, *, position: int = -1) -> JState:
         if h.ndim != 1:
             raise ValueError("J-state encoder expects one residual vector")
         dictionary = self.dictionary(layer, h.device)
         decomposition = gradient_pursuit(h, dictionary, k=self.k)
-        raw_dictionary = self.raw_directions[int(layer)].to(h.device).float()
+        raw_dictionary = self.raw_dictionary(layer, h.device).float()
         raw_scores = raw_dictionary @ h.float()
         centered = raw_scores - raw_scores.mean()
         normalized = F.normalize(centered, dim=0, eps=1e-12)

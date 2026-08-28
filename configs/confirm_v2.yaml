@@ -1,0 +1,19 @@
+extends: phase0_v2_confirmatory.yaml
+
+run:
+  stage: confirmatory
+  phase0_protocol: phase0_protocol_v2
+  valid_per_cell: 500
+  shard_count: 2
+
+closure:
+  position_scopes: [final, all_non_padding]
+  clamp_conditions: [single, persistent_final, persistent_all]
+  dictionary_sizes: [4096, 8192, 16384]
+
+token_time:
+  macro_states: [T1, T2, T3]
+  recurrent_memory_dim: 128
+  max_generation_steps: 32
+  group_a_per_family: 4000
+  group_b_per_family: 2000

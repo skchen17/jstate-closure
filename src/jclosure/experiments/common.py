@@ -110,10 +110,20 @@ def phase0_gate_path(context: ExperimentContext) -> Path:
     return context.processed_dir / "phase0_gate.json"
 
 
+def phase0_v2_gate_path(context: ExperimentContext) -> Path:
+    return context.processed_dir / "phase0_v2_gate.json"
+
+
 def concept_vocabulary_path(context: ExperimentContext) -> Path:
     if context.config.get("run", {}).get("confirmation_model"):
         return context.processed_dir / "concept_vocabulary_qwen3_6_27b.json"
     return context.processed_dir / "concept_vocabulary.json"
+
+
+def concept_vocabulary_v2_path(
+    context: ExperimentContext, dictionary_size: int = 4096
+) -> Path:
+    return context.processed_dir / f"concept_vocabulary_v2_{int(dictionary_size)}.json"
 
 
 def require_phase0_gate(context: ExperimentContext) -> dict[str, Any]:
@@ -137,3 +147,42 @@ def require_phase0_gate(context: ExperimentContext) -> dict[str, Any]:
             "Phase 0 did not pass; later runners may be tested but causal results cannot be interpreted"
         )
     return gate
+
+
+def require_phase0_v2_gate(context: ExperimentContext) -> dict[str, Any]:
+    """Require the locked v2 gate without changing the historical v1 contract."""
+
+    path = phase0_v2_gate_path(context)
+    if not path.exists():
+        raise RuntimeError("Phase 0 v2 gate artifact is missing")
+    gate = json.loads(path.read_text(encoding="utf-8"))
+    if gate.get("protocol_version") != "phase0_protocol_v2":
+        raise RuntimeError("Phase 0 gate is not protocol v2")
+    if not gate.get("adjudication_locked", False):
+        raise RuntimeError("Phase 0 v2 adjudication is not locked")
+    if not gate.get("passed", False):
+        raise RuntimeError(
+            "Phase 0 v2 did not pass; downstream confirmatory experiments are gated"
+        )
+    pinned = gate.get("model_revision"), gate.get("lens_revision")
+    current = context.config["model"]["revision"], context.config["lens"]["revision"]
+    if pinned != current:
+        raise RuntimeError("Phase 0 v2 gate was produced for different artifacts")
+    return gate
+
+
+def require_closure_eligible_layers(context: ExperimentContext) -> dict[str, Any]:
+    """Require per-layer calibration with at least one eligible layer."""
+
+    gate = require_phase0_v2_gate(context)
+    path = context.processed_dir / "layer_calibration.json"
+    if not path.exists():
+        raise RuntimeError("per-layer closure calibration artifact is missing")
+    calibration = json.loads(path.read_text(encoding="utf-8"))
+    if calibration.get("phase0_v2_gate_run_id") != gate.get("run_id"):
+        raise RuntimeError("layer calibration does not belong to the locked v2 gate")
+    if not calibration.get("eligible_layers"):
+        raise RuntimeError(
+            "no closure-eligible layer passed strict clamp calibration; formal downstream experiments are gated"
+        )
+    return calibration

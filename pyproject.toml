@@ -47,6 +47,11 @@ jclosure-distill = "jclosure.experiments.distill_controller:main"
 jclosure-report = "jclosure.reporting:main"
 jclosure-report-v2 = "jclosure.reporting_v2:main"
 jclosure-dictionary-sensitivity = "jclosure.experiments.dictionary_sensitivity:main"
+jclosure-geometry-v3 = "jclosure.experiments.geometry_v3:main"
+jclosure-clamp-v3 = "jclosure.experiments.clamp_v3_calibration:main"
+jclosure-freeze-v3 = "jclosure.experiments.freeze_phase3_v3:main"
+jclosure-closure-v3 = "jclosure.experiments.closure_v3:main"
+jclosure-report-v3 = "jclosure.reporting_v3:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

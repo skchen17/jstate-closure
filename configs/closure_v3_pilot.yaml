@@ -1,0 +1,14 @@
+extends: geometry_v3.yaml
+
+run:
+  stage: closure_v3_pilot
+  valid_per_cell: 100
+
+closure_v3:
+  perturbation_sources: [activation_difference, natural_collision, targeted_probe]
+  conditions: [clean, identity, matched_random, j_positive, full_patch, state_preserving]
+  strengths: [0.25, 0.5, 1.0]
+  modes: [single, persistent_final, persistent_all]
+  position_scopes: [final, all_non_padding]
+  max_attempt_multiplier: 10
+  targeted_probe_min_auc: 0.75

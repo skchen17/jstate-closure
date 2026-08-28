@@ -7,7 +7,17 @@
   "models": {
     "primary": {
       "id": "Qwen/Qwen3.5-4B",
-      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "weight_shards": {
+        "model.safetensors-00001-of-00002.safetensors": {
+          "size": 5329398688,
+          "sha256": "26a93f066e1916adb13453dae5a0c707c0fbc71299ed98779571a907b8e74c61"
+        },
+        "model.safetensors-00002-of-00002.safetensors": {
+          "size": 3990429408,
+          "sha256": "cb544bd9bfae93dc59b0f22b292f5933573854a7f9b97835c67060d7d910e188"
+        }
+      }
     },
     "confirmation": {
       "id": "Qwen/Qwen3.6-27B",
@@ -20,6 +30,8 @@
       "revision": "16a01f309fcec900fdcec3f4cd5b64f3d00e4d5a",
       "file": "qwen3.5-4b/jlens/Salesforce-wikitext/Qwen3.5-4B_jacobian_lens_n1000.pt",
       "sha256": "1f9a8f8fd593f0ffec1a9640993257ca4560f8ae3e5602315643d5cc6818534e",
+      "checkpoint_n_prompts": 1000,
+      "fit_config_prompts_fitted": 417,
       "metadata_warning": "n1000 filename; fit config reports prompts_fitted=417"
     },
     "confirmation": {
@@ -31,4 +43,3 @@
     }
   }
 }
-

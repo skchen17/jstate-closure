@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skchen17/jstate-closure/schemas/trial-record.schema.json",
+  "title": "J-State Closure Trial Record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "prompt_id",
+    "task_family",
+    "layer",
+    "position",
+    "intervention",
+    "valid",
+    "metrics",
+    "seed"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "run_id": {"type": "string", "minLength": 1},
+    "prompt_id": {"type": "string", "minLength": 1},
+    "template_id": {"type": ["string", "null"]},
+    "task_family": {"type": "string", "minLength": 1},
+    "layer": {"type": "integer", "minimum": 0},
+    "position": {"type": "integer"},
+    "intervention": {"type": "string", "minLength": 1},
+    "valid": {"type": "boolean"},
+    "exclusion_reason": {"type": ["string", "null"]},
+    "metrics": {"type": "object"},
+    "seed": {"type": "integer"}
+  },
+  "additionalProperties": true
+}

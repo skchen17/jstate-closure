@@ -92,6 +92,42 @@ def paired_clustered_difference_ci(
     )
 
 
+def clustered_sign_flip_p_value(
+    data: pd.DataFrame,
+    *,
+    cluster_col: str,
+    value_col: str,
+    null: float = 0.0,
+    alternative: str = "two-sided",
+    n_resamples: int = 10_000,
+    seed: int = 2_026_090_1,
+) -> float:
+    """Cluster-level randomization p-value for a mean effect against a null."""
+
+    if alternative not in {"two-sided", "greater", "less"}:
+        raise ValueError("alternative must be two-sided, greater, or less")
+    frame = data[[cluster_col, value_col]].dropna()
+    cluster_means = (
+        frame.groupby(cluster_col, sort=True)[value_col].mean().to_numpy(dtype=float)
+        - null
+    )
+    if cluster_means.size == 0:
+        raise ValueError("no finite clusters")
+    observed = float(cluster_means.mean())
+    generator = np.random.default_rng(seed)
+    signs = generator.choice(
+        np.asarray([-1.0, 1.0]), size=(n_resamples, cluster_means.size)
+    )
+    randomized = (signs * cluster_means).mean(axis=1)
+    if alternative == "greater":
+        extreme = randomized >= observed
+    elif alternative == "less":
+        extreme = randomized <= observed
+    else:
+        extreme = np.abs(randomized) >= abs(observed)
+    return float((int(extreme.sum()) + 1) / (n_resamples + 1))
+
+
 def benjamini_hochberg(p_values: Sequence[float]) -> np.ndarray:
     values = np.asarray(p_values, dtype=float)
     if values.ndim != 1:
@@ -136,4 +172,3 @@ def gap_closed(j_only: float, candidate: float, oracle: float) -> float | None:
     if denominator <= 1e-12:
         return None
     return (j_only - candidate) / denominator
-

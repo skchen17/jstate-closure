@@ -12,7 +12,7 @@ from torch import nn
 def residual_tensor(output: Any) -> torch.Tensor:
     if torch.is_tensor(output):
         return output
-    if isinstance(output, (tuple, list)) and output and torch.is_tensor(output[0]):
+    if isinstance(output, tuple | list) and output and torch.is_tensor(output[0]):
         return output[0]
     raise TypeError(f"unsupported block output type: {type(output).__name__}")
 
@@ -124,4 +124,3 @@ class ResidualEditor:
 
     def __exit__(self, *exc: Any) -> None:
         self.remove()
-

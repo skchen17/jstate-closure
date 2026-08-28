@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 import urllib.request
 from dataclasses import dataclass
@@ -43,6 +44,29 @@ def _artifact_root() -> Path:
     root = Path(configured) if configured else Path.home() / ".cache" / "jclosure"
     root.mkdir(parents=True, exist_ok=True)
     return root
+
+
+def _model_source(model_cfg: dict[str, Any]) -> tuple[str, dict[str, Any]]:
+    """Resolve an optional local snapshot only after checking its pinned manifest."""
+
+    configured = os.environ.get("JCLOSURE_MODEL_DIR") or model_cfg.get("local_path")
+    if not configured:
+        return str(model_cfg["id"]), {"revision": str(model_cfg["revision"])}
+    directory = Path(str(configured)).expanduser().resolve()
+    manifest_path = directory / "artifact_manifest.json"
+    if not manifest_path.exists():
+        raise FileNotFoundError(f"local model manifest is missing: {manifest_path}")
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if manifest.get("model_id") != model_cfg["id"]:
+        raise ValueError("local model manifest model_id mismatch")
+    if manifest.get("revision") != model_cfg["revision"]:
+        raise ValueError("local model manifest revision mismatch")
+    files = manifest.get("files", {})
+    if not files:
+        raise ValueError("local model manifest contains no verified files")
+    for relative, digest in files.items():
+        verify_sha256(directory / relative, str(digest))
+    return str(directory), {}
 
 
 def download_lens(
@@ -97,12 +121,13 @@ def load_model_bundle(config: dict[str, Any]) -> ModelBundle:
 
     model_cfg = config["model"]
     lens_cfg = config["lens"]
+    model_source, revision_kwargs = _model_source(model_cfg)
     dtype_name = str(model_cfg.get("dtype", "bfloat16"))
     dtype = getattr(torch, dtype_name)
     load_kwargs: dict[str, Any] = {
-        "revision": str(model_cfg["revision"]),
-        "torch_dtype": dtype,
+        "dtype": dtype,
         "trust_remote_code": bool(model_cfg.get("trust_remote_code", False)),
+        **revision_kwargs,
     }
     device_map = model_cfg.get("device_map", "cuda")
     if device_map == "cuda":
@@ -115,20 +140,20 @@ def load_model_bundle(config: dict[str, Any]) -> ModelBundle:
             load_kwargs["offload_folder"] = model_cfg["offload_folder"]
 
     tokenizer = AutoTokenizer.from_pretrained(
-        str(model_cfg["id"]),
-        revision=str(model_cfg["revision"]),
+        model_source,
         trust_remote_code=bool(model_cfg.get("trust_remote_code", False)),
+        **revision_kwargs,
     )
     try:
         hf_model = AutoModelForCausalLM.from_pretrained(
-            str(model_cfg["id"]), **load_kwargs
+            model_source, **load_kwargs
         )
     except ValueError as causal_error:
         try:
             from transformers import AutoModelForImageTextToText
 
             hf_model = AutoModelForImageTextToText.from_pretrained(
-                str(model_cfg["id"]), **load_kwargs
+                model_source, **load_kwargs
             )
         except Exception as multimodal_error:
             raise causal_error from multimodal_error

@@ -14,6 +14,7 @@ from jclosure.reporting import _save_figure
 from jclosure.statistics import (
     benjamini_hochberg,
     clustered_bootstrap_ci,
+    clustered_sign_flip_p_value,
     normalized_remainder_effect,
 )
 
@@ -45,6 +46,23 @@ def test_cluster_bootstrap_and_bh_are_deterministic():
     assert first == second
     adjusted = benjamini_hochberg([0.01, 0.04, 0.03])
     assert all(0 <= value <= 1 for value in adjusted)
+    first_p = clustered_sign_flip_p_value(
+        data,
+        cluster_col="prompt",
+        value_col="value",
+        alternative="greater",
+        n_resamples=200,
+        seed=10,
+    )
+    second_p = clustered_sign_flip_p_value(
+        data,
+        cluster_col="prompt",
+        value_col="value",
+        alternative="greater",
+        n_resamples=200,
+        seed=10,
+    )
+    assert first_p == second_p
 
 
 def test_eta_only_when_positive_control_clears_noise():

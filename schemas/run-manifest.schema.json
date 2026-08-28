@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skchen17/jstate-closure/schemas/run-manifest.schema.json",
+  "title": "J-State Closure Run Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "kind",
+    "status",
+    "created_at",
+    "config_digest",
+    "config",
+    "seed",
+    "command",
+    "environment"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "run_id": {"type": "string"},
+    "kind": {"type": "string"},
+    "status": {
+      "enum": ["RUNNING", "DRY_RUN", "COMPLETED", "FAILED", "BLOCKED", "UNEXECUTED"]
+    },
+    "created_at": {"type": "string", "format": "date-time"},
+    "config_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "config": {"type": "object"},
+    "seed": {"type": "integer"},
+    "command": {"type": "array", "items": {"type": "string"}},
+    "git_commit": {"type": ["string", "null"]},
+    "environment": {"type": "object"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skchen17/jstate-closure/schemas/figure-manifest.schema.json",
+  "title": "J-State Closure Figure Manifest",
+  "type": "object",
+  "required": ["schema_version", "figures", "unavailable", "manual_values"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "manual_values": {"const": false},
+    "figures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["figure", "sha256", "sources"],
+        "properties": {
+          "figure": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "sources": {"type": "array", "minItems": 1}
+        }
+      }
+    },
+    "unavailable": {"type": "object"}
+  },
+  "additionalProperties": true
+}

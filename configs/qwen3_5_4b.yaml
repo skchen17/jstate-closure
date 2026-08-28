@@ -67,6 +67,7 @@ controller:
   stable_sparse_f1: 0.70
   stable_teacher_accuracy_fraction: 0.90
   stable_intervention_agreement: 0.80
+  counterfactual_traces: 256
 
 reproducibility:
   dataset_seed: 20260828
@@ -84,4 +85,3 @@ outputs:
   figures: results/figures
   reports: reports
   artifacts: artifacts
-

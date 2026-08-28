@@ -1,0 +1,61 @@
+{
+  "families": {
+    "factual_two_hop": {
+      "copy_flagged_concepts": 5,
+      "corrected_retrospective_pass10": 0.5575396825396824,
+      "factorial_pass10": {
+        "all_positions": 0.0,
+        "all_positions+synonym_expansion": 0.0,
+        "official_aggregation": 0.48148148148148145,
+        "official_aggregation+all_positions": 0.5575396825396824,
+        "official_aggregation+all_positions+synonym_expansion": 0.5575396825396824,
+        "official_aggregation+synonym_expansion": 0.48148148148148145,
+        "synonym_expansion": 0.0,
+        "v1_like": 0.0
+      },
+      "position_lt16_examples": 50,
+      "raw_concepts": 103,
+      "raw_examples": 93,
+      "shapley_pass10_change": {
+        "all_positions": 0.038029100529100496,
+        "official_aggregation": 0.519510582010582,
+        "synonym_expansion": 0.0
+      },
+      "tokenization_excluded_concepts": 9,
+      "true_readout_failure_fraction": 0.44246031746031755,
+      "v1_reported_hit10": 0.03571428571428571
+    },
+    "order_of_operations": {
+      "copy_flagged_concepts": 53,
+      "corrected_retrospective_pass10": 0.7181818181818181,
+      "factorial_pass10": {
+        "all_positions": 0.0,
+        "all_positions+synonym_expansion": 0.0,
+        "official_aggregation": 0.16666666666666666,
+        "official_aggregation+all_positions": 0.39090909090909093,
+        "official_aggregation+all_positions+synonym_expansion": 0.7181818181818181,
+        "official_aggregation+synonym_expansion": 0.3333333333333333,
+        "synonym_expansion": 0.0,
+        "v1_like": 0.0
+      },
+      "position_lt16_examples": 52,
+      "raw_concepts": 110,
+      "raw_examples": 55,
+      "shapley_pass10_change": {
+        "all_positions": 0.16565656565656564,
+        "official_aggregation": 0.4156565656565656,
+        "synonym_expansion": 0.13686868686868683
+      },
+      "tokenization_excluded_concepts": 1,
+      "true_readout_failure_fraction": 0.28181818181818186,
+      "v1_reported_hit10": 0.0
+    }
+  },
+  "protocol_version": "phase0_protocol_v2",
+  "schema_version": 2,
+  "status": "RETROSPECTIVE_CALIBRATION_ONLY",
+  "v1_gate_sha256": "c8e66b83f249576f7df3dd55bff71aed4446168a5d989b9f8ded63e7baa642ab",
+  "v2_calibration_sha256": "9f322488af6e5a5c224308b5bc5cf7a951fd1aae5b325e25292a12f18e44ede0",
+  "v2_records_sha256": "85848df53f619f14a188de497e89f0a021896be06282df5f60d4407ae3954bbd",
+  "warning": "These results were observed before protocol freeze and cannot adjudicate Phase 0 v2."
+}

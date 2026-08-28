@@ -1,0 +1,46 @@
+{
+  "config_digest": "d3f2fa00c0993e209bb3c40a1e635407862731fc7663354680f6ce64961a3e4c",
+  "config_path": "configs/phase0_v2_confirmatory.yaml",
+  "exclusion_policy": {
+    "copied_targets": "included_and_flagged",
+    "official_main_positions": "all_valid",
+    "position16": "sensitivity_only",
+    "tokenization": "single_token_candidates_required"
+  },
+  "files": {
+    "configs/phase0_v2_confirmatory.yaml": "69f0062646e68b7c19cb73168eeafdae260dfdef76f7b94952a0c3e9b84fba90",
+    "data/phase0_v2/MANIFEST.json": "456800883ba8c3e75696d4b22214ceb88d9cebfcca09d067f52f6f31acd50ed9",
+    "data/phase0_v2/fresh_multihop.json": "65ebb36d8c7e68e2496d8f05f6e3c990a37aac2ab53d4a16d430d9b44e1fbc6d",
+    "data/phase0_v2/fresh_order_ops.json": "7dc46e93126399c5fd492fe8af762a0fc64b436c502fcc3ef4dc5a72d75fc8cc",
+    "src/jclosure/datasets.py": "c279d35a29b308c0ac261dc21b9b50cdcc93d5ca59b8e36dfe3214567f4c21bd",
+    "src/jclosure/experiments/validate_lens_v2.py": "286c6191d99d75fd490ac41c1be9dd47749fd1b4bbbe721a3d8c1c3818f149f5",
+    "src/jclosure/phase0.py": "3505abeae35ba399b204ac5e74d273e8ff02519f26d6fb4feb94fa61a12255d1"
+  },
+  "implementation_commit": "d0fb8da7881103847dc2053cc85795c884118d66",
+  "notes": [
+    "Exact Anthropic synonym implementation was not present in the pinned public repository.",
+    "Any later protocol change must use a new exploratory protocol version."
+  ],
+  "positive_control_layer": 24,
+  "protocol_version": "phase0_protocol_v2",
+  "schema_version": 2,
+  "synonym_rule": "official-compatible-declared-v2",
+  "thresholds": {
+    "hit10": 0.2,
+    "positive_control_vs_null": "ci_lower_gt_q99_null_and_1e-4_floor",
+    "rank_advantage_ci_lower": 0.0
+  },
+  "workspace_band": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ]
+}

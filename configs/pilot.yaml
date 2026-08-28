@@ -1,0 +1,19 @@
+extends: qwen3_5_4b.yaml
+
+run:
+  stage: pilot
+  valid_per_cell: 100
+  shard_count: 2
+
+validation:
+  bootstrap_resamples: 2000
+  positive_control_trials: 12
+
+statistics:
+  bootstrap_resamples: 2000
+
+controller:
+  parameter_budgets: [1000000, 5000000]
+
+reproducibility:
+  controller_seeds: [20260828]

@@ -1,0 +1,28 @@
+import torch
+
+from jclosure.decomposition import gradient_pursuit, strip_j_component
+
+
+def test_nonnegative_sparse_recovery_and_remainder():
+    dictionary = torch.eye(5)
+    vector = torch.tensor([2.0, 0.0, 1.5, -3.0, 0.0])
+    result = gradient_pursuit(vector, dictionary, k=3)
+    assert result.atom_indices.tolist() == [0, 2]
+    assert torch.all(result.coefficients >= 0)
+    assert torch.allclose(result.reconstruction, torch.tensor([2.0, 0, 1.5, 0, 0]))
+    assert torch.allclose(result.remainder, torch.tensor([0.0, 0, 0, -3.0, 0]))
+
+
+def test_deterministic_tie_breaking():
+    dictionary = torch.tensor([[1.0, 0], [1.0, 0], [0, 1.0]])
+    first = gradient_pursuit(torch.tensor([1.0, 0]), dictionary, k=1)
+    second = gradient_pursuit(torch.tensor([1.0, 0]), dictionary, k=1)
+    assert first.atom_indices.tolist() == [0]
+    assert torch.equal(first.atom_indices, second.atom_indices)
+
+
+def test_strip_j_component_is_orthogonal_for_orthonormal_frame():
+    dictionary = torch.tensor([[1.0, 0, 0], [0, 1.0, 0]])
+    stripped, _ = strip_j_component(torch.tensor([2.0, 3.0, 4.0]), dictionary, k=2)
+    assert torch.allclose(dictionary @ stripped, torch.zeros(2), atol=1e-6)
+

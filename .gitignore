@@ -1,0 +1,33 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Model, lens, activation, and training artifacts are intentionally external.
+artifacts/models/
+artifacts/lenses/
+artifacts/offload/
+artifacts/checkpoints/
+artifacts/traces/
+*.pt
+*.pth
+*.safetensors
+*.npz
+*.npy
+
+# Machine-readable metrics and generated figures are intentionally versioned.
+# Large tensors/checkpoints remain excluded by the extension rules above.
+
+# Local run state and credentials must never be committed.
+.env
+.env.*
+!.env.example
+run-state/
+offload/

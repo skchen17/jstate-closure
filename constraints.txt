@@ -1,0 +1,21 @@
+# Runtime observed and CUDA-smoke-tested on 2026-08-28.
+# PyTorch's local build is 2.10.0+cu128; the public package version is 2.10.0.
+torch==2.10.0
+transformers==5.12.1
+huggingface-hub==1.21.0
+accelerate==1.12.0
+numpy==1.26.4
+pandas==2.2.2
+pyarrow==21.0.0
+scipy==1.16.1
+scikit-learn==1.7.2
+matplotlib==3.8.4
+seaborn==0.13.2
+PyYAML==6.0.1
+safetensors==0.6.2
+jlens @ git+https://github.com/anthropics/jacobian-lens.git@581d398613e5602a5af361e1c34d3a92ea82ba8e
+
+# Development and verification tools.
+pytest==8.3.5
+pytest-cov==6.0.0
+ruff==0.11.13

@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jstate-closure"
+version = "0.1.0"
+description = "Causal tests of Jacobian-lens J-state closure and compact cognitive controllers"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = {text = "Apache-2.0"}
+authors = [{name = "skchen17"}]
+dependencies = [
+  "torch==2.10.0",
+  "transformers==5.12.1",
+  "huggingface-hub==1.21.0",
+  "accelerate==1.12.0",
+  "numpy==1.26.4",
+  "pandas==2.2.2",
+  "pyarrow==21.0.0",
+  "scipy==1.16.1",
+  "scikit-learn==1.7.2",
+  "matplotlib==3.8.4",
+  "seaborn==0.13.2",
+  "PyYAML==6.0.1",
+  "safetensors==0.6.2",
+  "jlens @ git+https://github.com/anthropics/jacobian-lens.git@581d398613e5602a5af361e1c34d3a92ea82ba8e",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==8.3.5",
+  "pytest-cov==6.0.0",
+  "ruff==0.11.13",
+]
+
+[project.scripts]
+jclosure-validate = "jclosure.experiments.validate_lens:main"
+jclosure-closure = "jclosure.experiments.closure:main"
+jclosure-collisions = "jclosure.experiments.natural_collisions:main"
+jclosure-memory = "jclosure.experiments.memory_order:main"
+jclosure-distill = "jclosure.experiments.distill_controller:main"
+jclosure-report = "jclosure.reporting:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "E741"]

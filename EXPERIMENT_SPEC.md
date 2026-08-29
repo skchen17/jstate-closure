@@ -137,6 +137,12 @@ all invalid attempts remain recorded, and admitted bases are replayed through
 all controls and persistent modes. In the final-position arm, anchor and donor
 states each use their own final token even when their sequence lengths differ;
 the all-non-padding arm continues to require equal length and template.
+The geometry bank intentionally stores layers 23–29. If an authorized early
+L1 requires L0=21 or 22, the behavioral runner deterministically re-records
+only those supporting layers from the bank's saved input IDs with the frozen
+model and `use_cache=False`; it stores prompt/layer tensor shapes and SHA-256
+hashes in a run-local supplemental manifest rather than treating a missing
+bank layer as an experiment failure or silently changing the geometry bank.
 
 If dense geometry is near-injective or fails the formal displacement gate, the
 low-dimensional screen compares sparse active atoms, dense-profile PCA,

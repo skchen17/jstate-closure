@@ -5,6 +5,7 @@ import torch
 
 from jclosure.clamp_v3 import V3ClampThresholds
 from jclosure.experiments.closure_v3 import (
+    _ActivationAccessor,
     _base_cell_key,
     _operational_clamp,
     _shard_source_target,
@@ -50,6 +51,20 @@ def test_base_trial_targets_are_split_across_shards_without_duplication():
     assert _base_cell_key("dense-4096", "arithmetic", "activation_difference") == (
         "dense-4096:arithmetic:activation_difference"
     )
+
+
+def test_supplemental_activation_manifest_is_deterministic(tmp_path):
+    accessor = _ActivationAccessor(tmp_path, bundle=None)
+    accessor.supplemental[("prompt-b", 22)] = torch.tensor([[2.0, 3.0]])
+    accessor.supplemental[("prompt-a", 21)] = torch.tensor([[0.0, 1.0]])
+    first = accessor.manifest_records()
+    second = accessor.manifest_records()
+    assert first == second
+    assert [(row["prompt_id"], row["layer"]) for row in first] == [
+        ("prompt-a", 21),
+        ("prompt-b", 22),
+    ]
+    assert all(len(row["sha256"]) == 64 for row in first)
 
 
 class _AlwaysNatural:

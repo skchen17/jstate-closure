@@ -1,9 +1,14 @@
 from pathlib import Path
 
 import pandas as pd
+import pytest
 
 from jclosure.provenance import write_json_atomic
-from jclosure.reporting_v3 import _geometry_sources
+from jclosure.reporting_v3 import (
+    _geometry_sources,
+    _latest_completed_closure_sources,
+    summarize_closure_v3,
+)
 
 
 def _write_record(path: Path, value: int) -> None:
@@ -72,3 +77,59 @@ def test_geometry_sources_use_latest_completed_shard(tmp_path: Path) -> None:
     assert maps["value"].tolist() == [2]
     assert local["value"].tolist() == [2]
     assert all(path.parent == new for path in paths)
+
+
+def test_closure_summary_uses_positive_gate_and_identity_null():
+    rows = []
+    for prompt, positive, remainder in (("p1", 0.1, 0.01), ("p2", 0.2, 0.02)):
+        for condition, value in (
+            ("identity", 1e-6),
+            ("j_positive", positive),
+            ("state_preserving", remainder),
+        ):
+            rows.append(
+                {
+                    "prompt_id": prompt,
+                    "base_trial_id": prompt,
+                    "protocol_key": "dense-4096",
+                    "state_definition": "V3-Dense",
+                    "dictionary_size": 4096,
+                    "task_family": "arithmetic",
+                    "position_scope": "final",
+                    "source": "activation_difference",
+                    "strength": 0.25,
+                    "condition": condition,
+                    "clamp_mode": "single",
+                    "valid": True,
+                    "metrics": {"js_divergence": value},
+                }
+            )
+    summary = summarize_closure_v3(pd.DataFrame(rows), n_resamples=200, seed=7)
+    remainder = summary[summary["condition"] == "state_preserving"].iloc[0]
+    assert remainder["positive_control_usable"]
+    assert remainder["null_threshold"] == 1e-4
+    assert remainder["normalized_remainder_eta"] == pytest.approx(0.1)
+    assert remainder["normalized_remainder_eta_ci_upper"] == pytest.approx(0.1)
+
+
+def test_closure_sources_require_a_complete_shard_group(tmp_path: Path):
+    for shard in (0, 1):
+        run = tmp_path / "results/v3/raw" / f"closure-v3-run-{shard}"
+        write_json_atomic(
+            run / "manifest.json",
+            {
+                "status": "COMPLETED",
+                "created_at": f"2026-01-0{shard + 1}",
+                "run_id": f"r{shard}",
+                "shard_group_id": "paired-run",
+                "shard_index": shard,
+                "shard_count": 2,
+            },
+        )
+        trial = run / "trials/arithmetic" / f"part-shard-{shard:03d}.jsonl"
+        trial.parent.mkdir(parents=True, exist_ok=True)
+        trial.write_text('{"prompt_id":"p' + str(shard) + '"}\n', encoding="utf-8")
+    frame, paths, group = _latest_completed_closure_sources(tmp_path)
+    assert group == "paired-run"
+    assert sorted(frame["prompt_id"]) == ["p0", "p1"]
+    assert len(paths) == 2

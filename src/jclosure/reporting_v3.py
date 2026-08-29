@@ -17,6 +17,13 @@ import pandas as pd
 
 from jclosure.experiments.common import repository_root
 from jclosure.provenance import sha256_file, write_json_atomic
+from jclosure.statistics import (
+    benjamini_hochberg,
+    clustered_bootstrap_ci,
+    clustered_sign_flip_p_value,
+    normalized_remainder_effect,
+    numerical_null_threshold,
+)
 
 
 def _load_json(path: Path) -> dict[str, Any]:
@@ -35,6 +42,249 @@ def _latest_completed(root: Path, prefix: str) -> tuple[Path, dict[str, Any]] | 
 def _read_parquets(paths: list[Path]) -> pd.DataFrame:
     frames = [pd.read_parquet(path) for path in paths if path.is_file()]
     return pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
+
+
+def _latest_completed_closure_sources(
+    root: Path,
+) -> tuple[pd.DataFrame, list[Path], str | None]:
+    groups: dict[str, dict[int, tuple[str, Path, dict[str, Any]]]] = {}
+    for manifest_path in sorted(
+        (root / "results/v3/raw").glob("closure-v3-*/manifest.json")
+    ):
+        payload = _load_json(manifest_path)
+        if payload.get("status") != "COMPLETED":
+            continue
+        group = str(payload.get("shard_group_id", payload.get("run_id", "")))
+        shard = int(payload.get("shard_index", 0))
+        created = str(payload.get("created_at", ""))
+        groups.setdefault(group, {})[shard] = (created, manifest_path, payload)
+    complete: list[tuple[str, str, dict[int, tuple[str, Path, dict[str, Any]]]]] = []
+    for group, shards in groups.items():
+        counts = {int(value[2].get("shard_count", 1)) for value in shards.values()}
+        if len(counts) != 1:
+            continue
+        count = counts.pop()
+        if set(shards) != set(range(count)):
+            continue
+        complete.append((max(value[0] for value in shards.values()), group, shards))
+    if not complete:
+        return pd.DataFrame(), [], None
+    _, group, shards = max(complete, key=lambda value: (value[0], value[1]))
+    paths = [
+        path
+        for shard in sorted(shards)
+        for path in sorted(shards[shard][1].parent.glob("trials/**/*.jsonl"))
+    ]
+    frames = [pd.read_json(path, lines=True) for path in paths if path.stat().st_size]
+    return (
+        pd.concat(frames, ignore_index=True) if frames else pd.DataFrame(),
+        paths,
+        group,
+    )
+
+
+def summarize_closure_v3(
+    records: pd.DataFrame,
+    *,
+    n_resamples: int = 10_000,
+    seed: int = 2_026_090_1,
+) -> pd.DataFrame:
+    """Summarize clean-relative effects without breaking paired base trials."""
+
+    if records.empty:
+        return pd.DataFrame()
+    frame = records.copy()
+    if "protocol_key" not in frame:
+        frame["protocol_key"] = (
+            frame["state_definition"].astype(str)
+            + "-"
+            + frame["dictionary_size"].astype(str)
+        )
+    if "js_divergence" not in frame:
+        if "metrics" not in frame:
+            raise ValueError("closure records do not contain metrics")
+        frame["js_divergence"] = frame["metrics"].map(
+            lambda value: value.get("js_divergence")
+            if isinstance(value, dict)
+            else np.nan
+        )
+    required = {
+        "prompt_id",
+        "protocol_key",
+        "task_family",
+        "position_scope",
+        "source",
+        "strength",
+        "condition",
+        "clamp_mode",
+        "valid",
+        "js_divergence",
+    }
+    missing = sorted(required - set(frame.columns))
+    if missing:
+        raise ValueError(f"closure records missing columns: {missing}")
+    group_keys = [
+        "protocol_key",
+        "state_definition",
+        "dictionary_size",
+        "task_family",
+        "position_scope",
+        "source",
+        "strength",
+        "condition",
+        "clamp_mode",
+    ]
+    rows: list[dict[str, Any]] = []
+    for key, group in frame.groupby(group_keys, sort=True, dropna=False):
+        valid = group[group["valid"] & group["js_divergence"].notna()]
+        row = dict(zip(group_keys, key, strict=True))
+        row.update(
+            attempted=int(len(group)),
+            valid=int(len(valid)),
+            excluded=int(len(group) - len(valid)),
+            estimate=np.nan,
+            ci_lower=np.nan,
+            ci_upper=np.nan,
+            n_clusters=0,
+            p_value=np.nan,
+        )
+        if not valid.empty:
+            ci = clustered_bootstrap_ci(
+                valid,
+                cluster_col="prompt_id",
+                value_col="js_divergence",
+                n_resamples=n_resamples,
+                seed=seed,
+            )
+            row.update(
+                estimate=ci.estimate,
+                ci_lower=ci.lower,
+                ci_upper=ci.upper,
+                n_clusters=ci.n_clusters,
+                p_value=clustered_sign_flip_p_value(
+                    valid,
+                    cluster_col="prompt_id",
+                    value_col="js_divergence",
+                    n_resamples=n_resamples,
+                    seed=seed,
+                ),
+            )
+        rows.append(row)
+    summary = pd.DataFrame(rows)
+    finite_p = summary["p_value"].notna()
+    summary["p_value_bh"] = np.nan
+    if finite_p.any():
+        summary.loc[finite_p, "p_value_bh"] = benjamini_hochberg(
+            summary.loc[finite_p, "p_value"].to_numpy(dtype=float)
+        )
+    for column in (
+        "positive_control_estimate",
+        "positive_control_ci_lower",
+        "null_threshold",
+        "normalized_remainder_eta",
+        "normalized_remainder_eta_ci_lower",
+        "normalized_remainder_eta_ci_upper",
+    ):
+        summary[column] = np.nan
+    summary["positive_control_usable"] = False
+    match_keys = [
+        "protocol_key",
+        "state_definition",
+        "dictionary_size",
+        "task_family",
+        "position_scope",
+        "source",
+        "strength",
+    ]
+    positive = summary[
+        (summary["condition"] == "j_positive")
+        & (summary["clamp_mode"] == "single")
+    ]
+    positive_lookup = {
+        tuple(row[column] for column in match_keys): row
+        for _, row in positive.iterrows()
+    }
+    identity = frame[
+        (frame["condition"] == "identity")
+        & frame["valid"]
+        & frame["js_divergence"].notna()
+    ]
+    identity_lookup = {
+        tuple(key if isinstance(key, tuple) else (key,)): group
+        for key, group in identity.groupby(match_keys, sort=True, dropna=False)
+    }
+    remainder_indices = summary.index[summary["condition"] == "state_preserving"]
+    for index in remainder_indices:
+        key = tuple(summary.at[index, column] for column in match_keys)
+        control = positive_lookup.get(key)
+        null = numerical_null_threshold(
+            identity_lookup.get(key, pd.DataFrame()).get(
+                "js_divergence", pd.Series(dtype=float)
+            ),
+            floor=1e-4,
+        )
+        summary.at[index, "null_threshold"] = null
+        if control is None or pd.isna(control["estimate"]):
+            continue
+        usable = bool(float(control["ci_lower"]) > null)
+        summary.at[index, "positive_control_estimate"] = float(control["estimate"])
+        summary.at[index, "positive_control_ci_lower"] = float(control["ci_lower"])
+        summary.at[index, "positive_control_usable"] = usable
+        eta = normalized_remainder_effect(
+            float(summary.at[index, "estimate"]),
+            float(control["estimate"]),
+            j_effect_lower=float(control["ci_lower"]),
+            null_threshold=null,
+        )
+        if eta is not None:
+            summary.at[index, "normalized_remainder_eta"] = eta
+            if "base_trial_id" not in frame:
+                continue
+            remainder_mask = np.logical_and.reduce(
+                [frame[column] == summary.at[index, column] for column in match_keys]
+            )
+            remainder_rows = frame[
+                remainder_mask
+                & (frame["condition"] == "state_preserving")
+                & (frame["clamp_mode"] == summary.at[index, "clamp_mode"])
+                & frame["valid"]
+            ][["base_trial_id", "prompt_id", "js_divergence"]]
+            positive_rows = frame[
+                remainder_mask
+                & (frame["condition"] == "j_positive")
+                & (frame["clamp_mode"] == "single")
+                & frame["valid"]
+            ][["base_trial_id", "js_divergence"]]
+            paired = remainder_rows.merge(
+                positive_rows,
+                on="base_trial_id",
+                suffixes=("_remainder", "_positive"),
+                validate="one_to_one",
+            )
+            if paired.empty:
+                continue
+            clustered = paired.groupby("prompt_id", sort=True)[
+                ["js_divergence_remainder", "js_divergence_positive"]
+            ].sum()
+            generator = np.random.default_rng(seed)
+            sampled = generator.integers(
+                0, len(clustered), size=(n_resamples, len(clustered))
+            )
+            remainder_sums = clustered["js_divergence_remainder"].to_numpy()[
+                sampled
+            ].sum(axis=1)
+            positive_sums = clustered["js_divergence_positive"].to_numpy()[
+                sampled
+            ].sum(axis=1)
+            ratios = remainder_sums / np.maximum(positive_sums, 1e-12)
+            summary.at[index, "normalized_remainder_eta"] = float(
+                paired["js_divergence_remainder"].mean()
+                / max(paired["js_divergence_positive"].mean(), 1e-12)
+            )
+            lower, upper = np.quantile(ratios, [0.025, 0.975])
+            summary.at[index, "normalized_remainder_eta_ci_lower"] = float(lower)
+            summary.at[index, "normalized_remainder_eta_ci_upper"] = float(upper)
+    return summary
 
 
 def _save_figure(
@@ -332,6 +582,13 @@ def build_reports(root: Path) -> dict[str, Any]:
     pareto, pareto_paths = _pareto_sources(root)
     calibration_path = root / "results/v3/processed/clamp_v3_calibration.json"
     calibration = _load_json(calibration_path) if calibration_path.is_file() else None
+    closure_records, closure_paths, closure_group = _latest_completed_closure_sources(
+        root
+    )
+    closure_summary = summarize_closure_v3(closure_records)
+    closure_summary_path = root / "results/v3/processed/closure_v3_effects.parquet"
+    if not closure_summary.empty:
+        closure_summary.to_parquet(closure_summary_path, index=False)
     figures = build_geometry_figures(root)
     figure_manifest = {
         "schema_version": 3,
@@ -461,6 +718,60 @@ only and cannot support H1/H2/H3.
     (root / "reports/CLAMP_V3_CALIBRATION.md").write_text(
         calibration_report, encoding="utf-8"
     )
+    if closure_records.empty:
+        closure_text = (
+            "No completed, shard-complete v3 behavioral run was found. "
+            "Closure and mediation remain unexecuted."
+        )
+        base_attempted = 0
+        base_valid = 0
+    else:
+        base_attempted = int(closure_records["base_trial_id"].nunique())
+        base_mask = (
+            closure_records["base_formal_valid"].astype(bool)
+            if "base_formal_valid" in closure_records
+            else pd.Series(False, index=closure_records.index)
+        )
+        base_valid = int(
+            closure_records.loc[
+                base_mask, "base_trial_id"
+            ].nunique()
+        )
+        remainder = closure_summary[
+            closure_summary["condition"] == "state_preserving"
+        ]
+        usable = int(remainder["positive_control_usable"].sum())
+        closure_text = (
+            f"Completed shard group `{closure_group}` contains {len(closure_records)} "
+            f"records from {base_valid}/{base_attempted} valid/attempted base trials. "
+            f"Positive-control-gated eta is available for {usable}/{len(remainder)} "
+            "state-preserving summary cells."
+        )
+    causal_report = f"""# Closure causal report
+
+## Material Passport
+
+- Origin Skill: academic-research-suite / experiment-agent
+- Mode: run + validate
+- Date: 2026-08-30
+- Verification Status: {"ANALYZED" if not closure_records.empty else "UNVERIFIED"}
+- Protocol: exploratory protocol v3
+
+## Status
+
+{closure_text}
+
+Effects are clean-relative full-vocabulary Jensen–Shannon divergence with
+10,000 prompt-clustered bootstrap resamples. `eta` is emitted only where the
+positive-control CI lower bound exceeds both the identity 99th-percentile null
+and `1e-4`. One-shot, final-persistent, and all-position-persistent results
+remain separate; no binary mediation label is substituted for those arms.
+
+Machine-readable summaries: {str(closure_summary_path.relative_to(root)) if closure_summary_path.is_file() else "not generated"}.
+"""
+    (root / "reports/CLOSURE_CAUSAL_REPORT.md").write_text(
+        causal_report, encoding="utf-8"
+    )
     execution = {
         "schema_version": 3,
         "protocol_version": "exploratory_protocol_v3",
@@ -478,7 +789,18 @@ only and cannot support H1/H2/H3.
         "pareto": "COMPLETED" if not pareto.empty else "UNEXECUTED",
         "calibration": "COMPLETED" if calibration is not None else "UNEXECUTED",
         "behavioral_authorized_protocols": authorized,
-        "behavioral_closure": "AUTHORIZED" if authorized else "GATED",
+        "behavioral_closure": (
+            "COMPLETED"
+            if not closure_records.empty
+            else "AUTHORIZED_NOT_EXECUTED"
+            if authorized
+            else "GATED"
+        ),
+        "behavioral_shard_group": closure_group,
+        "behavioral_base_trials": {
+            "attempted": base_attempted,
+            "valid": base_valid,
+        },
         "lowdim_search": (
             "UNEXECUTED"
             if execution_scope != "formal" or maps.empty or local.empty
@@ -490,7 +812,12 @@ only and cannot support H1/H2/H3.
         "failed_runs": failed_runs,
         "source_hashes": {
             str(path.relative_to(root)): sha256_file(path)
-            for path in [*spectrum_paths, *pareto_paths, *run_manifests]
+            for path in [
+                *spectrum_paths,
+                *pareto_paths,
+                *closure_paths,
+                *run_manifests,
+            ]
         },
     }
     write_json_atomic(root / "results/v3/processed/execution_status_v3.json", execution)

@@ -103,6 +103,60 @@ def _load_payload(root: Path, record: dict[str, Any]) -> dict[str, Any]:
     return torch.load(root / record["activation_path"], map_location="cpu")
 
 
+class _ActivationAccessor:
+    """Read bank layers and deterministically record required supporting L0 layers."""
+
+    def __init__(self, root: Path, bundle: Any) -> None:
+        self.root = root
+        self.bundle = bundle
+        self.supplemental: dict[tuple[str, int], torch.Tensor] = {}
+
+    def prime(self, records: list[dict[str, Any]], layers: list[int]) -> None:
+        for record in records:
+            payload = _load_payload(self.root, record)
+            missing = [
+                layer
+                for layer in layers
+                if layer not in payload["activations"]
+                and (record["prompt_id"], layer) not in self.supplemental
+            ]
+            if not missing:
+                continue
+            input_ids = payload["input_ids"].to(self.bundle.hf_model.device)
+            with ActivationRecorder(self.bundle.layers, at=missing) as recorder:
+                with torch.no_grad():
+                    self.bundle.forward_logits(input_ids)
+            for layer in missing:
+                self.supplemental[(record["prompt_id"], layer)] = (
+                    recorder.activations[layer][0].detach().float().cpu()
+                )
+
+    def sequence(self, record: dict[str, Any], layer: int) -> torch.Tensor:
+        payload = _load_payload(self.root, record)
+        if layer in payload["activations"]:
+            return payload["activations"][layer].float()
+        key = (record["prompt_id"], int(layer))
+        if key not in self.supplemental:
+            self.prime([record], [int(layer)])
+        return self.supplemental[key]
+
+    def manifest_records(self) -> list[dict[str, Any]]:
+        return [
+            {
+                "schema_version": 3,
+                "protocol_version": PROTOCOL,
+                "prompt_id": prompt_id,
+                "layer": layer,
+                "shape": list(value.shape),
+                "dtype": str(value.dtype),
+                "sha256": hashlib.sha256(
+                    value.contiguous().numpy().tobytes()
+                ).hexdigest(),
+            }
+            for (prompt_id, layer), value in sorted(self.supplemental.items())
+        ]
+
+
 def _fit_naturality(
     root: Path,
     records: list[dict[str, Any]],
@@ -156,7 +210,7 @@ def _matched_donor(
 
 
 def _natural_collision_donor(
-    root: Path,
+    activations: _ActivationAccessor,
     anchor: dict[str, Any],
     candidates: list[dict[str, Any]],
     *,
@@ -180,13 +234,11 @@ def _natural_collision_donor(
         ]
     if not valid:
         return None
-    anchor_payload = _load_payload(root, anchor)
-    anchor_h = anchor_payload["activations"][layer][-1].float()
+    anchor_h = activations.sequence(anchor, layer)[-1].float()
     anchor_state = encoder.encode(anchor_h, layer)
     ranked: list[tuple[float, float, str, dict[str, Any]]] = []
     for record in valid:
-        payload = _load_payload(root, record)
-        h = payload["activations"][layer][-1].float()
+        h = activations.sequence(record, layer)[-1].float()
         metric = (
             "sparse_weighted_jaccard"
             if state_definition == "V3-Sparse"
@@ -229,7 +281,7 @@ def _variable_label(record: dict[str, Any]) -> int | None:
 
 
 def _targeted_probes(
-    root: Path,
+    activations: _ActivationAccessor,
     fit: list[dict[str, Any]],
     *,
     layer: int,
@@ -246,7 +298,7 @@ def _targeted_probes(
             continue
         states = np.stack(
             [
-                _load_payload(root, record)["activations"][layer][-1].float().numpy()
+                activations.sequence(record, layer)[-1].float().numpy()
                 for record in records
             ]
         )
@@ -639,6 +691,15 @@ def main() -> None:
             if record["split"] == "audit" and record["teacher_correct"]
         ]
         fit = [record for record in records if record["split"] == "fit"]
+        supporting_l0 = sorted(
+            {
+                int(value) - 2
+                for key in protocol_keys
+                for value in freeze["eligible_protocols"][key]["selected_l1"]
+            }
+        )
+        activations = _ActivationAccessor(context.root, bundle)
+        activations.prime(fit, supporting_l0)
         attempts: dict[str, int] = defaultdict(int)
         valid_counts: dict[str, int] = defaultdict(int)
         cell_targets: dict[str, int] = {}
@@ -682,7 +743,7 @@ def main() -> None:
             }
             probes = {
                 l0: _targeted_probes(
-                    context.root,
+                    activations,
                     fit,
                     layer=l0,
                     min_auc=float(
@@ -697,6 +758,7 @@ def main() -> None:
                 if int(anchor["prompt_hash"], 16) % args.shard_count != args.shard_index:
                     continue
                 input_payload = _load_payload(context.root, anchor)
+                activations.prime([anchor], supporting_l0)
                 input_ids = input_payload["input_ids"].to(bundle.hf_model.device)
                 answer_id = _answer_id(bundle.tokenizer, anchor["teacher_answer"])
                 if answer_id is None:
@@ -704,7 +766,7 @@ def main() -> None:
                 with torch.no_grad():
                     clean_logits = bundle.forward_logits(input_ids)[0, -1].float().cpu()
                 clean_by_layer = {
-                    layer: input_payload["activations"][layer].float()
+                    layer: activations.sequence(anchor, layer)
                     for layer in all_layers
                 }
                 for l1 in l1_values:
@@ -714,7 +776,6 @@ def main() -> None:
                         donor = _matched_donor(anchor, fit, scope=scope)
                         if donor is None:
                             continue
-                        donor_payload = _load_payload(context.root, donor)
                         sequence_length = input_ids.shape[-1]
                         positions = (
                             (sequence_length - 1,)
@@ -722,7 +783,7 @@ def main() -> None:
                             else tuple(range(sequence_length))
                         )
                         natural_collision = _natural_collision_donor(
-                            context.root,
+                            activations,
                             anchor,
                             fit,
                             layer=l0,
@@ -734,17 +795,13 @@ def main() -> None:
                             "perturbation_sources"
                         ]:
                             active_donor = donor
-                            source_payload = donor_payload
                             probe_auc = None
                             if source == "natural_collision":
                                 if natural_collision is None:
                                     continue
                                 active_donor = natural_collision
-                                source_payload = _load_payload(
-                                    context.root, natural_collision
-                                )
                             active_donor_by_layer = {
-                                layer: source_payload["activations"][layer].float()
+                                layer: activations.sequence(active_donor, layer)
                                 for layer in all_layers
                             }
                             source_delta: dict[int, torch.Tensor] = {}
@@ -754,7 +811,7 @@ def main() -> None:
                                 )
                                 donor_position = -1 if scope == "final" else position
                                 difference = (
-                                    source_payload["activations"][l0][donor_position]
+                                    activations.sequence(active_donor, l0)[donor_position]
                                     .to(bundle.hf_model.device)
                                     .float()
                                     - clean
@@ -939,7 +996,9 @@ def main() -> None:
                                                 "donor_id": active_donor["prompt_id"],
                                                 "template_id": anchor["template_id"],
                                                 "task_family": anchor["task_family"],
+                                                "protocol_key": protocol_key,
                                                 "state_definition": state_definition,
+                                                "construction_method": method,
                                                 "dictionary_size": size,
                                                 "dictionary_hash": vocabulary.digest,
                                                 "layer": l1,
@@ -982,6 +1041,11 @@ def main() -> None:
             context.processed_dir / f"closure_v3_cell_counts_{context.run_id}.parquet"
         )
         summary.to_parquet(summary_path, index=False)
+        supplemental_path = (
+            context.raw_dir / context.run_id / "supporting_l0_manifest.jsonl"
+        )
+        supplemental_records = activations.manifest_records()
+        append_jsonl(supplemental_path, supplemental_records)
         context.finish(
             "COMPLETED",
             freeze_status=freeze["status"],
@@ -995,6 +1059,11 @@ def main() -> None:
                 valid_counts[cell] >= cell_targets[cell] for cell in cell_targets
             ),
             cell_summary=str(summary_path.relative_to(context.root)),
+            supporting_l0_layers=supporting_l0,
+            supplemental_activation_records=len(supplemental_records),
+            supplemental_activation_manifest=str(
+                supplemental_path.relative_to(context.root)
+            ),
         )
     except KeyboardInterrupt:
         context.finish("FAILED", error="KeyboardInterrupt: run cancelled")

@@ -127,3 +127,7 @@ trials per protocol, task family, and perturbation source; controls, strengths,
 and clamp modes are paired records rather than separately inflated cells. The
 final-position arm aligns each sequence at its own final token, while the
 all-non-padding arm requires a length- and template-matched donor.
+Supporting L0 layers outside the geometry bank's 23–29 range are re-recorded
+from the saved input IDs under the frozen model; a run-local manifest records
+their prompt/layer shapes and hashes, while the original geometry bank remains
+unchanged.

@@ -164,6 +164,35 @@ def test_dense_null_projection_and_sphere_retraction():
     )
 
 
+def test_hard_optimizer_backtracks_until_naturality_constraint_passes():
+    mapping = dense_map()
+    h = torch.tensor([1.0, 0.0, 0.0, 0.0])
+    donor = torch.tensor([0.0, 1.0, 0.0, 0.0])
+    basis = donor[:, None]
+    calls: list[float] = []
+
+    def naturality(candidate: torch.Tensor) -> bool:
+        displacement = float(torch.linalg.vector_norm(candidate - h))
+        calls.append(displacement)
+        return displacement <= 0.30
+
+    result = DenseNullProjector(mapping, 2).optimize_hard_constraints(
+        h,
+        donor,
+        basis,
+        target_displacement=1.0,
+        dense_cosine_threshold=-1.0,
+        top10_overlap_threshold=0.0,
+        rms_drift_threshold=1.0,
+        naturality=naturality,
+    )
+    assert result.status == "CONVERGED"
+    assert result.iterations > 1
+    assert len(calls) == result.iterations
+    assert result.displacement <= 0.30
+    assert calls[0] > 0.30
+
+
 def test_sparse_equality_is_independent_of_dense_null():
     dictionary = torch.eye(4)
     clean = gradient_pursuit(torch.tensor([2.0, 1.0, 0.0, 0.5]), dictionary, k=4)

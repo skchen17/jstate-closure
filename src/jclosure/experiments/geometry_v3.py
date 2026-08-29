@@ -6,6 +6,7 @@ import hashlib
 import json
 from collections import defaultdict
 from dataclasses import asdict, dataclass
+from functools import partial
 from pathlib import Path
 from typing import Any
 
@@ -639,6 +640,12 @@ def _scaled(vector: torch.Tensor, target: float) -> torch.Tensor:
     return vector.float() * (target / float(norm))
 
 
+def _is_natural_activation(
+    model: NaturalityModel, value: torch.Tensor
+) -> bool:
+    return model.score(value.detach().cpu().float().numpy()).natural
+
+
 def _balanced_audit_records(
     records: list[dict[str, Any]], per_family: int
 ) -> list[dict[str, Any]]:
@@ -802,6 +809,10 @@ def run_pareto(
                                     difference,
                                     tangent_basis,
                                     target_displacement=strength * natural_scale,
+                                    naturality=partial(
+                                        _is_natural_activation,
+                                        naturality_models[layer],
+                                    ),
                                 )
                                 candidate = optimization.activation
                                 optimization_status = optimization.status

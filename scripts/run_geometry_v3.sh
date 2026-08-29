@@ -10,6 +10,12 @@ if [[ -n "${LIMIT:-}" ]]; then
   LIMIT_ARGS=(--limit "$LIMIT")
 fi
 
+# Capture repository state before a shard creates an untracked run directory.
+if [[ -z "${JCLOSURE_GIT_WORKTREE_SNAPSHOT:-}" ]]; then
+  JCLOSURE_GIT_WORKTREE_SNAPSHOT="$(python -c 'import json; from jclosure.provenance import git_worktree_snapshot; print(json.dumps(git_worktree_snapshot("."), sort_keys=True))')"
+  export JCLOSURE_GIT_WORKTREE_SNAPSHOT
+fi
+
 stop_pair() {
   [[ -z "$PID0" ]] || kill -INT "$PID0" 2>/dev/null || true
   [[ -z "$PID1" ]] || kill -INT "$PID1" 2>/dev/null || true

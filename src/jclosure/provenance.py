@@ -140,6 +140,27 @@ def git_worktree_snapshot(root: str | Path) -> dict[str, Any]:
     }
 
 
+def manifest_worktree_snapshot(root: str | Path) -> dict[str, Any]:
+    """Use a launcher-captured snapshot so concurrent shards share one baseline."""
+
+    serialized = os.environ.get("JCLOSURE_GIT_WORKTREE_SNAPSHOT")
+    if serialized is None:
+        return {**git_worktree_snapshot(root), "capture": "process_init"}
+    try:
+        snapshot = json.loads(serialized)
+    except json.JSONDecodeError as exc:
+        raise ValueError("invalid JCLOSURE_GIT_WORKTREE_SNAPSHOT JSON") from exc
+    required = {"dirty", "status_sha256", "entries"}
+    if not isinstance(snapshot, dict) or not required <= snapshot.keys():
+        raise ValueError("launcher worktree snapshot is missing required fields")
+    return {
+        "dirty": snapshot["dirty"],
+        "status_sha256": snapshot["status_sha256"],
+        "entries": snapshot["entries"],
+        "capture": "launcher_before_shards",
+    }
+
+
 def make_run_id(kind: str, digest: str, seed: int) -> str:
     timestamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     return f"{kind}-{timestamp}-{digest[:8]}-s{seed}"
@@ -204,6 +225,6 @@ def build_manifest(
         "seed": seed,
         "command": command,
         "git_commit": git_commit(repo_root),
-        "git_worktree": git_worktree_snapshot(repo_root),
+        "git_worktree": manifest_worktree_snapshot(repo_root),
         "environment": environment_snapshot(),
     }

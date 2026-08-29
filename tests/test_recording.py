@@ -12,7 +12,7 @@ from jclosure.experiments.distill_controller import (
 )
 from jclosure.experiments.memory_order import count_parameters
 from jclosure.model import _model_source
-from jclosure.provenance import git_worktree_snapshot
+from jclosure.provenance import git_worktree_snapshot, manifest_worktree_snapshot
 from jclosure.recorder import ActivationRecorder, ResidualEditor
 
 
@@ -134,3 +134,17 @@ def test_git_worktree_snapshot_is_structured():
     assert isinstance(snapshot["dirty"], bool)
     assert isinstance(snapshot["status_sha256"], str)
     assert isinstance(snapshot["entries"], int)
+
+
+def test_launcher_worktree_snapshot_is_shared_across_concurrent_runs(monkeypatch):
+    monkeypatch.setenv(
+        "JCLOSURE_GIT_WORKTREE_SNAPSHOT",
+        json.dumps({"dirty": False, "status_sha256": "abc", "entries": 0}),
+    )
+    snapshot = manifest_worktree_snapshot(Path(__file__).resolve().parents[1])
+    assert snapshot == {
+        "dirty": False,
+        "status_sha256": "abc",
+        "entries": 0,
+        "capture": "launcher_before_shards",
+    }

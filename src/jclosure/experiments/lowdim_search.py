@@ -7,6 +7,7 @@ state until separate Phase-0-regression and causal-intervention records exist.
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from typing import Any
 
@@ -22,7 +23,7 @@ from jclosure.geometry import DenseJMap
 from jclosure.jstate import ConceptVocabulary, JStateEncoder
 from jclosure.model import load_model_bundle
 from jclosure.protocol_v3 import verify_v3_freeze
-from jclosure.provenance import write_json_atomic
+from jclosure.provenance import sha256_file, write_json_atomic
 
 
 def _bank_path(root: Path, freeze: dict[str, Any]) -> Path:
@@ -36,13 +37,35 @@ def _bank_path(root: Path, freeze: dict[str, Any]) -> Path:
     return paths[0]
 
 
+def _latest_completed_geometry_dirs(root: Path, stage: str) -> list[Path]:
+    latest: dict[int, tuple[str, Path]] = {}
+    for path in sorted((root / "results/v3/raw").glob("geometry-v3-*/manifest.json")):
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        if payload.get("status") != "COMPLETED" or payload.get("stage") != stage:
+            continue
+        if stage == "pareto" and payload.get("limit") is not None:
+            continue
+        shard = int(payload.get("shard_index", 0))
+        created = str(payload.get("created_at", ""))
+        if shard not in latest or created > latest[shard][0]:
+            latest[shard] = (created, path.parent)
+    return [latest[index][1] for index in sorted(latest)]
+
+
 def _triggered(root: Path) -> tuple[bool, dict[str, Any]]:
-    local_paths = sorted(
-        (root / "results/v3/raw").glob("geometry-v3-*/local_spectra-*.parquet")
-    )
-    pareto_paths = sorted(
-        (root / "results/v3/raw").glob("geometry-v3-*/pareto_records.parquet")
-    )
+    spectrum_dirs = _latest_completed_geometry_dirs(root, "spectrum")
+    local_paths = [
+        path
+        for directory in spectrum_dirs
+        for path in sorted(directory.glob("local_spectra-*.parquet"))
+        if not path.name.endswith("-smoke.parquet")
+    ]
+    pareto_dirs = _latest_completed_geometry_dirs(root, "pareto")
+    pareto_paths = [
+        path
+        for directory in pareto_dirs
+        for path in sorted(directory.glob("pareto_records-shard-*.parquet"))
+    ]
     if not local_paths:
         return False, {"reason": "local_geometry_missing"}
     local = pd.concat([pd.read_parquet(path) for path in local_paths], ignore_index=True)
@@ -97,6 +120,53 @@ def _clusters(values: np.ndarray, dimension: int) -> np.ndarray:
     return output / np.maximum(counts, 1)
 
 
+def _constrained_predictive_components(
+    predictive_rows: np.ndarray,
+    *,
+    feature_count: int,
+    frozen_indices: list[int] | tuple[int, ...],
+) -> tuple[np.ndarray, np.ndarray]:
+    frozen = sorted({int(index) for index in frozen_indices})
+    if any(index < 0 or index >= feature_count for index in frozen):
+        raise ValueError("frozen concept index is outside the state vector")
+    fixed = np.zeros((feature_count, len(frozen)), dtype=np.float64)
+    if frozen:
+        fixed[np.asarray(frozen), np.arange(len(frozen))] = 1.0
+    learned_rows = np.asarray(predictive_rows, dtype=np.float64).copy()
+    if frozen:
+        learned_rows[:, frozen] = 0.0
+    _, singular_values, right = np.linalg.svd(learned_rows, full_matrices=False)
+    threshold = max(singular_values.max(initial=0.0), 1.0) * 1e-10
+    rank = int(np.count_nonzero(singular_values > threshold))
+    return fixed.astype(np.float32), right[:rank].T.astype(np.float32)
+
+
+def _assemble_constrained_basis(
+    fixed: np.ndarray, learned: np.ndarray, dimension: int
+) -> np.ndarray | None:
+    if fixed.shape[1] > dimension:
+        return None
+    needed = dimension - fixed.shape[1]
+    if learned.shape[1] < needed:
+        return None
+    return np.concatenate([fixed, learned[:, :needed]], axis=1).astype(np.float32)
+
+
+def _constrained_predictive_basis(
+    predictive_rows: np.ndarray,
+    *,
+    dimension: int,
+    feature_count: int,
+    frozen_indices: list[int] | tuple[int, ...],
+) -> np.ndarray | None:
+    fixed, learned = _constrained_predictive_components(
+        predictive_rows,
+        feature_count=feature_count,
+        frozen_indices=frozen_indices,
+    )
+    return _assemble_constrained_basis(fixed, learned, dimension)
+
+
 def _ridge_predict(
     train_x: np.ndarray,
     test_x: np.ndarray,
@@ -123,7 +193,12 @@ def _extract(
             next_h = payload["activations"][following][-1].float()
             state = dense_map.dense_state(h, current).cpu().numpy()
             next_state = dense_map.dense_state(next_h, following).cpu().numpy()
-            remainder = encoder.decompose(h, current).remainder.cpu().numpy()
+            decomposition = encoder.decompose(h, current)
+            remainder = decomposition.remainder.cpu().numpy()
+            sparse_state = np.zeros(len(encoder.vocabulary.token_ids), dtype=np.float32)
+            sparse_state[decomposition.atom_indices.cpu().numpy()] = (
+                decomposition.coefficients.detach().cpu().float().numpy()
+            )
             rows.append(
                 {
                     "prompt_id": record["prompt_id"],
@@ -134,12 +209,75 @@ def _extract(
                     "state": state,
                     "next_state": next_state,
                     "remainder": remainder,
+                    "sparse_state": sparse_state,
                 }
             )
     return pd.DataFrame(rows)
 
 
-def run_search(frame: pd.DataFrame, dimensions: list[int]) -> tuple[pd.DataFrame, dict[str, Any]]:
+def _single_token_ids(tokenizer: Any, surface: str) -> set[int]:
+    output: set[int] = set()
+    for candidate in (surface, " " + surface):
+        encoded = tokenizer.encode(candidate, add_special_tokens=False)
+        if len(encoded) == 1:
+            output.add(int(encoded[0]))
+    return output
+
+
+def _frozen_concept_indices(
+    root: Path, vocabulary: ConceptVocabulary, tokenizer: Any
+) -> tuple[list[int], dict[str, Any]]:
+    calibration_path = root / "results/processed/phase0_v2_calibration.json"
+    calibration = json.loads(calibration_path.read_text(encoding="utf-8"))
+    expected_readout_hash = str(calibration["readout_records_sha256"])
+    readout_candidates = sorted(
+        (root / "results/raw").glob("phase0-v2-*/readout_records_v2.parquet")
+    )
+    readout_path = next(
+        (path for path in readout_candidates if sha256_file(path) == expected_readout_hash),
+        None,
+    )
+    if readout_path is None:
+        raise RuntimeError("frozen Phase 0 v2 readout records were not found by hash")
+    readout = pd.read_parquet(readout_path)
+    token_ids = {
+        int(value)
+        for value in readout.loc[
+            (readout["method"] == "jacobian") & readout["tokenizable"],
+            "winning_token_id",
+        ].dropna()
+    }
+    positive_paths = sorted(
+        (root / "results/raw").glob("phase0-v2-*/positive_control_records_v2.parquet")
+    )
+    positive_path = positive_paths[-1] if positive_paths else None
+    if positive_path is not None:
+        positive = pd.read_parquet(positive_path)
+        for column in ("source", "target"):
+            for surface in positive[column].dropna().astype(str).unique():
+                token_ids.update(_single_token_ids(tokenizer, surface))
+    by_token = {token_id: index for index, token_id in enumerate(vocabulary.token_ids)}
+    indices = sorted(by_token[token_id] for token_id in token_ids if token_id in by_token)
+    return indices, {
+        "readout_records": str(readout_path.relative_to(root)),
+        "readout_records_sha256": expected_readout_hash,
+        "positive_control_records": (
+            None if positive_path is None else str(positive_path.relative_to(root))
+        ),
+        "positive_control_records_sha256": (
+            None if positive_path is None else sha256_file(positive_path)
+        ),
+        "candidate_token_ids": len(token_ids),
+        "dictionary_indices": len(indices),
+    }
+
+
+def run_search(
+    frame: pd.DataFrame,
+    dimensions: list[int],
+    *,
+    frozen_concept_indices: list[int] | tuple[int, ...] = (),
+) -> tuple[pd.DataFrame, dict[str, Any]]:
     train = frame[frame["split"] == "fit"]
     test = frame[frame["split"] == "audit"]
     if train.empty or test.empty:
@@ -164,6 +302,30 @@ def run_search(frame: pd.DataFrame, dimensions: list[int]) -> tuple[pd.DataFrame
     )
     oracle_cosine = float(np.median(_cosine_rows(oracle_prediction, test_y)))
     rows: list[dict[str, Any]] = []
+    if "sparse_state" in frame.columns:
+        train_sparse = np.stack(train["sparse_state"])
+        test_sparse = np.stack(test["sparse_state"])
+        sparse_prediction = _ridge_predict(
+            train_sparse, test_sparse, train_target, target_pca
+        )
+        active_atoms = int(
+            max(
+                np.count_nonzero(train_sparse, axis=1).max(initial=0),
+                np.count_nonzero(test_sparse, axis=1).max(initial=0),
+            )
+        )
+        rows.append(
+            {
+                "candidate": "sparse_active_atoms",
+                "dimension": 2 * active_atoms,
+                "feature_width": train_sparse.shape[1],
+                "next_state_cosine_median": float(
+                    np.median(_cosine_rows(sparse_prediction, test_y))
+                ),
+                "state_reconstruction_cosine_median": None,
+                "frozen_concept_count": 0,
+            }
+        )
     for dimension in dimensions:
         actual = min(int(dimension), len(train_x) - 1, train_x.shape[1])
         pca = PCA(actual, random_state=0).fit(train_x)
@@ -199,10 +361,14 @@ def run_search(frame: pd.DataFrame, dimensions: list[int]) -> tuple[pd.DataFrame
             }
         )
     full_model = Ridge(alpha=1.0, random_state=0).fit(train_x, train_target)
-    left, _, _ = np.linalg.svd(full_model.coef_.T, full_matrices=False)
     # Ridge coef is [target_components, concepts]; right singular vectors are
     # the supervised input bottleneck basis.
     _, _, right = np.linalg.svd(full_model.coef_, full_matrices=False)
+    constrained_fixed, constrained_learned = _constrained_predictive_components(
+        right,
+        feature_count=train_x.shape[1],
+        frozen_indices=frozen_concept_indices,
+    )
     for dimension in dimensions:
         actual = min(int(dimension), right.shape[0])
         basis = right[:actual].T
@@ -221,12 +387,40 @@ def run_search(frame: pd.DataFrame, dimensions: list[int]) -> tuple[pd.DataFrame
                 ),
             }
         )
-    del left
+        constrained_basis = _assemble_constrained_basis(
+            constrained_fixed, constrained_learned, actual
+        )
+        if constrained_basis is not None:
+            constrained_prediction = _ridge_predict(
+                train_x @ constrained_basis,
+                test_x @ constrained_basis,
+                train_target,
+                target_pca,
+            )
+            rows.append(
+                {
+                    "candidate": "constrained_learned_encoder",
+                    "dimension": actual,
+                    "next_state_cosine_median": float(
+                        np.median(_cosine_rows(constrained_prediction, test_y))
+                    ),
+                    "state_reconstruction_cosine_median": float(
+                        np.median(
+                            _cosine_rows(
+                                (test_x @ constrained_basis) @ constrained_basis.T,
+                                test_x,
+                            )
+                        )
+                    ),
+                    "frozen_concept_count": len(set(frozen_concept_indices)),
+                    "frozen_concepts_exactly_embedded": True,
+                }
+            )
     result = pd.DataFrame(rows)
     denominator = oracle_cosine - persistence
     result["oracle_gap_closed"] = (
         (result["next_state_cosine_median"] - persistence) / denominator
-        if abs(denominator) > 1e-12
+        if denominator > 1e-12
         else np.nan
     )
     result["persistence_cosine_median"] = persistence
@@ -236,6 +430,8 @@ def run_search(frame: pd.DataFrame, dimensions: list[int]) -> tuple[pd.DataFrame
         "test_samples": len(test),
         "persistence_cosine_median": persistence,
         "remainder_oracle_cosine_median": oracle_cosine,
+        "oracle_improves_over_persistence": denominator > 1e-12,
+        "frozen_concept_count": len(set(frozen_concept_indices)),
     }
 
 
@@ -279,8 +475,13 @@ def main() -> None:
             records = records[: args.limit]
         layers = [int(value) for value in context.config["geometry"]["candidate_layers"]]
         frame = _extract(context.root, records, layers, encoder, dense_map)
+        frozen_indices, frozen_provenance = _frozen_concept_indices(
+            context.root, vocabulary, bundle.tokenizer
+        )
         results, summary = run_search(
-            frame, [int(value) for value in context.config["lowdim"]["dimensions"]]
+            frame,
+            [int(value) for value in context.config["lowdim"]["dimensions"]],
+            frozen_concept_indices=frozen_indices,
         )
         result_path = context.processed_dir / "lowdim_search.parquet"
         results.to_parquet(result_path, index=False)
@@ -298,6 +499,7 @@ def main() -> None:
             "prediction_candidates_passing": prediction_pass.to_dict("records"),
             "phase0_regression": "UNEXECUTED",
             "intervention_retention": "UNEXECUTED",
+            "frozen_concept_provenance": frozen_provenance,
             "reason": (
                 "Prediction screening alone cannot authorize a compact state. "
                 "Frozen Phase 0 pass@10 retention and causal intervention retention "

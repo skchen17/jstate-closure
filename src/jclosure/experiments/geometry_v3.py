@@ -820,17 +820,28 @@ def run_pareto(
                             else:
                                 delta = _scaled(base_direction, strength * natural_scale)
                                 if method == "norm_tangent_dense_null":
-                                    delta = projector.retract_to_sphere(h, delta)
-                                preliminary = h + delta
-                                if state_kind == "sparse":
-                                    candidate = one_shot_clamp(
-                                        h,
-                                        preliminary,
-                                        layer=layer,
-                                        encoder=encoder,
-                                    ).activation
+                                    try:
+                                        tangent_step = projector.tangent_step_for_chord(
+                                            h, strength * natural_scale
+                                        )
+                                    except ValueError:
+                                        candidate = h.clone()
+                                        exclusion = "target_outside_sphere_retraction"
+                                    else:
+                                        delta = _scaled(base_direction, tangent_step)
+                                        delta = projector.retract_to_sphere(h, delta)
+                                        candidate = h + delta
                                 else:
-                                    candidate = preliminary
+                                    preliminary = h + delta
+                                    if state_kind == "sparse":
+                                        candidate = one_shot_clamp(
+                                            h,
+                                            preliminary,
+                                            layer=layer,
+                                            encoder=encoder,
+                                        ).activation
+                                    else:
+                                        candidate = preliminary
                             delta = candidate - h
                             candidate_dense = dense_map.dense_state(candidate, layer)
                             candidate_raw = dense_map.raw_scores(candidate, layer)

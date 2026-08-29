@@ -39,6 +39,54 @@ def _latest_bank_manifest(context) -> Path:
     return paths[-1]
 
 
+def _balanced_calibration_records(
+    records: list[dict[str, Any]], attempts: int
+) -> list[dict[str, Any]]:
+    """Select one deterministic, maximally task-balanced calibration batch."""
+
+    if attempts <= 0:
+        raise ValueError("calibration attempts must be positive")
+    by_family: dict[str, list[dict[str, Any]]] = {}
+    for record in records:
+        by_family.setdefault(str(record["task_family"]), []).append(record)
+    if not by_family:
+        raise RuntimeError("calibration audit bank is empty")
+    families = sorted(by_family)
+    quotient, remainder = divmod(attempts, len(families))
+    selected_by_family: dict[str, list[dict[str, Any]]] = {}
+    for family_index, family in enumerate(families):
+        required = quotient + int(family_index < remainder)
+        ordered = sorted(
+            by_family[family],
+            key=lambda row: (str(row["prompt_hash"]), str(row["prompt_id"])),
+        )
+        if len(ordered) < required:
+            raise RuntimeError(
+                f"calibration family {family} has {len(ordered)} audit states; "
+                f"requires {required}"
+            )
+        selected_by_family[family] = ordered[:required]
+    selected: list[dict[str, Any]] = []
+    for within_family_index in range(max(map(len, selected_by_family.values()))):
+        for family in families:
+            family_records = selected_by_family[family]
+            if within_family_index < len(family_records):
+                selected.append(family_records[within_family_index])
+    if len(selected) != attempts:
+        raise AssertionError("balanced calibration selector returned wrong count")
+    return selected
+
+
+def _calibration_trial_ids(
+    anchor_id: str, donor_id: str, layer: int, method: str
+) -> tuple[str, str]:
+    base = hashlib.sha256(
+        "\x1f".join((anchor_id, donor_id, str(layer))).encode()
+    ).hexdigest()
+    paired = hashlib.sha256("\x1f".join((base, method)).encode()).hexdigest()
+    return base, paired
+
+
 def _thresholds(config: dict[str, Any]) -> V3ClampThresholds:
     dense = config["v3_state"]["dense"]
     sparse = config["v3_state"]["sparse"]
@@ -205,22 +253,15 @@ def _row(
         and finite
         and not exploding
     )
-    paired = hashlib.sha256(
-        "\x1f".join(
-            (
-                anchor_record["prompt_id"],
-                donor_record["prompt_id"],
-                str(layer),
-                str(dictionary_size),
-                method,
-            )
-        ).encode()
-    ).hexdigest()
+    base_trial_id, paired = _calibration_trial_ids(
+        anchor_record["prompt_id"], donor_record["prompt_id"], layer, method
+    )
     sparse = validation.sparse_equality
     return {
         "schema_version": 3,
         "protocol_version": PROTOCOL,
         "run_id": context.run_id,
+        "base_trial_id": base_trial_id,
         "paired_trial_id": paired,
         "prompt_id": anchor_record["prompt_id"],
         "donor_id": donor_record["prompt_id"],
@@ -385,15 +426,16 @@ def main() -> None:
         for record in records:
             if record["split"] == "fit":
                 fit_by_family.setdefault(record["task_family"], []).append(record)
+        for family_records in fit_by_family.values():
+            family_records.sort(
+                key=lambda row: (str(row["prompt_hash"]), str(row["prompt_id"]))
+            )
         attempts = int(
             context.config["clamp_v3"]["attempts_per_layer_method_dictionary"]
         )
         if args.limit is not None:
             attempts = min(attempts, args.limit)
-        if len(audit) < attempts:
-            raise RuntimeError(
-                f"activation bank has {len(audit)} audit states, needs {attempts}"
-            )
+        audit = _balanced_calibration_records(audit, attempts)
         layers = [int(value) for value in context.config["geometry"]["candidate_layers"]]
         naturality = _naturality_by_layer(context, records, layers)
         bundle = load_model_bundle(context.config)
@@ -418,7 +460,7 @@ def main() -> None:
             )
             dense_map = DenseJMap.from_encoder(encoder)
             for layer in layers:
-                for index, anchor_record in enumerate(audit[:attempts]):
+                for index, anchor_record in enumerate(audit):
                     donors = fit_by_family[anchor_record["task_family"]]
                     donor_record = donors[index % len(donors)]
                     anchor_payload = torch.load(

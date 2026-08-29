@@ -464,6 +464,26 @@ class DenseNullProjector:
         candidate_norm = torch.linalg.vector_norm(candidate).clamp_min(1e-20)
         return (candidate * (target_norm / candidate_norm) - h.float()).to(h.dtype)
 
+    @staticmethod
+    def tangent_step_for_chord(h: torch.Tensor, target_displacement: float) -> float:
+        """Convert a desired post-retraction chord length to tangent step length."""
+
+        target = float(target_displacement)
+        if target < 0:
+            raise ValueError("target displacement must be non-negative")
+        radius = float(torch.linalg.vector_norm(h.float()).item())
+        if radius <= 1e-20:
+            raise ValueError("cannot retract around a zero-norm activation")
+        if target == 0:
+            return 0.0
+        cosine = 1.0 - target * target / (2.0 * radius * radius)
+        if cosine <= 0:
+            raise ValueError(
+                "target displacement is outside the tangent-retraction hemisphere"
+            )
+        sine = max(0.0, 1.0 - cosine * cosine) ** 0.5
+        return radius * sine / cosine
+
     def optimize_hard_constraints(
         self,
         h: torch.Tensor,
@@ -487,8 +507,10 @@ class DenseNullProjector:
         if not torch.isfinite(projected_norm) or float(projected_norm) <= 1e-20:
             return self._failure(h, "degenerate_donor_projection")
         direction = projected / projected_norm
-        displacement = min(float(target_displacement), float(projected_norm))
-        step = displacement
+        try:
+            step = self.tangent_step_for_chord(h, float(target_displacement))
+        except ValueError:
+            return self._failure(h, "target_outside_sphere_retraction")
         iterations = 0
         last_reason = "line_search_exhausted"
         while iterations < max_iter and step >= min_step:

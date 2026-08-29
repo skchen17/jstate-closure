@@ -82,6 +82,9 @@ dictionary/layer part. Limited preflights are separately named and excluded by
 the report loader. Local singular vectors are computed once per anchor and
 reused across tolerances; normalized sparse dictionaries use an explicitly
 tested fast path rather than being normalized again for every pursuit.
+Hard-constrained candidates evaluate the train-fit naturality envelope during
+each backtracking step, not merely as a post-hoc filter; interrupted runs from
+the pre-fix implementation remain preserved as failed manifests.
 
 `V3-Dense` requires dense cosine at least 0.995 and top-10 overlap at least 0.8.
 `V3-Sparse` independently requires support F1 at least 0.8, weighted Jaccard at
@@ -96,12 +99,23 @@ position at later layers; `persistent_all` repeats the L1 scope at every later
 selected layer. Records contain the resolved attention-mask-aware positions and
 the actual `(layer, position, operation)` edits.
 
-V3 calibration uses paired anchor/donor IDs across layer, dictionary, and method.
+V3 calibration uses one deterministic batch of 200 anchors, balanced as 25 per
+task family. A base-trial ID is shared across dictionaries and methods, while a
+method-paired ID is shared across dictionaries, so attrition and dictionary-size
+effects can be evaluated on exactly matched constructions.
 A protocol needs at least 160/200 strict-valid trials per layer, 95% naturality
 among valid trials, fewer than 5% numerical optimizer failures, passing hook
 controls, and at least four ordered eligible layers. The behavioral runner
 refuses to run unless all source/config/data hashes match the committed Phase 3
 freeze manifest.
+
+If dense geometry is near-injective or fails the formal displacement gate, the
+low-dimensional screen compares sparse active atoms, dense-profile PCA,
+deterministic concept aggregation, predictive linear bottlenecks, and a learned
+linear encoder constrained to contain the frozen Phase 0/positive-control
+concept axes exactly. It selects only the latest completed formal spectrum and
+Pareto shards. Prediction screening alone cannot authorize a compact state;
+Phase 0 retention and intervention-retention gates remain mandatory.
 
 ## Statistical contract
 

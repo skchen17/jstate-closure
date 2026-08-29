@@ -8,6 +8,10 @@ from jclosure.clamp_v3 import (
     scheduled_sparse_clamp_transforms,
     validate_v3_clamp,
 )
+from jclosure.experiments.clamp_v3_calibration import (
+    _balanced_calibration_records,
+    _calibration_trial_ids,
+)
 from jclosure.geometry import DenseJMap
 from jclosure.jstate import ConceptVocabulary, JStateEncoder
 
@@ -123,3 +127,37 @@ def test_schedule_resolves_padding_and_applies_only_recorded_positions():
     output = transforms[0](activation.unsqueeze(0), 0)
     assert torch.equal(output[0, 0], activation[0])
     assert torch.allclose(output[0, 1:, :3], clean[1:, :3], atol=1e-5)
+
+
+def test_calibration_batch_is_deterministic_and_task_balanced():
+    records = [
+        {
+            "prompt_id": f"{family}-{index}",
+            "prompt_hash": f"{index:02d}-{family}",
+            "task_family": family,
+        }
+        for family in ("gamma", "alpha", "beta")
+        for index in range(3)
+    ]
+    selected = _balanced_calibration_records(records, 6)
+    assert [row["task_family"] for row in selected] == [
+        "alpha",
+        "beta",
+        "gamma",
+        "alpha",
+        "beta",
+        "gamma",
+    ]
+    assert selected == _balanced_calibration_records(list(reversed(records)), 6)
+
+
+def test_calibration_pairing_is_shared_across_dictionaries_and_methods():
+    base_local, paired_local = _calibration_trial_ids("anchor", "donor", 24, "local")
+    base_optimized, paired_optimized = _calibration_trial_ids(
+        "anchor", "donor", 24, "optimized"
+    )
+    assert base_local == base_optimized
+    assert paired_local != paired_optimized
+    assert (base_local, paired_local) == _calibration_trial_ids(
+        "anchor", "donor", 24, "local"
+    )

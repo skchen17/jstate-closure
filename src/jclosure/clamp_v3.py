@@ -186,8 +186,17 @@ def construct_dense_candidate(
             "basis_dimension": int(basis.shape[1]),
             "singular_values": values.detach().cpu().tolist(),
         }
+    try:
+        tangent_step = projector.tangent_step_for_chord(clean, target)
+    except ValueError:
+        return clean.clone(), {
+            "status": "FAILED",
+            "failure_reason": "target_outside_sphere_retraction",
+            "basis_dimension": int(basis.shape[1]),
+            "singular_values": values.detach().cpu().tolist(),
+        }
     scaled = direction * (
-        target / torch.linalg.vector_norm(direction.float()).clamp_min(1e-20)
+        tangent_step / torch.linalg.vector_norm(direction.float()).clamp_min(1e-20)
     )
     delta = projector.retract_to_sphere(clean, scaled)
     return clean + delta, {

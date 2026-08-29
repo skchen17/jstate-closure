@@ -114,3 +114,7 @@ merging shard outputs. Preflight outputs contain `preflight` in the filename and
 are excluded from formal figures and conclusions. The 0.20 displacement gate is
 unchanged; the reduced Pareto anchor count limits geometric generalization and
 is reported as an exploratory sampling choice, not a threshold adjustment.
+Hard-constrained optimization enforces the train-fit naturality envelope during
+backtracking. The subsequent 200-trial calibration batch is independently
+balanced at 25 anchors per task family and uses IDs that remain paired across
+dictionary sizes.

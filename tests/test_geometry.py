@@ -1,3 +1,4 @@
+import pytest
 import torch
 
 from jclosure.datasets import TaskExample
@@ -164,6 +165,18 @@ def test_dense_null_projection_and_sphere_retraction():
     )
 
 
+def test_tangent_step_hits_requested_post_retraction_displacement():
+    h = torch.tensor([3.0, 0.0, 0.0, 0.0])
+    tangent = torch.tensor([0.0, 1.0, 0.0, 0.0])
+    target = 1.2
+    step = DenseNullProjector.tangent_step_for_chord(h, target)
+    delta = DenseNullProjector.retract_to_sphere(h, tangent * step)
+    assert torch.linalg.vector_norm(delta).item() == pytest.approx(target, abs=1e-6)
+    assert torch.linalg.vector_norm(h + delta).item() == pytest.approx(
+        torch.linalg.vector_norm(h).item(), abs=1e-6
+    )
+
+
 def test_hard_optimizer_backtracks_until_naturality_constraint_passes():
     mapping = dense_map()
     h = torch.tensor([1.0, 0.0, 0.0, 0.0])
@@ -191,6 +204,23 @@ def test_hard_optimizer_backtracks_until_naturality_constraint_passes():
     assert len(calls) == result.iterations
     assert result.displacement <= 0.30
     assert calls[0] > 0.30
+
+
+def test_hard_optimizer_interprets_target_as_post_retraction_displacement():
+    mapping = dense_map()
+    h = torch.tensor([1.0, 0.0, 0.0, 0.0])
+    donor = torch.tensor([0.0, 1.0, 0.0, 0.0])
+    result = DenseNullProjector(mapping, 2).optimize_hard_constraints(
+        h,
+        donor,
+        donor[:, None],
+        target_displacement=0.4,
+        dense_cosine_threshold=-1.0,
+        top10_overlap_threshold=0.0,
+        rms_drift_threshold=1.0,
+    )
+    assert result.status == "CONVERGED"
+    assert result.displacement == pytest.approx(0.4, abs=1e-6)
 
 
 def test_sparse_equality_is_independent_of_dense_null():

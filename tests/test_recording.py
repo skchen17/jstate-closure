@@ -1,5 +1,6 @@
 import hashlib
 import json
+from pathlib import Path
 
 import pytest
 import torch
@@ -11,6 +12,7 @@ from jclosure.experiments.distill_controller import (
 )
 from jclosure.experiments.memory_order import count_parameters
 from jclosure.model import _model_source
+from jclosure.provenance import git_worktree_snapshot
 from jclosure.recorder import ActivationRecorder, ResidualEditor
 
 
@@ -125,3 +127,10 @@ def test_budgeted_controller_autonomous_intervention_rollout():
     )
     assert clean.shape == states.shape
     assert not torch.equal(clean[:, 2:], changed[:, 2:])
+
+
+def test_git_worktree_snapshot_is_structured():
+    snapshot = git_worktree_snapshot(Path(__file__).resolve().parents[1])
+    assert isinstance(snapshot["dirty"], bool)
+    assert isinstance(snapshot["status_sha256"], str)
+    assert isinstance(snapshot["entries"], int)

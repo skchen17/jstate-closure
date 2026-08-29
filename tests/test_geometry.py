@@ -1,7 +1,11 @@
 import torch
 
+from jclosure.datasets import TaskExample
 from jclosure.decomposition import gradient_pursuit
-from jclosure.experiments.geometry_v3 import _local_diagnostics
+from jclosure.experiments.geometry_v3 import (
+    _local_diagnostics,
+    _unique_prompt_examples,
+)
 from jclosure.geometry import (
     DenseJMap,
     DenseNullProjector,
@@ -70,6 +74,44 @@ def test_local_diagnostics_uses_deterministic_device_safe_random_vectors():
     assert len(diagnostics["jvp_relative_errors"]) == 2
 
 
+def test_bounded_local_diagnostics_skip_full_gram():
+    mapping = dense_map()
+    centered = mapping.centered_map(2)
+    map_summary = SpectrumSummary.from_singular_values(
+        torch.linalg.svdvals(centered),
+        rows=centered.shape[0],
+        cols=centered.shape[1],
+        relative_tolerances=[1e-4],
+    )
+    diagnostics = _local_diagnostics(
+        mapping,
+        torch.tensor([1.0, 2.0, 3.0, 4.0]),
+        2,
+        checks=1,
+        seed=7,
+        tolerances=[1e-4],
+        full_spectrum=False,
+        map_summary=map_summary,
+    )
+    assert diagnostics["spectrum"] is None
+    assert diagnostics["rank_status"] == "NUMERICALLY_BOUNDED"
+    assert diagnostics["structural_null_dimension"] >= 1
+    assert diagnostics["extremal_method"] == "power_top_only"
+    lower, upper = diagnostics["tolerance_rank_bounds"]["relative_1e-04"]
+    assert upper - lower <= 1
+    assert diagnostics["jvp_passed"]
+
+
+def test_geometry_prompt_selection_deduplicates_deterministically():
+    examples = [
+        TaskExample("a", "boolean", "t", "same prompt", "yes"),
+        TaskExample("b", "boolean", "t", "same prompt", "yes"),
+        TaskExample("c", "boolean", "t", "different prompt", "no"),
+    ]
+    selected = _unique_prompt_examples(examples, 2, family="boolean")
+    assert [example.example_id for example in selected] == ["a", "c"]
+
+
 def test_radial_null_and_tangent_intersection():
     mapping = dense_map()
     h = torch.tensor([1.0, 2.0, 3.0, 4.0])
@@ -98,8 +140,19 @@ def test_dense_null_projection_and_sphere_retraction():
     h = torch.tensor([1.0, 2.0, 3.0, 4.0])
     donor = torch.tensor([2.0, -1.0, 0.5, 1.0])
     projector = DenseNullProjector(mapping, 2)
+    values, vectors = projector.local_singular_system(h)
+    cached_basis = projector.low_singular_basis_from_system(
+        values, vectors, relative_tolerance=1e-6
+    )
+    cached_basis = projector.tangent_intersection(cached_basis, h)
     delta, basis, _ = projector.donor_projection(
         h, donor, relative_tolerance=1e-6, sphere_tangent=True
+    )
+    assert torch.allclose(
+        cached_basis @ cached_basis.T,
+        basis @ basis.T,
+        atol=1e-5,
+        rtol=1e-5,
     )
     if basis.shape[1]:
         assert torch.allclose(basis.T @ (donor - delta), torch.zeros(basis.shape[1]), atol=1e-5)

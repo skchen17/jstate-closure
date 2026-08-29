@@ -98,3 +98,19 @@ For offline model execution, set `JCLOSURE_MODEL_DIR` to a snapshot containing
 the pinned `artifact_manifest.json` and `JCLOSURE_ARTIFACT_DIR` to the verified
 lens cache. The loaders hash-check every declared local artifact before use.
 Failed runs remain as manifests and are never silently retried.
+
+## Geometry-v3 execution notes
+
+The formal activation bank contains 512 distinct prompt hashes: 64 states from
+each of eight task families, split into 256 geometry-fit and 256 geometry-audit
+states. Spectrum execution is sharded deterministically by layer across the two
+GPUs. Each dictionary/layer combination stores complete local spectra for 16
+fixed audit states and analytic/interlacing diagnostics for all 256 audit
+states; smoke-only Parquet files are excluded from formal report status.
+
+Pareto execution uses two hash-selected audit anchors per task family. It writes
+one immutable part per dictionary/layer and an atomic progress manifest before
+merging shard outputs. Preflight outputs contain `preflight` in the filename and
+are excluded from formal figures and conclusions. The 0.20 displacement gate is
+unchanged; the reduced Pareto anchor count limits geometric generalization and
+is reported as an exploratory sampling choice, not a threshold adjustment.

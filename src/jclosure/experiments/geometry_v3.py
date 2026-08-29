@@ -156,24 +156,54 @@ def _flexible_examples(root: Path) -> list[TaskExample]:
     return output
 
 
+def _unique_prompt_examples(
+    examples: list[TaskExample], count: int, *, family: str
+) -> list[TaskExample]:
+    """Select a deterministic prefix with distinct normalized prompt hashes."""
+
+    selected: list[TaskExample] = []
+    seen: set[str] = set()
+    for example in examples:
+        digest = hashlib.sha256(example.prompt.strip().encode("utf-8")).hexdigest()
+        if digest in seen:
+            continue
+        seen.add(digest)
+        selected.append(example)
+        if len(selected) == count:
+            return selected
+    raise RuntimeError(
+        f"geometry task family {family} has only {len(selected)} unique prompts; "
+        f"requires {count}"
+    )
+
+
 def geometry_examples(root: Path, config: dict[str, Any]) -> list[TaskExample]:
     count = int(config["run"]["geometry_states_per_family"])
     seed = int(config["reproducibility"]["dataset_seed"])
     upstream = root / config["data"]["upstream_root"]
+    generated_count = count * 8
     pools = (
-        generate_arithmetic(count, seed=seed),
-        generate_boolean(count, seed=seed + 1),
-        generate_graph_traversal(count, seed=seed + 2),
-        generate_symbolic_planning(count, seed=seed + 3),
-        generate_variable_binding(count, seed=seed + 4),
-        generate_state_machines(count, seed=seed + 5),
-        upstream_multihop(upstream)[:count],
-        _flexible_examples(upstream)[:count],
+        generate_arithmetic(generated_count, seed=seed),
+        generate_boolean(generated_count, seed=seed + 1),
+        generate_graph_traversal(generated_count, seed=seed + 2),
+        generate_symbolic_planning(generated_count, seed=seed + 3),
+        generate_variable_binding(generated_count, seed=seed + 4),
+        generate_state_machines(generated_count, seed=seed + 5),
+        upstream_multihop(upstream),
+        _flexible_examples(upstream),
     )
-    if any(len(values) < count for values in pools):
-        sizes = [len(values) for values in pools]
-        raise RuntimeError(f"geometry task family has fewer than {count} items: {sizes}")
-    return [item for values in pools for item in values[:count]]
+    selected = [
+        _unique_prompt_examples(values, count, family=values[0].family)
+        for values in pools
+    ]
+    output = [item for values in selected for item in values]
+    prompt_hashes = {
+        hashlib.sha256(item.prompt.strip().encode("utf-8")).hexdigest()
+        for item in output
+    }
+    if len(prompt_hashes) != len(output):
+        raise RuntimeError("geometry activation bank contains cross-family prompt duplicates")
+    return output
 
 
 def _split_map(examples: list[TaskExample]) -> dict[str, str]:
@@ -270,10 +300,14 @@ def build_activation_bank(
     family_split = (
         pd.DataFrame(records).groupby(["task_family", "split"]).size().to_dict()
     )
+    unique_prompt_hashes = len({record["prompt_hash"] for record in records})
+    if unique_prompt_hashes != len(records):
+        raise RuntimeError("activation bank prompt hashes are not unique")
     context.finish(
         "BANK_COMPLETED",
         activation_bank_manifest=str(manifest_path.relative_to(context.root)),
         activation_bank_records=len(records),
+        unique_prompt_hashes=unique_prompt_hashes,
         family_split={f"{key[0]}:{key[1]}": value for key, value in family_split.items()},
     )
     return manifest_path
@@ -310,6 +344,29 @@ def _relative_error(left: torch.Tensor, right: torch.Tensor) -> float:
     return float(torch.linalg.vector_norm(left.float() - right.float()) / denominator)
 
 
+def _local_operator_norm(
+    dense_map: DenseJMap,
+    h: torch.Tensor,
+    layer: int,
+    *,
+    seed: int,
+    iterations: int = 12,
+) -> float:
+    """Estimate the local Jacobian spectral norm without materializing its Gram."""
+
+    generator = torch.Generator(device="cpu").manual_seed(seed)
+    vector = torch.randn(h.shape, generator=generator, dtype=h.dtype).to(h.device)
+    vector = F.normalize(vector, dim=0)
+    for _ in range(iterations):
+        mapped = dense_map.dense_state_jvp(h, vector, layer)
+        vector = dense_map.dense_state_vjp(h, mapped, layer)
+        norm = torch.linalg.vector_norm(vector)
+        if float(norm) <= 1e-20:
+            return 0.0
+        vector = vector / norm
+    return float(torch.linalg.vector_norm(dense_map.dense_state_jvp(h, vector, layer)))
+
+
 def _local_diagnostics(
     dense_map: DenseJMap,
     h: torch.Tensor,
@@ -319,18 +376,58 @@ def _local_diagnostics(
     seed: int,
     tolerances: list[float],
     full_spectrum: bool,
+    map_summary: SpectrumSummary | None = None,
 ) -> dict[str, Any]:
     h = h.float()
-    gram = dense_map.local_jacobian_gram(h, layer).double()
-    eigenvalues = torch.linalg.eigvalsh(gram).clamp_min(0)
-    singular_values = eigenvalues.sqrt().flip(0)
-    summary = SpectrumSummary.from_singular_values(
-        singular_values,
-        rows=dense_map.raw_map(layer).shape[0],
-        cols=h.numel(),
-        dtype=torch.float32,
-        relative_tolerances=tolerances,
+    rank_status: str
+    map_algebraic_rank = (
+        sum(value > 0.0 for value in map_summary.singular_values)
+        if map_summary is not None
+        else None
     )
+    if full_spectrum:
+        gram = dense_map.local_jacobian_gram(h, layer).double()
+        eigenvalues = torch.linalg.eigvalsh(gram).clamp_min(0)
+        singular_values = eigenvalues.sqrt().flip(0)
+        summary = SpectrumSummary.from_singular_values(
+            singular_values,
+            rows=dense_map.raw_map(layer).shape[0],
+            cols=h.numel(),
+            dtype=torch.float32,
+            relative_tolerances=tolerances,
+        )
+        ranks = summary.tolerance_ranks
+        rank_bounds = {key: [value, value] for key, value in ranks.items()}
+        analytic_rank = (
+            max(map_algebraic_rank - 1, 0)
+            if map_algebraic_rank is not None
+            else max(int(torch.count_nonzero(singular_values > 0)) - 1, 0)
+        )
+        operator_norm = float(singular_values[0]) if singular_values.numel() else 0.0
+        smallest = float(singular_values[-1]) if singular_values.numel() else 0.0
+        rank_status = summary.rank_status
+    else:
+        if map_summary is None:
+            raise ValueError("map_summary is required for bounded local diagnostics")
+        # P_s CA is a rank-one left projection and s is in range(CA), so its
+        # exact algebraic rank is rank(CA)-1.  At a finite numerical tolerance,
+        # Cauchy interlacing bounds the local rank between r-1 and r.  Recording
+        # those bounds avoids an O(d_model^3) eigendecomposition for all 256
+        # audit states while the preregistered 16 states retain full spectra.
+        map_ranks = map_summary.tolerance_ranks
+        rank_bounds = {
+            key: [max(value - 1, 0), value] for key, value in map_ranks.items()
+        }
+        ranks = {key: bounds[0] for key, bounds in rank_bounds.items()}
+        if map_algebraic_rank is None:
+            raise AssertionError("bounded diagnostics require a map algebraic rank")
+        analytic_rank = max(map_algebraic_rank - 1, 0)
+        operator_norm = _local_operator_norm(
+            dense_map, h, layer, seed=seed + 99_000
+        )
+        smallest = None
+        summary = None
+        rank_status = "NUMERICALLY_BOUNDED"
     generator = torch.Generator(device="cpu").manual_seed(seed)
     jvp_errors: list[float] = []
     vjp_errors: list[float] = []
@@ -349,27 +446,37 @@ def _local_diagnostics(
         )
         jvp_errors.append(_relative_error(analytic_jvp, automatic_jvp))
         vjp_errors.append(_relative_error(analytic_vjp, automatic_vjp))
-    ranks = summary.tolerance_ranks
-    structural_null = h.numel() - int(torch.count_nonzero(singular_values > 0))
+    structural_null = h.numel() - analytic_rank
     tangent_null = {
         key: max(h.numel() - rank - 1, 0) for key, rank in ranks.items()
     }
+    radial_jvp = dense_map.dense_state_jvp(h, h, layer)
+    radial_denominator = operator_norm * float(torch.linalg.vector_norm(h))
+    radial_residual = (
+        0.0
+        if radial_denominator <= 1e-20
+        else float(torch.linalg.vector_norm(radial_jvp)) / radial_denominator
+    )
     return {
-        "spectrum": summary.to_dict() if full_spectrum else None,
+        "spectrum": summary.to_dict() if summary is not None else None,
         "tolerance_ranks": ranks,
+        "tolerance_rank_bounds": rank_bounds,
+        "analytic_rank": analytic_rank,
+        "rank_status": rank_status,
         "structural_null_dimension": structural_null,
         "tolerance_null_dimensions": {
             key: h.numel() - value for key, value in ranks.items()
         },
         "tangent_null_dimensions": tangent_null,
-        "radial_residual": dense_map.radial_residual(h, layer),
+        "radial_residual": radial_residual,
         "jvp_relative_errors": jvp_errors,
         "vjp_relative_errors": vjp_errors,
         "jvp_passed": max(jvp_errors + vjp_errors, default=0.0) <= 1e-4,
         "extremal_singular_values": [
-            float(singular_values[0]) if singular_values.numel() else 0.0,
-            float(singular_values[-1]) if singular_values.numel() else 0.0,
+            operator_norm,
+            smallest,
         ],
+        "extremal_method": "exact" if full_spectrum else "power_top_only",
     }
 
 
@@ -428,8 +535,11 @@ def run_spectra(
         for layer in layers:
             raw = dense_map.raw_map(layer, device=bundle.hf_model.device).float()
             centered = dense_map.centered_map(layer, device=bundle.hf_model.device).float()
+            centered_summary: SpectrumSummary | None = None
             for map_kind, matrix in (("A", raw), ("CA", centered)):
                 summary = _spectrum(matrix, relative_tolerances=tolerances)
+                if map_kind == "CA":
+                    centered_summary = summary
                 map_rows.append(
                     {
                         "schema_version": 3,
@@ -454,10 +564,8 @@ def run_spectra(
                 if smoke
                 else int(context.config["geometry"]["full_local_spectrum_states"])
             )
-            check_count = (
-                1
-                if smoke
-                else int(context.config["geometry"]["jvp_checks_per_combination"])
+            full_check_count = (
+                1 if smoke else int(context.config["geometry"]["jvp_checks_per_combination"])
             )
             for state_index, bank_record in enumerate(audit_records[:state_limit]):
                 payload = torch.load(
@@ -468,10 +576,11 @@ def run_spectra(
                     dense_map,
                     h,
                     layer,
-                    checks=check_count if state_index < full_limit else 0,
+                    checks=full_check_count if state_index < full_limit else 1,
                     seed=context.seed + state_index + 1000 * layer + size,
                     tolerances=tolerances,
                     full_spectrum=state_index < full_limit,
+                    map_summary=centered_summary,
                 )
                 local_rows.append(
                     {
@@ -530,17 +639,47 @@ def _scaled(vector: torch.Tensor, target: float) -> torch.Tensor:
     return vector.float() * (target / float(norm))
 
 
+def _balanced_audit_records(
+    records: list[dict[str, Any]], per_family: int
+) -> list[dict[str, Any]]:
+    families: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for record in records:
+        families[record["task_family"]].append(record)
+    selected: list[dict[str, Any]] = []
+    for family in sorted(families):
+        ordered = sorted(
+            families[family], key=lambda row: (row["prompt_hash"], row["prompt_id"])
+        )
+        if len(ordered) < per_family:
+            raise RuntimeError(
+                f"Pareto audit family {family} has {len(ordered)} records; "
+                f"requires {per_family}"
+            )
+        selected.extend(ordered[:per_family])
+    return selected
+
+
 def run_pareto(
     context,
     bundle: Any,
     bank_manifest: Path,
     *,
     limit: int | None,
+    shard_index: int,
+    shard_count: int,
 ) -> Path:
     records = _load_bank(context.root, bank_manifest)
     audit = [record for record in records if record["split"] == "audit"]
     fit = [record for record in records if record["split"] == "fit"]
     layers = [int(value) for value in context.config["geometry"]["candidate_layers"]]
+    layers = [
+        layer
+        for layer in layers
+        if int(hashlib.sha256(str(layer).encode()).hexdigest(), 16) % shard_count
+        == shard_index
+    ]
+    if not layers:
+        raise RuntimeError("Pareto shard has no assigned layers")
     naturality_models = _naturality_models(context, records, layers)
     vocabularies = _load_vocabularies(context)
     strengths = [float(value) for value in context.config["geometry"]["strengths"]]
@@ -549,12 +688,18 @@ def run_pareto(
         float(value)
         for value in context.config["geometry"]["spectrum_relative_tolerances"]
     ]
+    audit = _balanced_audit_records(
+        audit, int(context.config["geometry"]["pareto_states_per_family"])
+    )
     if limit is not None:
         audit = audit[:limit]
     by_family: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for record in fit:
         by_family[record["task_family"]].append(record)
     rows: list[dict[str, Any]] = []
+    run_dir = context.raw_dir / context.run_id
+    progress_path = run_dir / "pareto_progress.json"
+    completed_parts: list[str] = []
     for size, vocabulary in vocabularies.items():
         encoder = JStateEncoder.from_lens(
             bundle.lens,
@@ -568,6 +713,7 @@ def run_pareto(
         dense_map = DenseJMap.from_encoder(encoder)
         for layer in layers:
             projector = DenseNullProjector(dense_map, layer)
+            combination_rows: list[dict[str, Any]] = []
             for anchor_index, anchor_record in enumerate(audit):
                 donors = by_family[anchor_record["task_family"]]
                 if not donors:
@@ -598,19 +744,18 @@ def run_pareto(
                     "isotropic_random": (random_direction, "dense"),
                     "radial": (h, "dense"),
                 }
+                singular_values, right_vectors = projector.local_singular_system(h)
                 for tolerance in tolerances:
-                    approximate, approximate_basis, _ = projector.donor_projection(
-                        h,
-                        difference,
+                    approximate_basis = projector.low_singular_basis_from_system(
+                        singular_values,
+                        right_vectors,
                         relative_tolerance=tolerance,
-                        sphere_tangent=False,
                     )
-                    tangent, tangent_basis, _ = projector.donor_projection(
-                        h,
-                        difference,
-                        relative_tolerance=tolerance,
-                        sphere_tangent=True,
+                    tangent_basis = projector.tangent_intersection(
+                        approximate_basis, h
                     )
+                    approximate = projector.project(difference, approximate_basis)
+                    tangent = projector.project(difference, tangent_basis)
                     base_directions[f"approximate_dense_null:{tolerance}"] = (
                         approximate,
                         "dense",
@@ -642,6 +787,7 @@ def run_pareto(
                                         str(layer),
                                         str(strength),
                                         method,
+                                        label_tolerance or "none",
                                     )
                                 ).encode()
                             ).hexdigest()
@@ -755,7 +901,30 @@ def run_pareto(
                                 },
                             }
                             rows.append(row)
-    path = context.raw_dir / context.run_id / "pareto_records.parquet"
+                            combination_rows.append(row)
+                del right_vectors, singular_values
+            part_path = run_dir / f"pareto_part-M{size}-L{layer}.parquet"
+            pd.DataFrame(combination_rows).to_parquet(part_path, index=False)
+            completed_parts.append(str(part_path.relative_to(context.root)))
+            write_json_atomic(
+                progress_path,
+                {
+                    "schema_version": 3,
+                    "protocol_version": PROTOCOL,
+                    "run_id": context.run_id,
+                    "shard_index": shard_index,
+                    "shard_count": shard_count,
+                    "completed_parts": completed_parts,
+                    "records_written": len(rows),
+                    "status": "RUNNING",
+                },
+            )
+    filename = (
+        f"pareto_records-shard-{shard_index:03d}.parquet"
+        if limit is None
+        else f"pareto_records-preflight-{int(limit)}.parquet"
+    )
+    path = context.raw_dir / context.run_id / filename
     frame = pd.DataFrame(rows)
     frame.to_parquet(path, index=False)
     summaries: list[dict[str, Any]] = []
@@ -781,6 +950,20 @@ def run_pareto(
         )
     pd.DataFrame(summaries).to_parquet(
         context.processed_dir / f"pareto_summary_{context.run_id}.parquet", index=False
+    )
+    write_json_atomic(
+        progress_path,
+        {
+            "schema_version": 3,
+            "protocol_version": PROTOCOL,
+            "run_id": context.run_id,
+            "shard_index": shard_index,
+            "shard_count": shard_count,
+            "completed_parts": completed_parts,
+            "records_written": len(rows),
+            "status": "COMPLETED",
+            "merged_output": str(path.relative_to(context.root)),
+        },
     )
     return path
 
@@ -926,13 +1109,24 @@ def main() -> None:
                 )
         if args.stage in {"pareto", "all"}:
             outputs["pareto"] = str(
-                run_pareto(context, bundle, bank_manifest, limit=args.limit).relative_to(
+                run_pareto(
+                    context,
+                    bundle,
+                    bank_manifest,
+                    limit=args.limit,
+                    shard_index=args.shard_index,
+                    shard_count=args.shard_count,
+                ).relative_to(
                     context.root
                 )
             )
         context.finish(
             "COMPLETED",
             v2_hash_guard=immutable,
+            stage=args.stage,
+            limit=args.limit,
+            shard_index=args.shard_index,
+            shard_count=args.shard_count,
             activation_bank_manifest=str(bank_manifest.relative_to(context.root)),
             outputs=outputs,
         )

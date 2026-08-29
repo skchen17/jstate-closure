@@ -332,7 +332,9 @@ class JStateEncoder:
         if h.ndim != 1:
             raise ValueError("J-state encoder expects one residual vector")
         dictionary = self.dictionary(layer, h.device)
-        decomposition = gradient_pursuit(h, dictionary, k=self.k)
+        decomposition = gradient_pursuit(
+            h, dictionary, k=self.k, dictionary_is_normalized=True
+        )
         raw_dictionary = self.raw_dictionary(layer, h.device).float()
         raw_scores = raw_dictionary @ h.float()
         centered = raw_scores - raw_scores.mean()
@@ -359,7 +361,12 @@ class JStateEncoder:
         )
 
     def decompose(self, h: torch.Tensor, layer: int) -> DecompositionResult:
-        return gradient_pursuit(h, self.dictionary(layer, h.device), k=self.k)
+        return gradient_pursuit(
+            h,
+            self.dictionary(layer, h.device),
+            k=self.k,
+            dictionary_is_normalized=True,
+        )
 
 
 def encode_jstate(

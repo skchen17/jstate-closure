@@ -68,27 +68,79 @@ def _rank_value(value: Any, key: str) -> int | None:
     return None
 
 
-def _geometry_sources(root: Path) -> tuple[pd.DataFrame, pd.DataFrame, list[Path]]:
-    paths = sorted(
+def _latest_completed_shard_dirs(root: Path, stage: str) -> set[Path]:
+    latest: dict[int, tuple[str, Path]] = {}
+    for manifest_path in sorted((root / "results/v3/raw").glob("geometry-v3-*/manifest.json")):
+        payload = _load_json(manifest_path)
+        if payload.get("status") != "COMPLETED" or payload.get("stage") != stage:
+            continue
+        if stage == "pareto" and payload.get("limit") is not None:
+            continue
+        shard = int(payload.get("shard_index", 0))
+        created = str(payload.get("created_at", ""))
+        if shard not in latest or created > latest[shard][0]:
+            latest[shard] = (created, manifest_path.parent)
+    return {value[1] for value in latest.values()}
+
+
+def _geometry_sources(
+    root: Path,
+) -> tuple[pd.DataFrame, pd.DataFrame, list[Path], str]:
+    all_paths = sorted(
         (root / "results/v3/raw").glob("geometry-v3-*/map_spectra-*.parquet")
     )
-    local_paths = sorted(
+    all_local_paths = sorted(
         (root / "results/v3/raw").glob("geometry-v3-*/local_spectra-*.parquet")
     )
-    return _read_parquets(paths), _read_parquets(local_paths), [*paths, *local_paths]
+    formal_paths = [path for path in all_paths if not path.name.endswith("-smoke.parquet")]
+    formal_local_paths = [
+        path for path in all_local_paths if not path.name.endswith("-smoke.parquet")
+    ]
+    completed_dirs = _latest_completed_shard_dirs(root, "spectrum")
+    if completed_dirs:
+        formal_paths = [path for path in formal_paths if path.parent in completed_dirs]
+        formal_local_paths = [
+            path for path in formal_local_paths if path.parent in completed_dirs
+        ]
+    if formal_paths and formal_local_paths:
+        paths = formal_paths
+        local_paths = formal_local_paths
+        execution_scope = "formal"
+    elif formal_paths or formal_local_paths:
+        paths = formal_paths
+        local_paths = formal_local_paths
+        execution_scope = "formal_incomplete"
+    else:
+        paths = all_paths
+        local_paths = all_local_paths
+        execution_scope = "smoke" if paths or local_paths else "none"
+    return (
+        _read_parquets(paths),
+        _read_parquets(local_paths),
+        [*paths, *local_paths],
+        execution_scope,
+    )
 
 
 def _pareto_sources(root: Path) -> tuple[pd.DataFrame, list[Path]]:
-    paths = sorted(
-        (root / "results/v3/raw").glob("geometry-v3-*/pareto_records.parquet")
-    )
+    paths = sorted((root / "results/v3/raw").glob("geometry-v3-*/pareto_records*.parquet"))
+    paths = [
+        path
+        for path in paths
+        if "preflight" not in path.name and "part-" not in path.name
+    ]
+    completed_dirs = _latest_completed_shard_dirs(root, "pareto")
+    if completed_dirs:
+        paths = [path for path in paths if path.parent in completed_dirs]
     return _read_parquets(paths), paths
 
 
 def build_geometry_figures(root: Path) -> list[dict[str, Any]]:
-    maps, local, spectrum_paths = _geometry_sources(root)
+    maps, local, spectrum_paths, execution_scope = _geometry_sources(root)
     pareto, pareto_paths = _pareto_sources(root)
     figures: list[dict[str, Any]] = []
+    if execution_scope != "formal":
+        return figures
     target_root = root / "results/v3/figures"
     if not maps.empty:
         maps = maps.copy()
@@ -276,7 +328,7 @@ def _geometry_diagnosis(maps: pd.DataFrame, local: pd.DataFrame, pareto: pd.Data
 
 
 def build_reports(root: Path) -> dict[str, Any]:
-    maps, local, spectrum_paths = _geometry_sources(root)
+    maps, local, spectrum_paths, execution_scope = _geometry_sources(root)
     pareto, pareto_paths = _pareto_sources(root)
     calibration_path = root / "results/v3/processed/clamp_v3_calibration.json"
     calibration = _load_json(calibration_path) if calibration_path.is_file() else None
@@ -289,8 +341,15 @@ def build_reports(root: Path) -> dict[str, Any]:
     write_json_atomic(
         root / "results/v3/processed/figure_manifest_v3.json", figure_manifest
     )
-    diagnosis = _geometry_diagnosis(maps, local, pareto)
-    verification_status = "ANALYZED" if not maps.empty and not local.empty else "UNVERIFIED"
+    diagnosis = (
+        _geometry_diagnosis(maps, local, pareto)
+        if execution_scope == "formal"
+        else "D — only GPU smoke diagnostics were completed; no formal geometry or "
+        "state-definition diagnosis is warranted."
+        if execution_scope == "smoke"
+        else "D — geometry audit incomplete; no state-definition diagnosis is warranted."
+    )
+    verification_status = "ANALYZED" if execution_scope == "formal" else "UNVERIFIED"
     run_manifests = sorted((root / "results/v3/raw").glob("*/manifest.json"))
     failed_runs = [
         {
@@ -300,6 +359,15 @@ def build_reports(root: Path) -> dict[str, Any]:
         }
         for payload in (_load_json(path) for path in run_manifests)
         if payload.get("status") == "FAILED"
+    ]
+    smoke_runs = [
+        payload.get("run_id")
+        for payload in (_load_json(path) for path in run_manifests)
+        if payload.get("status") == "COMPLETED"
+        and any(
+            str(value).endswith("-smoke.parquet")
+            for value in payload.get("outputs", {}).values()
+        )
     ]
     jvp_count = 0
     jvp_failures = 0
@@ -323,6 +391,9 @@ def build_reports(root: Path) -> dict[str, Any]:
 
 This report is generated from saved Parquet records. Phase 0 v2 and its 0/1400
 strict clamp result were not modified or re-adjudicated.
+
+- Execution scope: {execution_scope}
+- Successful smoke run IDs: {smoke_runs or 'none'}
 
 {diagnosis}
 
@@ -395,7 +466,11 @@ only and cannot support H1/H2/H3.
         "protocol_version": "exploratory_protocol_v3",
         "geometry": (
             "COMPLETED"
-            if not maps.empty and not local.empty
+            if execution_scope == "formal"
+            else "SMOKE_COMPLETED"
+            if execution_scope == "smoke" and not maps.empty and not local.empty
+            else "INCOMPLETE"
+            if execution_scope == "formal_incomplete"
             else "FAILED"
             if failed_runs
             else "INCOMPLETE"
@@ -406,7 +481,7 @@ only and cannot support H1/H2/H3.
         "behavioral_closure": "AUTHORIZED" if authorized else "GATED",
         "lowdim_search": (
             "UNEXECUTED"
-            if maps.empty or local.empty
+            if execution_scope != "formal" or maps.empty or local.empty
             else "REQUIRED_OR_PENDING"
             if "warning" in diagnosis.casefold()
             else "NOT_TRIGGERED"

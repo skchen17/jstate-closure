@@ -114,6 +114,32 @@ def git_commit(root: str | Path) -> str | None:
     return value if value and not value.startswith("fatal:") else None
 
 
+def git_worktree_snapshot(root: str | Path) -> dict[str, Any]:
+    result = subprocess.run(
+        [
+            "git",
+            "-C",
+            str(Path(root)),
+            "status",
+            "--porcelain=v1",
+            "--untracked-files=all",
+        ],
+        check=False,
+        capture_output=True,
+        text=True,
+        timeout=10,
+    )
+    if result.returncode != 0:
+        return {"dirty": None, "status_sha256": None, "entries": None}
+    lines = sorted(line for line in result.stdout.splitlines() if line)
+    payload = "\n".join(lines).encode("utf-8")
+    return {
+        "dirty": bool(lines),
+        "status_sha256": hashlib.sha256(payload).hexdigest(),
+        "entries": len(lines),
+    }
+
+
 def make_run_id(kind: str, digest: str, seed: int) -> str:
     timestamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     return f"{kind}-{timestamp}-{digest[:8]}-s{seed}"
@@ -178,5 +204,6 @@ def build_manifest(
         "seed": seed,
         "command": command,
         "git_commit": git_commit(repo_root),
+        "git_worktree": git_worktree_snapshot(repo_root),
         "environment": environment_snapshot(),
     }

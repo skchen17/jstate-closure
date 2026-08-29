@@ -12,16 +12,47 @@
       "error": "RuntimeError: Expected a 'cuda' device type for generator but found 'cpu'",
       "kind": "geometry-v3",
       "run_id": "geometry-v3-20260828T165606Z-1bf9a00a-s20260828"
+    },
+    {
+      "error": "KeyboardInterrupt: run cancelled",
+      "kind": "geometry-v3",
+      "run_id": "geometry-v3-20260829T135126Z-1bf9a00a-s20260828-pareto-preflight-001"
+    },
+    {
+      "error": "KeyboardInterrupt: run cancelled",
+      "kind": "geometry-v3",
+      "run_id": "geometry-v3-20260829T143434Z-3b3fa742-s20260828-pareto-shard-000"
+    },
+    {
+      "error": "KeyboardInterrupt: parent and shard were explicitly cancelled for a measured performance-path correction before any Pareto part was written",
+      "kind": "geometry-v3",
+      "run_id": "geometry-v3-20260829T143434Z-efb45693-s20260828-pareto-shard-001"
     }
   ],
-  "geometry": "FAILED",
-  "lowdim_search": "UNEXECUTED",
+  "geometry": "COMPLETED",
+  "lowdim_search": "REQUIRED_OR_PENDING",
   "pareto": "UNEXECUTED",
   "protocol_version": "exploratory_protocol_v3",
   "schema_version": 3,
   "source_hashes": {
     "results/v3/raw/geometry-v3-20260828T165452Z-1bf9a00a-s20260828/manifest.json": "bbcd936175dabcccb7c419286bc705fea0b9765048320683a87ce5faaa535f08",
-    "results/v3/raw/geometry-v3-20260828T165606Z-1bf9a00a-s20260828/manifest.json": "8a947d134adec500b186343ee6c9652ab16702a63b5a816a1108b52e23daf580"
+    "results/v3/raw/geometry-v3-20260828T165606Z-1bf9a00a-s20260828/manifest.json": "8a947d134adec500b186343ee6c9652ab16702a63b5a816a1108b52e23daf580",
+    "results/v3/raw/geometry-v3-20260829T133605Z-1bf9a00a-s20260828/manifest.json": "f6cf53683c6a9ca4a3220fa5ad51ecab27eb06649a05426ad3968d8ee2cb27f4",
+    "results/v3/raw/geometry-v3-20260829T134057Z-1bf9a00a-s20260828/manifest.json": "324d69a647b35065a91b0e769070ae651321f8c4484dee3c2b7653d3fd0d22af",
+    "results/v3/raw/geometry-v3-20260829T134509Z-1bf9a00a-s20260828/manifest.json": "bf2267bce5a394912648c63d364af666e9ea0c7e026d48fdb707973b9dae83fd",
+    "results/v3/raw/geometry-v3-20260829T134831Z-1bf9a00a-s20260828-spectrum-shard-000/local_spectra-shard-000.parquet": "4306dba86a833657dea506a9c3390f6001fa0db5974b10da1083223edf31a071",
+    "results/v3/raw/geometry-v3-20260829T134831Z-1bf9a00a-s20260828-spectrum-shard-000/manifest.json": "f4c84a8b4cf01dfebbbdeed8827a3213cb44253206f230fbfef577e460d6c624",
+    "results/v3/raw/geometry-v3-20260829T134831Z-1bf9a00a-s20260828-spectrum-shard-000/map_spectra-shard-000.parquet": "b13e3fbc00413ba7e812c14e85f8380ab8f62b948da58ae6495bd238ec82b8ff",
+    "results/v3/raw/geometry-v3-20260829T134831Z-8daca406-s20260828-spectrum-shard-001/local_spectra-shard-001.parquet": "91a33b7c7404b6ee1bd616fe322f8decf5e20fa968aa4e506ed7d94544913f66",
+    "results/v3/raw/geometry-v3-20260829T134831Z-8daca406-s20260828-spectrum-shard-001/manifest.json": "bb0c2473dbe321a174c8ff29c6331ad924a59b070ccb29db194e56b75345748c",
+    "results/v3/raw/geometry-v3-20260829T134831Z-8daca406-s20260828-spectrum-shard-001/map_spectra-shard-001.parquet": "431ada32e2fe96f913e7a30f4ec16c7b65fefa0acb3637f0f478e39e8cb31093",
+    "results/v3/raw/geometry-v3-20260829T135126Z-1bf9a00a-s20260828-pareto-preflight-001/manifest.json": "9a3384be4c6a0c567887609863916be14f591091dfc1afc400484d6a9beaa47b",
+    "results/v3/raw/geometry-v3-20260829T140456Z-3b3fa742-s20260828-pareto-shard-000/manifest.json": "d3d61e24c5602816972bef5d80159628176662c76a705432bb7f36e564e97396",
+    "results/v3/raw/geometry-v3-20260829T140456Z-efb45693-s20260828-pareto-shard-001/manifest.json": "fb205dd2a6e6ad3a3e3b95633ce24523c9e16b5e0e5c3a25f9ac799c862f17d6",
+    "results/v3/raw/geometry-v3-20260829T143434Z-3b3fa742-s20260828-pareto-shard-000/manifest.json": "7339f3b8d0e7ecb30e0c98ae92faa037cb622ee99370b1829270324446b3cc5b",
+    "results/v3/raw/geometry-v3-20260829T143434Z-efb45693-s20260828-pareto-shard-001/manifest.json": "afd9ed81185747c3673e862a3b8ae10b7e0b047ca8a73a68a055b420d9165cd9",
+    "results/v3/raw/geometry-v3-20260829T143948Z-3b3fa742-s20260828-pareto-shard-000/manifest.json": "4163fc489c3fb87447ff7d424c0663622a1343b0e75c2fa5baf763211af1d158",
+    "results/v3/raw/geometry-v3-20260829T143948Z-efb45693-s20260828-pareto-shard-001/manifest.json": "7a68200db043f4601ec769cdbbb664039dd978321fd26518926915dae16f0231"
   },
   "strongest_warranted_conclusion": "D"
 }

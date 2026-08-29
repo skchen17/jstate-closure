@@ -65,6 +65,24 @@ preconditions, not behavioral findings. A dense profile that is locally
 near-injective is classified as too information-rich for a compact-state claim;
 it is never counted as H1 support.
 
+The geometry bank is exactly balanced at 64 unique prompts per family and is
+hash-split 32/32 into fit/audit partitions. Direct map spectra cover all seven
+layers and all three dictionaries. Sixteen fixed audit states per combination
+receive a full local spectrum; the remaining states receive the algebraic rank
+implied by the stored centered map and rank-one projection, finite-tolerance interlacing bounds, a
+power-iteration top singular estimate, radial residual, and analytic/autograd
+JVP/VJP checks. Bounds are labeled `NUMERICALLY_BOUNDED` and are not presented
+as full spectra.
+
+The formal Pareto diagnostic uses 16 deterministic, task-balanced audit anchors
+(two per family), all nine registered strengths, and all registered null
+tolerances. This is an exploratory geometry sample, not the 200-trial clamp
+calibration. Runs are layer-sharded across both GPUs and checkpoint each
+dictionary/layer part. Limited preflights are separately named and excluded by
+the report loader. Local singular vectors are computed once per anchor and
+reused across tolerances; normalized sparse dictionaries use an explicitly
+tested fast path rather than being normalized again for every pursuit.
+
 `V3-Dense` requires dense cosine at least 0.995 and top-10 overlap at least 0.8.
 `V3-Sparse` independently requires support F1 at least 0.8, weighted Jaccard at
 least 0.95, union-aligned coefficient cosine at least 0.995, and reconstruction

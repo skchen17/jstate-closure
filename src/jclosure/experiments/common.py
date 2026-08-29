@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import copy
 import json
+import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -24,6 +25,10 @@ def standard_parser(description: str, default_config: str) -> argparse.ArgumentP
     parser.add_argument("--seed", type=int)
     parser.add_argument("--device", type=int)
     parser.add_argument("--limit", type=int)
+    parser.add_argument(
+        "--run-suffix",
+        help="unique manifest suffix for concurrent deterministic shards",
+    )
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument(
         "--confirmation-model",
@@ -88,6 +93,13 @@ def initialize_context(kind: str, args: argparse.Namespace) -> ExperimentContext
         command=sys.argv,
     )
     run_id = manifest["run_id"]
+    run_suffix = getattr(args, "run_suffix", None)
+    if run_suffix:
+        if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", run_suffix):
+            raise ValueError("run suffix contains unsupported characters")
+        run_id = f"{run_id}-{run_suffix}"
+        manifest["run_id"] = run_id
+        manifest["run_suffix"] = run_suffix
     manifest_path = raw_dir / run_id / "manifest.json"
     write_json_atomic(manifest_path, manifest)
     return ExperimentContext(

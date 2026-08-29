@@ -28,11 +28,13 @@ fi
 if [[ "$STAGE" == "spectrum" || "$STAGE" == "all" ]]; then
   timeout 8h python -m jclosure.experiments.geometry_v3 \
     --config "$CONFIG" --stage spectrum --bank-manifest "$BANK_MANIFEST" \
-    --device 0 --shard-index 0 --shard-count 2 "${LIMIT_ARGS[@]}" "$@" &
+    --device 0 --shard-index 0 --shard-count 2 --run-suffix spectrum-shard-000 \
+    "${LIMIT_ARGS[@]}" "$@" &
   PID0=$!
   timeout 8h python -m jclosure.experiments.geometry_v3 \
     --config "$CONFIG" --stage spectrum --bank-manifest "$BANK_MANIFEST" \
-    --device 1 --shard-index 1 --shard-count 2 "${LIMIT_ARGS[@]}" "$@" &
+    --device 1 --shard-index 1 --shard-count 2 --run-suffix spectrum-shard-001 \
+    "${LIMIT_ARGS[@]}" "$@" &
   PID1=$!
   wait "$PID0"
   wait "$PID1"
@@ -41,5 +43,14 @@ fi
 if [[ "$STAGE" == "pareto" || "$STAGE" == "all" ]]; then
   timeout 12h python -m jclosure.experiments.geometry_v3 \
     --config "$CONFIG" --stage pareto --bank-manifest "$BANK_MANIFEST" \
-    --device 0 "${LIMIT_ARGS[@]}" "$@"
+    --device 0 --shard-index 0 --shard-count 2 --run-suffix pareto-shard-000 \
+    "${LIMIT_ARGS[@]}" "$@" &
+  PID0=$!
+  timeout 12h python -m jclosure.experiments.geometry_v3 \
+    --config "$CONFIG" --stage pareto --bank-manifest "$BANK_MANIFEST" \
+    --device 1 --shard-index 1 --shard-count 2 --run-suffix pareto-shard-001 \
+    "${LIMIT_ARGS[@]}" "$@" &
+  PID1=$!
+  wait "$PID0"
+  wait "$PID1"
 fi

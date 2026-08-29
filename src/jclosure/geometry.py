@@ -385,12 +385,40 @@ class DenseNullProjector:
     def low_singular_basis(
         self, h: torch.Tensor, *, relative_tolerance: float
     ) -> tuple[torch.Tensor, torch.Tensor]:
-        jacobian = self.dense_map.local_jacobian(h, self.layer)
-        _, values, vh = torch.linalg.svd(jacobian, full_matrices=True)
-        maximum = values[0].clamp_min(1e-30) if values.numel() else h.new_tensor(1.0)
-        rank = int(torch.count_nonzero(values > relative_tolerance * maximum).item())
-        basis = vh[rank:].T.contiguous()
+        values, right_vectors = self.local_singular_system(h)
+        basis = self.low_singular_basis_from_system(
+            values, right_vectors, relative_tolerance=relative_tolerance
+        )
         return basis, values
+
+    def local_singular_system(
+        self, h: torch.Tensor
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        """Return descending singular values/right vectors from one Gram solve."""
+
+        gram = self.dense_map.local_jacobian_gram(h, self.layer)
+        eigenvalues, right_vectors = torch.linalg.eigh(gram)
+        values = eigenvalues.clamp_min(0).sqrt().flip(0)
+        return values, right_vectors.flip(1).contiguous()
+
+    @staticmethod
+    def low_singular_basis_from_system(
+        values: torch.Tensor,
+        right_vectors: torch.Tensor,
+        *,
+        relative_tolerance: float,
+    ) -> torch.Tensor:
+        if values.ndim != 1 or right_vectors.ndim != 2:
+            raise ValueError("invalid local singular system")
+        if right_vectors.shape != (values.numel(), values.numel()):
+            raise ValueError("right-vector matrix must be square and match values")
+        maximum = (
+            values[0].clamp_min(1e-30)
+            if values.numel()
+            else values.new_tensor(1.0)
+        )
+        rank = int(torch.count_nonzero(values > relative_tolerance * maximum).item())
+        return right_vectors[:, rank:].contiguous()
 
     @staticmethod
     def tangent_intersection(

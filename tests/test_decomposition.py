@@ -1,6 +1,10 @@
 import torch
 
-from jclosure.decomposition import gradient_pursuit, strip_j_component
+from jclosure.decomposition import (
+    gradient_pursuit,
+    normalize_dictionary,
+    strip_j_component,
+)
 from jclosure.jstate import ConceptVocabulary, JStateEncoder
 
 
@@ -20,6 +24,22 @@ def test_deterministic_tie_breaking():
     second = gradient_pursuit(torch.tensor([1.0, 0]), dictionary, k=1)
     assert first.atom_indices.tolist() == [0]
     assert torch.equal(first.atom_indices, second.atom_indices)
+
+
+def test_normalized_dictionary_fast_path_is_numerically_identical():
+    generator = torch.Generator().manual_seed(17)
+    dictionary = normalize_dictionary(torch.randn(32, 12, generator=generator))
+    vector = torch.randn(12, generator=generator)
+    reference = gradient_pursuit(vector, dictionary, k=8)
+    fast = gradient_pursuit(vector, dictionary, k=8, dictionary_is_normalized=True)
+    assert torch.equal(reference.atom_indices, fast.atom_indices)
+    assert torch.allclose(
+        reference.coefficients, fast.coefficients, atol=1e-6, rtol=1e-5
+    )
+    assert torch.allclose(
+        reference.reconstruction, fast.reconstruction, atol=1e-6, rtol=1e-5
+    )
+    assert torch.allclose(reference.remainder, fast.remainder, atol=1e-6, rtol=1e-5)
 
 
 def test_strip_j_component_is_orthogonal_for_orthonormal_frame():

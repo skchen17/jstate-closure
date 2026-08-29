@@ -66,6 +66,7 @@ def gradient_pursuit(
     k: int = 25,
     correlation_tolerance: float = 1e-8,
     nnls_max_iter: int = 256,
+    dictionary_is_normalized: bool = False,
 ) -> DecompositionResult:
     """Approximate ``vector`` with at most ``k`` non-negative atoms.
 
@@ -82,7 +83,11 @@ def gradient_pursuit(
     if k <= 0:
         raise ValueError("k must be positive")
 
-    atoms = normalize_dictionary(dictionary).to(vector.device)
+    atoms = (
+        dictionary.float()
+        if dictionary_is_normalized
+        else normalize_dictionary(dictionary)
+    ).to(vector.device)
     target = vector.float()
     reconstruction = torch.zeros_like(target)
     residual = target.clone()
@@ -125,4 +130,3 @@ def strip_j_component(
 ) -> tuple[torch.Tensor, DecompositionResult]:
     result = gradient_pursuit(vector, dictionary, k=k)
     return result.remainder, result
-

@@ -16,6 +16,7 @@ import numpy as np
 import pandas as pd
 
 from jclosure.experiments.common import repository_root
+from jclosure.geometry import record_passes_state_equality
 from jclosure.provenance import sha256_file, write_json_atomic
 from jclosure.statistics import (
     benjamini_hochberg,
@@ -385,6 +386,172 @@ def _pareto_sources(root: Path) -> tuple[pd.DataFrame, list[Path]]:
     return _read_parquets(paths), paths
 
 
+def _pareto_state_equality_mask(records: pd.DataFrame) -> pd.Series:
+    if records.empty:
+        return pd.Series(dtype=bool, index=records.index)
+    return pd.Series(
+        [
+            record_passes_state_equality(
+                row,
+                state_definition=str(row["state_definition"]),
+            )
+            for row in records.to_dict("records")
+        ],
+        index=records.index,
+        dtype=bool,
+    )
+
+
+def summarize_pareto_v3(
+    records: pd.DataFrame,
+    *,
+    formal_displacement: float = 0.20,
+) -> pd.DataFrame:
+    """Summarize v3 candidates using state-definition-specific hard gates."""
+
+    if records.empty:
+        return pd.DataFrame()
+    frame = records.copy()
+    frame["construction_valid"] = frame["valid"].fillna(False).astype(bool)
+    frame["state_equal"] = (
+        frame["construction_valid"] & _pareto_state_equality_mask(frame)
+    )
+    frame["rms_valid"] = frame["rms_drift"] <= 0.02
+    frame["natural_equal"] = (
+        frame["state_equal"]
+        & frame["rms_valid"]
+        & frame["natural"].fillna(False).astype(bool)
+    )
+    frame["formal_valid"] = (
+        frame["natural_equal"]
+        & (frame["displacement_fraction"] >= formal_displacement)
+    )
+    frame["null_tolerance_label"] = frame["null_tolerance"].map(
+        lambda value: "not_applicable"
+        if pd.isna(value)
+        else f"{float(value):.0e}"
+    )
+    rows: list[dict[str, Any]] = []
+    keys = [
+        "layer",
+        "dictionary_size",
+        "state_definition",
+        "method",
+        "null_tolerance_label",
+    ]
+    for key, group in frame.groupby(keys, sort=True, dropna=False):
+        natural_equal = group[group["natural_equal"]]
+        formal = group[group["formal_valid"]]
+        identifier = "prompt_id" if "prompt_id" in group else "paired_trial_id"
+        exclusions = Counter(
+            str(value)
+            for value in group.loc[~group["construction_valid"], "exclusion_reason"]
+            if pd.notna(value)
+        )
+        statuses = Counter(str(value) for value in group["optimization_status"])
+        rows.append(
+            {
+                **dict(zip(keys, key, strict=True)),
+                "attempted_rows": int(len(group)),
+                "attempted_anchors": int(group[identifier].nunique()),
+                "construction_valid_rows": int(group["construction_valid"].sum()),
+                "state_equal_rows": int(group["state_equal"].sum()),
+                "natural_equal_rows": int(group["natural_equal"].sum()),
+                "formal_valid_rows": int(group["formal_valid"].sum()),
+                "formal_valid_anchors": int(formal[identifier].nunique()),
+                "max_natural_equal_displacement": (
+                    float(natural_equal["displacement_fraction"].max())
+                    if not natural_equal.empty
+                    else np.nan
+                ),
+                "exclusion_counts": json.dumps(
+                    dict(sorted(exclusions.items())), sort_keys=True
+                ),
+                "optimization_status_counts": json.dumps(
+                    dict(sorted(statuses.items())), sort_keys=True
+                ),
+            }
+        )
+    return pd.DataFrame(rows)
+
+
+def _formal_pareto_rows(summary: pd.DataFrame) -> pd.DataFrame:
+    if summary.empty:
+        return summary
+    dense = (
+        (summary["state_definition"] == "V3-Dense")
+        & summary["method"].isin(
+            ["norm_tangent_dense_null", "hard_constrained"]
+        )
+        & (summary["null_tolerance_label"] == "1e-04")
+    )
+    sparse = (
+        (summary["state_definition"] == "V3-Sparse")
+        & (summary["method"] == "sparse_remainder")
+        & (summary["null_tolerance_label"] == "not_applicable")
+    )
+    return summary[dense | sparse].copy()
+
+
+def _format_pareto_summary(summary: pd.DataFrame) -> str:
+    selected = _formal_pareto_rows(summary)
+    if selected.empty:
+        return "Formal Pareto construction records were not available."
+    labels = {
+        "norm_tangent_dense_null": "Dense local-null",
+        "hard_constrained": "Dense optimized",
+        "sparse_remainder": "Sparse same-definition",
+    }
+    lines = [
+        "| M | Layer | Method | constructed/attempted rows | "
+        "state-equal rows | natural+equal rows | formal anchors | max displacement |",
+        "|---:|---:|:---|---:|---:|---:|---:|---:|",
+    ]
+    for _, row in selected.sort_values(
+        ["dictionary_size", "layer", "method"]
+    ).iterrows():
+        maximum = row["max_natural_equal_displacement"]
+        maximum_text = "none" if pd.isna(maximum) else f"{float(maximum):.6f}"
+        lines.append(
+            f"| {int(row['dictionary_size'])} | {int(row['layer'])} | "
+            f"{labels.get(str(row['method']), str(row['method']))} | "
+            f"{int(row['construction_valid_rows'])}/{int(row['attempted_rows'])} | "
+            f"{int(row['state_equal_rows'])} | "
+            f"{int(row['natural_equal_rows'])} | "
+            f"{int(row['formal_valid_anchors'])}/{int(row['attempted_anchors'])} | "
+            f"{maximum_text} |"
+        )
+    return "\n".join(lines)
+
+
+def _format_pareto_attrition(summary: pd.DataFrame) -> str:
+    selected = _formal_pareto_rows(summary)
+    if selected.empty:
+        return "Formal construction attrition was not available."
+    rows = []
+    for (size, method), group in selected.groupby(
+        ["dictionary_size", "method"], sort=True
+    ):
+        rows.append(
+            {
+                "dictionary_size": int(size),
+                "method": str(method),
+                "attempted": int(group["attempted_rows"].sum()),
+                "constructed": int(group["construction_valid_rows"].sum()),
+                "equal": int(group["state_equal_rows"].sum()),
+                "natural_equal": int(group["natural_equal_rows"].sum()),
+                "formal": int(group["formal_valid_rows"].sum()),
+            }
+        )
+    return "\n".join(
+        f"- M={row['dictionary_size']}, {row['method']}: "
+        f"constructed {row['constructed']}/{row['attempted']}, "
+        f"state-equal {row['equal']}, natural+equal {row['natural_equal']}, "
+        f"formal rows {row['formal']}"
+        for row in rows
+    )
+
+
 def build_geometry_figures(root: Path) -> list[dict[str, Any]]:
     maps, local, spectrum_paths, execution_scope = _geometry_sources(root)
     pareto, pareto_paths = _pareto_sources(root)
@@ -455,42 +622,60 @@ def build_geometry_figures(root: Path) -> list[dict[str, Any]]:
             )
         )
     if not pareto.empty:
+        pareto = pareto.copy()
+        pareto["state_equal"] = _pareto_state_equality_mask(pareto)
+        formal_method = (
+            (
+                (pareto["state_definition"] == "V3-Dense")
+                & pareto["method"].isin(
+                    ["norm_tangent_dense_null", "hard_constrained"]
+                )
+                & np.isclose(pareto["null_tolerance"], 1e-4)
+            )
+            | (
+                (pareto["state_definition"] == "V3-Sparse")
+                & (pareto["method"] == "sparse_remainder")
+            )
+        )
         feasible = pareto[
-            (pareto["dense_cosine"] >= 0.995)
-            & (pareto["top10_overlap"] >= 0.8)
+            pareto["valid"].fillna(False).astype(bool)
+            & pareto["state_equal"]
             & (pareto["rms_drift"] <= 0.02)
-            & pareto["natural"]
+            & pareto["natural"].fillna(False).astype(bool)
+            & formal_method
         ]
 
         def draw_displacement(axis: plt.Axes) -> None:
             grouped = (
-                feasible.groupby(["dictionary_size", "method"])[
+                feasible.groupby(["dictionary_size", "layer", "method"])[
                     "displacement_fraction"
                 ]
                 .max()
                 .reset_index()
             )
-            methods = sorted(grouped["method"].unique())
-            sizes = sorted(grouped["dictionary_size"].unique())
-            x = np.arange(len(methods))
-            width = 0.8 / max(len(sizes), 1)
-            for offset, size in enumerate(sizes):
-                values = [
-                    grouped[
-                        (grouped["dictionary_size"] == size)
-                        & (grouped["method"] == method)
-                    ]["displacement_fraction"].max()
-                    for method in methods
-                ]
-                axis.bar(x + offset * width, values, width, label=f"M={size}")
+            styles = {
+                "norm_tangent_dense_null": "--",
+                "hard_constrained": "-",
+                "sparse_remainder": ":",
+            }
+            for (size, method), group in grouped.groupby(
+                ["dictionary_size", "method"], sort=True
+            ):
+                ordered = group.sort_values("layer")
+                axis.plot(
+                    ordered["layer"],
+                    ordered["displacement_fraction"],
+                    marker="o",
+                    linestyle=styles.get(str(method), "-"),
+                    label=f"M={int(size)} {method}",
+                )
+            axis.axhline(0.20, color="black", linestyle="-.", linewidth=1)
             axis.set(
-                xticks=x + width * (len(sizes) - 1) / 2,
-                xticklabels=methods,
+                xlabel="Layer",
                 ylabel="Maximum feasible displacement / natural scale",
-                title="Dense-equality Pareto feasibility",
+                title="State-definition-specific Pareto feasibility",
             )
-            axis.tick_params(axis="x", rotation=25)
-            axis.legend(fontsize=8)
+            axis.legend(fontsize=6, ncol=2)
 
         figures.append(
             _save_figure(
@@ -557,19 +742,30 @@ def _geometry_diagnosis(maps: pd.DataFrame, local: pd.DataFrame, pareto: pd.Data
     )
     max_displacement = None
     if not pareto.empty:
+        state_equal = _pareto_state_equality_mask(pareto)
         feasible = pareto[
-            (pareto["dense_cosine"] >= 0.995)
-            & (pareto["top10_overlap"] >= 0.8)
+            pareto["valid"].fillna(False).astype(bool)
+            & state_equal
             & (pareto["rms_drift"] <= 0.02)
-            & pareto["natural"]
+            & pareto["natural"].fillna(False).astype(bool)
         ]
         if not feasible.empty:
             max_displacement = float(feasible["displacement_fraction"].max())
-    if near_injective or max_displacement is None or max_displacement < 0.20:
+    if near_injective:
         return (
-            "Dense state-definition feasibility warning: the local dense profile is "
-            "near-injective or no natural strict candidate reached the frozen 0.20 "
-            "displacement. This is not H1 evidence and triggers low-dimensional search."
+            "Dense state-definition feasibility warning: the median local rank at "
+            "1e-4 is "
+            f"{float(local_ranks.median()):.0f}/2560 and the median tangent-null "
+            f"dimension is {float(local_null.median()):.0f}. The normalized dense "
+            "profile is therefore operationally near-injective under the frozen rule. "
+            "This is not compact H1 evidence and triggers low-dimensional search."
+        )
+    if max_displacement is None or max_displacement < 0.20:
+        value = "none" if max_displacement is None else f"{max_displacement:.6f}"
+        return (
+            "Dense state-definition feasibility failure: maximum natural, "
+            f"state-equal displacement was {value}, below the frozen 0.20 threshold. "
+            "This is not H1 evidence and triggers low-dimensional search."
         )
     return (
         "At least one strict natural dense-preserving candidate reached the frozen "
@@ -580,6 +776,10 @@ def _geometry_diagnosis(maps: pd.DataFrame, local: pd.DataFrame, pareto: pd.Data
 def build_reports(root: Path) -> dict[str, Any]:
     maps, local, spectrum_paths, execution_scope = _geometry_sources(root)
     pareto, pareto_paths = _pareto_sources(root)
+    pareto_summary = summarize_pareto_v3(pareto)
+    pareto_summary_path = root / "results/v3/processed/pareto_formal_summary_v3.parquet"
+    if not pareto_summary.empty:
+        pareto_summary.to_parquet(pareto_summary_path, index=False)
     calibration_path = root / "results/v3/processed/clamp_v3_calibration.json"
     calibration = _load_json(calibration_path) if calibration_path.is_file() else None
     closure_records, closure_paths, closure_group = _latest_completed_closure_sources(
@@ -670,6 +870,23 @@ strict clamp result were not modified or re-adjudicated.
 - Candidate rows: {len(pareto)}
 - Source files: {len(pareto_paths)} Pareto and {len(spectrum_paths)} spectrum Parquet files
 - Failed run manifests retained: {len(failed_runs)}
+- Canonical state-definition-aware summary: {str(pareto_summary_path.relative_to(root)) if pareto_summary_path.is_file() else "not generated"}
+
+The dense formal rows below use the frozen `1e-4 × sigma_max` tolerance. Sparse
+rows use their independent support/coefficient/reconstruction equality gate;
+dense cosine is only a sensitivity metric for V3-Sparse.
+
+### Formal construction attrition
+
+{_format_pareto_attrition(pareto_summary)}
+
+### Layer-by-layer formal feasibility
+
+`formal anchors` counts anchors with at least one natural, state-equal candidate
+at displacement `>=0.20`; `max displacement` is computed before imposing that
+minimum so infeasible cells remain visible.
+
+{_format_pareto_summary(pareto_summary)}
 
 All thresholds are protocol constants. No behavioral H1/H2/H3 conclusion is drawn
 from geometry or construction feasibility alone.
@@ -815,6 +1032,7 @@ Machine-readable summaries: {str(closure_summary_path.relative_to(root)) if clos
             for path in [
                 *spectrum_paths,
                 *pareto_paths,
+                *([pareto_summary_path] if pareto_summary_path.is_file() else []),
                 *closure_paths,
                 *run_manifests,
             ]

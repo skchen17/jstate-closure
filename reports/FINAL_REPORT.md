@@ -81,12 +81,12 @@ The v1/v2 records, thresholds, reports, and 0/1400 calibration result remain
 byte-identical under the committed SHA-256 regression guard.
 
 - Geometry status: **COMPLETED**
-- Pareto status: **UNEXECUTED**
+- Pareto status: **COMPLETED**
 - V3 clamp calibration: **UNEXECUTED**
 - Behavioral protocols authorized: **none**
 - Strongest warranted classification after v3: **D**
 
-Dense state-definition feasibility warning: the local dense profile is near-injective or no natural strict candidate reached the frozen 0.20 displacement. This is not H1 evidence and triggers low-dimensional search.
+Dense state-definition feasibility warning: the median local rank at 1e-4 is 2557/2560 and the median tangent-null dimension is 2. The normalized dense profile is therefore operationally near-injective under the frozen rule. This is not compact H1 evidence and triggers low-dimensional search.
 
 Failed v3 runs are evidence about execution only and are not interpreted as
 model behavior:
@@ -97,6 +97,16 @@ Check your internet connection or see how to run the library in offline mode at 
 - `geometry-v3-20260829T135126Z-1bf9a00a-s20260828-pareto-preflight-001`: KeyboardInterrupt: run cancelled
 - `geometry-v3-20260829T143434Z-3b3fa742-s20260828-pareto-shard-000`: KeyboardInterrupt: run cancelled
 - `geometry-v3-20260829T143434Z-efb45693-s20260828-pareto-shard-001`: KeyboardInterrupt: parent and shard were explicitly cancelled for a measured performance-path correction before any Pareto part was written
+- `geometry-v3-20260829T152136Z-3b3fa742-s20260828-pareto-shard-000`: KeyboardInterrupt: run cancelled
+- `geometry-v3-20260829T152136Z-efb45693-s20260828-pareto-shard-001`: KeyboardInterrupt: run cancelled
+- `geometry-v3-20260829T153732Z-3b3fa742-s20260828-pareto-shard-000`: KeyboardInterrupt: run cancelled
+- `geometry-v3-20260829T153732Z-efb45693-s20260828-pareto-shard-001`: KeyboardInterrupt: run cancelled
+- `geometry-v3-20260829T155649Z-3b3fa742-s20260828-pareto-shard-000`: KeyboardInterrupt: run cancelled
+- `geometry-v3-20260829T155649Z-efb45693-s20260828-pareto-shard-001`: KeyboardInterrupt: run cancelled
+- `geometry-v3-20260829T160152Z-3b3fa742-s20260828-pareto-shard-000`: KeyboardInterrupt: run cancelled
+- `geometry-v3-20260829T160152Z-efb45693-s20260828-pareto-shard-001`: KeyboardInterrupt: run cancelled
+- `geometry-v3-20260829T163042Z-3b3fa742-s20260828-pareto-shard-000`: KeyboardInterrupt: run cancelled
+- `geometry-v3-20260829T163042Z-efb45693-s20260828-pareto-shard-001`: KeyboardInterrupt: run cancelled
 
 No H1-Dense, H1-Sparse, H2, or H3 claim is permitted unless a frozen operational
 state passes calibration and the paired behavioral, mediation, rollout, and

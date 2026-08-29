@@ -293,3 +293,35 @@ def test_pareto_frontier_and_maximum_feasible_displacement():
         },
     ]
     assert maximum_feasible_displacement(feasibility) == 0.2
+
+
+def test_sparse_maximum_feasible_displacement_uses_sparse_not_dense_gate():
+    records = [
+        {
+            "displacement_fraction": 0.3,
+            "dense_cosine": 0.8,
+            "top10_overlap": 0.1,
+            "sparse_support_f1": 0.9,
+            "sparse_weighted_jaccard": 0.97,
+            "sparse_coefficient_cosine": 0.999,
+            "sparse_reconstruction_cosine": 0.999,
+            "rms_drift": 0.01,
+            "natural": True,
+            "valid": True,
+        },
+        {
+            "displacement_fraction": 0.5,
+            "dense_cosine": 1.0,
+            "top10_overlap": 1.0,
+            "sparse_support_f1": 0.9,
+            "sparse_weighted_jaccard": 0.5,
+            "sparse_coefficient_cosine": 0.999,
+            "sparse_reconstruction_cosine": 0.999,
+            "rms_drift": 0.01,
+            "natural": True,
+            "valid": True,
+        },
+    ]
+    assert maximum_feasible_displacement(
+        records, state_definition="V3-Sparse"
+    ) == 0.3

@@ -971,7 +971,9 @@ def run_pareto(
                 "method": keys[3],
                 "records": len(group),
                 "frontier_records": len(frontier),
-                "max_formal_displacement": maximum_feasible_displacement(row_records),
+                "max_formal_displacement": maximum_feasible_displacement(
+                    row_records, state_definition=str(keys[2])
+                ),
             }
         )
     pd.DataFrame(summaries).to_parquet(

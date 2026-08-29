@@ -654,20 +654,76 @@ def pareto_nondominated(
     return output
 
 
+def record_passes_state_equality(
+    record: dict[str, Any],
+    *,
+    state_definition: str = "V3-Dense",
+    dense_cosine: float = 0.995,
+    top10_overlap: float = 0.8,
+    sparse_support_f1: float = 0.8,
+    sparse_weighted_jaccard: float = 0.95,
+    sparse_coefficient_cosine: float = 0.995,
+    sparse_reconstruction_cosine: float = 0.995,
+) -> bool:
+    """Apply only the hard equality gate for one declared v3 state."""
+
+    if state_definition == "V3-Dense":
+        return (
+            float(record["dense_cosine"]) >= dense_cosine
+            and float(record["top10_overlap"]) >= top10_overlap
+        )
+    if state_definition == "V3-Sparse":
+        return (
+            float(record["sparse_support_f1"]) >= sparse_support_f1
+            and float(record["sparse_weighted_jaccard"])
+            >= sparse_weighted_jaccard
+            and float(record["sparse_coefficient_cosine"])
+            >= sparse_coefficient_cosine
+            and float(record["sparse_reconstruction_cosine"])
+            >= sparse_reconstruction_cosine
+        )
+    raise ValueError(f"unknown state definition: {state_definition}")
+
+
 def maximum_feasible_displacement(
     records: Iterable[dict[str, Any]],
     *,
+    state_definition: str = "V3-Dense",
     dense_cosine: float = 0.995,
     top10_overlap: float = 0.8,
+    sparse_support_f1: float = 0.8,
+    sparse_weighted_jaccard: float = 0.95,
+    sparse_coefficient_cosine: float = 0.995,
+    sparse_reconstruction_cosine: float = 0.995,
     rms_drift: float = 0.02,
     require_natural: bool = True,
+    require_construction_valid: bool = True,
 ) -> float | None:
+    """Return the largest displacement passing the declared state equality gate.
+
+    Dense and sparse protocol-v3 states deliberately have independent equality
+    definitions.  In particular, dense-profile metrics are sensitivities for a
+    ``V3-Sparse`` record and must not be used as its hard gate.
+    """
+
     values = [
         float(record["displacement_fraction"])
         for record in records
-        if float(record["dense_cosine"]) >= dense_cosine
-        and float(record["top10_overlap"]) >= top10_overlap
+        if record_passes_state_equality(
+            record,
+            state_definition=state_definition,
+            dense_cosine=dense_cosine,
+            top10_overlap=top10_overlap,
+            sparse_support_f1=sparse_support_f1,
+            sparse_weighted_jaccard=sparse_weighted_jaccard,
+            sparse_coefficient_cosine=sparse_coefficient_cosine,
+            sparse_reconstruction_cosine=sparse_reconstruction_cosine,
+        )
         and float(record["rms_drift"]) <= rms_drift
         and (not require_natural or bool(record.get("natural", False)))
+        and (
+            not require_construction_valid
+            or bool(record.get("valid", True))
+        )
     ]
     return max(values) if values else None

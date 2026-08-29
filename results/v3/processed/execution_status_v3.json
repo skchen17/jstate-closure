@@ -1,6 +1,11 @@
 {
   "behavioral_authorized_protocols": [],
+  "behavioral_base_trials": {
+    "attempted": 0,
+    "valid": 0
+  },
   "behavioral_closure": "GATED",
+  "behavioral_shard_group": null,
   "calibration": "UNEXECUTED",
   "failed_runs": [
     {
@@ -27,14 +32,65 @@
       "error": "KeyboardInterrupt: parent and shard were explicitly cancelled for a measured performance-path correction before any Pareto part was written",
       "kind": "geometry-v3",
       "run_id": "geometry-v3-20260829T143434Z-efb45693-s20260828-pareto-shard-001"
+    },
+    {
+      "error": "KeyboardInterrupt: run cancelled",
+      "kind": "geometry-v3",
+      "run_id": "geometry-v3-20260829T152136Z-3b3fa742-s20260828-pareto-shard-000"
+    },
+    {
+      "error": "KeyboardInterrupt: run cancelled",
+      "kind": "geometry-v3",
+      "run_id": "geometry-v3-20260829T152136Z-efb45693-s20260828-pareto-shard-001"
+    },
+    {
+      "error": "KeyboardInterrupt: run cancelled",
+      "kind": "geometry-v3",
+      "run_id": "geometry-v3-20260829T153732Z-3b3fa742-s20260828-pareto-shard-000"
+    },
+    {
+      "error": "KeyboardInterrupt: run cancelled",
+      "kind": "geometry-v3",
+      "run_id": "geometry-v3-20260829T153732Z-efb45693-s20260828-pareto-shard-001"
+    },
+    {
+      "error": "KeyboardInterrupt: run cancelled",
+      "kind": "geometry-v3",
+      "run_id": "geometry-v3-20260829T155649Z-3b3fa742-s20260828-pareto-shard-000"
+    },
+    {
+      "error": "KeyboardInterrupt: run cancelled",
+      "kind": "geometry-v3",
+      "run_id": "geometry-v3-20260829T155649Z-efb45693-s20260828-pareto-shard-001"
+    },
+    {
+      "error": "KeyboardInterrupt: run cancelled",
+      "kind": "geometry-v3",
+      "run_id": "geometry-v3-20260829T160152Z-3b3fa742-s20260828-pareto-shard-000"
+    },
+    {
+      "error": "KeyboardInterrupt: run cancelled",
+      "kind": "geometry-v3",
+      "run_id": "geometry-v3-20260829T160152Z-efb45693-s20260828-pareto-shard-001"
+    },
+    {
+      "error": "KeyboardInterrupt: run cancelled",
+      "kind": "geometry-v3",
+      "run_id": "geometry-v3-20260829T163042Z-3b3fa742-s20260828-pareto-shard-000"
+    },
+    {
+      "error": "KeyboardInterrupt: run cancelled",
+      "kind": "geometry-v3",
+      "run_id": "geometry-v3-20260829T163042Z-efb45693-s20260828-pareto-shard-001"
     }
   ],
   "geometry": "COMPLETED",
   "lowdim_search": "REQUIRED_OR_PENDING",
-  "pareto": "UNEXECUTED",
+  "pareto": "COMPLETED",
   "protocol_version": "exploratory_protocol_v3",
   "schema_version": 3,
   "source_hashes": {
+    "results/v3/processed/pareto_formal_summary_v3.parquet": "61ed256a37f3c25f02ba8a969fc6a3853fbbd92cc3ae462bb32af182e0710419",
     "results/v3/raw/geometry-v3-20260828T165452Z-1bf9a00a-s20260828/manifest.json": "bbcd936175dabcccb7c419286bc705fea0b9765048320683a87ce5faaa535f08",
     "results/v3/raw/geometry-v3-20260828T165606Z-1bf9a00a-s20260828/manifest.json": "8a947d134adec500b186343ee6c9652ab16702a63b5a816a1108b52e23daf580",
     "results/v3/raw/geometry-v3-20260829T133605Z-1bf9a00a-s20260828/manifest.json": "f6cf53683c6a9ca4a3220fa5ad51ecab27eb06649a05426ad3968d8ee2cb27f4",
@@ -55,7 +111,25 @@
     "results/v3/raw/geometry-v3-20260829T151742Z-3b3fa742-s20260828-spectrum-shard-000/map_spectra-shard-000.parquet": "dd45dbbb3b3ff8f18dfce7cc45a9850fcbfe1cff59b65e8268dc6333a9ec3e11",
     "results/v3/raw/geometry-v3-20260829T151742Z-efb45693-s20260828-spectrum-shard-001/local_spectra-shard-001.parquet": "fa1a811a8266069521fd3de03784d67a38c3acbe133ed8b893b8446bb69f800e",
     "results/v3/raw/geometry-v3-20260829T151742Z-efb45693-s20260828-spectrum-shard-001/manifest.json": "aadf286b71c4f2cee4e2add184f9d82ea9b3b8b92e519cbd5bd1eb7d83eb72ef",
-    "results/v3/raw/geometry-v3-20260829T151742Z-efb45693-s20260828-spectrum-shard-001/map_spectra-shard-001.parquet": "85ba497ca326c923cc47228cf4f984a7c7d7f41477ea2a292dec3e3d609da8fa"
+    "results/v3/raw/geometry-v3-20260829T151742Z-efb45693-s20260828-spectrum-shard-001/map_spectra-shard-001.parquet": "85ba497ca326c923cc47228cf4f984a7c7d7f41477ea2a292dec3e3d609da8fa",
+    "results/v3/raw/geometry-v3-20260829T152136Z-3b3fa742-s20260828-pareto-shard-000/manifest.json": "68425ea31e2a7766d22835685e87a3a26a1a36d50234bc326a45b21293961bf2",
+    "results/v3/raw/geometry-v3-20260829T152136Z-efb45693-s20260828-pareto-shard-001/manifest.json": "5d918ae7f252d95a4e3e6db1cd3a4a2446b0360ea61b07ef2fea06b12a85ed66",
+    "results/v3/raw/geometry-v3-20260829T153732Z-3b3fa742-s20260828-pareto-shard-000/manifest.json": "38b8b0f77ac6464e7d9cd65c256a5c7aba9da86401826cc2763489cdc8a3def0",
+    "results/v3/raw/geometry-v3-20260829T153732Z-efb45693-s20260828-pareto-shard-001/manifest.json": "9adb3f655459a834d045c79d5370245795b1d1934ada7353f257c5af206457f8",
+    "results/v3/raw/geometry-v3-20260829T155433Z-3b3fa742-s20260828/manifest.json": "7410b35212aef7e7f90c1784d4c92472551818ed1796babe7382a3fd5ce29a22",
+    "results/v3/raw/geometry-v3-20260829T155649Z-3b3fa742-s20260828-pareto-shard-000/manifest.json": "f86a1a971f8d9a556d6281901bf152679cf2f5a690508a9ee64cce407d0b1a72",
+    "results/v3/raw/geometry-v3-20260829T155649Z-efb45693-s20260828-pareto-shard-001/manifest.json": "920023e2b1c4980d4311d6430db19fbb8ff8328ce6e1d73543c760a3dc91d3cc",
+    "results/v3/raw/geometry-v3-20260829T160011Z-3b3fa742-s20260828-spectrum-shard-000/manifest.json": "5005e2e130fd0a979f98959a74e14db124f1eab19fa81cb234a0fae2922e56c7",
+    "results/v3/raw/geometry-v3-20260829T160011Z-efb45693-s20260828-spectrum-shard-001/manifest.json": "8aa72ceb4f8d30cde180d078246c965b00956f466ed26fadff8bd8c920d68206",
+    "results/v3/raw/geometry-v3-20260829T160152Z-3b3fa742-s20260828-pareto-shard-000/manifest.json": "f81592d8828b7d25b8d53dca90f1fa4f2e61bcd4a1ce90068432bb8e826fc1e5",
+    "results/v3/raw/geometry-v3-20260829T160152Z-efb45693-s20260828-pareto-shard-001/manifest.json": "9dcd55613354468e4e79d3466c0f8863ccdf3b2a47ccfaa2d2ec50a482dc3a43",
+    "results/v3/raw/geometry-v3-20260829T162846Z-3b3fa742-s20260828/manifest.json": "2403246e50e3a4065a0a9cdb2060adbb3e8798a31d6ad1ceff7c4cd845bb0783",
+    "results/v3/raw/geometry-v3-20260829T163042Z-3b3fa742-s20260828-pareto-shard-000/manifest.json": "dbf4fe4452bd4f16983a23361ed8e4b184e131f3e855618103bdf6f6112c1a71",
+    "results/v3/raw/geometry-v3-20260829T163042Z-efb45693-s20260828-pareto-shard-001/manifest.json": "d7531adfde811876e6bc8c7e02abdfca1f323e538c221b41d626309fa41a3760",
+    "results/v3/raw/geometry-v3-20260829T172205Z-3b3fa742-s20260828-pareto-shard-000/manifest.json": "4ddeba06fc74eaf9b4015d37923501543b32ca82604c33a52404f63c398ac6f7",
+    "results/v3/raw/geometry-v3-20260829T172205Z-3b3fa742-s20260828-pareto-shard-000/pareto_records-shard-000.parquet": "4ff1f6f4410ee1e37990d541e35bf65b87a611fc3dab6de9b9ccc30e0296ee32",
+    "results/v3/raw/geometry-v3-20260829T172205Z-efb45693-s20260828-pareto-shard-001/manifest.json": "dfef9ff1f176a0628b84ae2ed474d8d9c1d200338cb87596251f7694576732a1",
+    "results/v3/raw/geometry-v3-20260829T172205Z-efb45693-s20260828-pareto-shard-001/pareto_records-shard-001.parquet": "cf6ff0b0945436e608a3861ea14c7b849e18dc0b5657723bc6ed04ca782c0d92"
   },
   "strongest_warranted_conclusion": "D"
 }

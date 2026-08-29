@@ -8,6 +8,7 @@ from jclosure.reporting_v3 import (
     _geometry_sources,
     _latest_completed_closure_sources,
     summarize_closure_v3,
+    summarize_pareto_v3,
 )
 
 
@@ -133,3 +134,65 @@ def test_closure_sources_require_a_complete_shard_group(tmp_path: Path):
     assert group == "paired-run"
     assert sorted(frame["prompt_id"]) == ["p0", "p1"]
     assert len(paths) == 2
+
+
+def test_pareto_summary_keeps_dense_and_sparse_gates_independent():
+    common = {
+        "layer": 24,
+        "dictionary_size": 4096,
+        "null_tolerance": float("nan"),
+        "strength": 0.2,
+        "rms_drift": 0.01,
+        "displacement_fraction": 0.25,
+        "natural": True,
+        "valid": True,
+        "exclusion_reason": None,
+        "optimization_status": "NOT_APPLICABLE",
+    }
+    rows = [
+        {
+            **common,
+            "prompt_id": "dense",
+            "paired_trial_id": "dense",
+            "state_definition": "V3-Dense",
+            "method": "isotropic_random",
+            "dense_cosine": 0.999,
+            "top10_overlap": 0.9,
+            "sparse_support_f1": 0.0,
+            "sparse_weighted_jaccard": 0.0,
+            "sparse_coefficient_cosine": 0.0,
+            "sparse_reconstruction_cosine": 0.0,
+        },
+        {
+            **common,
+            "prompt_id": "sparse-pass",
+            "paired_trial_id": "sparse-pass",
+            "state_definition": "V3-Sparse",
+            "method": "sparse_remainder",
+            "dense_cosine": 0.5,
+            "top10_overlap": 0.1,
+            "sparse_support_f1": 0.9,
+            "sparse_weighted_jaccard": 0.97,
+            "sparse_coefficient_cosine": 0.999,
+            "sparse_reconstruction_cosine": 0.999,
+        },
+        {
+            **common,
+            "prompt_id": "sparse-fail",
+            "paired_trial_id": "sparse-fail",
+            "state_definition": "V3-Sparse",
+            "method": "sparse_remainder",
+            "dense_cosine": 1.0,
+            "top10_overlap": 1.0,
+            "sparse_support_f1": 0.9,
+            "sparse_weighted_jaccard": 0.5,
+            "sparse_coefficient_cosine": 0.999,
+            "sparse_reconstruction_cosine": 0.999,
+        },
+    ]
+    summary = summarize_pareto_v3(pd.DataFrame(rows))
+    dense = summary[summary["state_definition"] == "V3-Dense"].iloc[0]
+    sparse = summary[summary["state_definition"] == "V3-Sparse"].iloc[0]
+    assert dense["formal_valid_rows"] == 1
+    assert sparse["formal_valid_rows"] == 1
+    assert sparse["state_equal_rows"] == 1

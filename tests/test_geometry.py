@@ -192,6 +192,24 @@ def test_tangent_step_fp32_guard_never_falls_below_nominal_boundary():
         assert float(torch.linalg.vector_norm(delta)) >= target
 
 
+def test_adaptive_chord_guard_meets_boundary_in_model_width():
+    generator = torch.Generator().manual_seed(20260830)
+    for dimension in (64, 2560):
+        for _ in range(16):
+            h = torch.randn(dimension, generator=generator)
+            direction = torch.randn(dimension, generator=generator)
+            direction = direction - h * (torch.dot(direction, h) / torch.dot(h, h))
+            # Mimic the small radial residual left by a finite-precision basis.
+            direction = direction + 5e-7 * h / torch.linalg.vector_norm(h)
+            target = 0.2 * float(torch.linalg.vector_norm(h))
+            step = DenseNullProjector.tangent_step_for_minimum_chord(
+                h, direction, target
+            )
+            unit = direction / torch.linalg.vector_norm(direction)
+            delta = DenseNullProjector.retract_to_sphere(h, unit * step)
+            assert float(torch.linalg.vector_norm(delta)) >= target
+
+
 def test_hard_optimizer_backtracks_until_naturality_constraint_passes():
     mapping = dense_map()
     h = torch.tensor([1.0, 0.0, 0.0, 0.0])

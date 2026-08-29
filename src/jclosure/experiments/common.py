@@ -57,6 +57,13 @@ class ExperimentContext:
         manifest["status"] = status
         write_json_atomic(self.manifest_path, manifest)
 
+    def fail_progress(self, error: str) -> None:
+        run_directory = self.raw_dir / self.run_id
+        for path in sorted(run_directory.glob("*progress.json")):
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            payload.update({"status": "FAILED", "error": error})
+            write_json_atomic(path, payload)
+
 
 def initialize_context(kind: str, args: argparse.Namespace) -> ExperimentContext:
     root = repository_root()

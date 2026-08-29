@@ -11,6 +11,7 @@ independent row-normalized dictionary in :mod:`jclosure.decomposition`.
 
 from __future__ import annotations
 
+import math
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 from typing import Any, Literal
@@ -489,6 +490,34 @@ class DenseNullProjector:
         sine = max(0.0, 1.0 - cosine * cosine) ** 0.5
         return radius * sine / cosine
 
+    @classmethod
+    def tangent_step_for_minimum_chord(
+        cls,
+        h: torch.Tensor,
+        direction: torch.Tensor,
+        target_displacement: float,
+        *,
+        max_corrections: int = 8,
+    ) -> float:
+        """Return a tangent step whose measured FP32 chord meets the target."""
+
+        norm = torch.linalg.vector_norm(direction.float())
+        if not torch.isfinite(norm) or float(norm) <= 1e-20:
+            raise ValueError("cannot construct a chord along a zero direction")
+        unit = direction.float() / norm
+        step = cls.tangent_step_for_chord(h, target_displacement)
+        target = float(target_displacement)
+        correction = 1.0 + 64.0 * torch.finfo(torch.float32).eps
+        for _ in range(max_corrections + 1):
+            delta = cls.retract_to_sphere(h, unit * step)
+            achieved = float(torch.linalg.vector_norm(delta.float()).item())
+            if achieved >= target:
+                return step
+            if achieved <= 1e-20 or not math.isfinite(achieved):
+                break
+            step *= max(target / achieved, correction)
+        raise RuntimeError("FP32 chord correction failed to reach the target")
+
     def optimize_hard_constraints(
         self,
         h: torch.Tensor,
@@ -513,8 +542,10 @@ class DenseNullProjector:
             return self._failure(h, "degenerate_donor_projection")
         direction = projected / projected_norm
         try:
-            step = self.tangent_step_for_chord(h, float(target_displacement))
-        except ValueError:
+            step = self.tangent_step_for_minimum_chord(
+                h, direction, float(target_displacement)
+            )
+        except (ValueError, RuntimeError):
             return self._failure(h, "target_outside_sphere_retraction")
         iterations = 0
         last_reason = "line_search_exhausted"

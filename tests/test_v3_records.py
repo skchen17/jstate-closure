@@ -1,11 +1,13 @@
+import json
 from pathlib import Path
 
 import pytest
 
 from jclosure.baseline_guard import verify_manifest
 from jclosure.config import config_digest
+from jclosure.experiments.common import ExperimentContext
 from jclosure.protocol_v3 import verify_hashes, verify_v3_behavioral_config
-from jclosure.provenance import sha256_file
+from jclosure.provenance import sha256_file, write_json_atomic
 from jclosure.records import ClampSchedule, TrialRecord
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -94,3 +96,29 @@ def test_v3_behavioral_config_must_match_frozen_digest():
         verify_v3_behavioral_config(
             freeze, {"run": {"stage": "closure_v3_confirm"}, "seed": 7}
         )
+
+
+def test_failed_run_updates_atomic_progress_records(tmp_path):
+    raw = tmp_path / "raw"
+    run_id = "run"
+    manifest = raw / run_id / "manifest.json"
+    progress = raw / run_id / "pareto_progress.json"
+    write_json_atomic(manifest, {"status": "RUNNING"})
+    write_json_atomic(progress, {"status": "RUNNING", "records_written": 12})
+    context = ExperimentContext(
+        kind="test",
+        config={},
+        seed=1,
+        root=tmp_path,
+        run_id=run_id,
+        manifest_path=manifest,
+        raw_dir=raw,
+        processed_dir=tmp_path / "processed",
+        figures_dir=tmp_path / "figures",
+        reports_dir=tmp_path / "reports",
+    )
+    context.fail_progress("synthetic failure")
+    payload = json.loads(progress.read_text(encoding="utf-8"))
+    assert payload["status"] == "FAILED"
+    assert payload["error"] == "synthetic failure"
+    assert payload["records_written"] == 12

@@ -86,9 +86,12 @@ Hard-constrained candidates evaluate the train-fit naturality envelope during
 each backtracking step, not merely as a post-hoc filter; interrupted runs from
 the pre-fix implementation remain preserved as failed manifests.
 Sphere-tangent construction treats configured strength as the post-retraction
-chord length. It applies a fixed eight-FP32-ulp construction margin so a nominal
-0.20 target cannot become 0.1999999 through retraction roundoff; raw achieved
-displacement remains stored and the scientific threshold itself is unchanged.
+chord length. An initial eight-FP32-ulp analytic margin is followed by an
+adaptive, measured post-retraction correction (64-epsilon minimum increment,
+at most eight corrections) until the actual FP32 chord reaches the nominal
+target. Raw achieved displacement remains stored and the scientific threshold
+itself is unchanged. The superseded fixed-margin-only retries remain preserved
+as failed manifests.
 
 `V3-Dense` requires dense cosine at least 0.995 and top-10 overlap at least 0.8.
 `V3-Sparse` independently requires support F1 at least 0.8, weighted Jaccard at

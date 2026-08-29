@@ -217,8 +217,10 @@ def construct_dense_candidate(
             "singular_values": values.detach().cpu().tolist(),
         }
     try:
-        tangent_step = projector.tangent_step_for_chord(clean, target)
-    except ValueError:
+        tangent_step = projector.tangent_step_for_minimum_chord(
+            clean, direction, target
+        )
+    except (ValueError, RuntimeError):
         return clean.clone(), {
             "status": "FAILED",
             "failure_reason": "target_outside_sphere_retraction",

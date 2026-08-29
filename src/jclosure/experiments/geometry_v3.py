@@ -821,10 +821,14 @@ def run_pareto(
                                 delta = _scaled(base_direction, strength * natural_scale)
                                 if method == "norm_tangent_dense_null":
                                     try:
-                                        tangent_step = projector.tangent_step_for_chord(
-                                            h, strength * natural_scale
+                                        tangent_step = (
+                                            projector.tangent_step_for_minimum_chord(
+                                                h,
+                                                base_direction,
+                                                strength * natural_scale,
+                                            )
                                         )
-                                    except ValueError:
+                                    except (ValueError, RuntimeError):
                                         candidate = h.clone()
                                         exclusion = "target_outside_sphere_retraction"
                                     else:
@@ -1081,6 +1085,7 @@ def main() -> None:
     parser.add_argument("--shard-count", type=int, default=1)
     args = parser.parse_args()
     context = initialize_context("geometry-v3", args)
+    bank_manifest: Path | None = None
     try:
         immutable = verify_manifest(
             context.root, context.root / "artifacts/phase0_v2_immutable.sha256.json"
@@ -1153,10 +1158,37 @@ def main() -> None:
             outputs=outputs,
         )
     except KeyboardInterrupt:
-        context.finish("FAILED", error="KeyboardInterrupt: run cancelled")
+        context.fail_progress("KeyboardInterrupt: run cancelled")
+        context.finish(
+            "FAILED",
+            error="KeyboardInterrupt: run cancelled",
+            stage=args.stage,
+            limit=args.limit,
+            shard_index=args.shard_index,
+            shard_count=args.shard_count,
+            activation_bank_manifest=(
+                None
+                if bank_manifest is None
+                else str(bank_manifest.relative_to(context.root))
+            ),
+        )
         raise
     except Exception as exc:
-        context.finish("FAILED", error=f"{type(exc).__name__}: {exc}")
+        error = f"{type(exc).__name__}: {exc}"
+        context.fail_progress(error)
+        context.finish(
+            "FAILED",
+            error=error,
+            stage=args.stage,
+            limit=args.limit,
+            shard_index=args.shard_index,
+            shard_count=args.shard_count,
+            activation_bank_manifest=(
+                None
+                if bank_manifest is None
+                else str(bank_manifest.relative_to(context.root))
+            ),
+        )
         raise
 
 

@@ -360,8 +360,10 @@ def _state_preserving_delta(
         return torch.zeros_like(clean, dtype=torch.float32)
     target = float(strength) * float(torch.linalg.vector_norm(difference.float()))
     try:
-        tangent_step = projector.tangent_step_for_chord(clean, target)
-    except ValueError:
+        tangent_step = projector.tangent_step_for_minimum_chord(
+            clean, direction, target
+        )
+    except (ValueError, RuntimeError):
         return torch.zeros_like(clean, dtype=torch.float32)
     tangent = direction.float() * (
         tangent_step / torch.linalg.vector_norm(direction.float()).clamp_min(1e-20)

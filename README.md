@@ -117,9 +117,11 @@ is reported as an exploratory sampling choice, not a threshold adjustment.
 Hard-constrained optimization enforces the train-fit naturality envelope during
 backtracking. The subsequent 200-trial calibration batch is independently
 balanced at 25 anchors per task family and uses IDs that remain paired across
-dictionary sizes. Tangent construction uses a documented eight-FP32-ulp margin
-to prevent retraction roundoff from moving a nominal 0.20 target below the
-unchanged formal threshold; achieved displacement is always stored unrounded.
+dictionary sizes. Tangent construction uses an eight-FP32-ulp analytic margin
+plus a measured adaptive correction with a 64-epsilon minimum increment so the
+actual post-retraction chord cannot remain below the unchanged nominal 0.20
+threshold; achieved displacement is always stored unrounded. Fixed-margin-only
+retry records are retained as failed provenance.
 
 If calibration authorizes behavioral execution, the v3 pilot and confirmation
 launchers shard prompts across both GPUs. Sample targets refer to valid base

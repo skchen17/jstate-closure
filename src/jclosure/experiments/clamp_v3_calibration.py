@@ -780,10 +780,13 @@ def main() -> None:
             formal_valid=int(frame["formal_valid"].sum()),
         )
     except KeyboardInterrupt:
+        context.fail_progress("KeyboardInterrupt: run cancelled")
         context.finish("FAILED", error="KeyboardInterrupt: run cancelled")
         raise
     except Exception as exc:
-        context.finish("FAILED", error=f"{type(exc).__name__}: {exc}")
+        error = f"{type(exc).__name__}: {exc}"
+        context.fail_progress(error)
+        context.finish("FAILED", error=error)
         raise
 
 

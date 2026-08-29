@@ -3,7 +3,8 @@ from pathlib import Path
 import pytest
 
 from jclosure.baseline_guard import verify_manifest
-from jclosure.protocol_v3 import verify_hashes
+from jclosure.config import config_digest
+from jclosure.protocol_v3 import verify_hashes, verify_v3_behavioral_config
 from jclosure.provenance import sha256_file
 from jclosure.records import ClampSchedule, TrialRecord
 
@@ -79,3 +80,17 @@ def test_v3_freeze_hash_guard_rejects_modified_input(tmp_path):
     target.write_text("changed", encoding="utf-8")
     with pytest.raises(RuntimeError, match="freeze hash mismatch"):
         verify_hashes(tmp_path, hashes)
+
+
+def test_v3_behavioral_config_must_match_frozen_digest():
+    config = {"run": {"stage": "closure_v3_pilot"}, "seed": 7}
+    freeze = {
+        "behavioral_config_digests": {
+            "configs/closure_v3_pilot.yaml": config_digest(config)
+        }
+    }
+    assert verify_v3_behavioral_config(freeze, config) == config_digest(config)
+    with pytest.raises(RuntimeError, match="not one of the frozen"):
+        verify_v3_behavioral_config(
+            freeze, {"run": {"stage": "closure_v3_confirm"}, "seed": 7}
+        )

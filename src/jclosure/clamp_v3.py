@@ -46,6 +46,13 @@ class V3ClampValidation:
     sparse_equality: SparseStateEquality | None = None
 
 
+@dataclass(frozen=True)
+class DenseCandidateGeometry:
+    direction: torch.Tensor
+    basis: torch.Tensor
+    singular_values: torch.Tensor
+
+
 DEFAULT_V3_CLAMP_THRESHOLDS = V3ClampThresholds()
 
 
@@ -140,6 +147,24 @@ def construct_sparse_candidate(
     ).activation
 
 
+def prepare_dense_candidate_geometry(
+    clean: torch.Tensor,
+    donor_difference: torch.Tensor,
+    *,
+    layer: int,
+    dense_map: DenseJMap,
+    relative_tolerance: float,
+) -> DenseCandidateGeometry:
+    projector = DenseNullProjector(dense_map, layer)
+    direction, basis, values = projector.donor_projection(
+        clean,
+        donor_difference,
+        relative_tolerance=relative_tolerance,
+        sphere_tangent=True,
+    )
+    return DenseCandidateGeometry(direction, basis, values)
+
+
 def construct_dense_candidate(
     clean: torch.Tensor,
     donor_difference: torch.Tensor,
@@ -152,14 +177,19 @@ def construct_dense_candidate(
     optimized: bool,
     naturality: Callable[[torch.Tensor], bool] | None = None,
     thresholds: V3ClampThresholds = DEFAULT_V3_CLAMP_THRESHOLDS,
+    prepared: DenseCandidateGeometry | None = None,
 ) -> tuple[torch.Tensor, dict[str, Any]]:
     projector = DenseNullProjector(dense_map, layer)
-    direction, basis, values = projector.donor_projection(
+    geometry = prepared or prepare_dense_candidate_geometry(
         clean,
         donor_difference,
+        layer=layer,
+        dense_map=dense_map,
         relative_tolerance=relative_tolerance,
-        sphere_tangent=True,
     )
+    direction = geometry.direction
+    basis = geometry.basis
+    values = geometry.singular_values
     if basis.shape[1] == 0 or float(torch.linalg.vector_norm(direction)) <= 1e-20:
         return clean.clone(), {
             "status": "FAILED",

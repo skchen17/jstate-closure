@@ -14,6 +14,8 @@ PROTOCOL_VERSION = "exploratory_protocol_v3"
 FREEZE_RELATIVE_PATH = Path("artifacts/phase3_protocol_v3.freeze.json")
 PROTOCOL_CODE_PATHS = (
     "configs/geometry_v3.yaml",
+    "configs/closure_v3_pilot.yaml",
+    "configs/closure_v3_confirm.yaml",
     "schemas/geometry-record-v3.schema.json",
     "schemas/trial-record-v3.schema.json",
     "src/jclosure/baseline_guard.py",
@@ -25,6 +27,14 @@ PROTOCOL_CODE_PATHS = (
     "src/jclosure/experiments/clamp_v3_calibration.py",
     "src/jclosure/experiments/closure_v3.py",
     "src/jclosure/experiments/lowdim_search.py",
+    "scripts/run_closure_v3_pilot.sh",
+    "scripts/run_closure_v3_confirm.sh",
+    "scripts/run_mediation_v3.sh",
+    "scripts/run_dictionary_v3.sh",
+)
+BEHAVIORAL_CONFIG_PATHS = (
+    "configs/closure_v3_pilot.yaml",
+    "configs/closure_v3_confirm.yaml",
 )
 
 
@@ -120,6 +130,10 @@ def create_v3_freeze(
         "freeze_created_from_commit": git_commit(repository),
         "config_path": str(config_file.relative_to(repository)),
         "config_digest": config_digest(config),
+        "behavioral_config_digests": {
+            path: config_digest(load_config(repository / path))
+            for path in BEHAVIORAL_CONFIG_PATHS
+        },
         "calibration_run_id": calibration.get("run_id"),
         "thresholds": {
             "dense": config["v3_state"]["dense"],
@@ -148,6 +162,18 @@ def create_v3_freeze(
     )
     write_json_atomic(target, payload)
     return payload
+
+
+def verify_v3_behavioral_config(
+    freeze: dict[str, Any], config: dict[str, Any]
+) -> str:
+    observed = config_digest(config)
+    allowed = set(freeze.get("behavioral_config_digests", {}).values())
+    if observed not in allowed:
+        raise RuntimeError(
+            "behavioral configuration is not one of the frozen v3 configs"
+        )
+    return observed
 
 
 def verify_v3_freeze(

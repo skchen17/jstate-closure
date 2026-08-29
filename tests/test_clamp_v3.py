@@ -9,6 +9,7 @@ from jclosure.clamp_v3 import (
     build_clamp_schedule,
     construct_dense_candidate,
     construct_sparse_candidate,
+    prepare_dense_candidate_geometry,
     project_dense_candidate,
     scheduled_sparse_clamp_transforms,
     validate_v3_clamp,
@@ -127,6 +128,43 @@ def test_dense_projection_preserves_observed_null_displacement_without_rescaling
     assert torch.nn.functional.cosine_similarity(
         clean_state[None], candidate_state[None]
     ).item() >= 0.995
+
+
+def test_prepared_dense_geometry_matches_direct_construction():
+    state_encoder = encoder()
+    mapping = DenseJMap.from_encoder(state_encoder)
+    clean = torch.tensor([2.0, 1.0, 0.5, 0.2])
+    difference = torch.tensor([0.0, 0.0, 0.0, 0.8])
+    prepared = prepare_dense_candidate_geometry(
+        clean,
+        difference,
+        layer=0,
+        dense_map=mapping,
+        relative_tolerance=1e-6,
+    )
+    direct, direct_status = construct_dense_candidate(
+        clean,
+        difference,
+        layer=0,
+        dense_map=mapping,
+        natural_scale=1.0,
+        displacement_fraction=0.2,
+        relative_tolerance=1e-6,
+        optimized=False,
+    )
+    cached, cached_status = construct_dense_candidate(
+        clean,
+        difference,
+        layer=0,
+        dense_map=mapping,
+        natural_scale=1.0,
+        displacement_fraction=0.2,
+        relative_tolerance=1e-6,
+        optimized=False,
+        prepared=prepared,
+    )
+    assert torch.equal(direct, cached)
+    assert direct_status["basis_dimension"] == cached_status["basis_dimension"]
 
 
 def test_schedule_resolves_padding_and_applies_only_recorded_positions():

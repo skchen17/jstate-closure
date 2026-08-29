@@ -21,6 +21,8 @@
     "protocol_version": {"const": "exploratory_protocol_v3"},
     "run_id": {"type": "string", "minLength": 1},
     "paired_trial_id": {"type": "string", "minLength": 1},
+    "base_trial_id": {"type": "string", "minLength": 1},
+    "base_formal_valid": {"type": "boolean"},
     "task_family": {"type": "string", "minLength": 1},
     "state_definition": {"enum": ["V3-Dense", "V3-Sparse"]},
     "dictionary_size": {"enum": [4096, 8192, 16384]},
@@ -32,6 +34,9 @@
     "clamp_mode": {
       "enum": ["single", "persistent_final", "persistent_all"]
     },
+    "condition": {"type": "string", "minLength": 1},
+    "source": {"type": "string", "minLength": 1},
+    "strength": {"type": "number", "minimum": 0},
     "hook_schedule": {"type": "object"},
     "valid": {"type": "boolean"},
     "exclusion_reason": {"type": ["string", "null"]},

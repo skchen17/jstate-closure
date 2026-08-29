@@ -120,3 +120,10 @@ balanced at 25 anchors per task family and uses IDs that remain paired across
 dictionary sizes. Tangent construction uses a documented eight-FP32-ulp margin
 to prevent retraction roundoff from moving a nominal 0.20 target below the
 unchanged formal threshold; achieved displacement is always stored unrounded.
+
+If calibration authorizes behavioral execution, the v3 pilot and confirmation
+launchers shard prompts across both GPUs. Sample targets refer to valid base
+trials per protocol, task family, and perturbation source; controls, strengths,
+and clamp modes are paired records rather than separately inflated cells. The
+final-position arm aligns each sequence at its own final token, while the
+all-non-padding arm requires a length- and template-matched donor.

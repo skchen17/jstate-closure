@@ -3,3 +3,7 @@ extends: closure_v3_pilot.yaml
 run:
   stage: closure_v3_confirm
   valid_per_cell: 500
+  valid_base_trials_by_source:
+    activation_difference: 167
+    natural_collision: 167
+    targeted_probe: 166

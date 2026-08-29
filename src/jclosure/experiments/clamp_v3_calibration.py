@@ -14,9 +14,11 @@ import torch
 
 from jclosure.baseline_guard import verify_manifest
 from jclosure.clamp_v3 import (
+    DenseCandidateGeometry,
     V3ClampThresholds,
     construct_dense_candidate,
     construct_sparse_candidate,
+    prepare_dense_candidate_geometry,
     validate_v3_clamp,
 )
 from jclosure.experiments.common import initialize_context, standard_parser
@@ -181,6 +183,7 @@ def _row(
     method: str,
     tolerance: float,
     thresholds: V3ClampThresholds,
+    dense_geometry: DenseCandidateGeometry | None,
 ) -> dict[str, Any]:
     difference = donor - h
     natural_scale = float(torch.linalg.vector_norm(difference.float()).item())
@@ -221,6 +224,7 @@ def _row(
                 value.detach().cpu().float().numpy()
             ).natural,
             thresholds=thresholds,
+            prepared=dense_geometry,
         )
     finite = bool(torch.isfinite(candidate).all())
     exploding = bool(
@@ -658,6 +662,18 @@ def main() -> None:
                     donor = donor_payload["activations"][layer][-1].to(
                         bundle.hf_model.device
                     ).float()
+                    difference = donor - h
+                    dense_geometry = (
+                        None
+                        if float(torch.linalg.vector_norm(difference)) <= 1e-20
+                        else prepare_dense_candidate_geometry(
+                            h,
+                            difference,
+                            layer=layer,
+                            dense_map=dense_map,
+                            relative_tolerance=tolerance,
+                        )
+                    )
                     for method in context.config["clamp_v3"]["methods"]:
                         row = _row(
                             context=context,
@@ -673,6 +689,7 @@ def main() -> None:
                             method=str(method),
                             tolerance=tolerance,
                             thresholds=thresholds,
+                            dense_geometry=dense_geometry,
                         )
                         rows.append(row)
                         combination_rows.append(row)

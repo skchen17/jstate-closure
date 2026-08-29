@@ -3,6 +3,10 @@ extends: geometry_v3.yaml
 run:
   stage: closure_v3_pilot
   valid_per_cell: 100
+  valid_base_trials_by_source:
+    activation_difference: 100
+    natural_collision: 100
+    targeted_probe: 100
 
 closure_v3:
   perturbation_sources: [activation_difference, natural_collision, targeted_probe]

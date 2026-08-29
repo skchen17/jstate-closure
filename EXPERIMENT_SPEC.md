@@ -126,6 +126,18 @@ the local tangent-null subspace; sparse clamps use the independent sparse
 definition. Perturbation stripping and positive controls use the same selected
 state definition.
 
+Behavioral sample targets count valid base trials by authorized protocol,
+task family, and perturbation source; strength, control condition, and clamp
+mode are paired replays of a base trial rather than independent sample-size
+cells. Pilot source targets are 100 each. Confirmation allocates 500 base
+trials per family as 167 activation-difference, 167 natural-collision, and 166
+targeted-probe trials. These totals are divided exactly across the two
+prompt-hash shards. A base is admitted by its state-preserving one-shot run;
+all invalid attempts remain recorded, and admitted bases are replayed through
+all controls and persistent modes. In the final-position arm, anchor and donor
+states each use their own final token even when their sequence lengths differ;
+the all-non-padding arm continues to require equal length and template.
+
 If dense geometry is near-injective or fails the formal displacement gate, the
 low-dimensional screen compares sparse active atoms, dense-profile PCA,
 deterministic concept aggregation, predictive linear bottlenecks, and a learned
@@ -136,8 +148,9 @@ Phase 0 retention and intervention-retention gates remain mandatory.
 
 ## Statistical contract
 
-Pilot cells target at least 100 valid interventions; confirmatory task families
-target at least 500. Confidence intervals use 10,000 prompt-clustered bootstrap
+Pilot family-by-source cells target at least 100 valid base interventions;
+confirmatory task families target 500 across the preregistered 167/167/166
+source allocation. Confidence intervals use 10,000 prompt-clustered bootstrap
 resamples. Raw effects, valid/attempted counts, attrition, and threshold sweeps
 are always reported. Natural collisions remain observational.
 

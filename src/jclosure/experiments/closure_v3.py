@@ -35,7 +35,7 @@ from jclosure.metrics import (
     token_probability,
 )
 from jclosure.model import load_model_bundle
-from jclosure.protocol_v3 import verify_v3_freeze
+from jclosure.protocol_v3 import verify_v3_behavioral_config, verify_v3_freeze
 from jclosure.provenance import append_jsonl
 from jclosure.recorder import ActivationRecorder, ResidualEditor
 
@@ -66,6 +66,26 @@ def _thresholds(config: dict[str, Any]) -> V3ClampThresholds:
             config["v3_state"]["small_perturbation_min_fraction"]
         ),
     )
+
+
+def _shard_source_target(
+    config: dict[str, Any],
+    source: str,
+    *,
+    shard_index: int,
+    shard_count: int,
+    limit: int | None,
+) -> int:
+    declared = config["run"].get("valid_base_trials_by_source", {})
+    total = int(declared.get(source, config["run"].get("valid_per_cell", 100)))
+    if limit is not None:
+        total = min(total, int(limit))
+    quotient, remainder = divmod(total, shard_count)
+    return quotient + int(shard_index < remainder)
+
+
+def _base_cell_key(protocol_key: str, task_family: str, source: str) -> str:
+    return ":".join((protocol_key, task_family, source))
 
 
 def _bank_path(root: Path, freeze: dict[str, Any]) -> Path:
@@ -349,6 +369,7 @@ def _operational_clamp(
     layer: int,
     *,
     positions: tuple[int, ...],
+    position_scope: str,
     clean_sequence: torch.Tensor,
     donor_sequence: torch.Tensor,
     state_definition: str,
@@ -365,7 +386,8 @@ def _operational_clamp(
     for position in positions:
         current = activation[0, position].float()
         clean = clean_sequence[position].to(current.device).float()
-        donor = donor_sequence[position].to(current.device).float()
+        donor_position = -1 if position_scope == "final" else position
+        donor = donor_sequence[donor_position].to(current.device).float()
         natural_scale = float(torch.linalg.vector_norm(donor - clean).item())
         if state_definition == "V3-Sparse":
             candidate = construct_sparse_candidate(
@@ -481,6 +503,7 @@ def _run_condition(
             transforms[layer] = partial(
                 _operational_clamp,
                 positions=_positions(schedule, layer),
+                position_scope=position_scope,
                 clean_sequence=clean_by_layer[layer],
                 donor_sequence=donor_by_layer[layer],
                 state_definition=state_definition,
@@ -591,10 +614,12 @@ def main() -> None:
     parser.add_argument("--protocol")
     parser.add_argument("--shard-index", type=int, default=0)
     parser.add_argument("--shard-count", type=int, default=1)
+    parser.add_argument("--shard-group-id", default="single-shard")
     args = parser.parse_args()
     context = initialize_context("closure-v3", args)
     try:
         freeze = verify_v3_freeze(context.root)
+        verify_v3_behavioral_config(freeze, context.config)
         protocol_keys = (
             [args.protocol]
             if args.protocol
@@ -614,11 +639,9 @@ def main() -> None:
             if record["split"] == "audit" and record["teacher_correct"]
         ]
         fit = [record for record in records if record["split"] == "fit"]
-        target = int(context.config["run"]["valid_per_cell"])
-        if args.limit is not None:
-            target = min(target, args.limit)
         attempts: dict[str, int] = defaultdict(int)
         valid_counts: dict[str, int] = defaultdict(int)
+        cell_targets: dict[str, int] = {}
         output_rows = 0
         for protocol_key in protocol_keys:
             protocol = freeze["eligible_protocols"][protocol_key]
@@ -729,8 +752,9 @@ def main() -> None:
                                 clean = clean_by_layer[l0][position].to(
                                     bundle.hf_model.device
                                 )
+                                donor_position = -1 if scope == "final" else position
                                 difference = (
-                                    source_payload["activations"][l0][position]
+                                    source_payload["activations"][l0][donor_position]
                                     .to(bundle.hf_model.device)
                                     .float()
                                     - clean
@@ -762,7 +786,54 @@ def main() -> None:
                             if not source_delta:
                                 continue
                             for strength in context.config["closure_v3"]["strengths"]:
-                                for condition in context.config["closure_v3"]["conditions"]:
+                                cell = _base_cell_key(
+                                    protocol_key, anchor["task_family"], str(source)
+                                )
+                                target = _shard_source_target(
+                                    context.config,
+                                    str(source),
+                                    shard_index=args.shard_index,
+                                    shard_count=args.shard_count,
+                                    limit=args.limit,
+                                )
+                                cell_targets[cell] = target
+                                if valid_counts[cell] >= target:
+                                    continue
+                                attempts[cell] += 1
+                                if attempts[cell] > target * int(
+                                    context.config["closure_v3"][
+                                        "max_attempt_multiplier"
+                                    ]
+                                ):
+                                    continue
+                                base_trial_id = hashlib.sha256(
+                                    "\x1f".join(
+                                        (
+                                            anchor["prompt_id"],
+                                            active_donor["prompt_id"],
+                                            str(l0),
+                                            str(l1),
+                                            str(scope),
+                                            source,
+                                            str(float(strength)),
+                                        )
+                                    ).encode()
+                                ).hexdigest()
+                                pending: list[dict[str, Any]] = []
+                                base_formal_valid = False
+                                conditions = [
+                                    "state_preserving",
+                                    *(
+                                        value
+                                        for value in context.config["closure_v3"][
+                                            "conditions"
+                                        ]
+                                        if value != "state_preserving"
+                                    ),
+                                ]
+                                for condition in conditions:
+                                    if condition != "state_preserving" and not base_formal_valid:
+                                        continue
                                     if condition == "matched_random":
                                         deltas = {
                                             position: matched_random_direction(
@@ -808,33 +879,24 @@ def main() -> None:
                                     else:
                                         deltas = source_delta
                                     modes = (
-                                        context.config["closure_v3"]["modes"]
+                                        [
+                                            "single",
+                                            *(
+                                                value
+                                                for value in context.config[
+                                                    "closure_v3"
+                                                ]["modes"]
+                                                if value != "single"
+                                            ),
+                                        ]
                                         if condition == "state_preserving"
                                         else ["single"]
                                     )
                                     for mode in modes:
-                                        cell = ":".join(
-                                            map(
-                                                str,
-                                                (
-                                                    protocol_key,
-                                                    anchor["task_family"],
-                                                    l1,
-                                                    scope,
-                                                    source,
-                                                    strength,
-                                                    condition,
-                                                    mode,
-                                                ),
-                                            )
-                                        )
-                                        if valid_counts[cell] >= target:
-                                            continue
-                                        attempts[cell] += 1
-                                        if attempts[cell] > target * int(
-                                            context.config["closure_v3"][
-                                                "max_attempt_multiplier"
-                                            ]
+                                        if (
+                                            condition == "state_preserving"
+                                            and mode != "single"
+                                            and not base_formal_valid
                                         ):
                                             continue
                                         result = _run_condition(
@@ -861,67 +923,57 @@ def main() -> None:
                                             tolerance=tolerance,
                                             thresholds=thresholds,
                                         )
-                                        valid_counts[cell] += int(result["valid"])
-                                        base_trial_id = hashlib.sha256(
-                                            "\x1f".join(
-                                                (
-                                                    anchor["prompt_id"],
-                                                    active_donor["prompt_id"],
-                                                    str(l0),
-                                                    str(l1),
-                                                    str(scope),
-                                                    source,
-                                                    str(float(strength)),
-                                                )
-                                            ).encode()
-                                        ).hexdigest()
+                                        if condition == "state_preserving" and mode == "single":
+                                            base_formal_valid = bool(result["valid"])
                                         paired = hashlib.sha256(
                                             f"{base_trial_id}\x1f{condition}\x1f{mode}".encode()
                                         ).hexdigest()
-                                        path = (
-                                            context.raw_dir
-                                            / context.run_id
-                                            / "trials"
-                                            / anchor["task_family"]
-                                            / f"part-shard-{args.shard_index:03d}.jsonl"
+                                        pending.append(
+                                            {
+                                                "schema_version": 3,
+                                                "protocol_version": PROTOCOL,
+                                                "run_id": context.run_id,
+                                                "paired_trial_id": paired,
+                                                "base_trial_id": base_trial_id,
+                                                "prompt_id": anchor["prompt_id"],
+                                                "donor_id": active_donor["prompt_id"],
+                                                "template_id": anchor["template_id"],
+                                                "task_family": anchor["task_family"],
+                                                "state_definition": state_definition,
+                                                "dictionary_size": size,
+                                                "dictionary_hash": vocabulary.digest,
+                                                "layer": l1,
+                                                "l0": l0,
+                                                "future_layers": future_layers,
+                                                "position_scope": scope,
+                                                "condition": condition,
+                                                "source": source,
+                                                "strength": float(strength),
+                                                "clamp_mode": mode,
+                                                "probe_auc": probe_auc,
+                                                **result,
+                                            }
                                         )
-                                        append_jsonl(
-                                            path,
-                                            [
-                                                {
-                                                    "schema_version": 3,
-                                                    "protocol_version": PROTOCOL,
-                                                    "run_id": context.run_id,
-                                                    "paired_trial_id": paired,
-                                                    "base_trial_id": base_trial_id,
-                                                    "prompt_id": anchor["prompt_id"],
-                                                    "donor_id": active_donor["prompt_id"],
-                                                    "template_id": anchor["template_id"],
-                                                    "task_family": anchor["task_family"],
-                                                    "state_definition": state_definition,
-                                                    "dictionary_size": size,
-                                                    "dictionary_hash": vocabulary.digest,
-                                                    "layer": l1,
-                                                    "l0": l0,
-                                                    "future_layers": future_layers,
-                                                    "position_scope": scope,
-                                                    "condition": condition,
-                                                    "source": source,
-                                                    "strength": float(strength),
-                                                    "clamp_mode": mode,
-                                                    "probe_auc": probe_auc,
-                                                    **result,
-                                                }
-                                            ],
-                                        )
-                                        output_rows += 1
+                                if base_formal_valid:
+                                    valid_counts[cell] += 1
+                                for record in pending:
+                                    record["base_formal_valid"] = base_formal_valid
+                                path = (
+                                    context.raw_dir
+                                    / context.run_id
+                                    / "trials"
+                                    / anchor["task_family"]
+                                    / f"part-shard-{args.shard_index:03d}.jsonl"
+                                )
+                                append_jsonl(path, pending)
+                                output_rows += len(pending)
         summary = pd.DataFrame(
             [
                 {
                     "cell": cell,
                     "attempted": attempts[cell],
                     "valid": valid_counts[cell],
-                    "target": target,
+                    "target": cell_targets[cell],
                 }
                 for cell in sorted(attempts)
             ]
@@ -934,9 +986,14 @@ def main() -> None:
             "COMPLETED",
             freeze_status=freeze["status"],
             protocols=protocol_keys,
+            shard_group_id=args.shard_group_id,
+            shard_index=args.shard_index,
+            shard_count=args.shard_count,
             trial_records=output_rows,
             cells=len(attempts),
-            cells_reaching_target=sum(value >= target for value in valid_counts.values()),
+            cells_reaching_target=sum(
+                valid_counts[cell] >= cell_targets[cell] for cell in cell_targets
+            ),
             cell_summary=str(summary_path.relative_to(context.root)),
         )
     except KeyboardInterrupt:

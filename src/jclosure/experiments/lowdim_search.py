@@ -52,20 +52,36 @@ def _latest_completed_geometry_dirs(root: Path, stage: str) -> list[Path]:
     return [latest[index][1] for index in sorted(latest)]
 
 
-def _triggered(root: Path) -> tuple[bool, dict[str, Any]]:
-    spectrum_dirs = _latest_completed_geometry_dirs(root, "spectrum")
-    local_paths = [
-        path
-        for directory in spectrum_dirs
-        for path in sorted(directory.glob("local_spectra-*.parquet"))
-        if not path.name.endswith("-smoke.parquet")
-    ]
-    pareto_dirs = _latest_completed_geometry_dirs(root, "pareto")
-    pareto_paths = [
-        path
-        for directory in pareto_dirs
-        for path in sorted(directory.glob("pareto_records-shard-*.parquet"))
-    ]
+def _triggered(
+    root: Path, freeze: dict[str, Any] | None = None
+) -> tuple[bool, dict[str, Any]]:
+    if freeze is not None:
+        frozen_paths = [root / path for path in freeze.get("data_hashes", {})]
+        local_paths = [
+            path
+            for path in frozen_paths
+            if path.name.startswith("local_spectra-")
+            and not path.name.endswith("-smoke.parquet")
+        ]
+        pareto_paths = [
+            path
+            for path in frozen_paths
+            if path.name.startswith("pareto_records-shard-")
+        ]
+    else:
+        spectrum_dirs = _latest_completed_geometry_dirs(root, "spectrum")
+        local_paths = [
+            path
+            for directory in spectrum_dirs
+            for path in sorted(directory.glob("local_spectra-*.parquet"))
+            if not path.name.endswith("-smoke.parquet")
+        ]
+        pareto_dirs = _latest_completed_geometry_dirs(root, "pareto")
+        pareto_paths = [
+            path
+            for directory in pareto_dirs
+            for path in sorted(directory.glob("pareto_records-shard-*.parquet"))
+        ]
     if not local_paths:
         return False, {"reason": "local_geometry_missing"}
     local = pd.concat([pd.read_parquet(path) for path in local_paths], ignore_index=True)
@@ -447,7 +463,7 @@ def main() -> None:
         freeze = verify_v3_freeze(
             context.root, require_behavioral_authorization=False
         )
-        triggered, trigger = _triggered(context.root)
+        triggered, trigger = _triggered(context.root, freeze)
         if not triggered and not args.force:
             context.finish("NOT_TRIGGERED", trigger=trigger)
             return

@@ -1,3 +1,7 @@
+import json
+from types import SimpleNamespace
+
+import pandas as pd
 import torch
 
 from jclosure.clamp_v3 import (
@@ -5,12 +9,17 @@ from jclosure.clamp_v3 import (
     build_clamp_schedule,
     construct_dense_candidate,
     construct_sparse_candidate,
+    project_dense_candidate,
     scheduled_sparse_clamp_transforms,
     validate_v3_clamp,
 )
+from jclosure.config import load_config
 from jclosure.experiments.clamp_v3_calibration import (
+    _assigned_layers,
     _balanced_calibration_records,
     _calibration_trial_ids,
+    _merge_shards,
+    summarize_calibration,
 )
 from jclosure.geometry import DenseJMap
 from jclosure.jstate import ConceptVocabulary, JStateEncoder
@@ -96,6 +105,30 @@ def test_dense_candidate_reports_zero_dimensional_intersection():
     assert torch.equal(candidate, clean)
 
 
+def test_dense_projection_preserves_observed_null_displacement_without_rescaling():
+    state_encoder = encoder()
+    mapping = DenseJMap.from_encoder(state_encoder)
+    clean = torch.tensor([2.0, 1.0, 0.5, 0.2])
+    perturbed = torch.tensor([2.0, 1.0, 0.5, 0.7])
+    candidate, status = project_dense_candidate(
+        clean,
+        perturbed,
+        layer=0,
+        dense_map=mapping,
+        relative_tolerance=1e-6,
+        optimized=False,
+    )
+    assert status["status"] == "PROJECTED"
+    assert torch.linalg.vector_norm(candidate - clean) <= torch.linalg.vector_norm(
+        perturbed - clean
+    ) + 1e-6
+    clean_state = mapping.dense_state(clean, 0)
+    candidate_state = mapping.dense_state(candidate, 0)
+    assert torch.nn.functional.cosine_similarity(
+        clean_state[None], candidate_state[None]
+    ).item() >= 0.995
+
+
 def test_schedule_resolves_padding_and_applies_only_recorded_positions():
     state_encoder = encoder()
     schedule = build_clamp_schedule(
@@ -161,3 +194,123 @@ def test_calibration_pairing_is_shared_across_dictionaries_and_methods():
     assert (base_local, paired_local) == _calibration_trial_ids(
         "anchor", "donor", 24, "local"
     )
+
+
+def test_calibration_layer_shards_are_disjoint_and_complete():
+    layers = list(range(23, 30))
+    left = _assigned_layers(layers, shard_index=0, shard_count=2)
+    right = _assigned_layers(layers, shard_index=1, shard_count=2)
+    assert not set(left) & set(right)
+    assert sorted([*left, *right]) == layers
+
+
+def test_calibration_merge_requires_one_completed_record_per_shard(tmp_path):
+    raw = tmp_path / "results/v3/raw"
+    processed = tmp_path / "results/v3/processed"
+    processed.mkdir(parents=True)
+    bank = tmp_path / "bank.jsonl"
+    bank.write_text("{}\n", encoding="utf-8")
+    config = load_config("configs/geometry_v3.yaml")
+    layers = [int(value) for value in config["geometry"]["candidate_layers"]]
+    for shard_index in range(2):
+        directory = raw / f"clamp-v3-calibration-shard-{shard_index}"
+        directory.mkdir(parents=True)
+        assigned = _assigned_layers(
+            layers, shard_index=shard_index, shard_count=2
+        )
+        frame = pd.DataFrame(
+            [
+                {
+                    "base_trial_id": f"base-{layer}",
+                    "method": "dense_local_null",
+                    "dictionary_size": 4096,
+                    "layer": layer,
+                    "formal_valid": False,
+                    "state_valid_before_naturality": False,
+                    "natural": False,
+                    "construction_failure_reason": "dense_equality_constraint",
+                    "small_perturbation_valid": False,
+                    "finite": True,
+                    "activation_explosion": False,
+                }
+                for layer in assigned
+            ]
+        )
+        candidates = directory / "candidates.parquet"
+        frame.to_parquet(candidates, index=False)
+        manifest = {
+            "run_id": directory.name,
+            "status": "COMPLETED_SHARD",
+            "shard_group_id": "group",
+            "shard_index": shard_index,
+            "created_at": f"2026-01-0{shard_index + 1}",
+            "git_commit": "commit",
+            "config_digest": "config",
+            "activation_bank_manifest": "bank.jsonl",
+            "candidate_records": str(candidates.relative_to(tmp_path)),
+            "hook_sanity": {
+                "zero_exact": True,
+                "identity_exact": True,
+                "determinism_exact": True,
+                "cleanup_exact": True,
+                "finite": True,
+            },
+            "v2_hash_guard": {"status": "PASSED"},
+        }
+        (directory / "manifest.json").write_text(
+            json.dumps(manifest), encoding="utf-8"
+        )
+    context = SimpleNamespace(
+        root=tmp_path,
+        raw_dir=raw,
+        processed_dir=processed,
+        run_id="merge-run",
+        config=config,
+    )
+    output, summary = _merge_shards(
+        context,
+        shard_group_id="group",
+        shard_count=2,
+        bank_manifest=bank,
+    )
+    assert output.is_file()
+    assert summary["attempted"] == len(layers)
+    assert summary["source_shards"] == [
+        "clamp-v3-calibration-shard-0",
+        "clamp-v3-calibration-shard-1",
+    ]
+
+
+def test_calibration_naturality_fraction_uses_pre_naturality_valid_set():
+    frame = pd.DataFrame(
+        [
+            {
+                "layer": 23,
+                "dictionary_size": 4096,
+                "method": "dense_local_null",
+                "state_valid_before_naturality": True,
+                "formal_valid": index < 180,
+                "natural": index < 180,
+                "construction_failure_reason": None,
+                "small_perturbation_valid": False,
+                "finite": True,
+                "activation_explosion": False,
+            }
+            for index in range(200)
+        ]
+    )
+    sanity = {
+        "zero_exact": True,
+        "identity_exact": True,
+        "determinism_exact": True,
+        "cleanup_exact": True,
+        "finite": True,
+    }
+    summary = summarize_calibration(
+        frame, config=load_config("configs/geometry_v3.yaml"), hook_sanity=sanity
+    )
+    layer = summary["layers"][0]
+    assert layer["strict_valid"] == 200
+    assert layer["formal_natural_valid"] == 180
+    assert layer["natural_fraction_among_valid"] == 0.9
+    assert "naturality_valid_fraction" in layer["reasons"]

@@ -19,13 +19,13 @@ from sklearn.model_selection import StratifiedKFold, cross_val_predict
 from jclosure.clamp_v3 import (
     V3ClampThresholds,
     build_clamp_schedule,
-    construct_dense_candidate,
     construct_sparse_candidate,
+    project_dense_candidate,
     validate_v3_clamp,
 )
 from jclosure.experiments.common import initialize_context, standard_parser
 from jclosure.experiments.geometry_v3 import NaturalityModel, _load_bank
-from jclosure.geometry import DenseJMap
+from jclosure.geometry import DenseJMap, DenseNullProjector
 from jclosure.interventions import matched_random_direction
 from jclosure.jstate import ConceptVocabulary, JStateEncoder, jstate_distance
 from jclosure.metrics import (
@@ -143,6 +143,7 @@ def _natural_collision_donor(
     layer: int,
     encoder: JStateEncoder,
     scope: str,
+    state_definition: str,
 ) -> dict[str, Any] | None:
     valid = [
         record
@@ -166,7 +167,14 @@ def _natural_collision_donor(
     for record in valid:
         payload = _load_payload(root, record)
         h = payload["activations"][layer][-1].float()
-        distance = jstate_distance(anchor_state, encoder.encode(h, layer))
+        metric = (
+            "sparse_weighted_jaccard"
+            if state_definition == "V3-Sparse"
+            else "dense_cosine"
+        )
+        distance = jstate_distance(
+            anchor_state, encoder.encode(h, layer), metric=metric
+        )
         activation_distance = float(torch.linalg.vector_norm(h - anchor_h))
         ranked.append((distance, -activation_distance, record["prompt_hash"], record))
     ranked.sort(key=lambda value: (value[0], value[2]))
@@ -205,7 +213,6 @@ def _targeted_probes(
     fit: list[dict[str, Any]],
     *,
     layer: int,
-    encoder: JStateEncoder,
     min_auc: float,
 ) -> dict[str, tuple[torch.Tensor, float]]:
     by_family: dict[str, list[dict[str, Any]]] = defaultdict(list)
@@ -239,10 +246,81 @@ def _targeted_probes(
             continue
         model.fit(states, labels)
         direction = torch.from_numpy(model.coef_[0]).float()
-        stripped = encoder.decompose(direction, layer).remainder
-        if float(torch.linalg.vector_norm(stripped)) > 1e-20:
-            output[family] = (stripped, auc)
+        if float(torch.linalg.vector_norm(direction)) > 1e-20:
+            output[family] = (direction, auc)
     return output
+
+
+def _matched_norm(direction: torch.Tensor, reference: torch.Tensor) -> torch.Tensor:
+    denominator = torch.linalg.vector_norm(direction.float()).clamp_min(1e-20)
+    return direction.float() * (
+        torch.linalg.vector_norm(reference.float()) / denominator
+    )
+
+
+def _state_preserving_delta(
+    clean: torch.Tensor,
+    difference: torch.Tensor,
+    *,
+    strength: float,
+    layer: int,
+    state_definition: str,
+    encoder: JStateEncoder,
+    dense_map: DenseJMap,
+    tolerance: float,
+) -> torch.Tensor:
+    if state_definition == "V3-Sparse":
+        preliminary = clean.float() + difference.float() * float(strength)
+        return (
+            construct_sparse_candidate(
+                clean.float(), preliminary, layer=layer, encoder=encoder
+            )
+            - clean.float()
+        )
+    projector = DenseNullProjector(dense_map, layer)
+    direction, basis, _ = projector.donor_projection(
+        clean.float(),
+        difference.float(),
+        relative_tolerance=tolerance,
+        sphere_tangent=True,
+    )
+    if basis.shape[1] == 0 or float(torch.linalg.vector_norm(direction)) <= 1e-20:
+        return torch.zeros_like(clean, dtype=torch.float32)
+    target = float(strength) * float(torch.linalg.vector_norm(difference.float()))
+    try:
+        tangent_step = projector.tangent_step_for_chord(clean, target)
+    except ValueError:
+        return torch.zeros_like(clean, dtype=torch.float32)
+    tangent = direction.float() * (
+        tangent_step / torch.linalg.vector_norm(direction.float()).clamp_min(1e-20)
+    )
+    return projector.retract_to_sphere(clean, tangent).float()
+
+
+def _state_changing_component(
+    clean: torch.Tensor,
+    difference: torch.Tensor,
+    *,
+    layer: int,
+    state_definition: str,
+    encoder: JStateEncoder,
+    dense_map: DenseJMap,
+    tolerance: float,
+) -> torch.Tensor:
+    if state_definition == "V3-Sparse":
+        component = encoder.decompose(difference.float(), layer).reconstruction
+    else:
+        projector = DenseNullProjector(dense_map, layer)
+        null, _, _ = projector.donor_projection(
+            clean.float(),
+            difference.float(),
+            relative_tolerance=tolerance,
+            sphere_tangent=True,
+        )
+        component = difference.float() - null
+    if float(torch.linalg.vector_norm(component.float())) <= 1e-20:
+        return torch.zeros_like(difference, dtype=torch.float32)
+    return _matched_norm(component, difference)
 
 
 def _positions(schedule, layer: int) -> tuple[int, ...]:
@@ -280,6 +358,7 @@ def _operational_clamp(
     naturality: NaturalityModel,
     tolerance: float,
     thresholds: V3ClampThresholds,
+    require_formal_displacement: bool,
     capture: dict[tuple[int, int], dict[str, Any]],
 ) -> torch.Tensor:
     output = activation.clone()
@@ -294,13 +373,11 @@ def _operational_clamp(
             )
             construction = {"status": "CONSTRUCTED", "failure_reason": None}
         else:
-            candidate, construction = construct_dense_candidate(
+            candidate, construction = project_dense_candidate(
                 clean,
-                current - clean,
+                current,
                 layer=layer,
                 dense_map=dense_map,
-                natural_scale=natural_scale,
-                displacement_fraction=thresholds.formal_displacement,
                 relative_tolerance=tolerance,
                 optimized=method == "dense_optimized",
                 naturality=lambda value: naturality.score(
@@ -320,9 +397,22 @@ def _operational_clamp(
             natural=natural,
             thresholds=thresholds,
         )
+        equality_failures = {
+            reason
+            for reason in validation.failure_reasons
+            if reason
+            not in {"displacement_below_sensitivity", "displacement_below_formal"}
+        }
+        clamp_valid = (
+            validation.formal_valid
+            if require_formal_displacement
+            else not equality_failures
+        )
         capture[(layer, position)] = {
             "validation": validation,
             "construction": construction,
+            "clamp_valid": clamp_valid,
+            "require_formal_displacement": require_formal_displacement,
         }
         output[:, position, :] = candidate.to(output.dtype)
     return output
@@ -377,10 +467,11 @@ def _run_condition(
             },
         )
     elif condition != "clean":
+        multiplier = 1.0 if condition == "state_preserving" else strength
         transforms[l0] = partial(
             _add_delta,
             delta_by_position={
-                position: source_delta[position] * strength
+                position: source_delta[position] * multiplier
                 for position in initial_positions
             },
         )
@@ -399,6 +490,7 @@ def _run_condition(
                 naturality=naturality[layer],
                 tolerance=tolerance,
                 thresholds=thresholds,
+                require_formal_displacement=layer == l1,
                 capture=capture,
             )
     record_layers = [l1, *future_layers]
@@ -412,16 +504,22 @@ def _run_condition(
         layer: recorder.activations[layer][0, -1].detach().float().cpu()
         for layer in record_layers
     }
+    state_metric = (
+        "sparse_weighted_jaccard"
+        if state_definition == "V3-Sparse"
+        else "dense_cosine"
+    )
     future = {
         str(layer): jstate_distance(
             encoder.encode(clean_by_layer[layer][-1].float(), layer),
             encoder.encode(observed[layer], layer),
+            metric=state_metric,
         )
         for layer in future_layers
     }
     validations = [value["validation"] for value in capture.values()]
     valid = condition != "state_preserving" or (
-        bool(validations) and all(value.formal_valid for value in validations)
+        bool(validations) and all(value["clamp_valid"] for value in capture.values())
     )
     perturbation_locations = (
         []
@@ -462,6 +560,10 @@ def _run_condition(
                 "position": position,
                 **asdict(value["validation"]),
                 "construction": value["construction"],
+                "clamp_valid": value["clamp_valid"],
+                "require_formal_displacement": value[
+                    "require_formal_displacement"
+                ],
             }
             for (layer, position), value in sorted(capture.items())
         ],
@@ -560,7 +662,6 @@ def main() -> None:
                     context.root,
                     fit,
                     layer=l0,
-                    encoder=encoder,
                     min_auc=float(
                         context.config["closure_v3"]["targeted_probe_min_auc"]
                     ),
@@ -604,6 +705,7 @@ def main() -> None:
                             layer=l0,
                             encoder=encoder,
                             scope=scope,
+                            state_definition=state_definition,
                         )
                         for source in context.config["closure_v3"][
                             "perturbation_sources"
@@ -624,9 +726,13 @@ def main() -> None:
                             }
                             source_delta: dict[int, torch.Tensor] = {}
                             for position in positions:
-                                clean = clean_by_layer[l0][position]
+                                clean = clean_by_layer[l0][position].to(
+                                    bundle.hf_model.device
+                                )
                                 difference = (
-                                    source_payload["activations"][l0][position].float()
+                                    source_payload["activations"][l0][position]
+                                    .to(bundle.hf_model.device)
+                                    .float()
                                     - clean
                                 )
                                 if source == "targeted_probe":
@@ -635,9 +741,21 @@ def main() -> None:
                                         source_delta = {}
                                         break
                                     direction, probe_auc = probe
-                                    source_delta[position] = direction * (
-                                        torch.linalg.vector_norm(difference)
-                                        / torch.linalg.vector_norm(direction).clamp_min(1e-20)
+                                    stripped = _state_preserving_delta(
+                                        clean,
+                                        direction,
+                                        strength=1.0,
+                                        layer=l0,
+                                        state_definition=state_definition,
+                                        encoder=encoder,
+                                        dense_map=dense_map,
+                                        tolerance=tolerance,
+                                    )
+                                    if float(torch.linalg.vector_norm(stripped)) <= 1e-20:
+                                        source_delta = {}
+                                        break
+                                    source_delta[position] = _matched_norm(
+                                        stripped, difference
                                     )
                                 else:
                                     source_delta[position] = difference
@@ -658,12 +776,33 @@ def main() -> None:
                                         }
                                     elif condition == "j_positive":
                                         deltas = {
-                                            position: encoder.decompose(value, l0).reconstruction
+                                            position: _state_changing_component(
+                                                clean_by_layer[l0][position].to(
+                                                    bundle.hf_model.device
+                                                ),
+                                                value,
+                                                layer=l0,
+                                                state_definition=state_definition,
+                                                encoder=encoder,
+                                                dense_map=dense_map,
+                                                tolerance=tolerance,
+                                            )
                                             for position, value in source_delta.items()
                                         }
                                     elif condition == "state_preserving":
                                         deltas = {
-                                            position: encoder.decompose(value, l0).remainder
+                                            position: _state_preserving_delta(
+                                                clean_by_layer[l0][position].to(
+                                                    bundle.hf_model.device
+                                                ),
+                                                value,
+                                                strength=float(strength),
+                                                layer=l0,
+                                                state_definition=state_definition,
+                                                encoder=encoder,
+                                                dense_map=dense_map,
+                                                tolerance=tolerance,
+                                            )
                                             for position, value in source_delta.items()
                                         }
                                     else:

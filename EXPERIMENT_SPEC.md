@@ -85,6 +85,10 @@ tested fast path rather than being normalized again for every pursuit.
 Hard-constrained candidates evaluate the train-fit naturality envelope during
 each backtracking step, not merely as a post-hoc filter; interrupted runs from
 the pre-fix implementation remain preserved as failed manifests.
+Sphere-tangent construction treats configured strength as the post-retraction
+chord length. It applies a fixed eight-FP32-ulp construction margin so a nominal
+0.20 target cannot become 0.1999999 through retraction roundoff; raw achieved
+displacement remains stored and the scientific threshold itself is unchanged.
 
 `V3-Dense` requires dense cosine at least 0.995 and top-10 overlap at least 0.8.
 `V3-Sparse` independently requires support F1 at least 0.8, weighted Jaccard at
@@ -103,11 +107,24 @@ V3 calibration uses one deterministic batch of 200 anchors, balanced as 25 per
 task family. A base-trial ID is shared across dictionaries and methods, while a
 method-paired ID is shared across dictionaries, so attrition and dictionary-size
 effects can be evaluated on exactly matched constructions.
+Calibration is layer-hash-sharded across both GPUs, checkpoints every
+dictionary/layer cell, and merges only shards with an identical launch group,
+commit, config digest, and activation-bank manifest. The 95% naturality gate is
+computed over candidates passing state equality/RMS/displacement before the
+naturality criterion is applied.
 A protocol needs at least 160/200 strict-valid trials per layer, 95% naturality
 among valid trials, fewer than 5% numerical optimizer failures, passing hook
 controls, and at least four ordered eligible layers. The behavioral runner
 refuses to run unless all source/config/data hashes match the committed Phase 3
 freeze manifest.
+
+At behavioral time, the initial L1 clamp must pass formal displacement. Later
+persistent clamps require measured-state equality, RMS, and naturality but do
+not manufacture a new 0.20 displacement when the current state is already near
+clean. Dense clamps project the observed current-minus-clean displacement into
+the local tangent-null subspace; sparse clamps use the independent sparse
+definition. Perturbation stripping and positive controls use the same selected
+state definition.
 
 If dense geometry is near-injective or fails the formal displacement gate, the
 low-dimensional screen compares sparse active atoms, dense-profile PCA,

@@ -117,4 +117,6 @@ is reported as an exploratory sampling choice, not a threshold adjustment.
 Hard-constrained optimization enforces the train-fit naturality envelope during
 backtracking. The subsequent 200-trial calibration batch is independently
 balanced at 25 anchors per task family and uses IDs that remain paired across
-dictionary sizes.
+dictionary sizes. Tangent construction uses a documented eight-FP32-ulp margin
+to prevent retraction roundoff from moving a nominal 0.20 target below the
+unchanged formal threshold; achieved displacement is always stored unrounded.

@@ -466,7 +466,7 @@ class DenseNullProjector:
 
     @staticmethod
     def tangent_step_for_chord(h: torch.Tensor, target_displacement: float) -> float:
-        """Convert a desired post-retraction chord length to tangent step length."""
+        """Convert a desired chord to a tangent step with a fixed FP32 guard."""
 
         target = float(target_displacement)
         if target < 0:
@@ -476,6 +476,11 @@ class DenseNullProjector:
             raise ValueError("cannot retract around a zero-norm activation")
         if target == 0:
             return 0.0
+        # Retraction is evaluated in FP32 because model activations are FP32.
+        # A deterministic 8-ulp construction margin prevents a nominal 0.20
+        # target from becoming 0.1999999 solely through roundoff. Raw achieved
+        # displacement is still saved and evaluated without post-hoc rounding.
+        target *= 1.0 + 8.0 * torch.finfo(torch.float32).eps
         cosine = 1.0 - target * target / (2.0 * radius * radius)
         if cosine <= 0:
             raise ValueError(

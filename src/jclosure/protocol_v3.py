@@ -24,6 +24,7 @@ PROTOCOL_CODE_PATHS = (
     "src/jclosure/experiments/geometry_v3.py",
     "src/jclosure/experiments/clamp_v3_calibration.py",
     "src/jclosure/experiments/closure_v3.py",
+    "src/jclosure/experiments/lowdim_search.py",
 )
 
 
@@ -32,6 +33,29 @@ def _existing_hashes(root: Path, paths: list[str] | tuple[str, ...]) -> dict[str
     if missing:
         raise FileNotFoundError(f"v3 freeze inputs missing: {missing}")
     return {path: sha256_file(root / path) for path in paths}
+
+
+def _latest_geometry_data_paths(root: Path) -> list[str]:
+    selected: list[str] = []
+    for stage in ("spectrum", "pareto"):
+        latest: dict[int, tuple[str, Path, dict[str, Any]]] = {}
+        for manifest_path in sorted(
+            (root / "results/v3/raw").glob("geometry-v3-*/manifest.json")
+        ):
+            payload = json.loads(manifest_path.read_text(encoding="utf-8"))
+            if payload.get("status") != "COMPLETED" or payload.get("stage") != stage:
+                continue
+            if stage == "pareto" and payload.get("limit") is not None:
+                continue
+            shard = int(payload.get("shard_index", 0))
+            created = str(payload.get("created_at", ""))
+            if shard not in latest or created > latest[shard][0]:
+                latest[shard] = (created, manifest_path, payload)
+        for shard in sorted(latest):
+            _, manifest_path, payload = latest[shard]
+            selected.append(str(manifest_path.relative_to(root)))
+            selected.extend(str(value) for value in payload.get("outputs", {}).values())
+    return sorted(set(selected))
 
 
 def verify_hashes(root: str | Path, hashes: dict[str, str]) -> None:
@@ -67,6 +91,11 @@ def create_v3_freeze(
     source_hashes = _existing_hashes(repository, PROTOCOL_CODE_PATHS)
     candidate_path = repository / calibration["candidate_records"]
     bank_path = repository / calibration["activation_bank_manifest"]
+    geometry_paths = _latest_geometry_data_paths(repository)
+    if not any("map_spectra" in path for path in geometry_paths) or not any(
+        "pareto_records-shard" in path for path in geometry_paths
+    ):
+        raise RuntimeError("formal spectrum and Pareto outputs must precede v3 freeze")
     data_hashes = _existing_hashes(
         repository,
         [
@@ -74,9 +103,11 @@ def create_v3_freeze(
             str(candidate_path.relative_to(repository)),
             str(bank_path.relative_to(repository)),
             "artifacts/phase0_v2_immutable.sha256.json",
+            *geometry_paths,
         ],
     )
     config = load_config(config_file)
+    selected_protocols = set(calibration.get("behavioral_authorized_protocols", []))
     payload = {
         "schema_version": 3,
         "protocol_version": PROTOCOL_VERSION,
@@ -103,7 +134,7 @@ def create_v3_freeze(
         "eligible_protocols": {
             key: value
             for key, value in calibration.get("protocols", {}).items()
-            if value.get("behavioral_authorized")
+            if value.get("behavioral_authorized") and key in selected_protocols
         },
         "position_scopes": config["clamp_v3"]["position_scopes"],
         "clamp_modes": config["clamp_v3"]["modes"],

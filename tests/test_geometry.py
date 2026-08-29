@@ -171,10 +171,25 @@ def test_tangent_step_hits_requested_post_retraction_displacement():
     target = 1.2
     step = DenseNullProjector.tangent_step_for_chord(h, target)
     delta = DenseNullProjector.retract_to_sphere(h, tangent * step)
-    assert torch.linalg.vector_norm(delta).item() == pytest.approx(target, abs=1e-6)
+    achieved = torch.linalg.vector_norm(delta).item()
+    assert achieved >= target
+    assert achieved == pytest.approx(target, rel=2e-6)
     assert torch.linalg.vector_norm(h + delta).item() == pytest.approx(
         torch.linalg.vector_norm(h).item(), abs=1e-6
     )
+
+
+def test_tangent_step_fp32_guard_never_falls_below_nominal_boundary():
+    generator = torch.Generator().manual_seed(11)
+    for _ in range(32):
+        h = torch.randn(64, generator=generator)
+        tangent = torch.randn(64, generator=generator)
+        tangent = tangent - h * (torch.dot(tangent, h) / torch.dot(h, h))
+        tangent = tangent / torch.linalg.vector_norm(tangent)
+        target = 0.2 * float(torch.linalg.vector_norm(h))
+        step = DenseNullProjector.tangent_step_for_chord(h, target)
+        delta = DenseNullProjector.retract_to_sphere(h, tangent * step)
+        assert float(torch.linalg.vector_norm(delta)) >= target
 
 
 def test_hard_optimizer_backtracks_until_naturality_constraint_passes():
@@ -220,7 +235,8 @@ def test_hard_optimizer_interprets_target_as_post_retraction_displacement():
         rms_drift_threshold=1.0,
     )
     assert result.status == "CONVERGED"
-    assert result.displacement == pytest.approx(0.4, abs=1e-6)
+    assert result.displacement >= 0.4
+    assert result.displacement == pytest.approx(0.4, rel=2e-6)
 
 
 def test_sparse_equality_is_independent_of_dense_null():

@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import hashlib
+import json
+import os
 from pathlib import Path
 from typing import Any
 
@@ -247,12 +249,16 @@ def _row(
         reasons.append("nan_or_inf")
     if exploding:
         reasons.append("activation_explosion")
-    formal_valid = bool(
-        validation.formal_valid
+    state_failure_reasons = [
+        reason for reason in validation.failure_reasons if reason != "naturality"
+    ]
+    state_valid_before_naturality = bool(
+        not state_failure_reasons
         and construction.get("status") != "FAILED"
         and finite
         and not exploding
     )
+    formal_valid = state_valid_before_naturality and naturality.natural
     base_trial_id, paired = _calibration_trial_ids(
         anchor_record["prompt_id"], donor_record["prompt_id"], layer, method
     )
@@ -281,6 +287,7 @@ def _row(
         "basis_dimension": construction.get("basis_dimension"),
         "valid": formal_valid,
         "formal_valid": formal_valid,
+        "state_valid_before_naturality": state_valid_before_naturality,
         "small_perturbation_valid": validation.small_perturbation_valid,
         "exclusion_reason": None if formal_valid else ",".join(sorted(set(reasons))),
         "dense_cosine": validation.dense_cosine,
@@ -322,15 +329,16 @@ def summarize_calibration(
     rows: list[dict[str, Any]] = []
     grouped = frame.groupby(["layer", "dictionary_size", "method"], dropna=False)
     for (layer, size, method), group in grouped:
+        state_valid = group[group["state_valid_before_naturality"]]
         valid = group[group["formal_valid"]]
         numerical_failure = group["construction_failure_reason"].isin(
             ["line_search_exhausted", "nan_or_inf"]
         ).sum()
         natural_fraction = (
-            float(valid["natural"].mean()) if len(valid) else 0.0
+            float(state_valid["natural"].mean()) if len(state_valid) else 0.0
         )
         reasons: list[str] = []
-        if len(valid) < required:
+        if len(state_valid) < required:
             reasons.append("strict_valid_count")
         if natural_fraction < natural_required:
             reasons.append("naturality_valid_fraction")
@@ -349,8 +357,9 @@ def summarize_calibration(
                     "V3-Sparse" if method == "sparse_same_definition" else "V3-Dense"
                 ),
                 "attempted": len(group),
-                "strict_valid": len(valid),
-                "strict_valid_rate": len(valid) / max(len(group), 1),
+                "strict_valid": len(state_valid),
+                "strict_valid_rate": len(state_valid) / max(len(group), 1),
+                "formal_natural_valid": len(valid),
                 "small_perturbation_valid": int(
                     group["small_perturbation_valid"].sum()
                 ),
@@ -389,16 +398,149 @@ def summarize_calibration(
             "behavioral_authorized": len(eligible_layers) >= min_layers and bool(eligible_l1),
             "selected_l1": selected,
         }
+    authorized = [
+        key for key, value in by_protocol.items() if value["behavioral_authorized"]
+    ]
+    method_preference = [
+        str(value) for value in config["clamp_v3"]["method_preference"]
+    ]
+    selected_authorized: list[str] = []
+    for size in sorted({value["dictionary_size"] for value in by_protocol.values()}):
+        sparse = [
+            key
+            for key in authorized
+            if by_protocol[key]["dictionary_size"] == size
+            and by_protocol[key]["state_definition"] == "V3-Sparse"
+        ]
+        selected_authorized.extend(sorted(sparse))
+        dense = [
+            key
+            for key in authorized
+            if by_protocol[key]["dictionary_size"] == size
+            and by_protocol[key]["state_definition"] == "V3-Dense"
+        ]
+        if dense:
+            dense.sort(
+                key=lambda key: (
+                    method_preference.index(by_protocol[key]["method"])
+                    if by_protocol[key]["method"] in method_preference
+                    else len(method_preference),
+                    key,
+                )
+            )
+            selected_authorized.append(dense[0])
     return {
         "schema_version": 3,
         "protocol_version": PROTOCOL,
         "hook_sanity": hook_sanity,
         "layers": rows,
         "protocols": by_protocol,
-        "behavioral_authorized_protocols": [
-            key for key, value in by_protocol.items() if value["behavioral_authorized"]
-        ],
+        "all_behavioral_authorized_protocols": sorted(authorized),
+        "behavioral_authorized_protocols": selected_authorized,
     }
+
+
+def _assigned_layers(
+    layers: list[int], *, shard_index: int, shard_count: int
+) -> list[int]:
+    if shard_count <= 0 or not 0 <= shard_index < shard_count:
+        raise ValueError("invalid clamp calibration shard coordinates")
+    assigned = [
+        layer
+        for layer in layers
+        if int(hashlib.sha256(str(layer).encode()).hexdigest(), 16) % shard_count
+        == shard_index
+    ]
+    if not assigned:
+        raise RuntimeError("clamp calibration shard has no assigned layers")
+    return assigned
+
+
+def _latest_group_shards(
+    context, *, shard_group_id: str, shard_count: int
+) -> list[tuple[Path, dict[str, Any]]]:
+    by_index: dict[int, tuple[str, Path, dict[str, Any]]] = {}
+    for path in sorted(context.raw_dir.glob("clamp-v3-calibration-*/manifest.json")):
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        if payload.get("status") != "COMPLETED_SHARD":
+            continue
+        if payload.get("shard_group_id") != shard_group_id:
+            continue
+        index = int(payload["shard_index"])
+        created = str(payload.get("created_at", ""))
+        if index not in by_index or created > by_index[index][0]:
+            by_index[index] = (created, path, payload)
+    missing = sorted(set(range(shard_count)) - set(by_index))
+    if missing:
+        raise RuntimeError(f"clamp calibration merge is missing shards: {missing}")
+    return [(by_index[index][1], by_index[index][2]) for index in range(shard_count)]
+
+
+def _merge_shards(
+    context,
+    *,
+    shard_group_id: str,
+    shard_count: int,
+    bank_manifest: Path,
+) -> tuple[Path, dict[str, Any]]:
+    selected = _latest_group_shards(
+        context, shard_group_id=shard_group_id, shard_count=shard_count
+    )
+    expected_commit = selected[0][1].get("git_commit")
+    expected_config = selected[0][1].get("config_digest")
+    expected_bank = str(bank_manifest.relative_to(context.root))
+    frames: list[pd.DataFrame] = []
+    hook_records: list[dict[str, bool]] = []
+    for _, manifest in selected:
+        if manifest.get("git_commit") != expected_commit:
+            raise RuntimeError("clamp calibration shards use different commits")
+        if manifest.get("config_digest") != expected_config:
+            raise RuntimeError("clamp calibration shards use different configs")
+        if manifest.get("activation_bank_manifest") != expected_bank:
+            raise RuntimeError("clamp calibration shards use different activation banks")
+        frames.append(pd.read_parquet(context.root / manifest["candidate_records"]))
+        hook_records.append(dict(manifest["hook_sanity"]))
+    frame = pd.concat(frames, ignore_index=True)
+    expected_layers = {
+        int(value) for value in context.config["geometry"]["candidate_layers"]
+    }
+    if set(frame["layer"].astype(int)) != expected_layers:
+        raise RuntimeError("merged clamp calibration does not cover every layer")
+    duplicate_columns = [
+        "base_trial_id",
+        "method",
+        "dictionary_size",
+    ]
+    if bool(frame.duplicated(duplicate_columns).any()):
+        raise RuntimeError("merged clamp calibration contains duplicate candidates")
+    hook_sanity = {
+        key: all(record.get(key, False) for record in hook_records)
+        for key in hook_records[0]
+    }
+    raw_path = context.raw_dir / context.run_id / "clamp_candidates.parquet"
+    raw_path.parent.mkdir(parents=True, exist_ok=True)
+    frame.to_parquet(raw_path, index=False)
+    summary = summarize_calibration(
+        frame, config=context.config, hook_sanity=hook_sanity
+    )
+    summary.update(
+        {
+            "run_id": context.run_id,
+            "shard_group_id": shard_group_id,
+            "source_shards": [manifest["run_id"] for _, manifest in selected],
+            "activation_bank_manifest": expected_bank,
+            "candidate_records": str(raw_path.relative_to(context.root)),
+            "attempted": len(frame),
+            "formal_valid": int(frame["formal_valid"].sum()),
+            "v2_hash_guard": selected[0][1]["v2_hash_guard"],
+        }
+    )
+    output = context.processed_dir / "clamp_v3_calibration.json"
+    write_json_atomic(output, summary)
+    pd.DataFrame(summary["layers"]).to_parquet(
+        context.processed_dir / "clamp_v3_calibration.parquet", index=False
+    )
+    return output, summary
 
 
 def main() -> None:
@@ -406,20 +548,51 @@ def main() -> None:
         "Calibrate exploratory protocol v3 clamps", "configs/geometry_v3.yaml"
     )
     parser.add_argument("--bank-manifest")
+    parser.add_argument("--shard-index", type=int, default=0)
+    parser.add_argument("--shard-count", type=int, default=1)
+    parser.add_argument("--shard-group-id", default=os.environ.get("JCLOSURE_SHARD_GROUP_ID"))
+    parser.add_argument("--merge-only", action="store_true")
     args = parser.parse_args()
     context = initialize_context("clamp-v3-calibration", args)
     try:
         immutable = verify_manifest(
             context.root, context.root / "artifacts/phase0_v2_immutable.sha256.json"
         )
-        if args.dry_run:
-            context.finish("DRY_RUN", v2_hash_guard=immutable)
-            return
         bank_manifest = (
             Path(args.bank_manifest).resolve()
             if args.bank_manifest
             else _latest_bank_manifest(context)
         )
+        if args.merge_only:
+            if not args.shard_group_id:
+                raise ValueError("--merge-only requires --shard-group-id")
+            output, summary = _merge_shards(
+                context,
+                shard_group_id=str(args.shard_group_id),
+                shard_count=int(args.shard_count),
+                bank_manifest=bank_manifest,
+            )
+            context.finish(
+                "COMPLETED",
+                calibration=str(output.relative_to(context.root)),
+                shard_group_id=args.shard_group_id,
+                source_shards=summary["source_shards"],
+                behavioral_authorized_protocols=summary[
+                    "behavioral_authorized_protocols"
+                ],
+                attempted=summary["attempted"],
+                formal_valid=summary["formal_valid"],
+            )
+            return
+        if args.dry_run:
+            context.finish(
+                "DRY_RUN",
+                v2_hash_guard=immutable,
+                shard_index=args.shard_index,
+                shard_count=args.shard_count,
+                shard_group_id=args.shard_group_id,
+            )
+            return
         records = _load_bank(context.root, bank_manifest)
         audit = [record for record in records if record["split"] == "audit"]
         fit_by_family: dict[str, list[dict[str, Any]]] = {}
@@ -436,7 +609,14 @@ def main() -> None:
         if args.limit is not None:
             attempts = min(attempts, args.limit)
         audit = _balanced_calibration_records(audit, attempts)
-        layers = [int(value) for value in context.config["geometry"]["candidate_layers"]]
+        all_layers = [
+            int(value) for value in context.config["geometry"]["candidate_layers"]
+        ]
+        layers = _assigned_layers(
+            all_layers,
+            shard_index=int(args.shard_index),
+            shard_count=int(args.shard_count),
+        )
         naturality = _naturality_by_layer(context, records, layers)
         bundle = load_model_bundle(context.config)
         first_payload = torch.load(
@@ -446,6 +626,8 @@ def main() -> None:
         thresholds = _thresholds(context.config)
         tolerance = float(context.config["geometry"]["formal_null_tolerance"])
         rows: list[dict[str, Any]] = []
+        completed_parts: list[str] = []
+        progress_path = context.raw_dir / context.run_id / "clamp_progress.json"
         for size, vocabulary in _load_vocabularies(context).items():
             encoder = JStateEncoder.from_lens(
                 bundle.lens,
@@ -460,6 +642,7 @@ def main() -> None:
             )
             dense_map = DenseJMap.from_encoder(encoder)
             for layer in layers:
+                combination_rows: list[dict[str, Any]] = []
                 for index, anchor_record in enumerate(audit):
                     donors = fit_by_family[anchor_record["task_family"]]
                     donor_record = donors[index % len(donors)]
@@ -476,28 +659,53 @@ def main() -> None:
                         bundle.hf_model.device
                     ).float()
                     for method in context.config["clamp_v3"]["methods"]:
-                        rows.append(
-                            _row(
-                                context=context,
-                                encoder=encoder,
-                                dense_map=dense_map,
-                                naturality_model=naturality[layer],
-                                anchor_record=anchor_record,
-                                donor_record=donor_record,
-                                h=h,
-                                donor=donor,
-                                layer=layer,
-                                dictionary_size=size,
-                                method=str(method),
-                                tolerance=tolerance,
-                                thresholds=thresholds,
-                            )
+                        row = _row(
+                            context=context,
+                            encoder=encoder,
+                            dense_map=dense_map,
+                            naturality_model=naturality[layer],
+                            anchor_record=anchor_record,
+                            donor_record=donor_record,
+                            h=h,
+                            donor=donor,
+                            layer=layer,
+                            dictionary_size=size,
+                            method=str(method),
+                            tolerance=tolerance,
+                            thresholds=thresholds,
                         )
+                        rows.append(row)
+                        combination_rows.append(row)
+                part_path = (
+                    context.raw_dir
+                    / context.run_id
+                    / f"clamp_part-M{size}-L{layer}.parquet"
+                )
+                pd.DataFrame(combination_rows).to_parquet(part_path, index=False)
+                completed_parts.append(str(part_path.relative_to(context.root)))
+                write_json_atomic(
+                    progress_path,
+                    {
+                        "schema_version": 3,
+                        "protocol_version": PROTOCOL,
+                        "run_id": context.run_id,
+                        "shard_group_id": args.shard_group_id,
+                        "shard_index": args.shard_index,
+                        "shard_count": args.shard_count,
+                        "completed_parts": completed_parts,
+                        "records_written": len(rows),
+                        "status": "RUNNING",
+                    },
+                )
             dense_map._device_cache.clear()
             encoder._device_directions.clear()
             encoder._device_raw_directions.clear()
             torch.cuda.empty_cache()
-        raw_path = context.raw_dir / context.run_id / "clamp_candidates.parquet"
+        raw_path = (
+            context.raw_dir
+            / context.run_id
+            / f"clamp_candidates-shard-{int(args.shard_index):03d}.parquet"
+        )
         frame = pd.DataFrame(rows)
         frame.to_parquet(raw_path, index=False)
         summary = summarize_calibration(
@@ -506,6 +714,9 @@ def main() -> None:
         summary.update(
             {
                 "run_id": context.run_id,
+                "shard_group_id": args.shard_group_id,
+                "shard_index": args.shard_index,
+                "shard_count": args.shard_count,
                 "activation_bank_manifest": str(bank_manifest.relative_to(context.root)),
                 "candidate_records": str(raw_path.relative_to(context.root)),
                 "attempted": len(frame),
@@ -513,14 +724,40 @@ def main() -> None:
                 "v2_hash_guard": immutable,
             }
         )
-        output = context.processed_dir / "clamp_v3_calibration.json"
+        output = (
+            context.processed_dir / f"clamp_v3_calibration_{context.run_id}.json"
+        )
         write_json_atomic(output, summary)
         pd.DataFrame(summary["layers"]).to_parquet(
-            context.processed_dir / "clamp_v3_calibration.parquet", index=False
+            context.processed_dir / f"clamp_v3_calibration_{context.run_id}.parquet",
+            index=False,
+        )
+        write_json_atomic(
+            progress_path,
+            {
+                "schema_version": 3,
+                "protocol_version": PROTOCOL,
+                "run_id": context.run_id,
+                "shard_group_id": args.shard_group_id,
+                "shard_index": args.shard_index,
+                "shard_count": args.shard_count,
+                "completed_parts": completed_parts,
+                "records_written": len(rows),
+                "status": "COMPLETED",
+                "merged_output": str(raw_path.relative_to(context.root)),
+            },
         )
         context.finish(
-            "COMPLETED",
+            "COMPLETED_SHARD",
             calibration=str(output.relative_to(context.root)),
+            activation_bank_manifest=str(bank_manifest.relative_to(context.root)),
+            candidate_records=str(raw_path.relative_to(context.root)),
+            hook_sanity=hook_sanity,
+            v2_hash_guard=immutable,
+            shard_group_id=args.shard_group_id,
+            shard_index=args.shard_index,
+            shard_count=args.shard_count,
+            completed_parts=completed_parts,
             behavioral_authorized_protocols=summary["behavioral_authorized_protocols"],
             attempted=len(frame),
             formal_valid=int(frame["formal_valid"].sum()),

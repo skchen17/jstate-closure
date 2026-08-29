@@ -208,6 +208,70 @@ def construct_dense_candidate(
     }
 
 
+def project_dense_candidate(
+    clean: torch.Tensor,
+    perturbed: torch.Tensor,
+    *,
+    layer: int,
+    dense_map: DenseJMap,
+    relative_tolerance: float,
+    optimized: bool,
+    naturality: Callable[[torch.Tensor], bool] | None = None,
+    thresholds: V3ClampThresholds = DEFAULT_V3_CLAMP_THRESHOLDS,
+) -> tuple[torch.Tensor, dict[str, Any]]:
+    """Project the observed displacement into the local tangent-null subspace."""
+
+    projector = DenseNullProjector(dense_map, layer)
+    observed = perturbed.float() - clean.float()
+    direction, basis, values = projector.donor_projection(
+        clean,
+        observed,
+        relative_tolerance=relative_tolerance,
+        sphere_tangent=True,
+    )
+    if basis.shape[1] == 0:
+        return clean.clone(), {
+            "status": "FAILED",
+            "failure_reason": "zero_dimensional_intersection",
+            "basis_dimension": 0,
+            "singular_values": values.detach().cpu().tolist(),
+        }
+    if float(torch.linalg.vector_norm(direction.float())) <= 1e-20:
+        return clean.clone(), {
+            "status": "NO_CHANGE",
+            "failure_reason": None,
+            "basis_dimension": int(basis.shape[1]),
+            "singular_values": values.detach().cpu().tolist(),
+        }
+    local_delta = projector.retract_to_sphere(clean, direction)
+    if optimized:
+        target = float(torch.linalg.vector_norm(local_delta.float()).item())
+        result = projector.optimize_hard_constraints(
+            clean,
+            observed,
+            basis,
+            target_displacement=target,
+            dense_cosine_threshold=thresholds.dense_cosine,
+            top10_overlap_threshold=thresholds.dense_top10_overlap,
+            rms_drift_threshold=thresholds.rms_drift,
+            naturality=naturality,
+        )
+        return result.activation, {
+            "status": result.status,
+            "failure_reason": result.failure_reason,
+            "iterations": result.iterations,
+            "basis_dimension": int(basis.shape[1]),
+            "singular_values": values.detach().cpu().tolist(),
+        }
+    return clean + local_delta, {
+        "status": "PROJECTED",
+        "failure_reason": None,
+        "iterations": 0,
+        "basis_dimension": int(basis.shape[1]),
+        "singular_values": values.detach().cpu().tolist(),
+    }
+
+
 def build_clamp_schedule(
     *,
     mode: str,

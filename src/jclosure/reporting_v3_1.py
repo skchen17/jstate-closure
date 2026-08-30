@@ -272,6 +272,75 @@ def _memory(root: Path, figures: list[dict[str, Any]]) -> str:
         )
     else:
         lines.append("Autonomous controller training: NOT EXECUTED or gated.")
+    reference_results = []
+    fidelity_results = []
+    for manifest_path in sorted(
+        (root / "results/v3_1/raw").glob(
+            "compact-memory-references-v3-1-*/manifest.json"
+        )
+    ):
+        manifest = _json(manifest_path)
+        if not manifest or manifest.get("status") != "COMPLETED":
+            continue
+        result_path = root / manifest["result"]
+        value = _json(result_path)
+        if not value:
+            continue
+        if manifest.get("stage") == "references":
+            reference_results.append(value)
+        elif manifest.get("stage") == "fidelity":
+            fidelity_results.append(value)
+    if reference_results:
+        rows = []
+        for value in reference_results:
+            for key in (
+                "linear_current_one_step",
+                "nonlinear_full_current_one_step",
+                "autonomous_pca512_recurrent",
+            ):
+                endpoint = value[key]
+                if key == "autonomous_pca512_recurrent":
+                    horizon8: dict[str, Any] = next(
+                        (
+                            row
+                            for row in endpoint.get("test", [])
+                            if int(row["horizon"]) == 8
+                        ),
+                        {},
+                    )
+                    cosine = horizon8.get("decoded_cosine_median")
+                else:
+                    cosine = endpoint["test"].get("decoded_cosine_median")
+                rows.append(
+                    {
+                        "state_dimension": value["state_dimension"],
+                        "seed": value["seed"],
+                        "endpoint": endpoint["reference_type"],
+                        "teacher_current_only": endpoint.get(
+                            "teacher_current_only", False
+                        ),
+                        "horizon8_or_one_step_cosine": cosine,
+                    }
+                )
+        lines.extend(
+            [
+                "## Remainder-aware references",
+                "",
+                pd.DataFrame(rows).to_markdown(index=False),
+                "",
+                "Teacher-current one-step endpoints are not autonomous oracles.",
+                "",
+            ]
+        )
+    if fidelity_results:
+        lines.extend(
+            [
+                "## Counterfactual fidelity",
+                "",
+                "`" + json.dumps(fidelity_results[-1], sort_keys=True) + "`",
+                "",
+            ]
+        )
     return "\n".join(lines) + "\n"
 
 

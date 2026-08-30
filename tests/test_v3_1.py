@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import pytest
 import torch
@@ -11,6 +12,12 @@ from jclosure.clamp_v3_1 import (
     build_v31_schedule,
     validate_intervention_eligibility,
     validate_restoration_eligibility,
+)
+from jclosure.compact_memory_references_v3_1 import (
+    autonomous_remainder_rollout,
+    build_autonomous_remainder_reference,
+    build_full_remainder_reference,
+    fit_linear_current_remainder_reference,
 )
 from jclosure.compact_memory_v3_1 import (
     autonomous_rollout,
@@ -138,6 +145,47 @@ def test_parameter_matched_controller_and_feedback_schedule():
     assert scheduled_feedback_probability(
         49, 50, warmup_fraction=0.2, maximum_feedback=0.8
     ) == pytest.approx(0.8)
+
+
+def test_linear_current_remainder_reference_uses_train_fitted_pca():
+    generator = np.random.default_rng(3)
+    state = generator.normal(size=(40, 6)).astype(np.float32)
+    remainder = generator.normal(size=(40, 10)).astype(np.float32)
+    next_state = state + 0.2 * remainder[:, :6]
+    reference = fit_linear_current_remainder_reference(
+        state, remainder, next_state, remainder_dimension=4
+    )
+    prediction = reference.predict(state[:5], remainder[:5])
+    assert prediction.shape == (5, 6)
+    assert np.isfinite(prediction).all()
+
+
+def test_remainder_references_are_parameter_matched_and_autonomous():
+    full = build_full_remainder_reference(
+        state_dim=8,
+        remainder_dim=16,
+        target=100_000,
+        tolerance=0.05,
+    )
+    recurrent = build_autonomous_remainder_reference(
+        state_dim=8,
+        remainder_dim=16,
+        memory_dim=8,
+        action_count=4,
+        target=100_000,
+        tolerance=0.05,
+    )
+    assert abs(parameter_count(full) - 100_000) / 100_000 <= 0.05
+    assert abs(parameter_count(recurrent) - 100_000) / 100_000 <= 0.05
+    states, remainders, actions = autonomous_remainder_rollout(
+        recurrent,
+        torch.zeros(2, 8),
+        torch.zeros(2, 16),
+        steps=4,
+    )
+    assert states.shape == (2, 4, 8)
+    assert remainders.shape == (2, 4, 16)
+    assert actions.shape == (2, 4, 4)
 
 
 def test_common_valid_and_paired_mediation_bootstrap():

@@ -237,3 +237,12 @@ initial state, feeds predictions back, initializes missing history with masked
 `Z0`, and carries recurrent memory between steps. Horizons are
 1/2/4/8/16/32. Observational rollout is reported separately from any available
 teacher/student intervention fidelity.
+
+Remainder-aware references use three non-interchangeable contracts. The
+PCA-128 linear and nonlinear full-remainder models receive the teacher's
+current remainder and are therefore one-step references only. The PCA-512
+remainder GRU receives the true `(Z0,R0)` once and must thereafter predict and
+feed back both components. Reports label the first two `teacher_current_only`
+and never use them as autonomous oracles. If no validated teacher J-swap token
+trajectory exists, the fidelity endpoint is recorded as unavailable rather
+than inferred from observational rollout.

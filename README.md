@@ -181,7 +181,11 @@ The independent compact-memory arm uses token time rather than layer depth. It
 extracts greedy teacher traces for iterated modular arithmetic and synthetic
 finite-state-machine traversal, fits every representation on train only, and
 evaluates Markov, true-history, and persistent-GRU controllers by autonomous
-feedback from `Z0`.
+feedback from `Z0`. Remainder-aware references are explicitly separated into
+two teacher-current one-step endpoints (linear PCA-128 and nonlinear full
+remainder) and one PCA-512 recurrent endpoint that reads only `(Z0,R0)` before
+feeding back its own predicted J/remainder state. Only the recurrent endpoint
+is an autonomous comparison.
 
 ```bash
 export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
@@ -195,5 +199,6 @@ scripts/run_closure_v3_1_pilot.sh
 scripts/run_closure_v3_1_confirm.sh
 scripts/freeze_v3_1.sh memory
 scripts/run_compact_memory_v3_1.sh
+scripts/run_compact_memory_references_v3_1.sh
 scripts/build_report_v3_1.sh
 ```

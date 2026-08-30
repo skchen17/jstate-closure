@@ -1,0 +1,49 @@
+{
+  "baseline_commit": "6919d445ba82f8604df109d394517f51bdf2dc0a",
+  "config_digest": "c47a3aa62c154a3f50aaf315800818b1919e516a8433875e44f8874be2b560dd",
+  "config_path": "configs/compact_memory_v3_1.yaml",
+  "controller_seeds": [
+    20260828,
+    20260829,
+    20260830
+  ],
+  "data_hashes": {
+    "artifacts/v3_1_data_manifest.json": "409dff744ff0e1ae9e20ce05ccdc84a3b5d7908a30c23f091c164f9b56777262",
+    "data/v3_1/compact_memory_test.json": "8a83ab5965cebb709793bb9aa00ed6378d263fa171c6c3075e78268f86766547",
+    "data/v3_1/compact_memory_train.json": "654fd239cd52142d27b539c3e13868c9baa7055765aee3b7ac1770ac8493d39e",
+    "data/v3_1/compact_memory_validation.json": "9f0755d735a486d248e30fb7456ade4df5938cbf149d92e49976e8e1cb99cc1b",
+    "results/processed/concept_vocabulary_v2_4096.json": "ef76ba6dbc8333e68d6ac5d6fea65bc195122f49ba4efe32e69c26b5dd9dfa3e"
+  },
+  "freeze_created_from_commit": "b1486b93cc5047d820e8551fa30ffd2bd0629128",
+  "lens": {
+    "file": "qwen3.5-4b/jlens/Salesforce-wikitext/Qwen3.5-4B_jacobian_lens_n1000.pt",
+    "metadata_prompts_fitted": 417,
+    "repo": "neuronpedia/jacobian-lens",
+    "revision": "16a01f309fcec900fdcec3f4cd5b64f3d00e4d5a",
+    "sha256": "1f9a8f8fd593f0ffec1a9640993257ca4560f8ae3e5602315643d5cc6818534e",
+    "upstream_commit": "581d398613e5602a5af361e1c34d3a92ea82ba8e"
+  },
+  "model": {
+    "compile": false,
+    "device": 0,
+    "device_map": "cuda",
+    "dtype": "bfloat16",
+    "force_bos": true,
+    "id": "Qwen/Qwen3.5-4B",
+    "max_seq_len": 512,
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "trust_remote_code": false
+  },
+  "protocol_version": "compact_memory_exploratory_v3_1",
+  "schema_version": 4,
+  "source_hashes": {
+    "configs/compact_memory_v3_1.yaml": "556057372b061dd827364a3029f740e370503e415ccf446f38105fa601509275",
+    "schemas/compact-memory-record-v3-1.schema.json": "748b71b85de62d4f5c77734201a4f4fce6c8c4e372a56952a727b0302451ab05",
+    "src/jclosure/compact_memory_v3_1.py": "b5be5a3d35267c8ac65ce63e0755c6e7009aaf8fd011e511d35008e276d44ea0",
+    "src/jclosure/datasets_v3_1.py": "995358ed3689daf32abd04239334e5336104a76b0517e34dd5478375f021ee40",
+    "src/jclosure/experiments/compact_memory_v3_1.py": "1c44da3ba2b3b77b1c2e07245fd702842cde8521a90b0932d9ff1a822e0f580a",
+    "src/jclosure/protocol_v3_1.py": "59c7c3b46991436f0973e24591bf94a31ea09d751e5809d1defd1bc880f092d1",
+    "src/jclosure/records_v3_1.py": "800c8e5790b8d0c93d32c33e2128e985f271dc8ab363207c66563a2ad44a5fc2"
+  },
+  "status": "FROZEN_FOR_EXECUTION"
+}

@@ -1,3 +1,4 @@
+import copy
 import json
 from types import SimpleNamespace
 
@@ -20,6 +21,7 @@ from jclosure.experiments.clamp_v3_calibration import (
     _balanced_calibration_records,
     _calibration_trial_ids,
     _merge_shards,
+    _shard_invariant_config_digest,
     summarize_calibration,
 )
 from jclosure.geometry import DenseJMap
@@ -283,7 +285,14 @@ def test_calibration_merge_requires_one_completed_record_per_shard(tmp_path):
             "shard_index": shard_index,
             "created_at": f"2026-01-0{shard_index + 1}",
             "git_commit": "commit",
-            "config_digest": "config",
+            "config_digest": f"device-specific-{shard_index}",
+            "config": {
+                **copy.deepcopy(config),
+                "model": {
+                    **copy.deepcopy(config["model"]),
+                    "device": shard_index,
+                },
+            },
             "activation_bank_manifest": "bank.jsonl",
             "candidate_records": str(candidates.relative_to(tmp_path)),
             "hook_sanity": {
@@ -317,6 +326,25 @@ def test_calibration_merge_requires_one_completed_record_per_shard(tmp_path):
         "clamp-v3-calibration-shard-0",
         "clamp-v3-calibration-shard-1",
     ]
+    assert set(summary["shard_config_digests"].values()) == {
+        "device-specific-0",
+        "device-specific-1",
+    }
+
+
+def test_shard_invariant_config_digest_only_ignores_device():
+    config = load_config("configs/geometry_v3.yaml")
+    left = copy.deepcopy(config)
+    right = copy.deepcopy(config)
+    left["model"]["device"] = 0
+    right["model"]["device"] = 1
+    assert _shard_invariant_config_digest({"config": left}) == (
+        _shard_invariant_config_digest({"config": right})
+    )
+    right["jstate"]["k"] = int(right["jstate"]["k"]) + 1
+    assert _shard_invariant_config_digest({"config": left}) != (
+        _shard_invariant_config_digest({"config": right})
+    )
 
 
 def test_calibration_naturality_fraction_uses_pre_naturality_valid_set():

@@ -1,0 +1,717 @@
+{
+  "activation_bank_manifest": "results/v3/raw/geometry-v3-20260829T151443Z-3b3fa742-s20260828/activation_bank_manifest.jsonl",
+  "all_behavioral_authorized_protocols": [],
+  "attempted": 7200,
+  "behavioral_authorized_protocols": [],
+  "candidate_records": "results/v3/raw/clamp-v3-calibration-20260829T232049Z-3b3fa742-s20260828-clamp-shard-000/clamp_candidates-shard-000.parquet",
+  "formal_valid": 2540,
+  "hook_sanity": {
+    "cleanup_exact": true,
+    "determinism_exact": true,
+    "finite": true,
+    "identity_exact": true,
+    "zero_exact": true
+  },
+  "layers": [
+    {
+      "attempted": 200,
+      "dictionary_size": 4096,
+      "eligible": false,
+      "formal_natural_valid": 175,
+      "layer": 23,
+      "method": "dense_local_null",
+      "natural_fraction_among_valid": 0.9308510638297872,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "naturality_valid_fraction"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 188,
+      "strict_valid_rate": 0.94
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 4096,
+      "eligible": true,
+      "formal_natural_valid": 175,
+      "layer": 23,
+      "method": "dense_optimized",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 175,
+      "strict_valid_rate": 0.875
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 4096,
+      "eligible": false,
+      "formal_natural_valid": 19,
+      "layer": 23,
+      "method": "sparse_same_definition",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 47,
+      "state_definition": "V3-Sparse",
+      "strict_valid": 19,
+      "strict_valid_rate": 0.095
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 8192,
+      "eligible": false,
+      "formal_natural_valid": 9,
+      "layer": 23,
+      "method": "dense_local_null",
+      "natural_fraction_among_valid": 0.8181818181818182,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count",
+        "naturality_valid_fraction"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 11,
+      "strict_valid_rate": 0.055
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 8192,
+      "eligible": false,
+      "formal_natural_valid": 9,
+      "layer": 23,
+      "method": "dense_optimized",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 9,
+      "strict_valid_rate": 0.045
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 8192,
+      "eligible": false,
+      "formal_natural_valid": 28,
+      "layer": 23,
+      "method": "sparse_same_definition",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 33,
+      "state_definition": "V3-Sparse",
+      "strict_valid": 28,
+      "strict_valid_rate": 0.14
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 16384,
+      "eligible": false,
+      "formal_natural_valid": 69,
+      "layer": 23,
+      "method": "dense_local_null",
+      "natural_fraction_among_valid": 0.9583333333333334,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 72,
+      "strict_valid_rate": 0.36
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 16384,
+      "eligible": false,
+      "formal_natural_valid": 69,
+      "layer": 23,
+      "method": "dense_optimized",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 69,
+      "strict_valid_rate": 0.345
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 16384,
+      "eligible": false,
+      "formal_natural_valid": 15,
+      "layer": 23,
+      "method": "sparse_same_definition",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 16,
+      "state_definition": "V3-Sparse",
+      "strict_valid": 15,
+      "strict_valid_rate": 0.075
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 4096,
+      "eligible": false,
+      "formal_natural_valid": 59,
+      "layer": 26,
+      "method": "dense_local_null",
+      "natural_fraction_among_valid": 0.9833333333333333,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 60,
+      "strict_valid_rate": 0.3
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 4096,
+      "eligible": false,
+      "formal_natural_valid": 59,
+      "layer": 26,
+      "method": "dense_optimized",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 59,
+      "strict_valid_rate": 0.295
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 4096,
+      "eligible": false,
+      "formal_natural_valid": 31,
+      "layer": 26,
+      "method": "sparse_same_definition",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 42,
+      "state_definition": "V3-Sparse",
+      "strict_valid": 31,
+      "strict_valid_rate": 0.155
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 8192,
+      "eligible": false,
+      "formal_natural_valid": 68,
+      "layer": 26,
+      "method": "dense_local_null",
+      "natural_fraction_among_valid": 0.9577464788732394,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 71,
+      "strict_valid_rate": 0.355
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 8192,
+      "eligible": false,
+      "formal_natural_valid": 68,
+      "layer": 26,
+      "method": "dense_optimized",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 1,
+      "state_definition": "V3-Dense",
+      "strict_valid": 68,
+      "strict_valid_rate": 0.34
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 8192,
+      "eligible": false,
+      "formal_natural_valid": 30,
+      "layer": 26,
+      "method": "sparse_same_definition",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 36,
+      "state_definition": "V3-Sparse",
+      "strict_valid": 30,
+      "strict_valid_rate": 0.15
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 16384,
+      "eligible": false,
+      "formal_natural_valid": 113,
+      "layer": 26,
+      "method": "dense_local_null",
+      "natural_fraction_among_valid": 0.9416666666666667,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count",
+        "naturality_valid_fraction"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 120,
+      "strict_valid_rate": 0.6
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 16384,
+      "eligible": false,
+      "formal_natural_valid": 113,
+      "layer": 26,
+      "method": "dense_optimized",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 113,
+      "strict_valid_rate": 0.565
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 16384,
+      "eligible": false,
+      "formal_natural_valid": 11,
+      "layer": 26,
+      "method": "sparse_same_definition",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 27,
+      "state_definition": "V3-Sparse",
+      "strict_valid": 11,
+      "strict_valid_rate": 0.055
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 4096,
+      "eligible": false,
+      "formal_natural_valid": 59,
+      "layer": 28,
+      "method": "dense_local_null",
+      "natural_fraction_among_valid": 0.9672131147540983,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 61,
+      "strict_valid_rate": 0.305
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 4096,
+      "eligible": false,
+      "formal_natural_valid": 59,
+      "layer": 28,
+      "method": "dense_optimized",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 59,
+      "strict_valid_rate": 0.295
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 4096,
+      "eligible": false,
+      "formal_natural_valid": 25,
+      "layer": 28,
+      "method": "sparse_same_definition",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 48,
+      "state_definition": "V3-Sparse",
+      "strict_valid": 25,
+      "strict_valid_rate": 0.125
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 8192,
+      "eligible": false,
+      "formal_natural_valid": 62,
+      "layer": 28,
+      "method": "dense_local_null",
+      "natural_fraction_among_valid": 0.9393939393939394,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count",
+        "naturality_valid_fraction"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 66,
+      "strict_valid_rate": 0.33
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 8192,
+      "eligible": false,
+      "formal_natural_valid": 62,
+      "layer": 28,
+      "method": "dense_optimized",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 62,
+      "strict_valid_rate": 0.31
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 8192,
+      "eligible": false,
+      "formal_natural_valid": 29,
+      "layer": 28,
+      "method": "sparse_same_definition",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 44,
+      "state_definition": "V3-Sparse",
+      "strict_valid": 29,
+      "strict_valid_rate": 0.145
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 16384,
+      "eligible": false,
+      "formal_natural_valid": 19,
+      "layer": 28,
+      "method": "dense_local_null",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 19,
+      "strict_valid_rate": 0.095
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 16384,
+      "eligible": false,
+      "formal_natural_valid": 19,
+      "layer": 28,
+      "method": "dense_optimized",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 19,
+      "strict_valid_rate": 0.095
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 16384,
+      "eligible": false,
+      "formal_natural_valid": 23,
+      "layer": 28,
+      "method": "sparse_same_definition",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 36,
+      "state_definition": "V3-Sparse",
+      "strict_valid": 23,
+      "strict_valid_rate": 0.115
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 4096,
+      "eligible": false,
+      "formal_natural_valid": 147,
+      "layer": 29,
+      "method": "dense_local_null",
+      "natural_fraction_among_valid": 0.9735099337748344,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 151,
+      "strict_valid_rate": 0.755
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 4096,
+      "eligible": false,
+      "formal_natural_valid": 147,
+      "layer": 29,
+      "method": "dense_optimized",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 147,
+      "strict_valid_rate": 0.735
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 4096,
+      "eligible": false,
+      "formal_natural_valid": 23,
+      "layer": 29,
+      "method": "sparse_same_definition",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 68,
+      "state_definition": "V3-Sparse",
+      "strict_valid": 23,
+      "strict_valid_rate": 0.115
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 8192,
+      "eligible": true,
+      "formal_natural_valid": 186,
+      "layer": 29,
+      "method": "dense_local_null",
+      "natural_fraction_among_valid": 0.9738219895287958,
+      "optimization_numerical_failure": 0,
+      "reasons": [],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 191,
+      "strict_valid_rate": 0.955
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 8192,
+      "eligible": true,
+      "formal_natural_valid": 186,
+      "layer": 29,
+      "method": "dense_optimized",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [],
+      "small_perturbation_valid": 1,
+      "state_definition": "V3-Dense",
+      "strict_valid": 186,
+      "strict_valid_rate": 0.93
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 8192,
+      "eligible": false,
+      "formal_natural_valid": 13,
+      "layer": 29,
+      "method": "sparse_same_definition",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 55,
+      "state_definition": "V3-Sparse",
+      "strict_valid": 13,
+      "strict_valid_rate": 0.065
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 16384,
+      "eligible": true,
+      "formal_natural_valid": 167,
+      "layer": 29,
+      "method": "dense_local_null",
+      "natural_fraction_among_valid": 0.9709302325581395,
+      "optimization_numerical_failure": 0,
+      "reasons": [],
+      "small_perturbation_valid": 0,
+      "state_definition": "V3-Dense",
+      "strict_valid": 172,
+      "strict_valid_rate": 0.86
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 16384,
+      "eligible": true,
+      "formal_natural_valid": 167,
+      "layer": 29,
+      "method": "dense_optimized",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [],
+      "small_perturbation_valid": 1,
+      "state_definition": "V3-Dense",
+      "strict_valid": 167,
+      "strict_valid_rate": 0.835
+    },
+    {
+      "attempted": 200,
+      "dictionary_size": 16384,
+      "eligible": false,
+      "formal_natural_valid": 27,
+      "layer": 29,
+      "method": "sparse_same_definition",
+      "natural_fraction_among_valid": 1.0,
+      "optimization_numerical_failure": 0,
+      "reasons": [
+        "strict_valid_count"
+      ],
+      "small_perturbation_valid": 47,
+      "state_definition": "V3-Sparse",
+      "strict_valid": 27,
+      "strict_valid_rate": 0.135
+    }
+  ],
+  "protocol_version": "exploratory_protocol_v3",
+  "protocols": {
+    "dense_local_null:M16384": {
+      "behavioral_authorized": false,
+      "dictionary_size": 16384,
+      "eligible_layers": [
+        29
+      ],
+      "method": "dense_local_null",
+      "selected_l1": [],
+      "state_definition": "V3-Dense"
+    },
+    "dense_local_null:M4096": {
+      "behavioral_authorized": false,
+      "dictionary_size": 4096,
+      "eligible_layers": [],
+      "method": "dense_local_null",
+      "selected_l1": [],
+      "state_definition": "V3-Dense"
+    },
+    "dense_local_null:M8192": {
+      "behavioral_authorized": false,
+      "dictionary_size": 8192,
+      "eligible_layers": [
+        29
+      ],
+      "method": "dense_local_null",
+      "selected_l1": [],
+      "state_definition": "V3-Dense"
+    },
+    "dense_optimized:M16384": {
+      "behavioral_authorized": false,
+      "dictionary_size": 16384,
+      "eligible_layers": [
+        29
+      ],
+      "method": "dense_optimized",
+      "selected_l1": [],
+      "state_definition": "V3-Dense"
+    },
+    "dense_optimized:M4096": {
+      "behavioral_authorized": false,
+      "dictionary_size": 4096,
+      "eligible_layers": [
+        23
+      ],
+      "method": "dense_optimized",
+      "selected_l1": [],
+      "state_definition": "V3-Dense"
+    },
+    "dense_optimized:M8192": {
+      "behavioral_authorized": false,
+      "dictionary_size": 8192,
+      "eligible_layers": [
+        29
+      ],
+      "method": "dense_optimized",
+      "selected_l1": [],
+      "state_definition": "V3-Dense"
+    },
+    "sparse_same_definition:M16384": {
+      "behavioral_authorized": false,
+      "dictionary_size": 16384,
+      "eligible_layers": [],
+      "method": "sparse_same_definition",
+      "selected_l1": [],
+      "state_definition": "V3-Sparse"
+    },
+    "sparse_same_definition:M4096": {
+      "behavioral_authorized": false,
+      "dictionary_size": 4096,
+      "eligible_layers": [],
+      "method": "sparse_same_definition",
+      "selected_l1": [],
+      "state_definition": "V3-Sparse"
+    },
+    "sparse_same_definition:M8192": {
+      "behavioral_authorized": false,
+      "dictionary_size": 8192,
+      "eligible_layers": [],
+      "method": "sparse_same_definition",
+      "selected_l1": [],
+      "state_definition": "V3-Sparse"
+    }
+  },
+  "run_id": "clamp-v3-calibration-20260829T232049Z-3b3fa742-s20260828-clamp-shard-000",
+  "schema_version": 3,
+  "shard_count": 2,
+  "shard_group_id": "clamp-v3-formal-20260829T232400Z",
+  "shard_index": 0,
+  "v2_hash_guard": {
+    "baseline_commit": "d504eaa14af45f9df32101cf4599c55d3fac8707",
+    "status": "PASSED",
+    "verified_files": 56
+  }
+}

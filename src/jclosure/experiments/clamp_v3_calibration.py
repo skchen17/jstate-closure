@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import copy
 import hashlib
 import json
 import os
@@ -21,6 +22,7 @@ from jclosure.clamp_v3 import (
     prepare_dense_candidate_geometry,
     validate_v3_clamp,
 )
+from jclosure.config import config_digest
 from jclosure.experiments.common import initialize_context, standard_parser
 from jclosure.experiments.geometry_v3 import (
     NaturalityModel,
@@ -34,6 +36,19 @@ from jclosure.provenance import write_json_atomic
 from jclosure.recorder import ResidualEditor
 
 PROTOCOL = "exploratory_protocol_v3"
+
+
+def _shard_invariant_config_digest(manifest: dict[str, Any]) -> str:
+    """Hash scientific config while excluding the assigned CUDA shard device."""
+
+    config = manifest.get("config")
+    if not isinstance(config, dict):
+        return str(manifest.get("config_digest", ""))
+    normalized = copy.deepcopy(config)
+    model = normalized.get("model")
+    if isinstance(model, dict):
+        model.pop("device", None)
+    return config_digest(normalized)
 
 
 def _latest_bank_manifest(context) -> Path:
@@ -491,14 +506,14 @@ def _merge_shards(
         context, shard_group_id=shard_group_id, shard_count=shard_count
     )
     expected_commit = selected[0][1].get("git_commit")
-    expected_config = selected[0][1].get("config_digest")
+    expected_config = _shard_invariant_config_digest(selected[0][1])
     expected_bank = str(bank_manifest.relative_to(context.root))
     frames: list[pd.DataFrame] = []
     hook_records: list[dict[str, bool]] = []
     for _, manifest in selected:
         if manifest.get("git_commit") != expected_commit:
             raise RuntimeError("clamp calibration shards use different commits")
-        if manifest.get("config_digest") != expected_config:
+        if _shard_invariant_config_digest(manifest) != expected_config:
             raise RuntimeError("clamp calibration shards use different configs")
         if manifest.get("activation_bank_manifest") != expected_bank:
             raise RuntimeError("clamp calibration shards use different activation banks")
@@ -532,6 +547,11 @@ def _merge_shards(
             "run_id": context.run_id,
             "shard_group_id": shard_group_id,
             "source_shards": [manifest["run_id"] for _, manifest in selected],
+            "shard_config_digests": {
+                str(manifest["run_id"]): str(manifest.get("config_digest", ""))
+                for _, manifest in selected
+            },
+            "shard_invariant_config_digest": expected_config,
             "activation_bank_manifest": expected_bank,
             "candidate_records": str(raw_path.relative_to(context.root)),
             "attempted": len(frame),

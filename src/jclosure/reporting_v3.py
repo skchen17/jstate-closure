@@ -579,6 +579,26 @@ def _format_calibration_layers(calibration: dict[str, Any] | None) -> str:
     return "\n".join(lines)
 
 
+def _format_lowdim_results(results: pd.DataFrame) -> str:
+    if results.empty:
+        return "Low-dimensional screening records were not available."
+    lines = [
+        "| Candidate | Dimension | next-state cosine | oracle gap closed | reconstruction cosine |",
+        "|:---|---:|---:|---:|---:|",
+    ]
+    for _, row in results.sort_values(["candidate", "dimension"]).iterrows():
+        reconstruction = row.get("state_reconstruction_cosine_median")
+        reconstruction_text = (
+            "n/a" if pd.isna(reconstruction) else f"{float(reconstruction):.6f}"
+        )
+        lines.append(
+            f"| {row['candidate']} | {int(row['dimension'])} | "
+            f"{float(row['next_state_cosine_median']):.6f} | "
+            f"{float(row['oracle_gap_closed']):.6f} | {reconstruction_text} |"
+        )
+    return "\n".join(lines)
+
+
 def build_geometry_figures(root: Path) -> list[dict[str, Any]]:
     maps, local, spectrum_paths, execution_scope = _geometry_sources(root)
     pareto, pareto_paths = _pareto_sources(root)
@@ -738,6 +758,34 @@ def build_geometry_figures(root: Path) -> list[dict[str, Any]]:
                 draw=draw_mismatch,
             )
         )
+    lowdim_path = root / "results/v3/processed/lowdim_search.parquet"
+    if lowdim_path.is_file():
+        lowdim = pd.read_parquet(lowdim_path)
+
+        def draw_lowdim(axis: plt.Axes) -> None:
+            for candidate, group in lowdim.groupby("candidate", sort=True):
+                ordered = group.sort_values("dimension")
+                axis.plot(
+                    ordered["dimension"],
+                    ordered["oracle_gap_closed"],
+                    marker="o",
+                    label=str(candidate),
+                )
+            axis.axhline(0.80, color="black", linestyle="--", linewidth=1)
+            axis.set(
+                xlabel="Operational-state dimension",
+                ylabel="J-only to remainder-oracle gap closed",
+                title="Held-out low-dimensional next-state screening",
+            )
+            axis.legend(fontsize=7)
+
+        figures.append(
+            _save_figure(
+                target_root / "19_lowdim_oracle_gap.png",
+                sources=[lowdim_path],
+                draw=draw_lowdim,
+            )
+        )
     return figures
 
 
@@ -809,6 +857,10 @@ def build_reports(root: Path) -> dict[str, Any]:
         pareto_summary.to_parquet(pareto_summary_path, index=False)
     calibration_path = root / "results/v3/processed/clamp_v3_calibration.json"
     calibration = _load_json(calibration_path) if calibration_path.is_file() else None
+    lowdim_path = root / "results/v3/processed/lowdim_search.parquet"
+    lowdim = pd.read_parquet(lowdim_path) if lowdim_path.is_file() else pd.DataFrame()
+    compact_path = root / "results/v3/processed/compact_state_authorization.json"
+    compact = _load_json(compact_path) if compact_path.is_file() else None
     closure_records, closure_paths, closure_group = _latest_completed_closure_sources(
         root
     )
@@ -1078,11 +1130,23 @@ Machine-readable summaries: {str(closure_summary_path.relative_to(root)) if clos
             "valid": base_valid,
         },
         "lowdim_search": (
-            "UNEXECUTED"
+            "COMPLETED_AUTHORIZED"
+            if compact is not None and compact.get("authorized")
+            else "COMPLETED_NOT_AUTHORIZED"
+            if compact is not None
+            else "UNEXECUTED"
             if execution_scope != "formal" or maps.empty or local.empty
             else "REQUIRED_OR_PENDING"
             if "warning" in diagnosis.casefold()
             else "NOT_TRIGGERED"
+        ),
+        "compact_state_authorized": bool(
+            compact is not None and compact.get("authorized")
+        ),
+        "token_time_controller": (
+            "AUTHORIZED_NOT_EXECUTED"
+            if compact is not None and compact.get("authorized")
+            else "GATED"
         ),
         "strongest_warranted_conclusion": "D",
         "failed_runs": failed_runs,
@@ -1093,6 +1157,8 @@ Machine-readable summaries: {str(closure_summary_path.relative_to(root)) if clos
                 *pareto_paths,
                 *([pareto_summary_path] if pareto_summary_path.is_file() else []),
                 *closure_paths,
+                *([lowdim_path] if lowdim_path.is_file() else []),
+                *([compact_path] if compact_path.is_file() else []),
                 *run_manifests,
             ]
         },
@@ -1108,6 +1174,20 @@ Machine-readable summaries: {str(closure_summary_path.relative_to(root)) if clos
         )
         or "- None"
     )
+    lowdim_text = _format_lowdim_results(lowdim)
+    if compact is None:
+        lowdim_decision = "Low-dimensional search was not completed."
+    else:
+        passing = compact.get("prediction_candidates_passing", [])
+        lowdim_decision = (
+            f"The screen used {int(compact.get('train_samples', 0))} fit and "
+            f"{int(compact.get('test_samples', 0))} audit transitions. Persistence "
+            f"cosine was {float(compact.get('persistence_cosine_median', np.nan)):.6f}; "
+            f"the remainder oracle reached "
+            f"{float(compact.get('remainder_oracle_cosine_median', np.nan)):.6f}. "
+            f"Candidates closing at least 80% of that gap: {len(passing)}. Compact "
+            f"state authorized: {bool(compact.get('authorized'))}."
+        )
     appendix = f"""
 {marker}
 The v1/v2 records, thresholds, reports, and 0/1400 calibration result remain
@@ -1117,9 +1197,17 @@ byte-identical under the committed SHA-256 regression guard.
 - Pareto status: **{execution['pareto']}**
 - V3 clamp calibration: **{execution['calibration']}**
 - Behavioral protocols authorized: **{authorized or 'none'}**
+- Low-dimensional search: **{execution['lowdim_search']}**
+- Token-time/controller: **{execution['token_time_controller']}**
 - Strongest warranted classification after v3: **D**
 
 {diagnosis}
+
+{lowdim_decision}
+
+### Low-dimensional screening
+
+{lowdim_text}
 
 Failed v3 runs are evidence about execution only and are not interpreted as
 model behavior:
@@ -1132,6 +1220,22 @@ causal-fidelity gates. Small-perturbation records below 0.20 cannot support thos
 claims.
 """
     final_path.write_text(existing + appendix, encoding="utf-8")
+    token_path = root / "reports/TOKEN_TIME_CLOSURE.md"
+    token_marker = "\n## Exploratory protocol v3 low-dimensional authorization\n"
+    token_existing = token_path.read_text(encoding="utf-8")
+    token_existing = token_existing.split(token_marker, 1)[0].rstrip()
+    token_appendix = f"""
+{token_marker}
+{lowdim_decision}
+
+The frozen v3 clamp calibration authorized no behavioral protocol, and the
+low-dimensional screen authorized no compact operational state. T1/T2/T3 trace
+training, autonomous rollout, intervention fidelity, and the controller
+parameter sweep therefore remain gated and were not executed.
+
+{lowdim_text}
+"""
+    token_path.write_text(token_existing + token_appendix, encoding="utf-8")
     return execution
 
 

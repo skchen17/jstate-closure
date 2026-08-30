@@ -75,7 +75,7 @@ Dense state-definition feasibility warning: the median local rank at 1e-4 is 255
 
 - Candidate rows: 45360
 - Source files: 2 Pareto and 4 spectrum Parquet files
-- Failed run manifests retained: 16
+- Failed run manifests retained: 18
 - Canonical state-definition-aware summary: results/v3/processed/pareto_formal_summary_v3.parquet
 
 The dense formal rows below use the frozen `1e-4 × sigma_max` tolerance. Sparse

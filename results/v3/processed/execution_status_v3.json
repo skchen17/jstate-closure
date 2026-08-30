@@ -7,6 +7,7 @@
   "behavioral_closure": "GATED",
   "behavioral_shard_group": null,
   "calibration": "COMPLETED",
+  "compact_state_authorized": false,
   "failed_runs": [
     {
       "error": "RuntimeError: clamp calibration shards use different configs",
@@ -87,14 +88,26 @@
       "error": "KeyboardInterrupt: run cancelled",
       "kind": "geometry-v3",
       "run_id": "geometry-v3-20260829T163042Z-efb45693-s20260828-pareto-shard-001"
+    },
+    {
+      "error": "KeyboardInterrupt: run cancelled",
+      "kind": "lowdim-search-v3",
+      "run_id": "lowdim-search-v3-20260830T023748Z-3b3fa742-s20260828"
+    },
+    {
+      "error": "RuntimeError: Phase 3 v3 freeze hash mismatch: [{'path': 'src/jclosure/experiments/lowdim_search.py', 'expected': '7723fbb672a659995b6cacf7edbe4b83e5d6ca82593c7e385b26026ec03e4617', 'observed': 'a281d74a6f925ebd1031ffb80b68eaeb8c5ac0f60a5302494738b4092220bd41'}]",
+      "kind": "lowdim-search-v3",
+      "run_id": "lowdim-search-v3-20260830T024144Z-3b3fa742-s20260828"
     }
   ],
   "geometry": "COMPLETED",
-  "lowdim_search": "REQUIRED_OR_PENDING",
+  "lowdim_search": "COMPLETED_NOT_AUTHORIZED",
   "pareto": "COMPLETED",
   "protocol_version": "exploratory_protocol_v3",
   "schema_version": 3,
   "source_hashes": {
+    "results/v3/processed/compact_state_authorization.json": "cab39f5397788caa984fcde4ac0a9d1dd8494e617a9d353e989b65dbae41b84f",
+    "results/v3/processed/lowdim_search.parquet": "1fa90db753610c24c7c2038059e7eb9e4225f5f6fe125eb8805a256be2f0cb18",
     "results/v3/processed/pareto_formal_summary_v3.parquet": "61ed256a37f3c25f02ba8a969fc6a3853fbbd92cc3ae462bb32af182e0710419",
     "results/v3/raw/clamp-v3-calibration-20260829T232005Z-3b3fa742-s20260828-clamp-shard-000/manifest.json": "9721d82971587254856bd85e1ed9182f5e8f6a6c38b8a1388087c8439c70e83b",
     "results/v3/raw/clamp-v3-calibration-20260829T232005Z-efb45693-s20260828-clamp-shard-001/manifest.json": "d77f9180b36f5e2922f4a6e95a7c575c1d54d3241f5fa7e34011bfa44d6b2723",
@@ -140,7 +153,12 @@
     "results/v3/raw/geometry-v3-20260829T172205Z-3b3fa742-s20260828-pareto-shard-000/manifest.json": "4ddeba06fc74eaf9b4015d37923501543b32ca82604c33a52404f63c398ac6f7",
     "results/v3/raw/geometry-v3-20260829T172205Z-3b3fa742-s20260828-pareto-shard-000/pareto_records-shard-000.parquet": "4ff1f6f4410ee1e37990d541e35bf65b87a611fc3dab6de9b9ccc30e0296ee32",
     "results/v3/raw/geometry-v3-20260829T172205Z-efb45693-s20260828-pareto-shard-001/manifest.json": "dfef9ff1f176a0628b84ae2ed474d8d9c1d200338cb87596251f7694576732a1",
-    "results/v3/raw/geometry-v3-20260829T172205Z-efb45693-s20260828-pareto-shard-001/pareto_records-shard-001.parquet": "cf6ff0b0945436e608a3861ea14c7b849e18dc0b5657723bc6ed04ca782c0d92"
+    "results/v3/raw/geometry-v3-20260829T172205Z-efb45693-s20260828-pareto-shard-001/pareto_records-shard-001.parquet": "cf6ff0b0945436e608a3861ea14c7b849e18dc0b5657723bc6ed04ca782c0d92",
+    "results/v3/raw/lowdim-search-v3-20260830T023728Z-3b3fa742-s20260828/manifest.json": "ae068ff872f0502ac036fd81941a7807f13e87f053f9087aa711b2e06f804991",
+    "results/v3/raw/lowdim-search-v3-20260830T023748Z-3b3fa742-s20260828/manifest.json": "05aebd866d554453f2fff1b3eddf2e9645ec11d7bf0c3dfaf761dac8651c0989",
+    "results/v3/raw/lowdim-search-v3-20260830T024144Z-3b3fa742-s20260828/manifest.json": "c5af319d9768f41654ce9dfcde95d5d006090c4c8cfa644d4693a07e3c6dce93",
+    "results/v3/raw/lowdim-search-v3-20260830T024250Z-3b3fa742-s20260828/manifest.json": "4afc05fac7e04f19bc53bfff903c03e93416ebdf61e738cc568bcdb71cef1b68"
   },
-  "strongest_warranted_conclusion": "D"
+  "strongest_warranted_conclusion": "D",
+  "token_time_controller": "GATED"
 }

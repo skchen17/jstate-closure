@@ -6,6 +6,7 @@ import pytest
 from jclosure.provenance import write_json_atomic
 from jclosure.reporting_v3 import (
     _format_calibration_layers,
+    _format_lowdim_results,
     _geometry_sources,
     _latest_completed_closure_sources,
     summarize_closure_v3,
@@ -219,3 +220,21 @@ def test_calibration_table_reports_strict_and_formal_counts():
     )
     assert "175/200" in text
     assert "| yes | - |" in text
+
+
+def test_lowdim_table_is_generated_from_saved_metrics():
+    text = _format_lowdim_results(
+        pd.DataFrame(
+            [
+                {
+                    "candidate": "dense_profile_pca",
+                    "dimension": 128,
+                    "next_state_cosine_median": 0.97,
+                    "oracle_gap_closed": 0.48,
+                    "state_reconstruction_cosine_median": 0.99,
+                }
+            ]
+        )
+    )
+    assert "dense_profile_pca" in text
+    assert "0.480000" in text

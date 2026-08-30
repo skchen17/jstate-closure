@@ -1,0 +1,29 @@
+{
+  "authorized": false,
+  "frozen_concept_count": 114,
+  "frozen_concept_provenance": {
+    "candidate_token_ids": 156,
+    "dictionary_indices": 114,
+    "positive_control_records": "results/raw/phase0-v2-20260828T120721Z-d3f2fa00-s20260828/positive_control_records_v2.parquet",
+    "positive_control_records_sha256": "d5999ddb7bcbdf6a7ef9eb6c8a03f986de9b0756cb7d65e2fff6ce25db3e04e0",
+    "readout_records": "results/raw/phase0-v2-20260828T120328Z-b9c3b3a0-s20260828/readout_records_v2.parquet",
+    "readout_records_sha256": "85848df53f619f14a188de497e89f0a021896be06282df5f60d4407ae3954bbd"
+  },
+  "intervention_retention": "UNEXECUTED",
+  "oracle_improves_over_persistence": true,
+  "persistence_cosine_median": 0.9650058746337891,
+  "phase0_regression": "UNEXECUTED",
+  "prediction_candidates_passing": [],
+  "protocol_version": "exploratory_protocol_v3",
+  "reason": "Prediction screening alone cannot authorize a compact state. Frozen Phase 0 pass@10 retention and causal intervention retention records are required.",
+  "remainder_oracle_cosine_median": 0.9900988340377808,
+  "schema_version": 3,
+  "test_samples": 1536,
+  "train_samples": 1536,
+  "trigger": {
+    "max_formal_displacement": 0.5930534271606068,
+    "median_rank_1e4": 2557.0,
+    "median_tangent_null_1e4": 2.0,
+    "near_injective": true
+  }
+}

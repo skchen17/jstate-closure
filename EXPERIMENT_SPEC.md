@@ -165,6 +165,14 @@ concept axes exactly. It selects only the latest completed formal spectrum and
 Pareto shards. Prediction screening alone cannot authorize a compact state;
 Phase 0 retention and intervention-retention gates remain mandatory.
 
+The executed screen used 1,536 fit and 1,536 held-out audit transitions. The
+persistence baseline reached median next-state cosine 0.965006 and the
+remainder-aware oracle reached 0.990099. No tested candidate at dimension at
+most 512 closed the required 80% of that gap; the best was 512-D dense-profile
+PCA at 0.593644. Compact-state authorization therefore failed before the
+Phase-0/intervention-retention gates, and token-time/controller training was not
+authorized.
+
 ## Statistical contract
 
 Pilot family-by-source cells target at least 100 valid base interventions;

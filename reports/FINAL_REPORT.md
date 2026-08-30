@@ -84,9 +84,37 @@ byte-identical under the committed SHA-256 regression guard.
 - Pareto status: **COMPLETED**
 - V3 clamp calibration: **COMPLETED**
 - Behavioral protocols authorized: **none**
+- Low-dimensional search: **COMPLETED_NOT_AUTHORIZED**
+- Token-time/controller: **GATED**
 - Strongest warranted classification after v3: **D**
 
 Dense state-definition feasibility warning: the median local rank at 1e-4 is 2557/2560 and the median tangent-null dimension is 2. The normalized dense profile is therefore operationally near-injective under the frozen rule. This is not compact H1 evidence and triggers low-dimensional search.
+
+The screen used 1536 fit and 1536 audit transitions. Persistence cosine was 0.965006; the remainder oracle reached 0.990099. Candidates closing at least 80% of that gap: 0. Compact state authorized: False.
+
+### Low-dimensional screening
+
+| Candidate | Dimension | next-state cosine | oracle gap closed | reconstruction cosine |
+|:---|---:|---:|---:|---:|
+| constrained_learned_encoder | 128 | 0.906758 | -2.321267 | 0.260293 |
+| constrained_learned_encoder | 256 | 0.963242 | -0.070291 | 0.552953 |
+| constrained_learned_encoder | 512 | 0.977593 | 0.501637 | 0.890273 |
+| dense_profile_pca | 32 | 0.958106 | -0.274976 | 0.965793 |
+| dense_profile_pca | 64 | 0.969552 | 0.181185 | 0.978516 |
+| dense_profile_pca | 128 | 0.976989 | 0.477565 | 0.988009 |
+| dense_profile_pca | 256 | 0.979518 | 0.578342 | 0.993913 |
+| dense_profile_pca | 512 | 0.979902 | 0.593644 | 0.997121 |
+| deterministic_concept_clusters | 32 | 0.646327 | -12.699936 | n/a |
+| deterministic_concept_clusters | 64 | 0.662438 | -12.057873 | n/a |
+| deterministic_concept_clusters | 128 | 0.707864 | -10.247574 | n/a |
+| deterministic_concept_clusters | 256 | 0.790692 | -6.946730 | n/a |
+| deterministic_concept_clusters | 512 | 0.879980 | -3.388437 | n/a |
+| predictive_linear_bottleneck | 32 | 0.961607 | -0.135464 | 0.801617 |
+| predictive_linear_bottleneck | 64 | 0.972214 | 0.287268 | 0.840998 |
+| predictive_linear_bottleneck | 128 | 0.978081 | 0.521048 | 0.901812 |
+| predictive_linear_bottleneck | 256 | 0.979743 | 0.587316 | 0.962627 |
+| predictive_linear_bottleneck | 512 | 0.979901 | 0.593617 | 0.982223 |
+| sparse_active_atoms | 50 | 0.974742 | 0.388009 | n/a |
 
 Failed v3 runs are evidence about execution only and are not interpreted as
 model behavior:
@@ -108,6 +136,8 @@ Check your internet connection or see how to run the library in offline mode at 
 - `geometry-v3-20260829T160152Z-efb45693-s20260828-pareto-shard-001`: KeyboardInterrupt: run cancelled
 - `geometry-v3-20260829T163042Z-3b3fa742-s20260828-pareto-shard-000`: KeyboardInterrupt: run cancelled
 - `geometry-v3-20260829T163042Z-efb45693-s20260828-pareto-shard-001`: KeyboardInterrupt: run cancelled
+- `lowdim-search-v3-20260830T023748Z-3b3fa742-s20260828`: KeyboardInterrupt: run cancelled
+- `lowdim-search-v3-20260830T024144Z-3b3fa742-s20260828`: RuntimeError: Phase 3 v3 freeze hash mismatch: [{'path': 'src/jclosure/experiments/lowdim_search.py', 'expected': '7723fbb672a659995b6cacf7edbe4b83e5d6ca82593c7e385b26026ec03e4617', 'observed': 'a281d74a6f925ebd1031ffb80b68eaeb8c5ac0f60a5302494738b4092220bd41'}]
 
 No H1-Dense, H1-Sparse, H2, or H3 claim is permitted unless a frozen operational
 state passes calibration and the paired behavioral, mediation, rollout, and

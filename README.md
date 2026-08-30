@@ -30,7 +30,10 @@ layers while retaining a natural displacement of at least 0.20.
 The formal v3 calibration is now complete: it saved 12,600 candidates and 4,527
 formal-valid rows, but no protocol had more than one eligible layer. Behavioral
 closure therefore remains gated and the required low-dimensional search is the
-next authorized empirical stage.
+next authorized empirical stage. That screen has also completed: none of the
+tested states at dimension at most 512 closed the preregistered 80% of the
+J-only-to-remainder-oracle prediction gap (best 59.36%), so no compact state was
+authorized and token-time/controller execution remains gated.
 
 ## Environment
 
@@ -138,6 +141,14 @@ per-shard digest included the assigned CUDA device. The corrected merge excludes
 only `model.device` from shard equivalence, records both original digests, and
 still rejects every other config difference; it reused the immutable shard
 Parquet files and did not recompute trials.
+
+The low-dimensional screen used 1,536 fit and 1,536 audit layer transitions.
+Last-state persistence reached median next-state cosine 0.965006 and the
+remainder-aware oracle reached 0.990099. The best tested compact candidates were
+512-D dense-profile PCA (gap closed 0.593644) and a 512-D predictive bottleneck
+(0.593617); the 512-D constrained encoder reached 0.501637 and sparse active
+atoms reached 0.388009. These observational prediction metrics do not authorize
+causal fidelity or an H3/controller claim.
 
 If calibration authorizes behavioral execution, the v3 pilot and confirmation
 launchers shard prompts across both GPUs. Sample targets refer to valid base

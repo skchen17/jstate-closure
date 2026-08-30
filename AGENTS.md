@@ -17,6 +17,10 @@ dynamical state. It does not investigate or make claims about consciousness.
   `measured-J remainder`; do not silently promote them to complete J/non-J space.
 - Figures and numeric report tables must be generated from saved JSONL/Parquet
   records. Do not type measurements manually into plotting or report code.
+- Protocol v3.1 must keep initial-intervention and later-restoration eligibility
+  separate. A small later correction is not an invalid restoration.
+- Compact-memory autonomous rollouts may consume only `Z0` and predicted later
+  states; teacher-current remainder references must be labeled one-step only.
 - Do not interpret Qwen3.6-27B unless its lens passes independent shape,
   intermediate-readout, and positive-intervention validation.
 

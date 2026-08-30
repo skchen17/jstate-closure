@@ -1,0 +1,52 @@
+extends: qwen3_5_4b.yaml
+
+run:
+  stage: closure_v3_1
+  protocol_version: corrective_exploratory_protocol_v3_1
+  pilot_valid_base_trials: 100
+  confirm_valid_base_trials: 500
+  max_attempt_multiplier: 10
+  shard_count: 2
+  timeout_hours: 24
+
+v3_1:
+  state_definition: V3-Dense
+  dictionary_size: 4096
+  initial_method: dense_optimized
+  restoration_methods: [dense_local, dense_optimized]
+  candidate_initial_layers: [23, 24, 25, 26]
+  final_layer: 29
+  minimum_restoration_layers: 3
+  attempts_per_layer: 200
+  valid_required: 160
+  initial_strength: 0.25
+  sensitivity_strengths: [0.5, 1.0]
+  dense_cosine_threshold: 0.995
+  top10_overlap_threshold: 0.8
+  rms_drift_threshold: 0.02
+  formal_displacement_fraction: 0.20
+  naturality_quantile: 0.99
+  pca_dimension: 128
+  nearest_neighbors: 10
+  position_scopes: [final, all_non_padding]
+  causal_modes: [single, persistent_final, persistent_all]
+  controls: [clean, identity, zero_strength, matched_random, j_positive, full_patch]
+  primary_task_family: arithmetic
+  bootstrap_resamples: 10000
+  confidence: 0.95
+  null_quantile: 0.99
+  null_js_floor: 0.0001
+
+v3_1_data:
+  naturality_fit: {seed: 20260831, candidates: 512}
+  calibration: {seed: 20260902, candidates: 800, target_teacher_correct: 200}
+  pilot: {seed: 20260903, candidates: 2500, target_valid: 100}
+  confirmation: {seed: 20260904, candidates: 10000, target_valid: 500}
+
+outputs:
+  root: results/v3_1
+  raw: raw
+  processed: processed
+  figures: figures
+  reports: ../../reports
+  artifacts: ../../artifacts

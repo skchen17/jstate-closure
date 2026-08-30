@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skchen17/jstate-closure/schemas/compact-memory-record-v3-1.schema.json",
+  "title": "Compact-memory exploratory v3.1 record",
+  "type": "object",
+  "required": [
+    "schema_version", "protocol_version", "run_id", "model_family",
+    "state_representation", "state_dimension", "parameter_count", "split",
+    "metrics"
+  ],
+  "properties": {
+    "schema_version": {"const": 4},
+    "protocol_version": {"const": "compact_memory_exploratory_v3_1"},
+    "run_id": {"type": "string", "minLength": 1},
+    "model_family": {"type": "string", "minLength": 1},
+    "state_representation": {"type": "string", "minLength": 1},
+    "state_dimension": {"enum": [64, 128, 256, 512]},
+    "memory_dimension": {"type": ["integer", "null"]},
+    "history_length": {"type": ["integer", "null"]},
+    "parameter_count": {"type": "integer", "minimum": 1},
+    "split": {"enum": ["train", "validation", "test"]},
+    "metrics": {"type": "object"}
+  },
+  "additionalProperties": true
+}

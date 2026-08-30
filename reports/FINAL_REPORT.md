@@ -1,5 +1,7 @@
 # Final report
 
+> **No operational compact state has yet passed the complete causal/behavioral criteria required to distinguish H1/H2/H3.**
+
 ## Material Passport
 
 - Protocol: `phase0_protocol_v2` (frozen before fresh confirmation)
@@ -143,3 +145,14 @@ No H1-Dense, H1-Sparse, H2, or H3 claim is permitted unless a frozen operational
 state passes calibration and the paired behavioral, mediation, rollout, and
 causal-fidelity gates. Small-perturbation records below 0.20 cannot support those
 claims.
+
+<!-- V3.1 STATUS START -->
+## Protocol v3.1 status
+
+The corrective direct-L1 and independent compact-memory implementations are
+present and tested, but formal v3.1 calibration, paired causal trials, and
+token-time controller experiments have not yet produced interpretable machine
+results. Infrastructure and compatibility smokes are retained in
+`results/v3_1/raw`; they are not scientific evidence. The cumulative
+classification therefore remains D.
+<!-- V3.1 STATUS END -->

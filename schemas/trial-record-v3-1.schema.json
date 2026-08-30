@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skchen17/jstate-closure/schemas/trial-record-v3-1.schema.json",
+  "title": "Corrective exploratory protocol v3.1 causal record",
+  "type": "object",
+  "required": [
+    "schema_version", "protocol_version", "run_id", "base_trial_id",
+    "prompt_id", "condition", "layer", "position_scope", "valid",
+    "hook_execution_map", "metrics"
+  ],
+  "properties": {
+    "schema_version": {"const": 4},
+    "protocol_version": {"const": "corrective_exploratory_protocol_v3_1"},
+    "run_id": {"type": "string", "minLength": 1},
+    "base_trial_id": {"type": "string", "minLength": 1},
+    "paired_trial_id": {"type": "string", "minLength": 1},
+    "prompt_id": {"type": "string", "minLength": 1},
+    "condition": {"type": "string", "minLength": 1},
+    "layer": {"type": "integer"},
+    "restoration_layers": {"type": "array", "items": {"type": "integer"}},
+    "position_scope": {"enum": ["final", "all_non_padding"]},
+    "valid": {"type": "boolean"},
+    "exclusion_reason": {"type": ["string", "null"]},
+    "hook_execution_map": {"type": "array"},
+    "restoration_events": {"type": "array"},
+    "metrics": {"type": "object"}
+  },
+  "additionalProperties": true
+}

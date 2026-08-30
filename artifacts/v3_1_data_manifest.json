@@ -1,0 +1,51 @@
+{
+  "baseline_commit": "6919d445ba82f8604df109d394517f51bdf2dc0a",
+  "causal_domains": {
+    "calibration": {
+      "count": 800,
+      "path": "data/v3_1/arithmetic_calibration.json",
+      "seed": 20260902,
+      "sha256": "1ff89c52a21536b7a04e0ae5e1b1b1da253f05ae1f9b3c8be1c6505c0e0e03a9"
+    },
+    "confirmation": {
+      "count": 10000,
+      "path": "data/v3_1/arithmetic_confirmation.json",
+      "seed": 20260904,
+      "sha256": "113f72fadef4dfff1a41f0b46092ebf6a74885235db9cfb62a9beead55bf28c4"
+    },
+    "naturality_fit": {
+      "count": 512,
+      "path": "data/v3_1/arithmetic_naturality_fit.json",
+      "seed": 20260831,
+      "sha256": "b1b7d7c9ac153a1bacef676943c711945ef19894eee0e016ebddc9a7b8eff384"
+    },
+    "pilot": {
+      "count": 2500,
+      "path": "data/v3_1/arithmetic_pilot.json",
+      "seed": 20260903,
+      "sha256": "912f7b5e1890b463d821060ab02c92ca2e0e6da2b2a29dc3fc69c65f1f779d01"
+    }
+  },
+  "cross_domain_overlap": false,
+  "memory_splits": {
+    "test": {
+      "count": 600,
+      "path": "data/v3_1/compact_memory_test.json",
+      "sha256": "8a83ab5965cebb709793bb9aa00ed6378d263fa171c6c3075e78268f86766547"
+    },
+    "train": {
+      "count": 2800,
+      "path": "data/v3_1/compact_memory_train.json",
+      "sha256": "654fd239cd52142d27b539c3e13868c9baa7055765aee3b7ac1770ac8493d39e"
+    },
+    "validation": {
+      "count": 600,
+      "path": "data/v3_1/compact_memory_validation.json",
+      "sha256": "9f0755d735a486d248e30fb7456ade4df5938cbf149d92e49976e8e1cb99cc1b"
+    }
+  },
+  "old_expression_hashes_considered": 64,
+  "old_prompt_hashes_considered": 512,
+  "protocol_version": "corrective_exploratory_protocol_v3_1",
+  "schema_version": 4
+}

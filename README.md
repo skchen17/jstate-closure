@@ -160,3 +160,40 @@ Supporting L0 layers outside the geometry bank's 23–29 range are re-recorded
 from the saved input IDs under the frozen model; a run-local manifest records
 their prompt/layer shapes and hashes, while the original geometry bank remains
 unchanged.
+
+## Corrective protocol v3.1 and compact-memory arm
+
+Protocol v3.1 is additive and leaves every v1/v2/v3 configuration, freeze,
+record, and dedicated report under SHA-256 guards. The corrective causal arm
+separates the large initial intervention from later, potentially tiny
+restoration corrections. The direct-L1 intervention still has to move at least
+0.20 natural-difference units; restoration never inherits that lower bound.
+Isolated and runtime-matched restoration chains are calibrated before a
+behavioral freeze can be created.
+
+The primary v3.1 arithmetic domain is a balanced integer-parity task. It was
+fixed before causal outcomes because Qwen3.5-4B did not yield the declared 200
+teacher-correct calibration examples on the earlier multi-operation candidate
+domain with explicit thinking disabled. Superseded smokes and their failure
+reasons remain in `results/v3_1/raw/`.
+
+The independent compact-memory arm uses token time rather than layer depth. It
+extracts greedy teacher traces for iterated modular arithmetic and synthetic
+finite-state-machine traversal, fits every representation on train only, and
+evaluates Markov, true-history, and persistent-GRU controllers by autonomous
+feedback from `Z0`.
+
+```bash
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+export JCLOSURE_MODEL_DIR=/data/CSK/J-space-project/models/Qwen3.5-4B-851bf6e
+export JCLOSURE_ARTIFACT_DIR=/data/CSK/J-space-project/.jclosure-artifacts
+
+python -m jclosure.experiments.prepare_v3_1
+scripts/run_calibration_v3_1.sh
+scripts/freeze_v3_1.sh closure
+scripts/run_closure_v3_1_pilot.sh
+scripts/run_closure_v3_1_confirm.sh
+scripts/freeze_v3_1.sh memory
+scripts/run_compact_memory_v3_1.sh
+scripts/build_report_v3_1.sh
+```

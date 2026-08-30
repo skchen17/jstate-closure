@@ -1,0 +1,36 @@
+extends: closure_v3_1.yaml
+
+run:
+  stage: compact_memory_v3_1
+  protocol_version: compact_memory_exploratory_v3_1
+  timeout_hours: 72
+
+compact_memory:
+  task_families: [iterated_modular_arithmetic, synthetic_state_machine]
+  target_parseable_per_family: 1200
+  maximum_candidates_per_family: 2000
+  balanced_lengths: [8, 16, 32]
+  split_fractions: [0.70, 0.15, 0.15]
+  split_seeds: {train: 20260905, validation: 20260906, test: 20260907}
+  workspace_layers: [23, 24, 25, 26, 27, 28, 29]
+  dictionary_size: 4096
+  representation_families: [dense_profile_pca, predictive_bottleneck, sparse_j_centered]
+  state_dimensions: [64, 128, 256, 512]
+  histories: [1, 2, 4, 8, 16]
+  memory_dimensions: [16, 32, 64, 128, 256]
+  horizons: [1, 2, 4, 8, 16, 32]
+  target_parameter_count: 5000000
+  parameter_tolerance: 0.05
+  controller_seeds: [20260828, 20260829, 20260830]
+  maximum_epochs: 50
+  early_stopping_patience: 5
+  teacher_forcing_fraction: 0.20
+  maximum_predicted_feedback: 0.80
+  remainder_pca_dimensions: [128, 512]
+  memory_effect_min_cosine: 0.02
+  trajectory_reduction_fraction: 0.20
+  semantic_noninferiority: 0.02
+  horizon8_followup_cosine: 0.80
+  horizon16_followup_cosine: 0.70
+  followup_gap_closed: 0.80
+  divergence_cosine: 0.80

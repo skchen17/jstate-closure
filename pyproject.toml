@@ -53,6 +53,11 @@ jclosure-freeze-v3 = "jclosure.experiments.freeze_phase3_v3:main"
 jclosure-closure-v3 = "jclosure.experiments.closure_v3:main"
 jclosure-report-v3 = "jclosure.reporting_v3:main"
 jclosure-lowdim-v3 = "jclosure.experiments.lowdim_search:main"
+jclosure-calibrate-v3-1 = "jclosure.experiments.calibrate_v3_1:main"
+jclosure-freeze-v3-1 = "jclosure.experiments.freeze_v3_1:main"
+jclosure-closure-v3-1 = "jclosure.experiments.closure_v3_1:main"
+jclosure-memory-v3-1 = "jclosure.experiments.compact_memory_v3_1:main"
+jclosure-report-v3-1 = "jclosure.reporting_v3_1:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

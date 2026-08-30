@@ -202,3 +202,38 @@ layer-depth/token-time prediction, controllers, modularity, and the optional 27B
 confirmation are formally gated. The registered thresholds were not changed
 after observing this failure. See the machine summaries and generated reports
 for exact values and hashes.
+
+## Corrective exploratory protocol v3.1
+
+The v3.1 causal arm repairs one frozen-v3 runtime mismatch. Later workspace
+restoration is judged on measured-J equality, RMS/naturality, finite values,
+and hook integrity, but not on a minimum correction displacement. The direct
+L1 counterfactual retains the formal displacement threshold of 0.20.
+Calibration pairs isolated restoration with runtime-matched
+`persistent_final` and `persistent_all` chains. Authorization requires at least
+160/200 valid direct interventions, at least 160/200 complete chains per mode,
+and at least three common later restoration-eligible layers.
+
+Behavioral trials use the same anchor, donor, and direct-L1 candidate for clean,
+single, persistent-final, and persistent-all conditions. Identity,
+zero-strength, matched-random, matched-J-positive, and full-difference controls
+are single interventions. Full-vocabulary JS divergence is primary; mediation
+ratios are displayed only when the paired single effect clears the frozen null
+gate.
+
+## Compact-memory exploratory protocol v3.1
+
+Token-time macrostates pool normalized 4,096-concept dense profiles across
+layers 23–29 and retain layer dispersion. Candidate states have dimensions
+64/128/256/512 and are fit on train only. Each dimension selects among dense
+PCA, supervised predictive, and sparse-active-atom-centered representations by
+the frozen validation ordering: next-state cosine, Phase-0 hidden-intermediate
+retention, then causal-delta retention.
+
+The temporal comparison fixes learned models near five million parameters. It
+tests Markov, true-history windows 1/2/4/8/16, and GRU memories
+16/32/64/128/256 over three seeds. Autonomous rollout receives only the true
+initial state, feeds predictions back, initializes missing history with masked
+`Z0`, and carries recurrent memory between steps. Horizons are
+1/2/4/8/16/32. Observational rollout is reported separately from any available
+teacher/student intervention fidelity.

@@ -200,13 +200,16 @@ def _extract(
     layers: list[int],
     encoder: JStateEncoder,
     dense_map: DenseJMap,
+    *,
+    device: torch.device | str | None = None,
 ) -> pd.DataFrame:
+    target_device = torch.device("cpu") if device is None else torch.device(device)
     rows: list[dict[str, Any]] = []
     for record in records:
         payload = torch.load(root / record["activation_path"], map_location="cpu")
         for current, following in zip(layers, layers[1:], strict=False):
-            h = payload["activations"][current][-1].float()
-            next_h = payload["activations"][following][-1].float()
+            h = payload["activations"][current][-1].to(target_device).float()
+            next_h = payload["activations"][following][-1].to(target_device).float()
             state = dense_map.dense_state(h, current).cpu().numpy()
             next_state = dense_map.dense_state(next_h, following).cpu().numpy()
             decomposition = encoder.decompose(h, current)
@@ -490,7 +493,14 @@ def main() -> None:
         if args.limit is not None:
             records = records[: args.limit]
         layers = [int(value) for value in context.config["geometry"]["candidate_layers"]]
-        frame = _extract(context.root, records, layers, encoder, dense_map)
+        frame = _extract(
+            context.root,
+            records,
+            layers,
+            encoder,
+            dense_map,
+            device=bundle.hf_model.device,
+        )
         frozen_indices, frozen_provenance = _frozen_concept_indices(
             context.root, vocabulary, bundle.tokenizer
         )

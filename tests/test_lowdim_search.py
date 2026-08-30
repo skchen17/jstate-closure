@@ -1,10 +1,13 @@
 import json
+from types import SimpleNamespace
 
 import numpy as np
 import pandas as pd
+import torch
 
 from jclosure.experiments.lowdim_search import (
     _constrained_predictive_basis,
+    _extract,
     _latest_completed_geometry_dirs,
     run_search,
 )
@@ -86,3 +89,50 @@ def test_completed_geometry_selection_ignores_failed_and_old_shards(tmp_path):
         "geometry-v3-new",
         "geometry-v3-shard1",
     ]
+
+
+def test_extract_moves_activations_to_requested_device(tmp_path):
+    activation_path = tmp_path / "activation.pt"
+    torch.save(
+        {
+            "activations": {
+                0: torch.ones(2, 4),
+                1: torch.full((2, 4), 2.0),
+            }
+        },
+        activation_path,
+    )
+
+    class FakeDenseMap:
+        def dense_state(self, value, layer):
+            assert value.device == torch.device("cpu")
+            return value
+
+    class FakeEncoder:
+        vocabulary = SimpleNamespace(token_ids=(10, 11, 12))
+
+        def decompose(self, value, layer):
+            assert value.device == torch.device("cpu")
+            return SimpleNamespace(
+                remainder=torch.zeros_like(value),
+                atom_indices=torch.tensor([1]),
+                coefficients=torch.tensor([0.5]),
+            )
+
+    frame = _extract(
+        tmp_path,
+        [
+            {
+                "activation_path": activation_path.name,
+                "prompt_id": "prompt",
+                "task_family": "arithmetic",
+                "split": "fit",
+            }
+        ],
+        [0, 1],
+        FakeEncoder(),
+        FakeDenseMap(),
+        device="cpu",
+    )
+    assert len(frame) == 1
+    assert frame.iloc[0]["sparse_state"].tolist() == [0.0, 0.5, 0.0]

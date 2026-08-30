@@ -1,0 +1,76 @@
+{
+  "baseline_commit": "d504eaa14af45f9df32101cf4599c55d3fac8707",
+  "behavioral_config_digests": {
+    "configs/closure_v3_confirm.yaml": "c3d9b0f7d660d5dc2983051f49f204d1d5b18a06f120f2ebaa7d48388429ecf8",
+    "configs/closure_v3_pilot.yaml": "15d4f7bfc9f246e790c12b3577826c7a738ebfd8235aac687d1a5e3365119f8a"
+  },
+  "calibration_run_id": "clamp-v3-calibration-20260830T023149Z-3b3fa742-s20260828",
+  "clamp_modes": [
+    "single",
+    "persistent_final",
+    "persistent_all"
+  ],
+  "config_digest": "3b3fa7426627992480553fd3e48e1ea2782093c509a4053f46fefd64e805cfeb",
+  "config_path": "configs/geometry_v3.yaml",
+  "data_hashes": {
+    "artifacts/phase0_v2_immutable.sha256.json": "9d973cd58d3c4288702e08fb7e3268a1280e4ecbf05d3b9e675ec17eb3e376ab",
+    "results/v3/processed/clamp_v3_calibration.json": "ea66c3406c0086f670bde12e9384fb0a8170ce503ab04c1efc90abb051964ba9",
+    "results/v3/raw/clamp-v3-calibration-20260830T023149Z-3b3fa742-s20260828/clamp_candidates.parquet": "4f9bcbd03b2ef4e4e285823543764ddc8798e64f4076f6f526f0da7e8d7e5cbe",
+    "results/v3/raw/geometry-v3-20260829T151443Z-3b3fa742-s20260828/activation_bank_manifest.jsonl": "f7b8868865d71831676cdb09bcd1d6c6164753c63602f35f58d660843f4b79b0",
+    "results/v3/raw/geometry-v3-20260829T151742Z-3b3fa742-s20260828-spectrum-shard-000/local_spectra-shard-000.parquet": "cdbabaf1babce85b51eb8dc09315f2618f2ef7a69fd45d2065db5f61172c6937",
+    "results/v3/raw/geometry-v3-20260829T151742Z-3b3fa742-s20260828-spectrum-shard-000/manifest.json": "10d7ec015fa664db7d45e11531d113ac3bca9d4725869959807dc8af1b1b305c",
+    "results/v3/raw/geometry-v3-20260829T151742Z-3b3fa742-s20260828-spectrum-shard-000/map_spectra-shard-000.parquet": "dd45dbbb3b3ff8f18dfce7cc45a9850fcbfe1cff59b65e8268dc6333a9ec3e11",
+    "results/v3/raw/geometry-v3-20260829T151742Z-efb45693-s20260828-spectrum-shard-001/local_spectra-shard-001.parquet": "fa1a811a8266069521fd3de03784d67a38c3acbe133ed8b893b8446bb69f800e",
+    "results/v3/raw/geometry-v3-20260829T151742Z-efb45693-s20260828-spectrum-shard-001/manifest.json": "aadf286b71c4f2cee4e2add184f9d82ea9b3b8b92e519cbd5bd1eb7d83eb72ef",
+    "results/v3/raw/geometry-v3-20260829T151742Z-efb45693-s20260828-spectrum-shard-001/map_spectra-shard-001.parquet": "85ba497ca326c923cc47228cf4f984a7c7d7f41477ea2a292dec3e3d609da8fa",
+    "results/v3/raw/geometry-v3-20260829T172205Z-3b3fa742-s20260828-pareto-shard-000/manifest.json": "4ddeba06fc74eaf9b4015d37923501543b32ca82604c33a52404f63c398ac6f7",
+    "results/v3/raw/geometry-v3-20260829T172205Z-3b3fa742-s20260828-pareto-shard-000/pareto_records-shard-000.parquet": "4ff1f6f4410ee1e37990d541e35bf65b87a611fc3dab6de9b9ccc30e0296ee32",
+    "results/v3/raw/geometry-v3-20260829T172205Z-efb45693-s20260828-pareto-shard-001/manifest.json": "dfef9ff1f176a0628b84ae2ed474d8d9c1d200338cb87596251f7694576732a1",
+    "results/v3/raw/geometry-v3-20260829T172205Z-efb45693-s20260828-pareto-shard-001/pareto_records-shard-001.parquet": "cf6ff0b0945436e608a3861ea14c7b849e18dc0b5657723bc6ed04ca782c0d92"
+  },
+  "eligible_protocols": {},
+  "freeze_created_from_commit": "20a3040a35cb0a052741d572bda87f6e8bc2fe93",
+  "position_scopes": [
+    "final",
+    "all_non_padding"
+  ],
+  "protocol_version": "exploratory_protocol_v3",
+  "schema_version": 3,
+  "source_hashes": {
+    "configs/closure_v3_confirm.yaml": "f97b0e9129a30eb00c699edc65fde622b56ef07484171a3e9355cf7f99e154dc",
+    "configs/closure_v3_pilot.yaml": "36e051000e49b101405710ea1802e598b5e58434f77ad2c0c8ebcfc961ae5fb8",
+    "configs/geometry_v3.yaml": "73eb5dacf93bbf842f22add0192b81354c08b96acb81810bb8398b5728aaf292",
+    "schemas/geometry-record-v3.schema.json": "afdf182e5b4a30ddc2298344be2fdc2f8b466b67d2558062de7d95ebce5a443c",
+    "schemas/trial-record-v3.schema.json": "0be1749dd695e8ed7cb0eedc6a1526ee4aa9fce03742721ce6b058f8fe22ce16",
+    "scripts/run_closure_v3_confirm.sh": "72fbc30ea530ec6b4e60e287c4f29d0ef58fe727b3a2e4e8cdcfccb08810aa0b",
+    "scripts/run_closure_v3_pilot.sh": "5405939df381912fb44e71c2e4b99d1ecd6c76cbb4ea61ccb01a2241120d92c5",
+    "scripts/run_dictionary_v3.sh": "0cd800ee91c13d95ce33df06095684ee2f1df00378428acdea6656170cc3f0ba",
+    "scripts/run_mediation_v3.sh": "0cd800ee91c13d95ce33df06095684ee2f1df00378428acdea6656170cc3f0ba",
+    "src/jclosure/baseline_guard.py": "94ae412e4e9997b3adc565f6947ae605b789f363b6a86b27d00a5cf34ec3c895",
+    "src/jclosure/clamp_v3.py": "05091d9092172aee91a33103a2514946d2b79438be4aed1aa02c3769de9adc14",
+    "src/jclosure/experiments/clamp_v3_calibration.py": "efb4d54f0d7baa6f1680749f4fb557636e6a00f5077a13c4b605295c41bd0b49",
+    "src/jclosure/experiments/closure_v3.py": "281c6b410ffe15b0f799c44c04633aaea52bc16e1c44c49d61b0cba7e0f6d4cf",
+    "src/jclosure/experiments/geometry_v3.py": "0eadd41773a338fe7a06d97ad852c573184f955102d14ed574ae92cd0d801e72",
+    "src/jclosure/experiments/lowdim_search.py": "7723fbb672a659995b6cacf7edbe4b83e5d6ca82593c7e385b26026ec03e4617",
+    "src/jclosure/geometry.py": "020e70f4ae2dfead43807abf7340866314666c868ec0e2a2a64d682a1af94cb3",
+    "src/jclosure/protocol_v3.py": "253ae02e43938c868101e566fb5caa937fb70161aab2dd497ca91bd0ee8e3ef9",
+    "src/jclosure/records.py": "25390ebada53e077e11f925e2895c41f7d6f292bd373b515f6fff174e3da10e4"
+  },
+  "status": "GEOMETRY_CALIBRATION_ONLY",
+  "thresholds": {
+    "dense": {
+      "cosine_threshold": 0.995,
+      "top10_overlap_threshold": 0.8
+    },
+    "formal_displacement": 0.2,
+    "naturality_quantile": 0.99,
+    "rms_drift": 0.02,
+    "small_perturbation_min": 0.05,
+    "sparse": {
+      "coefficient_cosine_threshold": 0.995,
+      "reconstruction_cosine_threshold": 0.995,
+      "support_f1_threshold": 0.8,
+      "weighted_jaccard_threshold": 0.95
+    }
+  }
+}

@@ -17,6 +17,7 @@ from jclosure.compact_memory_v3_1 import (
     parameter_count,
     scheduled_feedback_probability,
 )
+from jclosure.config import load_config
 from jclosure.datasets_v3_1 import (
     deterministic_memory_split,
     disjoint_arithmetic_domains,
@@ -37,6 +38,11 @@ def test_answer_token_prefers_canonical_bare_surface():
             return {"yes": [10], " yes": [11]}[surface]
 
     assert answer_token_id(Tokenizer(), "yes") == 10
+
+
+def test_v31_config_freezes_primary_dense_null_tolerance():
+    config = load_config("configs/closure_v3_1.yaml")
+    assert config["geometry"]["formal_null_tolerance"] == pytest.approx(1e-4)
 
 
 def test_autonomous_rollout_feedback_uses_only_predictions():

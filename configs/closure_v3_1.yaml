@@ -37,6 +37,9 @@ v3_1:
   null_quantile: 0.99
   null_js_floor: 0.0001
 
+geometry:
+  formal_null_tolerance: 0.0001
+
 v3_1_data:
   naturality_fit: {seed: 20260831, candidates: 512}
   calibration: {seed: 20260902, candidates: 800, target_teacher_correct: 200}

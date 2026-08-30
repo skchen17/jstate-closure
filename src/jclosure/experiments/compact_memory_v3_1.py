@@ -983,6 +983,9 @@ def main() -> None:
                 stage=args.stage,
                 result=str(output.relative_to(context.root)),
             )
+    except KeyboardInterrupt:
+        context.finish("FAILED", error="KeyboardInterrupt: run cancelled")
+        raise
     except Exception as exc:
         context.finish("FAILED", error=f"{type(exc).__name__}: {exc}")
         raise

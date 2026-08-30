@@ -62,6 +62,32 @@ def _calibration(root: Path, figures: list[dict[str, Any]]) -> str:
         "Intervention eligibility retains the frozen ≥0.20 displacement requirement. Later restoration eligibility does not impose a minimum correction magnitude.",
         "",
     ]
+    if not summary.get("behavioral_authorized"):
+        all_position = rows[rows["position_scope"] == "all_non_padding"]
+        final_position = rows[rows["position_scope"] == "final"]
+        lines.extend(
+            [
+                "No protocol was behaviorally authorized, so no closure freeze or causal pilot is permitted.",
+                (
+                    "All-non-padding strict-valid initial interventions: "
+                    + ", ".join(
+                        f"L{int(row.l1)}={int(row.intervention_valid)}/{int(row.attempted)}"
+                        for row in all_position.itertuples()
+                    )
+                    + "."
+                ),
+                (
+                    "Final-position strict-valid initial interventions: "
+                    + ", ".join(
+                        f"L{int(row.l1)}={int(row.intervention_valid)}/{int(row.attempted)}"
+                        for row in final_position.itertuples()
+                    )
+                    + "."
+                ),
+                "These are state-construction/restoration feasibility failures, not behavioral-effect estimates.",
+                "",
+            ]
+        )
     if not rows.empty:
         lines.extend([rows.to_markdown(index=False), ""])
     return "\n".join(lines)
@@ -279,13 +305,31 @@ def main() -> None:
     trace_summary = _json(
         root / "results/v3_1/processed/compact_memory_trace_summary.json"
     )
+    part_a_status = (
+        "NOT EVALUATED"
+        if calibration_summary is None
+        else (
+            "AUTHORIZED"
+            if calibration_summary.get("behavioral_authorized")
+            else "GATED"
+        )
+    )
+    part_b_status = (
+        "NOT EVALUATED"
+        if trace_summary is None
+        else (
+            "AUTHORIZED"
+            if trace_summary.get("representation_screen_authorized")
+            else "GATED"
+        )
+    )
     v31_block = "\n".join(
         [
             start,
             "## Protocol v3.1 status",
             "",
-            f"Part A behavioral authorization: {bool(calibration_summary and calibration_summary.get('behavioral_authorized'))}.",
-            f"Part B representation-screen authorization: {bool(trace_summary and trace_summary.get('representation_screen_authorized'))}.",
+            f"Part A behavioral authorization: {part_a_status}.",
+            f"Part B representation-screen authorization: {part_b_status}.",
             "Exact counts, effects, confidence intervals, and attrition are generated in the three v3.1 protocol reports. No classification is upgraded when a required gate is absent.",
             end,
         ]

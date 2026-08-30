@@ -43,6 +43,48 @@ def _shard_invariant_config_digest(manifest: dict[str, Any]) -> str:
     return config_digest(config)
 
 
+def _write_partitioned_records(
+    frame: pd.DataFrame,
+    *,
+    root: Path,
+    output_root: Path,
+    manifest_path: Path,
+    rows_per_file: int = 50,
+) -> dict[str, Any]:
+    """Write complete trial records in publication-safe immutable partitions."""
+
+    parts: list[dict[str, Any]] = []
+    for (l1, scope), group in frame.groupby(
+        ["l1", "position_scope"], sort=True, dropna=False
+    ):
+        partition = output_root / f"l1={int(l1)}" / f"scope={scope}"
+        partition.mkdir(parents=True, exist_ok=True)
+        for part_index, start in enumerate(range(0, len(group), rows_per_file)):
+            path = partition / f"part-{part_index:03d}.parquet"
+            chunk = group.iloc[start : start + rows_per_file]
+            chunk.to_parquet(path, index=False, compression="zstd")
+            parts.append(
+                {
+                    "path": str(path.relative_to(root)),
+                    "sha256": sha256_file(path),
+                    "bytes": path.stat().st_size,
+                    "rows": len(chunk),
+                    "l1": int(l1),
+                    "position_scope": str(scope),
+                }
+            )
+    manifest = {
+        "schema_version": 4,
+        "protocol_version": PROTOCOL_V31,
+        "format": "partitioned_parquet_zstd",
+        "rows": len(frame),
+        "rows_per_file": rows_per_file,
+        "parts": parts,
+    }
+    write_json_atomic(manifest_path, manifest)
+    return manifest
+
+
 def _hook_sanity(bundle, input_ids: torch.Tensor, layer: int) -> dict[str, bool]:
     with torch.no_grad():
         clean = bundle.forward_logits(input_ids).detach().cpu()
@@ -487,8 +529,8 @@ def _calibration_rows(
 def _summarize(frame: pd.DataFrame, config: dict[str, Any]) -> dict[str, Any]:
     required = int(config["v3_1"]["valid_required"])
     minimum_later = int(config["v3_1"]["minimum_restoration_layers"])
-    summaries = []
-    protocols = []
+    summaries: list[dict[str, Any]] = []
+    protocols: list[dict[str, Any]] = []
     for (l1, scope), group in frame[frame["position_scope"] != "unmatched"].groupby(
         ["l1", "position_scope"]
     ):
@@ -577,7 +619,7 @@ def _summarize(frame: pd.DataFrame, config: dict[str, Any]) -> dict[str, Any]:
                     "restoration_layers": eligible_restoration,
                 }
             )
-    protocols.sort(key=lambda row: row["l1"])
+    protocols.sort(key=lambda row: int(row["l1"]))
     return {
         "schema_version": 4,
         "protocol_version": PROTOCOL_V31,
@@ -669,7 +711,9 @@ def main() -> None:
         by_index = {int(value["shard_index"]): value for value in manifests}
         if set(by_index) != set(range(int(args.shard_count))):
             raise RuntimeError("v3.1 merge is missing calibration shards")
-        digests = {config_digest(value["config"]) for value in by_index.values()}
+        digests = {
+            _shard_invariant_config_digest(value) for value in by_index.values()
+        }
         if len(digests) != 1:
             raise RuntimeError("v3.1 calibration shard configs differ")
         frame = pd.concat(
@@ -679,14 +723,26 @@ def main() -> None:
             ],
             ignore_index=True,
         )
-        output_records = context.processed_dir / "closure_v3_1_calibration.parquet"
-        frame.to_parquet(output_records, index=False)
+        output_records = (
+            context.processed_dir / "closure_v3_1_calibration_records.json"
+        )
+        records_manifest = _write_partitioned_records(
+            frame,
+            root=context.root,
+            output_root=(
+                context.processed_dir
+                / "closure_v3_1_calibration_records"
+                / context.run_id
+            ),
+            manifest_path=output_records,
+        )
         summary = _summarize(frame, context.config)
         summary.update(
             {
                 "run_id": context.run_id,
                 "activation_bank_manifest": str(bank.relative_to(context.root)),
                 "records": str(output_records.relative_to(context.root)),
+                "record_part_count": len(records_manifest["parts"]),
                 "attempted": len(frame),
                 "source_shards": [
                     by_index[index]["run_id"] for index in sorted(by_index)

@@ -22,6 +22,11 @@ artifacts/traces/
 *.npz
 *.npy
 
+# Oversize local calibration material is represented in Git by hashed,
+# publication-safe partitioned Parquet records and run manifests.
+results/v3_1/raw/calibration-v3-1-*/calibration-shard-*.parquet
+results/v3_1/processed/closure_v3_1_calibration.parquet
+
 # Machine-readable metrics and generated figures are intentionally versioned.
 # Large tensors/checkpoints remain excluded by the extension rules above.
 

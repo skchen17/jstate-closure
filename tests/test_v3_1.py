@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 import pandas as pd
 import pytest
@@ -24,6 +25,11 @@ from jclosure.datasets_v3_1 import (
     generate_iterated_modular_arithmetic,
     generate_sequential_state_machines,
 )
+from jclosure.experiments.calibrate_v3_1 import (
+    _shard_invariant_config_digest,
+    _write_partitioned_records,
+)
+from jclosure.provenance import sha256_file
 from jclosure.runtime_v3_1 import answer_token_id
 from jclosure.statistics_v3_1 import (
     common_valid_base_trials,
@@ -43,6 +49,45 @@ def test_answer_token_prefers_canonical_bare_surface():
 def test_v31_config_freezes_primary_dense_null_tolerance():
     config = load_config("configs/closure_v3_1.yaml")
     assert config["geometry"]["formal_null_tolerance"] == pytest.approx(1e-4)
+
+
+def test_v31_shard_digest_ignores_only_runtime_device():
+    left = {"config": {"model": {"device": 0, "id": "model"}, "seed": 7}}
+    right = {"config": {"model": {"device": 1, "id": "model"}, "seed": 7}}
+    assert _shard_invariant_config_digest(left) == _shard_invariant_config_digest(
+        right
+    )
+    right["config"]["seed"] = 8
+    assert _shard_invariant_config_digest(left) != _shard_invariant_config_digest(
+        right
+    )
+
+
+def test_partitioned_calibration_records_are_complete_and_hashed(tmp_path: Path):
+    frame = pd.DataFrame(
+        [
+            {"l1": 23, "position_scope": "final", "value": index}
+            for index in range(7)
+        ]
+        + [
+            {"l1": 24, "position_scope": "all_non_padding", "value": index}
+            for index in range(3)
+        ]
+    )
+    manifest_path = tmp_path / "records.json"
+    manifest = _write_partitioned_records(
+        frame,
+        root=tmp_path,
+        output_root=tmp_path / "records",
+        manifest_path=manifest_path,
+        rows_per_file=2,
+    )
+    assert manifest["rows"] == len(frame)
+    assert sum(part["rows"] for part in manifest["parts"]) == len(frame)
+    for part in manifest["parts"]:
+        path = tmp_path / part["path"]
+        assert path.is_file()
+        assert sha256_file(path) == part["sha256"]
 
 
 def test_autonomous_rollout_feedback_uses_only_predictions():

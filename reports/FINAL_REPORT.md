@@ -149,10 +149,7 @@ claims.
 <!-- V3.1 STATUS START -->
 ## Protocol v3.1 status
 
-The corrective direct-L1 and independent compact-memory implementations are
-present and tested, but formal v3.1 calibration, paired causal trials, and
-token-time controller experiments have not yet produced interpretable machine
-results. Infrastructure and compatibility smokes are retained in
-`results/v3_1/raw`; they are not scientific evidence. The cumulative
-classification therefore remains D.
+Part A behavioral authorization: GATED.
+Part B representation-screen authorization: NOT EVALUATED.
+Exact counts, effects, confidence intervals, and attrition are generated in the three v3.1 protocol reports. No classification is upgraded when a required gate is absent.
 <!-- V3.1 STATUS END -->

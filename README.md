@@ -27,6 +27,10 @@ Jacobian of the normalized dense profile. `V3-Dense` and `V3-Sparse` are separat
 operational state definitions with separate equality tests. Behavioral closure
 is disabled until a byte-frozen v3 calibration authorizes at least four ordered
 layers while retaining a natural displacement of at least 0.20.
+The formal v3 calibration is now complete: it saved 12,600 candidates and 4,527
+formal-valid rows, but no protocol had more than one eligible layer. Behavioral
+closure therefore remains gated and the required low-dimensional search is the
+next authorized empirical stage.
 
 ## Environment
 
@@ -91,8 +95,9 @@ No model-scale result is claimed merely because the code exists. See
 `reports/PHASE0_VALIDATION.md`, `reports/PHASE0_PROTOCOL_AUDIT.md`,
 `reports/PHASE0_V2_CONFIRMATORY.md`, and `reports/FINAL_REPORT.md` for the
 actual execution status and evidence boundary. The strongest warranted result is
-classification D: the Phase 0 readout passed, but strict clamp calibration failed
-at every candidate layer, so closure/controller hypotheses remain unresolved.
+classification D: the Phase 0 readout passed, but neither v2 nor exploratory-v3
+state construction produced the four eligible layers required for behavioral
+closure, so H1/H2/H3 and controller hypotheses remain unresolved.
 
 For offline model execution, set `JCLOSURE_MODEL_DIR` to a snapshot containing
 the pinned `artifact_manifest.json` and `JCLOSURE_ARTIFACT_DIR` to the verified
@@ -122,6 +127,17 @@ plus a measured adaptive correction with a 64-epsilon minimum increment so the
 actual post-retraction chord cannot remain below the unchanged nominal 0.20
 threshold; achieved displacement is always stored unrounded. Fixed-margin-only
 retry records are retained as failed provenance.
+
+The formal calibration replayed 200 anchors at each of seven layers, three
+dictionary sizes, and three methods (12,600 rows total). All candidates were
+finite, no activation explosion occurred, and zero/identity/determinism/cleanup
+controls passed. Only M4096 Dense-optimized/L23 and M8192/M16384 Dense/L29 were
+eligible; no state-definition/dictionary protocol had the required four ordered
+layers. The first merge attempt is retained as a failed manifest because the
+per-shard digest included the assigned CUDA device. The corrected merge excludes
+only `model.device` from shard equivalence, records both original digests, and
+still rejects every other config difference; it reused the immutable shard
+Parquet files and did not recompute trials.
 
 If calibration authorizes behavioral execution, the v3 pilot and confirmation
 launchers shard prompts across both GPUs. Sample targets refer to valid base

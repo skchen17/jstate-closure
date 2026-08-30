@@ -112,14 +112,24 @@ method-paired ID is shared across dictionaries, so attrition and dictionary-size
 effects can be evaluated on exactly matched constructions.
 Calibration is layer-hash-sharded across both GPUs, checkpoints every
 dictionary/layer cell, and merges only shards with an identical launch group,
-commit, config digest, and activation-bank manifest. The 95% naturality gate is
-computed over candidates passing state equality/RMS/displacement before the
-naturality criterion is applied.
+commit, shard-invariant scientific config, and activation-bank manifest. The
+assigned `model.device` is a runtime shard coordinate: it is excluded from the
+merge-equivalence digest while both original per-device digests remain recorded;
+every other config difference is rejected. The 95% naturality gate is computed
+over candidates passing state equality/RMS/displacement before the naturality
+criterion is applied.
 A protocol needs at least 160/200 strict-valid trials per layer, 95% naturality
 among valid trials, fewer than 5% numerical optimizer failures, passing hook
 controls, and at least four ordered eligible layers. The behavioral runner
 refuses to run unless all source/config/data hashes match the committed Phase 3
 freeze manifest.
+
+The executed formal calibration contains 12,600 candidates and 4,527
+formal-natural valid rows. All 12,600 candidates were finite, none triggered the
+activation-explosion flag, and all hook controls passed. No protocol produced
+four eligible ordered layers, so v3 behavioral closure is not authorized. This
+is a state-construction feasibility result, not behavioral evidence for H1, H2,
+or H3; it requires the predeclared low-dimensional search.
 
 At behavioral time, the initial L1 clamp must pass formal displacement. Later
 persistent clamps require measured-state equality, RMS, and naturality but do

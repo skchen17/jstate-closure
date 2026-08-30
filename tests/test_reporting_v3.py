@@ -5,6 +5,7 @@ import pytest
 
 from jclosure.provenance import write_json_atomic
 from jclosure.reporting_v3 import (
+    _format_calibration_layers,
     _geometry_sources,
     _latest_completed_closure_sources,
     summarize_closure_v3,
@@ -196,3 +197,25 @@ def test_pareto_summary_keeps_dense_and_sparse_gates_independent():
     assert dense["formal_valid_rows"] == 1
     assert sparse["formal_valid_rows"] == 1
     assert sparse["state_equal_rows"] == 1
+
+
+def test_calibration_table_reports_strict_and_formal_counts():
+    text = _format_calibration_layers(
+        {
+            "layers": [
+                {
+                    "dictionary_size": 4096,
+                    "layer": 23,
+                    "method": "dense_optimized",
+                    "strict_valid": 175,
+                    "formal_natural_valid": 175,
+                    "attempted": 200,
+                    "natural_fraction_among_valid": 1.0,
+                    "eligible": True,
+                    "reasons": [],
+                }
+            ]
+        }
+    )
+    assert "175/200" in text
+    assert "| yes | - |" in text

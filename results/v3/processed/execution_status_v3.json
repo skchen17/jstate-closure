@@ -6,8 +6,13 @@
   },
   "behavioral_closure": "GATED",
   "behavioral_shard_group": null,
-  "calibration": "UNEXECUTED",
+  "calibration": "COMPLETED",
   "failed_runs": [
+    {
+      "error": "RuntimeError: clamp calibration shards use different configs",
+      "kind": "clamp-v3-calibration",
+      "run_id": "clamp-v3-calibration-20260830T022757Z-3b3fa742-s20260828"
+    },
     {
       "error": "OSError: We couldn't connect to 'https://hf-mirror.com' to load the files, and couldn't find them in the cached files.\nCheck your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.",
       "kind": "geometry-v3",
@@ -91,6 +96,12 @@
   "schema_version": 3,
   "source_hashes": {
     "results/v3/processed/pareto_formal_summary_v3.parquet": "61ed256a37f3c25f02ba8a969fc6a3853fbbd92cc3ae462bb32af182e0710419",
+    "results/v3/raw/clamp-v3-calibration-20260829T232005Z-3b3fa742-s20260828-clamp-shard-000/manifest.json": "9721d82971587254856bd85e1ed9182f5e8f6a6c38b8a1388087c8439c70e83b",
+    "results/v3/raw/clamp-v3-calibration-20260829T232005Z-efb45693-s20260828-clamp-shard-001/manifest.json": "d77f9180b36f5e2922f4a6e95a7c575c1d54d3241f5fa7e34011bfa44d6b2723",
+    "results/v3/raw/clamp-v3-calibration-20260829T232049Z-3b3fa742-s20260828-clamp-shard-000/manifest.json": "1da0869ffc2a4d832a0deac1eef5890df3a4af67bc62a25fae2c6f79e8602b52",
+    "results/v3/raw/clamp-v3-calibration-20260829T232049Z-efb45693-s20260828-clamp-shard-001/manifest.json": "97ffa6a0a256407b382d7c2ee8a72c35f5abdd70a24549751795f5b09cd41d20",
+    "results/v3/raw/clamp-v3-calibration-20260830T022757Z-3b3fa742-s20260828/manifest.json": "0e1128e3f648f47b3d31a984ca6bbb247a6fbecab02c017c3dd4b84d662eb419",
+    "results/v3/raw/clamp-v3-calibration-20260830T023149Z-3b3fa742-s20260828/manifest.json": "f75b3a4fca8a7a739903fb17a9d9206897ac7c77c1de97472a57859a79b245fb",
     "results/v3/raw/geometry-v3-20260828T165452Z-1bf9a00a-s20260828/manifest.json": "bbcd936175dabcccb7c419286bc705fea0b9765048320683a87ce5faaa535f08",
     "results/v3/raw/geometry-v3-20260828T165606Z-1bf9a00a-s20260828/manifest.json": "8a947d134adec500b186343ee6c9652ab16702a63b5a816a1108b52e23daf580",
     "results/v3/raw/geometry-v3-20260829T133605Z-1bf9a00a-s20260828/manifest.json": "f6cf53683c6a9ca4a3220fa5ad51ecab27eb06649a05426ad3968d8ee2cb27f4",

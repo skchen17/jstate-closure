@@ -82,7 +82,7 @@ byte-identical under the committed SHA-256 regression guard.
 
 - Geometry status: **COMPLETED**
 - Pareto status: **COMPLETED**
-- V3 clamp calibration: **UNEXECUTED**
+- V3 clamp calibration: **COMPLETED**
 - Behavioral protocols authorized: **none**
 - Strongest warranted classification after v3: **D**
 
@@ -91,6 +91,7 @@ Dense state-definition feasibility warning: the median local rank at 1e-4 is 255
 Failed v3 runs are evidence about execution only and are not interpreted as
 model behavior:
 
+- `clamp-v3-calibration-20260830T022757Z-3b3fa742-s20260828`: RuntimeError: clamp calibration shards use different configs
 - `geometry-v3-20260828T165452Z-1bf9a00a-s20260828`: OSError: We couldn't connect to 'https://hf-mirror.com' to load the files, and couldn't find them in the cached files.
 Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
 - `geometry-v3-20260828T165606Z-1bf9a00a-s20260828`: RuntimeError: Expected a 'cuda' device type for generator but found 'cpu'

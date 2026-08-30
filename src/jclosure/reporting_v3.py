@@ -552,6 +552,33 @@ def _format_pareto_attrition(summary: pd.DataFrame) -> str:
     )
 
 
+def _format_calibration_layers(calibration: dict[str, Any] | None) -> str:
+    if calibration is None or not calibration.get("layers"):
+        return "Calibration layer records were not available."
+    lines = [
+        "| M | Layer | Method | strict-valid | formal-natural | natural fraction | eligible | reasons |",
+        "|---:|---:|:---|---:|---:|---:|:---:|:---|",
+    ]
+    rows = sorted(
+        calibration["layers"],
+        key=lambda row: (
+            int(row["dictionary_size"]),
+            int(row["layer"]),
+            str(row["method"]),
+        ),
+    )
+    for row in rows:
+        reasons = ", ".join(str(value) for value in row.get("reasons", [])) or "-"
+        lines.append(
+            f"| {int(row['dictionary_size'])} | {int(row['layer'])} | "
+            f"{row['method']} | {int(row['strict_valid'])}/{int(row['attempted'])} | "
+            f"{int(row['formal_natural_valid'])}/{int(row['attempted'])} | "
+            f"{float(row['natural_fraction_among_valid']):.3f} | "
+            f"{'yes' if row['eligible'] else 'no'} | {reasons} |"
+        )
+    return "\n".join(lines)
+
+
 def build_geometry_figures(root: Path) -> list[dict[str, Any]]:
     maps, local, spectrum_paths, execution_scope = _geometry_sources(root)
     pareto, pareto_paths = _pareto_sources(root)
@@ -913,6 +940,22 @@ from geometry or construction feasibility alone.
             f"Authorized protocols: {authorized or 'none'}. Gate reasons: "
             f"{dict(reason_counts)}."
         )
+    calibration_layers = _format_calibration_layers(calibration)
+    hook_sanity = (
+        json.dumps(calibration.get("hook_sanity", {}), sort_keys=True)
+        if calibration is not None
+        else "not executed"
+    )
+    source_shards = (
+        ", ".join(str(value) for value in calibration.get("source_shards", []))
+        if calibration is not None
+        else "not executed"
+    )
+    merged_run = (
+        str(calibration.get("run_id", "unknown"))
+        if calibration is not None
+        else "not executed"
+    )
     calibration_report = f"""# Clamp v3 calibration
 
 ## Material Passport
@@ -927,10 +970,26 @@ from geometry or construction feasibility alone.
 
 {clamp_text}
 
+- Merged run: `{merged_run}`
+- Source shards: {source_shards}
+- Hook sanity: `{hook_sanity}`
+
 Formal validity requires the state-definition-specific equality gate, RMS drift
 at most 0.02, displacement at least 0.20 of the natural scale, and the frozen
 naturality envelope. Candidates between 0.05 and 0.20 are sensitivity records
 only and cannot support H1/H2/H3.
+
+The behavioral gate additionally requires at least four eligible increasing
+layers so a selected L1 has at least three later eligible layers. No tested
+state definition and dictionary size met that condition.
+
+## Layer-by-layer calibration
+
+`strict-valid` is evaluated before naturality; `formal-natural` additionally
+passes the frozen 99% naturality envelope. All denominators are 200 paired
+anchor/donor trials.
+
+{calibration_layers}
 """
     (root / "reports/CLAMP_V3_CALIBRATION.md").write_text(
         calibration_report, encoding="utf-8"

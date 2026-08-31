@@ -246,3 +246,35 @@ feed back both components. Reports label the first two `teacher_current_only`
 and never use them as autonomous oracles. If no validated teacher J-swap token
 trajectory exists, the fidelity endpoint is recorded as unavailable rather
 than inferred from observational rollout.
+
+## Corrective causal protocol v3.2
+
+The primary estimand uses a final-token measured-J-preserving perturbation at
+L1. Initial intervention validity retains the frozen dense cosine, top-10,
+RMS, naturality, finite-value, and 0.20 natural-displacement requirements.
+Later restoration is a separate operation and has no minimum displacement
+requirement.
+
+Restoration eligibility is estimated as
+`P(restoration_valid | initial_intervention_valid)`. Each layer reports the
+applicable count, successes, rate, and a prompt-level bootstrap interval.
+Complete-chain validity is reported separately and does not replace the
+per-layer conditional gate. Behavioral authorization requires one final-token
+L1 and at least three common later layers eligible for both final-only and
+all-non-padding restoration under one predeclared local/optimized method.
+
+The three paired causal modes have identical initial events:
+
+- `single`: no later restoration;
+- `persistent_final`: restore the final position at selected later layers;
+- `persistent_all`: restore all non-padding positions at selected later layers.
+
+Compact-memory protocol v3.2 canonically merges the frozen v3.1 teacher-trace
+shards. Representation candidates must pass reconstruction, Phase-0 semantic,
+causal-direction, causal-magnitude, and finite-value gates before controller
+training. Autonomous rollout begins from true `Z0` and never reads future
+teacher states. `teacher_action_fidelity` and
+`ground_truth_action_accuracy` are distinct primary fields; the extremely
+small teacher-correct subset is retained as an explicitly underpowered
+sensitivity analysis rather than silently replacing the all-parseable teacher
+dynamics dataset.

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skchen17/jstate-closure/schemas/compact-memory-record-v3-2.schema.json",
+  "title": "Compact-memory exploratory v3.2 record",
+  "type": "object",
+  "required": [
+    "schema_version", "protocol_version", "run_id", "model_family",
+    "state_representation", "state_dimension", "training_subset", "metrics"
+  ],
+  "properties": {
+    "schema_version": {"const": 5},
+    "protocol_version": {"const": "compact_memory_exploratory_v3_2"},
+    "run_id": {"type": "string", "minLength": 1},
+    "model_family": {"enum": ["markov", "history", "gru", "remainder_reference"]},
+    "state_representation": {"type": "string"},
+    "state_dimension": {"type": "integer", "minimum": 1},
+    "memory_dimension": {"type": ["integer", "null"]},
+    "history_length": {"type": ["integer", "null"]},
+    "training_subset": {"enum": ["all_parseable", "teacher_correct_only"]},
+    "teacher_action_fidelity": {"type": "number"},
+    "ground_truth_action_accuracy": {"type": "number"},
+    "metrics": {"type": "object"}
+  },
+  "additionalProperties": true
+}

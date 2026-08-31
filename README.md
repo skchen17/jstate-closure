@@ -202,3 +202,36 @@ scripts/run_compact_memory_v3_1.sh
 scripts/run_compact_memory_references_v3_1.sh
 scripts/build_report_v3_1.sh
 ```
+
+## Corrective causal protocol v3.2
+
+Protocol v3.2 is additive: no v3.1 source, threshold, freeze, raw record, or
+dedicated report is rewritten. It makes the primary intervention scope and the
+later restoration scope independent. `single`, `persistent_final`, and
+`persistent_all` share one final-token direct-L1 candidate; their only causal
+difference is whether later layers restore no positions, the final position,
+or every non-padding position. Hook records include layer, position, and
+operation type.
+
+Restoration calibration compares the existing local and hard-constrained
+optimized projectors. Layer eligibility is conditional on a valid initial
+intervention and reports both per-layer and complete-chain bootstrap intervals.
+The all-position *initial* arm is not part of the primary authorization gate.
+
+Compact-memory v3.2 consumes the already collected six v3.1 trace shards. It
+does not regenerate trajectories. A canonical audit checks identities, split
+and program leakage, record fields, tensor hashes, tensor shapes, and finite
+values before representation screening. Student agreement with teacher actions
+is always reported separately from ground-truth task accuracy.
+
+```bash
+scripts/prepare_v3_2.sh
+scripts/run_calibration_v3_2.sh
+python -m jclosure.experiments.freeze_v3_2 --kind closure
+scripts/run_closure_v3_2_pilot.sh
+scripts/run_closure_v3_2_confirm.sh
+STAGE=merge-audit scripts/run_compact_memory_v3_2.sh
+STAGE=screen scripts/run_compact_memory_v3_2.sh
+STAGE=train scripts/run_compact_memory_v3_2.sh
+scripts/build_report_v3_2.sh
+```

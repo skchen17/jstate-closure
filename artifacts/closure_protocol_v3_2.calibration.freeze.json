@@ -1,0 +1,131 @@
+{
+  "baseline_commit": "a0d164e1167fae21a7d3e7ec41dae9fd7e819019",
+  "config_digest": "8267e9431dfe7a893e3c2e5056a7aaa4f0798a398911836935a308db8f055d6e",
+  "config_path": "configs/closure_v3_2.yaml",
+  "data_hashes": {
+    "artifacts/v3_2_data_manifest.json": "f5eae700aaea30bda8c5b5687c37c642c9fdd1eca5cbcf56e24eae9855e95d35",
+    "data/v3_2/arithmetic_calibration.json": "e1771c36a772a77a6beeda28c5999def1513a861d0f6c1c8060b5e0e1ade552b",
+    "data/v3_2/arithmetic_confirmation.json": "0f274398ecb9bffb6d8b3f7fa395e0950b1893f8a64499e81359652c7b2acad8",
+    "data/v3_2/arithmetic_naturality_fit.json": "492edae5c3e7146eba4dba0be71680496719c287752170579cd65c729488074d",
+    "data/v3_2/arithmetic_pilot.json": "2a19ebc1232261461a73ebb78090f2979519a5f1b2848fe192c383e3e4a0a459",
+    "results/processed/concept_vocabulary_v2_4096.json": "ef76ba6dbc8333e68d6ac5d6fea65bc195122f49ba4efe32e69c26b5dd9dfa3e"
+  },
+  "freeze_created_from_commit": "a0d164e1167fae21a7d3e7ec41dae9fd7e819019",
+  "lens": {
+    "file": "qwen3.5-4b/jlens/Salesforce-wikitext/Qwen3.5-4B_jacobian_lens_n1000.pt",
+    "metadata_prompts_fitted": 417,
+    "repo": "neuronpedia/jacobian-lens",
+    "revision": "16a01f309fcec900fdcec3f4cd5b64f3d00e4d5a",
+    "sha256": "1f9a8f8fd593f0ffec1a9640993257ca4560f8ae3e5602315643d5cc6818534e",
+    "upstream_commit": "581d398613e5602a5af361e1c34d3a92ea82ba8e"
+  },
+  "model": {
+    "compile": false,
+    "device": 0,
+    "device_map": "cuda",
+    "dtype": "bfloat16",
+    "force_bos": true,
+    "id": "Qwen/Qwen3.5-4B",
+    "max_seq_len": 512,
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "trust_remote_code": false
+  },
+  "protocol_version": "corrective_causal_protocol_v3_2",
+  "schema_version": 5,
+  "seeds": {
+    "calibration": {
+      "candidates": 1000,
+      "seed": 20260909,
+      "target_teacher_correct": 200
+    },
+    "confirmation": {
+      "candidates": 10000,
+      "seed": 20260911,
+      "target_valid": 500
+    },
+    "naturality_fit": {
+      "candidates": 512,
+      "seed": 20260908
+    },
+    "pilot": {
+      "candidates": 2500,
+      "seed": 20260910,
+      "target_valid": 100
+    }
+  },
+  "source_hashes": {
+    "configs/closure_v3_2.yaml": "c38c6807d2896e79a233776f9d7a28d17db3914fca6eaea72c532c5f544ec957",
+    "schemas/trial-record-v3-2.schema.json": "4ff3efa2e1a312ade2fa79e60333d1e2263a8685c64fd7f3cc3cc3bc974df5f3",
+    "src/jclosure/clamp_v3_2.py": "4d1d7549a363e58c9adcc9eb5797d648cef1ff716f5ec36fe30bf49ba7c738bf",
+    "src/jclosure/experiments/calibrate_v3_2.py": "4e35333c924653a98c13857b1c1b89006b692eb655d31717f004c50e00b1f0f9",
+    "src/jclosure/experiments/closure_v3_2.py": "bbe8d0e7f46afc7f012a88ee7dd6d25ccaf35fc8ecf6972dacb7258cf9fdecf1",
+    "src/jclosure/experiments/prepare_v3_2.py": "4b15f4c920d894241243bf6c34d3ee388276d7b7801ff8249edc403a2d6be6c1",
+    "src/jclosure/protocol_v3_2.py": "fe85db6382e0fc14c44aca7c1afadc715ea05175360e6fc45be2c6687f3ba091",
+    "src/jclosure/records_v3_2.py": "777d6ce4538b1660f8b9a938d290bf28eacd70337d29b2f9b718cb35c682bbad",
+    "src/jclosure/runtime_v3_2.py": "1ead19b10a8542b32754ca185a2597762e235c6406db72c0f6e5aef0c798df52",
+    "src/jclosure/statistics_v3_2.py": "5348a92d45dafeca81195c0e1c0c4b66319df68fb87286baf22412d778bec95e"
+  },
+  "status": "FROZEN_FOR_CALIBRATION",
+  "thresholds": {
+    "attempts_per_layer": 200,
+    "bootstrap_resamples": 10000,
+    "candidate_initial_layers": [
+      23,
+      24,
+      25,
+      26
+    ],
+    "causal_modes": [
+      "single",
+      "persistent_final",
+      "persistent_all"
+    ],
+    "confidence": 0.95,
+    "controls": [
+      "clean",
+      "identity",
+      "zero_strength",
+      "matched_random",
+      "j_positive",
+      "full_patch"
+    ],
+    "dense_cosine_threshold": 0.995,
+    "dictionary_size": 4096,
+    "final_layer": 29,
+    "formal_displacement_fraction": 0.2,
+    "initial_method": "dense_optimized",
+    "initial_scope": "final",
+    "initial_strength": 0.25,
+    "method_selection_metric": "minimum_runtime_conditional_rate",
+    "method_tiebreak": [
+      "dense_local",
+      "dense_optimized"
+    ],
+    "minimum_intervention_valid_count": 160,
+    "minimum_intervention_valid_rate": 0.8,
+    "minimum_restoration_applicable": 120,
+    "minimum_restoration_conditional_rate": 0.8,
+    "minimum_restoration_layers": 3,
+    "naturality_quantile": 0.99,
+    "nearest_neighbors": 10,
+    "null_js_floor": 0.0001,
+    "null_quantile": 0.99,
+    "pca_dimension": 128,
+    "primary_task_family": "arithmetic",
+    "restoration_methods": [
+      "dense_local",
+      "dense_optimized"
+    ],
+    "restoration_scopes": [
+      "final",
+      "all_non_padding"
+    ],
+    "rms_drift_threshold": 0.02,
+    "sensitivity_strengths": [
+      0.5,
+      1.0
+    ],
+    "state_definition": "V3-Dense",
+    "top10_overlap_threshold": 0.8
+  }
+}

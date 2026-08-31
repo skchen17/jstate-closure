@@ -1,0 +1,34 @@
+{
+  "baseline_commit": "a0d164e1167fae21a7d3e7ec41dae9fd7e819019",
+  "blocked_expression_count": 13876,
+  "blocked_prompt_count": 14324,
+  "causal_domains": {
+    "calibration": {
+      "count": 1000,
+      "path": "data/v3_2/arithmetic_calibration.json",
+      "seed": 20260909,
+      "sha256": "e1771c36a772a77a6beeda28c5999def1513a861d0f6c1c8060b5e0e1ade552b"
+    },
+    "confirmation": {
+      "count": 10000,
+      "path": "data/v3_2/arithmetic_confirmation.json",
+      "seed": 20260911,
+      "sha256": "0f274398ecb9bffb6d8b3f7fa395e0950b1893f8a64499e81359652c7b2acad8"
+    },
+    "naturality_fit": {
+      "count": 512,
+      "path": "data/v3_2/arithmetic_naturality_fit.json",
+      "seed": 20260908,
+      "sha256": "492edae5c3e7146eba4dba0be71680496719c287752170579cd65c729488074d"
+    },
+    "pilot": {
+      "count": 2500,
+      "path": "data/v3_2/arithmetic_pilot.json",
+      "seed": 20260910,
+      "sha256": "2a19ebc1232261461a73ebb78090f2979519a5f1b2848fe192c383e3e4a0a459"
+    }
+  },
+  "cross_domain_overlap": false,
+  "protocol_version": "corrective_causal_protocol_v3_2",
+  "schema_version": 5
+}

@@ -1,0 +1,40 @@
+extends: compact_memory_v3_1.yaml
+
+run:
+  stage: compact_memory_v3_2
+  protocol_version: compact_memory_exploratory_v3_2
+  timeout_hours: 72
+
+compact_memory_v3_2:
+  source_shard_group_id: compact-memory-v3-1-formal-v3-20260830
+  source_shard_count: 2
+  target_parseable_per_family: 1200
+  state_dimensions: [64, 128, 256, 512]
+  representation_families: [dense_profile_pca, predictive_bottleneck, sparse_j_centered]
+  minimum_reconstruction_cosine: 0.80
+  minimum_phase0_pass10_retention: 0.90
+  minimum_causal_direction_retention: 0.80
+  minimum_causal_magnitude_retention: 0.80
+  minimum_causal_trials: 10
+  histories: [1, 2, 4, 8, 16]
+  memory_dimensions: [16, 32, 64, 128, 256]
+  horizons: [1, 2, 4, 8, 16, 32]
+  target_parameter_count: 5000000
+  parameter_tolerance: 0.05
+  controller_seeds: [20260828, 20260829, 20260830]
+  maximum_epochs: 50
+  early_stopping_patience: 5
+  teacher_forcing_fraction: 0.20
+  maximum_predicted_feedback: 0.80
+  divergence_cosine: 0.80
+  memory_effect_min_cosine: 0.02
+  trajectory_reduction_fraction: 0.20
+  semantic_noninferiority: 0.02
+
+outputs:
+  root: results/v3_2
+  raw: raw
+  processed: processed
+  figures: figures
+  reports: ../../reports
+  artifacts: ../../artifacts

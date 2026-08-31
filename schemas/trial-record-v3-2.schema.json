@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skchen17/jstate-closure/schemas/trial-record-v3-2.schema.json",
+  "title": "Corrective causal protocol v3.2 record",
+  "type": "object",
+  "required": [
+    "schema_version", "protocol_version", "run_id", "base_trial_id",
+    "prompt_id", "condition", "mode", "l1", "initial_scope",
+    "restoration_scope", "valid", "hook_execution_map", "metrics"
+  ],
+  "properties": {
+    "schema_version": {"const": 5},
+    "protocol_version": {"const": "corrective_causal_protocol_v3_2"},
+    "run_id": {"type": "string", "minLength": 1},
+    "base_trial_id": {"type": "string", "minLength": 1},
+    "paired_trial_id": {"type": "string", "minLength": 1},
+    "prompt_id": {"type": "string", "minLength": 1},
+    "condition": {"type": "string", "minLength": 1},
+    "mode": {"enum": ["single", "persistent_final", "persistent_all"]},
+    "l1": {"type": "integer"},
+    "restoration_layers": {"type": "array", "items": {"type": "integer"}},
+    "initial_scope": {"const": "final"},
+    "restoration_scope": {"enum": ["none", "final", "all_non_padding"]},
+    "restoration_method": {"enum": ["dense_local", "dense_optimized"]},
+    "valid": {"type": "boolean"},
+    "exclusion_reason": {"type": ["string", "null"]},
+    "hook_execution_map": {"type": "array"},
+    "restoration_events": {"type": "array"},
+    "metrics": {"type": "object"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,1570 @@
+{
+  "activation_bank_manifest": "results/v3_2/raw/calibration-v3-2-20260831T082530Z-9dcec4b9-s20260828-formal-bank-001-offline/activation_bank_manifest.jsonl",
+  "attempted": 3200,
+  "authorized_protocols": [],
+  "behavioral_authorized": false,
+  "layers": [
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 160,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "eligible": false,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": true,
+      "intervention_valid": 160,
+      "intervention_valid_rate": 0.8,
+      "isolated_conditional": {
+        "24": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "25": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "26": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "27": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      },
+      "l1": 23,
+      "restoration_applicable": 160,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_local",
+      "restoration_scope": "all_non_padding",
+      "runtime_conditional": {
+        "24": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "25": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "26": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "27": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      }
+    },
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 160,
+        "ci_lower": 0.0,
+        "ci_upper": 0.01875,
+        "eligible": false,
+        "rate": 0.00625,
+        "successes": 1
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": true,
+      "intervention_valid": 160,
+      "intervention_valid_rate": 0.8,
+      "isolated_conditional": {
+        "24": {
+          "applicable": 160,
+          "ci_lower": 0.525,
+          "ci_upper": 0.675,
+          "eligible": false,
+          "rate": 0.6,
+          "successes": 96
+        },
+        "25": {
+          "applicable": 160,
+          "ci_lower": 0.41875,
+          "ci_upper": 0.56875,
+          "eligible": false,
+          "rate": 0.49375,
+          "successes": 79
+        },
+        "26": {
+          "applicable": 160,
+          "ci_lower": 0.1373437500000014,
+          "ci_upper": 0.25625,
+          "eligible": false,
+          "rate": 0.19375,
+          "successes": 31
+        },
+        "27": {
+          "applicable": 160,
+          "ci_lower": 0.28125,
+          "ci_upper": 0.43125,
+          "eligible": false,
+          "rate": 0.35625,
+          "successes": 57
+        },
+        "28": {
+          "applicable": 160,
+          "ci_lower": 0.2625,
+          "ci_upper": 0.40625,
+          "eligible": false,
+          "rate": 0.33125,
+          "successes": 53
+        },
+        "29": {
+          "applicable": 160,
+          "ci_lower": 0.5375,
+          "ci_upper": 0.6875,
+          "eligible": false,
+          "rate": 0.6125,
+          "successes": 98
+        }
+      },
+      "l1": 23,
+      "restoration_applicable": 160,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_local",
+      "restoration_scope": "final",
+      "runtime_conditional": {
+        "24": {
+          "applicable": 160,
+          "ci_lower": 0.51875,
+          "ci_upper": 0.675,
+          "eligible": false,
+          "rate": 0.6,
+          "successes": 96
+        },
+        "25": {
+          "applicable": 160,
+          "ci_lower": 0.4125,
+          "ci_upper": 0.56875,
+          "eligible": false,
+          "rate": 0.49375,
+          "successes": 79
+        },
+        "26": {
+          "applicable": 160,
+          "ci_lower": 0.13125,
+          "ci_upper": 0.25625,
+          "eligible": false,
+          "rate": 0.19375,
+          "successes": 31
+        },
+        "27": {
+          "applicable": 160,
+          "ci_lower": 0.28125,
+          "ci_upper": 0.43125,
+          "eligible": false,
+          "rate": 0.35625,
+          "successes": 57
+        },
+        "28": {
+          "applicable": 160,
+          "ci_lower": 0.2625,
+          "ci_upper": 0.40625,
+          "eligible": false,
+          "rate": 0.33125,
+          "successes": 53
+        },
+        "29": {
+          "applicable": 160,
+          "ci_lower": 0.5375,
+          "ci_upper": 0.6875,
+          "eligible": false,
+          "rate": 0.6125,
+          "successes": 98
+        }
+      }
+    },
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 160,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "eligible": false,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": true,
+      "intervention_valid": 160,
+      "intervention_valid_rate": 0.8,
+      "isolated_conditional": {
+        "24": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "25": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "26": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "27": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      },
+      "l1": 23,
+      "restoration_applicable": 160,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_optimized",
+      "restoration_scope": "all_non_padding",
+      "runtime_conditional": {
+        "24": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "25": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "26": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "27": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 160,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      }
+    },
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 160,
+        "ci_lower": 0.0,
+        "ci_upper": 0.01875,
+        "eligible": false,
+        "rate": 0.00625,
+        "successes": 1
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": true,
+      "intervention_valid": 160,
+      "intervention_valid_rate": 0.8,
+      "isolated_conditional": {
+        "24": {
+          "applicable": 160,
+          "ci_lower": 0.525,
+          "ci_upper": 0.675,
+          "eligible": false,
+          "rate": 0.6,
+          "successes": 96
+        },
+        "25": {
+          "applicable": 160,
+          "ci_lower": 0.41875,
+          "ci_upper": 0.56875,
+          "eligible": false,
+          "rate": 0.49375,
+          "successes": 79
+        },
+        "26": {
+          "applicable": 160,
+          "ci_lower": 0.1373437500000014,
+          "ci_upper": 0.25625,
+          "eligible": false,
+          "rate": 0.19375,
+          "successes": 31
+        },
+        "27": {
+          "applicable": 160,
+          "ci_lower": 0.28125,
+          "ci_upper": 0.43125,
+          "eligible": false,
+          "rate": 0.35625,
+          "successes": 57
+        },
+        "28": {
+          "applicable": 160,
+          "ci_lower": 0.2625,
+          "ci_upper": 0.40625,
+          "eligible": false,
+          "rate": 0.33125,
+          "successes": 53
+        },
+        "29": {
+          "applicable": 160,
+          "ci_lower": 0.5375,
+          "ci_upper": 0.6875,
+          "eligible": false,
+          "rate": 0.6125,
+          "successes": 98
+        }
+      },
+      "l1": 23,
+      "restoration_applicable": 160,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_optimized",
+      "restoration_scope": "final",
+      "runtime_conditional": {
+        "24": {
+          "applicable": 160,
+          "ci_lower": 0.51875,
+          "ci_upper": 0.675,
+          "eligible": false,
+          "rate": 0.6,
+          "successes": 96
+        },
+        "25": {
+          "applicable": 160,
+          "ci_lower": 0.4125,
+          "ci_upper": 0.56875,
+          "eligible": false,
+          "rate": 0.49375,
+          "successes": 79
+        },
+        "26": {
+          "applicable": 160,
+          "ci_lower": 0.13125,
+          "ci_upper": 0.25625,
+          "eligible": false,
+          "rate": 0.19375,
+          "successes": 31
+        },
+        "27": {
+          "applicable": 160,
+          "ci_lower": 0.28125,
+          "ci_upper": 0.43125,
+          "eligible": false,
+          "rate": 0.35625,
+          "successes": 57
+        },
+        "28": {
+          "applicable": 160,
+          "ci_lower": 0.2625,
+          "ci_upper": 0.40625,
+          "eligible": false,
+          "rate": 0.33125,
+          "successes": 53
+        },
+        "29": {
+          "applicable": 160,
+          "ci_lower": 0.5375,
+          "ci_upper": 0.6875,
+          "eligible": false,
+          "rate": 0.6125,
+          "successes": 98
+        }
+      }
+    },
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 114,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "eligible": false,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": false,
+      "intervention_valid": 114,
+      "intervention_valid_rate": 0.57,
+      "isolated_conditional": {
+        "25": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "26": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "27": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      },
+      "l1": 24,
+      "restoration_applicable": 114,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_local",
+      "restoration_scope": "all_non_padding",
+      "runtime_conditional": {
+        "25": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "26": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "27": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      }
+    },
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 114,
+        "ci_lower": 0.0,
+        "ci_upper": 0.02631578947368421,
+        "eligible": false,
+        "rate": 0.008771929824561403,
+        "successes": 1
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": false,
+      "intervention_valid": 114,
+      "intervention_valid_rate": 0.57,
+      "isolated_conditional": {
+        "25": {
+          "applicable": 114,
+          "ci_lower": 0.39473684210526316,
+          "ci_upper": 0.5701754385964912,
+          "eligible": false,
+          "rate": 0.4824561403508772,
+          "successes": 55
+        },
+        "26": {
+          "applicable": 114,
+          "ci_lower": 0.07894736842105263,
+          "ci_upper": 0.21052631578947367,
+          "eligible": false,
+          "rate": 0.14035087719298245,
+          "successes": 16
+        },
+        "27": {
+          "applicable": 114,
+          "ci_lower": 0.2807017543859649,
+          "ci_upper": 0.45614035087719296,
+          "eligible": false,
+          "rate": 0.3684210526315789,
+          "successes": 42
+        },
+        "28": {
+          "applicable": 114,
+          "ci_lower": 0.2719298245614035,
+          "ci_upper": 0.4473684210526316,
+          "eligible": false,
+          "rate": 0.35964912280701755,
+          "successes": 41
+        },
+        "29": {
+          "applicable": 114,
+          "ci_lower": 0.5526315789473685,
+          "ci_upper": 0.7280701754385965,
+          "eligible": false,
+          "rate": 0.6403508771929824,
+          "successes": 73
+        }
+      },
+      "l1": 24,
+      "restoration_applicable": 114,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_local",
+      "restoration_scope": "final",
+      "runtime_conditional": {
+        "25": {
+          "applicable": 114,
+          "ci_lower": 0.39473684210526316,
+          "ci_upper": 0.5701754385964912,
+          "eligible": false,
+          "rate": 0.4824561403508772,
+          "successes": 55
+        },
+        "26": {
+          "applicable": 114,
+          "ci_lower": 0.08771929824561403,
+          "ci_upper": 0.21929824561403508,
+          "eligible": false,
+          "rate": 0.14912280701754385,
+          "successes": 17
+        },
+        "27": {
+          "applicable": 114,
+          "ci_lower": 0.2807017543859649,
+          "ci_upper": 0.45614035087719296,
+          "eligible": false,
+          "rate": 0.3684210526315789,
+          "successes": 42
+        },
+        "28": {
+          "applicable": 114,
+          "ci_lower": 0.2719298245614035,
+          "ci_upper": 0.4473684210526316,
+          "eligible": false,
+          "rate": 0.35964912280701755,
+          "successes": 41
+        },
+        "29": {
+          "applicable": 114,
+          "ci_lower": 0.5526315789473685,
+          "ci_upper": 0.7280701754385965,
+          "eligible": false,
+          "rate": 0.6403508771929824,
+          "successes": 73
+        }
+      }
+    },
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 114,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "eligible": false,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": false,
+      "intervention_valid": 114,
+      "intervention_valid_rate": 0.57,
+      "isolated_conditional": {
+        "25": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "26": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "27": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      },
+      "l1": 24,
+      "restoration_applicable": 114,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_optimized",
+      "restoration_scope": "all_non_padding",
+      "runtime_conditional": {
+        "25": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "26": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "27": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 114,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      }
+    },
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 114,
+        "ci_lower": 0.0,
+        "ci_upper": 0.02631578947368421,
+        "eligible": false,
+        "rate": 0.008771929824561403,
+        "successes": 1
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": false,
+      "intervention_valid": 114,
+      "intervention_valid_rate": 0.57,
+      "isolated_conditional": {
+        "25": {
+          "applicable": 114,
+          "ci_lower": 0.39473684210526316,
+          "ci_upper": 0.5701754385964912,
+          "eligible": false,
+          "rate": 0.4824561403508772,
+          "successes": 55
+        },
+        "26": {
+          "applicable": 114,
+          "ci_lower": 0.08771929824561403,
+          "ci_upper": 0.21929824561403508,
+          "eligible": false,
+          "rate": 0.14912280701754385,
+          "successes": 17
+        },
+        "27": {
+          "applicable": 114,
+          "ci_lower": 0.2807017543859649,
+          "ci_upper": 0.45614035087719296,
+          "eligible": false,
+          "rate": 0.3684210526315789,
+          "successes": 42
+        },
+        "28": {
+          "applicable": 114,
+          "ci_lower": 0.2719298245614035,
+          "ci_upper": 0.4473684210526316,
+          "eligible": false,
+          "rate": 0.35964912280701755,
+          "successes": 41
+        },
+        "29": {
+          "applicable": 114,
+          "ci_lower": 0.5526315789473685,
+          "ci_upper": 0.7280701754385965,
+          "eligible": false,
+          "rate": 0.6403508771929824,
+          "successes": 73
+        }
+      },
+      "l1": 24,
+      "restoration_applicable": 114,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_optimized",
+      "restoration_scope": "final",
+      "runtime_conditional": {
+        "25": {
+          "applicable": 114,
+          "ci_lower": 0.39473684210526316,
+          "ci_upper": 0.5701754385964912,
+          "eligible": false,
+          "rate": 0.4824561403508772,
+          "successes": 55
+        },
+        "26": {
+          "applicable": 114,
+          "ci_lower": 0.08771929824561403,
+          "ci_upper": 0.21929824561403508,
+          "eligible": false,
+          "rate": 0.14912280701754385,
+          "successes": 17
+        },
+        "27": {
+          "applicable": 114,
+          "ci_lower": 0.2807017543859649,
+          "ci_upper": 0.45614035087719296,
+          "eligible": false,
+          "rate": 0.3684210526315789,
+          "successes": 42
+        },
+        "28": {
+          "applicable": 114,
+          "ci_lower": 0.2719298245614035,
+          "ci_upper": 0.4473684210526316,
+          "eligible": false,
+          "rate": 0.35964912280701755,
+          "successes": 41
+        },
+        "29": {
+          "applicable": 114,
+          "ci_lower": 0.5526315789473685,
+          "ci_upper": 0.7280701754385965,
+          "eligible": false,
+          "rate": 0.6403508771929824,
+          "successes": 73
+        }
+      }
+    },
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 87,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "eligible": false,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": false,
+      "intervention_valid": 87,
+      "intervention_valid_rate": 0.435,
+      "isolated_conditional": {
+        "26": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "27": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      },
+      "l1": 25,
+      "restoration_applicable": 87,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_local",
+      "restoration_scope": "all_non_padding",
+      "runtime_conditional": {
+        "26": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "27": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      }
+    },
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 87,
+        "ci_lower": 0.0,
+        "ci_upper": 0.08045977011494253,
+        "eligible": false,
+        "rate": 0.034482758620689655,
+        "successes": 3
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": false,
+      "intervention_valid": 87,
+      "intervention_valid_rate": 0.435,
+      "isolated_conditional": {
+        "26": {
+          "applicable": 87,
+          "ci_lower": 0.16091954022988506,
+          "ci_upper": 0.3333333333333333,
+          "eligible": false,
+          "rate": 0.2413793103448276,
+          "successes": 21
+        },
+        "27": {
+          "applicable": 87,
+          "ci_lower": 0.2413793103448276,
+          "ci_upper": 0.4482758620689655,
+          "eligible": false,
+          "rate": 0.3448275862068966,
+          "successes": 30
+        },
+        "28": {
+          "applicable": 87,
+          "ci_lower": 0.2413793103448276,
+          "ci_upper": 0.4482758620689655,
+          "eligible": false,
+          "rate": 0.3448275862068966,
+          "successes": 30
+        },
+        "29": {
+          "applicable": 87,
+          "ci_lower": 0.5517241379310345,
+          "ci_upper": 0.7586206896551724,
+          "eligible": false,
+          "rate": 0.6551724137931034,
+          "successes": 57
+        }
+      },
+      "l1": 25,
+      "restoration_applicable": 87,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_local",
+      "restoration_scope": "final",
+      "runtime_conditional": {
+        "26": {
+          "applicable": 87,
+          "ci_lower": 0.16091954022988506,
+          "ci_upper": 0.3333333333333333,
+          "eligible": false,
+          "rate": 0.2413793103448276,
+          "successes": 21
+        },
+        "27": {
+          "applicable": 87,
+          "ci_lower": 0.25287356321839083,
+          "ci_upper": 0.4482758620689655,
+          "eligible": false,
+          "rate": 0.3448275862068966,
+          "successes": 30
+        },
+        "28": {
+          "applicable": 87,
+          "ci_lower": 0.25287356321839083,
+          "ci_upper": 0.4482758620689655,
+          "eligible": false,
+          "rate": 0.3448275862068966,
+          "successes": 30
+        },
+        "29": {
+          "applicable": 87,
+          "ci_lower": 0.5517241379310345,
+          "ci_upper": 0.7586206896551724,
+          "eligible": false,
+          "rate": 0.6551724137931034,
+          "successes": 57
+        }
+      }
+    },
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 87,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "eligible": false,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": false,
+      "intervention_valid": 87,
+      "intervention_valid_rate": 0.435,
+      "isolated_conditional": {
+        "26": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "27": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      },
+      "l1": 25,
+      "restoration_applicable": 87,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_optimized",
+      "restoration_scope": "all_non_padding",
+      "runtime_conditional": {
+        "26": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "27": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 87,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      }
+    },
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 87,
+        "ci_lower": 0.0,
+        "ci_upper": 0.08045977011494253,
+        "eligible": false,
+        "rate": 0.034482758620689655,
+        "successes": 3
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": false,
+      "intervention_valid": 87,
+      "intervention_valid_rate": 0.435,
+      "isolated_conditional": {
+        "26": {
+          "applicable": 87,
+          "ci_lower": 0.16091954022988506,
+          "ci_upper": 0.3333333333333333,
+          "eligible": false,
+          "rate": 0.2413793103448276,
+          "successes": 21
+        },
+        "27": {
+          "applicable": 87,
+          "ci_lower": 0.2413793103448276,
+          "ci_upper": 0.4482758620689655,
+          "eligible": false,
+          "rate": 0.3448275862068966,
+          "successes": 30
+        },
+        "28": {
+          "applicable": 87,
+          "ci_lower": 0.2413793103448276,
+          "ci_upper": 0.4482758620689655,
+          "eligible": false,
+          "rate": 0.3448275862068966,
+          "successes": 30
+        },
+        "29": {
+          "applicable": 87,
+          "ci_lower": 0.5517241379310345,
+          "ci_upper": 0.7586206896551724,
+          "eligible": false,
+          "rate": 0.6551724137931034,
+          "successes": 57
+        }
+      },
+      "l1": 25,
+      "restoration_applicable": 87,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_optimized",
+      "restoration_scope": "final",
+      "runtime_conditional": {
+        "26": {
+          "applicable": 87,
+          "ci_lower": 0.16091954022988506,
+          "ci_upper": 0.3333333333333333,
+          "eligible": false,
+          "rate": 0.2413793103448276,
+          "successes": 21
+        },
+        "27": {
+          "applicable": 87,
+          "ci_lower": 0.25287356321839083,
+          "ci_upper": 0.4482758620689655,
+          "eligible": false,
+          "rate": 0.3448275862068966,
+          "successes": 30
+        },
+        "28": {
+          "applicable": 87,
+          "ci_lower": 0.25287356321839083,
+          "ci_upper": 0.4482758620689655,
+          "eligible": false,
+          "rate": 0.3448275862068966,
+          "successes": 30
+        },
+        "29": {
+          "applicable": 87,
+          "ci_lower": 0.5517241379310345,
+          "ci_upper": 0.7586206896551724,
+          "eligible": false,
+          "rate": 0.6551724137931034,
+          "successes": 57
+        }
+      }
+    },
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 31,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "eligible": false,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": false,
+      "intervention_valid": 31,
+      "intervention_valid_rate": 0.155,
+      "isolated_conditional": {
+        "27": {
+          "applicable": 31,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 31,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 31,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      },
+      "l1": 26,
+      "restoration_applicable": 31,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_local",
+      "restoration_scope": "all_non_padding",
+      "runtime_conditional": {
+        "27": {
+          "applicable": 31,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 31,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 31,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      }
+    },
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 31,
+        "ci_lower": 0.0,
+        "ci_upper": 0.22580645161290322,
+        "eligible": false,
+        "rate": 0.0967741935483871,
+        "successes": 3
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": false,
+      "intervention_valid": 31,
+      "intervention_valid_rate": 0.155,
+      "isolated_conditional": {
+        "27": {
+          "applicable": 31,
+          "ci_lower": 0.3225806451612903,
+          "ci_upper": 0.6451612903225806,
+          "eligible": false,
+          "rate": 0.4838709677419355,
+          "successes": 15
+        },
+        "28": {
+          "applicable": 31,
+          "ci_lower": 0.12903225806451613,
+          "ci_upper": 0.45161290322580644,
+          "eligible": false,
+          "rate": 0.2903225806451613,
+          "successes": 9
+        },
+        "29": {
+          "applicable": 31,
+          "ci_lower": 0.5161290322580645,
+          "ci_upper": 0.8387096774193549,
+          "eligible": false,
+          "rate": 0.6774193548387096,
+          "successes": 21
+        }
+      },
+      "l1": 26,
+      "restoration_applicable": 31,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_local",
+      "restoration_scope": "final",
+      "runtime_conditional": {
+        "27": {
+          "applicable": 31,
+          "ci_lower": 0.3225806451612903,
+          "ci_upper": 0.6774193548387096,
+          "eligible": false,
+          "rate": 0.4838709677419355,
+          "successes": 15
+        },
+        "28": {
+          "applicable": 31,
+          "ci_lower": 0.12903225806451613,
+          "ci_upper": 0.45161290322580644,
+          "eligible": false,
+          "rate": 0.2903225806451613,
+          "successes": 9
+        },
+        "29": {
+          "applicable": 31,
+          "ci_lower": 0.5161290322580645,
+          "ci_upper": 0.8387096774193549,
+          "eligible": false,
+          "rate": 0.6774193548387096,
+          "successes": 21
+        }
+      }
+    },
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 31,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "eligible": false,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": false,
+      "intervention_valid": 31,
+      "intervention_valid_rate": 0.155,
+      "isolated_conditional": {
+        "27": {
+          "applicable": 31,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 31,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 31,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      },
+      "l1": 26,
+      "restoration_applicable": 31,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_optimized",
+      "restoration_scope": "all_non_padding",
+      "runtime_conditional": {
+        "27": {
+          "applicable": 31,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "28": {
+          "applicable": 31,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        },
+        "29": {
+          "applicable": 31,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "eligible": false,
+          "rate": 0.0,
+          "successes": 0
+        }
+      }
+    },
+    {
+      "attempted": 200,
+      "complete_chain_conditional": {
+        "applicable": 31,
+        "ci_lower": 0.0,
+        "ci_upper": 0.22580645161290322,
+        "eligible": false,
+        "rate": 0.0967741935483871,
+        "successes": 3
+      },
+      "hook_sanity_passed": true,
+      "initial_scope": "final",
+      "intervention_eligible": false,
+      "intervention_valid": 31,
+      "intervention_valid_rate": 0.155,
+      "isolated_conditional": {
+        "27": {
+          "applicable": 31,
+          "ci_lower": 0.3225806451612903,
+          "ci_upper": 0.6451612903225806,
+          "eligible": false,
+          "rate": 0.4838709677419355,
+          "successes": 15
+        },
+        "28": {
+          "applicable": 31,
+          "ci_lower": 0.12903225806451613,
+          "ci_upper": 0.45161290322580644,
+          "eligible": false,
+          "rate": 0.2903225806451613,
+          "successes": 9
+        },
+        "29": {
+          "applicable": 31,
+          "ci_lower": 0.5161290322580645,
+          "ci_upper": 0.8387096774193549,
+          "eligible": false,
+          "rate": 0.6774193548387096,
+          "successes": 21
+        }
+      },
+      "l1": 26,
+      "restoration_applicable": 31,
+      "restoration_eligible_layers": [],
+      "restoration_method": "dense_optimized",
+      "restoration_scope": "final",
+      "runtime_conditional": {
+        "27": {
+          "applicable": 31,
+          "ci_lower": 0.3225806451612903,
+          "ci_upper": 0.6774193548387096,
+          "eligible": false,
+          "rate": 0.4838709677419355,
+          "successes": 15
+        },
+        "28": {
+          "applicable": 31,
+          "ci_lower": 0.12903225806451613,
+          "ci_upper": 0.45161290322580644,
+          "eligible": false,
+          "rate": 0.2903225806451613,
+          "successes": 9
+        },
+        "29": {
+          "applicable": 31,
+          "ci_lower": 0.5161290322580645,
+          "ci_upper": 0.8387096774193549,
+          "eligible": false,
+          "rate": 0.6774193548387096,
+          "successes": 21
+        }
+      }
+    }
+  ],
+  "protocol_version": "corrective_causal_protocol_v3_2",
+  "record_part_count": 64,
+  "records": "results/v3_2/processed/closure_v3_2_calibration_records.json",
+  "run_id": "calibration-v3-2-20260831T144727Z-9dcec4b9-s20260828-formal-merge-002",
+  "schema_version": 5,
+  "selection_rule": "earliest final-scope L1 with >=3 layers eligible for both restoration scopes; maximize minimum conditional runtime rate",
+  "source_shards": [
+    "calibration-v3-2-20260831T084052Z-9dcec4b9-s20260828-formal-calibration-shard0-001-offline",
+    "calibration-v3-2-20260831T084730Z-e5c30c65-s20260828-formal-calibration-shard1-001-offline"
+  ]
+}

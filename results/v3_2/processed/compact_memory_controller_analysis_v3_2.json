@@ -1,0 +1,344 @@
+{
+  "baseline_keys": {
+    "20260828": "markov-h0-m0-s20260828-all_parseable",
+    "20260829": "history-h4-m0-s20260829-all_parseable",
+    "20260830": "markov-h0-m0-s20260830-all_parseable"
+  },
+  "completed_all_parseable_controller_results": 33,
+  "completed_controller_results": 34,
+  "completed_sensitivity_controller_results": 1,
+  "expected_controller_results": 33,
+  "h3_followup_authorized": false,
+  "h3_followup_reason": "memory_utility_gate_failed",
+  "memory_utility": [
+    {
+      "cosine_delta": {
+        "estimate": -0.042509008001014224,
+        "lower": -0.044349148025475266,
+        "n_clusters": 276,
+        "upper": -0.04065781213739068
+      },
+      "gate_passed": false,
+      "gate_reasons": [
+        "cosine_ci_not_positive",
+        "cosine_effect_below_threshold",
+        "seed_direction_inconsistent",
+        "trajectory_reduction_below_threshold"
+      ],
+      "ground_truth_action_accuracy_delta": -0.017361111111111112,
+      "horizon": 8,
+      "memory_dimension": 16,
+      "seed_cosine_deltas": [
+        -0.01556634967741759,
+        -0.02695213733375936,
+        -0.08500853699186574
+      ],
+      "teacher_action_fidelity_delta": -0.004528985507246377,
+      "trajectory_reduction": -0.15685433749166777
+    },
+    {
+      "cosine_delta": {
+        "estimate": -0.012514481653913785,
+        "lower": -0.014121524865428609,
+        "n_clusters": 276,
+        "upper": -0.010915539735829198
+      },
+      "gate_passed": false,
+      "gate_reasons": [
+        "cosine_ci_not_positive",
+        "cosine_effect_below_threshold",
+        "seed_direction_inconsistent",
+        "trajectory_reduction_below_threshold"
+      ],
+      "ground_truth_action_accuracy_delta": -0.005736714975845411,
+      "horizon": 8,
+      "memory_dimension": 32,
+      "seed_cosine_deltas": [
+        -0.0033945648566536283,
+        -0.018201962113380432,
+        -0.01594691799170729
+      ],
+      "teacher_action_fidelity_delta": 0.006038647342995169,
+      "trajectory_reduction": 0.014100142625323886
+    },
+    {
+      "cosine_delta": {
+        "estimate": -0.01806031448253687,
+        "lower": -0.019956705001169358,
+        "n_clusters": 276,
+        "upper": -0.0162356269604342
+      },
+      "gate_passed": false,
+      "gate_reasons": [
+        "cosine_ci_not_positive",
+        "cosine_effect_below_threshold",
+        "seed_direction_inconsistent",
+        "trajectory_reduction_below_threshold"
+      ],
+      "ground_truth_action_accuracy_delta": -0.026268115942028984,
+      "horizon": 8,
+      "memory_dimension": 64,
+      "seed_cosine_deltas": [
+        -0.02276075534198595,
+        -0.004633676962576051,
+        -0.026786511143048603
+      ],
+      "teacher_action_fidelity_delta": -0.014190821256038648,
+      "trajectory_reduction": -0.014206487225495446
+    },
+    {
+      "cosine_delta": {
+        "estimate": -0.017299459464308144,
+        "lower": -0.01956050144733438,
+        "n_clusters": 276,
+        "upper": -0.015124400102213961
+      },
+      "gate_passed": false,
+      "gate_reasons": [
+        "cosine_ci_not_positive",
+        "cosine_effect_below_threshold",
+        "seed_direction_inconsistent",
+        "trajectory_reduction_below_threshold"
+      ],
+      "ground_truth_action_accuracy_delta": -0.028381642512077296,
+      "horizon": 8,
+      "memory_dimension": 128,
+      "seed_cosine_deltas": [
+        -0.024925194788670193,
+        -0.009550217269123465,
+        -0.017422966335130775
+      ],
+      "teacher_action_fidelity_delta": -0.010869565217391304,
+      "trajectory_reduction": -0.011510762484573167
+    },
+    {
+      "cosine_delta": {
+        "estimate": -0.04119170244765166,
+        "lower": -0.04571001209714562,
+        "n_clusters": 276,
+        "upper": -0.0366945409004527
+      },
+      "gate_passed": false,
+      "gate_reasons": [
+        "cosine_ci_not_positive",
+        "cosine_effect_below_threshold",
+        "seed_direction_inconsistent",
+        "trajectory_reduction_below_threshold"
+      ],
+      "ground_truth_action_accuracy_delta": -0.026117149758454108,
+      "horizon": 8,
+      "memory_dimension": 256,
+      "seed_cosine_deltas": [
+        -0.016364100618638855,
+        -0.07970185621061186,
+        -0.027509150513704273
+      ],
+      "teacher_action_fidelity_delta": -0.011020531400966184,
+      "trajectory_reduction": -0.14207207922751453
+    }
+  ],
+  "minimum_useful_memory_dimension": null,
+  "missing_required_controller_keys": [],
+  "paired_records": "results/v3_2/processed/compact_memory_controller_pairs_v3_2.parquet",
+  "paired_sha256": "082451214c3c36874105c8ec00929424a5ea5ed43c169a500aba2e6b2735f68e",
+  "protocol_version": "compact_memory_exploratory_v3_2",
+  "remainder_reference": {
+    "completed_seeds": [
+      20260828,
+      20260829,
+      20260830
+    ],
+    "median_reference_minus_baseline": -0.11616179347038269,
+    "per_seed": [
+      {
+        "autonomous_reference_horizon8_cosine": 0.7610120177268982,
+        "baseline_horizon8_cosine": 0.8525841534137726,
+        "baseline_key": "markov-h0-m0-s20260828-all_parseable",
+        "linear_teacher_current_one_step_cosine": 0.9243155717849731,
+        "nonlinear_teacher_current_one_step_cosine": 0.9384958744049072,
+        "reference_minus_baseline": -0.09157213568687439,
+        "seed": 20260828,
+        "source": "results/v3_2/raw/compact-memory-references-v3-2-20260831T151231Z-afc78167-s20260828-formal-references-s20260828-001/references.json",
+        "source_sha256": "39d03137bf729d3714bb7da4e2cd54d0d7827ca018ca0d8dac7bd1b9686b8281"
+      },
+      {
+        "autonomous_reference_horizon8_cosine": 0.7338466346263885,
+        "baseline_horizon8_cosine": 0.8500084280967712,
+        "baseline_key": "history-h4-m0-s20260829-all_parseable",
+        "linear_teacher_current_one_step_cosine": 0.9243155717849731,
+        "nonlinear_teacher_current_one_step_cosine": 0.938090980052948,
+        "reference_minus_baseline": -0.11616179347038269,
+        "seed": 20260829,
+        "source": "results/v3_2/raw/compact-memory-references-v3-2-20260831T152813Z-f0741092-s20260828-formal-references-s20260829-001/references.json",
+        "source_sha256": "8b8ce7c1beec6c906a9393ab3f6f0c1dadbbafb03db1c992480c755de87d21d1"
+      },
+      {
+        "autonomous_reference_horizon8_cosine": 0.7057919204235077,
+        "baseline_horizon8_cosine": 0.856031060218811,
+        "baseline_key": "markov-h0-m0-s20260830-all_parseable",
+        "linear_teacher_current_one_step_cosine": 0.9243155717849731,
+        "nonlinear_teacher_current_one_step_cosine": 0.9382273554801941,
+        "reference_minus_baseline": -0.15023913979530334,
+        "seed": 20260830,
+        "source": "results/v3_2/raw/compact-memory-references-v3-2-20260831T152814Z-afc78167-s20260828-formal-references-s20260830-001/references.json",
+        "source_sha256": "61d319760a88b907b11c987803d4b60247eaeb65c1c00156e8a9ac64624d1b7c"
+      }
+    ],
+    "positive_markov_to_reference_gap": false
+  },
+  "schema_version": 5,
+  "sensitivity_runs": [
+    {
+      "best_validation_selection_cosine": 0.6996700167655945,
+      "model_key": "gru-h0-m128-s20260828-teacher_correct_only",
+      "sensitivity_underpowered": true,
+      "test_trajectories": 4,
+      "train_trajectories": 6,
+      "training_subset": "teacher_correct_only",
+      "validation_selection_horizon": 4,
+      "validation_trajectories": 3
+    }
+  ],
+  "sources": [
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T082323Z-afc78167-s20260828-formal-gru-m16-s20260828-001/controller_result.json",
+      "sha256": "c433210625bde2447be689d1c3bce33781462e4e3aaf68ac57df42d1eb15b97e"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T082648Z-afc78167-s20260828-formal-gru-m32-s20260828-001/controller_result.json",
+      "sha256": "50460a1eb34702b88040a4aaec7c7966efc70675214590781c31c621d5a93edd"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T082920Z-afc78167-s20260828-formal-gru-m64-s20260828-001/controller_result.json",
+      "sha256": "4136a5776d599b7b4a3c056e36e3535085675a13f3e14241b8946b61d56cd76b"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T083157Z-afc78167-s20260828-formal-gru-m128-s20260828-001/controller_result.json",
+      "sha256": "cd7f2ffd21556ec7264a4f8ad0715905377fcc9f50808539263d53e8a9af5877"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T083419Z-afc78167-s20260828-formal-gru-m256-s20260828-001/controller_result.json",
+      "sha256": "bf69ba3b2b45a59d10c8901bc9bf06f9556a4fba927e29bdceadb7c68679af36"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T083658Z-afc78167-s20260828-formal-gru-m16-s20260829-001/controller_result.json",
+      "sha256": "347efd73aae14962f2854799974610456b9c0d901d8a41ec81db1ddc6b4dca87"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T083847Z-afc78167-s20260828-formal-gru-m32-s20260829-001/controller_result.json",
+      "sha256": "16a4925769dfbbd33531eae3ce5b291c91d34a455764ffa87e71ad2ddaffea4f"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T084043Z-afc78167-s20260828-formal-gru-m64-s20260829-001/controller_result.json",
+      "sha256": "026f8a1a9e0dc186eb130292af5fa21bdd571b96e1a1e83e95d572feb9714365"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T084259Z-afc78167-s20260828-formal-gru-m128-s20260829-001/controller_result.json",
+      "sha256": "1412b951055323d60dd297974298a5757792a08acd03d6615f566c94d086a2c2"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T084541Z-afc78167-s20260828-formal-gru-m256-s20260829-001/controller_result.json",
+      "sha256": "99d3d946e3724261dadc57a80d2f5534b58bc3981e7eff46b37156e4557aea84"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T144834Z-f0741092-s20260828-formal-markov-s20260828-001/controller_result.json",
+      "sha256": "b2e3095263a01e1e41a81598157529a488525402a1165987449c01d7ad5e74ed"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T144847Z-afc78167-s20260828-formal-gru-m16-s20260830-001/controller_result.json",
+      "sha256": "ecb8a1941e78e81fdc2ed443c56efe62837322eb8a9ac0671f0635224f429b12"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T145007Z-afc78167-s20260828-formal-gru-m32-s20260830-001/controller_result.json",
+      "sha256": "75dccf752b46aa6d1951fce391f380395618d2400c8b6e323cbc275b4fbb0bbc"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T145203Z-afc78167-s20260828-formal-gru-m64-s20260830-001/controller_result.json",
+      "sha256": "424388b09681d7919a87e739380651343cfcdc3cb111bae2f301bb9cb6b03087"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T145354Z-afc78167-s20260828-formal-gru-m128-s20260830-001/controller_result.json",
+      "sha256": "464f5377ad6a7a12eb35faaaed349280c9855f2d3ecc51473fc62240b783ac42"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T145539Z-afc78167-s20260828-formal-gru-m256-s20260830-001/controller_result.json",
+      "sha256": "97595f021f88a65c2d39e6288394cbc03fc346fb0a24ef16ec0ba33a1fe3a9d4"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T145908Z-f0741092-s20260828-formal-history-h1-s20260828-002/controller_result.json",
+      "sha256": "8908ccd789c4343abf24442756f9e5db6390591f3ba9c26cf5bd93062746a4d2"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T145927Z-afc78167-s20260828-formal-history-h8-s20260829-001/controller_result.json",
+      "sha256": "ec1af293cbfa78cbc9c8b8a8b2a0e6952065e0d3c41f434ccbbd5e550a95c769"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T150018Z-f0741092-s20260828-formal-history-h2-s20260828-001/controller_result.json",
+      "sha256": "1d1150db44d801156e7135fd08c841b7dbec2f9261ea89db7a3d6476f6eeeb80"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T150026Z-afc78167-s20260828-formal-history-h16-s20260829-001/controller_result.json",
+      "sha256": "3011dfae5ef0896e72db60231cb7cf99a0c030c40d6f9091c0844789f8d4def9"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T150125Z-f0741092-s20260828-formal-history-h4-s20260828-001/controller_result.json",
+      "sha256": "0919723b47db4ed1176b10b81d9bbe779036862fd7569f9fc3485c1765b84886"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T150146Z-afc78167-s20260828-formal-markov-s20260830-001/controller_result.json",
+      "sha256": "1ec6a2aa7fa6d653c840511d959c27ad57323aa55f080e0a48859f2e9e599f34"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T150253Z-afc78167-s20260828-formal-history-h1-s20260830-001/controller_result.json",
+      "sha256": "e49ca20678032f8ed6f33b264efd6755d3e66bdf2280a274f9a2d47c26877dbf"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T150253Z-f0741092-s20260828-formal-history-h8-s20260828-001/controller_result.json",
+      "sha256": "8e38b68be9228d042f59ddb0ce091b80bd6a1875fa6f21c65c9dd93f56a119a4"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T150359Z-f0741092-s20260828-formal-history-h16-s20260828-001/controller_result.json",
+      "sha256": "1157482629f1f0eedbff887235c01fbbc31506d02278a338ff2694b9ecb8a3ad"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T150405Z-afc78167-s20260828-formal-history-h2-s20260830-001/controller_result.json",
+      "sha256": "827f761ae98193aaac93d2d48c1afa3322238319944a65447234f9d8f633be0e"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T150500Z-f0741092-s20260828-formal-markov-s20260829-001/controller_result.json",
+      "sha256": "4dd6a670c3bed1112a61fdce36eaa330e495ce99da010013095e1eb5231fb503"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T150519Z-afc78167-s20260828-formal-history-h4-s20260830-001/controller_result.json",
+      "sha256": "16d19dfabf8146606ebd37b2ade5eb0d1876cbea23f0ed59a7085022d3a18dcb"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T150625Z-afc78167-s20260828-formal-history-h8-s20260830-001/controller_result.json",
+      "sha256": "f616af57e498ba99a1cbfa6c0b22b62e7fb5449664796a016d254db58c487f66"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T150627Z-f0741092-s20260828-formal-history-h1-s20260829-001/controller_result.json",
+      "sha256": "f11fe92d3b34058f49bb2e4ab8b054971eca85b654bb2a25690ce2234482c38a"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T150727Z-afc78167-s20260828-formal-history-h16-s20260830-001/controller_result.json",
+      "sha256": "500afc653c92911d37781055539de76d7aa2d0b52af3cc43f6f4186e0cff30aa"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T150758Z-f0741092-s20260828-formal-history-h2-s20260829-001/controller_result.json",
+      "sha256": "f808f0999539d0d24a1ff1106636b102526f4da41d211e58223994934da4c40e"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T150910Z-f0741092-s20260828-formal-history-h4-s20260829-001/controller_result.json",
+      "sha256": "540459d69c5b06ed71aab7dbeec901dbe1964f1222a196d7bc64acd31daacfb2"
+    },
+    {
+      "path": "/data/CSK/J-space-project/jstate-closure/results/v3_2/raw/compact-memory-v3-2-20260831T154939Z-f0741092-s20260828-sensitivity-gru-m128-s20260828-correct-only-002/controller_result.json",
+      "sha256": "fec7e2950c752aff4b4351e145e8e251b181090b5710098074f57723ac5248b5"
+    }
+  ],
+  "status": "COMPLETE",
+  "summary_records": "results/v3_2/processed/compact_memory_controller_summary_v3_2.parquet",
+  "summary_sha256": "3a81a4871a52d504bfee89b074ad77554f19a23bc3c1e254438c443b004d5172",
+  "unexpected_all_parseable_controller_keys": []
+}

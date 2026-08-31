@@ -7,8 +7,8 @@
 - Protocol: `phase0_protocol_v2` (frozen before fresh confirmation)
 - Phase 0 v2 gate: **PASSED**
 - Closure-layer calibration gate: **FAILED**
-- Formal downstream phases: **GATED / NOT EXECUTED**
-- Strongest warranted conclusion: **D — measurement quality is insufficient to distinguish H1, H2, and H3**
+- Current downstream status: **causal closure gated; compact-memory exploratory execution complete**
+- Strongest warranted conclusion: **D — J measurement is validated, but the paired causal restoration and compact-controller criteria are not satisfied**
 
 This report makes no claim about consciousness or extraction of a model's “true
 thoughts.” “Measured-J component” and “measured-J remainder” refer only to the
@@ -24,7 +24,7 @@ The v2 Phase 0 result is statistically positive and practically above its frozen
 thresholds. It does not supersede the independent causal-state gate. Strict-all-layers
 hit@10 remains a sensitivity analysis, not the v2 primary statistic.
 
-## Answers to the 15 adjudication questions
+## Historical v2 adjudication (preserved)
 
 1. **Did the fresh Phase 0 readout gate pass?** Yes. The exact pass@10 and confidence intervals are reported above.
 2. **Was a lens-quality band identified?** Yes: block-output layers 20–30, selected from calibration only.
@@ -157,7 +157,56 @@ Exact counts, effects, confidence intervals, and attrition are generated in the 
 <!-- V3.2 STATUS START -->
 ## Protocol v3.2 status
 
-Part A behavioral authorization: GATED OR NOT EVALUATED.
-Part B temporal training authorization: GATED OR NOT EVALUATED.
-No H1/H2/H3 classification is upgraded without paired causal and autonomous-rollout evidence.
+Part A behavioral authorization: GATED.
+Part B controller execution: COMPLETE.
+J measurement remains validated. No H1/H2/H3 classification is upgraded without paired causal restoration and causal-fidelity evidence.
 <!-- V3.2 STATUS END -->
+
+<!-- V3.2 POSTRUN START -->
+## Protocol v3.2 post-run adjudication
+
+Causal calibration authorized: False. Paired causal base trials: 0.
+Compact-memory utility minimum dimension: None.
+Strongest warranted classification: **D** unless a later machine record completes every paired causal, autonomous-rollout, and causal-fidelity gate.
+
+### 1. Does a final-token same-J perturbation change the future?
+
+Not estimable without an authorized paired causal pilot.
+
+### 2. How much effect does persistent-final remove?
+
+Not estimable.
+
+### 3. Does persistent-all remove additional effect?
+
+Not estimable.
+
+### 4. Does measured-J act as the main mediation workspace?
+
+Undetermined; no mediation claim is made without a non-null E_single and valid restoration chains.
+
+### 5. Is the current compact J state visibly non-Markov?
+
+No clear non-Markov advantage was observed: the median Markov horizon-8 cosine was 0.852584, versus a best history-run value of 0.850008.
+
+### 6. Does compact recurrent memory improve autonomous rollout?
+
+No tested GRU memory dimension passed the frozen utility gate.
+
+### 7. What is the smallest useful memory dimension?
+
+None established.
+
+### 8. Do teacher imitation and ground-truth accuracy agree?
+
+They are distinct endpoints: across horizon-8 controller summaries, median teacher-action fidelity was 0.189312 and median ground-truth action accuracy was 0.175725; 13 teacher trajectories were teacher-correct.
+
+### 9. Which hypothesis is best supported?
+
+D. Paired causal restoration and causal-fidelity gates are not both complete.
+
+### 10. Is 1M-100M controller scaling warranted next?
+
+No. The frozen recurrent-memory utility gate did not pass.
+
+<!-- V3.2 POSTRUN END -->

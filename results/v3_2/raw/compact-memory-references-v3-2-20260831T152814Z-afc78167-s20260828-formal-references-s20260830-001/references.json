@@ -1,0 +1,322 @@
+{
+  "autonomous_pca512_recurrent": {
+    "best_validation_horizon8_cosine": 0.7054521441459656,
+    "epochs": 8,
+    "memory_dimension": 512,
+    "parameter_count": 4999679,
+    "reads_teacher_after_initial": false,
+    "records": "results/v3_2/processed/compact_memory_remainder_reference_v3_2_s20260830.parquet",
+    "records_sha256": "9698e4a2c25f1737f1fe2fa5f2659d16b86555b520d9e5c3bd191393382ceb9e",
+    "reference_type": "autonomous_pca512_remainder_recurrent",
+    "remainder_dimension": 512,
+    "test": [
+      {
+        "decoded_cosine_median": 0.7265757322311401,
+        "finite_fraction": 1.0,
+        "horizon": 1,
+        "n": 466,
+        "semantic_action_accuracy": 0.4184549356223176,
+        "trajectory_distance_mean": 0.2834214240696297
+      },
+      {
+        "decoded_cosine_median": 0.7452805042266846,
+        "finite_fraction": 1.0,
+        "horizon": 2,
+        "n": 466,
+        "semantic_action_accuracy": 0.2939914163090129,
+        "trajectory_distance_mean": 0.262935047881286
+      },
+      {
+        "decoded_cosine_median": 0.7482574582099915,
+        "finite_fraction": 1.0,
+        "horizon": 4,
+        "n": 466,
+        "semantic_action_accuracy": 0.21834763948497854,
+        "trajectory_distance_mean": 0.24838905030054084
+      },
+      {
+        "decoded_cosine_median": 0.7057919204235077,
+        "finite_fraction": 1.0,
+        "horizon": 8,
+        "n": 276,
+        "semantic_action_accuracy": 0.19067028985507245,
+        "trajectory_distance_mean": 0.25184464740796364
+      },
+      {
+        "decoded_cosine_median": 0.37040771543979645,
+        "finite_fraction": 1.0,
+        "horizon": 16,
+        "n": 126,
+        "semantic_action_accuracy": 0.18551587301587302,
+        "trajectory_distance_mean": 0.3435884898617154
+      }
+    ],
+    "training": [
+      {
+        "epoch": 0,
+        "feedback_probability": 0.0,
+        "loss": 2.553365709070108,
+        "validation_horizon8_cosine": 0.6582320928573608
+      },
+      {
+        "epoch": 1,
+        "feedback_probability": 0.0,
+        "loss": 2.1479954952784794,
+        "validation_horizon8_cosine": 0.7022197842597961
+      },
+      {
+        "epoch": 2,
+        "feedback_probability": 0.0,
+        "loss": 1.9270087428772635,
+        "validation_horizon8_cosine": 0.7054521441459656
+      },
+      {
+        "epoch": 3,
+        "feedback_probability": 0.0,
+        "loss": 1.7007740923383985,
+        "validation_horizon8_cosine": 0.4388049840927124
+      },
+      {
+        "epoch": 4,
+        "feedback_probability": 0.0,
+        "loss": 1.4532296734888994,
+        "validation_horizon8_cosine": 0.6753369569778442
+      },
+      {
+        "epoch": 5,
+        "feedback_probability": 0.0,
+        "loss": 1.2103718031421802,
+        "validation_horizon8_cosine": 0.6353132724761963
+      },
+      {
+        "epoch": 6,
+        "feedback_probability": 0.0,
+        "loss": 1.0171158133875289,
+        "validation_horizon8_cosine": 0.5967506766319275
+      },
+      {
+        "epoch": 7,
+        "feedback_probability": 0.0,
+        "loss": 0.8721817054368871,
+        "validation_horizon8_cosine": 0.6576605439186096
+      }
+    ]
+  },
+  "base_protocol_version": "compact_memory_exploratory_v3_2",
+  "checkpoints": {
+    "autonomous_recurrent": "artifacts/checkpoints/v3_2/autonomous-remainder-s20260830.pt",
+    "nonlinear_full": "artifacts/checkpoints/v3_2/full-remainder-s20260830.pt"
+  },
+  "linear_current_one_step": {
+    "reference_type": "linear_pca128_remainder_teacher_current_one_step",
+    "teacher_current_only": true,
+    "test": {
+      "decoded_cosine_mean": 0.9146252870559692,
+      "decoded_cosine_median": 0.9243155717849731,
+      "decoded_distance_mean": 0.08537472039461136,
+      "finite_fraction": 1.0,
+      "n": 7486
+    }
+  },
+  "nonlinear_full_current_one_step": {
+    "best_validation_cosine": 0.9375759363174438,
+    "epochs": 36,
+    "parameter_count": 4999619,
+    "reference_type": "nonlinear_full_remainder_teacher_current_one_step",
+    "teacher_current_only": true,
+    "test": {
+      "decoded_cosine_mean": 0.9265421032905579,
+      "decoded_cosine_median": 0.9382273554801941,
+      "decoded_distance_mean": 0.07345790416002274,
+      "finite_fraction": 1.0,
+      "n": 7486
+    },
+    "training": [
+      {
+        "epoch": 0,
+        "loss": 0.000567239550340067,
+        "validation_cosine": 0.8947537541389465
+      },
+      {
+        "epoch": 1,
+        "loss": 0.00037610631827394373,
+        "validation_cosine": 0.9085987210273743
+      },
+      {
+        "epoch": 2,
+        "loss": 0.0003401074039478165,
+        "validation_cosine": 0.9150075316429138
+      },
+      {
+        "epoch": 3,
+        "loss": 0.00031874227432935085,
+        "validation_cosine": 0.9185957312583923
+      },
+      {
+        "epoch": 4,
+        "loss": 0.00030417495023963664,
+        "validation_cosine": 0.9221372604370117
+      },
+      {
+        "epoch": 5,
+        "loss": 0.0002935589792387974,
+        "validation_cosine": 0.9238753318786621
+      },
+      {
+        "epoch": 6,
+        "loss": 0.0002846498015666536,
+        "validation_cosine": 0.926347017288208
+      },
+      {
+        "epoch": 7,
+        "loss": 0.0002775181346805766,
+        "validation_cosine": 0.928026556968689
+      },
+      {
+        "epoch": 8,
+        "loss": 0.0002716217653263205,
+        "validation_cosine": 0.9293117523193359
+      },
+      {
+        "epoch": 9,
+        "loss": 0.0002658247883826132,
+        "validation_cosine": 0.9291211366653442
+      },
+      {
+        "epoch": 10,
+        "loss": 0.000261006112446517,
+        "validation_cosine": 0.9302789568901062
+      },
+      {
+        "epoch": 11,
+        "loss": 0.00025770589511214185,
+        "validation_cosine": 0.9312644600868225
+      },
+      {
+        "epoch": 12,
+        "loss": 0.00025293819918361906,
+        "validation_cosine": 0.9318237900733948
+      },
+      {
+        "epoch": 13,
+        "loss": 0.0002497080865092964,
+        "validation_cosine": 0.9325289726257324
+      },
+      {
+        "epoch": 14,
+        "loss": 0.00024590416776643705,
+        "validation_cosine": 0.9331120252609253
+      },
+      {
+        "epoch": 15,
+        "loss": 0.00024282970864280488,
+        "validation_cosine": 0.9339824318885803
+      },
+      {
+        "epoch": 16,
+        "loss": 0.00024033805513883836,
+        "validation_cosine": 0.9339991807937622
+      },
+      {
+        "epoch": 17,
+        "loss": 0.00023614217328334539,
+        "validation_cosine": 0.9341042637825012
+      },
+      {
+        "epoch": 18,
+        "loss": 0.00023499632637443332,
+        "validation_cosine": 0.9343901872634888
+      },
+      {
+        "epoch": 19,
+        "loss": 0.00023213536506874434,
+        "validation_cosine": 0.9335168600082397
+      },
+      {
+        "epoch": 20,
+        "loss": 0.00023001934904540476,
+        "validation_cosine": 0.9353466629981995
+      },
+      {
+        "epoch": 21,
+        "loss": 0.00022681699273461063,
+        "validation_cosine": 0.9356260895729065
+      },
+      {
+        "epoch": 22,
+        "loss": 0.0002241487248587267,
+        "validation_cosine": 0.935020923614502
+      },
+      {
+        "epoch": 23,
+        "loss": 0.00022274433993314032,
+        "validation_cosine": 0.935289204120636
+      },
+      {
+        "epoch": 24,
+        "loss": 0.00022031937583556605,
+        "validation_cosine": 0.9353426694869995
+      },
+      {
+        "epoch": 25,
+        "loss": 0.00021751077454407804,
+        "validation_cosine": 0.93620765209198
+      },
+      {
+        "epoch": 26,
+        "loss": 0.00021575954310214406,
+        "validation_cosine": 0.9346680641174316
+      },
+      {
+        "epoch": 27,
+        "loss": 0.00021418242249637842,
+        "validation_cosine": 0.9355927109718323
+      },
+      {
+        "epoch": 28,
+        "loss": 0.0002122113144448829,
+        "validation_cosine": 0.9356508255004883
+      },
+      {
+        "epoch": 29,
+        "loss": 0.00021022028259823046,
+        "validation_cosine": 0.9369651079177856
+      },
+      {
+        "epoch": 30,
+        "loss": 0.00020703373876232136,
+        "validation_cosine": 0.9375759363174438
+      },
+      {
+        "epoch": 31,
+        "loss": 0.00020646199967207698,
+        "validation_cosine": 0.9366552233695984
+      },
+      {
+        "epoch": 32,
+        "loss": 0.0002039207012987592,
+        "validation_cosine": 0.936461329460144
+      },
+      {
+        "epoch": 33,
+        "loss": 0.00020323200846582444,
+        "validation_cosine": 0.9371689558029175
+      },
+      {
+        "epoch": 34,
+        "loss": 0.00020031062599122783,
+        "validation_cosine": 0.9372876882553101
+      },
+      {
+        "epoch": 35,
+        "loss": 0.00020000303811684716,
+        "validation_cosine": 0.9366949200630188
+      }
+    ]
+  },
+  "protocol_version": "compact_memory_reference_exploratory_v3_2",
+  "run_id": "compact-memory-references-v3-2-20260831T152814Z-afc78167-s20260828-formal-references-s20260830-001",
+  "schema_version": 5,
+  "seed": 20260830,
+  "state_dimension": 512
+}

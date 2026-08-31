@@ -1,0 +1,432 @@
+{
+  "command": [
+    "/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/compact_memory_v3_2.py",
+    "--config",
+    "configs/compact_memory_v3_2.yaml",
+    "--stage",
+    "train",
+    "--device",
+    "1",
+    "--family",
+    "gru",
+    "--memory-dimension",
+    "32",
+    "--controller-seed",
+    "20260830",
+    "--run-suffix",
+    "formal-gru-m32-s20260830-001"
+  ],
+  "config": {
+    "closure": {
+      "clamp_conditions": [
+        "single",
+        "persistent"
+      ],
+      "conditions": [
+        "clean",
+        "j_positive",
+        "full_patch",
+        "random",
+        "non_j"
+      ],
+      "future_min_layers": 3,
+      "max_attempt_multiplier": 10,
+      "perturbation_sources": [
+        "activation_difference",
+        "natural_collision",
+        "targeted_probe"
+      ],
+      "strengths": [
+        0.25,
+        0.5,
+        1.0
+      ],
+      "targeted_probe_min_score": 0.75
+    },
+    "compact_memory": {
+      "balanced_lengths": [
+        8,
+        16,
+        32
+      ],
+      "controller_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "dictionary_size": 4096,
+      "divergence_cosine": 0.8,
+      "early_stopping_patience": 5,
+      "followup_gap_closed": 0.8,
+      "histories": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "horizon16_followup_cosine": 0.7,
+      "horizon8_followup_cosine": 0.8,
+      "horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "maximum_candidates_per_family": 2000,
+      "maximum_epochs": 50,
+      "maximum_predicted_feedback": 0.8,
+      "memory_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "memory_effect_min_cosine": 0.02,
+      "parameter_tolerance": 0.05,
+      "remainder_pca_dimensions": [
+        128,
+        512
+      ],
+      "representation_families": [
+        "dense_profile_pca",
+        "predictive_bottleneck",
+        "sparse_j_centered"
+      ],
+      "semantic_noninferiority": 0.02,
+      "split_fractions": [
+        0.7,
+        0.15,
+        0.15
+      ],
+      "split_seeds": {
+        "test": 20260907,
+        "train": 20260905,
+        "validation": 20260906
+      },
+      "state_dimensions": [
+        64,
+        128,
+        256,
+        512
+      ],
+      "target_parameter_count": 5000000,
+      "target_parseable_per_family": 1200,
+      "task_families": [
+        "iterated_modular_arithmetic",
+        "synthetic_state_machine"
+      ],
+      "teacher_forcing_fraction": 0.2,
+      "trajectory_reduction_fraction": 0.2,
+      "workspace_layers": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ]
+    },
+    "compact_memory_v3_2": {
+      "controller_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "divergence_cosine": 0.8,
+      "early_stopping_patience": 5,
+      "histories": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "maximum_epochs": 50,
+      "maximum_predicted_feedback": 0.8,
+      "memory_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "memory_effect_min_cosine": 0.02,
+      "minimum_causal_direction_retention": 0.8,
+      "minimum_causal_magnitude_retention": 0.8,
+      "minimum_causal_trials": 10,
+      "minimum_phase0_pass10_retention": 0.9,
+      "minimum_reconstruction_cosine": 0.8,
+      "parameter_tolerance": 0.05,
+      "representation_families": [
+        "dense_profile_pca",
+        "predictive_bottleneck",
+        "sparse_j_centered"
+      ],
+      "semantic_noninferiority": 0.02,
+      "source_shard_count": 2,
+      "source_shard_group_id": "compact-memory-v3-1-formal-v3-20260830",
+      "state_dimensions": [
+        64,
+        128,
+        256,
+        512
+      ],
+      "target_parameter_count": 5000000,
+      "target_parseable_per_family": 1200,
+      "teacher_forcing_fraction": 0.2,
+      "trajectory_reduction_fraction": 0.2
+    },
+    "controller": {
+      "budget_tolerance": 0.05,
+      "counterfactual_traces": 256,
+      "families": [
+        "mlp",
+        "gru",
+        "transformer"
+      ],
+      "histories": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "lambda_answer": 1.0,
+      "lambda_counterfactual": 0.25,
+      "lambda_j": 1.0,
+      "max_predicted_feedback": 0.8,
+      "parameter_budgets": [
+        1000000,
+        5000000,
+        20000000,
+        50000000,
+        100000000
+      ],
+      "remainder_pca_dims": [
+        32,
+        128,
+        512
+      ],
+      "stable_dense_cosine": 0.9,
+      "stable_intervention_agreement": 0.8,
+      "stable_sparse_f1": 0.7,
+      "stable_teacher_accuracy_fraction": 0.9,
+      "teacher_forcing_warmup_fraction": 0.2
+    },
+    "data": {
+      "upstream_root": "data/upstream/anthropic"
+    },
+    "geometry": {
+      "formal_null_tolerance": 0.0001
+    },
+    "jstate": {
+      "concept_vocab_size": 4096,
+      "dense_cosine_threshold": 0.995,
+      "k": 25,
+      "min_remainder_fraction": 0.2,
+      "primary_position": -1,
+      "rms_drift_threshold": 0.02,
+      "top10_overlap_threshold": 0.8
+    },
+    "lens": {
+      "file": "qwen3.5-4b/jlens/Salesforce-wikitext/Qwen3.5-4B_jacobian_lens_n1000.pt",
+      "metadata_prompts_fitted": 417,
+      "repo": "neuronpedia/jacobian-lens",
+      "revision": "16a01f309fcec900fdcec3f4cd5b64f3d00e4d5a",
+      "sha256": "1f9a8f8fd593f0ffec1a9640993257ca4560f8ae3e5602315643d5cc6818534e",
+      "upstream_commit": "581d398613e5602a5af361e1c34d3a92ea82ba8e"
+    },
+    "model": {
+      "compile": false,
+      "device": 1,
+      "device_map": "cuda",
+      "dtype": "bfloat16",
+      "force_bos": true,
+      "id": "Qwen/Qwen3.5-4B",
+      "max_seq_len": 512,
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "trust_remote_code": false
+    },
+    "outputs": {
+      "artifacts": "../../artifacts",
+      "figures": "figures",
+      "processed": "processed",
+      "raw": "raw",
+      "reports": "../../reports",
+      "root": "results/v3_2"
+    },
+    "reproducibility": {
+      "bootstrap_seed": 20260901,
+      "controller_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "dataset_seed": 20260828,
+      "deterministic": true
+    },
+    "run": {
+      "confirm_valid_base_trials": 500,
+      "max_attempt_multiplier": 10,
+      "pilot_valid_base_trials": 100,
+      "protocol_version": "compact_memory_exploratory_v3_2",
+      "shard_count": 2,
+      "stage": "compact_memory_v3_2",
+      "timeout_hours": 72
+    },
+    "statistics": {
+      "bootstrap_resamples": 10000,
+      "confidence": 0.95,
+      "eta_threshold": 0.2,
+      "null_js_floor": 0.0001,
+      "null_quantile": 0.99
+    },
+    "v3_1": {
+      "attempts_per_layer": 200,
+      "bootstrap_resamples": 10000,
+      "candidate_initial_layers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "causal_modes": [
+        "single",
+        "persistent_final",
+        "persistent_all"
+      ],
+      "confidence": 0.95,
+      "controls": [
+        "clean",
+        "identity",
+        "zero_strength",
+        "matched_random",
+        "j_positive",
+        "full_patch"
+      ],
+      "dense_cosine_threshold": 0.995,
+      "dictionary_size": 4096,
+      "final_layer": 29,
+      "formal_displacement_fraction": 0.2,
+      "initial_method": "dense_optimized",
+      "initial_strength": 0.25,
+      "minimum_restoration_layers": 3,
+      "naturality_quantile": 0.99,
+      "nearest_neighbors": 10,
+      "null_js_floor": 0.0001,
+      "null_quantile": 0.99,
+      "pca_dimension": 128,
+      "position_scopes": [
+        "final",
+        "all_non_padding"
+      ],
+      "primary_task_family": "arithmetic",
+      "restoration_methods": [
+        "dense_local",
+        "dense_optimized"
+      ],
+      "rms_drift_threshold": 0.02,
+      "sensitivity_strengths": [
+        0.5,
+        1.0
+      ],
+      "state_definition": "V3-Dense",
+      "top10_overlap_threshold": 0.8,
+      "valid_required": 160
+    },
+    "v3_1_data": {
+      "calibration": {
+        "candidates": 800,
+        "seed": 20260902,
+        "target_teacher_correct": 200
+      },
+      "confirmation": {
+        "candidates": 10000,
+        "seed": 20260904,
+        "target_valid": 500
+      },
+      "naturality_fit": {
+        "candidates": 512,
+        "seed": 20260831
+      },
+      "pilot": {
+        "candidates": 2500,
+        "seed": 20260903,
+        "target_valid": 100
+      }
+    },
+    "validation": {
+      "band_min_layers": 3,
+      "band_peak_fraction": 0.5,
+      "bootstrap_resamples": 10000,
+      "discovery_fraction": 0.5,
+      "hit10_threshold": 0.2,
+      "min_primary_position": 16,
+      "positive_control_trials": 24,
+      "report_sensitivity_peak_fractions": [
+        0.25,
+        0.4,
+        0.6
+      ]
+    }
+  },
+  "config_digest": "afc78167b2ca7e9f8fb785670e009ef4f36c94a2fc531485a72677c8f9e6d10b",
+  "created_at": "2026-08-31T14:50:07.219372+00:00",
+  "environment": {
+    "cuda_available": true,
+    "gpus": [
+      {
+        "compute_capability": [
+          8,
+          9
+        ],
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "total_memory_bytes": 25386352640
+      },
+      {
+        "compute_capability": [
+          8,
+          9
+        ],
+        "index": 1,
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "total_memory_bytes": 25386352640
+      }
+    ],
+    "nvidia_smi": "NVIDIA GeForce RTX 4090 D, 550.144.03, 24564 MiB\nNVIDIA GeForce RTX 4090 D, 550.144.03, 24564 MiB",
+    "platform": "Linux-6.2.0-26-generic-x86_64-with-glibc2.35",
+    "python": "3.12.2",
+    "python_executable": "/home/user/anaconda3/bin/python",
+    "torch": "2.10.0+cu128",
+    "torch_cuda_runtime": "12.8"
+  },
+  "git_commit": "d5fcebe5da7f34ae0e013d264bbcabc659cd9dd2",
+  "git_worktree": {
+    "capture": "process_init",
+    "dirty": true,
+    "entries": 173,
+    "status_sha256": "3009bf44ac2d47c9ef4ba83c47fe096d7ecdc550437c61601e850afbfa61a9f2"
+  },
+  "kind": "compact-memory-v3-2",
+  "result": "results/v3_2/raw/compact-memory-v3-2-20260831T145007Z-afc78167-s20260828-formal-gru-m32-s20260830-001/controller_result.json",
+  "run_id": "compact-memory-v3-2-20260831T145007Z-afc78167-s20260828-formal-gru-m32-s20260830-001",
+  "run_suffix": "formal-gru-m32-s20260830-001",
+  "schema_version": 3,
+  "seed": 20260828,
+  "stage": "train",
+  "status": "COMPLETED"
+}

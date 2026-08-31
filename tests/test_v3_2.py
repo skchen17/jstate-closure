@@ -14,6 +14,7 @@ from jclosure.memory_analysis_v3_2 import (
     memory_utility_reasons,
     paired_cluster_interval,
 )
+from jclosure.reporting_postrun_v3_2 import figure_provenance
 from jclosure.runtime_v3_2 import restoration_is_optimized
 from jclosure.statistics_v3_2 import (
     conditional_success_summary,
@@ -213,3 +214,15 @@ def test_autonomous_remainder_reference_reads_only_its_predictions():
     )
     assert states.flatten().tolist() == [1.0, 2.0, 3.0]
     assert remainders.flatten().tolist() == [2.0, 4.0, 6.0]
+
+
+def test_figure_provenance_hashes_saved_source_and_figure(tmp_path):
+    figure = tmp_path / "figure.png"
+    source = tmp_path / "records.parquet"
+    figure.write_bytes(b"machine-generated-figure")
+    source.write_bytes(b"machine-generated-records")
+    value = figure_provenance(tmp_path, figure, source)
+    assert value["figure"] == "figure.png"
+    assert value["source"] == "records.parquet"
+    assert len(value["figure_sha256"]) == 64
+    assert len(value["source_sha256"]) == 64

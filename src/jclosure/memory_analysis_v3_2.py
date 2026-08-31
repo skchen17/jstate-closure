@@ -103,11 +103,13 @@ def _controller_payloads(root: Path) -> list[tuple[Path, dict[str, Any]]]:
 
 
 def _model_key(payload: dict[str, Any]) -> str:
+    history = payload.get("history_length")
+    memory = payload.get("memory_dimension")
     return "-".join(
         (
             str(payload["model_family"]),
-            f"h{int(payload.get('history_length', 1))}",
-            f"m{int(payload.get('memory_dimension', 0))}",
+            f"h{int(history) if history is not None else 0}",
+            f"m{int(memory) if memory is not None else 0}",
             f"s{int(payload['seed'])}",
             str(payload["training_subset"]),
         )
@@ -122,11 +124,13 @@ def _frames(
     sources: list[dict[str, str]] = []
     for path, payload in payloads:
         model_key = _model_key(payload)
+        history = payload.get("history_length")
+        memory = payload.get("memory_dimension")
         common = {
             "model_key": model_key,
             "model_family": payload["model_family"],
-            "history_length": int(payload.get("history_length", 1)),
-            "memory_dimension": int(payload.get("memory_dimension", 0)),
+            "history_length": int(history) if history is not None else 0,
+            "memory_dimension": int(memory) if memory is not None else 0,
             "seed": int(payload["seed"]),
             "training_subset": payload["training_subset"],
             "parameter_count": int(payload["parameter_count"]),

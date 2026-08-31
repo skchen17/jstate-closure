@@ -13,6 +13,7 @@ from jclosure.experiments.calibrate_v3_2 import _event_pass
 from jclosure.experiments.compact_memory_v3_2 import _build_controller_v32
 from jclosure.memory_analysis_v3_2 import (
     PairedInterval,
+    _model_key,
     memory_utility_reasons,
     paired_cluster_interval,
 )
@@ -255,3 +256,15 @@ def test_v32_history_controller_returns_compact_state_dimension():
     assert state.shape == (3, 512)
     assert action.shape == (3, 9)
     assert abs(sum(value.numel() for value in model.parameters()) - 5_000_000) / 5_000_000 <= 0.05
+
+
+def test_controller_analysis_accepts_explicit_null_dimensions():
+    assert _model_key(
+        {
+            "model_family": "markov",
+            "history_length": None,
+            "memory_dimension": None,
+            "seed": 7,
+            "training_subset": "all_parseable",
+        }
+    ) == "markov-h0-m0-s7-all_parseable"

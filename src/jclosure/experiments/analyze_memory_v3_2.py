@@ -15,7 +15,7 @@ def main() -> None:
         config=config["compact_memory_v3_2"],
         n_resamples=10_000,
         confidence=0.95,
-        seed=int(config["statistics"]["bootstrap_seed"]),
+        seed=int(config["reproducibility"]["bootstrap_seed"]),
     )
 
 

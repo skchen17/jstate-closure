@@ -4,8 +4,10 @@ from dataclasses import asdict
 import numpy as np
 import pandas as pd
 import pytest
+import torch
 
 from jclosure.clamp_v3_2 import build_v32_schedule, schedules_share_initial_perturbation
+from jclosure.compact_memory_references_v3_1 import autonomous_remainder_rollout
 from jclosure.compact_memory_v3_2 import action_metrics, representation_gate_reasons
 from jclosure.memory_analysis_v3_2 import (
     PairedInterval,
@@ -194,3 +196,20 @@ def test_memory_utility_requires_paired_ci_and_all_seed_directions():
             "semantic_noninferiority": 0.02,
         },
     ) == ("seed_direction_inconsistent",)
+
+
+def test_autonomous_remainder_reference_reads_only_its_predictions():
+    class Increment(torch.nn.Module):
+        memory_dim = 2
+
+        def forward(self, state, remainder, memory):
+            next_state = state + 1
+            next_remainder = remainder + 2
+            return next_state, next_remainder, state, memory + 1
+
+    model = Increment()
+    states, remainders, _ = autonomous_remainder_rollout(
+        model, torch.zeros(1, 1), torch.zeros(1, 1), steps=3
+    )
+    assert states.flatten().tolist() == [1.0, 2.0, 3.0]
+    assert remainders.flatten().tolist() == [2.0, 4.0, 6.0]

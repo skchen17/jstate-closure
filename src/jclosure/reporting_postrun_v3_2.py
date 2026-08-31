@@ -260,6 +260,9 @@ def _memory_report(root: Path) -> str:
 def _final_status(root: Path) -> str:
     calibration = _json(root / "results/v3_2/processed/closure_v3_2_calibration.json")
     causal = _json(root / "results/v3_2/processed/closure_v3_2_pilot.json")
+    trace_audit = _json(
+        root / "results/v3_2/processed/compact_memory_trace_audit_v3_2.json"
+    )
     analysis = _json(
         root / "results/v3_2/processed/compact_memory_controller_analysis_v3_2.json"
     )
@@ -273,6 +276,11 @@ def _final_status(root: Path) -> str:
             summary = pd.read_parquet(summary_path)
     history_answer = "Controller analysis is incomplete."
     teacher_answer = "Teacher imitation and ground-truth accuracy are reported separately."
+    teacher_correct_count = (
+        sum(int(value["teacher_correct"]) for value in trace_audit["counts"])
+        if trace_audit
+        else None
+    )
     if summary is not None and not summary.empty:
         horizon8 = summary[
             (summary["training_subset"] == "all_parseable")
@@ -298,8 +306,8 @@ def _final_status(root: Path) -> str:
             teacher_answer = (
                 "They are distinct endpoints: across horizon-8 controller summaries, "
                 f"median teacher-action fidelity was {teacher:.6f} and median "
-                f"ground-truth action accuracy was {ground_truth:.6f}; only 13 "
-                "teacher trajectories were teacher-correct."
+                f"ground-truth action accuracy was {ground_truth:.6f}; "
+                f"{teacher_correct_count} teacher trajectories were teacher-correct."
             )
     questions = [
         ("1. Does a final-token same-J perturbation change the future?", "Not estimable without an authorized paired causal pilot." if not causal else "See the machine-recorded E_single estimates in CLOSURE_V3_2_CAUSAL.md."),

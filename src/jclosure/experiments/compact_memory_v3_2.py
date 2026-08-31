@@ -460,6 +460,8 @@ def _evaluate(model, trajectories, representation, *, family: str, history: int,
                 "variance": float(np.var(predicted_np[:horizon])),
             })
     frame = pd.DataFrame(rows)
+    if frame.empty:
+        return {"rows": [], "horizons": []}
     summaries = []
     for horizon, group in frame.groupby("horizon"):
         summaries.append({
@@ -475,6 +477,22 @@ def _evaluate(model, trajectories, representation, *, family: str, history: int,
             "variance_median": float(group["variance"].median()),
         })
     return {"rows": rows, "horizons": summaries}
+
+
+def _validation_score(
+    result: dict[str, Any], *, preferred_horizon: int = 8
+) -> tuple[int | None, float]:
+    """Use the longest evaluable frozen horizon up to the preferred horizon."""
+
+    available = {
+        int(value["horizon"]): float(value["decoded_cosine_median"])
+        for value in result["horizons"]
+        if int(value["horizon"]) <= preferred_horizon
+    }
+    if not available:
+        return None, -float("inf")
+    selected = max(available)
+    return selected, available[selected]
 
 
 def _train(context, *, family: str, history: int, memory_dim: int, seed: int, training_subset: str) -> dict[str, Any]:
@@ -509,6 +527,14 @@ def _train(context, *, family: str, history: int, memory_dim: int, seed: int, tr
     best_state = None
     stale = 0
     training = []
+    validation_selection_horizon: int | None = None
+    validation_horizons = sorted(
+        {
+            int(value)
+            for value in values["horizons"]
+            if 1 <= int(value) <= 8
+        }
+    )
     for epoch in range(maximum_epochs):
         feedback = scheduled_feedback_probability(
             epoch, maximum_epochs,
@@ -518,11 +544,33 @@ def _train(context, *, family: str, history: int, memory_dim: int, seed: int, tr
         loss = _train_epoch(model, train, optimizer, family=family, history=history, memory_dim=memory_dim, feedback_probability=feedback, device=device, seed=seed + epoch)
         validation_result = _evaluate(
             model, validation, representation, family=family, history=history,
-            memory_dim=memory_dim, device=device, horizons=[8],
+            memory_dim=memory_dim, device=device, horizons=validation_horizons,
             divergence=float(values["divergence_cosine"]),
         )
-        score = validation_result["horizons"][0]["decoded_cosine_median"] if validation_result["horizons"] else -float("inf")
-        training.append({"epoch": epoch, "loss": loss, "feedback_probability": feedback, "validation_horizon8_cosine": score})
+        selected_horizon, score = _validation_score(validation_result)
+        if selected_horizon is None:
+            raise RuntimeError(
+                f"{training_subset} lacks an evaluable validation transition"
+            )
+        validation_selection_horizon = selected_horizon
+        horizon8 = next(
+            (
+                float(value["decoded_cosine_median"])
+                for value in validation_result["horizons"]
+                if int(value["horizon"]) == 8
+            ),
+            None,
+        )
+        training.append(
+            {
+                "epoch": epoch,
+                "loss": loss,
+                "feedback_probability": feedback,
+                "validation_selection_horizon": selected_horizon,
+                "validation_selection_cosine": score,
+                "validation_horizon8_cosine": horizon8,
+            }
+        )
         if score > best:
             best, stale = score, 0
             best_state = {key: value.detach().cpu().clone() for key, value in model.state_dict().items()}
@@ -550,7 +598,13 @@ def _train(context, *, family: str, history: int, memory_dim: int, seed: int, tr
         "training_subset": training_subset, "seed": seed,
         "parameter_count": parameter_count(model), "train_trajectories": len(train),
         "validation_trajectories": len(validation), "test_trajectories": len(test),
-        "best_validation_horizon8_cosine": best, "epochs": len(training),
+        "validation_selection_horizon": validation_selection_horizon,
+        "best_validation_selection_cosine": best,
+        "best_validation_horizon8_cosine": (
+            best if validation_selection_horizon == 8 else None
+        ),
+        "sensitivity_underpowered": training_subset == "teacher_correct_only",
+        "epochs": len(training),
         "training": training, "test": test_result,
         "checkpoint_path": str(checkpoint.relative_to(context.root)),
         "checkpoint_sha256": sha256_file(checkpoint),

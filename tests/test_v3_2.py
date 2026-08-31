@@ -10,7 +10,10 @@ from jclosure.clamp_v3_2 import build_v32_schedule, schedules_share_initial_pert
 from jclosure.compact_memory_references_v3_1 import autonomous_remainder_rollout
 from jclosure.compact_memory_v3_2 import action_metrics, representation_gate_reasons
 from jclosure.experiments.calibrate_v3_2 import _event_pass
-from jclosure.experiments.compact_memory_v3_2 import _build_controller_v32
+from jclosure.experiments.compact_memory_v3_2 import (
+    _build_controller_v32,
+    _validation_score,
+)
 from jclosure.memory_analysis_v3_2 import (
     PairedInterval,
     _model_key,
@@ -300,3 +303,18 @@ def test_reference_summary_requires_positive_autonomous_gap(tmp_path):
     )
     assert result["positive_markov_to_reference_gap"] is False
     assert result["median_reference_minus_baseline"] == pytest.approx(-0.1)
+
+
+def test_teacher_correct_validation_uses_longest_available_frozen_horizon():
+    horizon, score = _validation_score(
+        {
+            "horizons": [
+                {"horizon": 1, "decoded_cosine_median": 0.7},
+                {"horizon": 2, "decoded_cosine_median": 0.8},
+                {"horizon": 4, "decoded_cosine_median": 0.75},
+            ]
+        }
+    )
+    assert horizon == 4
+    assert score == pytest.approx(0.75)
+    assert _validation_score({"horizons": []}) == (None, -float("inf"))

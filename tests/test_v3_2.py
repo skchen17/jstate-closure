@@ -9,6 +9,7 @@ import torch
 from jclosure.clamp_v3_2 import build_v32_schedule, schedules_share_initial_perturbation
 from jclosure.compact_memory_references_v3_1 import autonomous_remainder_rollout
 from jclosure.compact_memory_v3_2 import action_metrics, representation_gate_reasons
+from jclosure.experiments.calibrate_v3_2 import _event_pass
 from jclosure.memory_analysis_v3_2 import (
     PairedInterval,
     memory_utility_reasons,
@@ -226,3 +227,14 @@ def test_figure_provenance_hashes_saved_source_and_figure(tmp_path):
     assert value["source"] == "records.parquet"
     assert len(value["figure_sha256"]) == 64
     assert len(value["source_sha256"]) == 64
+
+
+def test_calibration_merge_accepts_parquet_ndarray_events():
+    events = np.asarray(
+        [{"layer": 24, "passed": True}, {"layer": 25, "passed": False}],
+        dtype=object,
+    )
+    assert _event_pass(events, 24)
+    assert not _event_pass(events, 25)
+    assert not _event_pass(events, 26)
+    assert not _event_pass(None, 24)

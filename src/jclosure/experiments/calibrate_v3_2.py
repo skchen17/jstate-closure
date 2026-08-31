@@ -351,7 +351,9 @@ def _calibration_rows(
 
 
 def _event_pass(events: Any, layer: int) -> bool:
-    for event in events or []:
+    if events is None:
+        return False
+    for event in events:
         if int(event.get("layer", -1)) == layer:
             return bool(event.get("passed", False))
     return False

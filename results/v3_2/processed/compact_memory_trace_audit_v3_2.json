@@ -1,0 +1,227 @@
+{
+  "corrupted_or_invalid_traces": 0,
+  "counts": [
+    {
+      "attempted": 100,
+      "family": "iterated_modular_arithmetic",
+      "invalid_unparseable": 0,
+      "length": 8,
+      "parseable": 100,
+      "parseable_but_wrong": 97,
+      "split": "test",
+      "teacher_correct": 3,
+      "trace_valid": 100
+    },
+    {
+      "attempted": 100,
+      "family": "iterated_modular_arithmetic",
+      "invalid_unparseable": 0,
+      "length": 16,
+      "parseable": 100,
+      "parseable_but_wrong": 100,
+      "split": "test",
+      "teacher_correct": 0,
+      "trace_valid": 100
+    },
+    {
+      "attempted": 100,
+      "family": "iterated_modular_arithmetic",
+      "invalid_unparseable": 44,
+      "length": 32,
+      "parseable": 56,
+      "parseable_but_wrong": 56,
+      "split": "test",
+      "teacher_correct": 0,
+      "trace_valid": 100
+    },
+    {
+      "attempted": 100,
+      "family": "synthetic_state_machine",
+      "invalid_unparseable": 10,
+      "length": 8,
+      "parseable": 90,
+      "parseable_but_wrong": 90,
+      "split": "test",
+      "teacher_correct": 0,
+      "trace_valid": 100
+    },
+    {
+      "attempted": 100,
+      "family": "synthetic_state_machine",
+      "invalid_unparseable": 50,
+      "length": 16,
+      "parseable": 50,
+      "parseable_but_wrong": 50,
+      "split": "test",
+      "teacher_correct": 0,
+      "trace_valid": 100
+    },
+    {
+      "attempted": 100,
+      "family": "synthetic_state_machine",
+      "invalid_unparseable": 30,
+      "length": 32,
+      "parseable": 70,
+      "parseable_but_wrong": 69,
+      "split": "test",
+      "teacher_correct": 1,
+      "trace_valid": 100
+    },
+    {
+      "attempted": 467,
+      "family": "iterated_modular_arithmetic",
+      "invalid_unparseable": 0,
+      "length": 8,
+      "parseable": 467,
+      "parseable_but_wrong": 461,
+      "split": "train",
+      "teacher_correct": 6,
+      "trace_valid": 467
+    },
+    {
+      "attempted": 467,
+      "family": "iterated_modular_arithmetic",
+      "invalid_unparseable": 0,
+      "length": 16,
+      "parseable": 467,
+      "parseable_but_wrong": 467,
+      "split": "train",
+      "teacher_correct": 0,
+      "trace_valid": 467
+    },
+    {
+      "attempted": 466,
+      "family": "iterated_modular_arithmetic",
+      "invalid_unparseable": 164,
+      "length": 32,
+      "parseable": 302,
+      "parseable_but_wrong": 302,
+      "split": "train",
+      "teacher_correct": 0,
+      "trace_valid": 466
+    },
+    {
+      "attempted": 467,
+      "family": "synthetic_state_machine",
+      "invalid_unparseable": 33,
+      "length": 8,
+      "parseable": 434,
+      "parseable_but_wrong": 434,
+      "split": "train",
+      "teacher_correct": 0,
+      "trace_valid": 467
+    },
+    {
+      "attempted": 467,
+      "family": "synthetic_state_machine",
+      "invalid_unparseable": 225,
+      "length": 16,
+      "parseable": 242,
+      "parseable_but_wrong": 242,
+      "split": "train",
+      "teacher_correct": 0,
+      "trace_valid": 467
+    },
+    {
+      "attempted": 466,
+      "family": "synthetic_state_machine",
+      "invalid_unparseable": 133,
+      "length": 32,
+      "parseable": 333,
+      "parseable_but_wrong": 333,
+      "split": "train",
+      "teacher_correct": 0,
+      "trace_valid": 466
+    },
+    {
+      "attempted": 100,
+      "family": "iterated_modular_arithmetic",
+      "invalid_unparseable": 0,
+      "length": 8,
+      "parseable": 100,
+      "parseable_but_wrong": 97,
+      "split": "validation",
+      "teacher_correct": 3,
+      "trace_valid": 100
+    },
+    {
+      "attempted": 100,
+      "family": "iterated_modular_arithmetic",
+      "invalid_unparseable": 0,
+      "length": 16,
+      "parseable": 100,
+      "parseable_but_wrong": 100,
+      "split": "validation",
+      "teacher_correct": 0,
+      "trace_valid": 100
+    },
+    {
+      "attempted": 100,
+      "family": "iterated_modular_arithmetic",
+      "invalid_unparseable": 34,
+      "length": 32,
+      "parseable": 66,
+      "parseable_but_wrong": 66,
+      "split": "validation",
+      "teacher_correct": 0,
+      "trace_valid": 100
+    },
+    {
+      "attempted": 100,
+      "family": "synthetic_state_machine",
+      "invalid_unparseable": 8,
+      "length": 8,
+      "parseable": 92,
+      "parseable_but_wrong": 92,
+      "split": "validation",
+      "teacher_correct": 0,
+      "trace_valid": 100
+    },
+    {
+      "attempted": 100,
+      "family": "synthetic_state_machine",
+      "invalid_unparseable": 50,
+      "length": 16,
+      "parseable": 50,
+      "parseable_but_wrong": 50,
+      "split": "validation",
+      "teacher_correct": 0,
+      "trace_valid": 100
+    },
+    {
+      "attempted": 100,
+      "family": "synthetic_state_machine",
+      "invalid_unparseable": 25,
+      "length": 32,
+      "parseable": 75,
+      "parseable_but_wrong": 75,
+      "split": "validation",
+      "teacher_correct": 0,
+      "trace_valid": 100
+    }
+  ],
+  "duplicate_example_ids": [],
+  "missing_columns": [],
+  "parseable_by_family": {
+    "iterated_modular_arithmetic": 1758,
+    "synthetic_state_machine": 1436
+  },
+  "program_split_overlap": [],
+  "protocol_version": "compact_memory_exploratory_v3_2",
+  "records": "results/v3_2/processed/compact_memory_trace_records_v3_2.parquet",
+  "representation_screen_authorized": true,
+  "run_id": "compact-memory-v3-2-20260831T080853Z-f0741092-s20260828-formal-merge-audit-001",
+  "schema_version": 5,
+  "source_shards": [
+    "compact-memory-v3-1-20260830T180742Z-dd27474d-s20260828-test-v3-000",
+    "compact-memory-v3-1-20260830T161409Z-79830353-s20260828-test-v3-001",
+    "compact-memory-v3-1-20260830T071448Z-dd27474d-s20260828-train-v3-000",
+    "compact-memory-v3-1-20260830T065938Z-79830353-s20260828-train-v3-001",
+    "compact-memory-v3-1-20260830T163114Z-dd27474d-s20260828-validation-v3-000",
+    "compact-memory-v3-1-20260830T143554Z-79830353-s20260828-validation-v3-001"
+  ],
+  "split_overlap_ids": [],
+  "target_parseable_per_family": 1200,
+  "total_records": 4000,
+  "trace_hash_failures": 0
+}

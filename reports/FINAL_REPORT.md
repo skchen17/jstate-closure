@@ -1,6 +1,6 @@
 # Final report
 
-> **No operational compact state has yet passed the complete causal/behavioral criteria required to distinguish H1/H2/H3.**
+> **J measurement is validated, but no causal restoration protocol or compact recurrent state has yet satisfied the complete behavioral criteria required to distinguish H1/H2/H3.**
 
 ## Material Passport
 
@@ -153,3 +153,11 @@ Part A behavioral authorization: GATED.
 Part B representation-screen authorization: NOT EVALUATED.
 Exact counts, effects, confidence intervals, and attrition are generated in the three v3.1 protocol reports. No classification is upgraded when a required gate is absent.
 <!-- V3.1 STATUS END -->
+
+<!-- V3.2 STATUS START -->
+## Protocol v3.2 status
+
+Part A behavioral authorization: GATED OR NOT EVALUATED.
+Part B temporal training authorization: GATED OR NOT EVALUATED.
+No H1/H2/H3 classification is upgraded without paired causal and autonomous-rollout evidence.
+<!-- V3.2 STATUS END -->

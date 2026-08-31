@@ -28,7 +28,7 @@ from jclosure.compact_memory_v3_2 import (
     representation_gate_reasons,
     time_to_divergence,
 )
-from jclosure.experiments.calibrate_v3_2 import _load_encoder, _read_jsonl
+from jclosure.experiments.calibrate_v3_1 import _read_jsonl
 from jclosure.experiments.common import initialize_context, standard_parser
 from jclosure.experiments.compact_memory_v3_1 import (
     ACTION_SURFACES,
@@ -37,10 +37,29 @@ from jclosure.experiments.compact_memory_v3_1 import (
     _phase0_regression_profiles,
     _profile_pass10,
 )
+from jclosure.geometry import DenseJMap
+from jclosure.jstate import ConceptVocabulary, JStateEncoder
 from jclosure.model import load_model_bundle
 from jclosure.protocol_v3_2 import verify_memory_freeze
 from jclosure.provenance import sha256_file, write_json_atomic
 from jclosure.runtime_v3_2 import MEMORY_PROTOCOL_V32
+
+
+def _load_memory_encoder(context, bundle):
+    size = int(context.config["compact_memory"]["dictionary_size"])
+    vocabulary = ConceptVocabulary.from_json(
+        context.root / "results/processed" / f"concept_vocabulary_v2_{size}.json"
+    )
+    encoder = JStateEncoder.from_lens(
+        bundle.lens,
+        bundle.unembedding_weight,
+        vocabulary,
+        k=int(context.config["jstate"]["k"]),
+        lazy=True,
+        protocol_version=MEMORY_PROTOCOL_V32,
+        direction_chunk_size=int(context.config["jstate"].get("direction_chunk_size", 512)),
+    )
+    return vocabulary, encoder, DenseJMap.from_encoder(encoder)
 
 
 def _source_manifests(context, freeze: dict[str, Any]) -> dict[tuple[str, int], dict[str, Any]]:
@@ -180,7 +199,7 @@ def _screen(context, bundle) -> dict[str, Any]:
     arrays, trajectories = _pairs(context, frame)
     correct_frame = frame[frame["teacher_correct"].astype(bool)]
     correct_arrays, _ = _pairs(context, correct_frame)
-    vocabulary, encoder, dense_map = _load_encoder(context, bundle)
+    vocabulary, encoder, dense_map = _load_memory_encoder(context, bundle)
     phase0_profiles = _phase0_regression_profiles(context, bundle, dense_map, vocabulary)
     causal_pairs = _causal_regression_pairs(context, bundle, encoder, dense_map)
     original_phase0 = float(np.mean([_profile_pass10(value["profile"], value["concept_indices"]) for value in phase0_profiles])) if phase0_profiles else 0.0

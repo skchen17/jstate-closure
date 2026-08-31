@@ -48,6 +48,11 @@ def _save(root: Path, figure: Path, source: Path, entries: list[dict[str, str]])
 def _controller_figures(
     root: Path, summary: pd.DataFrame, source: Path, entries: list[dict[str, str]]
 ) -> None:
+    frozen_rollout = (
+        root / "results/v3_2/figures/compact_memory_autonomous_rollout.png"
+    )
+    if frozen_rollout.is_file():
+        entries.append(figure_provenance(root, frozen_rollout, source))
     all_parseable = summary[summary["training_subset"] == "all_parseable"]
     history = all_parseable[
         all_parseable["model_family"].isin(["markov", "history"])
@@ -217,11 +222,18 @@ def _memory_report(root: Path) -> str:
             summary["training_subset"] == "teacher_correct_only"
         ]
         if not sensitivity.empty:
+            sensitivity_metadata = analysis.get("sensitivity_runs", [])
             lines.extend(
                 [
                     "## Teacher-correct-only sensitivity",
                     "",
                     "This comparison is severely underpowered and is reported only as a quality sensitivity.",
+                    "",
+                    (
+                        pd.DataFrame(sensitivity_metadata).to_markdown(index=False)
+                        if sensitivity_metadata
+                        else "Sensitivity run metadata unavailable."
+                    ),
                     "",
                     sensitivity.to_markdown(index=False),
                     "",
@@ -336,6 +348,40 @@ def _final_status(root: Path) -> str:
     return "\n".join(lines)
 
 
+def _current_v32_status(root: Path) -> str:
+    calibration = _json(
+        root / "results/v3_2/processed/closure_v3_2_calibration.json"
+    )
+    analysis = _json(
+        root / "results/v3_2/processed/compact_memory_controller_analysis_v3_2.json"
+    )
+    causal_status = (
+        "AUTHORIZED"
+        if calibration and calibration.get("behavioral_authorized")
+        else "GATED"
+    )
+    memory_status = analysis["status"] if analysis else "NOT EVALUATED"
+    return "\n".join(
+        [
+            "<!-- V3.2 STATUS START -->",
+            "## Protocol v3.2 status",
+            "",
+            f"Part A behavioral authorization: {causal_status}.",
+            f"Part B controller execution: {memory_status}.",
+            "J measurement remains validated. No H1/H2/H3 classification is upgraded without paired causal restoration and causal-fidelity evidence.",
+            "<!-- V3.2 STATUS END -->",
+        ]
+    )
+
+
+def _replace_block(text: str, start: str, end: str, block: str) -> str:
+    if start not in text or end not in text:
+        return text.rstrip() + "\n\n" + block + "\n"
+    prefix, remainder = text.split(start, 1)
+    _, suffix = remainder.split(end, 1)
+    return prefix.rstrip() + "\n\n" + block + suffix
+
+
 def build(root: Path) -> None:
     build_frozen_report(root)
     entries: list[dict[str, str]] = []
@@ -350,14 +396,27 @@ def build(root: Path) -> None:
     )
     final_path = root / "reports/FINAL_REPORT.md"
     text = final_path.read_text(encoding="utf-8")
+    text = text.replace(
+        "- Formal downstream phases: **GATED / NOT EXECUTED**",
+        "- Current downstream status: **causal closure gated; compact-memory exploratory execution complete**",
+    )
+    text = text.replace(
+        "- Strongest warranted conclusion: **D — measurement quality is insufficient to distinguish H1, H2, and H3**",
+        "- Strongest warranted conclusion: **D — J measurement is validated, but the paired causal restoration and compact-controller criteria are not satisfied**",
+    )
+    text = text.replace(
+        "## Answers to the 15 adjudication questions",
+        "## Historical v2 adjudication (preserved)",
+    )
+    text = _replace_block(
+        text,
+        "<!-- V3.2 STATUS START -->",
+        "<!-- V3.2 STATUS END -->",
+        _current_v32_status(root),
+    )
     start, end = "<!-- V3.2 POSTRUN START -->", "<!-- V3.2 POSTRUN END -->"
     block = _final_status(root)
-    if start in text and end in text:
-        prefix, remainder = text.split(start, 1)
-        _, suffix = remainder.split(end, 1)
-        text = prefix.rstrip() + "\n\n" + block + suffix
-    else:
-        text = text.rstrip() + "\n\n" + block + "\n"
+    text = _replace_block(text, start, end, block)
     final_path.write_text(text, encoding="utf-8")
     base = _json(root / "results/v3_2/processed/figure_manifest_v3_2.json") or {}
     existing = [value for value in base.get("figures", []) if "figure" in value]

@@ -123,6 +123,8 @@ def _reference_summary(
     payloads: list[tuple[Path, dict[str, Any]]],
     summary: pd.DataFrame,
     baseline_keys: dict[int, str],
+    *,
+    root: Path | None = None,
 ) -> dict[str, Any]:
     rows: list[dict[str, Any]] = []
     for path, payload in payloads:
@@ -164,7 +166,7 @@ def _reference_summary(
                         "decoded_cosine_median"
                     ]
                 ),
-                "source": str(path),
+                "source": str(path.relative_to(root)) if root else str(path),
                 "source_sha256": sha256_file(path),
             }
         )
@@ -323,11 +325,30 @@ def analyze_controller_results(
         for _, payload in payloads
         if payload.get("training_subset") != "all_parseable"
     ]
+    sensitivity_runs = [
+        {
+            "model_key": _model_key(payload),
+            "training_subset": payload["training_subset"],
+            "train_trajectories": int(payload["train_trajectories"]),
+            "validation_trajectories": int(payload["validation_trajectories"]),
+            "test_trajectories": int(payload["test_trajectories"]),
+            "validation_selection_horizon": payload.get(
+                "validation_selection_horizon"
+            ),
+            "best_validation_selection_cosine": payload.get(
+                "best_validation_selection_cosine"
+            ),
+            "sensitivity_underpowered": bool(
+                payload.get("sensitivity_underpowered", False)
+            ),
+        }
+        for payload in sensitivity_payloads
+    ]
     baseline_keys = _baseline_keys(summary) if not summary.empty else {}
     paired = _paired_gru_rows(rows, baseline_keys) if not rows.empty else pd.DataFrame()
     reference_payloads = _reference_payloads(root)
     reference_summary = _reference_summary(
-        reference_payloads, summary, baseline_keys
+        reference_payloads, summary, baseline_keys, root=root
     )
     utilities: list[dict[str, Any]] = []
     for dimension in [int(value) for value in config["memory_dimensions"]]:
@@ -405,6 +426,7 @@ def analyze_controller_results(
             observed_all_parseable_keys & expected_keys
         ),
         "completed_sensitivity_controller_results": len(sensitivity_payloads),
+        "sensitivity_runs": sensitivity_runs,
         "expected_controller_results": len(expected_controller_seeds)
         * expected_models_per_seed,
         "missing_required_controller_keys": missing_required_keys,

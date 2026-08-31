@@ -21,7 +21,7 @@ from jclosure.memory_analysis_v3_2 import (
     memory_utility_reasons,
     paired_cluster_interval,
 )
-from jclosure.reporting_postrun_v3_2 import figure_provenance
+from jclosure.reporting_postrun_v3_2 import _replace_block, figure_provenance
 from jclosure.runtime_v3_2 import restoration_is_optimized
 from jclosure.statistics_v3_2 import (
     conditional_success_summary,
@@ -318,3 +318,12 @@ def test_teacher_correct_validation_uses_longest_available_frozen_horizon():
     assert horizon == 4
     assert score == pytest.approx(0.75)
     assert _validation_score({"horizons": []}) == (None, -float("inf"))
+
+
+def test_postrun_block_replacement_is_idempotent():
+    initial = "before\n<!-- S -->\nold\n<!-- E -->\nafter\n"
+    updated = _replace_block(initial, "<!-- S -->", "<!-- E -->", "<!-- S -->\nnew\n<!-- E -->")
+    assert "old" not in updated
+    assert updated.count("<!-- S -->") == 1
+    assert updated.count("<!-- E -->") == 1
+    assert _replace_block(updated, "<!-- S -->", "<!-- E -->", "<!-- S -->\nnew\n<!-- E -->") == updated

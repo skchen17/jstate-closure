@@ -14,6 +14,7 @@ from jclosure.experiments.compact_memory_v3_2 import _build_controller_v32
 from jclosure.memory_analysis_v3_2 import (
     PairedInterval,
     _model_key,
+    _reference_summary,
     memory_utility_reasons,
     paired_cluster_interval,
 )
@@ -268,3 +269,34 @@ def test_controller_analysis_accepts_explicit_null_dimensions():
             "training_subset": "all_parseable",
         }
     ) == "markov-h0-m0-s7-all_parseable"
+
+
+def test_reference_summary_requires_positive_autonomous_gap(tmp_path):
+    payload_path = tmp_path / "reference.json"
+    payload_path.write_text("{}", encoding="utf-8")
+    payload = {
+        "seed": 7,
+        "linear_current_one_step": {"test": {"decoded_cosine_median": 0.93}},
+        "nonlinear_full_current_one_step": {
+            "test": {"decoded_cosine_median": 0.94}
+        },
+        "autonomous_pca512_recurrent": {
+            "test": [{"horizon": 8, "decoded_cosine_median": 0.75}]
+        },
+    }
+    summary = pd.DataFrame(
+        [
+            {
+                "model_key": "markov-h0-m0-s7-all_parseable",
+                "horizon": 8,
+                "decoded_cosine_median": 0.85,
+            }
+        ]
+    )
+    result = _reference_summary(
+        [(payload_path, payload)],
+        summary,
+        {7: "markov-h0-m0-s7-all_parseable"},
+    )
+    assert result["positive_markov_to_reference_gap"] is False
+    assert result["median_reference_minus_baseline"] == pytest.approx(-0.1)

@@ -199,6 +199,20 @@ def _memory_report(root: Path) -> str:
             ]
         ]
         lines.extend(["## Autonomous rollout", "", compact.to_markdown(index=False), ""])
+        reference = analysis.get("remainder_reference", {})
+        if reference.get("per_seed"):
+            lines.extend(
+                [
+                    "## Remainder-reference gap",
+                    "",
+                    "Teacher-current one-step references and the autonomous recurrent reference are distinct endpoints.",
+                    "",
+                    pd.DataFrame(reference["per_seed"]).to_markdown(index=False),
+                    "",
+                    f"Positive Markov-to-autonomous-reference gap: {reference['positive_markov_to_reference_gap']}; median reference-minus-baseline cosine: {reference['median_reference_minus_baseline']}.",
+                    "",
+                ]
+            )
         sensitivity = summary[
             summary["training_subset"] == "teacher_correct_only"
         ]

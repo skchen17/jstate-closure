@@ -102,6 +102,90 @@ def _controller_payloads(root: Path) -> list[tuple[Path, dict[str, Any]]]:
     return output
 
 
+def _reference_payloads(root: Path) -> list[tuple[Path, dict[str, Any]]]:
+    output: list[tuple[Path, dict[str, Any]]] = []
+    for manifest_path in sorted(
+        (root / "results/v3_2/raw").glob(
+            "compact-memory-references-v3-2-*/manifest.json"
+        )
+    ):
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        if manifest.get("status") != "COMPLETED" or manifest.get("stage") != "references":
+            continue
+        result_path = root / str(manifest["result"])
+        output.append(
+            (result_path, json.loads(result_path.read_text(encoding="utf-8")))
+        )
+    return output
+
+
+def _reference_summary(
+    payloads: list[tuple[Path, dict[str, Any]]],
+    summary: pd.DataFrame,
+    baseline_keys: dict[int, str],
+) -> dict[str, Any]:
+    rows: list[dict[str, Any]] = []
+    for path, payload in payloads:
+        seed = int(payload["seed"])
+        horizon8 = next(
+            (
+                value
+                for value in payload["autonomous_pca512_recurrent"]["test"]
+                if int(value["horizon"]) == 8
+            ),
+            None,
+        )
+        if horizon8 is None:
+            continue
+        baseline = summary[
+            (summary["model_key"] == baseline_keys.get(seed, ""))
+            & (summary["horizon"] == 8)
+        ]
+        baseline_cosine = (
+            float(baseline.iloc[0]["decoded_cosine_median"])
+            if len(baseline) == 1
+            else float("nan")
+        )
+        reference_cosine = float(horizon8["decoded_cosine_median"])
+        rows.append(
+            {
+                "seed": seed,
+                "baseline_key": baseline_keys.get(seed),
+                "baseline_horizon8_cosine": baseline_cosine,
+                "autonomous_reference_horizon8_cosine": reference_cosine,
+                "reference_minus_baseline": reference_cosine - baseline_cosine,
+                "linear_teacher_current_one_step_cosine": float(
+                    payload["linear_current_one_step"]["test"][
+                        "decoded_cosine_median"
+                    ]
+                ),
+                "nonlinear_teacher_current_one_step_cosine": float(
+                    payload["nonlinear_full_current_one_step"]["test"][
+                        "decoded_cosine_median"
+                    ]
+                ),
+                "source": str(path),
+                "source_sha256": sha256_file(path),
+            }
+        )
+    differences = np.asarray(
+        [value["reference_minus_baseline"] for value in rows], dtype=float
+    )
+    positive_gap = bool(
+        len(differences) > 0
+        and np.isfinite(differences).all()
+        and float(np.median(differences)) > 0
+    )
+    return {
+        "completed_seeds": sorted(value["seed"] for value in rows),
+        "per_seed": rows,
+        "positive_markov_to_reference_gap": positive_gap,
+        "median_reference_minus_baseline": (
+            float(np.median(differences)) if len(differences) else None
+        ),
+    }
+
+
 def _model_key(payload: dict[str, Any]) -> str:
     history = payload.get("history_length")
     memory = payload.get("memory_dimension")
@@ -241,6 +325,10 @@ def analyze_controller_results(
     ]
     baseline_keys = _baseline_keys(summary) if not summary.empty else {}
     paired = _paired_gru_rows(rows, baseline_keys) if not rows.empty else pd.DataFrame()
+    reference_payloads = _reference_payloads(root)
+    reference_summary = _reference_summary(
+        reference_payloads, summary, baseline_keys
+    )
     utilities: list[dict[str, Any]] = []
     for dimension in [int(value) for value in config["memory_dimensions"]]:
         group = paired[
@@ -294,6 +382,14 @@ def analyze_controller_results(
         expected_controller_seeds
     )
     passing = [value["memory_dimension"] for value in utilities if value["gate_passed"]]
+    if not passing:
+        h3_reason = "memory_utility_gate_failed"
+    elif set(reference_summary["completed_seeds"]) != set(expected_controller_seeds):
+        h3_reason = "autonomous_remainder_reference_incomplete"
+    elif not reference_summary["positive_markov_to_reference_gap"]:
+        h3_reason = "autonomous_reference_does_not_define_a_positive_markov_gap"
+    else:
+        h3_reason = "full_horizon_and_gap_closure_adjudication_not_passed"
     processed = root / "results/v3_2/processed"
     processed.mkdir(parents=True, exist_ok=True)
     summary_path = processed / "compact_memory_controller_summary_v3_2.parquet"
@@ -317,7 +413,8 @@ def analyze_controller_results(
         "memory_utility": utilities,
         "minimum_useful_memory_dimension": min(passing) if passing else None,
         "h3_followup_authorized": False,
-        "h3_followup_reason": "autonomous_remainder_reference_not_yet_available",
+        "h3_followup_reason": h3_reason,
+        "remainder_reference": reference_summary,
         "summary_records": str(summary_path.relative_to(root)),
         "summary_sha256": sha256_file(summary_path),
         "paired_records": str(paired_path.relative_to(root)),

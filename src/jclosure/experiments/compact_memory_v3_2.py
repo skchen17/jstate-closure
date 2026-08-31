@@ -14,6 +14,7 @@ from sklearn.linear_model import Ridge
 
 from jclosure.compact_memory_v3_1 import (
     LinearRepresentation,
+    _closest_width,
     _history_input,
     autonomous_rollout,
     build_parameter_matched_controller,
@@ -43,6 +44,60 @@ from jclosure.model import load_model_bundle
 from jclosure.protocol_v3_2 import verify_memory_freeze
 from jclosure.provenance import sha256_file, write_json_atomic
 from jclosure.runtime_v3_2 import MEMORY_PROTOCOL_V32
+
+
+class HistoryControllerV32(torch.nn.Module):
+    """History controller whose transition head returns the compact state size."""
+
+    def __init__(
+        self, state_dim: int, history: int, action_count: int, width: int
+    ) -> None:
+        super().__init__()
+        self.history = int(history)
+        input_dim = state_dim * history + history
+        self.body = torch.nn.Sequential(
+            torch.nn.Linear(input_dim, width),
+            torch.nn.GELU(),
+            torch.nn.Linear(width, width),
+            torch.nn.GELU(),
+        )
+        self.state_head = torch.nn.Linear(width, state_dim)
+        self.action_head = torch.nn.Linear(width, action_count)
+
+    def forward(
+        self, states: torch.Tensor, mask: torch.Tensor
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        hidden = self.body(torch.cat((states.flatten(-2), mask), dim=-1))
+        return self.state_head(hidden), self.action_head(hidden)
+
+
+def _build_controller_v32(
+    family: str,
+    *,
+    state_dim: int,
+    action_count: int,
+    target: int,
+    tolerance: float,
+    history: int,
+    memory_dim: int,
+):
+    if family == "history":
+        return _closest_width(
+            lambda width: HistoryControllerV32(
+                state_dim, history, action_count, width
+            ),
+            target,
+            tolerance,
+        )
+    return build_parameter_matched_controller(
+        family,
+        state_dim=state_dim,
+        action_count=action_count,
+        target=target,
+        tolerance=tolerance,
+        history=history,
+        memory_dim=memory_dim,
+    )
 
 
 def _load_memory_encoder(context, bundle):
@@ -440,7 +495,7 @@ def _train(context, *, family: str, history: int, memory_dim: int, seed: int, tr
         raise RuntimeError(f"{training_subset} lacks a nonempty train/validation/test split")
     torch.manual_seed(seed)
     values = context.config["compact_memory_v3_2"]
-    model = build_parameter_matched_controller(
+    model = _build_controller_v32(
         family, state_dim=int(selected["dimension"]), action_count=len(ACTION_SURFACES),
         target=int(values["target_parameter_count"]), tolerance=float(values["parameter_tolerance"]),
         history=history, memory_dim=memory_dim,

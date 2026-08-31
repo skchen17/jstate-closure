@@ -10,6 +10,7 @@ from jclosure.clamp_v3_2 import build_v32_schedule, schedules_share_initial_pert
 from jclosure.compact_memory_references_v3_1 import autonomous_remainder_rollout
 from jclosure.compact_memory_v3_2 import action_metrics, representation_gate_reasons
 from jclosure.experiments.calibrate_v3_2 import _event_pass
+from jclosure.experiments.compact_memory_v3_2 import _build_controller_v32
 from jclosure.memory_analysis_v3_2 import (
     PairedInterval,
     memory_utility_reasons,
@@ -238,3 +239,19 @@ def test_calibration_merge_accepts_parquet_ndarray_events():
     assert not _event_pass(events, 25)
     assert not _event_pass(events, 26)
     assert not _event_pass(None, 24)
+
+
+def test_v32_history_controller_returns_compact_state_dimension():
+    model = _build_controller_v32(
+        "history",
+        state_dim=512,
+        action_count=9,
+        target=5_000_000,
+        tolerance=0.05,
+        history=4,
+        memory_dim=0,
+    )
+    state, action = model(torch.zeros(3, 4, 512), torch.ones(3, 4))
+    assert state.shape == (3, 512)
+    assert action.shape == (3, 9)
+    assert abs(sum(value.numel() for value in model.parameters()) - 5_000_000) / 5_000_000 <= 0.05

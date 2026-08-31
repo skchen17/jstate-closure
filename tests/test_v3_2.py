@@ -7,6 +7,11 @@ import pytest
 
 from jclosure.clamp_v3_2 import build_v32_schedule, schedules_share_initial_perturbation
 from jclosure.compact_memory_v3_2 import action_metrics, representation_gate_reasons
+from jclosure.memory_analysis_v3_2 import (
+    PairedInterval,
+    memory_utility_reasons,
+    paired_cluster_interval,
+)
 from jclosure.runtime_v3_2 import restoration_is_optimized
 from jclosure.statistics_v3_2 import (
     conditional_success_summary,
@@ -147,3 +152,45 @@ def test_configured_semantic_and_causal_gates_are_enforced():
         config,
     )
     assert reasons == ("causal_direction_retention", "semantic_retention")
+
+
+def test_memory_utility_requires_paired_ci_and_all_seed_directions():
+    frame = pd.DataFrame(
+        {
+            "example_id": ["a", "a", "b", "b"],
+            "delta": [0.03, 0.04, 0.02, 0.03],
+        }
+    )
+    interval = paired_cluster_interval(
+        frame,
+        cluster="example_id",
+        value="delta",
+        n_resamples=500,
+        confidence=0.95,
+        seed=3,
+    )
+    reasons = memory_utility_reasons(
+        cosine=interval,
+        trajectory_reduction=0.25,
+        teacher_fidelity_delta=-0.01,
+        seed_deltas=[0.03, 0.02, 0.01],
+        expected_seeds=3,
+        config={
+            "memory_effect_min_cosine": 0.02,
+            "trajectory_reduction_fraction": 0.20,
+            "semantic_noninferiority": 0.02,
+        },
+    )
+    assert reasons == ()
+    assert memory_utility_reasons(
+        cosine=PairedInterval(0.03, 0.01, 0.05, 2),
+        trajectory_reduction=0.25,
+        teacher_fidelity_delta=0.0,
+        seed_deltas=[0.03, -0.01, 0.02],
+        expected_seeds=3,
+        config={
+            "memory_effect_min_cosine": 0.02,
+            "trajectory_reduction_fraction": 0.20,
+            "semantic_noninferiority": 0.02,
+        },
+    ) == ("seed_direction_inconsistent",)

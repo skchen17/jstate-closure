@@ -215,6 +215,30 @@ def analyze_controller_results(
     expected_models_per_seed = 1 + len(config["histories"]) + len(
         config["memory_dimensions"]
     )
+    expected_keys = {
+        f"markov-h0-m0-s{controller_seed}-all_parseable"
+        for controller_seed in expected_controller_seeds
+    }
+    expected_keys.update(
+        f"history-h{int(history)}-m0-s{controller_seed}-all_parseable"
+        for controller_seed in expected_controller_seeds
+        for history in config["histories"]
+    )
+    expected_keys.update(
+        f"gru-h0-m{int(memory)}-s{controller_seed}-all_parseable"
+        for controller_seed in expected_controller_seeds
+        for memory in config["memory_dimensions"]
+    )
+    observed_all_parseable_keys = {
+        _model_key(payload)
+        for _, payload in payloads
+        if payload.get("training_subset") == "all_parseable"
+    }
+    sensitivity_payloads = [
+        payload
+        for _, payload in payloads
+        if payload.get("training_subset") != "all_parseable"
+    ]
     baseline_keys = _baseline_keys(summary) if not summary.empty else {}
     paired = _paired_gru_rows(rows, baseline_keys) if not rows.empty else pd.DataFrame()
     utilities: list[dict[str, Any]] = []
@@ -264,9 +288,10 @@ def analyze_controller_results(
                 "gate_reasons": list(reasons),
             }
         )
-    complete = (
-        len(payloads) >= len(expected_controller_seeds) * expected_models_per_seed
-        and set(baseline_keys) == set(expected_controller_seeds)
+    missing_required_keys = sorted(expected_keys - observed_all_parseable_keys)
+    unexpected_all_parseable_keys = sorted(observed_all_parseable_keys - expected_keys)
+    complete = not missing_required_keys and set(baseline_keys) == set(
+        expected_controller_seeds
     )
     passing = [value["memory_dimension"] for value in utilities if value["gate_passed"]]
     processed = root / "results/v3_2/processed"
@@ -280,8 +305,14 @@ def analyze_controller_results(
         "protocol_version": "compact_memory_exploratory_v3_2",
         "status": "COMPLETE" if complete else "INCOMPLETE",
         "completed_controller_results": len(payloads),
+        "completed_all_parseable_controller_results": len(
+            observed_all_parseable_keys & expected_keys
+        ),
+        "completed_sensitivity_controller_results": len(sensitivity_payloads),
         "expected_controller_results": len(expected_controller_seeds)
         * expected_models_per_seed,
+        "missing_required_controller_keys": missing_required_keys,
+        "unexpected_all_parseable_controller_keys": unexpected_all_parseable_keys,
         "baseline_keys": {str(key): value for key, value in baseline_keys.items()},
         "memory_utility": utilities,
         "minimum_useful_memory_dimension": min(passing) if passing else None,

@@ -161,11 +161,16 @@ def _memory_report(root: Path) -> str:
         ]
     )
     if analysis:
+        required_completed = analysis.get(
+            "completed_all_parseable_controller_results",
+            analysis["completed_controller_results"],
+        )
         lines.extend(
             [
                 "## Controller adjudication",
                 "",
-                f"Status: {analysis['status']}; completed {analysis['completed_controller_results']}/{analysis['expected_controller_results']} required all-parseable controller runs.",
+                f"Status: {analysis['status']}; completed {required_completed}/{analysis['expected_controller_results']} required all-parseable controller runs. "
+                f"Completed sensitivity runs: {analysis.get('completed_sensitivity_controller_results', 0)}.",
                 f"Minimum memory dimension passing the complete utility gate: {analysis['minimum_useful_memory_dimension']}.",
                 f"H3 follow-up authorized: {analysis['h3_followup_authorized']} ({analysis['h3_followup_reason']}).",
                 "",
@@ -194,6 +199,20 @@ def _memory_report(root: Path) -> str:
             ]
         ]
         lines.extend(["## Autonomous rollout", "", compact.to_markdown(index=False), ""])
+        sensitivity = summary[
+            summary["training_subset"] == "teacher_correct_only"
+        ]
+        if not sensitivity.empty:
+            lines.extend(
+                [
+                    "## Teacher-correct-only sensitivity",
+                    "",
+                    "This comparison is severely underpowered and is reported only as a quality sensitivity.",
+                    "",
+                    sensitivity.to_markdown(index=False),
+                    "",
+                ]
+            )
     else:
         lines.extend(["Controller analysis: INCOMPLETE or not yet executed.", ""])
     references = _reference_rows(root)
@@ -233,17 +252,52 @@ def _final_status(root: Path) -> str:
     authorized = bool(calibration and calibration.get("behavioral_authorized"))
     paired = int(causal.get("complete_paired_base_trials", 0)) if causal else 0
     useful = analysis.get("minimum_useful_memory_dimension") if analysis else None
+    summary = None
+    if analysis:
+        summary_path = root / str(analysis["summary_records"])
+        if summary_path.is_file():
+            summary = pd.read_parquet(summary_path)
+    history_answer = "Controller analysis is incomplete."
+    teacher_answer = "Teacher imitation and ground-truth accuracy are reported separately."
+    if summary is not None and not summary.empty:
+        horizon8 = summary[
+            (summary["training_subset"] == "all_parseable")
+            & (summary["horizon"] == 8)
+        ]
+        markov = horizon8[horizon8["model_family"] == "markov"]
+        histories = horizon8[horizon8["model_family"] == "history"]
+        if not markov.empty and not histories.empty:
+            markov_cosine = float(markov["decoded_cosine_median"].median())
+            best_history = float(
+                histories.groupby("history_length")["decoded_cosine_median"]
+                .median()
+                .max()
+            )
+            history_answer = (
+                "No clear non-Markov advantage was observed: the median Markov "
+                f"horizon-8 cosine was {markov_cosine:.6f}, versus a best "
+                f"history-run value of {best_history:.6f}."
+            )
+        if not horizon8.empty:
+            teacher = float(horizon8["teacher_action_fidelity"].median())
+            ground_truth = float(horizon8["ground_truth_action_accuracy"].median())
+            teacher_answer = (
+                "They are distinct endpoints: across horizon-8 controller summaries, "
+                f"median teacher-action fidelity was {teacher:.6f} and median "
+                f"ground-truth action accuracy was {ground_truth:.6f}; only 13 "
+                "teacher trajectories were teacher-correct."
+            )
     questions = [
         ("1. Does a final-token same-J perturbation change the future?", "Not estimable without an authorized paired causal pilot." if not causal else "See the machine-recorded E_single estimates in CLOSURE_V3_2_CAUSAL.md."),
         ("2. How much effect does persistent-final remove?", "Not estimable." if not causal else "See M_final and its paired raw effects."),
         ("3. Does persistent-all remove additional effect?", "Not estimable." if not causal else "See M_all and the persistent-all raw effect."),
         ("4. Does measured-J act as the main mediation workspace?", "Undetermined; no mediation claim is made without a non-null E_single and valid restoration chains."),
-        ("5. Is the current compact J state visibly non-Markov?", "See the history-order curve; representation retention alone does not establish Markov closure."),
-        ("6. Does compact recurrent memory improve autonomous rollout?", f"Minimum fully passing memory dimension: {useful}."),
+        ("5. Is the current compact J state visibly non-Markov?", history_answer),
+        ("6. Does compact recurrent memory improve autonomous rollout?", "No tested GRU memory dimension passed the frozen utility gate." if analysis and useful is None else f"Minimum fully passing memory dimension: {useful}."),
         ("7. What is the smallest useful memory dimension?", str(useful) if useful is not None else "None established."),
-        ("8. Do teacher imitation and ground-truth accuracy agree?", "No equivalence is assumed; both are reported separately, and only 13 teacher traces were teacher-correct."),
+        ("8. Do teacher imitation and ground-truth accuracy agree?", teacher_answer),
         ("9. Which hypothesis is best supported?", "D. Paired causal restoration and causal-fidelity gates are not both complete."),
-        ("10. Is 1M-100M controller scaling warranted next?", "Only if the complete memory-utility and H3 follow-up gates pass; otherwise no."),
+        ("10. Is 1M-100M controller scaling warranted next?", "No. The frozen recurrent-memory utility gate did not pass." if analysis and useful is None else "Only if the complete memory-utility and H3 follow-up gates pass."),
     ]
     lines = [
         "<!-- V3.2 POSTRUN START -->",
@@ -285,6 +339,10 @@ def build(root: Path) -> None:
     final_path.write_text(text, encoding="utf-8")
     base = _json(root / "results/v3_2/processed/figure_manifest_v3_2.json") or {}
     existing = [value for value in base.get("figures", []) if "figure" in value]
+    for value in existing:
+        figure = root / str(value["figure"])
+        if figure.is_file():
+            value["figure_sha256"] = sha256_file(figure)
     by_figure = {value["figure"]: value for value in [*existing, *entries]}
     write_json_atomic(
         root / "results/v3_2/processed/figure_manifest_v3_2.json",

@@ -1,0 +1,43 @@
+{
+  "config_digest": "1b21f923a220a6e48975be44bedcd10af1648865bd6799c0eb7413732db2327f",
+  "data_hashes": {
+    "artifacts/traces/v3_2/representations/dense_profile_pca-512.npz": "eb3250ac2dc457c7483aa444d113401bf8ed765f12d02a154f63cf358dabe5da",
+    "results/v3_2/processed/compact_memory_representation_screen_v3_2.json": "3b7efaf0cbadb2b0eb091d11324190a861dcb4bd36942bebe0aa3873be2c0d59",
+    "results/v3_2/processed/compact_memory_trace_records_v3_2.parquet": "010572191ea0a6cbbe816a567b6f4ff0d74e1f5a5f6d4a61b75cc464427af041"
+  },
+  "freeze_created_from_commit": "d86cf1dc4dc458aa37df67eb315a0b8f2f7a158d",
+  "protocol_version": "compact_memory_reference_exploratory_v3_2",
+  "schema_version": 5,
+  "selected_representation": {
+    "causal_delta_cosine_median": 0.8242072761058807,
+    "causal_direction_retention": 0.9166666666666666,
+    "causal_magnitude_retention": 0.9613141507465681,
+    "causal_trials": 24,
+    "dimension": 512,
+    "gate_passed": true,
+    "gate_reasons": [],
+    "phase0_pass10_original": 0.6426426426426426,
+    "phase0_pass10_reconstructed": 0.5795795795795795,
+    "phase0_pass10_retention": 0.9018691588785046,
+    "protocol_version": "compact_memory_exploratory_v3_2",
+    "representation_family": "dense_profile_pca",
+    "representation_path": "artifacts/traces/v3_2/representations/dense_profile_pca-512.npz",
+    "representation_sha256": "eb3250ac2dc457c7483aa444d113401bf8ed765f12d02a154f63cf358dabe5da",
+    "schema_version": 5,
+    "selection_status": "SELECTED_ON_VALIDATION_AFTER_RETENTION_GATES",
+    "teacher_correct_only_validation_next_state_cosine": null,
+    "teacher_correct_train_trajectories": 6,
+    "teacher_correct_validation_trajectories": 3,
+    "validation_next_state_cosine": 0.9235514998435974,
+    "validation_reconstruction_cosine": 0.9960192441940308
+  },
+  "source_hashes": {
+    "configs/compact_memory_v3_2.yaml": "76763aba68ef6f55fc89baebf13c93f7d78c97ac318d5032df360d385ecc11b7",
+    "src/jclosure/compact_memory_references_v3_1.py": "ed8d17779771d2d811b8cb4dca8e529c123a284d8f795205eac2a916f5a9132b",
+    "src/jclosure/compact_memory_v3_1.py": "b5be5a3d35267c8ac65ce63e0755c6e7009aaf8fd011e511d35008e276d44ea0",
+    "src/jclosure/experiments/compact_memory_references_v3_1.py": "eb099badbe518e6feae267eef7eff25d8aae7108ab1320987e4cf46fef00158d",
+    "src/jclosure/experiments/compact_memory_references_v3_2.py": "dcd8f25432cf345d64e626a4d76bdbab90e72b5739f59e5cd3d784ecfde55c82",
+    "src/jclosure/experiments/compact_memory_v3_2.py": "83e5a6f587407d9b7465c5874c45705832b7b9b3f3fff46bd27903f7595cbeba"
+  },
+  "status": "FROZEN_FOR_EXECUTION"
+}

@@ -34,7 +34,17 @@ python -m mypy --ignore-missing-imports \
   src/jclosure/experiments/controllers_v4.py \
   src/jclosure/experiments/references_v4.py \
   tests/test_v4.py
+python -m mypy --ignore-missing-imports \
+  src/jclosure/datasets_v5.py \
+  src/jclosure/protocol_v5.py \
+  src/jclosure/records_v5.py \
+  src/jclosure/peripheral_v5.py \
+  src/jclosure/experiments/peripheral_v5.py \
+  src/jclosure/experiments/h2_replication_v5.py \
+  src/jclosure/reporting_v5.py \
+  tests/test_v5.py
 PYTHONPATH=src python scripts/check_v2_hashes.py
 PYTHONPATH=src python scripts/check_v3_immutable.py
+PYTHONPATH=src python scripts/check_v4_immutable.py
 python scripts/check_repository_artifacts.py
 git diff --check

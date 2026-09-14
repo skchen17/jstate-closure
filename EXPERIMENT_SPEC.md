@@ -247,6 +247,42 @@ and never use them as autonomous oracles. If no validated teacher J-swap token
 trajectory exists, the fidelity endpoint is recorded as unavailable rather
 than inferred from observational rollout.
 
+## Peripheral computation state v5
+
+The operational workspace state is the normalized dense measured-J profile at
+layer 23 over the frozen 4,096-concept dictionary. The operational measured-J
+remainder standardizes the layer-23 residual vector, subtracts a train-only
+rank-512 PCA(J)-to-hidden ridge prediction, and standardizes the residual. It
+is not asserted to be the exact complement or the complete non-J state.
+
+The full-remainder ceiling uses the disjoint v4 train/validation/rollout-test
+program domains but derives a new layer-23 J trace, because the v4 predictive
+trace pooled layers 23–29. Model selection is validation-only; confirmation
+uses three frozen seeds. The full remainder is informative only if the paired
+prompt-clustered next-J cosine-gain CI has a positive lower bound, raw gain is
+at least 0.005, and semantic-action accuracy falls by no more than 0.02.
+
+Compact dimensions 16/32/64/128/256/512 compare remainder PCA, a predictive
+linear bottleneck, and a capacity-regularized nonlinear bottleneck. Each is
+scored for next-J cosine, semantic decision accuracy, teacher-current
+trajectory fidelity, gap closed, and parameter count. Conditional sufficiency
+adds a train-fitted PCA-256 summary of residual `(R | C)`; causal fidelity uses
+fresh final-token measured-J-preserving interventions and reports next-J delta
+cosine, magnitude ratio, semantic change agreement, and target-output sign
+agreement, pooled and by task family.
+
+The independent H2 arm freezes 256 program-disjoint tasks and targets 32 valid
+Boolean, 32 state-transition, and 12 valid trials for each remaining family.
+All six paired controls are retained. A family authorizes persistent measured-J
+restoration only if its J-preserving output-JS 95% CI lower bound exceeds
+`1e-4`. This replication does not gate the predictive mainline.
+
+Only a compact state of dimension at most 128 passing all frozen predictive,
+conditional, and causal gates authorizes recurrent comparison. Gated MLP, GRU,
+and residual recurrent models are parameter-matched near 5M parameters.
+Autonomous rollout starts from true `(J0,C0)` and then uses predicted J, C, and
+actions with exogenous family/clock only, at horizons 1/2/4/8/16/32.
+
 ## Corrective causal protocol v3.2
 
 The primary estimand uses a final-token measured-J-preserving perturbation at

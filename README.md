@@ -88,6 +88,41 @@ scripts/run_distillation.sh
 scripts/build_report.sh
 ```
 
+## Peripheral computation protocol v5
+
+Protocol v5 keeps every v1–v4 result immutable and holds the measured-J state
+fixed at the layer-23 normalized 4,096-concept profile. It asks whether a
+train-fitted measured-J remainder contains information about the next J write,
+and whether that information can be encoded in a 16–512D peripheral state.
+The full-remainder ceiling compares J-only, J-history, and three nonlinear
+remainder-aware predictors before compact-state results are interpreted.
+
+PCA, predictive-linear, and nonlinear bottlenecks are selected on validation
+data and evaluated on the frozen rollout-test split. A compact candidate must
+close at least 80% of the J-only-to-full-remainder gap, leave at most 0.002
+conditional residual cosine gain, and pass teacher/student causal direction
+and output-sign fidelity. Recurrent training is gated to authorized candidates
+of at most 128 dimensions. Autonomous recurrence feeds back predicted J,
+peripheral state, and action; it never reads a future teacher state or action.
+
+An independent family-wise H2 arm uses fresh, program-disjoint Boolean,
+state-transition, modular-arithmetic, graph, and binding tasks. It estimates
+same-J/changed-hidden effects first and only runs persistent restoration for
+families whose lower JS confidence bound exceeds the frozen noise floor.
+
+```bash
+scripts/run_peripheral_v5.sh --stage prepare --run-suffix layer23-derived
+scripts/run_peripheral_v5.sh --stage freeze --run-suffix preregistered
+scripts/run_peripheral_v5.sh --stage ceiling --run-suffix full-reference
+scripts/run_h2_replication_v5.sh --stage single --run-suffix family-replication
+scripts/run_h2_replication_v5.sh --stage merge --run-suffix merge
+scripts/run_peripheral_v5.sh --stage sweep --run-suffix compact-sweep
+scripts/run_peripheral_v5.sh --stage conditional --run-suffix conditional
+scripts/run_peripheral_v5.sh --stage fidelity --run-suffix fidelity
+scripts/run_peripheral_v5.sh --stage recurrent --run-suffix recurrent
+scripts/build_report_v5.sh
+```
+
 All commands accept `CONFIG=...` and additional arguments through `ARGS`. Raw
 records are append-only JSONL/Parquet partitions. Processed tables and figures
 are derived from those records.

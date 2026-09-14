@@ -1,0 +1,83 @@
+extends: predictive_v4.yaml
+
+run:
+  stage: peripheral_v5
+  protocol_version: jstate_peripheral_protocol_v5
+  timeout_hours: 24
+
+peripheral_v5:
+  source_trace_summary: results/v4/processed/teacher_traces_v4.json
+  source_teacher_summary: results/v4/processed/teacher_formal_v4.json
+  derived_trace_summary: results/v5/processed/peripheral_traces_v5.json
+  workspace_layer: 23
+  dictionary_size: 4096
+  residual_conditioning_rank: 512
+  dimensions: [16, 32, 64, 128, 256, 512]
+  encoder_families: [pca_remainder, predictive_bottleneck, nonlinear_bottleneck]
+  reference_architectures: [mlp, gated_mlp, attention]
+  history_length: 4
+  hidden_width: 512
+  maximum_epochs: 30
+  early_stopping_patience: 5
+  batch_size: 128
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  screen_seed: 20260828
+  confirmation_seeds: [20260828, 20260829, 20260830]
+  bootstrap_resamples: 10000
+  confidence: 0.95
+  full_remainder_minimum_cosine_gain: 0.005
+  maximum_action_accuracy_loss: 0.02
+  compact_gap_closed: 0.80
+  compact_maximum_conditional_gain: 0.002
+  compact_minimum_causal_direction_cosine: 0.80
+  compact_minimum_output_sign_agreement: 0.80
+  recurrent_maximum_state_dimension: 128
+  recurrent_architectures: [gated_mlp, gru, residual_recurrent]
+  recurrent_parameter_target: 5000000
+  recurrent_parameter_tolerance: 0.05
+  recurrent_horizons: [1, 2, 4, 8, 16, 32]
+
+h2_replication_v5:
+  protocol_version: h2_family_replication_v5
+  layer: 23
+  dictionary_size: 4096
+  position_scope: final
+  horizons: [4, 8]
+  seeds:
+    evaluation: 20260925
+  counts_by_family:
+    boolean_logic: 80
+    simple_state_transition: 80
+    modular_arithmetic: 32
+    short_graph_traversal: 32
+    variable_binding: 32
+  variants:
+    boolean_logic: binary_xor_pairs
+    simple_state_transition: toggle_or_keep
+    modular_arithmetic: increment_1
+    short_graph_traversal: directed_cycle
+    variable_binding: four_way_lookup
+  target_valid_by_family:
+    boolean_logic: 32
+    simple_state_transition: 32
+    modular_arithmetic: 12
+    short_graph_traversal: 12
+    variable_binding: 12
+  initial_strength: 0.25
+  formal_displacement_fraction: 0.20
+  dense_cosine_threshold: 0.995
+  top10_overlap_threshold: 0.80
+  rms_drift_threshold: 0.02
+  future_workspace_layers: [24, 25, 26, 27, 28, 29]
+  controls: [clean, identity, matched_random, j_positive, full_perturbation, j_preserving]
+  bootstrap_resamples: 10000
+  null_js_floor: 0.0001
+
+outputs:
+  root: results/v5
+  raw: raw
+  processed: processed
+  figures: figures
+  reports: ../../reports
+  artifacts: ../../artifacts

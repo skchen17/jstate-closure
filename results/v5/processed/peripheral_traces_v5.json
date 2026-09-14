@@ -1,0 +1,70 @@
+{
+  "dictionary_hash": "2505f795001c9321d54f204acc2d7e2cb7a77185c25fa1426b5197ea5c618cb0",
+  "dictionary_size": 4096,
+  "domains": [
+    {
+      "domain": "causal_test",
+      "source_tensor_path": "artifacts/traces/v4/traces-v4-20260914T093302Z-15fc5d67-s20260828-teacher-correct-all-no-logits-20260914/causal_test.npz",
+      "source_tensor_sha256": "5106599525a59a9077aadee7710b37a41706127507ecfaa3f7df78a5de23cf44",
+      "state_definition": "layer_23_normalized_dense_measured_J",
+      "step_metadata": "results/v4/raw/traces-v4-20260914T093302Z-15fc5d67-s20260828-teacher-correct-all-no-logits-20260914/causal_test_steps.parquet",
+      "step_metadata_sha256": "b6a6cf959a6454030330a4625e0394c840d9149e81bd428e502e23e9c280417c",
+      "steps": 3075,
+      "teacher_correct_trajectories": 191,
+      "tensor_path": "artifacts/traces/v5/peripheral-v5-20260914T144316Z-e0c2b9b8-s20260828-layer23-derived/causal_test.npz",
+      "tensor_sha256": "75b9b760d9f684dacfc68ca9196b18474aab268885d2bd4bfc6ea10906e45682",
+      "trajectories": "results/v4/raw/traces-v4-20260914T093302Z-15fc5d67-s20260828-teacher-correct-all-no-logits-20260914/causal_test_trajectories.parquet",
+      "trajectories_sha256": "a5768b5448d1beec1e8a061d2eaa2fffd4d32e78fbc25d6b9e5ac634c80d7ab2"
+    },
+    {
+      "domain": "rollout_test",
+      "source_tensor_path": "artifacts/traces/v4/traces-v4-20260914T093302Z-15fc5d67-s20260828-teacher-correct-all-no-logits-20260914/rollout_test.npz",
+      "source_tensor_sha256": "927a5a060b59d696683121471d9e05aeedd64395d92d33363443d384d5b8c7b9",
+      "state_definition": "layer_23_normalized_dense_measured_J",
+      "step_metadata": "results/v4/raw/traces-v4-20260914T093302Z-15fc5d67-s20260828-teacher-correct-all-no-logits-20260914/rollout_test_steps.parquet",
+      "step_metadata_sha256": "89fd81f5174a076d2b4b414e96ac493ac325f61d79dde4c48aa1a5be5078cde8",
+      "steps": 3073,
+      "teacher_correct_trajectories": 193,
+      "tensor_path": "artifacts/traces/v5/peripheral-v5-20260914T144316Z-e0c2b9b8-s20260828-layer23-derived/rollout_test.npz",
+      "tensor_sha256": "72c5dc013a447490392afab4b94be29ac5a1bfc32f5abe1bf50e6176dbd9e174",
+      "trajectories": "results/v4/raw/traces-v4-20260914T093302Z-15fc5d67-s20260828-teacher-correct-all-no-logits-20260914/rollout_test_trajectories.parquet",
+      "trajectories_sha256": "4786964f882f7b95af769a1e68a1671f8a03276b4ba91f2cb055fd688668effd"
+    },
+    {
+      "domain": "train",
+      "source_tensor_path": "artifacts/traces/v4/traces-v4-20260914T093302Z-15fc5d67-s20260828-teacher-correct-all-no-logits-20260914/train.npz",
+      "source_tensor_sha256": "300c27161c205514ba2871c5748bde19c8e29c03bc66cc3d1d9c9dfb834c0bc8",
+      "state_definition": "layer_23_normalized_dense_measured_J",
+      "step_metadata": "results/v4/raw/traces-v4-20260914T093302Z-15fc5d67-s20260828-teacher-correct-all-no-logits-20260914/train_steps.parquet",
+      "step_metadata_sha256": "7545c0ea55768872bcc8ddfa08b00cea6573528615f686e0a8175653bdf17d91",
+      "steps": 4908,
+      "teacher_correct_trajectories": 308,
+      "tensor_path": "artifacts/traces/v5/peripheral-v5-20260914T144316Z-e0c2b9b8-s20260828-layer23-derived/train.npz",
+      "tensor_sha256": "3e51571ec7497a8f3715f7e9f3e703739ab54640580d87657dfef8de811bfd09",
+      "trajectories": "results/v4/raw/traces-v4-20260914T093302Z-15fc5d67-s20260828-teacher-correct-all-no-logits-20260914/train_trajectories.parquet",
+      "trajectories_sha256": "0ece64b068bc556c88afd5455946ff4ecff7b654d7e50983f715d2d892953359"
+    },
+    {
+      "domain": "validation",
+      "source_tensor_path": "artifacts/traces/v4/traces-v4-20260914T093302Z-15fc5d67-s20260828-teacher-correct-all-no-logits-20260914/validation.npz",
+      "source_tensor_sha256": "21596fe82374757116beda07ff9ba70387a6df4c7e9fe238c6ad3bb9a6f5fb24",
+      "state_definition": "layer_23_normalized_dense_measured_J",
+      "step_metadata": "results/v4/raw/traces-v4-20260914T093302Z-15fc5d67-s20260828-teacher-correct-all-no-logits-20260914/validation_steps.parquet",
+      "step_metadata_sha256": "d9edb3f8eca4978f8e22659fdc89d963ffc8f755151d2fc216f34ed67091e49d",
+      "steps": 1216,
+      "teacher_correct_trajectories": 76,
+      "tensor_path": "artifacts/traces/v5/peripheral-v5-20260914T144316Z-e0c2b9b8-s20260828-layer23-derived/validation.npz",
+      "tensor_sha256": "3f6eba30e42220195decb738f27f52875400a977c7be293c1f6cd5bf6125c055",
+      "trajectories": "results/v4/raw/traces-v4-20260914T093302Z-15fc5d67-s20260828-teacher-correct-all-no-logits-20260914/validation_trajectories.parquet",
+      "trajectories_sha256": "431f66c11d7ca69dbc45d81ade20473335986eb01f45c22ade2df49e6b724e27"
+    }
+  ],
+  "layer": 23,
+  "protocol_version": "jstate_peripheral_protocol_v5",
+  "run_id": "peripheral-v5-20260914T144316Z-e0c2b9b8-s20260828-layer23-derived",
+  "schema_version": 7,
+  "source_program_freeze_digest": "97c62bacb6059aabd62598f63c760fbff5e9556249de830c528fc613eb316eb5",
+  "source_trace_summary": "results/v4/processed/teacher_traces_v4.json",
+  "source_trace_summary_sha256": "a691cd31f436e114b89d0220a12c47dbdce4813596a59d4b6786a247d5e00420",
+  "state_definition": "layer_23_normalized_dense_measured_J"
+}

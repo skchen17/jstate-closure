@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skchen17/jstate-closure/schemas/protocol-v5-record.schema.json",
+  "title": "J-state peripheral protocol v5 record",
+  "type": "object",
+  "required": ["schema_version", "protocol_version"],
+  "properties": {
+    "schema_version": {"const": 7},
+    "protocol_version": {
+      "enum": ["jstate_peripheral_protocol_v5", "h2_family_replication_v5"]
+    },
+    "run_id": {"type": "string"},
+    "family": {"type": "string"},
+    "state_dimension": {"type": "integer", "minimum": 1},
+    "valid": {"type": "boolean"},
+    "exclusion_reason": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

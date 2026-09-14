@@ -358,3 +358,34 @@ regresses the compact state out of the layer-23 hidden vector, fits train-only
 PCA remainder summaries, and compares linear and nonlinear teacher-current
 one-step predictors. Its autonomous GRU reads compact/remainder state only at
 time zero and thereafter feeds back both predictions.
+
+## Peripheral foundations protocol v6
+
+The v6 causal-fidelity state transition is explicitly `(layer 23, final
+position) -> (layer 24, same position, same forward)`. Scientific tensors are
+saved as float32; projection is repeated in float64 from the same float32
+activation to isolate arithmetic sensitivity. The previous next-token/layer-23
+transition is a forensic sensitivity, not the v6 causal target.
+
+For each frozen v5 anchor/donor pair, v6 runs clean, identity, matched random,
+J-positive, full difference, J-preserving single, persistent-final,
+persistent-all, and scope-matched persistent-null arms. `E_restore_artifact`
+is clean-relative persistent-null JS. Corrected persistent effect is the paired
+`E_persistent - E_restore_artifact`; mediation ratios are interpreted only when
+the single effect clears the existing numerical floor.
+
+The peripheral ceiling uses ordinary train/validation/rollout-test transitions
+and disjoint causal-fit/causal-test intervention pairs. Causal directions are
+fit on causal-fit only. Model selection uses ordinary validation next-J,
+semantic accuracy, and causal-direction projection error; causal-test metrics
+are excluded. A ceiling is authorized by the frozen global, causal-direction,
+causal-projection, or semantic rule, with every rule reported separately.
+
+After authorization, compact dimensions 16 through 512 and PCA, predictive
+linear, and nonlinear encoders are tested with the selected full-reference
+predictor architecture. Joint screening requires at least 80% of both
+predictive and causal ceiling gaps plus no more than two points semantic loss.
+The smallest screen-pass is tested against `residual(R|C)` on predictive,
+causal, and semantic endpoints. This screen is exploratory; a candidate is not
+called sufficient without conditional validation. Protocol v6 trains no
+recurrent model.

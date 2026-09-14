@@ -44,8 +44,27 @@ python -m mypy --ignore-missing-imports \
   src/jclosure/reporting_v5.py \
   src/jclosure/reporting_postrun_v5.py \
   tests/test_v5.py
+python -m mypy --ignore-missing-imports \
+  src/jclosure/protocol_v6.py \
+  src/jclosure/records_v6.py \
+  src/jclosure/peripheral_v6.py \
+  src/jclosure/experiments/causal_endpoint_v6.py \
+  src/jclosure/experiments/peripheral_ceiling_v6.py \
+  src/jclosure/reporting_v6.py \
+  tests/test_v6.py
 PYTHONPATH=src python scripts/check_v2_hashes.py
 PYTHONPATH=src python scripts/check_v3_immutable.py
 PYTHONPATH=src python scripts/check_v4_immutable.py
+PYTHONPATH=src python - <<'PY'
+from pathlib import Path
+
+from jclosure.config import load_config
+from jclosure.protocol_v6 import verify_freeze, verify_v5_guard
+
+root = Path(".").resolve()
+verify_v5_guard(root)
+verify_freeze(root, load_config(root / "configs/peripheral_v6.yaml"))
+print("v5/v6 immutable guards passed")
+PY
 python scripts/check_repository_artifacts.py
 git diff --check

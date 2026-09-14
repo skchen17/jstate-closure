@@ -1,0 +1,66 @@
+extends: peripheral_v5.yaml
+
+run:
+  stage: peripheral_v6
+  protocol_version: peripheral_foundations_protocol_v6
+  timeout_hours: 24
+
+peripheral_v6:
+  source_h2_summary: results/v5/processed/h2_replication_v5.json
+  source_h2_records: results/v5/processed/h2_replication_v5.parquet
+  source_mediation_summary: results/v5/processed/h2_mediation_v5.json
+  source_reference_summary: results/v5/processed/full_remainder_reference_v5.json
+  source_trace_summary: results/v5/processed/peripheral_traces_v5.json
+  layer: 23
+  future_workspace_layers: [24, 25, 26, 27, 28, 29]
+  dictionary_size: 4096
+  initial_strength: 0.25
+  causal_split_seed: 20261001
+  causal_fit_fraction: 0.50
+  precision_dtype: float32
+  f64_projection_sensitivity: true
+  bootstrap_resamples: 10000
+  confidence: 0.95
+  null_js_floor: 0.0001
+  causal_direction_count: 16
+  top_causal_dimension_count: 64
+  reference_width: 512
+  reference_epochs: 40
+  reference_patience: 6
+  reference_batch_size: 128
+  reference_learning_rate: 0.0003
+  reference_weight_decay: 0.0001
+  reference_screen_seed: 20260828
+  reference_confirmation_seeds: [20260828, 20260829, 20260830]
+  reference_architectures:
+    - j_only_residual
+    - j_history_attention
+    - full_remainder_linear
+    - full_remainder_gated
+    - full_remainder_residual
+    - full_remainder_attention
+  objective_weights:
+    full_profile: 1.0
+    action: 1.0
+    causal_projection: 2.0
+    top_causal_dimensions: 2.0
+    causal_counterfactual: 2.0
+  ceiling_rules:
+    global_cosine_minimum_gain: 0.005
+    maximum_action_accuracy_loss: 0.02
+    causal_direction_minimum_gain: 0.05
+    causal_direction_minimum_absolute: 0.20
+    causal_projection_minimum_relative_rmse_reduction: 0.10
+    semantic_accuracy_minimum_gain: 0.02
+  compact_dimensions: [16, 32, 64, 128, 256, 512]
+  compact_families: [pca, predictive_bottleneck, nonlinear_bottleneck]
+  compact_gap_closed: 0.80
+  compact_maximum_conditional_gain: 0.002
+
+outputs:
+  root: results/v6
+  raw: raw
+  processed: processed
+  figures: figures
+  reports: ../../reports
+  artifacts: ../../artifacts

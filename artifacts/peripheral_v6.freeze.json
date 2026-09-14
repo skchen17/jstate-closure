@@ -1,0 +1,38 @@
+{
+  "config_digest": "a20b5a8c4d48a46217c62a7f3193eb7cc2597cb548ee3b9219c4bf09d819f024",
+  "dictionary_size": 4096,
+  "freeze_digest": "160d746a5b9b14e226acf876989e3196f971f321dbb9d2fb3720f7da68319840",
+  "hashes": {
+    "configs/peripheral_v6.yaml": "a0002c6f03500dce4079ed8a2f8fca81c14af6665d85418f4a1f1efe43ed228b",
+    "data/v6/causal_pair_split.json": "cf0f094e946e21d3afa733c7d8e1e5ea398f04bb0de773b287e53663c25d6999",
+    "results/v5/processed/full_remainder_reference_v5.json": "4300e1fcbc9385ca710eddffb8facad1ddfb6c638d4a99e27431d761c0a75b19",
+    "results/v5/processed/h2_mediation_v5.json": "98dab57b4d82a5b2fe7f2ee5650a65bf8323c34fad63e80cc73fa1d242c1f6aa",
+    "results/v5/processed/h2_replication_v5.json": "afb5c47b72fb68797d4b8f3d8bea8d224171f043c5995b28d2985f813cbe8a1b",
+    "results/v5/processed/h2_replication_v5.parquet": "53116baf47f67bbbc08932fc15916eecd9acd20e5d4810142e63788ab12547bc",
+    "results/v5/processed/peripheral_traces_v5.json": "f9b2cfbfc666acd15ca85b1a1e0fb278777b4a50c80bca551b24016af286d07b",
+    "schemas/protocol-v6-record.schema.json": "19d160db5dcc17fbe1d6995387c6bd0b202cd3963a16f95614f8542abeee5633",
+    "scripts/build_report_v6.sh": "09c550d294233de506c3e54a2b4c9f393c57d10ec05e6b164e0cbfec5f93cca9",
+    "scripts/run_peripheral_v6.sh": "d8f114ee99a1194bec000bf1adb96b2f555b668c4bad8e46eca8b68f714f65d7",
+    "src/jclosure/experiments/causal_endpoint_v6.py": "99d01b10f72e76a1b4c0b1a51f7347de72930128c4d6741d843ae4f59adceca5",
+    "src/jclosure/experiments/peripheral_ceiling_v6.py": "27e25690ff686e07b0c8370120d7019ff17cf2a2d674f6a4a3c5dcae6fa4d28a",
+    "src/jclosure/peripheral_v6.py": "51765ee5c9eda2b68f058054124b8b4c8fd34a467f0ef1a1a43351b54717ac13",
+    "src/jclosure/protocol_v6.py": "dc73f8da3f6b8de7e725b3df325675f1f9ba224e5b96c2f3fcec29c86848ea75",
+    "src/jclosure/records_v6.py": "e06e9c0a7556973068d7bc96b954e2aaefe9aa2f5a674d51b079755fd92886b8",
+    "src/jclosure/reporting_v6.py": "b9920ea6aee2770e93e2fd174786defc96a04e9fdc79765c1b67a83c02249bf7"
+  },
+  "lens_revision": "16a01f309fcec900fdcec3f4cd5b64f3d00e4d5a",
+  "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "pair_manifest": "data/v6/causal_pair_split.json",
+  "pair_manifest_digest": "11728e38f32d1a31bf9eb55602f1557c54723772368e015e5ce42a2d71bf089d",
+  "protocol_version": "peripheral_foundations_protocol_v6",
+  "schema_version": 8,
+  "thresholds": {
+    "causal_direction_minimum_absolute": 0.2,
+    "causal_direction_minimum_gain": 0.05,
+    "causal_projection_minimum_relative_rmse_reduction": 0.1,
+    "global_cosine_minimum_gain": 0.005,
+    "maximum_action_accuracy_loss": 0.02,
+    "semantic_accuracy_minimum_gain": 0.02
+  },
+  "v5_guard_digest": "1a0a3a9c1b0202dcc5022d97cb8b0478bc73d631d0cf1253f8f3094866ffa2db"
+}

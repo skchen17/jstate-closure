@@ -88,6 +88,38 @@ scripts/run_distillation.sh
 scripts/build_report.sh
 ```
 
+## Peripheral foundations protocol v6
+
+Protocol v6 is additive and leaves Phase 0 and v1--v5 files byte-guarded. It
+repairs the teacher intervention endpoint by storing float32 residuals,
+measured-J profiles, deltas, operational remainders, and logits. The causal
+endpoint is the immediate same-forward layer-24 write after a layer-23
+final-token intervention; the older next-token/layer-23 endpoint is retained
+only as a forensic sensitivity because causal masking makes it structurally
+insensitive unless the emitted token changes.
+
+Persistent-null arms execute the same later layers, position scopes, projector,
+and hook schedule as persistent restoration but start from the clean layer-23
+state. Reports subtract this clean-state artifact before computing descriptive
+mediation. The null does not measure state-dependent projector distortion.
+
+The strong ceiling compares J-only, J-history, and full operational remainder
+linear/gated/residual/attention predictors under a multitask next-J, causal
+direction, top-coordinate, semantic-action, and output-sign objective.
+Architecture selection uses ordinary validation only; causal-test never enters
+selection. A gated compact sweep over 16/32/64/128/256/512D PCA, predictive,
+and nonlinear bottlenecks runs only after a ceiling endpoint passes. No
+recurrent controller is trained in v6.
+
+```bash
+scripts/run_peripheral_v6.sh freeze --run-suffix protocol-freeze-r3
+CUDA_VISIBLE_DEVICES=0 scripts/run_peripheral_v6.sh causal --run-suffix full-66
+scripts/run_peripheral_v6.sh merge --run-suffix merge-full66
+CUDA_VISIBLE_DEVICES=1 scripts/run_peripheral_v6.sh ceiling --run-suffix leakfree-strong
+CUDA_VISIBLE_DEVICES=1 scripts/run_peripheral_v6.sh compact --run-suffix compact-sweep-matched
+scripts/build_report_v6.sh
+```
+
 ## Peripheral computation protocol v5
 
 Protocol v5 keeps every v1–v4 result immutable and holds the measured-J state

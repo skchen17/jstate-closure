@@ -121,6 +121,7 @@ scripts/run_peripheral_v5.sh --stage conditional --run-suffix conditional
 scripts/run_peripheral_v5.sh --stage fidelity --run-suffix fidelity
 scripts/run_peripheral_v5.sh --stage recurrent --run-suffix recurrent
 scripts/build_report_v5.sh
+scripts/build_postrun_report_v5.sh
 ```
 
 All commands accept `CONFIG=...` and additional arguments through `ARGS`. Raw

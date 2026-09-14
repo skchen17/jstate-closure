@@ -1,0 +1,33 @@
+{
+  "figures": [
+    "results/v5/figures/full_remainder_reference_v5.png",
+    "results/v5/figures/peripheral_gap_closed_v5.png",
+    "results/v5/figures/peripheral_sufficiency_fidelity_v5.png",
+    "results/v5/figures/h2_family_replication_v5.png"
+  ],
+  "final_report_sha256": "2c22cef5c29dce0909340f72763c92a490fbc85ba57d44a733b29f204e27d16d",
+  "freeze_digest": "de3e902d1382d475bbd26092a2f52b39587defafb7e8face0144bbbfcd521130",
+  "protocol_version": "jstate_peripheral_protocol_v5",
+  "report": "reports/PERIPHERAL_STATE_V5.md",
+  "report_sha256": "33a556624d22bdf798a5696564578cc66de1c51ab0adb99a2f0d7fc19d630ba3",
+  "schema_version": 7,
+  "sources": [
+    {
+      "path": "results/v5/processed/full_remainder_reference_v5.json",
+      "sha256": "4300e1fcbc9385ca710eddffb8facad1ddfb6c638d4a99e27431d761c0a75b19"
+    },
+    {
+      "path": "results/v5/processed/peripheral_dimension_sweep_v5.json",
+      "sha256": "0c72d80577dd8d6bd398d6d300333180f2ef17993f65230a696638bcd338243f"
+    },
+    {
+      "path": "results/v5/processed/h2_replication_v5.json",
+      "sha256": "afb5c47b72fb68797d4b8f3d8bea8d224171f043c5995b28d2985f813cbe8a1b"
+    },
+    {
+      "path": "results/v5/processed/peripheral_recurrent_v5.json",
+      "sha256": "e54619208977edeec90e1a988acf79d980f3f98bdd781225f55da0abfa54ee89"
+    }
+  ],
+  "strongest_warranted_conclusion": "H2 remains the strongest operational interpretation: independent families show same-J/changed-hidden effects, but no complete compact recurrent system is established."
+}

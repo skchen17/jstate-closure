@@ -42,6 +42,7 @@ python -m mypy --ignore-missing-imports \
   src/jclosure/experiments/peripheral_v5.py \
   src/jclosure/experiments/h2_replication_v5.py \
   src/jclosure/reporting_v5.py \
+  src/jclosure/reporting_postrun_v5.py \
   tests/test_v5.py
 PYTHONPATH=src python scripts/check_v2_hashes.py
 PYTHONPATH=src python scripts/check_v3_immutable.py

@@ -386,3 +386,13 @@ scripts/build_report.sh
 
 
 <!-- V4 PREDICTIVE STATUS END -->
+
+<!-- PERIPHERAL_V5_START -->
+
+## Protocol v5 peripheral-state update
+
+H2 remains the strongest operational interpretation: independent families show same-J/changed-hidden effects, but no complete compact recurrent system is established.
+
+Full-remainder gain: 0.003688 [0.002816, 0.004546]. Compact candidate authorized: `False`. Independent H2 families above the frozen noise rule: `boolean_logic`. Recurrent status: `GATED_NOT_AUTHORIZED`. The v5 post-run audit found 64/66 saved teacher next-J deltas exactly zero at float16 resolution, so directional intervention fidelity was not evaluable. Persistent restoration did not remove the replicated Boolean-family effect. Full details: [PERIPHERAL_STATE_V5.md](PERIPHERAL_STATE_V5.md).
+
+<!-- PERIPHERAL_V5_END -->

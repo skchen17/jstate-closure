@@ -1,0 +1,74 @@
+{
+  "causal_fidelity_resolution": {
+    "artifact": "artifacts/causal/v5/h2-replication-v5-20260914T144943Z-e0c2b9b8-s20260828-family-replication/causal_state_pairs.npz",
+    "artifact_sha256": "9aeb22a1d1a0f575dfebf29f4efac432dab09fc13a8b8937cc54425535919f27",
+    "delta_norm_maximum": 0.48388296365737915,
+    "delta_norm_median": 0.0,
+    "delta_norm_minimum": 0.0,
+    "exact_zero_delta_count": 64,
+    "n_interventions": 66,
+    "nonzero_delta_count": 2,
+    "nonzero_delta_fraction": 0.030303030303030304,
+    "status": "NUMERICALLY_DEGENERATE_FLOAT16_TEACHER_DELTA",
+    "storage_dtype": "float16"
+  },
+  "compact_peripheral_state_authorized": false,
+  "formal_protocol_freeze_digest": "de3e902d1382d475bbd26092a2f52b39587defafb7e8face0144bbbfcd521130",
+  "full_remainder_ceiling_authorized": false,
+  "h2_families_above_frozen_noise": [
+    "boolean_logic"
+  ],
+  "h2_j_preserving_quality": {
+    "dense_cosine": {
+      "maximum": 1.000000238418579,
+      "median": 1.0,
+      "minimum": 0.9999998807907104
+    },
+    "displacement_fraction": {
+      "maximum": 0.2500002676336369,
+      "median": 0.25000023591991016,
+      "minimum": 0.2500001913809668
+    },
+    "rms_drift": {
+      "maximum": 2.0339246426852036e-07,
+      "median": 0.0,
+      "minimum": 0.0
+    },
+    "top10_overlap": {
+      "maximum": 1.0,
+      "median": 1.0,
+      "minimum": 1.0
+    }
+  },
+  "interpretation": "Causal-direction fidelity is not numerically evaluable because the saved float16 teacher next-J delta is exactly zero for most trials. Persistent restoration did not remove the v5 single-arm effect.",
+  "mediation_fraction_point_estimates": {
+    "boolean_logic": {
+      "persistent_all": -1.6918712495856458,
+      "persistent_final": -1.6918712495856458
+    },
+    "modular_arithmetic": {
+      "persistent_all": 0.9531520352867955,
+      "persistent_final": 0.9531520352867955
+    },
+    "pooled": {
+      "persistent_all": -2.238962433748192,
+      "persistent_final": -2.238962433748192
+    },
+    "short_graph_traversal": {
+      "persistent_all": 0.9002553921528493,
+      "persistent_final": 0.9002553921528493
+    },
+    "simple_state_transition": {
+      "persistent_all": -52.3926986202161,
+      "persistent_final": -52.3926986202161
+    },
+    "variable_binding": {
+      "persistent_all": 0.8437849015926943,
+      "persistent_final": 0.8437849015926943
+    }
+  },
+  "mediation_valid_records": 132,
+  "protocol_version": "jstate_peripheral_protocol_v5_postrun_audit",
+  "recurrent_status": "GATED_NOT_AUTHORIZED",
+  "schema_version": 7
+}

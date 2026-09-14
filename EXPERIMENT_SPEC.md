@@ -278,3 +278,47 @@ teacher states. `teacher_action_fidelity` and
 small teacher-correct subset is retained as an explicitly underpowered
 sensitivity analysis rather than silently replacing the all-parseable teacher
 dynamics dataset.
+
+## Predictive-state protocol v4
+
+Protocol v4 addresses teacher-error and weak-reference confounds without
+changing any historical protocol. Difficulty is selected on a dedicated
+calibration seed. Formal train, validation, causal-test, and rollout-test
+program hashes are pairwise disjoint and frozen before their single formal
+adjudication. Required competence statistics are parseability, complete
+trajectory accuracy, and final-answer accuracy by family and horizon.
+
+The primary causal state is the 4,096-concept normalized dense measured-J
+profile at layer 23. The intervention is applied once to the clean prompt's
+final residual vector; later activations and generated tokens are not teacher
+forced. Formal candidate validity requires dense cosine at least 0.995,
+top-10 overlap at least 0.8, activation RMS drift at most 2%, and displacement
+of at least 0.20 natural donor-difference units. A J-positive direction may be
+drawn from the full lens vocabulary when a newly introduced task symbol is not
+among the fixed 4,096 measured concepts; the provenance is stored per trial.
+This does not alter the 4,096D equality definition.
+
+The single-arm JS gate precedes persistent restoration. Persistent-final and
+persistent-all are not used as prerequisites for estimating the single-arm
+effect. If the J-preserving output-JS lower confidence bound does not exceed
+the maximum of the clean/identity 99th-percentile null and 1e-4, mediation is
+not executed.
+
+Compact states are screened at 64, 128, 256, and 512 dimensions. The four
+declared representation families are PCA, predictive linear bottleneck,
+sparse-J selection, and nonlinear learned predictive encoding. All learned
+objectives contain current-J reconstruction, next-state prediction, semantic
+classification, and causal-delta direction/magnitude terms. The complete gate
+requires at least 80% semantic, causal-direction, and causal-magnitude
+retention. A deterministic exploratory fallback maximizes the minimum of these
+three retentions, then future-state cosine, without being relabeled as a valid
+compact state.
+
+Markov, history-1/2/4/8/16, and GRU-memory-16/32/64/128/256 controllers target
+five million learned parameters within 5%, use three frozen seeds, and are
+early-stopped on held-out autonomous horizon-8 cosine. Rollout starts from true
+`Z0`; every later state is model-predicted. The full-state reference first
+regresses the compact state out of the layer-23 hidden vector, fits train-only
+PCA remainder summaries, and compares linear and nonlinear teacher-current
+one-step predictors. Its autonomous GRU reads compact/remainder state only at
+time zero and thereafter feeds back both predictions.

@@ -1,0 +1,143 @@
+{
+  "figure": "results/v4/figures/autonomous_memory_v4.png",
+  "figure_sha256": "02b8a72924610dccec1a910599b66af2dfc8fe8176e66327ada8731684644575",
+  "manual_series": false,
+  "sources": [
+    {
+      "path": "results/v4/processed/compact_memory_v4.json",
+      "sha256": "8d15ee786b7e2c56d9bfc79bb1e72165fdd1c297c435bb2f6f4ef67948f35ed0"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T094748Z-15fc5d67-s20260828-smoke-markov-s20260828-20260914/test_rollout.parquet",
+      "sha256": "58eff2df94471337d8f2a3e8897824ccbdf359046dc46c3eb26e3538554f955c"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T094841Z-15fc5d67-s20260828-grid-history-h1-m0-s20260828-20260914/test_rollout.parquet",
+      "sha256": "35a51064bad4d215e40ae6a2045de4a06269ec5ebf52ee36fbbacf22ca56b04c"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T094902Z-15fc5d67-s20260828-grid-history-h2-m0-s20260828-20260914/test_rollout.parquet",
+      "sha256": "4219344884d66973a986217e00716c1d3f341d486fd157b2a7c914990c43801b"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T094933Z-15fc5d67-s20260828-grid-history-h4-m0-s20260828-20260914/test_rollout.parquet",
+      "sha256": "111cb47b8f4f72736f4aa1dc1364dfbd04318a3d10cbfc0de19a1837b0b4be94"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095003Z-15fc5d67-s20260828-grid-history-h8-m0-s20260828-20260914/test_rollout.parquet",
+      "sha256": "6f033fe25eabc4e7b7b3b26fdca047f861fb2590937229ccb466725eb673dacd"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095033Z-15fc5d67-s20260828-grid-history-h16-m0-s20260828-20260914/test_rollout.parquet",
+      "sha256": "a07c73eaacbd9a3d5c584db64515713d9e6e0408dcf6a76c795ba381eb5f403f"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095106Z-15fc5d67-s20260828-grid-gru-h1-m16-s20260828-20260914/test_rollout.parquet",
+      "sha256": "eb26d72ed81f21816ff24a6c6a0fddc08ab714c2909f4b41c9babfdf3cf474be"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095141Z-15fc5d67-s20260828-grid-gru-h1-m32-s20260828-20260914/test_rollout.parquet",
+      "sha256": "51f56c831315a2525c16eb24162ec1f814869b3552a04843734cfd9f07c2b620"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095212Z-15fc5d67-s20260828-grid-gru-h1-m64-s20260828-20260914/test_rollout.parquet",
+      "sha256": "5798e4863d1bd4b5bfd53133c863cbd96c75bba4114a0dc883b223891f71a438"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095233Z-15fc5d67-s20260828-grid-gru-h1-m128-s20260828-20260914/test_rollout.parquet",
+      "sha256": "0d292096b452bb50a886eb00704edaed48f94df085f481f193c6e79896169d65"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095301Z-15fc5d67-s20260828-grid-gru-h1-m256-s20260828-20260914/test_rollout.parquet",
+      "sha256": "2a8cf8a6d99579cbafb0814f445e3eb7003280ebb28e357e49628f77cfc86760"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095322Z-15fc5d67-s20260828-grid-markov-h1-m0-s20260830-20260914/test_rollout.parquet",
+      "sha256": "5083816e5a849bbb59606218e081244a7fb6162935b88f2a6b33ed2c0d3668f3"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095345Z-15fc5d67-s20260828-grid-history-h1-m0-s20260830-20260914/test_rollout.parquet",
+      "sha256": "6f1fe8f145df09a12b400dd94446915effb1393f047d47f6fb3032a1880baa26"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095413Z-15fc5d67-s20260828-grid-history-h2-m0-s20260830-20260914/test_rollout.parquet",
+      "sha256": "419183fc5d4871fc8a98df947acaea5b3acf360cf280e676b4b941041a063d38"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095443Z-15fc5d67-s20260828-grid-history-h4-m0-s20260830-20260914/test_rollout.parquet",
+      "sha256": "415bf36bf959b7a81983fedd5743bce589f9200be3c9fc1baf55b3717d2d141f"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095517Z-15fc5d67-s20260828-grid-history-h8-m0-s20260830-20260914/test_rollout.parquet",
+      "sha256": "39683f1803a6c470794243761bd794330d88fd3c895e8db9c5c49b75c0572f01"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095549Z-15fc5d67-s20260828-grid-history-h16-m0-s20260830-20260914/test_rollout.parquet",
+      "sha256": "638dad0073b21fb5ad685dd1deab16e4b392fb699ddf75d52d828ee41e902f6c"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095800Z-15fc5d67-s20260828-grid-markov-h1-m0-s20260829-20260914/test_rollout.parquet",
+      "sha256": "127ce0580f7ed68e12595db7f34c03e9accbf8ff9f527a88bc6a5628a6db56a2"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095823Z-15fc5d67-s20260828-grid-history-h1-m0-s20260829-20260914/test_rollout.parquet",
+      "sha256": "e66e08eb4eb1ece5a3290a7f5e31fd4cbe6a9c10b8839d57d1b8cb04482ed552"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095854Z-15fc5d67-s20260828-grid-history-h2-m0-s20260829-20260914/test_rollout.parquet",
+      "sha256": "ddb69d437b028aa1470c2f9a15b6e335326a84637660a02ecb6d1202eedb648e"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095922Z-15fc5d67-s20260828-grid-history-h4-m0-s20260829-20260914/test_rollout.parquet",
+      "sha256": "aa02ab03eb913aaadeaf82f1fb3dc63cb52d5c9f6bc7e0010aaab410e9ee0803"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T095951Z-15fc5d67-s20260828-grid-history-h8-m0-s20260829-20260914/test_rollout.parquet",
+      "sha256": "c3decbcb024d21be68df951f20fd8befcc44f367acca6cc8c971fb9607942908"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T100020Z-15fc5d67-s20260828-grid-history-h16-m0-s20260829-20260914/test_rollout.parquet",
+      "sha256": "132b4ca80c3fa8e10c24570372d5b0d9f2da72269d1666bf59f54fdd11704cbb"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T100048Z-15fc5d67-s20260828-grid-gru-h1-m16-s20260829-20260914/test_rollout.parquet",
+      "sha256": "a1d5ba4ee865c64f856d0180c775e52654bfbbfc314703423e6b771f01b1a631"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T100118Z-15fc5d67-s20260828-grid-gru-h1-m32-s20260829-20260914/test_rollout.parquet",
+      "sha256": "4cfe9257eb55038e7df0526e0b931bbd17d0db2e9d11c9ac6e158512f1800f7d"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T100150Z-15fc5d67-s20260828-grid-gru-h1-m64-s20260829-20260914/test_rollout.parquet",
+      "sha256": "36d2181afae8225de45949c95c2b2c78b60702c937eca07a03c55ae72576c0a7"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T100223Z-15fc5d67-s20260828-grid-gru-h1-m128-s20260829-20260914/test_rollout.parquet",
+      "sha256": "26e6655f987188e7a0fe7d5e6933b6ed77f9d41d1ba53f67c109e7464debc5df"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T100253Z-15fc5d67-s20260828-grid-gru-h1-m256-s20260829-20260914/test_rollout.parquet",
+      "sha256": "cb28cf4f62a42be1383304cfa4e8c2044deab88b89232778929a3deaaa707751"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T100314Z-15fc5d67-s20260828-grid-gru-h1-m16-s20260830-20260914/test_rollout.parquet",
+      "sha256": "a8e8f1747a64c9c2c3aef670687c27c500a8e8e5eb63ea5feacb1efab8bc92ed"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T100344Z-15fc5d67-s20260828-grid-gru-h1-m32-s20260830-20260914/test_rollout.parquet",
+      "sha256": "756d080fe0054c02ad8d487c2e9b7c3423932d40682aba7aa49c7f95e106b5cc"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T100412Z-15fc5d67-s20260828-grid-gru-h1-m64-s20260830-20260914/test_rollout.parquet",
+      "sha256": "b7df462507799217ae029c42584d2e43ea667436c956eaaf669369cab9428ef5"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T100441Z-15fc5d67-s20260828-grid-gru-h1-m128-s20260830-20260914/test_rollout.parquet",
+      "sha256": "9f9a74b642de9197c749a68d8588e6b03f49e8fb4421d09fa582ceaed70fbd46"
+    },
+    {
+      "path": "results/v4/raw/controllers-v4-20260914T100509Z-15fc5d67-s20260828-grid-gru-h1-m256-s20260830-20260914/test_rollout.parquet",
+      "sha256": "c80bb31f256260b6465fcf218c7951687f631c63bb1010a8402503f833e72f98"
+    }
+  ]
+}

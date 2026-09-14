@@ -1,0 +1,55 @@
+{
+  "compact_state": {
+    "authorized": false,
+    "tested_candidates": 16
+  },
+  "controllers": {
+    "completed": 33,
+    "expected": 33,
+    "memory_utility_supported": false
+  },
+  "full_state_reference": "COMPLETED",
+  "persistent_mediation": {
+    "status": "COMPLETED"
+  },
+  "protocol_version": "jstate_predictive_protocol_v4",
+  "schema_version": 6,
+  "single_arm": {
+    "effect_above_noise": true,
+    "paired": 92,
+    "status": "COMPLETED"
+  },
+  "sources": [
+    {
+      "path": "results/v4/processed/teacher_formal_v4.json",
+      "sha256": "010ebeabe2789e0bcb772d4c0b01f82c993504a7787ebc9b829d029bb7201d84"
+    },
+    {
+      "path": "results/v4/processed/single_arm_v4.json",
+      "sha256": "414aae51d9c83a6a7986b2ebf1b8a26fa427e0703deb1e30469f63af4366be17"
+    },
+    {
+      "path": "results/v4/processed/persistent_mediation_v4.json",
+      "sha256": "cecad4afb57d5facd7e966f5dc71d292f915a6a9d5ce441bc0f4191d2882d2d2"
+    },
+    {
+      "path": "results/v4/processed/predictive_state_screen_v4.json",
+      "sha256": "93ff1c32efa1218c0f390a3b0567fc4ad67f65d99d85a2969d60a0117b206e53"
+    },
+    {
+      "path": "results/v4/processed/compact_memory_v4.json",
+      "sha256": "8d15ee786b7e2c56d9bfc79bb1e72165fdd1c297c435bb2f6f4ef67948f35ed0"
+    },
+    {
+      "path": "results/v4/processed/full_state_references_v4.json",
+      "sha256": "f76aec5c2781046b09d4db0a458070a8df8ecd78d67597564fede7f54d18561e"
+    }
+  ],
+  "strongest_warranted_classification": "H2_EXPLORATORY_LATER_J_MEDIATED",
+  "teacher": {
+    "attempted": 800,
+    "final_answer_accuracy": 0.98875,
+    "full_trajectory_accuracy": 0.96,
+    "parseable_rate": 1.0
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "calibration_summary": "results/v4/processed/teacher_calibration_stepwise_v4.json",
+  "config_digest": "15fc5d67795ea51a53b74bc69130f4e957730b658b7dd17e221736578b1d12a0",
+  "formal_data": {
+    "causal_test": "data/v4/causal_test.json",
+    "rollout_test": "data/v4/rollout_test.json",
+    "train": "data/v4/train.json",
+    "validation": "data/v4/validation.json"
+  },
+  "freeze_digest": "97c62bacb6059aabd62598f63c760fbff5e9556249de830c528fc613eb316eb5",
+  "hashes": {
+    "configs/predictive_v4.yaml": "51e0efdd27634eee9832c600ce256713e3bd2a8f8591479e475b8628baa37e42",
+    "data/v4/causal_test.json": "874175e8ed729c2c13ac3b62e6cbc364fe61451c7d4137c6f05fb1d085270037",
+    "data/v4/rollout_test.json": "e7db86a962f2196952c2d15aefc0679d5328a32267f6a88af16ba2b150e317cd",
+    "data/v4/train.json": "25a069f72996e752c6aac6ea8abbb6f7075772aada72a9aa898dc1e5cff43ab7",
+    "data/v4/validation.json": "dec771953cb3ebafbae8b668afccbd873cae3a70f1e22234fecdcc756eb9f8f0",
+    "results/v4/processed/teacher_calibration_stepwise_v4.json": "054a7be9500860de8d03d8625bc5b56296237deee57a5bacd5eee1a25fefb712",
+    "src/jclosure/datasets_v4.py": "49e5a156b3fbf444d2bbaa28b56f3cdf89e01a35bd081c032e1feec97be39ea2",
+    "src/jclosure/experiments/teacher_tasks_v4.py": "83764225a0ee8000b886c076ceb6e7030d8085f04a0989d8531e64fe4a516ec0"
+  },
+  "lens_revision": "16a01f309fcec900fdcec3f4cd5b64f3d00e4d5a",
+  "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "protocol_version": "jstate_predictive_protocol_v4",
+  "schema_version": 6,
+  "selection": {
+    "families": [
+      "boolean_logic",
+      "modular_arithmetic",
+      "short_graph_traversal",
+      "simple_state_transition",
+      "variable_binding"
+    ],
+    "formal_counts_per_family": {
+      "causal_test": 40,
+      "rollout_test": 40,
+      "train": 64,
+      "validation": 16
+    },
+    "variant_by_family_horizon": {
+      "boolean_logic": {
+        "16": "binary_xor_pairs",
+        "32": "binary_xor_pairs",
+        "4": "binary_xor_pairs",
+        "8": "binary_xor_pairs"
+      },
+      "modular_arithmetic": {
+        "16": "increment_1",
+        "32": "increment_1",
+        "4": "decrement_1",
+        "8": "increment_2"
+      },
+      "short_graph_traversal": {
+        "16": "directed_cycle",
+        "32": "directed_cycle",
+        "4": "directed_cycle",
+        "8": "directed_cycle"
+      },
+      "simple_state_transition": {
+        "16": "toggle_every_step",
+        "32": "toggle_every_step",
+        "4": "toggle_every_step",
+        "8": "toggle_every_step"
+      },
+      "variable_binding": {
+        "16": "four_way_lookup",
+        "32": "four_way_lookup",
+        "4": "four_way_lookup",
+        "8": "four_way_lookup"
+      }
+    }
+  }
+}

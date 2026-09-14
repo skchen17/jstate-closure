@@ -1,0 +1,90 @@
+extends: qwen3_5_4b.yaml
+
+run:
+  stage: predictive_v4
+  protocol_version: jstate_predictive_protocol_v4
+  timeout_hours: 72
+
+teacher_tasks_v4:
+  formal_evaluation_mode: environment_stepwise
+  calibration_seed: 20260914
+  calibration_per_cell: 16
+  horizons: [4, 8, 16, 32]
+  minimum_cell_full_trajectory_accuracy: 0.70
+  preferred_cell_full_trajectory_accuracy: 0.80
+  generation_batch_size: 8
+  maximum_extra_tokens: 8
+  variants:
+    modular_arithmetic: [increment_1, increment_2, decrement_1]
+    boolean_logic: [binary_xor_pairs, not_each, xor_one]
+    short_graph_traversal: [directed_cycle]
+    variable_binding: [four_way_lookup]
+    simple_state_transition: [toggle_every_step, toggle_or_keep]
+  formal_counts_per_family:
+    train: 64
+    validation: 16
+    causal_test: 40
+    rollout_test: 40
+  formal_seeds:
+    train: 20260915
+    validation: 20260916
+    causal_test: 20260917
+    rollout_test: 20260918
+
+single_arm_v4:
+  layer: 23
+  dictionary_size: 4096
+  state_definition: V3-Dense-operational-control
+  construction: dense_optimized
+  position_scope: final
+  initial_strength: 0.25
+  formal_displacement_fraction: 0.20
+  dense_cosine_threshold: 0.995
+  top10_overlap_threshold: 0.80
+  rms_drift_threshold: 0.02
+  controls: [clean, identity, matched_random, j_positive, full_perturbation, j_preserving]
+  pilot_valid_base_trials: 100
+  confirmation_valid_base_trials: 500
+  max_attempt_multiplier: 10
+  future_workspace_layers: [24, 25, 26, 27, 28, 29]
+  generation_horizons: [1, 2, 4, 8, 16, 32]
+  bootstrap_resamples: 10000
+  confidence: 0.95
+  null_quantile: 0.99
+  null_js_floor: 0.0001
+
+compact_state_v4:
+  dictionary_size: 4096
+  workspace_layers: [23, 24, 25, 26, 27, 28, 29]
+  dimensions: [64, 128, 256, 512]
+  families: [pca, predictive_bottleneck, sparse_j, learned_predictive_encoder]
+  objective_weights:
+    reconstruction: 1.0
+    future_prediction: 1.0
+    semantic_retention: 0.5
+    causal_retention: 0.5
+  screen_epochs: 40
+  screen_patience: 5
+  minimum_semantic_retention: 0.80
+  minimum_causal_direction_retention: 0.80
+  minimum_causal_magnitude_retention: 0.80
+  controller_parameter_target: 5000000
+  parameter_tolerance: 0.05
+  histories: [1, 2, 4, 8, 16]
+  memory_dimensions: [16, 32, 64, 128, 256]
+  controller_seeds: [20260828, 20260829, 20260830]
+  maximum_epochs: 50
+  early_stopping_patience: 5
+  teacher_forcing_fraction: 0.20
+  maximum_predicted_feedback: 0.80
+  rollout_horizons: [1, 2, 4, 8, 16, 32, 64]
+  divergence_cosine: 0.80
+  reference_remainder_dimensions: [128, 512, 2560]
+
+outputs:
+  root: results/v4
+  raw: raw
+  processed: processed
+  figures: figures
+  reports: ../../reports
+  artifacts: ../../artifacts

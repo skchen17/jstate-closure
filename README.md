@@ -235,3 +235,40 @@ STAGE=screen scripts/run_compact_memory_v3_2.sh
 STAGE=train scripts/run_compact_memory_v3_2.sh
 scripts/build_report_v3_2.sh
 ```
+
+## Teacher-competent predictive-state protocol v4
+
+Protocol v4 is additive and does not rerun or rewrite Phase 0, the geometry
+audit, or earlier closure records. It first calibrates five machine-scored
+program families at horizons 4/8/16/32, freezes disjoint train, validation,
+causal-test, and rollout-test domains, and extracts token-time traces only from
+teacher trajectories that are completely correct.
+
+The causal runner intervenes once at block-output layer 23 on the final prompt
+position and then permits ordinary KV-cached autoregressive continuation. Six
+conditions share each anchor/donor pair: clean, identity, norm-matched random,
+intended-answer J direction, full donor difference, and a dense measured-J
+preserving perturbation. Persistent restoration is deliberately downstream of
+the single-arm noise gate.
+
+The compact-state screen compares 64/128/256/512D PCA, linear predictive
+bottleneck, sparse-J coordinates, and nonlinear learned predictive encoders.
+Its loss combines current reconstruction, future prediction, semantic action,
+and validated intervention-delta retention. If no representation clears every
+retention gate, temporal training may still run as explicitly exploratory using
+a deterministic maximin-retention fallback; this never authorizes a compact
+state claim.
+
+```bash
+scripts/run_teacher_v4.sh --stage calibrate --run-suffix calibration
+scripts/run_teacher_v4.sh --stage freeze --run-suffix freeze
+scripts/run_teacher_v4.sh --stage formal --run-suffix formal
+scripts/run_predictive_state_v4.sh traces --domain all --run-suffix traces
+scripts/run_single_arm_v4.sh --stage bank --run-suffix bank
+scripts/run_single_arm_v4.sh --stage run --run-suffix pilot
+scripts/run_single_arm_v4.sh --stage merge --run-suffix merge
+scripts/run_predictive_state_v4.sh screen --run-suffix screen
+scripts/run_controllers_v4.sh
+scripts/run_predictive_state_v4.sh reference --run-suffix references
+scripts/build_report.sh
+```

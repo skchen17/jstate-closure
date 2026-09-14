@@ -1,0 +1,112 @@
+{
+  "completed_models": 33,
+  "expected_models": 33,
+  "memory_comparisons": [
+    {
+      "all_three_seed_directions_positive": false,
+      "cosine_gain": {
+        "confidence": 0.95,
+        "estimate": 0.01666020138280375,
+        "lower": 0.010995703272191517,
+        "n_clusters": 429,
+        "n_observations": 429,
+        "n_resamples": 10000,
+        "upper": 0.022428219277403013
+      },
+      "memory_dimension": 16,
+      "memory_utility_gate_passed": false,
+      "semantic_action_change": -0.05099067599067599,
+      "trajectory_distance_reduction": 0.11721087301424343
+    },
+    {
+      "all_three_seed_directions_positive": false,
+      "cosine_gain": {
+        "confidence": 0.95,
+        "estimate": 0.006731389146862608,
+        "lower": -0.0007034340973222721,
+        "n_clusters": 429,
+        "n_observations": 429,
+        "n_resamples": 10000,
+        "upper": 0.014514386938724195
+      },
+      "memory_dimension": 32,
+      "memory_utility_gate_passed": false,
+      "semantic_action_change": -0.055652680652680656,
+      "trajectory_distance_reduction": 0.11242939994729301
+    },
+    {
+      "all_three_seed_directions_positive": true,
+      "cosine_gain": {
+        "confidence": 0.95,
+        "estimate": 0.009243038984445425,
+        "lower": 0.002906281030400373,
+        "n_clusters": 429,
+        "n_observations": 429,
+        "n_resamples": 10000,
+        "upper": 0.01564898039702769
+      },
+      "memory_dimension": 64,
+      "memory_utility_gate_passed": false,
+      "semantic_action_change": -0.057692307692307696,
+      "trajectory_distance_reduction": -0.023157684244830595
+    },
+    {
+      "all_three_seed_directions_positive": false,
+      "cosine_gain": {
+        "confidence": 0.95,
+        "estimate": -0.003709471586978797,
+        "lower": -0.008573203625934663,
+        "n_clusters": 429,
+        "n_observations": 429,
+        "n_resamples": 10000,
+        "upper": 0.0012736404275560697
+      },
+      "memory_dimension": 128,
+      "memory_utility_gate_passed": false,
+      "semantic_action_change": -0.055944055944055944,
+      "trajectory_distance_reduction": -0.1034348964169853
+    },
+    {
+      "all_three_seed_directions_positive": false,
+      "cosine_gain": {
+        "confidence": 0.95,
+        "estimate": -0.03458674880730244,
+        "lower": -0.04358770714113206,
+        "n_clusters": 429,
+        "n_observations": 429,
+        "n_resamples": 10000,
+        "upper": -0.02576770582920188
+      },
+      "memory_dimension": 256,
+      "memory_utility_gate_passed": false,
+      "semantic_action_change": -0.06701631701631702,
+      "trajectory_distance_reduction": -0.33334167309811136
+    }
+  ],
+  "memory_utility_supported": false,
+  "minimum_beneficial_memory_dimension": null,
+  "missing_models": [],
+  "protocol_version": "compact_memory_v4",
+  "run_id": "controllers-v4-20260914T100609Z-15fc5d67-s20260828-aggregate-20260914",
+  "schema_version": 6,
+  "validation_selected_baselines": {
+    "20260828": [
+      "history",
+      8,
+      0,
+      20260828
+    ],
+    "20260829": [
+      "history",
+      8,
+      0,
+      20260829
+    ],
+    "20260830": [
+      "history",
+      8,
+      0,
+      20260830
+    ]
+  }
+}

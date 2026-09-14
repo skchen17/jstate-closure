@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skchen17/jstate-closure/schemas/protocol-v4-record.schema.json",
+  "title": "J-State predictive protocol v4 record",
+  "type": "object",
+  "required": ["schema_version", "protocol_version"],
+  "properties": {
+    "schema_version": {"const": 6},
+    "protocol_version": {"type": "string", "minLength": 1},
+    "run_id": {"type": "string"},
+    "record_type": {"type": "string"},
+    "example_id": {"type": "string"},
+    "prompt_id": {"type": "string"},
+    "family": {"type": "string"},
+    "horizon": {"type": "integer", "minimum": 1},
+    "valid": {"type": "boolean"},
+    "exclusion_reason": {"type": ["string", "null"]},
+    "metrics": {"type": "object"},
+    "quality": {"type": "object"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,85 @@
+{
+  "complete_paired_base_trials": 92,
+  "effects": {
+    "future_j_trajectory_divergence": {
+      "persistent_all": {
+        "confidence": 0.95,
+        "estimate": 4.057327042455259e-07,
+        "lower": 3.70888586115578e-07,
+        "n_clusters": 92,
+        "n_observations": 92,
+        "n_resamples": 10000,
+        "upper": 4.4197330008382385e-07
+      },
+      "persistent_final": {
+        "confidence": 0.95,
+        "estimate": 4.057327042455259e-07,
+        "lower": 3.70888586115578e-07,
+        "n_clusters": 92,
+        "n_observations": 92,
+        "n_resamples": 10000,
+        "upper": 4.4197330008382385e-07
+      },
+      "single": {
+        "confidence": 0.95,
+        "estimate": 0.00427375308683385,
+        "lower": 0.0002257266334946389,
+        "n_clusters": 92,
+        "n_observations": 92,
+        "n_resamples": 10000,
+        "upper": 0.009267793285518721
+      }
+    },
+    "output_js_divergence": {
+      "persistent_all": {
+        "confidence": 0.95,
+        "estimate": 2.0425953234657246e-05,
+        "lower": 1.4310419867211401e-05,
+        "n_clusters": 92,
+        "n_observations": 92,
+        "n_resamples": 10000,
+        "upper": 2.7548507748451805e-05
+      },
+      "persistent_final": {
+        "confidence": 0.95,
+        "estimate": 2.0425953234657246e-05,
+        "lower": 1.4310419867211401e-05,
+        "n_clusters": 92,
+        "n_observations": 92,
+        "n_resamples": 10000,
+        "upper": 2.7548507748451805e-05
+      },
+      "single": {
+        "confidence": 0.95,
+        "estimate": 0.008881895208139647,
+        "lower": 0.000261049162697946,
+        "n_clusters": 92,
+        "n_observations": 92,
+        "n_resamples": 10000,
+        "upper": 0.024013173278907448
+      }
+    }
+  },
+  "mediation_ratios": {
+    "M_all": {
+      "estimate": 0.9977002708593163,
+      "lower": 0.9185624705671833,
+      "n_clusters": 92,
+      "n_resamples": 10000,
+      "upper": 0.9992317843867715
+    },
+    "M_final": {
+      "estimate": 0.9977002708593163,
+      "lower": 0.9185703530720669,
+      "n_clusters": 92,
+      "n_resamples": 10000,
+      "upper": 0.9992189942171908
+    }
+  },
+  "protocol_version": "persistent_mediation_v4",
+  "records": "results/v4/processed/persistent_mediation_v4.parquet",
+  "run_id": "mediation-v4-20260914T102451Z-15fc5d67-s20260828-merge-full-92-20260914",
+  "schema_version": 6,
+  "source_run_id": "mediation-v4-20260914T101318Z-15fc5d67-s20260828-full-92-20260914",
+  "valid_records": 276
+}

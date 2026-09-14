@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
-if [[ -d results/v3/raw ]] && find results/v3/raw -path '*/map_spectra-*.parquet' -print -quit | grep -q .; then
+if [[ -f results/v4/processed/teacher_formal_v4.json ]]; then
+  python -m jclosure.reporting_v4
+elif [[ -d results/v3/raw ]] && find results/v3/raw -path '*/map_spectra-*.parquet' -print -quit | grep -q .; then
   python -m jclosure.reporting_v3 --config "${CONFIG:-configs/geometry_v3.yaml}" ${ARGS:-}
 elif [[ -f results/processed/phase0_v2_gate.json ]]; then
   CONFIG="${CONFIG:-configs/confirm_v2.yaml}"

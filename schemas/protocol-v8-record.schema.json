@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/jclosure/protocol-v8-record.schema.json",
+  "title": "J-State Closure structured persistent-state v8 record",
+  "type": "object",
+  "required": ["schema_version", "protocol_version", "record_type"],
+  "properties": {
+    "schema_version": {"const": 11},
+    "protocol_version": {"const": "structured_persistent_state_protocol_v8"},
+    "record_type": {"type": "string"},
+    "run_id": {"type": "string"},
+    "base_trial_id": {"type": "string"},
+    "prompt_id": {"type": "string"},
+    "family": {"type": "string"},
+    "split": {"enum": ["train", "validation", "final_test", "calibration"]},
+    "valid": {"type": "boolean"},
+    "exclusion_reason": {"type": ["string", "null"]},
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": true
+}

@@ -88,6 +88,48 @@ scripts/run_distillation.sh
 scripts/build_report.sh
 ```
 
+## Structured persistent-state protocol v8
+
+Protocol v8 is additive and byte-guards every tracked v1–v7 artifact at baseline
+`2326885c1a502e68f3f707ae1960d9c9d902ddf8` (the cumulative
+`FINAL_REPORT.md` is the sole declared exception). It builds a teacher-correct,
+five-family persistent-state bank with separate train, validation, and final-test
+domains. Difficulty calibration is immutable: failed r1–r5 attempts remain in
+`data/v8` and `results/v8`; only r6 met the unchanged 70% minimum/80% preferred
+full-trajectory criterion for every family.
+
+The causal screen stores exact BF16 clean and perturbed recurrent matrices,
+short-convolution states, and token-indexed attention K/V outside Git, together
+with committed hashes and per-trial records. It evaluates the declared R0–R7
+states and a complete four-atom factorial design, permitting standalone,
+added-component, leave-one-out, pairwise, and higher-order interaction analyses.
+
+Compression uses exact block-normalized dual PCA over the saved raw tensors;
+the layerwise branch first encodes recurrent, convolution, and KV blocks
+separately and then fuses them. It tests 16–512D PCA/SVD, predictive, causal,
+nonlinear, and layerwise encoders under universal, family-specific, and
+shared-plus-family-residual regimes. Predictive performance is only a screen. A compressed state is not
+authorized unless its held-out residual gain is practically null and decoded
+state interventions also pass direction, magnitude, semantic, and output-sign
+fidelity. No autonomous controller is trained before all three gates pass.
+
+```bash
+scripts/run_persistent_state_v8.sh generate --run-suffix calibration-r6-generate
+CUDA_VISIBLE_DEVICES=1 scripts/run_persistent_state_v8.sh calibrate --run-suffix full450-r6
+scripts/run_persistent_state_v8.sh formal --run-suffix formal-r6
+CUDA_VISIBLE_DEVICES=1 scripts/run_persistent_state_v8.sh teacher --run-suffix formal1700-r6
+scripts/run_persistent_state_v8.sh guard --run-suffix v8-baseline-guard
+scripts/run_persistent_state_v8.sh freeze --run-suffix protocol-freeze
+CUDA_VISIBLE_DEVICES=1 scripts/run_persistent_state_v8.sh bank --run-suffix bank
+CUDA_VISIBLE_DEVICES=1 scripts/run_persistent_state_v8.sh capture --split train --run-suffix train
+CUDA_VISIBLE_DEVICES=1 scripts/run_persistent_state_v8.sh capture --split validation --run-suffix validation
+CUDA_VISIBLE_DEVICES=1 scripts/run_persistent_state_v8.sh capture --split final_test --run-suffix final-test
+scripts/run_persistent_state_v8.sh analyze --run-suffix raw-screen
+scripts/run_persistent_state_v8.sh features --run-suffix structured-features
+scripts/run_persistent_state_v8.sh compress --run-suffix compression
+scripts/run_persistent_state_v8.sh report --run-suffix reports
+```
+
 ## Persistent-channel attribution protocol v7
 
 Protocol v7 keeps all v6 artifacts byte-guarded and decomposes Qwen3.5's hybrid

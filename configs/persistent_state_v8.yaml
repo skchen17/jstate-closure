@@ -1,0 +1,94 @@
+extends: persistent_channels_v7_corrective.yaml
+
+run:
+  stage: persistent_state_v8
+  protocol_version: structured_persistent_state_protocol_v8
+  timeout_hours: 24
+
+persistent_state_v8:
+  calibration:
+    version: r6
+    seed: 20261103
+    count_per_family_horizon: 30
+    horizons: [2, 3, 5]
+    preferred_accuracy: 0.80
+    minimum_accuracy: 0.70
+  formal:
+    version: competence_corrective_r3_parser
+    split_seeds:
+      train: 20261111
+      validation: 20261112
+      final_test: 20261113
+    horizon_overrides:
+      modular_arithmetic: 2
+    candidates_per_family:
+      train: 180
+      validation: 80
+      final_test: 80
+    target_valid_per_family:
+      train: 120
+      validation: 50
+      final_test: 50
+  intervention:
+    layer: 23
+    causal_write_layer: 24
+    measured_layers: [23, 24, 25, 26, 27, 28, 29, 30]
+    initial_strength: 0.25
+    dense_cosine_threshold: 0.995
+    top10_overlap_threshold: 0.80
+    rms_drift_threshold: 0.02
+    formal_displacement_fraction: 0.20
+    teacher_forced_tokens: 4
+  persistent_components:
+    recurrent_layers: [24, 25, 26, 28, 29, 30]
+    attention_layers: [27, 31]
+    top_recurrent_layer: [30]
+    top_recurrent_layers: [28, 29, 30]
+    kv_primary_layer: 27
+    kv_primary_head: 3
+    kv_positions: final
+  raw_sets:
+    R0: []
+    R1: [rec_matrix_l30]
+    R2: [rec_matrix_l28, rec_matrix_l29, rec_matrix_l30]
+    R3: [conv_all]
+    R4: [rec_matrix_all, conv_all]
+    R5: [kv_l27_h3]
+    R6: [rec_matrix_all, conv_all, kv_l27_h3]
+    R7: [rec_matrix_all, conv_all, kv_all]
+  component_atoms: [rec_matrix_all, conv_all, kv_l27_h3, kv_other]
+  bootstrap_resamples: 10000
+  kernel_ridge_alphas: [0.001, 0.01, 0.1, 1.0]
+  raw_screen:
+    minimum_full_gap_fraction: 0.90
+    minimum_causal_direction_cosine: 0.80
+    maximum_output_sign_loss: 0.02
+  compression:
+    dimensions: [16, 32, 64, 128, 256, 512]
+    methods:
+      - pca
+      - predictive_bottleneck
+      - causal_bottleneck
+      - nonlinear_encoder
+      - layerwise_fusion
+    predictive_gap_closed: 0.80
+    causal_gap_closed: 0.80
+    maximum_conditional_residual_gain: 0.02
+    causal_direction_minimum: 0.80
+    magnitude_ratio_minimum: 0.80
+    magnitude_ratio_maximum: 1.20
+    semantic_agreement_minimum: 0.80
+    output_sign_agreement_minimum: 0.80
+    confirmation_seeds: [20260828, 20260829, 20260830]
+    diagnostic_sketch_dimension: 8192
+    raw_dual_pca_tolerance: 1.0e-8
+    reconstruction_ridge_alpha: 0.01
+    causal_evaluation_requires_predictive_and_conditional_pass: true
+
+outputs:
+  root: results/v8
+  raw: raw
+  processed: processed
+  figures: figures
+  reports: ../../reports
+  artifacts: ../../artifacts

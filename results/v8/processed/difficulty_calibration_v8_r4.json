@@ -1,0 +1,184 @@
+{
+  "all_families_authorized": false,
+  "data": "data/v8/difficulty_calibration_r4.json",
+  "data_sha256": "1ee86b02cc5905dae02a87bc162ed309ea10695dddfb30f5b285446c5b64c42c",
+  "minimum_accuracy": 0.7,
+  "preferred_accuracy": 0.8,
+  "protocol_version": "structured_persistent_state_protocol_v8",
+  "records": "results/v8/raw/calibrate-v8-20260915T070740Z-e554ec26-s20260828-full450-r4/difficulty_calibration_v8.jsonl",
+  "rows": [
+    {
+      "attempted": 30,
+      "family": "boolean_logic",
+      "final_answer_accuracy": 0.9666666666666667,
+      "final_answer_correct": 29,
+      "full_trajectory_accuracy": 0.7666666666666667,
+      "full_trajectory_correct": 23,
+      "horizon": 2,
+      "parseable": 29,
+      "parseable_rate": 0.9666666666666667
+    },
+    {
+      "attempted": 30,
+      "family": "boolean_logic",
+      "final_answer_accuracy": 0.9333333333333333,
+      "final_answer_correct": 28,
+      "full_trajectory_accuracy": 0.8,
+      "full_trajectory_correct": 24,
+      "horizon": 3,
+      "parseable": 27,
+      "parseable_rate": 0.9
+    },
+    {
+      "attempted": 30,
+      "family": "boolean_logic",
+      "final_answer_accuracy": 0.8333333333333334,
+      "final_answer_correct": 25,
+      "full_trajectory_accuracy": 0.6,
+      "full_trajectory_correct": 18,
+      "horizon": 5,
+      "parseable": 30,
+      "parseable_rate": 1.0
+    },
+    {
+      "attempted": 30,
+      "family": "modular_arithmetic",
+      "final_answer_accuracy": 0.8333333333333334,
+      "final_answer_correct": 25,
+      "full_trajectory_accuracy": 0.8,
+      "full_trajectory_correct": 24,
+      "horizon": 2,
+      "parseable": 24,
+      "parseable_rate": 0.8
+    },
+    {
+      "attempted": 30,
+      "family": "modular_arithmetic",
+      "final_answer_accuracy": 0.7333333333333333,
+      "final_answer_correct": 22,
+      "full_trajectory_accuracy": 0.7333333333333333,
+      "full_trajectory_correct": 22,
+      "horizon": 3,
+      "parseable": 22,
+      "parseable_rate": 0.7333333333333333
+    },
+    {
+      "attempted": 30,
+      "family": "modular_arithmetic",
+      "final_answer_accuracy": 0.7,
+      "final_answer_correct": 21,
+      "full_trajectory_accuracy": 0.6666666666666666,
+      "full_trajectory_correct": 20,
+      "horizon": 5,
+      "parseable": 20,
+      "parseable_rate": 0.6666666666666666
+    },
+    {
+      "attempted": 30,
+      "family": "short_graph_traversal",
+      "final_answer_accuracy": 0.9,
+      "final_answer_correct": 27,
+      "full_trajectory_accuracy": 0.9,
+      "full_trajectory_correct": 27,
+      "horizon": 2,
+      "parseable": 29,
+      "parseable_rate": 0.9666666666666667
+    },
+    {
+      "attempted": 30,
+      "family": "short_graph_traversal",
+      "final_answer_accuracy": 1.0,
+      "final_answer_correct": 30,
+      "full_trajectory_accuracy": 0.9333333333333333,
+      "full_trajectory_correct": 28,
+      "horizon": 3,
+      "parseable": 29,
+      "parseable_rate": 0.9666666666666667
+    },
+    {
+      "attempted": 30,
+      "family": "short_graph_traversal",
+      "final_answer_accuracy": 1.0,
+      "final_answer_correct": 30,
+      "full_trajectory_accuracy": 1.0,
+      "full_trajectory_correct": 30,
+      "horizon": 5,
+      "parseable": 30,
+      "parseable_rate": 1.0
+    },
+    {
+      "attempted": 30,
+      "family": "simple_state_transition",
+      "final_answer_accuracy": 0.5333333333333333,
+      "final_answer_correct": 16,
+      "full_trajectory_accuracy": 0.5333333333333333,
+      "full_trajectory_correct": 16,
+      "horizon": 2,
+      "parseable": 30,
+      "parseable_rate": 1.0
+    },
+    {
+      "attempted": 30,
+      "family": "simple_state_transition",
+      "final_answer_accuracy": 0.6333333333333333,
+      "final_answer_correct": 19,
+      "full_trajectory_accuracy": 0.5333333333333333,
+      "full_trajectory_correct": 16,
+      "horizon": 3,
+      "parseable": 30,
+      "parseable_rate": 1.0
+    },
+    {
+      "attempted": 30,
+      "family": "simple_state_transition",
+      "final_answer_accuracy": 0.4666666666666667,
+      "final_answer_correct": 14,
+      "full_trajectory_accuracy": 0.2,
+      "full_trajectory_correct": 6,
+      "horizon": 5,
+      "parseable": 30,
+      "parseable_rate": 1.0
+    },
+    {
+      "attempted": 30,
+      "family": "variable_binding",
+      "final_answer_accuracy": 0.9333333333333333,
+      "final_answer_correct": 28,
+      "full_trajectory_accuracy": 0.7666666666666667,
+      "full_trajectory_correct": 23,
+      "horizon": 2,
+      "parseable": 23,
+      "parseable_rate": 0.7666666666666667
+    },
+    {
+      "attempted": 30,
+      "family": "variable_binding",
+      "final_answer_accuracy": 0.8666666666666667,
+      "final_answer_correct": 26,
+      "full_trajectory_accuracy": 0.7333333333333333,
+      "full_trajectory_correct": 22,
+      "horizon": 3,
+      "parseable": 24,
+      "parseable_rate": 0.8
+    },
+    {
+      "attempted": 30,
+      "family": "variable_binding",
+      "final_answer_accuracy": 0.9333333333333333,
+      "final_answer_correct": 28,
+      "full_trajectory_accuracy": 0.8,
+      "full_trajectory_correct": 24,
+      "horizon": 5,
+      "parseable": 27,
+      "parseable_rate": 0.9
+    }
+  ],
+  "run_id": "calibrate-v8-20260915T070740Z-e554ec26-s20260828-full450-r4",
+  "schema_version": 11,
+  "selected_horizons": {
+    "boolean_logic": 3,
+    "modular_arithmetic": 2,
+    "short_graph_traversal": 5,
+    "variable_binding": 5
+  }
+}

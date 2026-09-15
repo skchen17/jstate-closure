@@ -1,0 +1,184 @@
+{
+  "all_families_authorized": false,
+  "data": "data/v8/difficulty_calibration_r3.json",
+  "data_sha256": "6d7ede65708da6c39510f6ca7221ee4b628c8a210df47321c629b397e0611ea8",
+  "minimum_accuracy": 0.7,
+  "preferred_accuracy": 0.8,
+  "protocol_version": "structured_persistent_state_protocol_v8",
+  "records": "results/v8/raw/calibrate-v8-20260915T065946Z-631f3f98-s20260828-full450-r3/difficulty_calibration_v8.jsonl",
+  "rows": [
+    {
+      "attempted": 30,
+      "family": "boolean_logic",
+      "final_answer_accuracy": 0.9333333333333333,
+      "final_answer_correct": 28,
+      "full_trajectory_accuracy": 0.9,
+      "full_trajectory_correct": 27,
+      "horizon": 2,
+      "parseable": 29,
+      "parseable_rate": 0.9666666666666667
+    },
+    {
+      "attempted": 30,
+      "family": "boolean_logic",
+      "final_answer_accuracy": 1.0,
+      "final_answer_correct": 30,
+      "full_trajectory_accuracy": 0.7666666666666667,
+      "full_trajectory_correct": 23,
+      "horizon": 3,
+      "parseable": 29,
+      "parseable_rate": 0.9666666666666667
+    },
+    {
+      "attempted": 30,
+      "family": "boolean_logic",
+      "final_answer_accuracy": 0.9666666666666667,
+      "final_answer_correct": 29,
+      "full_trajectory_accuracy": 0.6666666666666666,
+      "full_trajectory_correct": 20,
+      "horizon": 5,
+      "parseable": 28,
+      "parseable_rate": 0.9333333333333333
+    },
+    {
+      "attempted": 30,
+      "family": "modular_arithmetic",
+      "final_answer_accuracy": 0.8666666666666667,
+      "final_answer_correct": 26,
+      "full_trajectory_accuracy": 0.8333333333333334,
+      "full_trajectory_correct": 25,
+      "horizon": 2,
+      "parseable": 26,
+      "parseable_rate": 0.8666666666666667
+    },
+    {
+      "attempted": 30,
+      "family": "modular_arithmetic",
+      "final_answer_accuracy": 0.7,
+      "final_answer_correct": 21,
+      "full_trajectory_accuracy": 0.7,
+      "full_trajectory_correct": 21,
+      "horizon": 3,
+      "parseable": 23,
+      "parseable_rate": 0.7666666666666667
+    },
+    {
+      "attempted": 30,
+      "family": "modular_arithmetic",
+      "final_answer_accuracy": 0.7666666666666667,
+      "final_answer_correct": 23,
+      "full_trajectory_accuracy": 0.7666666666666667,
+      "full_trajectory_correct": 23,
+      "horizon": 5,
+      "parseable": 24,
+      "parseable_rate": 0.8
+    },
+    {
+      "attempted": 30,
+      "family": "short_graph_traversal",
+      "final_answer_accuracy": 0.9,
+      "final_answer_correct": 27,
+      "full_trajectory_accuracy": 0.9,
+      "full_trajectory_correct": 27,
+      "horizon": 2,
+      "parseable": 28,
+      "parseable_rate": 0.9333333333333333
+    },
+    {
+      "attempted": 30,
+      "family": "short_graph_traversal",
+      "final_answer_accuracy": 0.9333333333333333,
+      "final_answer_correct": 28,
+      "full_trajectory_accuracy": 0.9,
+      "full_trajectory_correct": 27,
+      "horizon": 3,
+      "parseable": 28,
+      "parseable_rate": 0.9333333333333333
+    },
+    {
+      "attempted": 30,
+      "family": "short_graph_traversal",
+      "final_answer_accuracy": 0.9333333333333333,
+      "final_answer_correct": 28,
+      "full_trajectory_accuracy": 0.9,
+      "full_trajectory_correct": 27,
+      "horizon": 5,
+      "parseable": 29,
+      "parseable_rate": 0.9666666666666667
+    },
+    {
+      "attempted": 30,
+      "family": "simple_state_transition",
+      "final_answer_accuracy": 0.7,
+      "final_answer_correct": 21,
+      "full_trajectory_accuracy": 0.4666666666666667,
+      "full_trajectory_correct": 14,
+      "horizon": 2,
+      "parseable": 23,
+      "parseable_rate": 0.7666666666666667
+    },
+    {
+      "attempted": 30,
+      "family": "simple_state_transition",
+      "final_answer_accuracy": 0.4,
+      "final_answer_correct": 12,
+      "full_trajectory_accuracy": 0.26666666666666666,
+      "full_trajectory_correct": 8,
+      "horizon": 3,
+      "parseable": 26,
+      "parseable_rate": 0.8666666666666667
+    },
+    {
+      "attempted": 30,
+      "family": "simple_state_transition",
+      "final_answer_accuracy": 0.6,
+      "final_answer_correct": 18,
+      "full_trajectory_accuracy": 0.06666666666666667,
+      "full_trajectory_correct": 2,
+      "horizon": 5,
+      "parseable": 28,
+      "parseable_rate": 0.9333333333333333
+    },
+    {
+      "attempted": 30,
+      "family": "variable_binding",
+      "final_answer_accuracy": 0.9666666666666667,
+      "final_answer_correct": 29,
+      "full_trajectory_accuracy": 0.9,
+      "full_trajectory_correct": 27,
+      "horizon": 2,
+      "parseable": 27,
+      "parseable_rate": 0.9
+    },
+    {
+      "attempted": 30,
+      "family": "variable_binding",
+      "final_answer_accuracy": 0.9666666666666667,
+      "final_answer_correct": 29,
+      "full_trajectory_accuracy": 0.9,
+      "full_trajectory_correct": 27,
+      "horizon": 3,
+      "parseable": 28,
+      "parseable_rate": 0.9333333333333333
+    },
+    {
+      "attempted": 30,
+      "family": "variable_binding",
+      "final_answer_accuracy": 0.8333333333333334,
+      "final_answer_correct": 25,
+      "full_trajectory_accuracy": 0.6666666666666666,
+      "full_trajectory_correct": 20,
+      "horizon": 5,
+      "parseable": 28,
+      "parseable_rate": 0.9333333333333333
+    }
+  ],
+  "run_id": "calibrate-v8-20260915T065946Z-631f3f98-s20260828-full450-r3",
+  "schema_version": 11,
+  "selected_horizons": {
+    "boolean_logic": 2,
+    "modular_arithmetic": 2,
+    "short_graph_traversal": 5,
+    "variable_binding": 3
+  }
+}

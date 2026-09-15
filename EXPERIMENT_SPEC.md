@@ -422,3 +422,43 @@ intervened J; its augmented predictor adds dual-PCA scores of the mixed
 architecture-channel delta; both predict the validated next-J intervention
 delta from the frozen v6 endpoint artifact. Compression remains gated on a
 positive held-out conditional-gain confidence bound.
+
+## Protocol v8: structured persistent causal state
+
+The v8 operational state is the measured-J profile at layer 23 plus selected
+persistent tensors produced downstream by the same prefill. Five program
+families are independently generated for train, validation, and final test.
+Only complete teacher-correct trajectories are eligible. Target valid counts
+are 120/50/50 pairs per family for train/validation/final test, totaling 1,100;
+candidate reserves remain fixed before causal outcomes are observed.
+
+The exact raw atoms are all selected Gated-DeltaNet recurrent matrices, all
+selected short-convolution states, layer-27/head-3 final-token K/V, and all
+remaining selected K/V. R0–R7 are accompanied by all 16 atom subsets. Each arm
+feeds the identical clean token continuation, so differences are caused by the
+chimeric persistent state rather than token sampling. The final-test split is
+used for confidence intervals; train and validation are used for representation
+fitting and model selection only.
+
+Large clean/perturbed tensors are stored in ignored, hashed BF16 shards. The
+committed endpoint arrays and trial records retain split, family, prompt, donor,
+layer/head/token provenance, intervention-quality checks, condition, future-J,
+output JS, target log-odds, and flip metrics. Raw R7 is the full persistent
+ceiling rather than a claim that the captured state is minimal.
+
+The compression screen uses exact block-normalized dual PCA over raw recurrent,
+convolution, and padded token-indexed KV tensors without globally flattening
+mechanisms into one unstructured feature table. A separate layerwise branch fits
+each mechanism before fusion. The declared 16/32/64/128/256/512D encoders are evaluated on prediction of
+the clean-to-R7 next-J causal delta. Authorization is conjunctive:
+
+1. at least 80% of the J-only-to-full-state held-out prediction gap is closed;
+2. adding the uncompressed residual sketch has an upper 95% gain bound at most
+   0.02 overall and in every family;
+3. decoded cache interventions close at least 80% of the raw causal gap, have
+   direction cosine at least 0.8, magnitude ratio 0.8–1.2, and semantic/output
+   sign agreement at least 0.8.
+
+If stages 1–2 fail, stage 3 is not run and the candidate is explicitly marked
+gated, not causally faithful. If any stage fails, autonomous-controller
+authorization is false. Thresholds are not weakened after observing results.

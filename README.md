@@ -88,6 +88,23 @@ scripts/run_distillation.sh
 scripts/build_report.sh
 ```
 
+## Persistent-channel attribution protocol v7
+
+Protocol v7 keeps all v6 artifacts byte-guarded and decomposes Qwen3.5's hybrid
+cache into full-attention K/V tensors, Gated DeltaNet recurrent matrices, and
+short-convolution states. It first gates on exact save/restore one-token
+continuation, then runs paired clean/KV-only/REC-only/full cache chimeras with a
+shared teacher-forced continuation. Architecture-aligned compression is gated
+on stable persistent-channel attribution; no generic recurrent controller is
+trained in this protocol.
+
+```bash
+scripts/run_persistent_channels_v7.sh schema
+scripts/run_persistent_channels_v7.sh restore
+scripts/run_persistent_channels_v7.sh attribution
+scripts/run_persistent_channels_v7.sh analyze
+```
+
 ## Peripheral foundations protocol v6
 
 Protocol v6 is additive and leaves Phase 0 and v1--v5 files byte-guarded. It

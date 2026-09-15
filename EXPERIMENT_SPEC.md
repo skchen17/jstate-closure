@@ -389,3 +389,21 @@ The smallest screen-pass is tested against `residual(R|C)` on predictive,
 causal, and semantic endpoints. This screen is exploratory; a candidate is not
 called sufficient without conditional validation. Protocol v6 trains no
 recurrent model.
+
+## Persistent architecture state protocol v7
+
+The additive `persistent_channel_attribution_protocol_v7` treats Qwen3.5's
+cache as three explicit mechanisms: full-attention keys/values, Gated DeltaNet
+recurrent matrices, and linear-attention convolution states. The intervention
+is the frozen v6 final-token layer-23 measured-J-preserving state. Clean and
+perturbed prefills are converted into 2×2 `(KV, REC)` cache chimeras, and every
+arm consumes the same clean teacher-forced token sequence one token at a time.
+
+The hard prerequisite is numerical equivalence of an uninterrupted cache and a
+cloned/restored cache for logits, measured-J, hidden states, and all persistent
+cache tensors. Attribution uses the disjoint v7 `attribution_test` half;
+localization uses `localization_fit`. Raw-channel prediction and compression are
+authorized only for channels whose delta-to-full cosine and magnitude pass the
+frozen gate. Compression conclusions require predictive sufficiency,
+conditional sufficiency, and causal fidelity. Protocol v7 explicitly forbids a
+generic GRU or autonomous controller.

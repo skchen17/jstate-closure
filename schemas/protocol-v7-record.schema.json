@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Persistent-channel protocol v7 additive record",
+  "type": "object",
+  "required": ["schema_version", "protocol_version", "record_type", "run_id"],
+  "properties": {
+    "schema_version": {"const": 9},
+    "protocol_version": {"const": "persistent_channel_attribution_protocol_v7"},
+    "record_type": {"type": "string"},
+    "run_id": {"type": "string"},
+    "valid": {"type": "boolean"},
+    "exclusion_reason": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

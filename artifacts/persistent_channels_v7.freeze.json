@@ -1,0 +1,33 @@
+{
+  "config_digest": "18027d832e5e02d700728e9d0a78920114bdc8273fab5140ddaf71083206d5c4",
+  "freeze_digest": "d2bc61ef18093d50adc9c0c02578c853b9b01103aea9acd797fe7f6755b09cf8",
+  "hashes": {
+    "artifacts/causal/v6/causal-endpoint-v6-20260914T161620Z-a20b5a8c-s20260828-full-66/causal_endpoint_f32.npz": "af945e0432cd7b1f1f256f1f0c60c91ec7d9aca7956dae745387247732c0444e",
+    "configs/persistent_channels_v7.yaml": "d0e10f723b295863c22c07f3938b0f3145eab2731c315ada9a97cb7582672b81",
+    "data/v5/h2_replication.json": "11c928d03dbf92be32669923d3f4aa1f28dc7cf735d99a6c03e7136c43348596",
+    "data/v7/persistent_channel_split.json": "b6d365bdc34623d4146405661fb98cc1b510072271fde0d2e836caadb6262e62",
+    "results/v6/processed/causal_endpoint_precision_v6.parquet": "45a132ecac1085cb3a5471d692ec4fb4a0a416a1bce97e968ac86706b1d36c6d",
+    "results/v6/processed/causal_endpoint_v6.json": "5c8cd21da4de05ec00b33ea8dfad1879862f5cdb68c63ccc4c705cf3b5ec3b11",
+    "results/v6/processed/restoration_null_v6.parquet": "643824f7c3fa4265735eead9421f32b2cabd0e2f91ba414b2189bb39e936bed8",
+    "schemas/protocol-v7-record.schema.json": "b357dd097fba8a522743895c938a49416983b2d556a8a255c0766599930c439c",
+    "scripts/run_persistent_channels_v7.sh": "5c475371cd320bcd88800c6f5f87fad1c298f5d78cc27183510b5ed8b1a1f4a6",
+    "src/jclosure/cache_v7.py": "e494c3377cbd85f97cc210dd8abb32b5eadba8424fafca7243ec91f5a8c95369",
+    "src/jclosure/experiments/persistent_channels_v7.py": "ed0584b66e148532efe8f1daac9589b8144ea1f611d0fd069ceeeb8606f6d321",
+    "src/jclosure/protocol_v7.py": "e11860235b3af53492659a92ab30f9454787dc077148fca762eaf8bfdf60cadf",
+    "src/jclosure/records_v7.py": "dc65a0b4c07796dab2535b0267b8570dacf0fa7cd63ec729e6fb1abb35303473"
+  },
+  "lens_revision": "16a01f309fcec900fdcec3f4cd5b64f3d00e4d5a",
+  "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "protocol_version": "persistent_channel_attribution_protocol_v7",
+  "schema_version": 9,
+  "split_manifest": "data/v7/persistent_channel_split.json",
+  "split_manifest_digest": "58d049b7f16bb900661d634f7334b4d7cb32d9998044b8d8c31f429961b89b43",
+  "thresholds": {
+    "maximum_additive_interaction_ratio": 0.25,
+    "minimum_delta_cosine": 0.2,
+    "minimum_delta_cosine_ci_lower": 0.0,
+    "minimum_full_delta_l2": 1e-06,
+    "minimum_magnitude_ratio": 0.1
+  },
+  "v6_guard_digest": "7d654c0b51dd52e09e0758f102c517b431ac98784612f2c8b5e2765eb4a97c81"
+}

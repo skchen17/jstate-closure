@@ -1,0 +1,51 @@
+extends: peripheral_v6.yaml
+
+run:
+  stage: persistent_channels_v7
+  protocol_version: persistent_channel_attribution_protocol_v7
+  timeout_hours: 24
+
+persistent_channels_v7:
+  source_v6_summary: results/v6/processed/causal_endpoint_v6.json
+  source_v6_records: results/v6/processed/causal_endpoint_precision_v6.parquet
+  source_v6_trials: results/v6/processed/restoration_null_v6.parquet
+  source_v6_artifact: artifacts/causal/v6/causal-endpoint-v6-20260914T161620Z-a20b5a8c-s20260828-full-66/causal_endpoint_f32.npz
+  source_v6_artifact_sha256: af945e0432cd7b1f1f256f1f0c60c91ec7d9aca7956dae745387247732c0444e
+  source_tasks: data/v5/h2_replication.json
+  intervention_layer: 23
+  measured_layers: [23, 24, 25, 26, 27, 28, 29, 30]
+  downstream_attention_layers: [27, 31]
+  downstream_recurrent_layers: [24, 25, 26, 28, 29, 30]
+  restore_test_count: 8
+  teacher_forced_tokens: 4
+  bootstrap_resamples: 10000
+  attribution_split_seed: 20261011
+  cache_restore_tolerances:
+    logits_max_abs: 0.000001
+    hidden_max_abs: 0.000001
+    j_max_abs: 0.000001
+  channel_gate:
+    minimum_delta_cosine: 0.20
+    minimum_delta_cosine_ci_lower: 0.00
+    minimum_magnitude_ratio: 0.10
+    minimum_full_delta_l2: 0.000001
+    maximum_additive_interaction_ratio: 0.25
+  localization:
+    minimum_channel_fraction: 0.05
+    attention_token_windows: [1, 4, 16, 64]
+  compression:
+    dimensions: [16, 32, 64, 128, 256, 512]
+    methods: [pca, predictive_bottleneck, causal_bottleneck, nonlinear_encoder]
+    predictive_gap_closed: 0.80
+    causal_gap_closed: 0.80
+    maximum_conditional_gain: 0.02
+    causal_direction_minimum: 0.80
+
+outputs:
+  root: results/v7
+  raw: raw
+  processed: processed
+  figures: figures
+  reports: ../../reports
+  artifacts: ../../artifacts
+

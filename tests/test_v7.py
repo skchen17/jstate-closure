@@ -5,6 +5,14 @@ from types import SimpleNamespace
 
 import torch
 
+from jclosure.arch_compression_v7 import (
+    apply_delta_blocks,
+    fit_dual_pca,
+    flatten_blocks,
+    linear_reconstruction_alpha,
+    pca_scores,
+    reconstruct_blocks,
+)
 from jclosure.cache_v7 import (
     cache_component_differences,
     caches_exact,
@@ -106,3 +114,39 @@ def test_v7_record_round_trip_and_digest() -> None:
     assert digest({"a": 1}) != digest({"a": 2})
     assert freeze_path("localization").name == "channel_localization_v7.freeze.json"
     assert freeze_path("compression").name == "arch_compression_v7.freeze.json"
+
+
+def test_dual_pca_reconstructs_training_span_and_applies_channels() -> None:
+    generator = torch.Generator().manual_seed(7)
+    payload = {
+        "recurrent": torch.randn(5, 1, 32, 128, 128, generator=generator),
+        "conv": torch.randn(5, 1, 8192, 4, generator=generator),
+        "kv": torch.randn(5, 1, 2, 4, 256, generator=generator),
+    }
+    blocks = flatten_blocks(payload)
+    model = fit_dual_pca(blocks, [0, 1, 2, 3])
+    scores = pca_scores(model, blocks, [0, 1, 2, 3])
+    alpha = linear_reconstruction_alpha(model, scores, torch.arange(model.rank))
+    reconstructed = reconstruct_blocks(model, alpha, 0)
+    for observed, expected in zip(reconstructed, blocks, strict=True):
+        assert torch.allclose(observed, expected[0], atol=2e-4, rtol=2e-4)
+    clean = _cache()
+    expanded = SimpleNamespace(
+        layers=[
+            SimpleNamespace(
+                recurrent_states=torch.zeros(1, 32, 128, 128),
+                conv_states=torch.zeros(1, 8192, 4),
+                has_previous_state=True,
+            ),
+            SimpleNamespace(
+                keys=torch.zeros(1, 4, 2, 256),
+                values=torch.zeros(1, 4, 2, 256),
+            ),
+        ]
+    )
+    del clean
+    applied = apply_delta_blocks(
+        expanded, reconstructed, recurrent_layers=[0], attention_layers=[1]
+    )
+    assert torch.count_nonzero(applied.layers[0].recurrent_states)
+    assert torch.count_nonzero(applied.layers[1].keys[:, :, -1])

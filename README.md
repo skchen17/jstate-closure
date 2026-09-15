@@ -105,6 +105,21 @@ scripts/run_persistent_channels_v7.sh attribution
 scripts/run_persistent_channels_v7.sh analyze
 ```
 
+The architecture-channel tensor capture is followed by an additive corrective
+analysis because the immutable first v7 endpoint archive serialized the final
+`full` trajectory under every condition label. Attribution scalars and curves
+were computed before that serialization and are unaffected. The corrective
+protocol leaves the defective archive in place, uses the frozen v6 step-1
+clean/intervened J endpoints, and refuses to run compression unless the fixed
+raw-channel ceiling passes:
+
+```bash
+scripts/run_arch_compression_v7_corrective.sh freeze
+scripts/run_arch_compression_v7_corrective.sh ceiling
+scripts/run_arch_compression_v7_corrective.sh run
+scripts/run_arch_compression_v7_corrective.sh analyze
+```
+
 ## Peripheral foundations protocol v6
 
 Protocol v6 is additive and leaves Phase 0 and v1--v5 files byte-guarded. It

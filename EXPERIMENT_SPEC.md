@@ -407,3 +407,18 @@ authorized only for channels whose delta-to-full cosine and magnitude pass the
 frozen gate. Compression conclusions require predictive sufficiency,
 conditional sufficiency, and causal fidelity. Protocol v7 explicitly forbids a
 generic GRU or autonomous controller.
+
+### Frozen endpoint correction
+
+The first architecture-channel capture discovered that the auxiliary endpoint
+writer stored the final `full` trajectory in all four named endpoint arrays.
+This defect does not change the per-trial attribution records, which computed
+their effects before serialization. The additive
+`persistent_channel_compression_corrective_v7_1` protocol preserves every v7
+artifact, fixes only the target mapping, retains the original split, ridge
+regularization (`alpha=1`), thresholds, and bootstrap seed, and records the
+captured tensor hash in a new freeze. Its J-only predictor receives current
+intervened J; its augmented predictor adds dual-PCA scores of the mixed
+architecture-channel delta; both predict the validated next-J intervention
+delta from the frozen v6 endpoint artifact. Compression remains gated on a
+positive held-out conditional-gain confidence bound.

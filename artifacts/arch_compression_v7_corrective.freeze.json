@@ -1,0 +1,27 @@
+{
+  "config_digest": "ec7afcc7717920ab7ec8ee5c872e8cdb13c8f9a2d5548787a5199cac2280d4d2",
+  "correction": {
+    "correct_target": "v6 j_intervened[:,1] - v6 j_clean[:,1]",
+    "defect": "all serialized v7 channel endpoint arrays aliased the final full trajectory",
+    "ridge_alpha": 1.0,
+    "split": "unchanged 33 localization_fit / 33 attribution_test",
+    "unchanged_valid_results": "scalar and curve attribution records"
+  },
+  "freeze_digest": "a4c31a47f3e2ef3126f49f6988f38dd4a45882c0ff8c0b11328fa2bf5093de68",
+  "hashes": {
+    "artifacts/arch_compression_v7.freeze.json": "a5c7db7bcfa06da6c0d252015f39c5921c5a7bbe778955df8e6d3d4e65c38b03",
+    "artifacts/causal/v6/causal-endpoint-v6-20260914T161620Z-a20b5a8c-s20260828-full-66/causal_endpoint_f32.npz": "af945e0432cd7b1f1f256f1f0c60c91ec7d9aca7956dae745387247732c0444e",
+    "artifacts/persistent/v7/arch-compression-v7-20260915T025915Z-18027d83-s20260828-channel-capture-full66-r2/architecture_channel_delta_f32.pt": "30c8abc4f3dee43594e382c49e74ff43baaee909e76d6c45a62bcd7d2c48d88b",
+    "configs/persistent_channels_v7_corrective.yaml": "43988602cfe971e9f7c3ee7d32bdb525598e39b22c690174994d46052d325f3b",
+    "results/v7/processed/persistent_channel_attribution_v7.json": "ccd42b4655463dba531cb24ca35d7678c60d392a490c63919213ab60aa69082f",
+    "results/v7/processed/raw_arch_channel_ceiling_v7.json": "f2f0bebb7b8da66fe61e076eb6dee358dbb9ce1ea026bf3e3f8382076dae9d4a",
+    "scripts/run_arch_compression_v7_corrective.sh": "8f7761acf73c17343851d99c0214abad1e1cfa06325604599fe0518ca7e90cb6",
+    "src/jclosure/experiments/arch_compression_v7_corrective.py": "a82b0f6a5afe75e3d883d892f630f275a98caddf7a844743b86cbf8592ae787e",
+    "src/jclosure/protocol_v7_corrective.py": "9c8fdf91dad555d979380db5aee4fcb5e0f149c0df4b3e3625c5ab0fdee1f04b"
+  },
+  "parent_freeze_digest": "59078d551d390af1034aa0722c33cd326a7668ff4cabffee3e7c8c2c9c3489c1",
+  "protocol_version": "persistent_channel_compression_corrective_v7_1",
+  "schema_version": 10,
+  "source_capture_artifact_sha256": "30c8abc4f3dee43594e382c49e74ff43baaee909e76d6c45a62bcd7d2c48d88b",
+  "source_capture_run_id": "arch-compression-v7-20260915T025915Z-18027d83-s20260828-channel-capture-full66-r2"
+}

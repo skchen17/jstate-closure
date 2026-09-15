@@ -1,0 +1,26 @@
+extends: persistent_channels_v7.yaml
+
+run:
+  stage: persistent_channels_v7_corrective
+  protocol_version: persistent_channel_compression_corrective_v7_1
+
+persistent_channels_v7_corrective:
+  reason: endpoint_serialization_alias_bug
+  source_capture_summary: results/v7/processed/raw_arch_channel_ceiling_v7.json
+  source_v6_artifact: artifacts/causal/v6/causal-endpoint-v6-20260914T161620Z-a20b5a8c-s20260828-full-66/causal_endpoint_f32.npz
+  predictor:
+    alpha: 1.0
+    baseline_features: current_intervened_j
+    added_features: mixed_channel_delta_dual_pca_scores
+    target: next_j_intervention_delta
+  authorization:
+    require_channel_attribution: true
+    require_positive_cosine_or_rmse_gain_ci: true
+
+outputs:
+  root: results/v7
+  raw: raw
+  processed: processed
+  figures: figures
+  reports: ../../reports
+  artifacts: ../../artifacts

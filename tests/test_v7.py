@@ -13,6 +13,7 @@ from jclosure.cache_v7 import (
     make_chimeric_cache,
 )
 from jclosure.protocol_v7 import digest
+from jclosure.protocol_v7_stage2 import freeze_path
 from jclosure.records_v7 import CacheRestoreRecord
 
 
@@ -103,3 +104,5 @@ def test_v7_record_round_trip_and_digest() -> None:
     assert payload["schema_version"] == 9
     assert payload["protocol_version"] == "persistent_channel_attribution_protocol_v7"
     assert digest({"a": 1}) != digest({"a": 2})
+    assert freeze_path("localization").name == "channel_localization_v7.freeze.json"
+    assert freeze_path("compression").name == "arch_compression_v7.freeze.json"

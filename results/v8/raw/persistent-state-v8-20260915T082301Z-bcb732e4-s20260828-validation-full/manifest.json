@@ -1,0 +1,1450 @@
+{
+  "command": [
+    "/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/persistent_state_v8.py",
+    "--config",
+    "configs/persistent_state_v8.yaml",
+    "--stage",
+    "capture",
+    "--split",
+    "validation",
+    "--run-suffix",
+    "validation-full"
+  ],
+  "config": {
+    "closure": {
+      "clamp_conditions": [
+        "single",
+        "persistent"
+      ],
+      "conditions": [
+        "clean",
+        "j_positive",
+        "full_patch",
+        "random",
+        "non_j"
+      ],
+      "future_min_layers": 3,
+      "max_attempt_multiplier": 10,
+      "perturbation_sources": [
+        "activation_difference",
+        "natural_collision",
+        "targeted_probe"
+      ],
+      "strengths": [
+        0.25,
+        0.5,
+        1.0
+      ],
+      "targeted_probe_min_score": 0.75
+    },
+    "compact_state_v4": {
+      "controller_parameter_target": 5000000,
+      "controller_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "dictionary_size": 4096,
+      "dimensions": [
+        64,
+        128,
+        256,
+        512
+      ],
+      "divergence_cosine": 0.8,
+      "early_stopping_patience": 5,
+      "families": [
+        "pca",
+        "predictive_bottleneck",
+        "sparse_j",
+        "learned_predictive_encoder"
+      ],
+      "histories": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "maximum_epochs": 50,
+      "maximum_predicted_feedback": 0.8,
+      "memory_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "minimum_causal_direction_retention": 0.8,
+      "minimum_causal_magnitude_retention": 0.8,
+      "minimum_semantic_retention": 0.8,
+      "objective_weights": {
+        "causal_retention": 0.5,
+        "future_prediction": 1.0,
+        "reconstruction": 1.0,
+        "semantic_retention": 0.5
+      },
+      "parameter_tolerance": 0.05,
+      "reference_remainder_dimensions": [
+        128,
+        512,
+        2560
+      ],
+      "rollout_horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "screen_epochs": 40,
+      "screen_patience": 5,
+      "teacher_forcing_fraction": 0.2,
+      "workspace_layers": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ]
+    },
+    "controller": {
+      "budget_tolerance": 0.05,
+      "counterfactual_traces": 256,
+      "families": [
+        "mlp",
+        "gru",
+        "transformer"
+      ],
+      "histories": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "lambda_answer": 1.0,
+      "lambda_counterfactual": 0.25,
+      "lambda_j": 1.0,
+      "max_predicted_feedback": 0.8,
+      "parameter_budgets": [
+        1000000,
+        5000000,
+        20000000,
+        50000000,
+        100000000
+      ],
+      "remainder_pca_dims": [
+        32,
+        128,
+        512
+      ],
+      "stable_dense_cosine": 0.9,
+      "stable_intervention_agreement": 0.8,
+      "stable_sparse_f1": 0.7,
+      "stable_teacher_accuracy_fraction": 0.9,
+      "teacher_forcing_warmup_fraction": 0.2
+    },
+    "data": {
+      "upstream_root": "data/upstream/anthropic"
+    },
+    "h2_replication_v5": {
+      "bootstrap_resamples": 10000,
+      "controls": [
+        "clean",
+        "identity",
+        "matched_random",
+        "j_positive",
+        "full_perturbation",
+        "j_preserving"
+      ],
+      "counts_by_family": {
+        "boolean_logic": 80,
+        "modular_arithmetic": 32,
+        "short_graph_traversal": 32,
+        "simple_state_transition": 80,
+        "variable_binding": 32
+      },
+      "dense_cosine_threshold": 0.995,
+      "dictionary_size": 4096,
+      "formal_displacement_fraction": 0.2,
+      "future_workspace_layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "horizons": [
+        4,
+        8
+      ],
+      "initial_strength": 0.25,
+      "layer": 23,
+      "null_js_floor": 0.0001,
+      "position_scope": "final",
+      "protocol_version": "h2_family_replication_v5",
+      "rms_drift_threshold": 0.02,
+      "seeds": {
+        "evaluation": 20260925
+      },
+      "target_valid_by_family": {
+        "boolean_logic": 32,
+        "modular_arithmetic": 12,
+        "short_graph_traversal": 12,
+        "simple_state_transition": 32,
+        "variable_binding": 12
+      },
+      "top10_overlap_threshold": 0.8,
+      "variants": {
+        "boolean_logic": "binary_xor_pairs",
+        "modular_arithmetic": "increment_1",
+        "short_graph_traversal": "directed_cycle",
+        "simple_state_transition": "toggle_or_keep",
+        "variable_binding": "four_way_lookup"
+      }
+    },
+    "jstate": {
+      "concept_vocab_size": 4096,
+      "dense_cosine_threshold": 0.995,
+      "k": 25,
+      "min_remainder_fraction": 0.2,
+      "primary_position": -1,
+      "rms_drift_threshold": 0.02,
+      "top10_overlap_threshold": 0.8
+    },
+    "lens": {
+      "file": "qwen3.5-4b/jlens/Salesforce-wikitext/Qwen3.5-4B_jacobian_lens_n1000.pt",
+      "metadata_prompts_fitted": 417,
+      "repo": "neuronpedia/jacobian-lens",
+      "revision": "16a01f309fcec900fdcec3f4cd5b64f3d00e4d5a",
+      "sha256": "1f9a8f8fd593f0ffec1a9640993257ca4560f8ae3e5602315643d5cc6818534e",
+      "upstream_commit": "581d398613e5602a5af361e1c34d3a92ea82ba8e"
+    },
+    "model": {
+      "compile": false,
+      "device": 0,
+      "device_map": "cuda",
+      "dtype": "bfloat16",
+      "force_bos": true,
+      "id": "Qwen/Qwen3.5-4B",
+      "max_seq_len": 512,
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "trust_remote_code": false
+    },
+    "outputs": {
+      "artifacts": "../../artifacts",
+      "figures": "figures",
+      "processed": "processed",
+      "raw": "raw",
+      "reports": "../../reports",
+      "root": "results/v8"
+    },
+    "peripheral_v5": {
+      "batch_size": 128,
+      "bootstrap_resamples": 10000,
+      "compact_gap_closed": 0.8,
+      "compact_maximum_conditional_gain": 0.002,
+      "compact_minimum_causal_direction_cosine": 0.8,
+      "compact_minimum_output_sign_agreement": 0.8,
+      "confidence": 0.95,
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "derived_trace_summary": "results/v5/processed/peripheral_traces_v5.json",
+      "dictionary_size": 4096,
+      "dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "early_stopping_patience": 5,
+      "encoder_families": [
+        "pca_remainder",
+        "predictive_bottleneck",
+        "nonlinear_bottleneck"
+      ],
+      "full_remainder_minimum_cosine_gain": 0.005,
+      "hidden_width": 512,
+      "history_length": 4,
+      "learning_rate": 0.0003,
+      "maximum_action_accuracy_loss": 0.02,
+      "maximum_epochs": 30,
+      "recurrent_architectures": [
+        "gated_mlp",
+        "gru",
+        "residual_recurrent"
+      ],
+      "recurrent_horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "recurrent_maximum_state_dimension": 128,
+      "recurrent_parameter_target": 5000000,
+      "recurrent_parameter_tolerance": 0.05,
+      "reference_architectures": [
+        "mlp",
+        "gated_mlp",
+        "attention"
+      ],
+      "residual_conditioning_rank": 512,
+      "screen_seed": 20260828,
+      "source_teacher_summary": "results/v4/processed/teacher_formal_v4.json",
+      "source_trace_summary": "results/v4/processed/teacher_traces_v4.json",
+      "weight_decay": 0.0001,
+      "workspace_layer": 23
+    },
+    "peripheral_v6": {
+      "bootstrap_resamples": 10000,
+      "causal_direction_count": 16,
+      "causal_fit_fraction": 0.5,
+      "causal_split_seed": 20261001,
+      "ceiling_rules": {
+        "causal_direction_minimum_absolute": 0.2,
+        "causal_direction_minimum_gain": 0.05,
+        "causal_projection_minimum_relative_rmse_reduction": 0.1,
+        "global_cosine_minimum_gain": 0.005,
+        "maximum_action_accuracy_loss": 0.02,
+        "semantic_accuracy_minimum_gain": 0.02
+      },
+      "compact_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "compact_families": [
+        "pca",
+        "predictive_bottleneck",
+        "nonlinear_bottleneck"
+      ],
+      "compact_gap_closed": 0.8,
+      "compact_maximum_conditional_gain": 0.002,
+      "confidence": 0.95,
+      "dictionary_size": 4096,
+      "f64_projection_sensitivity": true,
+      "future_workspace_layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "initial_strength": 0.25,
+      "layer": 23,
+      "null_js_floor": 0.0001,
+      "objective_weights": {
+        "action": 1.0,
+        "causal_counterfactual": 2.0,
+        "causal_projection": 2.0,
+        "full_profile": 1.0,
+        "top_causal_dimensions": 2.0
+      },
+      "precision_dtype": "float32",
+      "reference_architectures": [
+        "j_only_residual",
+        "j_history_attention",
+        "full_remainder_linear",
+        "full_remainder_gated",
+        "full_remainder_residual",
+        "full_remainder_attention"
+      ],
+      "reference_batch_size": 128,
+      "reference_confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "reference_epochs": 40,
+      "reference_learning_rate": 0.0003,
+      "reference_patience": 6,
+      "reference_screen_seed": 20260828,
+      "reference_weight_decay": 0.0001,
+      "reference_width": 512,
+      "source_h2_records": "results/v5/processed/h2_replication_v5.parquet",
+      "source_h2_summary": "results/v5/processed/h2_replication_v5.json",
+      "source_mediation_summary": "results/v5/processed/h2_mediation_v5.json",
+      "source_reference_summary": "results/v5/processed/full_remainder_reference_v5.json",
+      "source_trace_summary": "results/v5/processed/peripheral_traces_v5.json",
+      "top_causal_dimension_count": 64
+    },
+    "persistent_channels_v7": {
+      "attribution_split_seed": 20261011,
+      "bootstrap_resamples": 10000,
+      "cache_restore_tolerances": {
+        "hidden_max_abs": 1e-06,
+        "j_max_abs": 1e-06,
+        "logits_max_abs": 1e-06
+      },
+      "channel_gate": {
+        "maximum_additive_interaction_ratio": 0.25,
+        "minimum_delta_cosine": 0.2,
+        "minimum_delta_cosine_ci_lower": 0.0,
+        "minimum_full_delta_l2": 1e-06,
+        "minimum_magnitude_ratio": 0.1
+      },
+      "compression": {
+        "causal_direction_minimum": 0.8,
+        "causal_gap_closed": 0.8,
+        "dimensions": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512
+        ],
+        "maximum_conditional_gain": 0.02,
+        "methods": [
+          "pca",
+          "predictive_bottleneck",
+          "causal_bottleneck",
+          "nonlinear_encoder"
+        ],
+        "predictive_gap_closed": 0.8
+      },
+      "downstream_attention_layers": [
+        27,
+        31
+      ],
+      "downstream_recurrent_layers": [
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      "intervention_layer": 23,
+      "localization": {
+        "attention_token_windows": [
+          1,
+          4,
+          16,
+          64
+        ],
+        "minimum_channel_fraction": 0.05
+      },
+      "measured_layers": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "restore_test_count": 8,
+      "source_tasks": "data/v5/h2_replication.json",
+      "source_v6_artifact": "artifacts/causal/v6/causal-endpoint-v6-20260914T161620Z-a20b5a8c-s20260828-full-66/causal_endpoint_f32.npz",
+      "source_v6_artifact_sha256": "af945e0432cd7b1f1f256f1f0c60c91ec7d9aca7956dae745387247732c0444e",
+      "source_v6_records": "results/v6/processed/causal_endpoint_precision_v6.parquet",
+      "source_v6_summary": "results/v6/processed/causal_endpoint_v6.json",
+      "source_v6_trials": "results/v6/processed/restoration_null_v6.parquet",
+      "teacher_forced_tokens": 4
+    },
+    "persistent_channels_v7_corrective": {
+      "authorization": {
+        "require_channel_attribution": true,
+        "require_positive_cosine_or_rmse_gain_ci": true
+      },
+      "predictor": {
+        "added_features": "mixed_channel_delta_dual_pca_scores",
+        "alpha": 1.0,
+        "baseline_features": "current_intervened_j",
+        "target": "next_j_intervention_delta"
+      },
+      "reason": "endpoint_serialization_alias_bug",
+      "source_capture_summary": "results/v7/processed/raw_arch_channel_ceiling_v7.json",
+      "source_v6_artifact": "artifacts/causal/v6/causal-endpoint-v6-20260914T161620Z-a20b5a8c-s20260828-full-66/causal_endpoint_f32.npz"
+    },
+    "persistent_state_v8": {
+      "bootstrap_resamples": 10000,
+      "calibration": {
+        "count_per_family_horizon": 30,
+        "horizons": [
+          2,
+          3,
+          5
+        ],
+        "minimum_accuracy": 0.7,
+        "preferred_accuracy": 0.8,
+        "seed": 20261103,
+        "version": "r6"
+      },
+      "component_atoms": [
+        "rec_matrix_all",
+        "conv_all",
+        "kv_l27_h3",
+        "kv_other"
+      ],
+      "compression": {
+        "causal_direction_minimum": 0.8,
+        "causal_evaluation_requires_predictive_and_conditional_pass": true,
+        "causal_gap_closed": 0.8,
+        "confirmation_seeds": [
+          20260828,
+          20260829,
+          20260830
+        ],
+        "diagnostic_sketch_dimension": 8192,
+        "dimensions": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512
+        ],
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "maximum_conditional_residual_gain": 0.02,
+        "methods": [
+          "pca",
+          "predictive_bottleneck",
+          "causal_bottleneck",
+          "nonlinear_encoder",
+          "layerwise_fusion"
+        ],
+        "output_sign_agreement_minimum": 0.8,
+        "predictive_gap_closed": 0.8,
+        "raw_dual_pca_tolerance": 1e-08,
+        "reconstruction_ridge_alpha": 0.01,
+        "semantic_agreement_minimum": 0.8
+      },
+      "formal": {
+        "candidates_per_family": {
+          "final_test": 80,
+          "train": 180,
+          "validation": 80
+        },
+        "horizon_overrides": {
+          "modular_arithmetic": 2
+        },
+        "split_seeds": {
+          "final_test": 20261113,
+          "train": 20261111,
+          "validation": 20261112
+        },
+        "target_valid_per_family": {
+          "final_test": 50,
+          "train": 120,
+          "validation": 50
+        },
+        "version": "competence_corrective_r3_parser"
+      },
+      "intervention": {
+        "causal_write_layer": 24,
+        "dense_cosine_threshold": 0.995,
+        "formal_displacement_fraction": 0.2,
+        "initial_strength": 0.25,
+        "layer": 23,
+        "measured_layers": [
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "rms_drift_threshold": 0.02,
+        "teacher_forced_tokens": 4,
+        "top10_overlap_threshold": 0.8
+      },
+      "kernel_ridge_alphas": [
+        0.001,
+        0.01,
+        0.1,
+        1.0
+      ],
+      "persistent_components": {
+        "attention_layers": [
+          27,
+          31
+        ],
+        "kv_positions": "final",
+        "kv_primary_head": 3,
+        "kv_primary_layer": 27,
+        "recurrent_layers": [
+          24,
+          25,
+          26,
+          28,
+          29,
+          30
+        ],
+        "top_recurrent_layer": [
+          30
+        ],
+        "top_recurrent_layers": [
+          28,
+          29,
+          30
+        ]
+      },
+      "raw_screen": {
+        "maximum_output_sign_loss": 0.02,
+        "minimum_causal_direction_cosine": 0.8,
+        "minimum_full_gap_fraction": 0.9
+      },
+      "raw_sets": {
+        "R0": [],
+        "R1": [
+          "rec_matrix_l30"
+        ],
+        "R2": [
+          "rec_matrix_l28",
+          "rec_matrix_l29",
+          "rec_matrix_l30"
+        ],
+        "R3": [
+          "conv_all"
+        ],
+        "R4": [
+          "rec_matrix_all",
+          "conv_all"
+        ],
+        "R5": [
+          "kv_l27_h3"
+        ],
+        "R6": [
+          "rec_matrix_all",
+          "conv_all",
+          "kv_l27_h3"
+        ],
+        "R7": [
+          "rec_matrix_all",
+          "conv_all",
+          "kv_all"
+        ]
+      }
+    },
+    "reproducibility": {
+      "bootstrap_seed": 20260901,
+      "controller_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "dataset_seed": 20260828,
+      "deterministic": true
+    },
+    "run": {
+      "protocol_version": "structured_persistent_state_protocol_v8",
+      "stage": "persistent_state_v8",
+      "timeout_hours": 24
+    },
+    "single_arm_v4": {
+      "bootstrap_resamples": 10000,
+      "confidence": 0.95,
+      "confirmation_valid_base_trials": 500,
+      "construction": "dense_optimized",
+      "controls": [
+        "clean",
+        "identity",
+        "matched_random",
+        "j_positive",
+        "full_perturbation",
+        "j_preserving"
+      ],
+      "dense_cosine_threshold": 0.995,
+      "dictionary_size": 4096,
+      "formal_displacement_fraction": 0.2,
+      "future_workspace_layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "generation_horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "initial_strength": 0.25,
+      "layer": 23,
+      "max_attempt_multiplier": 10,
+      "null_js_floor": 0.0001,
+      "null_quantile": 0.99,
+      "pilot_valid_base_trials": 100,
+      "position_scope": "final",
+      "rms_drift_threshold": 0.02,
+      "state_definition": "V3-Dense-operational-control",
+      "top10_overlap_threshold": 0.8
+    },
+    "statistics": {
+      "bootstrap_resamples": 10000,
+      "confidence": 0.95,
+      "eta_threshold": 0.2,
+      "null_js_floor": 0.0001,
+      "null_quantile": 0.99
+    },
+    "teacher_tasks_v4": {
+      "calibration_per_cell": 16,
+      "calibration_seed": 20260914,
+      "formal_counts_per_family": {
+        "causal_test": 40,
+        "rollout_test": 40,
+        "train": 64,
+        "validation": 16
+      },
+      "formal_evaluation_mode": "environment_stepwise",
+      "formal_seeds": {
+        "causal_test": 20260917,
+        "rollout_test": 20260918,
+        "train": 20260915,
+        "validation": 20260916
+      },
+      "generation_batch_size": 8,
+      "horizons": [
+        4,
+        8,
+        16,
+        32
+      ],
+      "maximum_extra_tokens": 8,
+      "minimum_cell_full_trajectory_accuracy": 0.7,
+      "preferred_cell_full_trajectory_accuracy": 0.8,
+      "variants": {
+        "boolean_logic": [
+          "binary_xor_pairs",
+          "not_each",
+          "xor_one"
+        ],
+        "modular_arithmetic": [
+          "increment_1",
+          "increment_2",
+          "decrement_1"
+        ],
+        "short_graph_traversal": [
+          "directed_cycle"
+        ],
+        "simple_state_transition": [
+          "toggle_every_step",
+          "toggle_or_keep"
+        ],
+        "variable_binding": [
+          "four_way_lookup"
+        ]
+      }
+    },
+    "validation": {
+      "band_min_layers": 3,
+      "band_peak_fraction": 0.5,
+      "bootstrap_resamples": 10000,
+      "discovery_fraction": 0.5,
+      "hit10_threshold": 0.2,
+      "min_primary_position": 16,
+      "positive_control_trials": 24,
+      "report_sensitivity_peak_fractions": [
+        0.25,
+        0.4,
+        0.6
+      ]
+    }
+  },
+  "config_digest": "bcb732e45d0d89b69d27694d84907e5aec917551d1d83d8d6150c56d53211134",
+  "created_at": "2026-09-15T08:23:01.135128+00:00",
+  "environment": {
+    "cuda_available": true,
+    "gpus": [
+      {
+        "compute_capability": [
+          8,
+          9
+        ],
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "total_memory_bytes": 25386352640
+      }
+    ],
+    "nvidia_smi": "NVIDIA GeForce RTX 4090 D, 550.144.03, 24564 MiB\nNVIDIA GeForce RTX 4090 D, 550.144.03, 24564 MiB",
+    "platform": "Linux-6.2.0-26-generic-x86_64-with-glibc2.35",
+    "python": "3.12.2",
+    "python_executable": "/home/user/anaconda3/bin/python",
+    "torch": "2.10.0+cu128",
+    "torch_cuda_runtime": "12.8"
+  },
+  "git_commit": "9c2bbd409350df2a053fc415e3b79d02a2e4d6a5",
+  "git_worktree": {
+    "capture": "process_init",
+    "dirty": true,
+    "entries": 9,
+    "status_sha256": "f6ab6200afe779fd011e4e8a2a7eefa8ed3b3148a54c4b0197a6a6d3786d4c3b"
+  },
+  "kind": "persistent-state-v8",
+  "run_id": "persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full",
+  "run_suffix": "validation-full",
+  "schema_version": 3,
+  "seed": 20260828,
+  "status": "COMPLETED_CAPTURE",
+  "summary": {
+    "architecture": {
+      "attention_layers": [
+        27,
+        31
+      ],
+      "kv_primary": {
+        "head": 3,
+        "layer": 27
+      },
+      "kv_token_scope": "all_prefill_positions",
+      "recurrent_layers": [
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      "state_dtype": "bfloat16"
+    },
+    "complete": true,
+    "effect_records": "results/v8/raw/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/raw_state_effects_validation_v8.jsonl",
+    "effect_records_sha256": "19618c610d148056611a3e671d73e76071e23f17fcfb5dbce397dce3c2395d44",
+    "endpoint_artifact": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/endpoints_validation_f16.npz",
+    "endpoint_artifact_sha256": "6be8487e7c7f2b04c69d1ec9d4d3af5df0536abcce41895bfb438a83b51428c6",
+    "pair_records": "results/v8/raw/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/persistent_pairs_validation_v8.jsonl",
+    "pair_records_sha256": "c44e8f4016a57e86b60b8352fdc37b3bebe3f0b510cc18ff412a542e51b83554",
+    "protocol_version": "structured_persistent_state_protocol_v8",
+    "run_id": "persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full",
+    "schema_version": 11,
+    "source_freeze_digest": "1cbb255ddfd42438a18fc374daceebdf0f7ec6fe6f56c94a3f914654c1ab61ad",
+    "split": "validation",
+    "state_shards": [
+      {
+        "base_trial_ids": [
+          "v8-validation-0057f982ac58b9002f8a",
+          "v8-validation-0219fb1673c128296c54",
+          "v8-validation-02cc96fdcfd38079f93b",
+          "v8-validation-032a9c132845a6e71e91",
+          "v8-validation-03b0468fb1e862187ec6"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0000.pt",
+        "sha256": "37890ce43d4aa18a590d63522cd9d96633cb797bfb1d887268f48c2190111bb0"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-03e7a8e820fcb442ffc4",
+          "v8-validation-04602061828472fe6fbd",
+          "v8-validation-05167d99b38fbbd47ee7",
+          "v8-validation-0537a98ebef19e788fbd",
+          "v8-validation-0540c39e2f558b647174"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0001.pt",
+        "sha256": "ce701d2f192cf7af504e54bf80000c7d2ec731bf2c56e0c372acf7cd71cf3df2"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-056e1e06821305b21d05",
+          "v8-validation-06c7b459bbceb8ac0f4d",
+          "v8-validation-070cab7e649e100b1ee7",
+          "v8-validation-0777abcd613952d9e92f",
+          "v8-validation-091aa49f4dbc3cb8734e"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0002.pt",
+        "sha256": "a8adb1c42d91931dd32b351159ff31cc3d4d31617a1cfd45800fdac60de9267b"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-091ba89449a8380e34a4",
+          "v8-validation-0922c0bce053c8779351",
+          "v8-validation-0a499edb8a2fd47e92af",
+          "v8-validation-0a8a0fd88ab3c18ed1c3",
+          "v8-validation-0a96a212188394dfcf4f"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0003.pt",
+        "sha256": "ac0e904a1d78c54b2ba3b0b36ceea3dc6fc39ecffc8398086d189eab3dc796dd"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-0af02d855b5df3fada80",
+          "v8-validation-0b80a0aa0fc9d1e8dd5a",
+          "v8-validation-0c5561e3b3c01cf1f42b",
+          "v8-validation-0c794f73103823e1d8ff",
+          "v8-validation-0cccce9074085f9e4fd1"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0004.pt",
+        "sha256": "c240aa0a69a12eb59f05de03b4e1ea4658935b59d003d74f0e4f3a63df53cfa3"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-0d1dbb00af8673f6bc17",
+          "v8-validation-0f28726eb7e974420423",
+          "v8-validation-0f3c838f5f91f6952893",
+          "v8-validation-0f4feef773f8fe346e2d",
+          "v8-validation-0fbf5e8a9d6f9ac30f1b"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0005.pt",
+        "sha256": "cbf1ae1fe59719c80a3de75c57bdb3f6599fba60f5e630acfaf00d8e445fb80b"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-122168726158346614aa",
+          "v8-validation-12f90a69be5d8d363984",
+          "v8-validation-1315a8acec465a2519b5",
+          "v8-validation-13ce86b392c6d2c54359",
+          "v8-validation-150ef823b6caaaf2bdcb"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0006.pt",
+        "sha256": "f24e8e6e7fbd4a5a27e5641553c17a87513d5b3b714b64a8d701b16f7ea99198"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-1546d103f1d67c29efe3",
+          "v8-validation-15e561997cbbfb007a06",
+          "v8-validation-1640351fd0cca1a6c727",
+          "v8-validation-167fed75678be10197d0",
+          "v8-validation-169b5e4b87413a3d1d55"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0007.pt",
+        "sha256": "eee44efee40aa8708b38c7eb2e6d08abcb70481df4cc500e9d5e108e0d0c30e4"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-16b3375293ca999e997e",
+          "v8-validation-16c800085b322d371f8b",
+          "v8-validation-1752989ee41a9cee0de7",
+          "v8-validation-17984cb300cf7f759f77",
+          "v8-validation-17a789509bda0fcf23c0"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0008.pt",
+        "sha256": "ff8e26c9e30b3e9c66aeeb51743b765a8ef42c350fdfdbb135cb5866cd08bd81"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-18d3fcb1dd7a901f948c",
+          "v8-validation-191bd74d074881bbf598",
+          "v8-validation-19cd767a6a86a4543de0",
+          "v8-validation-1a203a6926397c7bb41f",
+          "v8-validation-1a96357b935a53c1f1e2"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0009.pt",
+        "sha256": "732630eb5b726576fb90ac8e63e78e1f828a19d0c22fb37c90bd83a92e086fa9"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-1aff3e915d6c58479957",
+          "v8-validation-1b0b3449c96db32f10de",
+          "v8-validation-1d82749cd419a074084b",
+          "v8-validation-1dabfabd6b01dfe9325d",
+          "v8-validation-1f716a2f584e523c76f9"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0010.pt",
+        "sha256": "ade2684d461e89922262005108cf6aacd26dc5b5e62c1d119adc4ed56a11eb37"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-20543f8d1d1fca0124f5",
+          "v8-validation-2076b3d2fc9c28323778",
+          "v8-validation-209cc6ae8bf55901b7e7",
+          "v8-validation-20e50612ddceab5e6c2b",
+          "v8-validation-215acecb4d8ea13c2543"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0011.pt",
+        "sha256": "a9c11aa999a4f5d8032e857e755b2cd8e38361bf0f907c1a3cdafe4a89ad676c"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-2174fe8a1592546a08fa",
+          "v8-validation-23910453c17e6752b320",
+          "v8-validation-26750ead32552a49ab06",
+          "v8-validation-28317cfe4e16b1f20d31",
+          "v8-validation-29428600f2fb45d3e41f"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0012.pt",
+        "sha256": "86c4eb61a50254edc0f4c09e8c20276b1fbb7cafdd201b510f319ff80fab353c"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-2a0b2501d2774518b25c",
+          "v8-validation-2b544b6bb9297d82541f",
+          "v8-validation-2b819f152b5ebc2b1cf9",
+          "v8-validation-2bea8f76d9240f324bd0",
+          "v8-validation-2bf19f4c450ebb7f8962"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0013.pt",
+        "sha256": "d4ec459dec46524246bd9c62ae6a1a0c417fca81729664598865ab5d641d4a68"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-2c24bed0abfb5b19f67d",
+          "v8-validation-2c454f4fcbb9907425d4",
+          "v8-validation-2ce6a6fc2b447161b24a",
+          "v8-validation-2d4ac96f0e687667418c",
+          "v8-validation-2d72d7af6df3e4bfe6b9"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0014.pt",
+        "sha256": "7b7f09543ffc50378c9b5a7296aa1e831c8a9d03f8d6791c3e0e39380ba6909c"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-2db5697d193b9b626def",
+          "v8-validation-2e83abe82eae811ded9e",
+          "v8-validation-2ed19f15b2cbe5560da6",
+          "v8-validation-2fb7e2c64a63fc7a888b",
+          "v8-validation-300219993ceab43e689d"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0015.pt",
+        "sha256": "7b8130be2ed3fd280b6f9024c878069345dfe63b5235bcd11c072f1a110d2b3e"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-30925f24662639d43ac3",
+          "v8-validation-30b69cc41860081a3243",
+          "v8-validation-33caff56d9333b117717",
+          "v8-validation-347118a2074721264640",
+          "v8-validation-3567a8a43c28ed3d9d72"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0016.pt",
+        "sha256": "1beb830eaaffaabd9db7f38db2fdfbe8cfe9e455aa666d2eaeea21df2f45862c"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-35a8077b97562ad9cee0",
+          "v8-validation-35be1eb62af94bf823f2",
+          "v8-validation-35e71c69d8540bc1931f",
+          "v8-validation-36579c76e4b7525e72eb",
+          "v8-validation-36970ce897a24d9f6423"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0017.pt",
+        "sha256": "852381a98ef2df58fc667ebecf3f2bf0b8fdbdb55984742c1410f141debe0104"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-36a6f9beca170b7531b4",
+          "v8-validation-371f9134aad7d603a190",
+          "v8-validation-38f1e7f478f0b33a96bd",
+          "v8-validation-3b8bbecfda307e492a61",
+          "v8-validation-3b9f3c0406aa4bcd7170"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0018.pt",
+        "sha256": "a484dba16b6cbf0cf1d3f48ff1dd6e4b696bd9905405252356846ca2ed1f4a6c"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-3bafa3e694a44cac62fb",
+          "v8-validation-3d15770cc5640b573f2f",
+          "v8-validation-3d7af4a51203e6d73952",
+          "v8-validation-3e3b0b9e0bfcad787d91",
+          "v8-validation-3f26dd400b34193b9b3a"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0019.pt",
+        "sha256": "ae47cea2ba07991c7a17a2096f65f45ae98c315e6c8b7c8859b4339ae20eb436"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-402609d69ee44ad6153a",
+          "v8-validation-406cd3488753add068ea",
+          "v8-validation-4226dc211b0f97cdb6c8",
+          "v8-validation-4314d762f4988adb1ebe",
+          "v8-validation-43417f7461d7a78b36cf"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0020.pt",
+        "sha256": "aa633c9d980df70d55da5e66e1a71f08d24bdeea8e6cca484d57190a39e5921e"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-460ea38faf13528d6a1b",
+          "v8-validation-473c17330bb7fbbded22",
+          "v8-validation-4740627ea8a0497f27e0",
+          "v8-validation-479c4851b1009f81f843",
+          "v8-validation-48b9ea63c4c9a3fc29f5"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0021.pt",
+        "sha256": "2710640d8d4c68de099374cbed2e3647d3340be25e29fc8d7ef6f653fdc7a4fa"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-4908eac5b76a586f76dc",
+          "v8-validation-4a323d1f7ba4a6441387",
+          "v8-validation-4b0a0ea5ae91b4c5f5c5",
+          "v8-validation-4c10e9448d2e672d27f2",
+          "v8-validation-4c6a6e5585eb7553a06d"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0022.pt",
+        "sha256": "ccad63e6a4e3f699b1acc278e32102f611b1bdd402ded931fe2e9256ec5d2b7b"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-4de2b1bbb01640951412",
+          "v8-validation-4e8790457053d23627a3",
+          "v8-validation-4e99149fad8dd0fef49b",
+          "v8-validation-4ef32f360906e323ad8a",
+          "v8-validation-4ff827452da304ef152d"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0023.pt",
+        "sha256": "4070f811c1a061d76feb1dc11efb60e166ff5031f3a4467f5880d2437331d4bb"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-5047a29a6b2b6c5fdcc2",
+          "v8-validation-518d209f20f9005b96bc",
+          "v8-validation-51c9bc9b4aaa9dbe64ab",
+          "v8-validation-533c4d1705cc31a9adc8",
+          "v8-validation-53f4a9d32562b40219db"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0024.pt",
+        "sha256": "d7e7d701c01305a1463f8c6e24cc636aff8a6589638ccabfb12e26559bde3d73"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-540ded9c60cfadf44167",
+          "v8-validation-546444e216930a9b8d40",
+          "v8-validation-5477c169c345e74e8188",
+          "v8-validation-549433512de4dd47a3da",
+          "v8-validation-552cafcf07ca8728dd71"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0025.pt",
+        "sha256": "d54fe6784300ef10019301f6b7b1b1e870cee5db6e5a44cf5fa6754b01fc517b"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-55fb77fd81bc9795e9e6",
+          "v8-validation-572405466d7f9432a611",
+          "v8-validation-5b62c7b57f25224ef393",
+          "v8-validation-5b7ca3c1e3ca7f8b4db4",
+          "v8-validation-5b8089c23726af477fd8"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0026.pt",
+        "sha256": "ddf807f239e94b0f1253a007f5c4887b24fe0148042a472176ca446107d30fbd"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-5cb9940f4ba9583b4464",
+          "v8-validation-5e726fb43127b2e912df",
+          "v8-validation-5e7b99107332adbcb451",
+          "v8-validation-5e7c97843ef82984d21f",
+          "v8-validation-5e8e3302478e511ea2fd"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0027.pt",
+        "sha256": "e9e4492232bf39171254c6eefa3c92e889d5cc4183f18dbef2f8f819b23dd3ad"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-5e90974c013878e0dc3d",
+          "v8-validation-5f9c7b351f74861ebace",
+          "v8-validation-60351c05b839a302f96e",
+          "v8-validation-604f0301c34c14c8d515",
+          "v8-validation-607d8a7d5cec6c95250c"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0028.pt",
+        "sha256": "9f782639d61d16827184ace662f488b012071b510f34c4514f45172447486ee8"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-6239175d869eefee8d9c",
+          "v8-validation-638a856cf67949c99901",
+          "v8-validation-63a4d4b3bdea9e9ff508",
+          "v8-validation-6661ad3af37124266616",
+          "v8-validation-66bfcf9d76f11cd2b973"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0029.pt",
+        "sha256": "37b69a7953d2796d755fd6901ebe1e1213f05011e6323ee57fe0137ea4d53ae7"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-671fce9b6bfa9d26661c",
+          "v8-validation-678912b609e68c6dc79b",
+          "v8-validation-682cdc1aacd17a264e74",
+          "v8-validation-698ad4bb390eb893bec0",
+          "v8-validation-6a0f889d20e7df870ba7"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0030.pt",
+        "sha256": "84eba3adf1d64a8cf5b540a141bb577c6127c940aefa95fbc923d186fd3c3fc6"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-6a2f08ebf220547d7f2b",
+          "v8-validation-6a4c91e407850441cc61",
+          "v8-validation-6ac2c8adc34effae2e3a",
+          "v8-validation-6db3579d6c543bbc181e",
+          "v8-validation-6f438fbdc2d43b640867"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0031.pt",
+        "sha256": "a8a5b502f1308b790c651520a7e2ca0ec950846d02baa12775e4a18dad201031"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-703729517d1222916a8a",
+          "v8-validation-70e553541d02ab643d2d",
+          "v8-validation-74f8ca549fd2850bfb6a",
+          "v8-validation-76a9c6df36530e060d7b",
+          "v8-validation-773b24b626ecb069d7d5"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0032.pt",
+        "sha256": "5b148e9b58f7edc31dad6e337ab2348801b40d6fc1922f52416b7a9e49a2ad09"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-7758d84357cbed72fb8f",
+          "v8-validation-778b3f20ea3d585eb5af",
+          "v8-validation-77c71645cefd5b669aff",
+          "v8-validation-7933746098a575fc7c3f",
+          "v8-validation-7a39ba1396c5027c43de"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0033.pt",
+        "sha256": "c632b54472a245fcde2a2a840376705a1c10d0ecc11f3ea821a4a3d5de95bf41"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-7a6848df57ee922136ef",
+          "v8-validation-7b2ef9254850f0594bc7",
+          "v8-validation-7b638627e27739fd1799",
+          "v8-validation-7b8a1d7c975a8e018dd5",
+          "v8-validation-7cb897fbdf4aec509f63"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0034.pt",
+        "sha256": "90103bbc57c03af05855f14395afbb1b826f6cafb7cc2f6e1ea29ecf0fccd218"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-7d5def4e97c6cf9d14c8",
+          "v8-validation-7e5bfff26503e072eb1b",
+          "v8-validation-7ec702d92480ec344c26",
+          "v8-validation-7f1d73a30ec21334a49d",
+          "v8-validation-80d3b67e4ea7185f15d6"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0035.pt",
+        "sha256": "1431ad5f2d0989bc267cfe14d390373f927a275c77d914f59ff89ef595d0fb5a"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-814977c4196cf8d6282e",
+          "v8-validation-834ba1be7fd2df9b7501",
+          "v8-validation-84559104c656aa8c3de5",
+          "v8-validation-84777b68ddfe62c440cc",
+          "v8-validation-84fa1bb316bf9de16563"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0036.pt",
+        "sha256": "00ad8889bb650b85a408eb3b99d16a9c144e3f9cc079944d1041341a0bb50570"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-85281503a32e6496a437",
+          "v8-validation-8655bc1908ec241b66c6",
+          "v8-validation-8658eaed6ca4bcfabbfb",
+          "v8-validation-87c874a730ade90346ed",
+          "v8-validation-88e30470426e1b046367"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0037.pt",
+        "sha256": "c7c822b699c9228e5c5a0af63b37fa40214e8e60cc1cac41bcd0658c71c7487b"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-8a5568dbcc62d0ff8f4b",
+          "v8-validation-8c044753227c620b22e9",
+          "v8-validation-8cee3eb6053b946de23c",
+          "v8-validation-8ddadd5680b31acc247f",
+          "v8-validation-8ffec8c5dd753395d60b"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0038.pt",
+        "sha256": "cf0c6749f728da1016a19c8f07c5f2572a58065fcc6f90df273a19ff084c46de"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-90d89d5131c8d2fb60fb",
+          "v8-validation-911fbb7ad4bcf60ca164",
+          "v8-validation-92321d7c34511d4e66d7",
+          "v8-validation-93f440b00b87a264330f",
+          "v8-validation-9543ee8bda4ec0b5e143"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0039.pt",
+        "sha256": "2b8910abc93263eafbc8eff232523dcdf8f0aec677200488b1264e1a54b10c9c"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-9641e2109950f2627a47",
+          "v8-validation-9788f6bc3678cb1a175a",
+          "v8-validation-97e7e6d245514b824f58",
+          "v8-validation-98bca41ef0b9643665f2",
+          "v8-validation-9abcaeebd9c7cd9c0750"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0040.pt",
+        "sha256": "2e0fdaec45a34c0f9c761059f0d9ba3bc8b1015dc03c3d005f325988747cf1e7"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-9ad6c41140ec7a033d2f",
+          "v8-validation-9c43c65e3fdf97bdce27",
+          "v8-validation-9c7ac229e5591cceccb5",
+          "v8-validation-9d9996a78b16b3fa3282",
+          "v8-validation-9da8202955e046423f54"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0041.pt",
+        "sha256": "8d06b622c65e4b43321fae27aaaa50fb7d2d3730f7e74ad221565c80bce0382a"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-9de5a95e77c8e29b6127",
+          "v8-validation-9ed71f39deefefa9e6cb",
+          "v8-validation-a23f883f72b1ee9f9441",
+          "v8-validation-a280537755857b51a60d",
+          "v8-validation-a3d1aad9002e9d4476f5"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0042.pt",
+        "sha256": "f2cadd2cefe686725c3ac5e9c82d805f7c44e80aa7aa0c1f1c92a334ac8a3ecc"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-a3ef4d2636d36f70bdea",
+          "v8-validation-a4fc1d6eaf9a6268e6f3",
+          "v8-validation-a52ac3d13ea3145e9508",
+          "v8-validation-a5f8289024e8b3e021b5",
+          "v8-validation-a72f654307fb960221f2"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0043.pt",
+        "sha256": "fb77d7500da3e197575623d22f6d5746b423c8dc09ac62bd65d66a4666d430b8"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-a9a747a208ed3734d68b",
+          "v8-validation-a9e263ad14111173b9ab",
+          "v8-validation-aac29731227e3d0f53ea",
+          "v8-validation-ab702a68bc26d1aa16e6",
+          "v8-validation-ab9a30e5ee3c9112b551"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0044.pt",
+        "sha256": "15ffdbfe134174bdf7d0729ce858a717f8a226a1f80e3555c77f95ac5da11d67"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-abc8e89afafb03dfb16e",
+          "v8-validation-abff93e46b2b23eec741",
+          "v8-validation-aefc6eac6281b4ff8e6a",
+          "v8-validation-af928d212dbec3c64aea",
+          "v8-validation-b027a5283fadba1bc12a"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0045.pt",
+        "sha256": "767314fb484920cb3b2ae41dad71b23d7b2e3a05ddd0f2eba77850fac2364299"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-b19f4d4922b2de741350",
+          "v8-validation-b225e864972175fba264",
+          "v8-validation-b2f627b86e2759960ef6",
+          "v8-validation-b54a6b4e13606554c0d1",
+          "v8-validation-b7ec918f371d26a1c0c1"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0046.pt",
+        "sha256": "a0ea48601e3a655937cba45abd574bcfcbf515c643d30caad034cac976cd564b"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-ba97467b26550fbc208e",
+          "v8-validation-bdf90a8b87312283bcea",
+          "v8-validation-bee893c788bf237fc0c5",
+          "v8-validation-c0cd96dec6431bb9fb4c",
+          "v8-validation-c2ea2ad9c5b2838b0ae4"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0047.pt",
+        "sha256": "a49c6a9eb0d103556f0761e4b1146fbc47b2c1d369c4e04cc0dfba227b5caeb3"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-c3e078b6d9ee93d464d5",
+          "v8-validation-c5c0d30f229c75d69568",
+          "v8-validation-ce344f02437aa32bc178",
+          "v8-validation-e088fd6feb12a59760c1",
+          "v8-validation-e30a907158b31bab5eb6"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0048.pt",
+        "sha256": "108537858c4fcdb0fa4d360a11481b9ac9e0fefcb200885c29eafd1f76c79bc7"
+      },
+      {
+        "base_trial_ids": [
+          "v8-validation-e916f074316c469c8d80",
+          "v8-validation-e92b4d84862575f5b4c4",
+          "v8-validation-eb635551142531c960fa",
+          "v8-validation-ef3c59f68d8e92efbd62",
+          "v8-validation-f25e1819cb056ff1a60f"
+        ],
+        "count": 5,
+        "path": "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/state_shard_validation_0049.pt",
+        "sha256": "3ca7fd18e65de243d58e1bc2b56f071062637dda26c5c6f027b8056191dfeecc"
+      }
+    ],
+    "target_per_family": 50,
+    "valid_counts": {
+      "boolean_logic": 50,
+      "modular_arithmetic": 50,
+      "short_graph_traversal": 50,
+      "simple_state_transition": 50,
+      "variable_binding": 50
+    }
+  }
+}

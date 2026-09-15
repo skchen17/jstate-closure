@@ -1,0 +1,644 @@
+{
+  "architecture": {
+    "attention_layers": [
+      27,
+      31
+    ],
+    "kv_primary": {
+      "head": 3,
+      "layer": 27
+    },
+    "kv_token_scope": "all_prefill_positions",
+    "recurrent_layers": [
+      24,
+      25,
+      26,
+      28,
+      29,
+      30
+    ],
+    "state_dtype": "bfloat16"
+  },
+  "complete": true,
+  "effect_records": "results/v8/raw/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/raw_state_effects_final_test_v8.jsonl",
+  "effect_records_sha256": "ed81d019aee074bda60d879e75a398e509b49fb2ddafc9dbe204779601ebce3a",
+  "endpoint_artifact": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/endpoints_final_test_f16.npz",
+  "endpoint_artifact_sha256": "b54a234b38fbfbd9da4d63d9a816a77be8e53d0b338502c7ae6463494efbdcf7",
+  "pair_records": "results/v8/raw/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/persistent_pairs_final_test_v8.jsonl",
+  "pair_records_sha256": "2c36f5931d80f2fed1ba810ecfae436118949a97d99676f4f522dd19435ff8f3",
+  "protocol_version": "structured_persistent_state_protocol_v8",
+  "run_id": "persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full",
+  "schema_version": 11,
+  "source_freeze_digest": "1cbb255ddfd42438a18fc374daceebdf0f7ec6fe6f56c94a3f914654c1ab61ad",
+  "split": "final_test",
+  "state_shards": [
+    {
+      "base_trial_ids": [
+        "v8-final_test-00748e384c88916ba366",
+        "v8-final_test-00a5800ed4d3c855b36f",
+        "v8-final_test-03dad05e9293d71504a6",
+        "v8-final_test-04bb66be5079eafd9719",
+        "v8-final_test-04bd072404a7b87c9d08"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0000.pt",
+      "sha256": "cc51ecad0652f3eb3bccdd7500c7975ff79c2d2112590a99ae75ba8eb3c39b0c"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-04cbc2f18e00eece669e",
+        "v8-final_test-05f9fe5b6c09fa56b2cf",
+        "v8-final_test-063f7807f11bc6a7af0e",
+        "v8-final_test-06d24366bab550bae957",
+        "v8-final_test-0a39f5ee4e8be54cb400"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0001.pt",
+      "sha256": "3caee70f25ec537f2e9ca987885d9e303058aee0d5b384b81ca4bf48c6cbf09f"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-0a91f1df21ad92819591",
+        "v8-final_test-0a998135dfa6d7f9a23f",
+        "v8-final_test-0b74db62719910949b77",
+        "v8-final_test-0bacc49cdc8bc74870ce",
+        "v8-final_test-0be76a8d97b351349d56"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0002.pt",
+      "sha256": "4e45c2c15183b81e7e572b4a30a0711a4e0191f232023e9edf8208add1728f4b"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-0d05b1007fca995c32ac",
+        "v8-final_test-0db2c9ac7139368d4bd1",
+        "v8-final_test-0e0f9b7a39ab97e0b8c6",
+        "v8-final_test-0e9f4f032540a132cfe1",
+        "v8-final_test-0ecc9516907601c086c7"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0003.pt",
+      "sha256": "f8680463f6c810297dca6c87eb877e2c533ab7db239ac501e550f2b9f5b118a7"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-0fda7051b97ef64ea64b",
+        "v8-final_test-10f6b1ba894d8c7fa94d",
+        "v8-final_test-14a1d53f4990a6dd81b3",
+        "v8-final_test-14ef15e0c694b29ef8ce",
+        "v8-final_test-152108f8ace4738bfb64"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0004.pt",
+      "sha256": "044d15a82070c31cbb9abf9f5ef4dea7cada2753a11713904df732dbbbe3fafc"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-15330644577930a1aa33",
+        "v8-final_test-162cd54ffb5e5d77c92d",
+        "v8-final_test-16c6aeed64fac875fef5",
+        "v8-final_test-17c33d5534cba62bc2c2",
+        "v8-final_test-180695af6d035f0dc29f"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0005.pt",
+      "sha256": "abd6dd8d5d307f01df988cfd15513af34e0b347c118dda71cb080e88b53a048e"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-189980fc213d9419d5b4",
+        "v8-final_test-18a24501f5614b5cb122",
+        "v8-final_test-1aadebde2b1a0ccb4f83",
+        "v8-final_test-1ac5ce0ce424bc08d94f",
+        "v8-final_test-1b1e3bba24143c7c35a1"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0006.pt",
+      "sha256": "6bf190f99e02ef4beafe5589e24eb1f5925187322d3520c13cafbfcfe4800091"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-1be097a69c693fe883bc",
+        "v8-final_test-1c20e6c1ee94e7b7b9cc",
+        "v8-final_test-1d060c61af3a9fb7745f",
+        "v8-final_test-1d62aa974d4b86c18c26",
+        "v8-final_test-1f20600e154f9168250b"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0007.pt",
+      "sha256": "84f36e5fa7aaf625e66a034a837930e2e097473963efff06c3c630ae7fc2e0d5"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-2187f253aa43e5e37c6e",
+        "v8-final_test-21d0882d5e71bbe8f03c",
+        "v8-final_test-224cfdf09906a16f3965",
+        "v8-final_test-245d7532a16241494ae5",
+        "v8-final_test-24cc99a3e79dfde84700"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0008.pt",
+      "sha256": "0a005f7f622ed1ab7946b713f60abcf6ef4ac35c0e8676d58e94f521ec3fe09a"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-25ab08d0d27490610308",
+        "v8-final_test-26258d604f17d6803ddf",
+        "v8-final_test-27c40d3fe5de9a48e946",
+        "v8-final_test-29d1e396bfc64fda52a6",
+        "v8-final_test-2a304fa09661d01bd581"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0009.pt",
+      "sha256": "a1d94ae088193b8eb59570bb2f66ff7e21803e35693d458a3ac97b6cdc53410b"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-2a62ee3b90e6fcfc1bc5",
+        "v8-final_test-2a99e35a30eb63ce4a70",
+        "v8-final_test-2c7cee92bb2c3eb8ea27",
+        "v8-final_test-2cdf7968c05832f570eb",
+        "v8-final_test-2e0fe87653a2e4dd9d64"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0010.pt",
+      "sha256": "840cd9501e90fe8614c3ff82bceaa79d5bde60e350ca45e93c25cb8b5481720c"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-2f1742e08bf6c9d6009f",
+        "v8-final_test-2ff70f98a0cc598f233e",
+        "v8-final_test-3109a41cf8c8b2d4f397",
+        "v8-final_test-310b95c89ea72502fac8",
+        "v8-final_test-31d41345fe148e2fbe37"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0011.pt",
+      "sha256": "cfad36b27f457e9d27f4568d576db3d36dc556a25a61d3b6edc8d85a961c9bb2"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-34374ebfb2e2b78a8797",
+        "v8-final_test-35324ddf5f04b6ca51fa",
+        "v8-final_test-35631bcaa5026dcba3cc",
+        "v8-final_test-35c99837961111f5531d",
+        "v8-final_test-35d4a598f02e8f1a6471"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0012.pt",
+      "sha256": "005e642587f149f9b398896806b72f1083c195eaa62b3d0c526f80571ff746b7"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-3718b23f6085b6505fc5",
+        "v8-final_test-3877b5ed425fc2f8717e",
+        "v8-final_test-38a8569afc46936683a3",
+        "v8-final_test-38baf6b4a08a50c52e89",
+        "v8-final_test-3904e89f6a564b43c8f9"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0013.pt",
+      "sha256": "4dd32fb7d813682252a2d26b3523d1a8f50571bcea1f72d3966a8823aa5a41ae"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-3afc7f8c4597a47dae2f",
+        "v8-final_test-3b6d526e6baa4e947c73",
+        "v8-final_test-3bc54eb4b39164b34885",
+        "v8-final_test-3c33dc0388fdc4be8f5d",
+        "v8-final_test-3e6e57ce46138a0f6eac"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0014.pt",
+      "sha256": "dfb03620c878e78e3e69f77fd5932f1dec3743420af0c201d33d6a49472178a8"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-3ebba539ee1511ca5558",
+        "v8-final_test-3ecf6b39b54316baac30",
+        "v8-final_test-3f233e84998d71f875b2",
+        "v8-final_test-3f2ffcc8091dc9d35d6c",
+        "v8-final_test-446113ba3339a1e3fa94"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0015.pt",
+      "sha256": "cba3cc32abc5140901ac4e947e613912078480d9d14dd43ddf6cb6ae5cdea320"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-4485491aecdd5cb174df",
+        "v8-final_test-44c4fc3db2e8878f3818",
+        "v8-final_test-457c9f1e418aa3e6021a",
+        "v8-final_test-4621f58fc8c965494675",
+        "v8-final_test-46c8264f91942305cc17"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0016.pt",
+      "sha256": "7444972b91fd0fd8759b7ac751ccd2a66f74f6051cb6d78ac832e95b0de88a7c"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-47568a09a4ae7ecc3d4f",
+        "v8-final_test-4779f96234383aa1a558",
+        "v8-final_test-48aeb2c8ffde1745bee6",
+        "v8-final_test-4b802be55bb068a5f688",
+        "v8-final_test-4c2a923a779382d86449"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0017.pt",
+      "sha256": "b6e439616590677497f9bdd76909a3938ac0a5d97dbd7c32bb8d6d250a2699ee"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-4dc114b3b97528da4078",
+        "v8-final_test-4dcc76eef21ceba7af3b",
+        "v8-final_test-4ef93964c0d56b3aeeec",
+        "v8-final_test-4f1f69cbf794887c1af6",
+        "v8-final_test-5167695c2992694295ca"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0018.pt",
+      "sha256": "96bc15d8d9048692c9f9a63c9ab853279f6a6e936ae748e5dc906b7036552b37"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-518ef4236abf6bb88d6f",
+        "v8-final_test-524f38e454446328f5d6",
+        "v8-final_test-52dc6d5fe68d70ab16e8",
+        "v8-final_test-563b7f43574fd85f586a",
+        "v8-final_test-5794f227bad6ef082f89"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0019.pt",
+      "sha256": "3d331855b7c95eb21ad67612e5d68dfd4292b0f05ffd978e2010d666823f3419"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-581993fbaabdfefc2bdb",
+        "v8-final_test-5888944c7ef04d8a2114",
+        "v8-final_test-597dc714554175f3f2fa",
+        "v8-final_test-59e6da41260fd610453d",
+        "v8-final_test-5a3b3e7a76e4e4eb38bd"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0020.pt",
+      "sha256": "a7920a92dfd8a472807e3e67b4d56622844186d3f5a84a199e41ae7c36a1b487"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-5b27c613034fc6a57a41",
+        "v8-final_test-5cb916096268e89699ae",
+        "v8-final_test-5cc42c1977024ce487c2",
+        "v8-final_test-5d46f78c87298b536f49",
+        "v8-final_test-5da0241f74e1c6d3b5be"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0021.pt",
+      "sha256": "85be984b667797d58b43ff2a021b66da6bf96b6367c0e6421a8dfab5bdf12d7e"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-5db68037c39d2b26b300",
+        "v8-final_test-5db744de82bf08f27d0e",
+        "v8-final_test-5f48504d4b7679bcd115",
+        "v8-final_test-5f868e90bfa6b803da64",
+        "v8-final_test-60ee5a2dbf50d18baa20"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0022.pt",
+      "sha256": "108c01edc64939061bb51f3201c3c76c5d1f8fc13a76ae3f9a466de0a7f6e054"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-626201076054aa219c9f",
+        "v8-final_test-63231b525bd5d88302bc",
+        "v8-final_test-65866546c9d06ac06a03",
+        "v8-final_test-66ffecc56ef2e909b603",
+        "v8-final_test-67800f03d6576ce5b2d4"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0023.pt",
+      "sha256": "7dee9d016088896f02997202a7e2cd5d4e7c5329e9eef87e850fe8d53fbe209a"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-679616c820e853dbeedc",
+        "v8-final_test-68b9213357199cea06ec",
+        "v8-final_test-68d086722ce6b17a214d",
+        "v8-final_test-6a16e7835f11daf676e4",
+        "v8-final_test-6ad7c9747e9deeceb0d2"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0024.pt",
+      "sha256": "a773644d1dbfe875f88b2129d3500ae6adb1e2889e794e0e9bbbf90d77458804"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-6b5326f15d86bf704422",
+        "v8-final_test-6badd573145293d78281",
+        "v8-final_test-6c25651db81feb58cc7b",
+        "v8-final_test-6dc3cbf6621b2c2e6ba0",
+        "v8-final_test-6e06a4bac16699823eca"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0025.pt",
+      "sha256": "e25a67fed87ba405b5777e18d714e98c1ff7e38c8ae495180ac94a24d0d12f83"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-6fc5e6d45abb9e0243ae",
+        "v8-final_test-701ea24b71dbbeddcfa3",
+        "v8-final_test-7133682010323ca6b1f4",
+        "v8-final_test-722078b5491775f6b6d4",
+        "v8-final_test-731163d27797656d4c9e"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0026.pt",
+      "sha256": "0dee411edc8eb673aacf649641c0bbe895f21dcafd09520b1cb97e5677c6fed9"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-755d51483887734dff46",
+        "v8-final_test-79f01108481c2627845b",
+        "v8-final_test-7a7f70313f2791cfca75",
+        "v8-final_test-7b57db7158d328a166ba",
+        "v8-final_test-7d2c79564ff3d2126d32"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0027.pt",
+      "sha256": "5a3cc8e2f838d78a6dad74e87aca6963531a2bb0834446b03c51a9c65ea0dc14"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-7df7050055ab10d9af81",
+        "v8-final_test-7e083735e2135de1f1ec",
+        "v8-final_test-7e5eac6ace612fcd5550",
+        "v8-final_test-7e9e47f4db320edd9843",
+        "v8-final_test-7f0dd7003afa9b17ea63"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0028.pt",
+      "sha256": "e2fd02efb83f0e4e63e67352a793d291d170cebc167d04c7f29f2c900a6f8295"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-7f6e266753b4af5908a7",
+        "v8-final_test-8038550cfbffeae14fee",
+        "v8-final_test-819764901d108b55fd69",
+        "v8-final_test-828750700a33555ae99f",
+        "v8-final_test-82a94b73c8710683c9a1"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0029.pt",
+      "sha256": "1b017112d3f3b4d94eadcad4bee6315f288903a0f6db6410f864eb371ddbc6f7"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-8390078edb52e17f61ad",
+        "v8-final_test-839e2761722bc45199b5",
+        "v8-final_test-841377d1d5559694784e",
+        "v8-final_test-8524a03053c4b58b0951",
+        "v8-final_test-8683cfa5de245d5f8407"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0030.pt",
+      "sha256": "cb475800cd174a5943eb28788beb5763f76b7bf45c88326812e20370ba25bba8"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-86b764aa32e2d4fba5aa",
+        "v8-final_test-8743b0cf55e7ea2780a9",
+        "v8-final_test-876ff7a70bd1332c8ce8",
+        "v8-final_test-88cd08e501abe1e35c29",
+        "v8-final_test-88fc939686b381d1c0a3"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0031.pt",
+      "sha256": "4a10cb51b1b432705b1c60f9709e4477c55e16798b98379ed9c1aca39cdd3379"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-897ce5b65cf6a6ad7534",
+        "v8-final_test-899a59e41ff62fe6c3f2",
+        "v8-final_test-8abb26e4b96cdd873fde",
+        "v8-final_test-8de1554b22ad6159a83d",
+        "v8-final_test-90ec914772fcc598dc40"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0032.pt",
+      "sha256": "9568c3fed0aaf1f37e2006c14b44ab443fa458f51033717dc25cc3612cb5da8c"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-917ffc826c86af091c04",
+        "v8-final_test-92baab0d2fd67907137d",
+        "v8-final_test-92f26af988706184a00e",
+        "v8-final_test-945190fb358910165fbc",
+        "v8-final_test-95b1f8a52ff5d3059369"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0033.pt",
+      "sha256": "6dd44c2f72f6a26d035261886aa3f202ce5b5f9e55ac959abc985293deb89010"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-95b8d4dfe15b95ae8e0d",
+        "v8-final_test-95ca7df47429f6d59213",
+        "v8-final_test-97fb3d27f07820dadbd1",
+        "v8-final_test-98824218a8ff20235e82",
+        "v8-final_test-98cd6abcf299a5c6c441"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0034.pt",
+      "sha256": "0f796cc3f1515a10757338f8ebf6a0f94170edbffc55ac90a0ef006a596ab99f"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-99a919d725bffbfbb3c5",
+        "v8-final_test-9ae3874b03d7d3dcf5d2",
+        "v8-final_test-9b26d46a1877f7bd7cee",
+        "v8-final_test-9b6345d6eb216e4116e3",
+        "v8-final_test-9bfbf1d9bd2e7d0b44f2"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0035.pt",
+      "sha256": "8bf04f259ea7e7b4b99cd123ec0f7d4c1725465b4bd5e3056fc010ebcc86307d"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-9c6fe4e8de6c9c19fef4",
+        "v8-final_test-9c8c7b48de05ab1a6c9c",
+        "v8-final_test-9cba4013ff1b63b587cb",
+        "v8-final_test-9cf218c72f39b9681001",
+        "v8-final_test-9d0a8f87330c5af2141a"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0036.pt",
+      "sha256": "31e826ceb79a87f80fbc11a43678110931e498d265261a12989349292e9f29bb"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-9d3a43c2a93380d79e6f",
+        "v8-final_test-9e53f2dbcc163d4f16c9",
+        "v8-final_test-9e770b8bff75f074154f",
+        "v8-final_test-9f806e5271dd28888db0",
+        "v8-final_test-a05cb3a75f8b833646fa"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0037.pt",
+      "sha256": "7fc779b55f6ff70e62e40b69979ead02c0070c94e9d968639777fe061ba003d3"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-a1885213f9d175f92a2d",
+        "v8-final_test-a1b5d6c91733cdd946b2",
+        "v8-final_test-a22c4347ca18646afe15",
+        "v8-final_test-a2bb8872b9bdb052696c",
+        "v8-final_test-a3185ae9d615c5891135"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0038.pt",
+      "sha256": "e3c5d3a96ad5875bf43e1adaa4553b28fdb492c5ef52aafdfbefbe0ba1417294"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-a3a5ee16650cc7515e7b",
+        "v8-final_test-a43598ecf2e4b693ec09",
+        "v8-final_test-a4b995a70109febf3d5b",
+        "v8-final_test-a561c6f39615bfaef2d2",
+        "v8-final_test-a62ed9caf6513c1bd240"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0039.pt",
+      "sha256": "b92ef5fd912b2ec1ec1cdc0092fbd9195cb8c1299713443ff83a434e01a0aa71"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-a6dd75bdd86f61440f97",
+        "v8-final_test-a809e149efcc8c8a0c03",
+        "v8-final_test-a9131d00a3b10c6f5386",
+        "v8-final_test-aa70623eb24c4feac368",
+        "v8-final_test-abc216588fad44a7e523"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0040.pt",
+      "sha256": "9dcb6478a34bae620bb853b81659be6e34c5ff73699664c599b647bd06d5095b"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-abf0171ec3323e03987e",
+        "v8-final_test-aca8ed5f58a8f00b1ea0",
+        "v8-final_test-acb8c0a03e08979e41d5",
+        "v8-final_test-ad3abf8ca694ddce0780",
+        "v8-final_test-ad57493055023864264f"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0041.pt",
+      "sha256": "100f0d2201c6e3edab40cda0b57ff1766e1fc71a1a05d14c0e7b0a1be914e3c2"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-ae5e3e8e1a48aee81c11",
+        "v8-final_test-af57fd6a4cfd822d5e19",
+        "v8-final_test-af8eb0fab245c2ed879d",
+        "v8-final_test-b1bf0abe28acc324bca6",
+        "v8-final_test-b2b75ec5fd778775d53d"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0042.pt",
+      "sha256": "ce844b4bd0723acd917314f1338fc5a98a6643b73aa71bda14906dfe399c64ec"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-b51506373dcb976dc8f5",
+        "v8-final_test-b61c80ed81ced30dc2ec",
+        "v8-final_test-b637df063ce0eb9ad150",
+        "v8-final_test-b68be8179a0c2f6eec48",
+        "v8-final_test-b727d92eba6b9ec04461"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0043.pt",
+      "sha256": "776d7b4d6016de6c8228b9d0abf88f8aafa1cf4b07263bc0b4be76928cedbfe7"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-b9a6a2572979103dc79f",
+        "v8-final_test-bb3b37de02965cfbc61f",
+        "v8-final_test-bbb1ae2f95eddd1c4b77",
+        "v8-final_test-bc65c6c7c61591950cfc",
+        "v8-final_test-bf9f572c5397138e045e"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0044.pt",
+      "sha256": "0a5ebd2e5d1d5b1cc86becde2d0c11b43f15333f36ea23c7ebec72dd3414dd2e"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-c27f90f8a611129d7db2",
+        "v8-final_test-c4f83879cf1846415a0d",
+        "v8-final_test-c56ab2d7920bc89ca0d2",
+        "v8-final_test-c6d68ba7c56c00112b6f",
+        "v8-final_test-c82a54b351c9b6e520e5"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0045.pt",
+      "sha256": "faa5fed81dfde1f1329c92407fc272059d26a50141c3cb26491f29d571258f56"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-c8a50cedeb7096c65675",
+        "v8-final_test-c925fcbe3979957990da",
+        "v8-final_test-cb182317e2c37e347689",
+        "v8-final_test-cb51af136225f016a740",
+        "v8-final_test-d1cf39e0995130f759c5"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0046.pt",
+      "sha256": "79f273af25f507016f7cf073bc612c7dcb18af8f595d5b75723017beede5efec"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-d3d5016bc20e4aee9f32",
+        "v8-final_test-d46313f1f478ba207066",
+        "v8-final_test-d4f6c461d41e226493c1",
+        "v8-final_test-d5e65c9da1cdf8e05dfe",
+        "v8-final_test-d71081af1eca5112ff36"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0047.pt",
+      "sha256": "1706ab024eb824a91d796ca208e0e8c2c2b0327c38fdac7180393a2d17a8ce2d"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-d89acc53f00e25bfd27f",
+        "v8-final_test-d8b6fa54bc449edf0203",
+        "v8-final_test-dac70648133b6ba58787",
+        "v8-final_test-dd615753e2dd18878037",
+        "v8-final_test-ee5d5619b4c4ceaf5ef8"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0048.pt",
+      "sha256": "edfbeb07e2bcbbe46dc432d64e30fc9820eba425104315e8c517db0fd51c3d67"
+    },
+    {
+      "base_trial_ids": [
+        "v8-final_test-f150e5fb3c095286ff8b",
+        "v8-final_test-f55264c8cb96b78319c4",
+        "v8-final_test-f60256afd02f93592ed0",
+        "v8-final_test-f84d8a41ebf252bbe39f",
+        "v8-final_test-f98ce266d1faf3c08ab5"
+      ],
+      "count": 5,
+      "path": "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/state_shard_final_test_0049.pt",
+      "sha256": "484a8b4ac4a0c21522998670515590f33fde273cc7a3903a296b2f613e46c13f"
+    }
+  ],
+  "target_per_family": 50,
+  "valid_counts": {
+    "boolean_logic": 50,
+    "modular_arithmetic": 50,
+    "short_graph_traversal": 50,
+    "simple_state_transition": 50,
+    "variable_binding": 50
+  }
+}

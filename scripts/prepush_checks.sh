@@ -55,9 +55,19 @@ python -m mypy --ignore-missing-imports \
 python -m mypy --ignore-missing-imports \
   src/jclosure/cache_v7.py \
   src/jclosure/protocol_v7.py \
+  src/jclosure/protocol_v7_corrective.py \
+  src/jclosure/protocol_v7_stage2.py \
   src/jclosure/records_v7.py \
+  src/jclosure/arch_compression_v7.py \
   src/jclosure/experiments/persistent_channels_v7.py \
-  tests/test_v7.py
+  src/jclosure/experiments/localize_channels_v7.py \
+  src/jclosure/experiments/localization_analysis_v7.py \
+  src/jclosure/experiments/arch_compression_v7.py \
+  src/jclosure/experiments/arch_compression_v7_corrective.py \
+  src/jclosure/experiments/report_v7.py \
+  src/jclosure/reporting_v7.py \
+  tests/test_v7.py \
+  tests/test_v7_corrective.py
 PYTHONPATH=src python scripts/check_v2_hashes.py
 PYTHONPATH=src python scripts/check_v3_immutable.py
 PYTHONPATH=src python scripts/check_v4_immutable.py
@@ -77,11 +87,19 @@ from pathlib import Path
 
 from jclosure.config import load_config
 from jclosure.protocol_v7 import verify_freeze, verify_v6_guard
+from jclosure.protocol_v7_corrective import verify_freeze as verify_corrective
+from jclosure.protocol_v7_stage2 import verify_stage_freeze
 
 root = Path(".").resolve()
 verify_v6_guard(root)
 verify_freeze(root, load_config(root / "configs/persistent_channels_v7.yaml"))
-print("v6/v7 immutable guards passed")
+config = load_config(root / "configs/persistent_channels_v7.yaml")
+verify_stage_freeze(root, config, "localization")
+verify_stage_freeze(root, config, "compression")
+verify_corrective(
+    root, load_config(root / "configs/persistent_channels_v7_corrective.yaml")
+)
+print("v6/v7/v7.1 immutable guards passed")
 PY
 python scripts/check_repository_artifacts.py
 git diff --check

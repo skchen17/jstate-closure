@@ -3,71 +3,89 @@
 ## Material Passport
 
 - Origin Skill: `academic-research-suite / experiment-agent`
-- Mode: `cumulative evidence adjudication through v6`
+- Mode: `causal attribution and corrective compression`
 - Date: `2026-09-15`
-- Verification Status: `repository-grounded; machine results cited below`
-- Protocol: `peripheral_foundations_protocol_v6`
-- causal/null freeze digest: `f62c55d21e5e220cd21ea81c19a28bf1d5249a60bdc35a08e3eb029dd61ec12e`
-- strong ceiling freeze digest: `6d4c77a3e33edf9e977e04293b73b77d153a15af091b1c496fe869e92ec23170`
-- compact freeze digest: `07b51492b188b23da2ad66708cd3520e7b568a65bfd867ec019da7d301c24417`
-- delivery/report freeze digest: `160d746a5b9b14e226acf876989e3196f971f321dbb9d2fb3720f7da68319840`
+- Verification Status: `repository-grounded; machine records and 10,000-resample CIs`
+- Protocols: `persistent_channel_attribution_protocol_v7`, `persistent_channel_compression_corrective_v7_1`
+- attribution freeze: `d2bc61ef18093d50adc9c0c02578c853b9b01103aea9acd797fe7f6755b09cf8`
+- localization analysis freeze: `494071a74252419727ea2ab9b7fb5c4091831c19564f805c4d04dba8e2c2916a`
+- corrective compression freeze: `a4c31a47f3e2ef3126f49f6988f38dd4a45882c0ff8c0b11328fa2bf5093de68`
+- captured channel tensor SHA-256: `30c8abc4f3dee43594e382c49e74ff43baaee909e76d6c45a62bcd7d2c48d88b`
 
 
 ## Current adjudication
 
-The strongest warranted conclusion remains **H2 for the tested operational measured-J state**, with evidence that the pooled and Boolean effects are predominantly mediated by later measured-J writes under the tested restoration operator. The full operational remainder contains learnable causal-direction information, but no compact peripheral state passed conditional sufficiency. This does **not** establish H3, an autonomous controller, consciousness, “true thoughts,” or parameter localization.
+The strongest warranted conclusion remains **H2 for the tested operational
+measured-J state**. v6 established that same current measured-J plus a different
+operational remainder causally changes the next within-forward measured-J write.
+v7 now localizes the cross-token persistence to a **mixed, interacting KV and
+Gated-DeltaNet recurrent/short-conv cache state**, with recurrent+conv dominant.
+This rules out the claim that the observed effect is only a nonpersistent local
+transient. It does not establish H3: no architecture-aligned compact state
+passed conditional sufficiency, and no autonomous controller was trained.
 
-## Required v6 questions
+## v7 decisive measurements
 
-1. **Is the repaired teacher delta stable?** Yes: non-zero float32 fraction `1.000`, median f32/f64-projection cosine `1.000000`.
-2. **How much of v5 failure was float16?** The old float16 endpoint had 2/66 nonzero vectors, while the float32 re-audit finds only 2/66 material effects at that same next-token/layer-23 endpoint. Therefore most zeros reflect the endpoint's causal structure, not float16 alone. Float16 nevertheless perturbed stored intervention candidates by median L2 `0.035538`, which likely explains the v5 mediation inconsistency.
-3. **Does restoration alone cause an effect?** No detectable clean-state artifact: pooled JS `0.000000 [-0.000000, 0.000000]`.
-4. **Corrected v4/v5 mediation?** Pooled single JS `0.002166 [0.000181, 0.005774]` falls to corrected persistent `0.000167 [0.000019, 0.000435]` (M=`0.922975`). Boolean falls from `0.005749 [0.000325, 0.015569]` to `0.000050 [0.000019, 0.000089]` (M=`0.991279`).
-5. **H2-A, current J insufficiency?** Yes for the tested state: pooled and Boolean single-arm effects clear the frozen numerical floor; Boolean is the strongest family.
-6. **H2-B, mediation by later J writes?** Supported for pooled/Boolean under this operator (92.3%/99.1% point-estimate removal), but not universally: state-transition has only six items, fails the single-effect noise gate, and is amplified by restoration. State-dependent restoration distortion remains a limitation not measured by a clean-state null.
-7. **Does full remainder contain learnable information?** Yes for causal directions/projections: causal-direction gain `0.456251 [0.379585, 0.538002]` and ordinary causal-projection RMSE improvement `0.002717 [0.002231, 0.003196]`. Semantic/output benefits are absent or uncertain.
-8. **Most informative endpoints?** Intervention-sensitive J directions, causal-projection RMSE, and next-J cosine. Semantic accuracy decreases and output-sign gain crosses zero.
-9. **Which families?** Causal-direction gains are positive in all five families; short graph is largest. Global next-J gains are largest in modular arithmetic/state transition and absent in variable binding. Sample sizes for causal family estimates are only 3–12.
-10. **Strong ceiling?** `True`.
-11. **Smallest effective C?** No validated sufficient C. The smallest/only joint screen-pass is `pca 512D` if “effective” means predictive+causal gap screening only.
-12. **Causal fidelity and conditional sufficiency?** Screen causal fidelity reaches cosine `0.468382` and closes `0.997032` of the full causal gap, but conditional residual adds `0.009032` causal cosine and `2.26` semantic percentage points. It therefore fails sufficiency.
-13. **Ready for recurrent controllers?** No. v6 intentionally trained none; entry additionally requires a strong ceiling, a compact gap-closing C, stable causal fidelity, and conditional sufficiency.
+| condition | next-J L2 | direction cosine | magnitude ratio | output JS | abs target log-odds delta |
+| --- | --- | --- | --- | --- | --- |
+| clean | 0.000000 [0.000000, 0.000000] | NA | 0.000000 [0.000000, 0.000000] | 0.00000000 [-0.00000000, 0.00000000] | 0.000000 [0.000000, 0.000000] |
+| kv_only | 0.008886 [0.007704, 0.010408] | 0.241406 [0.196983, 0.288726] | 0.291590 [0.261220, 0.323641] | 0.00003206 [0.00001861, 0.00004750] | 0.022639 [0.017109, 0.028569] |
+| recurrent_only | 0.030665 [0.027501, 0.034032] | 0.952030 [0.939131, 0.962745] | 0.974823 [0.956303, 0.990817] | 0.00018725 [0.00006236, 0.00039987] | 0.050222 [0.031540, 0.073656] |
+| full | 0.031605 [0.028197, 0.035152] | 1.000000 [1.000000, 1.000000] | 1.000000 [1.000000, 1.000000] | 0.00017820 [0.00005556, 0.00038820] | 0.047598 [0.031143, 0.068244] |
 
-## Evidence classes
+Corrected raw-channel cosine gain is 0.007552 [0.005535, 0.009790]; the
+best compression closes 0.474772 [0.419485, 0.526364] of the direct
+channel gap but leaves 0.525228 [0.473636, 0.580515] conditional
+gain. Candidate sufficient state:
+`False`.
 
-- **Causal:** paired teacher interventions and persistent/null arms.
-- **Predictive/associational:** held-out one-step peripheral-reference gains.
-- **Numerical validation:** float32 storage and float64 projection sensitivity.
-- **Practical magnitude:** raw JS/J/action effects and CIs, not p-values alone.
+## Scientific interpretation
 
-## Validity/fallacy scan
+- **Causal:** v6 same-J intervention; v7 KV/REC cache swaps and direct compressed-cache reconstructions.
+- **Predictive:** held-out raw-channel ceiling and learned component ordering.
+- **Practical magnitude:** REC+conv reproduces most next-J direction, but output JS is small and answer flips are rare.
+- **Uncertainty:** only 33 held-out pairs; family cells have 3--12 items; compression rank is 32.
 
-1. Correlation/causation: predictive ceiling is not called causal.
-2. Measurement validity: finite 4096D measured-J is named operationally.
-3. Aggregation: pooled and family-wise effects are separate.
-4. Selection leakage: causal directions use fit; strong architecture selection uses ordinary validation only; fidelity uses causal test. The compact sweep is exploratory and its 18-way test-set screen is not presented as confirmatory.
-5. Optional stopping: frozen gates determine compact authorization.
-6. Null-result interpretation: weak models do not prove absent information.
-7. Scale conflation: small global energy and causal importance are separate.
-8. Ratio instability: mediation ratios are gated on non-noise single effects.
-9. Intervention naturality: inherited validated v5 candidate criteria remain explicit.
-10. Restoration confounding: clean-state null limitation is stated.
-11. Overclaiming: no consciousness, true-thought, parameter-localization, or autonomous-controller claim.
+## Validity and fallacy scan
+
+1. Predictive gains are not called causal; only state swaps support causal wording.
+2. Finite 4096D profiles remain “measured-J,” not complete J-space.
+3. Pooled and family-wise attribution are both reported.
+4. Fit-half localization is separated from held-out attribution.
+5. The endpoint archive defect is preserved and disclosed; corrected analysis has its own freeze.
+6. Ridge alpha, split, bootstrap seed, and thresholds were not tuned after outcomes.
+7. Nominal dimensions above empirical rank are not counted as independent evidence.
+8. Failure to compress does not prove no compact representation exists.
+9. Token-window equality is not generalized beyond final-token intervention scope.
+10. Interaction prevents calling REC or KV independently sufficient.
+11. No consciousness, true-thought, parameter-localization, or autonomous-controller claim is made.
 
 ## Next blocker
 
-The strong ceiling is now established for causal-sensitive endpoints. The blocker is a compact `C_t` that retains these effects under an independent confirmation split and passes predictive, causal, and semantic conditional-sufficiency tests with CIs. Recurrent training remains blocked until then.
+Collect a substantially larger independent architecture-state bank so 64--512
+dimensions are identifiable, then fit channel-specific nonlinear causal
+bottlenecks with explicit ordinary next-state, semantic, output, and conditional
+residual endpoints. Only a candidate passing all frozen sufficiency gates should
+authorize autonomous recurrent dynamics.
 
-## Exact v6 commands
+## Exact v7 commands
 
 ```bash
-scripts/run_peripheral_v6.sh freeze --run-suffix protocol-freeze-r3
-CUDA_VISIBLE_DEVICES=0 scripts/run_peripheral_v6.sh causal --run-suffix full-66
-scripts/run_peripheral_v6.sh merge --run-suffix merge-full66
-scripts/run_peripheral_v6.sh freeze --run-suffix leakfree-ceiling-freeze-r6
-CUDA_VISIBLE_DEVICES=1 scripts/run_peripheral_v6.sh ceiling --run-suffix leakfree-strong
-scripts/run_peripheral_v6.sh freeze --run-suffix matched-compact-freeze-r7
-CUDA_VISIBLE_DEVICES=1 scripts/run_peripheral_v6.sh compact --run-suffix compact-sweep-matched
-scripts/run_peripheral_v6.sh freeze --run-suffix delivery-freeze-r12
-scripts/build_report_v6.sh --run-suffix final-reports-r5
+scripts/run_persistent_channels_v7.sh schema --run-suffix cache-schema
+scripts/run_persistent_channels_v7.sh restore --run-suffix restore-full8
+CUDA_VISIBLE_DEVICES=0 scripts/run_persistent_channels_v7.sh attribution --run-suffix attribution-full66
+scripts/run_persistent_channels_v7.sh analyze --run-suffix attribution-analysis
+CUDA_VISIBLE_DEVICES=0 scripts/run_arch_state_v7.sh localize --run-suffix localization-full66
+scripts/run_localization_analysis_v7.sh --run-suffix analysis-corrected-r1
+scripts/run_arch_compression_v7_corrective.sh freeze --run-suffix endpoint-fix-freeze
+scripts/run_arch_compression_v7_corrective.sh ceiling --run-suffix corrected-endpoint-ceiling
+CUDA_VISIBLE_DEVICES=0 scripts/run_arch_compression_v7_corrective.sh run --run-suffix corrected-compression-full
+scripts/run_arch_compression_v7_corrective.sh analyze --run-suffix corrected-compression-analysis
+scripts/build_report_v7.sh --run-suffix final-v7
 ```
+
+## Provenance continuity
+
+The v6 causal endpoint freeze remains `f62c55d21e5e220cd21ea81c19a28bf1d5249a60bdc35a08e3eb029dd61ec12e`. All v1--v6
+frozen reports/results remain unmodified; `FINAL_REPORT.md` is the declared
+cumulative-report exception.

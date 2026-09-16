@@ -1,0 +1,48 @@
+{
+  "causal_fidelity_status": "GATED_PENDING_OBSERVATIONAL_SUFFICIENCY",
+  "protocol_version": "conditional_sufficiency_dimension_protocol_v9",
+  "records": "results/v9/processed/behavior_enriched_causal_v9.parquet",
+  "records_sha256": "6e984df7241223b01c81254d9e0e5374b2ef4f289a04647c29976722aecb47a1",
+  "run_id": "sufficiency-v9-20260916T031132Z-9db674db-s20260828-rank-aware-full",
+  "schema_version": 12,
+  "selection": {
+    "base_trial_id_sha256": "ee11f67f30c9deb6d46cb4c6b93d52aa432c03dea5501fabd9c5a17846e80583",
+    "count": 100,
+    "family_counts": {
+      "boolean_logic": {
+        "available": 50,
+        "minimum_composite_score": 0.13227689963679326,
+        "selected": 20
+      },
+      "modular_arithmetic": {
+        "available": 50,
+        "minimum_composite_score": -0.058431728206723786,
+        "selected": 20
+      },
+      "short_graph_traversal": {
+        "available": 50,
+        "minimum_composite_score": -0.039165547077307794,
+        "selected": 20
+      },
+      "simple_state_transition": {
+        "available": 50,
+        "minimum_composite_score": 0.13252391997055074,
+        "selected": 20
+      },
+      "variable_binding": {
+        "available": 50,
+        "minimum_composite_score": 0.002749073145790463,
+        "selected": 20
+      }
+    },
+    "held_out_split": "final_test",
+    "model_fit_overlap": false,
+    "score_columns": [
+      "output_js_divergence",
+      "future_j_trajectory_divergence",
+      "target_log_odds_abs_change"
+    ],
+    "selection_rule": "top within-family standardized mean causal-effect score"
+  },
+  "source_freeze_digest": "6651aca6427c909b77c3930ae8487aa840b153679a9a80fd754292b2fa905d6f"
+}

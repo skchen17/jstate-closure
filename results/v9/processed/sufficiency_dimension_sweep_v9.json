@@ -1,0 +1,773 @@
+{
+  "candidate_status": {
+    "causal_bottleneck/1024": {
+      "authorized": false,
+      "dimension": 1024,
+      "effective_dimension": null,
+      "method": "causal_bottleneck",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "causal_bottleneck/1536": {
+      "authorized": false,
+      "dimension": 1536,
+      "effective_dimension": null,
+      "method": "causal_bottleneck",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "causal_bottleneck/2048": {
+      "authorized": false,
+      "dimension": 2048,
+      "effective_dimension": null,
+      "method": "causal_bottleneck",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "causal_bottleneck/512": {
+      "authorized": false,
+      "causal_direction_cosine": null,
+      "causal_gap_closed": null,
+      "causal_magnitude_ratio": null,
+      "causal_output_sign_agreement": null,
+      "dimension": 512,
+      "effective_dimension": 512,
+      "group_gates": {
+        "boolean_logic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "modular_arithmetic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "pooled": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "short_graph_traversal": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "simple_state_transition": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "variable_binding": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        }
+      },
+      "method": "causal_bottleneck",
+      "status": "GATED_BY_PREDICTIVE_CONDITIONAL_OR_SEMANTIC"
+    },
+    "causal_bottleneck/576": {
+      "authorized": false,
+      "causal_direction_cosine": null,
+      "causal_gap_closed": null,
+      "causal_magnitude_ratio": null,
+      "causal_output_sign_agreement": null,
+      "dimension": 576,
+      "effective_dimension": 576,
+      "group_gates": {
+        "boolean_logic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "modular_arithmetic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "pooled": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "short_graph_traversal": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "simple_state_transition": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "variable_binding": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        }
+      },
+      "method": "causal_bottleneck",
+      "status": "GATED_BY_PREDICTIVE_CONDITIONAL_OR_SEMANTIC"
+    },
+    "causal_bottleneck/599": {
+      "authorized": false,
+      "causal_direction_cosine": null,
+      "causal_gap_closed": null,
+      "causal_magnitude_ratio": null,
+      "causal_output_sign_agreement": null,
+      "dimension": 599,
+      "effective_dimension": 599,
+      "group_gates": {
+        "boolean_logic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "modular_arithmetic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "pooled": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "short_graph_traversal": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "simple_state_transition": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "variable_binding": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        }
+      },
+      "method": "causal_bottleneck",
+      "status": "GATED_BY_PREDICTIVE_CONDITIONAL_OR_SEMANTIC"
+    },
+    "causal_bottleneck/768": {
+      "authorized": false,
+      "dimension": 768,
+      "effective_dimension": null,
+      "method": "causal_bottleneck",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "pca/1024": {
+      "authorized": false,
+      "dimension": 1024,
+      "effective_dimension": null,
+      "method": "pca",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "pca/1536": {
+      "authorized": false,
+      "dimension": 1536,
+      "effective_dimension": null,
+      "method": "pca",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "pca/2048": {
+      "authorized": false,
+      "dimension": 2048,
+      "effective_dimension": null,
+      "method": "pca",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "pca/512": {
+      "authorized": false,
+      "causal_direction_cosine": null,
+      "causal_gap_closed": null,
+      "causal_magnitude_ratio": null,
+      "causal_output_sign_agreement": null,
+      "dimension": 512,
+      "effective_dimension": 512,
+      "group_gates": {
+        "boolean_logic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "modular_arithmetic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "pooled": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "short_graph_traversal": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "simple_state_transition": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "variable_binding": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        }
+      },
+      "method": "pca",
+      "status": "GATED_BY_PREDICTIVE_CONDITIONAL_OR_SEMANTIC"
+    },
+    "pca/576": {
+      "authorized": false,
+      "causal_direction_cosine": null,
+      "causal_gap_closed": null,
+      "causal_magnitude_ratio": null,
+      "causal_output_sign_agreement": null,
+      "dimension": 576,
+      "effective_dimension": 576,
+      "group_gates": {
+        "boolean_logic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "modular_arithmetic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "pooled": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "short_graph_traversal": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "simple_state_transition": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "variable_binding": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        }
+      },
+      "method": "pca",
+      "status": "GATED_BY_PREDICTIVE_CONDITIONAL_OR_SEMANTIC"
+    },
+    "pca/599": {
+      "authorized": false,
+      "causal_direction_cosine": null,
+      "causal_gap_closed": null,
+      "causal_magnitude_ratio": null,
+      "causal_output_sign_agreement": null,
+      "dimension": 599,
+      "effective_dimension": 599,
+      "group_gates": {
+        "boolean_logic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "modular_arithmetic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "pooled": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "short_graph_traversal": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "simple_state_transition": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "variable_binding": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        }
+      },
+      "method": "pca",
+      "status": "GATED_BY_PREDICTIVE_CONDITIONAL_OR_SEMANTIC"
+    },
+    "pca/768": {
+      "authorized": false,
+      "dimension": 768,
+      "effective_dimension": null,
+      "method": "pca",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "predictive_bottleneck/1024": {
+      "authorized": false,
+      "dimension": 1024,
+      "effective_dimension": null,
+      "method": "predictive_bottleneck",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "predictive_bottleneck/1536": {
+      "authorized": false,
+      "dimension": 1536,
+      "effective_dimension": null,
+      "method": "predictive_bottleneck",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "predictive_bottleneck/2048": {
+      "authorized": false,
+      "dimension": 2048,
+      "effective_dimension": null,
+      "method": "predictive_bottleneck",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "predictive_bottleneck/512": {
+      "authorized": false,
+      "causal_direction_cosine": null,
+      "causal_gap_closed": null,
+      "causal_magnitude_ratio": null,
+      "causal_output_sign_agreement": null,
+      "dimension": 512,
+      "effective_dimension": 512,
+      "group_gates": {
+        "boolean_logic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "modular_arithmetic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "pooled": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "short_graph_traversal": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "simple_state_transition": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "variable_binding": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        }
+      },
+      "method": "predictive_bottleneck",
+      "status": "GATED_BY_PREDICTIVE_CONDITIONAL_OR_SEMANTIC"
+    },
+    "predictive_bottleneck/576": {
+      "authorized": false,
+      "causal_direction_cosine": null,
+      "causal_gap_closed": null,
+      "causal_magnitude_ratio": null,
+      "causal_output_sign_agreement": null,
+      "dimension": 576,
+      "effective_dimension": 576,
+      "group_gates": {
+        "boolean_logic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "modular_arithmetic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "pooled": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "short_graph_traversal": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "simple_state_transition": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "variable_binding": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        }
+      },
+      "method": "predictive_bottleneck",
+      "status": "GATED_BY_PREDICTIVE_CONDITIONAL_OR_SEMANTIC"
+    },
+    "predictive_bottleneck/599": {
+      "authorized": false,
+      "causal_direction_cosine": null,
+      "causal_gap_closed": null,
+      "causal_magnitude_ratio": null,
+      "causal_output_sign_agreement": null,
+      "dimension": 599,
+      "effective_dimension": 599,
+      "group_gates": {
+        "boolean_logic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "modular_arithmetic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "pooled": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "short_graph_traversal": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "simple_state_transition": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "variable_binding": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        }
+      },
+      "method": "predictive_bottleneck",
+      "status": "GATED_BY_PREDICTIVE_CONDITIONAL_OR_SEMANTIC"
+    },
+    "predictive_bottleneck/768": {
+      "authorized": false,
+      "dimension": 768,
+      "effective_dimension": null,
+      "method": "predictive_bottleneck",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "semantic_causal_bottleneck/1024": {
+      "authorized": false,
+      "dimension": 1024,
+      "effective_dimension": null,
+      "method": "semantic_causal_bottleneck",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "semantic_causal_bottleneck/1536": {
+      "authorized": false,
+      "dimension": 1536,
+      "effective_dimension": null,
+      "method": "semantic_causal_bottleneck",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "semantic_causal_bottleneck/2048": {
+      "authorized": false,
+      "dimension": 2048,
+      "effective_dimension": null,
+      "method": "semantic_causal_bottleneck",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "semantic_causal_bottleneck/512": {
+      "authorized": false,
+      "causal_direction_cosine": null,
+      "causal_gap_closed": null,
+      "causal_magnitude_ratio": null,
+      "causal_output_sign_agreement": null,
+      "dimension": 512,
+      "effective_dimension": 512,
+      "group_gates": {
+        "boolean_logic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "modular_arithmetic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "pooled": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "short_graph_traversal": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "simple_state_transition": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "variable_binding": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        }
+      },
+      "method": "semantic_causal_bottleneck",
+      "status": "GATED_BY_PREDICTIVE_CONDITIONAL_OR_SEMANTIC"
+    },
+    "semantic_causal_bottleneck/576": {
+      "authorized": false,
+      "causal_direction_cosine": null,
+      "causal_gap_closed": null,
+      "causal_magnitude_ratio": null,
+      "causal_output_sign_agreement": null,
+      "dimension": 576,
+      "effective_dimension": 576,
+      "group_gates": {
+        "boolean_logic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "modular_arithmetic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "pooled": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "short_graph_traversal": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "simple_state_transition": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "variable_binding": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        }
+      },
+      "method": "semantic_causal_bottleneck",
+      "status": "GATED_BY_PREDICTIVE_CONDITIONAL_OR_SEMANTIC"
+    },
+    "semantic_causal_bottleneck/599": {
+      "authorized": false,
+      "causal_direction_cosine": null,
+      "causal_gap_closed": null,
+      "causal_magnitude_ratio": null,
+      "causal_output_sign_agreement": null,
+      "dimension": 599,
+      "effective_dimension": 599,
+      "group_gates": {
+        "boolean_logic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "modular_arithmetic": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        },
+        "pooled": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "short_graph_traversal": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "simple_state_transition": {
+          "conditional_pass": true,
+          "observational_gate_pass": false,
+          "predictive_pass": true,
+          "semantic_pass": false
+        },
+        "variable_binding": {
+          "conditional_pass": true,
+          "observational_gate_pass": true,
+          "predictive_pass": true,
+          "semantic_pass": true
+        }
+      },
+      "method": "semantic_causal_bottleneck",
+      "status": "GATED_BY_PREDICTIVE_CONDITIONAL_OR_SEMANTIC"
+    },
+    "semantic_causal_bottleneck/768": {
+      "authorized": false,
+      "dimension": 768,
+      "effective_dimension": null,
+      "method": "semantic_causal_bottleneck",
+      "rank": 599,
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    }
+  },
+  "causal_decoding_executed": false,
+  "controller_authorized": false,
+  "latent_metadata": {
+    "largest_singular_value": 25.33197784423828,
+    "rank": 599,
+    "smallest_retained_singular_value": 23.622631072998047
+  },
+  "observational_gate_pass_count": 0,
+  "protocol_version": "conditional_sufficiency_dimension_protocol_v9",
+  "rank_audit": {
+    "conclusion": "dimensions above 599 are not identifiable from the frozen 600-pair training split",
+    "effective_rank": 599,
+    "identified_dimensions": [
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      576,
+      599
+    ],
+    "rank_limited_dimensions": [
+      768,
+      1024,
+      1536,
+      2048
+    ],
+    "requested_dimensions": [
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      576,
+      599,
+      768,
+      1024,
+      1536,
+      2048
+    ],
+    "train_count": 600
+  },
+  "records": "results/v9/processed/sufficiency_dimension_sweep_v9.parquet",
+  "records_sha256": "e21ab4f44e1ff10c86346b8e201ed06b08d33aee454abb046e4273ab81599467",
+  "run_id": "sufficiency-v9-20260916T031132Z-9db674db-s20260828-rank-aware-full",
+  "schema_version": 12,
+  "smallest_authorized_dimension": null,
+  "smallest_observational_candidate": null,
+  "source_freeze_digest": "6651aca6427c909b77c3930ae8487aa840b153679a9a80fd754292b2fa905d6f",
+  "source_v8_freeze_digest": "1cbb255ddfd42438a18fc374daceebdf0f7ec6fe6f56c94a3f914654c1ab61ad",
+  "status": "COMPLETED_OBSERVATIONAL_SCREEN_CAUSAL_GATED"
+}

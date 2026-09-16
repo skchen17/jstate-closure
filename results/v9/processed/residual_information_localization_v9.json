@@ -1,0 +1,178 @@
+{
+  "dimensions": {
+    "1024": {
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "1536": {
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    "512": {
+      "joint_conditional_gain": {
+        "estimate": 0.13206869977712632,
+        "lower": 0.11794445568025112,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.11794445568025112,
+            "upper": 0.1468259347140789
+          },
+          "20260829": {
+            "lower": 0.1180017549932003,
+            "upper": 0.1469786910831928
+          },
+          "20260830": {
+            "lower": 0.11801322461813687,
+            "upper": 0.1468641843944788
+          }
+        },
+        "upper": 0.1469786910831928
+      },
+      "largest_residual_source": "recurrent",
+      "rows": [
+        {
+          "conditional_gain": 0.0662629795372486,
+          "dimension": 512,
+          "lower": 0.059146979764476415,
+          "metadata": "{\"estimate\": 0.0662629795372486, \"lower\": 0.059146979764476415, \"n_clusters\": 250, \"n_resamples_per_seed\": 10000, \"seeds\": {\"20260828\": {\"lower\": 0.059146979764476415, \"upper\": 0.07362766121253371}, \"20260829\": {\"lower\": 0.059200030706077815, \"upper\": 0.073769781190902}, \"20260830\": {\"lower\": 0.059259206030145284, \"upper\": 0.07350873570814728}}, \"upper\": 0.073769781190902}",
+          "method": "causal_bottleneck",
+          "protocol_version": "conditional_sufficiency_dimension_protocol_v9",
+          "record_type": "residual_localization",
+          "run_id": "sufficiency-v9-20260916T031132Z-9db674db-s20260828-rank-aware-full",
+          "schema_version": 12,
+          "source": "recurrent",
+          "upper": 0.073769781190902
+        },
+        {
+          "conditional_gain": 0.06488383607566357,
+          "dimension": 512,
+          "lower": 0.05802904640510679,
+          "metadata": "{\"estimate\": 0.06488383607566357, \"lower\": 0.05802904640510679, \"n_clusters\": 250, \"n_resamples_per_seed\": 10000, \"seeds\": {\"20260828\": {\"lower\": 0.05802904640510679, \"upper\": 0.07195374662056565}, \"20260829\": {\"lower\": 0.05804431706257165, \"upper\": 0.07209125222563743}, \"20260830\": {\"lower\": 0.058120767020806666, \"upper\": 0.07189484426267445}}, \"upper\": 0.07209125222563743}",
+          "method": "causal_bottleneck",
+          "protocol_version": "conditional_sufficiency_dimension_protocol_v9",
+          "record_type": "residual_localization",
+          "run_id": "sufficiency-v9-20260916T031132Z-9db674db-s20260828-rank-aware-full",
+          "schema_version": 12,
+          "source": "conv",
+          "upper": 0.07209125222563743
+        },
+        {
+          "conditional_gain": 0.057038139522075655,
+          "dimension": 512,
+          "lower": 0.05102915431857109,
+          "metadata": "{\"estimate\": 0.057038139522075655, \"lower\": 0.05102915431857109, \"n_clusters\": 250, \"n_resamples_per_seed\": 10000, \"seeds\": {\"20260828\": {\"lower\": 0.05102915431857109, \"upper\": 0.06327157802581787}, \"20260829\": {\"lower\": 0.05104415384456515, \"upper\": 0.06336738834679127}, \"20260830\": {\"lower\": 0.05105688824281097, \"upper\": 0.06317932375445962}}, \"upper\": 0.06336738834679127}",
+          "method": "causal_bottleneck",
+          "protocol_version": "conditional_sufficiency_dimension_protocol_v9",
+          "record_type": "residual_localization",
+          "run_id": "sufficiency-v9-20260916T031132Z-9db674db-s20260828-rank-aware-full",
+          "schema_version": 12,
+          "source": "kv",
+          "upper": 0.06336738834679127
+        },
+        {
+          "conditional_gain": -0.056116255298256874,
+          "dimension": 512,
+          "lower": -0.06261036866083741,
+          "metadata": "{\"estimate\": -0.056116255298256874, \"lower\": -0.06261036866083741, \"n_clusters\": 250, \"n_resamples_per_seed\": 10000, \"seeds\": {\"20260828\": {\"lower\": -0.06250958165451884, \"upper\": -0.05000620973818004}, \"20260829\": {\"lower\": -0.06261036866083741, \"upper\": -0.05003111844919622}, \"20260830\": {\"lower\": -0.06243090625591576, \"upper\": -0.04998756005689502}}, \"upper\": -0.04998756005689502}",
+          "method": "causal_bottleneck",
+          "protocol_version": "conditional_sufficiency_dimension_protocol_v9",
+          "record_type": "residual_localization",
+          "run_id": "sufficiency-v9-20260916T031132Z-9db674db-s20260828-rank-aware-full",
+          "schema_version": 12,
+          "source": "interaction",
+          "upper": -0.04998756005689502
+        }
+      ],
+      "status": "COMPLETED"
+    },
+    "599": {
+      "joint_conditional_gain": {
+        "estimate": 0.13138216158747673,
+        "lower": 0.11723157670050859,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.11723157670050859,
+            "upper": 0.14612761074230074
+          },
+          "20260829": {
+            "lower": 0.11734549504444003,
+            "upper": 0.14619262494444846
+          },
+          "20260830": {
+            "lower": 0.11741114789322019,
+            "upper": 0.14604471746534106
+          }
+        },
+        "upper": 0.14619262494444846
+      },
+      "largest_residual_source": "recurrent",
+      "rows": [
+        {
+          "conditional_gain": 0.0655570417791605,
+          "dimension": 599,
+          "lower": 0.05853545185290277,
+          "metadata": "{\"estimate\": 0.0655570417791605, \"lower\": 0.05853545185290277, \"n_clusters\": 250, \"n_resamples_per_seed\": 10000, \"seeds\": {\"20260828\": {\"lower\": 0.05853545185290277, \"upper\": 0.07286822706796228}, \"20260829\": {\"lower\": 0.05856771237701178, \"upper\": 0.07301585220247507}, \"20260830\": {\"lower\": 0.05861113527715206, \"upper\": 0.0727637634344399}}, \"upper\": 0.07301585220247507}",
+          "method": "causal_bottleneck",
+          "protocol_version": "conditional_sufficiency_dimension_protocol_v9",
+          "record_type": "residual_localization",
+          "run_id": "sufficiency-v9-20260916T031132Z-9db674db-s20260828-rank-aware-full",
+          "schema_version": 12,
+          "source": "recurrent",
+          "upper": 0.07301585220247507
+        },
+        {
+          "conditional_gain": 0.06424610564112664,
+          "dimension": 599,
+          "lower": 0.057476368803903465,
+          "metadata": "{\"estimate\": 0.06424610564112664, \"lower\": 0.057476368803903465, \"n_clusters\": 250, \"n_resamples_per_seed\": 10000, \"seeds\": {\"20260828\": {\"lower\": 0.057476368803903465, \"upper\": 0.07128957862854003}, \"20260829\": {\"lower\": 0.05748413238450885, \"upper\": 0.07143507419526578}, \"20260830\": {\"lower\": 0.05752463279403747, \"upper\": 0.07117602669186888}}, \"upper\": 0.07143507419526578}",
+          "method": "causal_bottleneck",
+          "protocol_version": "conditional_sufficiency_dimension_protocol_v9",
+          "record_type": "residual_localization",
+          "run_id": "sufficiency-v9-20260916T031132Z-9db674db-s20260828-rank-aware-full",
+          "schema_version": 12,
+          "source": "conv",
+          "upper": 0.07143507419526578
+        },
+        {
+          "conditional_gain": 0.05646589858829975,
+          "dimension": 599,
+          "lower": 0.050525876493752,
+          "metadata": "{\"estimate\": 0.05646589858829975, \"lower\": 0.050525876493752, \"n_clusters\": 250, \"n_resamples_per_seed\": 10000, \"seeds\": {\"20260828\": {\"lower\": 0.050525876493752, \"upper\": 0.06258641119040549}, \"20260829\": {\"lower\": 0.05054410350657999, \"upper\": 0.06271536826640367}, \"20260830\": {\"lower\": 0.05053788597285748, \"upper\": 0.06255729714557529}}, \"upper\": 0.06271536826640367}",
+          "method": "causal_bottleneck",
+          "protocol_version": "conditional_sufficiency_dimension_protocol_v9",
+          "record_type": "residual_localization",
+          "run_id": "sufficiency-v9-20260916T031132Z-9db674db-s20260828-rank-aware-full",
+          "schema_version": 12,
+          "source": "kv",
+          "upper": 0.06271536826640367
+        },
+        {
+          "conditional_gain": -0.054886884465813635,
+          "dimension": 599,
+          "lower": -0.06125915222018957,
+          "metadata": "{\"estimate\": -0.054886884465813635, \"lower\": -0.06125915222018957, \"n_clusters\": 250, \"n_resamples_per_seed\": 10000, \"seeds\": {\"20260828\": {\"lower\": -0.061195508829131724, \"upper\": -0.048858865830302245}, \"20260829\": {\"lower\": -0.06125915222018957, \"upper\": -0.048883060314133774}, \"20260830\": {\"lower\": -0.06111040473878383, \"upper\": -0.048846491586044434}}, \"upper\": -0.048846491586044434}",
+          "method": "causal_bottleneck",
+          "protocol_version": "conditional_sufficiency_dimension_protocol_v9",
+          "record_type": "residual_localization",
+          "run_id": "sufficiency-v9-20260916T031132Z-9db674db-s20260828-rank-aware-full",
+          "schema_version": 12,
+          "source": "interaction",
+          "upper": -0.048846491586044434
+        }
+      ],
+      "status": "COMPLETED"
+    },
+    "768": {
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    }
+  },
+  "method": "causal_bottleneck",
+  "protocol_version": "conditional_sufficiency_dimension_protocol_v9",
+  "records": "results/v9/processed/residual_information_localization_v9.parquet",
+  "records_sha256": "7b0f9947377b714b93cd0f110aa9ba249c8d22974c5acb99db778f0f7878d4dd",
+  "run_id": "sufficiency-v9-20260916T031132Z-9db674db-s20260828-rank-aware-full",
+  "schema_version": 12,
+  "source_freeze_digest": "6651aca6427c909b77c3930ae8487aa840b153679a9a80fd754292b2fa905d6f"
+}

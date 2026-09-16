@@ -1,0 +1,23 @@
+{
+  "candidate_freeze_digest": "3e2368a3b21738f7c00e8ca56290c03d228e978634e31491087bf7507da8a235",
+  "causal_amendment_freeze_digest": "cb0df76882a701452f3973782b44aaa0ea5a0984881d81465c5e1037ecdef3a5",
+  "code_commit": "d205be644617f393fdfa13acf8deb933e2b5a093",
+  "freeze_digest": "4b319ebffda82f7bcd155df70bbd7d0490dab9bea7fc92e8c1387ecb453d48c8",
+  "hashes": {
+    "artifacts/causal_sufficiency_v10_candidates.freeze.json": "f0f5cd678d14b91ab55e6b1bd8920631748f92afbbf122ca125921063c860b3a",
+    "artifacts/causal_sufficiency_v10_causal_metadata_amendment.freeze.json": "3d9bc70e1b3e0fcba0e09905da058f46b730af5fedc847581c984427d1426e77",
+    "results/v10/processed/compact_decoder_v10.json": "19a8e4ba847636dafa82df617de885c11c688b1c69b493629baafd348ec14bf0",
+    "results/v10/processed/decoded_causal_state_validation_v10.json": "c432436267cd54bf4948ec4cd6b807a1684b0ab980c809302251bfe5ce489f7a",
+    "results/v10/processed/decoded_causal_state_validation_v10.parquet": "c10e187f10baf04d68734232bc52ba90b7967b52262b45c14d4a66f2780ffa6b",
+    "scripts/run_strict_interface_v10.sh": "5e35ee56b8e952ad2d9bdad4ec20333eadf404c470c033e0a32aefe2681b5f66",
+    "src/jclosure/experiments/strict_interface_v10.py": "2c2b661f469ce1b3767d12df6f2f4c9ccbb65afbf3c463ee2ffb97e6e51e41b6",
+    "src/jclosure/protocol_v10_strict_interface.py": "239c078d292427ea0eb92dcc681efa82b60197bfefce41da3d842e4c19247460",
+    "tests/test_strict_interface_v10.py": "297a65d6bcfb4c4cdf8f34f74ee9cd3427ddc1757494297d97ed801cef45d18f"
+  },
+  "protocol_version": "strict_interface_three_way_audit_v10_1",
+  "three_way_definition": {
+    "compact_only": "clean cache plus decoded compact delta",
+    "compact_plus_raw_residual": "decoded delta plus (raw minus decoded)",
+    "full_raw": "clean cache plus frozen teacher raw delta"
+  }
+}

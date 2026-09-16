@@ -1,0 +1,95 @@
+extends: causal_sufficiency_v10.yaml
+
+run:
+  stage: causal_geometry_v11
+  protocol_version: architecture_resolved_causal_geometry_v11
+  timeout_hours: 72
+
+outputs:
+  root: results/v11
+  raw: raw
+  processed: processed
+  figures: figures
+  reports: ../../reports
+  artifacts: ../../artifacts
+
+causal_geometry_v11:
+  baseline_commit: 10c24a475852ecf6370c8ad0d5e1cae5ad3cc92e
+  development_source: artifacts/causal_sufficiency_v10_candidates.freeze.json
+  confirmatory:
+    per_family: 10
+    effect_enriched_per_family: 5
+    selection_seed: 20270111
+  horizons: [1, 2, 4, 8, 16]
+  authorization_horizons: [1, 2, 4, 8]
+  bootstrap_resamples: 10000
+  confirmation_seeds: [20260828, 20260829, 20260830]
+  causal_gates:
+    direction_cosine_minimum: 0.8
+    magnitude_ratio_minimum: 0.8
+    magnitude_ratio_maximum: 1.2
+    semantic_delta_agreement_minimum: 0.8
+    output_direction_minimum: 0.8
+    task_decision_sign_minimum: 0.8
+  channel_audit:
+    dimension: 512
+    conditions:
+      - decoded_rec
+      - decoded_conv
+      - decoded_kv
+      - decoded_rec_conv
+      - decoded_rec_kv
+      - decoded_conv_kv
+      - decoded_all
+  oracle:
+    dimensions: [64, 128, 192, 256, 320, 384, 448, 512]
+    families: [joint_pca, factorized_pca]
+  factorized:
+    total_budgets: [256, 384, 512]
+    objectives:
+      - cache_pca
+      - h1_direction
+      - semantic_h1
+      - output_h1
+      - multistep_direction
+      - effect_weighted_multistep
+      - causal_composite
+      - manifold_regularized
+    allocations:
+      "256":
+        no_interaction:
+          - [128, 80, 48, 0]
+          - [112, 96, 48, 0]
+          - [128, 64, 64, 0]
+        interaction:
+          - [112, 72, 40, 32]
+          - [96, 80, 48, 32]
+          - [112, 64, 48, 32]
+      "384":
+        no_interaction:
+          - [192, 112, 80, 0]
+          - [160, 144, 80, 0]
+          - [176, 112, 96, 0]
+        interaction:
+          - [192, 96, 64, 32]
+          - [160, 128, 64, 32]
+          - [192, 128, 48, 16]
+      "512":
+        no_interaction:
+          - [256, 160, 96, 0]
+          - [224, 192, 96, 0]
+          - [240, 144, 128, 0]
+        interaction:
+          - [240, 144, 96, 32]
+          - [224, 160, 96, 32]
+          - [224, 144, 112, 32]
+    stage1_methods_per_class: 1
+    stage2_total_methods: 6
+  decoder:
+    reconstruction_chunk: 65536
+    shard_size: 5
+  manifold:
+    nearest_neighbors: 16
+    local_pca_rank: 8
+    global_subspace_rank: 128
+  confirmatory_method_limit: 4

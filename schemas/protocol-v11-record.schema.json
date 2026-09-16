@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jstate-closure.local/schema/protocol-v11-record.schema.json",
+  "title": "Protocol v11 causal geometry record",
+  "type": "object",
+  "required": ["schema_version", "protocol_version", "record_type", "run_id"],
+  "properties": {
+    "schema_version": {"const": 14},
+    "protocol_version": {"type": "string"},
+    "record_type": {"type": "string"},
+    "run_id": {"type": "string"},
+    "base_trial_id": {"type": "string"},
+    "method": {"type": "string"},
+    "condition": {"type": "string"},
+    "dimension": {"type": "integer", "minimum": 1},
+    "horizon": {"type": "integer", "minimum": 1},
+    "split": {"enum": ["development", "confirmatory", "train", "validation"]}
+  },
+  "additionalProperties": true
+}

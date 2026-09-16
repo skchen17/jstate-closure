@@ -89,3 +89,33 @@ scripts/build_report_v7.sh --run-suffix final-v7
 The v6 causal endpoint freeze remains `f62c55d21e5e220cd21ea81c19a28bf1d5249a60bdc35a08e3eb029dd61ec12e`. All v1--v6
 frozen reports/results remain unmodified; `FINAL_REPORT.md` is the declared
 cumulative-report exception.
+
+<!-- V8-RESULTS:START -->
+
+## Protocol v8 large-sample persistent-state update
+
+The frozen five-family data produced `1100` valid paired states, including `250` independent final-test pairs. Raw full-persistent swapping changed next measured-J by 0.0239 [0.0231, 0.0246] L2. Recurrent-matrix plus convolution state aligned with the full-persistent causal direction at 0.9492 [0.9459, 0.9523].
+
+Compression status is `COMPLETED_SCREEN_CAUSAL_GATED` and the smallest fully authorized state is `None`. Controller authorization is `False`. Predictive screening is not counted as causal or conditional sufficiency; decoded-state intervention gates remain mandatory.
+
+The strongest conclusion therefore remains **H2 for the tested operational measured-J state** unless and until one compressed persistent state passes predictive, conditional-residual, and causal-fidelity gates together. Dense measured-J is not relabeled as a compact state.
+
+Evidence labels: R0–R7/factorial cache swaps are intervention-based causal evidence; compression regressions are held-out predictive evidence; confidence intervals quantify sampling uncertainty but do not establish state minimality.
+
+### Required v8 questions
+
+1. KV/recurrent attribution replication: R4 direction 0.9492 [0.9459, 0.9523] and R5 standalone next-J 0.0067 [0.0066, 0.0069].
+2. Recurrent/conv dominance: R4 magnitude 0.9780 [0.9731, 0.9830] versus R5 0.2976 [0.2880, 0.3078].
+3. L27/H3 independent contribution: R5 next-J is 0.0067 [0.0066, 0.0069]; this is a direct cache-swap effect.
+4. REC×KV interaction: `{'atoms': ['rec_matrix_all', 'kv_l27_h3'], 'order': 2, 'output_js_interaction': {'confidence': 0.95, 'estimate': -9.607998995126698e-06, 'lower': -1.4051941503881617e-05, 'n_clusters': 250, 'n_observations': 250, 'n_resamples': 10000, 'upper': -5.34600337186961e-06}, 'vector_interaction_ratio_to_full': {'confidence': 0.95, 'estimate': 0.36527972982152995, 'lower': 0.3541827020333572, 'n_clusters': 250, 'n_observations': 250, 'n_resamples': 10000, 'upper': 0.37682445652088237}}`.
+5. Smallest raw component set passing the frozen raw screen: `R7`.
+6. Full persistent ceiling: R7 next-J 0.0239 [0.0231, 0.0246].
+7. Compression outcome: `COMPLETED_SCREEN_CAUSAL_GATED`; best predictive candidate shared_family_residual/causal_bottleneck/512D: predictive gap 1.0142, conditional gain 0.0607.
+8. Smallest sufficient dimension: `None`.
+9. Conditional residual gain near zero: `False` under every pooled/family gate.
+10. Decoded causal intervention fidelity passed: `False`.
+11. Best universal versus family-specific predictive gap: `0.9649471210904913` versus `0.21504578517298215`.
+12. Candidate sufficient persistent state obtained: `False`.
+13. Autonomous recurrent dynamics authorized: `False`.
+
+<!-- V8-RESULTS:END -->

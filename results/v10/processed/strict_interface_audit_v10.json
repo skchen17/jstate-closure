@@ -1,0 +1,69 @@
+{
+  "candidate_freeze_digest": "3e2368a3b21738f7c00e8ca56290c03d228e978634e31491087bf7507da8a235",
+  "causal_run_id": "decoded-causal-v10-amendment-20260916T055824Z-e29627c0-s20260828-causal-confirmatory-final",
+  "maximum_recombined_full_raw_abs_error": 4.656612873077393e-10,
+  "protocol_version": "strict_interface_three_way_audit_v10_1",
+  "records": "results/v10/processed/strict_interface_audit_v10.parquet",
+  "records_sha256": "fdba9ead5b43098ac5227980e4ff66b4ddebf7f96d320f35ac6df6f97ec62a93",
+  "run_id": "strict-interface-v10-20260916T061144Z-e29627c0-s20260828-strict-three-way",
+  "source_freeze_digest": "4b319ebffda82f7bcd155df70bbd7d0490dab9bea7fc92e8c1387ecb453d48c8",
+  "state_similarity": {
+    "384": {
+      "conv": {
+        "decoded_teacher_cosine_mean": 0.9863293278217315,
+        "raw_residual_relative_l2_mean": 0.16570808470249176
+      },
+      "kv": {
+        "decoded_teacher_cosine_mean": 0.958699848651886,
+        "raw_residual_relative_l2_mean": 0.27414025336503983
+      },
+      "recurrent": {
+        "decoded_teacher_cosine_mean": 0.975157366991043,
+        "raw_residual_relative_l2_mean": 0.22238077759742736
+      }
+    },
+    "448": {
+      "conv": {
+        "decoded_teacher_cosine_mean": 0.9872538208961487,
+        "raw_residual_relative_l2_mean": 0.1581963488459587
+      },
+      "kv": {
+        "decoded_teacher_cosine_mean": 0.9602040505409241,
+        "raw_residual_relative_l2_mean": 0.26844852060079577
+      },
+      "recurrent": {
+        "decoded_teacher_cosine_mean": 0.9769106042385102,
+        "raw_residual_relative_l2_mean": 0.21376363605260848
+      }
+    },
+    "512": {
+      "conv": {
+        "decoded_teacher_cosine_mean": 0.9879637002944947,
+        "raw_residual_relative_l2_mean": 0.15227907538414
+      },
+      "kv": {
+        "decoded_teacher_cosine_mean": 0.9613597774505616,
+        "raw_residual_relative_l2_mean": 0.2641018334031105
+      },
+      "recurrent": {
+        "decoded_teacher_cosine_mean": 0.978166390657425,
+        "raw_residual_relative_l2_mean": 0.20713263928890227
+      }
+    }
+  },
+  "strict_compact_only_interface": {
+    "allowed_inputs": [
+      "clean_cache",
+      "decoded_delta",
+      "teacher_forced_token"
+    ],
+    "function_sha256": "dfca86026a9d100d7f5ec01f4bc54ba81404385664ea6d91685f49dad295e679",
+    "raw_test_cache_available_to_decoded_continuation": false,
+    "verified": true
+  },
+  "three_way_comparison": {
+    "compact_only": "Experimentally evaluated; failed frozen causal gates for every candidate.",
+    "compact_plus_raw_residual": "Diagnostic only and intentionally violates compact-only access; numerically reconstructs the full raw delta.",
+    "full_raw": "Teacher intervention reference."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "candidate_causal_sufficient_state": null,
+  "candidate_dimensions": [
+    384,
+    448,
+    512
+  ],
+  "commands": [
+    "scripts/run_causal_sufficiency_v10.sh freeze --run-suffix protocol-freeze",
+    "scripts/run_causal_sufficiency_v10.sh audit --run-suffix corrected-audit",
+    "scripts/run_causal_sufficiency_v10_residual_amendment.sh freeze --run-suffix estimand-freeze",
+    "scripts/run_causal_sufficiency_v10_residual_amendment.sh audit --run-suffix frozen-base-audit",
+    "scripts/run_causal_sufficiency_v10.sh freeze-candidates --run-suffix candidate-freeze",
+    "scripts/run_causal_sufficiency_v10.sh prepare-decoder --device 0 --run-suffix decoder",
+    "scripts/run_causal_sufficiency_v10_causal_amendment.sh freeze --run-suffix metadata-freeze",
+    "HF_HOME=/data/CSK/J-space-project/.hf-cache scripts/run_causal_sufficiency_v10_causal_amendment.sh causal --device 0 --run-suffix causal-confirmatory-final",
+    "scripts/run_strict_interface_v10.sh freeze --run-suffix strict-freeze",
+    "scripts/run_strict_interface_v10.sh audit --run-suffix strict-three-way",
+    "scripts/run_causal_sufficiency_v10.sh report --run-suffix final-v10",
+    "scripts/finalize_reports_v10.sh --run-suffix amendment-aware-final"
+  ],
+  "controller_authorized": false,
+  "free_continuation_executed": false,
+  "freeze_digests": {
+    "base": "cf1f153f10f2aa9d522beb44ee6c0b7cb2df2d0b2353db72bcfa5d18eb0d3dc5",
+    "candidates": "3e2368a3b21738f7c00e8ca56290c03d228e978634e31491087bf7507da8a235",
+    "causal_metadata_amendment": "cb0df76882a701452f3973782b44aaa0ea5a0984881d81465c5e1037ecdef3a5",
+    "residual_amendment": "f5b2e0654f389740058dadb9bd17951d8c623fe7f9352b401f381e29cd2d9cf7",
+    "strict_interface": "4b319ebffda82f7bcd155df70bbd7d0490dab9bea7fc92e8c1387ecb453d48c8"
+  },
+  "git_commit_at_generation": "633f3f706e970b0c17af04b8b27238d292cea954",
+  "report_hashes": {
+    "reports/BEHAVIOR_ENRICHED_CONFIRMATORY_V10.md": "ff9bc359b0e93c593098b0e395d0f423307cd690472db8cca08774a7c7f4cb06",
+    "reports/CORRECTED_SUB512_SUFFICIENCY_V10.md": "e4673f006d1aa1fcb864650cdfabe971d26f1fdbde997b07f78b0e76d21ba8da",
+    "reports/DECODED_CAUSAL_STATE_VALIDATION_V10.md": "782bddd49ff82b6125b5abc047875c12a5865d55ba388ac979b603dae196dfe6",
+    "reports/FINAL_REPORT.md": "b0dddb00eea3be76152ebf17363712778f955cd33a1922c7ee647314e543eaf5",
+    "reports/LONG_HORIZON_STATE_SUFFICIENCY_V10.md": "8b38f889ca13e52fdd25a5eab1bbbbc192323a393c82c65a550a80154a518a57",
+    "reports/RESIDUAL_LOCALIZATION_AUDIT_V10.md": "5474f098af8771aea97a5c62f13df0ba576741d79566d15ad6ef5b1e36c0046e",
+    "reports/SEMANTIC_SUFFICIENCY_AUDIT_V10.md": "f164ad1bb936de2ce6e19e02d34edee989c301b5ace6d9c1aa1bc71391dd3211"
+  },
+  "smallest_observationally_sufficient_dimension": 384,
+  "status": "COMPLETED_V10_FINAL",
+  "strongest_conclusion": "384D is observationally sufficient relative to the combined ceiling, but no tested compact state is a causally sufficient interface."
+}

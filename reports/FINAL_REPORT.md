@@ -160,3 +160,45 @@ scripts/run_sufficiency_v9_reporting_amendment_3.sh report --run-suffix final-v9
 ```
 
 <!-- V9-RESULTS:END -->
+
+<!-- V10-RESULTS:START -->
+
+## Protocol v10 corrected causal-sufficiency update
+
+Base freeze `cf1f153f10f2aa9d522beb44ee6c0b7cb2df2d0b2353db72bcfa5d18eb0d3dc5`; residual amendment `f5b2e0654f389740058dadb9bd17951d8c623fe7f9352b401f381e29cd2d9cf7`; candidate freeze `3e2368a3b21738f7c00e8ca56290c03d228e978634e31491087bf7507da8a235`; causal metadata amendment `cb0df76882a701452f3973782b44aaa0ea5a0984881d81465c5e1037ecdef3a5`; strict-interface freeze `4b319ebffda82f7bcd155df70bbd7d0490dab9bea7fc92e8c1387ecb453d48c8`.
+
+### Required v10 answers
+
+1. **Yes.** v9 residual localization had coordinate duplication and was not the corrected joint conditional estimand.
+2. At 512D, corrected rich-block gains are recurrent `0.1600`, conv `0.1605`, KV `0.1309`, joint `0.1673`; the exact same-599D combined reference is `-0.000691`.
+3. The smallest validation/all-family observationally sufficient dimension is **384D**.
+4. Yes. 512D is a strong reference/upper candidate, not the minimum.
+5. Observational semantic sufficiency passes relative to a modest full ceiling (~`0.626`); absolute probe quality is ceiling-limited. Decoded-causal semantic fidelity fails separately.
+6. Yes. 384/448/512D decode to recurrent/conv/KV state; full-rank feature reconstruction error is `7.153e-07`.
+7. No. Compact decoded interventions do not reproduce all teacher raw-state effects under frozen gates.
+8. No. Direction/output/semantic fidelity degrades through h2/h4/h8; h16 confirms continued instability.
+9. No rescue: every effect-enriched candidate/horizon gate fails.
+10. **No candidate causal sufficient persistent state was obtained.**
+11. Main failures are decoder/interface semantic loss, block/channel interaction not captured by the combined ceiling, and long-horizon instability. Dimension alone and task heterogeneity are not sufficient explanations.
+12. **Autonomous controller training is not authorized.**
+
+H2/H3 adjudication: **H2 remains the strongest supported account; H3 is not established.**
+
+### Exact commands
+
+```bash
+scripts/run_causal_sufficiency_v10.sh freeze --run-suffix protocol-freeze
+scripts/run_causal_sufficiency_v10.sh audit --run-suffix corrected-audit
+scripts/run_causal_sufficiency_v10_residual_amendment.sh freeze --run-suffix estimand-freeze
+scripts/run_causal_sufficiency_v10_residual_amendment.sh audit --run-suffix frozen-base-audit
+scripts/run_causal_sufficiency_v10.sh freeze-candidates --run-suffix candidate-freeze
+scripts/run_causal_sufficiency_v10.sh prepare-decoder --device 0 --run-suffix decoder
+scripts/run_causal_sufficiency_v10_causal_amendment.sh freeze --run-suffix metadata-freeze
+HF_HOME=/data/CSK/J-space-project/.hf-cache scripts/run_causal_sufficiency_v10_causal_amendment.sh causal --device 0 --run-suffix causal-confirmatory-final
+scripts/run_strict_interface_v10.sh freeze --run-suffix strict-freeze
+scripts/run_strict_interface_v10.sh audit --run-suffix strict-three-way
+scripts/run_causal_sufficiency_v10.sh report --run-suffix final-v10
+scripts/finalize_reports_v10.sh --run-suffix amendment-aware-final
+```
+
+<!-- V10-RESULTS:END -->

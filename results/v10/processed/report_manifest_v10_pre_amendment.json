@@ -1,0 +1,25 @@
+{
+  "candidate_freeze_digest": "3e2368a3b21738f7c00e8ca56290c03d228e978634e31491087bf7507da8a235",
+  "figures": [
+    "results/v10/figures/corrected_sub512_curve_v10.png",
+    "results/v10/figures/decoded_causal_horizon_v10.png"
+  ],
+  "protocol_version": "corrected_causal_sufficiency_protocol_v10",
+  "reports": {
+    "causal": "reports/DECODED_CAUSAL_STATE_VALIDATION_V10.md",
+    "enriched": "reports/BEHAVIOR_ENRICHED_CONFIRMATORY_V10.md",
+    "final": "reports/FINAL_REPORT.md",
+    "horizon": "reports/LONG_HORIZON_STATE_SUFFICIENCY_V10.md",
+    "residual": "reports/RESIDUAL_LOCALIZATION_AUDIT_V10.md",
+    "semantic": "reports/SEMANTIC_SUFFICIENCY_AUDIT_V10.md",
+    "sub512": "reports/CORRECTED_SUB512_SUFFICIENCY_V10.md"
+  },
+  "schema_version": 13,
+  "source_freeze_digest": "cf1f153f10f2aa9d522beb44ee6c0b7cb2df2d0b2353db72bcfa5d18eb0d3dc5",
+  "sources": {
+    "causal": "results/v10/processed/decoded_causal_state_validation_v10.parquet",
+    "residual": "results/v10/processed/residual_localization_audit_v10.parquet",
+    "semantic": "results/v10/processed/semantic_sufficiency_audit_v10.parquet",
+    "sweep": "results/v10/processed/corrected_sub512_sufficiency_v10.parquet"
+  }
+}

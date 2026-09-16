@@ -1,0 +1,25 @@
+{
+  "amendment_digest": "978671aa348c2175a84711a90fd72bf13a509e3b1abca881719c308c8ca13752",
+  "amendment_version": "conditional_sufficiency_v9_reporting_amendment_1",
+  "base_freeze_digest": "6651aca6427c909b77c3930ae8487aa840b153679a9a80fd754292b2fa905d6f",
+  "code_commit": "bd35fb772871a431f0fd6e760f3cc1a65590f47e",
+  "hashes": {
+    "artifacts/sufficiency_protocol_v9.freeze.json": "5486c4c162f9d73f4b705944a89726bd79763d28afd0cffe9e5da3361f749dd3",
+    "configs/sufficiency_v9.yaml": "126480961342177fe82ef0ae9f4d694e34d8bab3a9d1829c8aa62a058f231c35",
+    "results/v9/processed/behavior_enriched_causal_v9.json": "eba73b8fb9beb1c4f2702767c4038ee6b4bb787cf5118fc652ad53bb48be127c",
+    "results/v9/processed/behavior_enriched_causal_v9.parquet": "6e984df7241223b01c81254d9e0e5374b2ef4f289a04647c29976722aecb47a1",
+    "results/v9/processed/multihorizon_sufficiency_v9.json": "e81e7b6845f737fa50c9dfae230253267dc161080e8239482a3fb5f0cce5d7f7",
+    "results/v9/processed/multihorizon_sufficiency_v9.parquet": "b2a9985bc25401385e753cf6a41ba79f90474365563e08d0b08b52b6e200065b",
+    "results/v9/processed/residual_information_localization_v9.json": "e2df5b9a4a8bdc6ef4396dc2887001a44a4182f301f79c6f9cb2061573d58d97",
+    "results/v9/processed/residual_information_localization_v9.parquet": "7b0f9947377b714b93cd0f110aa9ba249c8d22974c5acb99db778f0f7878d4dd",
+    "results/v9/processed/sufficiency_dimension_sweep_v9.json": "e981ef3a3bcdb7b73cce87923c2e792957c4194251b1ffb0e0e9a7f840f771a6",
+    "results/v9/processed/sufficiency_dimension_sweep_v9.parquet": "e21ab4f44e1ff10c86346b8e201ed06b08d33aee454abb046e4273ab81599467",
+    "scripts/run_sufficiency_v9_reporting_amendment_1.sh": "e2b6467bb5d6dea569a05fe9da896d936adcdb3a091c6217101dfd73719551ea",
+    "src/jclosure/experiments/report_v9_amendment_1.py": "3ae8de6cafaa77bedd40d0f6de35c13d0db6bd72e596433a9920c55cd671638b",
+    "src/jclosure/protocol_v9_reporting_amendment_1.py": "6f866758d29d213acebf0a1f8bd7db2be74190bc4d269938561e03467b225b11",
+    "src/jclosure/reporting_v9_amendment_1.py": "8e49ab2c612a32120cd7974ea39ca0860b8642912671ec58ee2a3be99d1880e0",
+    "tests/test_v9_reporting_amendment_1.py": "64ae3e9facd753edf05ce7c70eb26cc9d3558907daba779a6fef415e171f8032"
+  },
+  "purpose": "include v9 next_delta rows labeled 'next' in next-J reports",
+  "schema_version": 12
+}

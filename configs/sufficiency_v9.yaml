@@ -1,0 +1,48 @@
+extends: persistent_state_v8.yaml
+
+run:
+  stage: sufficiency_dimension_v9
+  protocol_version: conditional_sufficiency_dimension_protocol_v9
+  timeout_hours: 24
+
+sufficiency_v9:
+  requested_dimensions: [16, 32, 64, 128, 256, 512, 576, 599, 768, 1024, 1536, 2048]
+  newly_evaluated_dimensions: [512, 576, 599, 768, 1024, 1536, 2048]
+  residual_localization_dimensions: [512, 599, 768, 1024, 1536]
+  methods: [pca, predictive_bottleneck, causal_bottleneck, semantic_causal_bottleneck]
+  primary_methods: [pca, predictive_bottleneck, causal_bottleneck]
+  primary_method: causal_bottleneck
+  confirmation_seeds: [20260828, 20260829, 20260830]
+  bootstrap_resamples: 10000
+  ridge_alpha: 1.0
+  gap_denominator_epsilon: 0.002
+  predictive_gap_closed_minimum: 0.80
+  conditional_residual_gain_maximum: 0.02
+  semantic_agreement_minimum: 0.80
+  causal_direction_minimum: 0.80
+  causal_magnitude_minimum: 0.80
+  causal_magnitude_maximum: 1.20
+  output_sign_agreement_minimum: 0.80
+  semantic_objective_weights:
+    next_absolute: 0.40
+    next_causal_delta: 0.40
+    future_causal_delta: 0.20
+  residual_blocks: [recurrent, conv, kv]
+  horizons: [1, 2, 4, 8]
+  captured_horizons: [1, 2, 4]
+  behavior_enriched:
+    fraction_per_family: 0.40
+    minimum_per_family: 15
+    score_columns:
+      - output_js_divergence
+      - future_j_trajectory_divergence
+      - target_log_odds_abs_change
+  causal_decoding_requires_all_observational_gates: true
+
+outputs:
+  root: results/v9
+  raw: raw
+  processed: processed
+  figures: figures
+  reports: ../../reports
+  artifacts: ../../artifacts

@@ -119,3 +119,44 @@ Evidence labels: R0–R7/factorial cache swaps are intervention-based causal evi
 13. Autonomous recurrent dynamics authorized: `False`.
 
 <!-- V8-RESULTS:END -->
+
+<!-- V9-RESULTS:START -->
+
+## Protocol v9 conditional-sufficiency dimension update
+
+Reporting amendment 3: `3e616dec14672b5dbc367adaab0646778cd8f5ffe6ff7aa1d8933b7cc913e1ce`. After visual QA, the conditional curve is restricted to the comparable v9 512/576/599D results and the residual-axis label is corrected; frozen analysis values are unchanged.
+
+Reporting amendment 2: `6a72d399808c48910745099891f0d784d963dc566976df121afe1ea35093be4d`. It adds endpoint labels, comparator documentation, and the executed report command; frozen analysis values are unchanged.
+
+Reporting amendment: `978671aa348c2175a84711a90fd72bf13a509e3b1abca881719c308c8ca13752`. It corrects only the next-J endpoint label filter; frozen analysis values are unchanged.
+
+The v9 rank audit found an effective training rank of `599` from 600 frozen training pairs. Consequently 768/1024/1536/2048D are not statistically identifiable in this dataset and are reported as `NA`, not as 599D aliases.
+
+### Required v9 answers
+
+1. Conditional residual gain from 512D upward: `[{'dimension': 512, 'conditional_residual_gain': -0.0006906941942870616, 'conditional_lower': -0.0014503446108661592, 'conditional_upper': 5.965475682169149e-05}, {'dimension': 576, 'conditional_residual_gain': -0.00033734907582402227, 'conditional_lower': -0.0006641988767310977, 'conditional_upper': -3.1477800663560636e-05}, {'dimension': 599, 'conditional_residual_gain': 9.831894189119338e-06, 'conditional_lower': -7.578643877059221e-06, 'conditional_upper': 2.7718728128820656e-05}]`.
+2. A validated dimension elbow was not established beyond the 599D sample-rank ceiling.
+3. Smallest candidate sufficient dimension: `None`.
+4. Largest 512D architecture-residual source: `recurrent`; full standalone-plus-interaction breakdown is in `reports/RESIDUAL_INFORMATION_LOCALIZATION_V9.md`.
+5. Predictive and causal dimension requirements cannot yet be equated: decoded causal fidelity remained gated.
+6. One-/two-/four-token results are recorded; eight-token status is `not measured: frozen v8 capture ends at four tokens`.
+7. The independent effect-enriched subset contains `100` final-test pairs; its conclusion remains observationally gated.
+8. Primary-method semantic fidelity by dimension: `512D=0.6260, 576D=0.6260, 599D=0.6260`.
+9. No validated compact sufficient persistent state has been obtained.
+10. The current limitation is a combination of sample-rank/state-capacity identification and representation/objective insufficiency; the data do not support claiming intrinsic incompressibility.
+11. Autonomous-controller authorization: `False`.
+
+The strongest warranted conclusion remains H2 for the tested measured-J state. Persistent information is compressible predictively, but no compact state has passed predictive, conditional, semantic, multi-horizon, and decoded causal gates together.
+
+Exact commands:
+
+```bash
+scripts/run_sufficiency_v9.sh freeze --run-suffix protocol-freeze
+scripts/run_sufficiency_v9.sh analyze --run-suffix rank-aware-full
+scripts/run_sufficiency_v9_reporting_amendment_1.sh freeze --run-suffix label-filter-freeze
+scripts/run_sufficiency_v9_reporting_amendment_2.sh freeze --run-suffix final-presentation-freeze
+scripts/run_sufficiency_v9_reporting_amendment_3.sh freeze --run-suffix figure-qa-freeze
+scripts/run_sufficiency_v9_reporting_amendment_3.sh report --run-suffix final-v9
+```
+
+<!-- V9-RESULTS:END -->

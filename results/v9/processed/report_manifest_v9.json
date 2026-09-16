@@ -1,0 +1,29 @@
+{
+  "figures": [
+    "results/v9/figures/sufficiency_dimension_elbow_v9.png",
+    "results/v9/figures/residual_information_localization_v9.png"
+  ],
+  "protocol_version": "conditional_sufficiency_dimension_protocol_v9",
+  "reporting_amendment_2_digest": "6a72d399808c48910745099891f0d784d963dc566976df121afe1ea35093be4d",
+  "reporting_amendment_2_version": "conditional_sufficiency_v9_reporting_amendment_2",
+  "reporting_amendment_3_digest": "3e616dec14672b5dbc367adaab0646778cd8f5ffe6ff7aa1d8933b7cc913e1ce",
+  "reporting_amendment_3_version": "conditional_sufficiency_v9_reporting_amendment_3",
+  "reporting_amendment_digest": "978671aa348c2175a84711a90fd72bf13a509e3b1abca881719c308c8ca13752",
+  "reporting_amendment_version": "conditional_sufficiency_v9_reporting_amendment_1",
+  "reports": {
+    "dimension": "reports/SUFFICIENCY_DIMENSION_SWEEP_V9.md",
+    "enriched": "reports/BEHAVIOR_ENRICHED_CAUSAL_V9.md",
+    "final": "reports/FINAL_REPORT.md",
+    "multihorizon": "reports/MULTIHORIZON_SUFFICIENCY_V9.md",
+    "residual": "reports/RESIDUAL_INFORMATION_LOCALIZATION_V9.md"
+  },
+  "schema_version": 12,
+  "source_freeze_digest": "6651aca6427c909b77c3930ae8487aa840b153679a9a80fd754292b2fa905d6f",
+  "source_v8_freeze_digest": "1cbb255ddfd42438a18fc374daceebdf0f7ec6fe6f56c94a3f914654c1ab61ad",
+  "sources": {
+    "dimension": "results/v9/processed/sufficiency_dimension_sweep_v9.parquet",
+    "enriched": "results/v9/processed/behavior_enriched_causal_v9.parquet",
+    "multihorizon": "results/v9/processed/multihorizon_sufficiency_v9.parquet",
+    "residual": "results/v9/processed/residual_information_localization_v9.parquet"
+  }
+}

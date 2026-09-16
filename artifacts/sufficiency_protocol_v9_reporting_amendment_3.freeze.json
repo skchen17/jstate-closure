@@ -1,0 +1,22 @@
+{
+  "amendment_digest": "3e616dec14672b5dbc367adaab0646778cd8f5ffe6ff7aa1d8933b7cc913e1ce",
+  "amendment_version": "conditional_sufficiency_v9_reporting_amendment_3",
+  "base_freeze_digest": "6651aca6427c909b77c3930ae8487aa840b153679a9a80fd754292b2fa905d6f",
+  "code_commit": "ecfd12f8d1f89db936f9c77e9102c703c9e5438e",
+  "hashes": {
+    "artifacts/sufficiency_protocol_v9_reporting_amendment_2.freeze.json": "1be38b05346347e913361232051e475330a2f385d92303a89cda43ea81beae62",
+    "configs/sufficiency_v9.yaml": "126480961342177fe82ef0ae9f4d694e34d8bab3a9d1829c8aa62a058f231c35",
+    "results/v9/processed/residual_information_localization_v9.json": "e2df5b9a4a8bdc6ef4396dc2887001a44a4182f301f79c6f9cb2061573d58d97",
+    "results/v9/processed/residual_information_localization_v9.parquet": "7b0f9947377b714b93cd0f110aa9ba249c8d22974c5acb99db778f0f7878d4dd",
+    "results/v9/processed/sufficiency_dimension_sweep_v9.json": "e981ef3a3bcdb7b73cce87923c2e792957c4194251b1ffb0e0e9a7f840f771a6",
+    "results/v9/processed/sufficiency_dimension_sweep_v9.parquet": "e21ab4f44e1ff10c86346b8e201ed06b08d33aee454abb046e4273ab81599467",
+    "scripts/run_sufficiency_v9_reporting_amendment_3.sh": "9f1b0924f53b6cf7025d9cfbbdc45b3e8f9a6ae7d7e5d804797ca5ce4377273e",
+    "src/jclosure/experiments/report_v9_amendment_3.py": "bfe392aeb956b7f39b6a6b9568df995d19ff2d1d52968b203c7f0dca973ce37f",
+    "src/jclosure/protocol_v9_reporting_amendment_3.py": "632ed817564aaaecc9dbcc0cc2661c3824663c4d857ddd94f950109122349162",
+    "src/jclosure/reporting_v9_amendment_3.py": "c7026a7042103f2650bed84235a96f12b3c6b0d022dd30ed09b94f98b8822ea7",
+    "tests/test_v9_reporting_amendment_3.py": "015424c2f291d77f48d5470338ed6f16852df447e974050a4cd37dca6678db3b"
+  },
+  "previous_amendment_digest": "6a72d399808c48910745099891f0d784d963dc566976df121afe1ea35093be4d",
+  "purpose": "prevent incompatible v8/v9 conditional curves from being joined",
+  "schema_version": 12
+}

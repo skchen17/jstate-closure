@@ -1,0 +1,112 @@
+{
+  "aggregates": {
+    "clean_zero": {
+      "conv": {
+        "cycle_absolute_error": 1.2267444005065187e-12,
+        "cycle_relative_error": null,
+        "identified": false
+      },
+      "kv": {
+        "cycle_absolute_error": 2.014876330017068e-12,
+        "cycle_relative_error": null,
+        "identified": false
+      },
+      "recurrent": {
+        "cycle_absolute_error": 1.1941118666786155e-12,
+        "cycle_relative_error": null,
+        "identified": false
+      }
+    },
+    "factorized_multistep_direction_int_d512": {
+      "conv": {
+        "cycle_absolute_error": null,
+        "cycle_relative_error": 1.7842624485679283e-07,
+        "identified": true
+      },
+      "kv": {
+        "cycle_absolute_error": null,
+        "cycle_relative_error": 2.1376419155102242e-07,
+        "identified": true
+      },
+      "recurrent": {
+        "cycle_absolute_error": null,
+        "cycle_relative_error": 2.277253926237481e-07,
+        "identified": true
+      }
+    },
+    "oracle_factorized_pca_d512": {
+      "conv": {
+        "cycle_absolute_error": null,
+        "cycle_relative_error": 3.973121718193593e-07,
+        "identified": true
+      },
+      "kv": {
+        "cycle_absolute_error": null,
+        "cycle_relative_error": 3.399840341411483e-07,
+        "identified": true
+      },
+      "recurrent": {
+        "cycle_absolute_error": null,
+        "cycle_relative_error": 2.859266733182736e-07,
+        "identified": true
+      }
+    },
+    "oracle_joint_pca_d512": {
+      "conv": {
+        "cycle_absolute_error": null,
+        "cycle_relative_error": 1.8968477023314064e-07,
+        "identified": true
+      },
+      "kv": {
+        "cycle_absolute_error": null,
+        "cycle_relative_error": 2.39889934784036e-07,
+        "identified": true
+      },
+      "recurrent": {
+        "cycle_absolute_error": null,
+        "cycle_relative_error": 2.152890709185991e-07,
+        "identified": true
+      }
+    },
+    "teacher_raw": {
+      "conv": {
+        "cycle_absolute_error": null,
+        "cycle_relative_error": 2.090491167033693e-07,
+        "identified": true
+      },
+      "kv": {
+        "cycle_absolute_error": null,
+        "cycle_relative_error": 2.4223551324443444e-07,
+        "identified": true
+      },
+      "recurrent": {
+        "cycle_absolute_error": null,
+        "cycle_relative_error": 2.2764040843850543e-07,
+        "identified": true
+      }
+    },
+    "unified_causal_d512": {
+      "conv": {
+        "cycle_absolute_error": null,
+        "cycle_relative_error": 3.2982263702319574e-07,
+        "identified": true
+      },
+      "kv": {
+        "cycle_absolute_error": null,
+        "cycle_relative_error": 2.372259486480299e-07,
+        "identified": true
+      },
+      "recurrent": {
+        "cycle_absolute_error": null,
+        "cycle_relative_error": 2.577601491634283e-07,
+        "identified": true
+      }
+    }
+  },
+  "declared_correction": "relative cycle error is undefined for the exactly zero clean-delta reference; the original nonzero-state cycle metrics remain valid",
+  "original_records_preserved": "results/v11/processed/causal_state_manifold_v11.parquet",
+  "protocol_version": "causal_geometry_v11_manifold_metric_amendment_1",
+  "records": "results/v11/processed/causal_state_manifold_v11_amendment_1.parquet",
+  "records_sha256": "64e60138414fe876f5140586fd6b72058d8f9c05e76b03ead499720da078017b",
+  "source_freeze_digest": "f17f62532f1136c9cc73109ecf55e2f6689b55638313979eb9c1d5068ac5c14f"
+}

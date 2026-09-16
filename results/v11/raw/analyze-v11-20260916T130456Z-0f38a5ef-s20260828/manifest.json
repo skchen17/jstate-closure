@@ -1,0 +1,3075 @@
+{
+  "command": [
+    "/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/analyze_v11.py",
+    "--stage",
+    "analyze"
+  ],
+  "config": {
+    "causal_geometry_v11": {
+      "authorization_horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "baseline_commit": "10c24a475852ecf6370c8ad0d5e1cae5ad3cc92e",
+      "bootstrap_resamples": 10000,
+      "causal_gates": {
+        "direction_cosine_minimum": 0.8,
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "output_direction_minimum": 0.8,
+        "semantic_delta_agreement_minimum": 0.8,
+        "task_decision_sign_minimum": 0.8
+      },
+      "channel_audit": {
+        "conditions": [
+          "decoded_rec",
+          "decoded_conv",
+          "decoded_kv",
+          "decoded_rec_conv",
+          "decoded_rec_kv",
+          "decoded_conv_kv",
+          "decoded_all"
+        ],
+        "dimension": 512
+      },
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "confirmatory": {
+        "effect_enriched_per_family": 5,
+        "per_family": 10,
+        "selection_seed": 20270111
+      },
+      "confirmatory_method_limit": 4,
+      "decoder": {
+        "reconstruction_chunk": 65536,
+        "shard_size": 5
+      },
+      "development_source": "artifacts/causal_sufficiency_v10_candidates.freeze.json",
+      "factorized": {
+        "allocations": {
+          "256": {
+            "interaction": [
+              [
+                112,
+                72,
+                40,
+                32
+              ],
+              [
+                96,
+                80,
+                48,
+                32
+              ],
+              [
+                112,
+                64,
+                48,
+                32
+              ]
+            ],
+            "no_interaction": [
+              [
+                128,
+                80,
+                48,
+                0
+              ],
+              [
+                112,
+                96,
+                48,
+                0
+              ],
+              [
+                128,
+                64,
+                64,
+                0
+              ]
+            ]
+          },
+          "384": {
+            "interaction": [
+              [
+                192,
+                96,
+                64,
+                32
+              ],
+              [
+                160,
+                128,
+                64,
+                32
+              ],
+              [
+                192,
+                128,
+                48,
+                16
+              ]
+            ],
+            "no_interaction": [
+              [
+                192,
+                112,
+                80,
+                0
+              ],
+              [
+                160,
+                144,
+                80,
+                0
+              ],
+              [
+                176,
+                112,
+                96,
+                0
+              ]
+            ]
+          },
+          "512": {
+            "interaction": [
+              [
+                240,
+                144,
+                96,
+                32
+              ],
+              [
+                224,
+                160,
+                96,
+                32
+              ],
+              [
+                224,
+                144,
+                112,
+                32
+              ]
+            ],
+            "no_interaction": [
+              [
+                256,
+                160,
+                96,
+                0
+              ],
+              [
+                224,
+                192,
+                96,
+                0
+              ],
+              [
+                240,
+                144,
+                128,
+                0
+              ]
+            ]
+          }
+        },
+        "objectives": [
+          "cache_pca",
+          "h1_direction",
+          "semantic_h1",
+          "output_h1",
+          "multistep_direction",
+          "effect_weighted_multistep",
+          "causal_composite",
+          "manifold_regularized"
+        ],
+        "stage1_methods_per_class": 1,
+        "stage2_total_methods": 6,
+        "total_budgets": [
+          256,
+          384,
+          512
+        ]
+      },
+      "horizons": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "manifold": {
+        "global_subspace_rank": 128,
+        "local_pca_rank": 8,
+        "nearest_neighbors": 16
+      },
+      "oracle": {
+        "dimensions": [
+          64,
+          128,
+          192,
+          256,
+          320,
+          384,
+          448,
+          512
+        ],
+        "families": [
+          "joint_pca",
+          "factorized_pca"
+        ]
+      }
+    },
+    "causal_sufficiency_v10": {
+      "bootstrap_resamples": 10000,
+      "candidate_selection": {
+        "fallback_diagnostic_dimensions": [
+          384,
+          448,
+          512
+        ],
+        "include_reference_dimension": 512,
+        "maximum_candidates": 3
+      },
+      "causal": {
+        "authorization_horizons": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "direction_cosine_minimum": 0.8,
+        "free_continuation_requires_teacher_forced_authorization": true,
+        "horizons": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "output_direction_minimum": 0.8,
+        "semantic_delta_agreement_minimum": 0.8,
+        "strict_interface_required": true,
+        "task_decision_sign_minimum": 0.8
+      },
+      "conditional_residual_gain_maximum": 0.02,
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "confirmatory_subset": {
+        "effect_enriched_per_family": 5,
+        "per_family": 10,
+        "random_seed": 20261201,
+        "score_columns": [
+          "output_js_divergence",
+          "future_j_trajectory_divergence",
+          "target_log_odds_abs_change"
+        ]
+      },
+      "decoder": {
+        "reconstruction_chunk": 65536,
+        "shard_size": 5
+      },
+      "dimensions": [
+        64,
+        96,
+        128,
+        160,
+        192,
+        224,
+        256,
+        288,
+        320,
+        352,
+        384,
+        416,
+        448,
+        480,
+        512
+      ],
+      "gap_denominator_epsilon": 0.002,
+      "methods": [
+        "causal_bottleneck",
+        "predictive_bottleneck",
+        "pca"
+      ],
+      "predictive_gap_closed_minimum": 0.95,
+      "primary_method": "causal_bottleneck",
+      "requested_dimensions": [
+        64,
+        96,
+        128,
+        160,
+        192,
+        256,
+        320,
+        384,
+        448,
+        512
+      ],
+      "residual_audit_dimensions": [
+        384,
+        512
+      ],
+      "residualization_folds": 5,
+      "ridge_alpha": 1.0,
+      "semantic_relative_retention_minimum": 0.95,
+      "semantic_residual_gain_maximum": 0.02
+    },
+    "closure": {
+      "clamp_conditions": [
+        "single",
+        "persistent"
+      ],
+      "conditions": [
+        "clean",
+        "j_positive",
+        "full_patch",
+        "random",
+        "non_j"
+      ],
+      "future_min_layers": 3,
+      "max_attempt_multiplier": 10,
+      "perturbation_sources": [
+        "activation_difference",
+        "natural_collision",
+        "targeted_probe"
+      ],
+      "strengths": [
+        0.25,
+        0.5,
+        1.0
+      ],
+      "targeted_probe_min_score": 0.75
+    },
+    "compact_state_v4": {
+      "controller_parameter_target": 5000000,
+      "controller_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "dictionary_size": 4096,
+      "dimensions": [
+        64,
+        128,
+        256,
+        512
+      ],
+      "divergence_cosine": 0.8,
+      "early_stopping_patience": 5,
+      "families": [
+        "pca",
+        "predictive_bottleneck",
+        "sparse_j",
+        "learned_predictive_encoder"
+      ],
+      "histories": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "maximum_epochs": 50,
+      "maximum_predicted_feedback": 0.8,
+      "memory_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "minimum_causal_direction_retention": 0.8,
+      "minimum_causal_magnitude_retention": 0.8,
+      "minimum_semantic_retention": 0.8,
+      "objective_weights": {
+        "causal_retention": 0.5,
+        "future_prediction": 1.0,
+        "reconstruction": 1.0,
+        "semantic_retention": 0.5
+      },
+      "parameter_tolerance": 0.05,
+      "reference_remainder_dimensions": [
+        128,
+        512,
+        2560
+      ],
+      "rollout_horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "screen_epochs": 40,
+      "screen_patience": 5,
+      "teacher_forcing_fraction": 0.2,
+      "workspace_layers": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ]
+    },
+    "controller": {
+      "budget_tolerance": 0.05,
+      "counterfactual_traces": 256,
+      "families": [
+        "mlp",
+        "gru",
+        "transformer"
+      ],
+      "histories": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "lambda_answer": 1.0,
+      "lambda_counterfactual": 0.25,
+      "lambda_j": 1.0,
+      "max_predicted_feedback": 0.8,
+      "parameter_budgets": [
+        1000000,
+        5000000,
+        20000000,
+        50000000,
+        100000000
+      ],
+      "remainder_pca_dims": [
+        32,
+        128,
+        512
+      ],
+      "stable_dense_cosine": 0.9,
+      "stable_intervention_agreement": 0.8,
+      "stable_sparse_f1": 0.7,
+      "stable_teacher_accuracy_fraction": 0.9,
+      "teacher_forcing_warmup_fraction": 0.2
+    },
+    "data": {
+      "upstream_root": "data/upstream/anthropic"
+    },
+    "h2_replication_v5": {
+      "bootstrap_resamples": 10000,
+      "controls": [
+        "clean",
+        "identity",
+        "matched_random",
+        "j_positive",
+        "full_perturbation",
+        "j_preserving"
+      ],
+      "counts_by_family": {
+        "boolean_logic": 80,
+        "modular_arithmetic": 32,
+        "short_graph_traversal": 32,
+        "simple_state_transition": 80,
+        "variable_binding": 32
+      },
+      "dense_cosine_threshold": 0.995,
+      "dictionary_size": 4096,
+      "formal_displacement_fraction": 0.2,
+      "future_workspace_layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "horizons": [
+        4,
+        8
+      ],
+      "initial_strength": 0.25,
+      "layer": 23,
+      "null_js_floor": 0.0001,
+      "position_scope": "final",
+      "protocol_version": "h2_family_replication_v5",
+      "rms_drift_threshold": 0.02,
+      "seeds": {
+        "evaluation": 20260925
+      },
+      "target_valid_by_family": {
+        "boolean_logic": 32,
+        "modular_arithmetic": 12,
+        "short_graph_traversal": 12,
+        "simple_state_transition": 32,
+        "variable_binding": 12
+      },
+      "top10_overlap_threshold": 0.8,
+      "variants": {
+        "boolean_logic": "binary_xor_pairs",
+        "modular_arithmetic": "increment_1",
+        "short_graph_traversal": "directed_cycle",
+        "simple_state_transition": "toggle_or_keep",
+        "variable_binding": "four_way_lookup"
+      }
+    },
+    "jstate": {
+      "concept_vocab_size": 4096,
+      "dense_cosine_threshold": 0.995,
+      "k": 25,
+      "min_remainder_fraction": 0.2,
+      "primary_position": -1,
+      "rms_drift_threshold": 0.02,
+      "top10_overlap_threshold": 0.8
+    },
+    "lens": {
+      "file": "qwen3.5-4b/jlens/Salesforce-wikitext/Qwen3.5-4B_jacobian_lens_n1000.pt",
+      "metadata_prompts_fitted": 417,
+      "repo": "neuronpedia/jacobian-lens",
+      "revision": "16a01f309fcec900fdcec3f4cd5b64f3d00e4d5a",
+      "sha256": "1f9a8f8fd593f0ffec1a9640993257ca4560f8ae3e5602315643d5cc6818534e",
+      "upstream_commit": "581d398613e5602a5af361e1c34d3a92ea82ba8e"
+    },
+    "model": {
+      "compile": false,
+      "device": 0,
+      "device_map": "cuda",
+      "dtype": "bfloat16",
+      "force_bos": true,
+      "id": "Qwen/Qwen3.5-4B",
+      "max_seq_len": 512,
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "trust_remote_code": false
+    },
+    "outputs": {
+      "artifacts": "../../artifacts",
+      "figures": "figures",
+      "processed": "processed",
+      "raw": "raw",
+      "reports": "../../reports",
+      "root": "results/v11"
+    },
+    "peripheral_v5": {
+      "batch_size": 128,
+      "bootstrap_resamples": 10000,
+      "compact_gap_closed": 0.8,
+      "compact_maximum_conditional_gain": 0.002,
+      "compact_minimum_causal_direction_cosine": 0.8,
+      "compact_minimum_output_sign_agreement": 0.8,
+      "confidence": 0.95,
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "derived_trace_summary": "results/v5/processed/peripheral_traces_v5.json",
+      "dictionary_size": 4096,
+      "dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "early_stopping_patience": 5,
+      "encoder_families": [
+        "pca_remainder",
+        "predictive_bottleneck",
+        "nonlinear_bottleneck"
+      ],
+      "full_remainder_minimum_cosine_gain": 0.005,
+      "hidden_width": 512,
+      "history_length": 4,
+      "learning_rate": 0.0003,
+      "maximum_action_accuracy_loss": 0.02,
+      "maximum_epochs": 30,
+      "recurrent_architectures": [
+        "gated_mlp",
+        "gru",
+        "residual_recurrent"
+      ],
+      "recurrent_horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "recurrent_maximum_state_dimension": 128,
+      "recurrent_parameter_target": 5000000,
+      "recurrent_parameter_tolerance": 0.05,
+      "reference_architectures": [
+        "mlp",
+        "gated_mlp",
+        "attention"
+      ],
+      "residual_conditioning_rank": 512,
+      "screen_seed": 20260828,
+      "source_teacher_summary": "results/v4/processed/teacher_formal_v4.json",
+      "source_trace_summary": "results/v4/processed/teacher_traces_v4.json",
+      "weight_decay": 0.0001,
+      "workspace_layer": 23
+    },
+    "peripheral_v6": {
+      "bootstrap_resamples": 10000,
+      "causal_direction_count": 16,
+      "causal_fit_fraction": 0.5,
+      "causal_split_seed": 20261001,
+      "ceiling_rules": {
+        "causal_direction_minimum_absolute": 0.2,
+        "causal_direction_minimum_gain": 0.05,
+        "causal_projection_minimum_relative_rmse_reduction": 0.1,
+        "global_cosine_minimum_gain": 0.005,
+        "maximum_action_accuracy_loss": 0.02,
+        "semantic_accuracy_minimum_gain": 0.02
+      },
+      "compact_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "compact_families": [
+        "pca",
+        "predictive_bottleneck",
+        "nonlinear_bottleneck"
+      ],
+      "compact_gap_closed": 0.8,
+      "compact_maximum_conditional_gain": 0.002,
+      "confidence": 0.95,
+      "dictionary_size": 4096,
+      "f64_projection_sensitivity": true,
+      "future_workspace_layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "initial_strength": 0.25,
+      "layer": 23,
+      "null_js_floor": 0.0001,
+      "objective_weights": {
+        "action": 1.0,
+        "causal_counterfactual": 2.0,
+        "causal_projection": 2.0,
+        "full_profile": 1.0,
+        "top_causal_dimensions": 2.0
+      },
+      "precision_dtype": "float32",
+      "reference_architectures": [
+        "j_only_residual",
+        "j_history_attention",
+        "full_remainder_linear",
+        "full_remainder_gated",
+        "full_remainder_residual",
+        "full_remainder_attention"
+      ],
+      "reference_batch_size": 128,
+      "reference_confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "reference_epochs": 40,
+      "reference_learning_rate": 0.0003,
+      "reference_patience": 6,
+      "reference_screen_seed": 20260828,
+      "reference_weight_decay": 0.0001,
+      "reference_width": 512,
+      "source_h2_records": "results/v5/processed/h2_replication_v5.parquet",
+      "source_h2_summary": "results/v5/processed/h2_replication_v5.json",
+      "source_mediation_summary": "results/v5/processed/h2_mediation_v5.json",
+      "source_reference_summary": "results/v5/processed/full_remainder_reference_v5.json",
+      "source_trace_summary": "results/v5/processed/peripheral_traces_v5.json",
+      "top_causal_dimension_count": 64
+    },
+    "persistent_channels_v7": {
+      "attribution_split_seed": 20261011,
+      "bootstrap_resamples": 10000,
+      "cache_restore_tolerances": {
+        "hidden_max_abs": 1e-06,
+        "j_max_abs": 1e-06,
+        "logits_max_abs": 1e-06
+      },
+      "channel_gate": {
+        "maximum_additive_interaction_ratio": 0.25,
+        "minimum_delta_cosine": 0.2,
+        "minimum_delta_cosine_ci_lower": 0.0,
+        "minimum_full_delta_l2": 1e-06,
+        "minimum_magnitude_ratio": 0.1
+      },
+      "compression": {
+        "causal_direction_minimum": 0.8,
+        "causal_gap_closed": 0.8,
+        "dimensions": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512
+        ],
+        "maximum_conditional_gain": 0.02,
+        "methods": [
+          "pca",
+          "predictive_bottleneck",
+          "causal_bottleneck",
+          "nonlinear_encoder"
+        ],
+        "predictive_gap_closed": 0.8
+      },
+      "downstream_attention_layers": [
+        27,
+        31
+      ],
+      "downstream_recurrent_layers": [
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      "intervention_layer": 23,
+      "localization": {
+        "attention_token_windows": [
+          1,
+          4,
+          16,
+          64
+        ],
+        "minimum_channel_fraction": 0.05
+      },
+      "measured_layers": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "restore_test_count": 8,
+      "source_tasks": "data/v5/h2_replication.json",
+      "source_v6_artifact": "artifacts/causal/v6/causal-endpoint-v6-20260914T161620Z-a20b5a8c-s20260828-full-66/causal_endpoint_f32.npz",
+      "source_v6_artifact_sha256": "af945e0432cd7b1f1f256f1f0c60c91ec7d9aca7956dae745387247732c0444e",
+      "source_v6_records": "results/v6/processed/causal_endpoint_precision_v6.parquet",
+      "source_v6_summary": "results/v6/processed/causal_endpoint_v6.json",
+      "source_v6_trials": "results/v6/processed/restoration_null_v6.parquet",
+      "teacher_forced_tokens": 4
+    },
+    "persistent_channels_v7_corrective": {
+      "authorization": {
+        "require_channel_attribution": true,
+        "require_positive_cosine_or_rmse_gain_ci": true
+      },
+      "predictor": {
+        "added_features": "mixed_channel_delta_dual_pca_scores",
+        "alpha": 1.0,
+        "baseline_features": "current_intervened_j",
+        "target": "next_j_intervention_delta"
+      },
+      "reason": "endpoint_serialization_alias_bug",
+      "source_capture_summary": "results/v7/processed/raw_arch_channel_ceiling_v7.json",
+      "source_v6_artifact": "artifacts/causal/v6/causal-endpoint-v6-20260914T161620Z-a20b5a8c-s20260828-full-66/causal_endpoint_f32.npz"
+    },
+    "persistent_state_v8": {
+      "bootstrap_resamples": 10000,
+      "calibration": {
+        "count_per_family_horizon": 30,
+        "horizons": [
+          2,
+          3,
+          5
+        ],
+        "minimum_accuracy": 0.7,
+        "preferred_accuracy": 0.8,
+        "seed": 20261103,
+        "version": "r6"
+      },
+      "component_atoms": [
+        "rec_matrix_all",
+        "conv_all",
+        "kv_l27_h3",
+        "kv_other"
+      ],
+      "compression": {
+        "causal_direction_minimum": 0.8,
+        "causal_evaluation_requires_predictive_and_conditional_pass": true,
+        "causal_gap_closed": 0.8,
+        "confirmation_seeds": [
+          20260828,
+          20260829,
+          20260830
+        ],
+        "diagnostic_sketch_dimension": 8192,
+        "dimensions": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512
+        ],
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "maximum_conditional_residual_gain": 0.02,
+        "methods": [
+          "pca",
+          "predictive_bottleneck",
+          "causal_bottleneck",
+          "nonlinear_encoder",
+          "layerwise_fusion"
+        ],
+        "output_sign_agreement_minimum": 0.8,
+        "predictive_gap_closed": 0.8,
+        "raw_dual_pca_tolerance": 1e-08,
+        "reconstruction_ridge_alpha": 0.01,
+        "semantic_agreement_minimum": 0.8
+      },
+      "formal": {
+        "candidates_per_family": {
+          "final_test": 80,
+          "train": 180,
+          "validation": 80
+        },
+        "horizon_overrides": {
+          "modular_arithmetic": 2
+        },
+        "split_seeds": {
+          "final_test": 20261113,
+          "train": 20261111,
+          "validation": 20261112
+        },
+        "target_valid_per_family": {
+          "final_test": 50,
+          "train": 120,
+          "validation": 50
+        },
+        "version": "competence_corrective_r3_parser"
+      },
+      "intervention": {
+        "causal_write_layer": 24,
+        "dense_cosine_threshold": 0.995,
+        "formal_displacement_fraction": 0.2,
+        "initial_strength": 0.25,
+        "layer": 23,
+        "measured_layers": [
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "rms_drift_threshold": 0.02,
+        "teacher_forced_tokens": 4,
+        "top10_overlap_threshold": 0.8
+      },
+      "kernel_ridge_alphas": [
+        0.001,
+        0.01,
+        0.1,
+        1.0
+      ],
+      "persistent_components": {
+        "attention_layers": [
+          27,
+          31
+        ],
+        "kv_positions": "final",
+        "kv_primary_head": 3,
+        "kv_primary_layer": 27,
+        "recurrent_layers": [
+          24,
+          25,
+          26,
+          28,
+          29,
+          30
+        ],
+        "top_recurrent_layer": [
+          30
+        ],
+        "top_recurrent_layers": [
+          28,
+          29,
+          30
+        ]
+      },
+      "raw_screen": {
+        "maximum_output_sign_loss": 0.02,
+        "minimum_causal_direction_cosine": 0.8,
+        "minimum_full_gap_fraction": 0.9
+      },
+      "raw_sets": {
+        "R0": [],
+        "R1": [
+          "rec_matrix_l30"
+        ],
+        "R2": [
+          "rec_matrix_l28",
+          "rec_matrix_l29",
+          "rec_matrix_l30"
+        ],
+        "R3": [
+          "conv_all"
+        ],
+        "R4": [
+          "rec_matrix_all",
+          "conv_all"
+        ],
+        "R5": [
+          "kv_l27_h3"
+        ],
+        "R6": [
+          "rec_matrix_all",
+          "conv_all",
+          "kv_l27_h3"
+        ],
+        "R7": [
+          "rec_matrix_all",
+          "conv_all",
+          "kv_all"
+        ]
+      }
+    },
+    "reproducibility": {
+      "bootstrap_seed": 20260901,
+      "controller_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "dataset_seed": 20260828,
+      "deterministic": true
+    },
+    "run": {
+      "protocol_version": "architecture_resolved_causal_geometry_v11",
+      "stage": "causal_geometry_v11",
+      "timeout_hours": 72
+    },
+    "single_arm_v4": {
+      "bootstrap_resamples": 10000,
+      "confidence": 0.95,
+      "confirmation_valid_base_trials": 500,
+      "construction": "dense_optimized",
+      "controls": [
+        "clean",
+        "identity",
+        "matched_random",
+        "j_positive",
+        "full_perturbation",
+        "j_preserving"
+      ],
+      "dense_cosine_threshold": 0.995,
+      "dictionary_size": 4096,
+      "formal_displacement_fraction": 0.2,
+      "future_workspace_layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "generation_horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "initial_strength": 0.25,
+      "layer": 23,
+      "max_attempt_multiplier": 10,
+      "null_js_floor": 0.0001,
+      "null_quantile": 0.99,
+      "pilot_valid_base_trials": 100,
+      "position_scope": "final",
+      "rms_drift_threshold": 0.02,
+      "state_definition": "V3-Dense-operational-control",
+      "top10_overlap_threshold": 0.8
+    },
+    "statistics": {
+      "bootstrap_resamples": 10000,
+      "confidence": 0.95,
+      "eta_threshold": 0.2,
+      "null_js_floor": 0.0001,
+      "null_quantile": 0.99
+    },
+    "sufficiency_v9": {
+      "behavior_enriched": {
+        "fraction_per_family": 0.4,
+        "minimum_per_family": 15,
+        "score_columns": [
+          "output_js_divergence",
+          "future_j_trajectory_divergence",
+          "target_log_odds_abs_change"
+        ]
+      },
+      "bootstrap_resamples": 10000,
+      "captured_horizons": [
+        1,
+        2,
+        4
+      ],
+      "causal_decoding_requires_all_observational_gates": true,
+      "causal_direction_minimum": 0.8,
+      "causal_magnitude_maximum": 1.2,
+      "causal_magnitude_minimum": 0.8,
+      "conditional_residual_gain_maximum": 0.02,
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "gap_denominator_epsilon": 0.002,
+      "horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "methods": [
+        "pca",
+        "predictive_bottleneck",
+        "causal_bottleneck",
+        "semantic_causal_bottleneck"
+      ],
+      "newly_evaluated_dimensions": [
+        512,
+        576,
+        599,
+        768,
+        1024,
+        1536,
+        2048
+      ],
+      "output_sign_agreement_minimum": 0.8,
+      "predictive_gap_closed_minimum": 0.8,
+      "primary_method": "causal_bottleneck",
+      "primary_methods": [
+        "pca",
+        "predictive_bottleneck",
+        "causal_bottleneck"
+      ],
+      "requested_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        576,
+        599,
+        768,
+        1024,
+        1536,
+        2048
+      ],
+      "residual_blocks": [
+        "recurrent",
+        "conv",
+        "kv"
+      ],
+      "residual_localization_dimensions": [
+        512,
+        599,
+        768,
+        1024,
+        1536
+      ],
+      "ridge_alpha": 1.0,
+      "semantic_agreement_minimum": 0.8,
+      "semantic_objective_weights": {
+        "future_causal_delta": 0.2,
+        "next_absolute": 0.4,
+        "next_causal_delta": 0.4
+      }
+    },
+    "teacher_tasks_v4": {
+      "calibration_per_cell": 16,
+      "calibration_seed": 20260914,
+      "formal_counts_per_family": {
+        "causal_test": 40,
+        "rollout_test": 40,
+        "train": 64,
+        "validation": 16
+      },
+      "formal_evaluation_mode": "environment_stepwise",
+      "formal_seeds": {
+        "causal_test": 20260917,
+        "rollout_test": 20260918,
+        "train": 20260915,
+        "validation": 20260916
+      },
+      "generation_batch_size": 8,
+      "horizons": [
+        4,
+        8,
+        16,
+        32
+      ],
+      "maximum_extra_tokens": 8,
+      "minimum_cell_full_trajectory_accuracy": 0.7,
+      "preferred_cell_full_trajectory_accuracy": 0.8,
+      "variants": {
+        "boolean_logic": [
+          "binary_xor_pairs",
+          "not_each",
+          "xor_one"
+        ],
+        "modular_arithmetic": [
+          "increment_1",
+          "increment_2",
+          "decrement_1"
+        ],
+        "short_graph_traversal": [
+          "directed_cycle"
+        ],
+        "simple_state_transition": [
+          "toggle_every_step",
+          "toggle_or_keep"
+        ],
+        "variable_binding": [
+          "four_way_lookup"
+        ]
+      }
+    },
+    "validation": {
+      "band_min_layers": 3,
+      "band_peak_fraction": 0.5,
+      "bootstrap_resamples": 10000,
+      "discovery_fraction": 0.5,
+      "hit10_threshold": 0.2,
+      "min_primary_position": 16,
+      "positive_control_trials": 24,
+      "report_sensitivity_peak_fractions": [
+        0.25,
+        0.4,
+        0.6
+      ]
+    }
+  },
+  "config_digest": "0f38a5ef31eba59931fd0dd3d13b60c21d65759ef39aa152989af1543ab1e603",
+  "created_at": "2026-09-16T13:04:56.931385+00:00",
+  "environment": {
+    "cuda_available": true,
+    "gpus": [
+      {
+        "compute_capability": [
+          8,
+          9
+        ],
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "total_memory_bytes": 25386352640
+      },
+      {
+        "compute_capability": [
+          8,
+          9
+        ],
+        "index": 1,
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "total_memory_bytes": 25386352640
+      }
+    ],
+    "nvidia_smi": "NVIDIA GeForce RTX 4090 D, 550.144.03, 24564 MiB\nNVIDIA GeForce RTX 4090 D, 550.144.03, 24564 MiB",
+    "platform": "Linux-6.2.0-26-generic-x86_64-with-glibc2.35",
+    "python": "3.12.2",
+    "python_executable": "/home/user/anaconda3/bin/python",
+    "torch": "2.10.0+cu128",
+    "torch_cuda_runtime": "12.8"
+  },
+  "git_commit": "b0c063ee4f75d483694e9dd6c08b8cb4f2f4ab29",
+  "git_worktree": {
+    "capture": "process_init",
+    "dirty": true,
+    "entries": 34,
+    "status_sha256": "ee222c1923b618c2ff7541073f85249c34de31baf09f7592312f01d439432326"
+  },
+  "kind": "analyze-v11",
+  "run_id": "analyze-v11-20260916T130456Z-0f38a5ef-s20260828",
+  "schema_version": 3,
+  "seed": 20260828,
+  "status": "COMPLETED_V11_ANALYSIS_STAGE",
+  "summary": {
+    "adjudication": {
+      "autonomous_controller_training_authorized": false,
+      "decision_tree_outcome": "C",
+      "factorized_h1_development_pass": false,
+      "free_continuation_executed": false,
+      "hypothesis_status": "H2",
+      "independent_confirmatory_authorized_methods": [],
+      "oracle_long_horizon_authorized": false,
+      "protocol_version": "architecture_resolved_causal_geometry_v11",
+      "schema_version": 14,
+      "smallest_causally_validated_dimension": null,
+      "source_freeze_digest": "753b48824a27a9b5934b774ba0594dc26d98a4d031c6a8c183b065c55470ca9f",
+      "strongest_warranted_conclusion": "tested low-rank oracle projections do not establish writable sufficiency"
+    },
+    "amplification": {
+      "aggregates": {
+        "channel:decoded_all": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.07720756421324788,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.008883665275674269,
+            "mean_semantic_error": 0.38599999999999995
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.17720337407011455,
+            "mean_error_amplification_ratio": 0.7426715891104351,
+            "mean_error_norm": 0.006518212472561157,
+            "mean_semantic_error": 0.648
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.3115032122175963,
+            "mean_error_amplification_ratio": 1.86645154159028,
+            "mean_error_norm": 0.012043643489127625,
+            "mean_semantic_error": 0.794
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.4676367761097606,
+            "mean_error_amplification_ratio": 0.7157054335488142,
+            "mean_error_norm": 0.007208936146759398,
+            "mean_semantic_error": 0.914
+          }
+        },
+        "channel:decoded_conv": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.06585398817491366,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.008319575066044766,
+            "mean_semantic_error": 0.32800000000000007
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.16304942754980145,
+            "mean_error_amplification_ratio": 0.7711936719583882,
+            "mean_error_norm": 0.00632714163277503,
+            "mean_semantic_error": 0.634
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.29469545564147936,
+            "mean_error_amplification_ratio": 1.8662664145954198,
+            "mean_error_norm": 0.01169765704561208,
+            "mean_semantic_error": 0.758
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.45566102056242286,
+            "mean_error_amplification_ratio": 0.7402915540779216,
+            "mean_error_norm": 0.007159456834941989,
+            "mean_semantic_error": 0.89
+          }
+        },
+        "channel:decoded_conv_kv": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.06758425503848448,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.008430362758220006,
+            "mean_semantic_error": 0.3440000000000001
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.16021984332689418,
+            "mean_error_amplification_ratio": 0.7572375839219501,
+            "mean_error_norm": 0.006273310051995183,
+            "mean_semantic_error": 0.616
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.2969361119336647,
+            "mean_error_amplification_ratio": 1.8800660606488884,
+            "mean_error_norm": 0.01171144255931456,
+            "mean_semantic_error": 0.772
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.4462279273828658,
+            "mean_error_amplification_ratio": 0.7314186012404795,
+            "mean_error_norm": 0.007100274846212166,
+            "mean_semantic_error": 0.868
+          }
+        },
+        "channel:decoded_kv": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.029706074225853744,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.005480193306836039,
+            "mean_semantic_error": 0.24
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.08916392881387929,
+            "mean_error_amplification_ratio": 0.8629202108891577,
+            "mean_error_norm": 0.004685079906681591,
+            "mean_semantic_error": 0.5
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.13945096980393779,
+            "mean_error_amplification_ratio": 1.7276216141811884,
+            "mean_error_norm": 0.008023137234331058,
+            "mean_semantic_error": 0.5940000000000001
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.2300711973122032,
+            "mean_error_amplification_ratio": 0.717113423339159,
+            "mean_error_norm": 0.0050663627566917765,
+            "mean_semantic_error": 0.7339999999999999
+          }
+        },
+        "channel:decoded_rec": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.05837378704451556,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.007585380236027943,
+            "mean_semantic_error": 0.326
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.166894758364227,
+            "mean_error_amplification_ratio": 0.8504587054018262,
+            "mean_error_norm": 0.006393512867563567,
+            "mean_semantic_error": 0.618
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.303266246769893,
+            "mean_error_amplification_ratio": 1.884033470914061,
+            "mean_error_norm": 0.011921704754073623,
+            "mean_semantic_error": 0.7780000000000001
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.4701556047483434,
+            "mean_error_amplification_ratio": 0.7355946972286362,
+            "mean_error_norm": 0.0072703497141869185,
+            "mean_semantic_error": 0.9039999999999999
+          }
+        },
+        "channel:decoded_rec_conv": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.07663360574565266,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.008859826284261307,
+            "mean_semantic_error": 0.376
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.17374965593359903,
+            "mean_error_amplification_ratio": 0.7412048868249324,
+            "mean_error_norm": 0.006481435108136388,
+            "mean_semantic_error": 0.6480000000000001
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.3087752262785276,
+            "mean_error_amplification_ratio": 1.8629845041772084,
+            "mean_error_norm": 0.011985518543793901,
+            "mean_semantic_error": 0.7879999999999999
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.4710239398318255,
+            "mean_error_amplification_ratio": 0.722072408697074,
+            "mean_error_norm": 0.007248319758361322,
+            "mean_semantic_error": 0.9279999999999999
+          }
+        },
+        "channel:decoded_rec_kv": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.05893806533833554,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.00764340614309302,
+            "mean_semantic_error": 0.31800000000000006
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.16841822270643048,
+            "mean_error_amplification_ratio": 0.8515108835394564,
+            "mean_error_norm": 0.006436263562697928,
+            "mean_semantic_error": 0.596
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.30287783297260895,
+            "mean_error_amplification_ratio": 1.8674507981610273,
+            "mean_error_norm": 0.011941614942835757,
+            "mean_semantic_error": 0.7879999999999999
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.4725042953235538,
+            "mean_error_amplification_ratio": 0.723370442117178,
+            "mean_error_norm": 0.007290886028082484,
+            "mean_semantic_error": 0.9199999999999998
+          }
+        },
+        "channel:teacher_reference": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": -2.624807975415422e-09,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 2.228790517047814e-06,
+            "mean_semantic_error": 0.0
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": -1.630630589222193e-08,
+            "mean_error_amplification_ratio": 56565960027176.4,
+            "mean_error_norm": 6.735555314547934e-07,
+            "mean_semantic_error": 0.0
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": -1.4817882143525195e-09,
+            "mean_error_amplification_ratio": 142340500221486.38,
+            "mean_error_norm": 1.575992890708235e-06,
+            "mean_semantic_error": 0.0
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 6.552706492968241e-09,
+            "mean_error_amplification_ratio": 70515751372593.73,
+            "mean_error_norm": 9.656413347143174e-07,
+            "mean_semantic_error": 0.0
+          }
+        },
+        "confirmatory:factorized_multistep_direction_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.11853883623327784,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.011651243122147737,
+            "mean_semantic_error": 0.4660000000000001
+          }
+        },
+        "confirmatory:oracle_factorized_pca_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.7081199774204363,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.024052132385996034,
+            "mean_semantic_error": 0.89
+          }
+        },
+        "confirmatory:oracle_joint_pca_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.07410333719267412,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.00909187378173552,
+            "mean_semantic_error": 0.406
+          }
+        },
+        "confirmatory:unified_causal_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.07144029987339275,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.009033450914887376,
+            "mean_semantic_error": 0.37
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.4592801522031925,
+            "mean_error_amplification_ratio": 0.7622385960000819,
+            "mean_error_norm": 0.005700986838151999,
+            "mean_semantic_error": 0.898
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.17208735663317365,
+            "mean_error_amplification_ratio": 0.7353011229241873,
+            "mean_error_norm": 0.006585883599765118,
+            "mean_semantic_error": 0.6679999999999999
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.3236920104487247,
+            "mean_error_amplification_ratio": 1.8257981771949385,
+            "mean_error_norm": 0.011924911083524892,
+            "mean_semantic_error": 0.814
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.4835403495148081,
+            "mean_error_amplification_ratio": 0.7852674826779749,
+            "mean_error_norm": 0.007737520184974019,
+            "mean_semantic_error": 0.9259999999999999
+          }
+        },
+        "factorized_stage1:factorized_cache_pca_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.8207858041510473,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.024682265761504847,
+            "mean_semantic_error": 0.9259999999999999
+          }
+        },
+        "factorized_stage1:factorized_cache_pca_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.7931350300054955,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.024482857690222543,
+            "mean_semantic_error": 0.9279999999999999
+          }
+        },
+        "factorized_stage1:factorized_cache_pca_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.7105478248121213,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.02381425649771403,
+            "mean_semantic_error": 0.9159999999999998
+          }
+        },
+        "factorized_stage1:factorized_cache_pca_no_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.8272577629090031,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.02477443040324092,
+            "mean_semantic_error": 0.936
+          }
+        },
+        "factorized_stage1:factorized_cache_pca_no_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.7733332263221635,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.02429767642048595,
+            "mean_semantic_error": 0.9179999999999999
+          }
+        },
+        "factorized_stage1:factorized_cache_pca_no_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.654323811242262,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.023319868627783305,
+            "mean_semantic_error": 0.8980000000000001
+          }
+        },
+        "factorized_stage1:factorized_causal_composite_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.25513313596820825,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.015867242219775105,
+            "mean_semantic_error": 0.6140000000000001
+          }
+        },
+        "factorized_stage1:factorized_causal_composite_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.23818924312831607,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.01561059874373432,
+            "mean_semantic_error": 0.604
+          }
+        },
+        "factorized_stage1:factorized_causal_composite_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.18445256128729287,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.013653971855099551,
+            "mean_semantic_error": 0.568
+          }
+        },
+        "factorized_stage1:factorized_causal_composite_no_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.30051822638118003,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.017308492162585513,
+            "mean_semantic_error": 0.652
+          }
+        },
+        "factorized_stage1:factorized_causal_composite_no_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.2572017423479816,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.015810203868009878,
+            "mean_semantic_error": 0.624
+          }
+        },
+        "factorized_stage1:factorized_causal_composite_no_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.19233918442263653,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.014050728527140746,
+            "mean_semantic_error": 0.536
+          }
+        },
+        "factorized_stage1:factorized_effect_weighted_multistep_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.20757946296271662,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.014238449932187165,
+            "mean_semantic_error": 0.586
+          }
+        },
+        "factorized_stage1:factorized_effect_weighted_multistep_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.16717832220923448,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.013003755685321663,
+            "mean_semantic_error": 0.5060000000000001
+          }
+        },
+        "factorized_stage1:factorized_effect_weighted_multistep_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.15117371293077103,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.012555861380231577,
+            "mean_semantic_error": 0.508
+          }
+        },
+        "factorized_stage1:factorized_effect_weighted_multistep_no_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.2263310172114326,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.015236331700635465,
+            "mean_semantic_error": 0.584
+          }
+        },
+        "factorized_stage1:factorized_effect_weighted_multistep_no_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.1848858151356251,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.013836071216589509,
+            "mean_semantic_error": 0.5539999999999999
+          }
+        },
+        "factorized_stage1:factorized_effect_weighted_multistep_no_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.1599686496534491,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.012865190783230838,
+            "mean_semantic_error": 0.49200000000000005
+          }
+        },
+        "factorized_stage1:factorized_h1_direction_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.19730081539569652,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.01412833097657062,
+            "mean_semantic_error": 0.57
+          }
+        },
+        "factorized_stage1:factorized_h1_direction_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.16485444587786188,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.012867480041983568,
+            "mean_semantic_error": 0.546
+          }
+        },
+        "factorized_stage1:factorized_h1_direction_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.14787079764832567,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.012109511682922102,
+            "mean_semantic_error": 0.47800000000000004
+          }
+        },
+        "factorized_stage1:factorized_h1_direction_no_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.23998838353498558,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.015446093296788102,
+            "mean_semantic_error": 0.6240000000000001
+          }
+        },
+        "factorized_stage1:factorized_h1_direction_no_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.1826360709974002,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.013716079529306258,
+            "mean_semantic_error": 0.53
+          }
+        },
+        "factorized_stage1:factorized_h1_direction_no_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.15475769935561612,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.01251064333787159,
+            "mean_semantic_error": 0.48200000000000004
+          }
+        },
+        "factorized_stage1:factorized_manifold_regularized_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.2388558394522628,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.0154574209217779,
+            "mean_semantic_error": 0.6260000000000001
+          }
+        },
+        "factorized_stage1:factorized_manifold_regularized_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.23818924312831607,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.01561059874373432,
+            "mean_semantic_error": 0.604
+          }
+        },
+        "factorized_stage1:factorized_manifold_regularized_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.18445256128729287,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.013653971855099551,
+            "mean_semantic_error": 0.568
+          }
+        },
+        "factorized_stage1:factorized_manifold_regularized_no_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.30051822638118003,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.017308492162585513,
+            "mean_semantic_error": 0.652
+          }
+        },
+        "factorized_stage1:factorized_manifold_regularized_no_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.24926302874859385,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.015676267549782776,
+            "mean_semantic_error": 0.634
+          }
+        },
+        "factorized_stage1:factorized_manifold_regularized_no_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.19233918442263653,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.014050728527140746,
+            "mean_semantic_error": 0.536
+          }
+        },
+        "factorized_stage1:factorized_multistep_direction_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.20997285104567087,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.014368609264152517,
+            "mean_semantic_error": 0.5680000000000001
+          }
+        },
+        "factorized_stage1:factorized_multistep_direction_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.16413917799039646,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.01276275598423068,
+            "mean_semantic_error": 0.528
+          }
+        },
+        "factorized_stage1:factorized_multistep_direction_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.14098046757118526,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.011962020233914678,
+            "mean_semantic_error": 0.48400000000000004
+          }
+        },
+        "factorized_stage1:factorized_multistep_direction_no_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.2398775649061843,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.01550985976892569,
+            "mean_semantic_error": 0.5820000000000001
+          }
+        },
+        "factorized_stage1:factorized_multistep_direction_no_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.19186467043863267,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.014065367834984957,
+            "mean_semantic_error": 0.522
+          }
+        },
+        "factorized_stage1:factorized_multistep_direction_no_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.15074345235655237,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.012480537401873508,
+            "mean_semantic_error": 0.49200000000000005
+          }
+        },
+        "factorized_stage1:factorized_output_h1_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.3425472411511777,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.01777868589360871,
+            "mean_semantic_error": 0.682
+          }
+        },
+        "factorized_stage1:factorized_output_h1_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.2947919492494294,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.016651037219683834,
+            "mean_semantic_error": 0.65
+          }
+        },
+        "factorized_stage1:factorized_output_h1_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.27327144869058484,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.016174282889484505,
+            "mean_semantic_error": 0.6360000000000001
+          }
+        },
+        "factorized_stage1:factorized_output_h1_no_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.35001394580972883,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.018065655390217483,
+            "mean_semantic_error": 0.722
+          }
+        },
+        "factorized_stage1:factorized_output_h1_no_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.2899783276718648,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.0167171871493796,
+            "mean_semantic_error": 0.644
+          }
+        },
+        "factorized_stage1:factorized_output_h1_no_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.2820196884348009,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.01651441652588388,
+            "mean_semantic_error": 0.624
+          }
+        },
+        "factorized_stage1:factorized_semantic_h1_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.2337182398346548,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.015336762313857204,
+            "mean_semantic_error": 0.606
+          }
+        },
+        "factorized_stage1:factorized_semantic_h1_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.24352242913363537,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.01563114991579042,
+            "mean_semantic_error": 0.6080000000000001
+          }
+        },
+        "factorized_stage1:factorized_semantic_h1_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.18770453413420554,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.01374624648418309,
+            "mean_semantic_error": 0.544
+          }
+        },
+        "factorized_stage1:factorized_semantic_h1_no_int_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.29982124199965454,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.017196870429550242,
+            "mean_semantic_error": 0.666
+          }
+        },
+        "factorized_stage1:factorized_semantic_h1_no_int_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.24828838544116522,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.01563527918500268,
+            "mean_semantic_error": 0.636
+          }
+        },
+        "factorized_stage1:factorized_semantic_h1_no_int_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.18880560258929496,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.013895796815803612,
+            "mean_semantic_error": 0.552
+          }
+        },
+        "oracle:oracle_factorized_pca_d128": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.8176248885734754,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.02465387774205655,
+            "mean_semantic_error": 0.9520000000000002
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.53497426533781,
+            "mean_error_amplification_ratio": 0.8388785589013531,
+            "mean_error_norm": 0.006328657534096727,
+            "mean_semantic_error": 0.9339999999999999
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.6995939559107697,
+            "mean_error_amplification_ratio": 0.48559815714477333,
+            "mean_error_norm": 0.01152821670832611,
+            "mean_semantic_error": 0.9560000000000001
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.6108656811911907,
+            "mean_error_amplification_ratio": 1.3625928009133423,
+            "mean_error_norm": 0.01550033800258044,
+            "mean_semantic_error": 0.9380000000000002
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.5171782675272042,
+            "mean_error_amplification_ratio": 0.5277927685345979,
+            "mean_error_norm": 0.007493575443388447,
+            "mean_semantic_error": 0.914
+          }
+        },
+        "oracle:oracle_factorized_pca_d192": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.8155676108996615,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.024623200667434415,
+            "mean_semantic_error": 0.96
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.5315924928799058,
+            "mean_error_amplification_ratio": 0.8357206966758305,
+            "mean_error_norm": 0.0063128089034488475,
+            "mean_semantic_error": 0.9139999999999999
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.6879721900793265,
+            "mean_error_amplification_ratio": 0.4848394694170059,
+            "mean_error_norm": 0.011457837576406515,
+            "mean_semantic_error": 0.9599999999999999
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.6000358022956107,
+            "mean_error_amplification_ratio": 1.3477660434852663,
+            "mean_error_norm": 0.015237487795983303,
+            "mean_semantic_error": 0.938
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.5203229679456247,
+            "mean_error_amplification_ratio": 0.5303714062964022,
+            "mean_error_norm": 0.007518256243616505,
+            "mean_semantic_error": 0.9259999999999999
+          }
+        },
+        "oracle:oracle_factorized_pca_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.8272577629090031,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.02477443040324092,
+            "mean_semantic_error": 0.936
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.5387832319224747,
+            "mean_error_amplification_ratio": 0.8430143490727098,
+            "mean_error_norm": 0.006344437660355383,
+            "mean_semantic_error": 0.93
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.6917166875310728,
+            "mean_error_amplification_ratio": 0.4851096461437194,
+            "mean_error_norm": 0.011493809782296065,
+            "mean_semantic_error": 0.922
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.5934975357946142,
+            "mean_error_amplification_ratio": 1.340675793722005,
+            "mean_error_norm": 0.015233927609821365,
+            "mean_semantic_error": 0.9279999999999999
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.5133391284368419,
+            "mean_error_amplification_ratio": 0.5295197552462357,
+            "mean_error_norm": 0.007486898995560343,
+            "mean_semantic_error": 0.91
+          }
+        },
+        "oracle:oracle_factorized_pca_d320": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.789135217664836,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.024410697849689633,
+            "mean_semantic_error": 0.946
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.5345704502346524,
+            "mean_error_amplification_ratio": 0.8274695647934383,
+            "mean_error_norm": 0.006288467307736962,
+            "mean_semantic_error": 0.9100000000000001
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.6848089149385035,
+            "mean_error_amplification_ratio": 0.48796321318936037,
+            "mean_error_norm": 0.011447743988920322,
+            "mean_semantic_error": 0.9680000000000001
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.5985467311057778,
+            "mean_error_amplification_ratio": 1.3554730205534014,
+            "mean_error_norm": 0.015283194222982103,
+            "mean_semantic_error": 0.9420000000000001
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.530910419647989,
+            "mean_error_amplification_ratio": 0.5378968719900554,
+            "mean_error_norm": 0.007592071063299959,
+            "mean_semantic_error": 0.938
+          }
+        },
+        "oracle:oracle_factorized_pca_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.7733332263221635,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.02429767642048595,
+            "mean_semantic_error": 0.9179999999999999
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.5359047534285323,
+            "mean_error_amplification_ratio": 0.8398292662572188,
+            "mean_error_norm": 0.006359730847791158,
+            "mean_semantic_error": 0.888
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.6693934177623707,
+            "mean_error_amplification_ratio": 0.49025423189302864,
+            "mean_error_norm": 0.011364121933844104,
+            "mean_semantic_error": 0.9420000000000001
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.5855892706447815,
+            "mean_error_amplification_ratio": 1.3494664622302295,
+            "mean_error_norm": 0.01516722463095709,
+            "mean_semantic_error": 0.946
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.5185823208954295,
+            "mean_error_amplification_ratio": 0.5372349182436424,
+            "mean_error_norm": 0.007554072769682485,
+            "mean_semantic_error": 0.9259999999999999
+          }
+        },
+        "oracle:oracle_factorized_pca_d448": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.7536001911719491,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.02419176627449728,
+            "mean_semantic_error": 0.9259999999999999
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.5184534474853613,
+            "mean_error_amplification_ratio": 0.8273376215941302,
+            "mean_error_norm": 0.006217741556188799,
+            "mean_semantic_error": 0.9039999999999999
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.6398694371374863,
+            "mean_error_amplification_ratio": 0.48688437403029455,
+            "mean_error_norm": 0.011226182884499208,
+            "mean_semantic_error": 0.932
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.5615064696820397,
+            "mean_error_amplification_ratio": 1.354656727553329,
+            "mean_error_norm": 0.015016450997188442,
+            "mean_semantic_error": 0.9219999999999999
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.5166242252934984,
+            "mean_error_amplification_ratio": 0.5453272840523575,
+            "mean_error_norm": 0.007487244641837681,
+            "mean_semantic_error": 0.926
+          }
+        },
+        "oracle:oracle_factorized_pca_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.654323811242262,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.023319868627783305,
+            "mean_semantic_error": 0.8980000000000001
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.5151892999892946,
+            "mean_error_amplification_ratio": 0.8286011525973364,
+            "mean_error_norm": 0.006262698637472237,
+            "mean_semantic_error": 0.9220000000000002
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.5802490321011533,
+            "mean_error_amplification_ratio": 0.48735632341945956,
+            "mean_error_norm": 0.010823004969102861,
+            "mean_semantic_error": 0.9179999999999999
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.5335837959960303,
+            "mean_error_amplification_ratio": 1.373671414122582,
+            "mean_error_norm": 0.014697412933240468,
+            "mean_semantic_error": 0.932
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.5139378995484072,
+            "mean_error_amplification_ratio": 0.5581350239530103,
+            "mean_error_norm": 0.0074984138110272,
+            "mean_semantic_error": 0.9059999999999998
+          }
+        },
+        "oracle:oracle_factorized_pca_d64": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.8281357819208027,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.024733526767283052,
+            "mean_semantic_error": 0.93
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.5339042666003234,
+            "mean_error_amplification_ratio": 0.8401760937509911,
+            "mean_error_norm": 0.006279856213210648,
+            "mean_semantic_error": 0.9179999999999999
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.6926428222041959,
+            "mean_error_amplification_ratio": 0.4863376766503535,
+            "mean_error_norm": 0.01149494848546127,
+            "mean_semantic_error": 0.9540000000000001
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.6084458051214213,
+            "mean_error_amplification_ratio": 1.3659389031241855,
+            "mean_error_norm": 0.0154647722561583,
+            "mean_semantic_error": 0.9440000000000001
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.5119671287436898,
+            "mean_error_amplification_ratio": 0.524739030523477,
+            "mean_error_norm": 0.0074905164818463675,
+            "mean_semantic_error": 0.9
+          }
+        },
+        "oracle:oracle_joint_pca_d128": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.785002000801747,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.024403746585219138,
+            "mean_semantic_error": 0.924
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.5252331603699156,
+            "mean_error_amplification_ratio": 0.8218156361855997,
+            "mean_error_norm": 0.006260962727229435,
+            "mean_semantic_error": 0.9320000000000002
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.6787297712770362,
+            "mean_error_amplification_ratio": 0.48645747811294576,
+            "mean_error_norm": 0.011400149184300427,
+            "mean_semantic_error": 0.97
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.5930255336322313,
+            "mean_error_amplification_ratio": 1.3558663211418014,
+            "mean_error_norm": 0.015288202519484198,
+            "mean_semantic_error": 0.94
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.5252629478362553,
+            "mean_error_amplification_ratio": 0.5411681070192234,
+            "mean_error_norm": 0.007602251270898638,
+            "mean_semantic_error": 0.9079999999999999
+          }
+        },
+        "oracle:oracle_joint_pca_d192": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.6973253264827776,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.023619442660676854,
+            "mean_semantic_error": 0.898
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.5235516590174151,
+            "mean_error_amplification_ratio": 0.8267304528449203,
+            "mean_error_norm": 0.006270560891620499,
+            "mean_semantic_error": 0.9159999999999999
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.6323895871643516,
+            "mean_error_amplification_ratio": 0.488081050184565,
+            "mean_error_norm": 0.011105892234970424,
+            "mean_semantic_error": 0.96
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.5761584943730156,
+            "mean_error_amplification_ratio": 1.3792467721716022,
+            "mean_error_norm": 0.01513061384030338,
+            "mean_semantic_error": 0.9420000000000001
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.5255592721281839,
+            "mean_error_amplification_ratio": 0.5430082328050468,
+            "mean_error_norm": 0.007543731571669866,
+            "mean_semantic_error": 0.9080000000000001
+          }
+        },
+        "oracle:oracle_joint_pca_d256": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.5902380661636786,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.02251117848334503,
+            "mean_semantic_error": 0.83
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.5191897766912593,
+            "mean_error_amplification_ratio": 0.8303187072106556,
+            "mean_error_norm": 0.006219809131068836,
+            "mean_semantic_error": 0.9139999999999999
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.5777515083426359,
+            "mean_error_amplification_ratio": 0.49589877124434045,
+            "mean_error_norm": 0.010719321247448378,
+            "mean_semantic_error": 0.9
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.5516858461882921,
+            "mean_error_amplification_ratio": 1.395298316659579,
+            "mean_error_norm": 0.014846689765427858,
+            "mean_semantic_error": 0.924
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.5145883893935902,
+            "mean_error_amplification_ratio": 0.5475633785520998,
+            "mean_error_norm": 0.00748223159804611,
+            "mean_semantic_error": 0.916
+          }
+        },
+        "oracle:oracle_joint_pca_d320": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.28288289692736,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.017063083760602157,
+            "mean_semantic_error": 0.6379999999999999
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.4978292035346877,
+            "mean_error_amplification_ratio": 0.8256630048204329,
+            "mean_error_norm": 0.006129564581534762,
+            "mean_semantic_error": 0.9079999999999999
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.38277510162002004,
+            "mean_error_amplification_ratio": 0.5571093672566921,
+            "mean_error_norm": 0.00917617458541612,
+            "mean_semantic_error": 0.8220000000000001
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.4554403152531157,
+            "mean_error_amplification_ratio": 1.5400403302643315,
+            "mean_error_norm": 0.01384110273029697,
+            "mean_semantic_error": 0.8839999999999999
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.502675680982553,
+            "mean_error_amplification_ratio": 0.5882281288546841,
+            "mean_error_norm": 0.007435820752201201,
+            "mean_semantic_error": 0.898
+          }
+        },
+        "oracle:oracle_joint_pca_d384": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.127911283194533,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.011511702035360614,
+            "mean_semantic_error": 0.46399999999999997
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.4865534777226524,
+            "mean_error_amplification_ratio": 0.8322462476361077,
+            "mean_error_norm": 0.006117024614489319,
+            "mean_semantic_error": 0.9079999999999998
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.23173134680587013,
+            "mean_error_amplification_ratio": 0.6560531446954144,
+            "mean_error_norm": 0.007386713213397444,
+            "mean_semantic_error": 0.7
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.35539815185363216,
+            "mean_error_amplification_ratio": 1.750621748647123,
+            "mean_error_norm": 0.012697152937183844,
+            "mean_semantic_error": 0.8140000000000001
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.4869331140323983,
+            "mean_error_amplification_ratio": 0.6671331966490146,
+            "mean_error_norm": 0.007347651430443191,
+            "mean_semantic_error": 0.882
+          }
+        },
+        "oracle:oracle_joint_pca_d448": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.08490772180855131,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.009330835528113772,
+            "mean_semantic_error": 0.36400000000000005
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.4677258614421613,
+            "mean_error_amplification_ratio": 0.8178086236832095,
+            "mean_error_norm": 0.006013931385533879,
+            "mean_semantic_error": 0.8859999999999999
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.18940179126566065,
+            "mean_error_amplification_ratio": 0.7286665786143839,
+            "mean_error_norm": 0.0067207340539299975,
+            "mean_semantic_error": 0.6680000000000001
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.32622124388109003,
+            "mean_error_amplification_ratio": 1.8340689000174288,
+            "mean_error_norm": 0.012217452932147876,
+            "mean_semantic_error": 0.816
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.4773345394344685,
+            "mean_error_amplification_ratio": 0.7064960776692125,
+            "mean_error_norm": 0.0073480181854093385,
+            "mean_semantic_error": 0.9019999999999999
+          }
+        },
+        "oracle:oracle_joint_pca_d512": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.07884754184162106,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.008913511548565522,
+            "mean_semantic_error": 0.38199999999999995
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.46634741216675524,
+            "mean_error_amplification_ratio": 0.8339122672797903,
+            "mean_error_norm": 0.0060626712054149216,
+            "mean_semantic_error": 0.8660000000000001
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.18413750521131386,
+            "mean_error_amplification_ratio": 0.7513543009908727,
+            "mean_error_norm": 0.0066339460168950105,
+            "mean_semantic_error": 0.674
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.31638284145032974,
+            "mean_error_amplification_ratio": 1.8460318136899907,
+            "mean_error_norm": 0.012092410800697551,
+            "mean_semantic_error": 0.76
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.47678686428452643,
+            "mean_error_amplification_ratio": 0.704297443937624,
+            "mean_error_norm": 0.007306719655015137,
+            "mean_semantic_error": 0.882
+          }
+        },
+        "oracle:oracle_joint_pca_d64": {
+          "1": {
+            "count": 50,
+            "mean_direction_error": 0.8234246835081871,
+            "mean_error_amplification_ratio": null,
+            "mean_error_norm": 0.02468181548953892,
+            "mean_semantic_error": 0.912
+          },
+          "16": {
+            "count": 50,
+            "mean_direction_error": 0.516091087932033,
+            "mean_error_amplification_ratio": 0.823907800384247,
+            "mean_error_norm": 0.006211852750020328,
+            "mean_semantic_error": 0.9339999999999999
+          },
+          "2": {
+            "count": 50,
+            "mean_direction_error": 0.6912332773441863,
+            "mean_error_amplification_ratio": 0.48654761647413436,
+            "mean_error_norm": 0.0114984425746315,
+            "mean_semantic_error": 0.9440000000000001
+          },
+          "4": {
+            "count": 50,
+            "mean_direction_error": 0.6041122736948289,
+            "mean_error_amplification_ratio": 1.3469925877457773,
+            "mean_error_norm": 0.015322744228336705,
+            "mean_semantic_error": 0.938
+          },
+          "8": {
+            "count": 50,
+            "mean_direction_error": 0.5211571427507996,
+            "mean_error_amplification_ratio": 0.5307101781163008,
+            "mean_error_norm": 0.007536168794466144,
+            "mean_semantic_error": 0.9079999999999998
+          }
+        }
+      },
+      "error_definition": "sqrt(||teacher||^2+||decoded||^2-2||teacher||||decoded||cosine)",
+      "jacobian_status": "NOT_ESTIMATED; finite teacher-forced horizon ratios are the frozen local dynamical amplification proxy",
+      "protocol_version": "architecture_resolved_causal_geometry_v11",
+      "records": "results/v11/processed/causal_error_amplification_v11.parquet",
+      "records_sha256": "ef9a3ccbc477ef5f4e48024a848bd9b64d4aa3c25fe621580c5e733288084887",
+      "schema_version": 14,
+      "source_freeze_digest": "753b48824a27a9b5934b774ba0594dc26d98a4d031c6a8c183b065c55470ca9f"
+    },
+    "ceiling": {
+      "architecture_gaps": {
+        "h1_j_effect": {
+          "architecture_1797": 0.6420953869819641,
+          "architecture_minus_combined": 0.11184936761856079,
+          "combined_599": 0.5302460193634033,
+          "metric": "direction_cosine"
+        },
+        "h4_j_effect": {
+          "architecture_1797": 0.23037296533584595,
+          "architecture_minus_combined": 0.04044915735721588,
+          "combined_599": 0.18992380797863007,
+          "metric": "direction_cosine"
+        },
+        "output_effect": {
+          "architecture_1797": 0.6096220095941791,
+          "architecture_minus_combined": 0.10655875727717146,
+          "combined_599": 0.5030632523170077,
+          "metric": "correlation"
+        }
+      },
+      "definitions": {
+        "ceiling_a": "combined block-normalized raw dual-PCA, 599D",
+        "ceiling_b": "separate REC+conv+KV raw dual-PCA coordinates, 1797D",
+        "ceiling_c": "teacher raw full persistent intervention; causal identity ceiling"
+      },
+      "protocol_version": "architecture_resolved_causal_geometry_v11",
+      "record_artifact": "results/v11/processed/architecture_ceiling_v11.parquet",
+      "record_artifact_sha256": "ef74609c1c412286a35643f199dc0c4bc03df72fdac54aaa4527f35b4cf7f41a",
+      "records": [
+        {
+          "ceiling_class": "combined_reference",
+          "correlation": NaN,
+          "dimension": 599.0,
+          "direction_cosine": 0.5302460193634033,
+          "normalized_rmse": 0.8428074445243934,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "ceiling_a_combined_599",
+          "rmse": NaN,
+          "schema_version": 14,
+          "target": "h1_j_effect"
+        },
+        {
+          "ceiling_class": "combined_reference",
+          "correlation": NaN,
+          "dimension": 599.0,
+          "direction_cosine": 0.18992380797863007,
+          "normalized_rmse": 0.9909443646388437,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "ceiling_a_combined_599",
+          "rmse": NaN,
+          "schema_version": 14,
+          "target": "h4_j_effect"
+        },
+        {
+          "ceiling_class": "combined_reference",
+          "correlation": 0.5030632523170077,
+          "dimension": 599.0,
+          "direction_cosine": NaN,
+          "normalized_rmse": NaN,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "ceiling_a_combined_599",
+          "rmse": 0.1374102085828781,
+          "schema_version": 14,
+          "target": "output_effect"
+        },
+        {
+          "ceiling_class": "architecture_resolved",
+          "correlation": NaN,
+          "dimension": 1797.0,
+          "direction_cosine": 0.6420953869819641,
+          "normalized_rmse": 0.7812836021117285,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "ceiling_b_architecture_1797",
+          "rmse": NaN,
+          "schema_version": 14,
+          "target": "h1_j_effect"
+        },
+        {
+          "ceiling_class": "architecture_resolved",
+          "correlation": NaN,
+          "dimension": 1797.0,
+          "direction_cosine": 0.23037296533584595,
+          "normalized_rmse": 0.9796000077045223,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "ceiling_b_architecture_1797",
+          "rmse": NaN,
+          "schema_version": 14,
+          "target": "h4_j_effect"
+        },
+        {
+          "ceiling_class": "architecture_resolved",
+          "correlation": 0.6096220095941791,
+          "dimension": 1797.0,
+          "direction_cosine": NaN,
+          "normalized_rmse": NaN,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "ceiling_b_architecture_1797",
+          "rmse": 0.1282058209180832,
+          "schema_version": 14,
+          "target": "output_effect"
+        },
+        {
+          "ceiling_class": "compact",
+          "correlation": NaN,
+          "dimension": 512.0,
+          "direction_cosine": 0.53050297498703,
+          "normalized_rmse": 0.842676717511847,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "compact_unified_causal_d512",
+          "rmse": NaN,
+          "schema_version": 14,
+          "target": "h1_j_effect"
+        },
+        {
+          "ceiling_class": "compact",
+          "correlation": NaN,
+          "dimension": 512.0,
+          "direction_cosine": 0.18951845169067383,
+          "normalized_rmse": 0.9911932280684579,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "compact_unified_causal_d512",
+          "rmse": NaN,
+          "schema_version": 14,
+          "target": "h4_j_effect"
+        },
+        {
+          "ceiling_class": "compact",
+          "correlation": 0.506234924177463,
+          "dimension": 512.0,
+          "direction_cosine": NaN,
+          "normalized_rmse": NaN,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "compact_unified_causal_d512",
+          "rmse": 0.1371597945690155,
+          "schema_version": 14,
+          "target": "output_effect"
+        },
+        {
+          "ceiling_class": "compact",
+          "correlation": NaN,
+          "dimension": 512.0,
+          "direction_cosine": 0.5282160043716431,
+          "normalized_rmse": 0.8438054741629718,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "compact_oracle_joint_pca_d512",
+          "rmse": NaN,
+          "schema_version": 14,
+          "target": "h1_j_effect"
+        },
+        {
+          "ceiling_class": "compact",
+          "correlation": NaN,
+          "dimension": 512.0,
+          "direction_cosine": 0.18937969207763672,
+          "normalized_rmse": 0.9907540825686779,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "compact_oracle_joint_pca_d512",
+          "rmse": NaN,
+          "schema_version": 14,
+          "target": "h4_j_effect"
+        },
+        {
+          "ceiling_class": "compact",
+          "correlation": 0.4921983138731284,
+          "dimension": 512.0,
+          "direction_cosine": NaN,
+          "normalized_rmse": NaN,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "compact_oracle_joint_pca_d512",
+          "rmse": 0.13818475604057312,
+          "schema_version": 14,
+          "target": "output_effect"
+        },
+        {
+          "ceiling_class": "compact",
+          "correlation": NaN,
+          "dimension": 512.0,
+          "direction_cosine": 0.4289821684360504,
+          "normalized_rmse": 0.8895937111283841,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "compact_oracle_factorized_pca_d512",
+          "rmse": NaN,
+          "schema_version": 14,
+          "target": "h1_j_effect"
+        },
+        {
+          "ceiling_class": "compact",
+          "correlation": NaN,
+          "dimension": 512.0,
+          "direction_cosine": 0.15395674109458923,
+          "normalized_rmse": 1.001680824953132,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "compact_oracle_factorized_pca_d512",
+          "rmse": NaN,
+          "schema_version": 14,
+          "target": "h4_j_effect"
+        },
+        {
+          "ceiling_class": "compact",
+          "correlation": 0.3843646272926888,
+          "dimension": 512.0,
+          "direction_cosine": NaN,
+          "normalized_rmse": NaN,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "compact_oracle_factorized_pca_d512",
+          "rmse": 0.14583304524421692,
+          "schema_version": 14,
+          "target": "output_effect"
+        },
+        {
+          "ceiling_class": "compact",
+          "correlation": NaN,
+          "dimension": 512.0,
+          "direction_cosine": 0.6461753249168396,
+          "normalized_rmse": 0.7745958795654118,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "compact_factorized_multistep_direction_int_d512",
+          "rmse": NaN,
+          "schema_version": 14,
+          "target": "h1_j_effect"
+        },
+        {
+          "ceiling_class": "compact",
+          "correlation": NaN,
+          "dimension": 512.0,
+          "direction_cosine": 0.22938504815101624,
+          "normalized_rmse": 0.9798870256949498,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "compact_factorized_multistep_direction_int_d512",
+          "rmse": NaN,
+          "schema_version": 14,
+          "target": "h4_j_effect"
+        },
+        {
+          "ceiling_class": "compact",
+          "correlation": 0.6371834136046661,
+          "dimension": 512.0,
+          "direction_cosine": NaN,
+          "normalized_rmse": NaN,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "compact_factorized_multistep_direction_int_d512",
+          "rmse": 0.12542802095413208,
+          "schema_version": 14,
+          "target": "output_effect"
+        },
+        {
+          "ceiling_class": "raw_full_persistent_intervention",
+          "correlation": NaN,
+          "dimension": NaN,
+          "direction_cosine": 1.0,
+          "normalized_rmse": 0.0,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "ceiling_c_raw_full_intervention",
+          "rmse": NaN,
+          "schema_version": 14,
+          "target": "h1_j_effect"
+        },
+        {
+          "ceiling_class": "raw_full_persistent_intervention",
+          "correlation": NaN,
+          "dimension": NaN,
+          "direction_cosine": 1.0,
+          "normalized_rmse": 0.0,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "ceiling_c_raw_full_intervention",
+          "rmse": NaN,
+          "schema_version": 14,
+          "target": "h4_j_effect"
+        },
+        {
+          "ceiling_class": "raw_full_persistent_intervention",
+          "correlation": 1.0,
+          "dimension": NaN,
+          "direction_cosine": NaN,
+          "normalized_rmse": NaN,
+          "protocol_version": "architecture_resolved_causal_geometry_v11",
+          "record_type": "architecture_resolved_predictive_ceiling",
+          "representation": "ceiling_c_raw_full_intervention",
+          "rmse": 0.0,
+          "schema_version": 14,
+          "target": "output_effect"
+        }
+      ],
+      "schema_version": 14,
+      "source_freeze_digest": "753b48824a27a9b5934b774ba0594dc26d98a4d031c6a8c183b065c55470ca9f",
+      "split_role": "independent_confirmatory"
+    },
+    "manifold": {
+      "aggregates": {
+        "clean_zero": {
+          "conv": {
+            "cycle_relative_error": 122674440.05065188,
+            "local_pca_reconstruction_error": 0.9999965187537897,
+            "mahalanobis_distance": 0.00028815370751544833,
+            "mean_k_neighbor_distance": 0.9959349632263184,
+            "nearest_neighbor_distance": 0.9799845814704895,
+            "outside_global_subspace_energy_fraction": 0.6267145262811917
+          },
+          "joint_compatibility": {
+            "all_channels_same_neighbor": 0.0,
+            "pairwise_neighbor_agreement": 0.0
+          },
+          "kv": {
+            "cycle_relative_error": 201487633.0017068,
+            "local_pca_reconstruction_error": 0.999999921041513,
+            "mahalanobis_distance": 0.0002557091065682471,
+            "mean_k_neighbor_distance": 0.9996288418769836,
+            "nearest_neighbor_distance": 0.9989740252494812,
+            "outside_global_subspace_energy_fraction": 0.7103264431940499
+          },
+          "recurrent": {
+            "cycle_relative_error": 119411186.66786158,
+            "local_pca_reconstruction_error": 0.999998337369435,
+            "mahalanobis_distance": 0.00016915635205805302,
+            "mean_k_neighbor_distance": 0.9968099594116211,
+            "nearest_neighbor_distance": 0.9896726012229919,
+            "outside_global_subspace_energy_fraction": 0.6472843129218377
+          }
+        },
+        "factorized_multistep_direction_int_d512": {
+          "conv": {
+            "cycle_relative_error": 1.7842624485679283e-07,
+            "local_pca_reconstruction_error": 0.9772522290166055,
+            "mahalanobis_distance": 9.953817434310913,
+            "mean_k_neighbor_distance": 1.0318531954288483,
+            "nearest_neighbor_distance": 0.9685286486148834,
+            "outside_global_subspace_energy_fraction": 0.9872319570119366
+          },
+          "joint_compatibility": {
+            "all_channels_same_neighbor": 0.32,
+            "pairwise_neighbor_agreement": 0.4599999999999999
+          },
+          "kv": {
+            "cycle_relative_error": 2.1376419155102242e-07,
+            "local_pca_reconstruction_error": 0.9794916429531549,
+            "mahalanobis_distance": 8.3538529586792,
+            "mean_k_neighbor_distance": 1.0183966040611268,
+            "nearest_neighbor_distance": 0.9642042577266693,
+            "outside_global_subspace_energy_fraction": 0.983941521431305
+          },
+          "recurrent": {
+            "cycle_relative_error": 2.277253926237481e-07,
+            "local_pca_reconstruction_error": 0.9575538966819046,
+            "mahalanobis_distance": 13.5177374458313,
+            "mean_k_neighbor_distance": 1.079750692844391,
+            "nearest_neighbor_distance": 0.9707800149917603,
+            "outside_global_subspace_energy_fraction": 0.9896635342805424
+          }
+        },
+        "oracle_factorized_pca_d512": {
+          "conv": {
+            "cycle_relative_error": 3.973121718193593e-07,
+            "local_pca_reconstruction_error": 0.9976247369605895,
+            "mahalanobis_distance": 7.545524835586548,
+            "mean_k_neighbor_distance": 1.018501455783844,
+            "nearest_neighbor_distance": 0.9983494293689728,
+            "outside_global_subspace_energy_fraction": 0.21927726735158937
+          },
+          "joint_compatibility": {
+            "all_channels_same_neighbor": 0.08,
+            "pairwise_neighbor_agreement": 0.21333333333333332
+          },
+          "kv": {
+            "cycle_relative_error": 3.399840341411483e-07,
+            "local_pca_reconstruction_error": 0.9949973626206742,
+            "mahalanobis_distance": 5.592122128009796,
+            "mean_k_neighbor_distance": 1.0040626907348633,
+            "nearest_neighbor_distance": 0.9805249071121216,
+            "outside_global_subspace_energy_fraction": 4.101208111215638e-14
+          },
+          "recurrent": {
+            "cycle_relative_error": 2.859266733182736e-07,
+            "local_pca_reconstruction_error": 0.9903972343578822,
+            "mahalanobis_distance": 12.380719394683839,
+            "mean_k_neighbor_distance": 1.076977219581604,
+            "nearest_neighbor_distance": 1.0267309606075288,
+            "outside_global_subspace_energy_fraction": 0.5359242624539278
+          }
+        },
+        "oracle_joint_pca_d512": {
+          "conv": {
+            "cycle_relative_error": 1.8968477023314064e-07,
+            "local_pca_reconstruction_error": 0.9367506042131182,
+            "mahalanobis_distance": 14.103225708007812,
+            "mean_k_neighbor_distance": 1.0781322979927064,
+            "nearest_neighbor_distance": 0.9207338297367096,
+            "outside_global_subspace_energy_fraction": 0.8281119796058846
+          },
+          "joint_compatibility": {
+            "all_channels_same_neighbor": 0.98,
+            "pairwise_neighbor_agreement": 0.9866666666666666
+          },
+          "kv": {
+            "cycle_relative_error": 2.39889934784036e-07,
+            "local_pca_reconstruction_error": 0.9336364848777469,
+            "mahalanobis_distance": 14.103225688934327,
+            "mean_k_neighbor_distance": 1.077854118347168,
+            "nearest_neighbor_distance": 0.920601087808609,
+            "outside_global_subspace_energy_fraction": 0.8387024116819656
+          },
+          "recurrent": {
+            "cycle_relative_error": 2.152890709185991e-07,
+            "local_pca_reconstruction_error": 0.9299713447798318,
+            "mahalanobis_distance": 14.10322582244873,
+            "mean_k_neighbor_distance": 1.077994225025177,
+            "nearest_neighbor_distance": 0.9207091796398162,
+            "outside_global_subspace_energy_fraction": 0.8457004536847077
+          }
+        },
+        "teacher_raw": {
+          "conv": {
+            "cycle_relative_error": 2.090491167033693e-07,
+            "local_pca_reconstruction_error": 0.9568360888621225,
+            "mahalanobis_distance": 16.732960948944093,
+            "mean_k_neighbor_distance": 1.1333275508880616,
+            "nearest_neighbor_distance": 0.9842579638957978,
+            "outside_global_subspace_energy_fraction": 0.8355879216050391
+          },
+          "joint_compatibility": {
+            "all_channels_same_neighbor": 0.42,
+            "pairwise_neighbor_agreement": 0.5333333333333333
+          },
+          "kv": {
+            "cycle_relative_error": 2.4223551324443444e-07,
+            "local_pca_reconstruction_error": 0.887571504134368,
+            "mahalanobis_distance": 16.748315410614012,
+            "mean_k_neighbor_distance": 1.1238065958023071,
+            "nearest_neighbor_distance": 0.9080742800235748,
+            "outside_global_subspace_energy_fraction": 0.8276603106949127
+          },
+          "recurrent": {
+            "cycle_relative_error": 2.2764040843850543e-07,
+            "local_pca_reconstruction_error": 0.9480843930591111,
+            "mahalanobis_distance": 20.185249309539795,
+            "mean_k_neighbor_distance": 1.2086930537223817,
+            "nearest_neighbor_distance": 1.0369226491451264,
+            "outside_global_subspace_energy_fraction": 0.8219577825341767
+          }
+        },
+        "unified_causal_d512": {
+          "conv": {
+            "cycle_relative_error": 3.2982263702319574e-07,
+            "local_pca_reconstruction_error": 0.998498995848612,
+            "mahalanobis_distance": 52.939536552429196,
+            "mean_k_neighbor_distance": 2.3030888843536377,
+            "nearest_neighbor_distance": 2.2634837293624877,
+            "outside_global_subspace_energy_fraction": 0.884270779548453
+          },
+          "joint_compatibility": {
+            "all_channels_same_neighbor": 0.0,
+            "pairwise_neighbor_agreement": 0.0
+          },
+          "kv": {
+            "cycle_relative_error": 2.372259486480299e-07,
+            "local_pca_reconstruction_error": 0.9984336124690439,
+            "mahalanobis_distance": 25.917823638916015,
+            "mean_k_neighbor_distance": 1.3927795028686523,
+            "nearest_neighbor_distance": 1.3612936425209046,
+            "outside_global_subspace_energy_fraction": 0.8602943470285759
+          },
+          "recurrent": {
+            "cycle_relative_error": 2.577601491634283e-07,
+            "local_pca_reconstruction_error": 0.9986362350986606,
+            "mahalanobis_distance": 33.70488227844238,
+            "mean_k_neighbor_distance": 1.6308564567565917,
+            "nearest_neighbor_distance": 1.597804572582245,
+            "outside_global_subspace_energy_fraction": 0.8675770363836774
+          }
+        }
+      },
+      "compatibility_records": "results/v11/processed/channel_compatibility_v11.parquet",
+      "compatibility_records_sha256": "c33c0aa686277f8299d69fc08e76b9ed902ba2e455bb13e26ec9307e2e12183b",
+      "natural_reference": "training teacher raw intervention deltas only",
+      "protocol_version": "architecture_resolved_causal_geometry_v11",
+      "records": "results/v11/processed/causal_state_manifold_v11.parquet",
+      "records_sha256": "06f13b242adae1b38ac10e7e76c2401b5b20850fc13e9161a7e60efbda93465e",
+      "schema_version": 14,
+      "source_freeze_digest": "753b48824a27a9b5934b774ba0594dc26d98a4d031c6a8c183b065c55470ca9f",
+      "split_role": "independent_confirmatory"
+    }
+  }
+}

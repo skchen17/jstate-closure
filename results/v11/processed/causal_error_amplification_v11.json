@@ -1,0 +1,1339 @@
+{
+  "aggregates": {
+    "channel:decoded_all": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.07720756421324788,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.008883665275674269,
+        "mean_semantic_error": 0.38599999999999995
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.17720337407011455,
+        "mean_error_amplification_ratio": 0.7426715891104351,
+        "mean_error_norm": 0.006518212472561157,
+        "mean_semantic_error": 0.648
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.3115032122175963,
+        "mean_error_amplification_ratio": 1.86645154159028,
+        "mean_error_norm": 0.012043643489127625,
+        "mean_semantic_error": 0.794
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.4676367761097606,
+        "mean_error_amplification_ratio": 0.7157054335488142,
+        "mean_error_norm": 0.007208936146759398,
+        "mean_semantic_error": 0.914
+      }
+    },
+    "channel:decoded_conv": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.06585398817491366,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.008319575066044766,
+        "mean_semantic_error": 0.32800000000000007
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.16304942754980145,
+        "mean_error_amplification_ratio": 0.7711936719583882,
+        "mean_error_norm": 0.00632714163277503,
+        "mean_semantic_error": 0.634
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.29469545564147936,
+        "mean_error_amplification_ratio": 1.8662664145954198,
+        "mean_error_norm": 0.01169765704561208,
+        "mean_semantic_error": 0.758
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.45566102056242286,
+        "mean_error_amplification_ratio": 0.7402915540779216,
+        "mean_error_norm": 0.007159456834941989,
+        "mean_semantic_error": 0.89
+      }
+    },
+    "channel:decoded_conv_kv": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.06758425503848448,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.008430362758220006,
+        "mean_semantic_error": 0.3440000000000001
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.16021984332689418,
+        "mean_error_amplification_ratio": 0.7572375839219501,
+        "mean_error_norm": 0.006273310051995183,
+        "mean_semantic_error": 0.616
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.2969361119336647,
+        "mean_error_amplification_ratio": 1.8800660606488884,
+        "mean_error_norm": 0.01171144255931456,
+        "mean_semantic_error": 0.772
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.4462279273828658,
+        "mean_error_amplification_ratio": 0.7314186012404795,
+        "mean_error_norm": 0.007100274846212166,
+        "mean_semantic_error": 0.868
+      }
+    },
+    "channel:decoded_kv": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.029706074225853744,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.005480193306836039,
+        "mean_semantic_error": 0.24
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.08916392881387929,
+        "mean_error_amplification_ratio": 0.8629202108891577,
+        "mean_error_norm": 0.004685079906681591,
+        "mean_semantic_error": 0.5
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.13945096980393779,
+        "mean_error_amplification_ratio": 1.7276216141811884,
+        "mean_error_norm": 0.008023137234331058,
+        "mean_semantic_error": 0.5940000000000001
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.2300711973122032,
+        "mean_error_amplification_ratio": 0.717113423339159,
+        "mean_error_norm": 0.0050663627566917765,
+        "mean_semantic_error": 0.7339999999999999
+      }
+    },
+    "channel:decoded_rec": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.05837378704451556,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.007585380236027943,
+        "mean_semantic_error": 0.326
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.166894758364227,
+        "mean_error_amplification_ratio": 0.8504587054018262,
+        "mean_error_norm": 0.006393512867563567,
+        "mean_semantic_error": 0.618
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.303266246769893,
+        "mean_error_amplification_ratio": 1.884033470914061,
+        "mean_error_norm": 0.011921704754073623,
+        "mean_semantic_error": 0.7780000000000001
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.4701556047483434,
+        "mean_error_amplification_ratio": 0.7355946972286362,
+        "mean_error_norm": 0.0072703497141869185,
+        "mean_semantic_error": 0.9039999999999999
+      }
+    },
+    "channel:decoded_rec_conv": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.07663360574565266,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.008859826284261307,
+        "mean_semantic_error": 0.376
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.17374965593359903,
+        "mean_error_amplification_ratio": 0.7412048868249324,
+        "mean_error_norm": 0.006481435108136388,
+        "mean_semantic_error": 0.6480000000000001
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.3087752262785276,
+        "mean_error_amplification_ratio": 1.8629845041772084,
+        "mean_error_norm": 0.011985518543793901,
+        "mean_semantic_error": 0.7879999999999999
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.4710239398318255,
+        "mean_error_amplification_ratio": 0.722072408697074,
+        "mean_error_norm": 0.007248319758361322,
+        "mean_semantic_error": 0.9279999999999999
+      }
+    },
+    "channel:decoded_rec_kv": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.05893806533833554,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.00764340614309302,
+        "mean_semantic_error": 0.31800000000000006
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.16841822270643048,
+        "mean_error_amplification_ratio": 0.8515108835394564,
+        "mean_error_norm": 0.006436263562697928,
+        "mean_semantic_error": 0.596
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.30287783297260895,
+        "mean_error_amplification_ratio": 1.8674507981610273,
+        "mean_error_norm": 0.011941614942835757,
+        "mean_semantic_error": 0.7879999999999999
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.4725042953235538,
+        "mean_error_amplification_ratio": 0.723370442117178,
+        "mean_error_norm": 0.007290886028082484,
+        "mean_semantic_error": 0.9199999999999998
+      }
+    },
+    "channel:teacher_reference": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": -2.624807975415422e-09,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 2.228790517047814e-06,
+        "mean_semantic_error": 0.0
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": -1.630630589222193e-08,
+        "mean_error_amplification_ratio": 56565960027176.4,
+        "mean_error_norm": 6.735555314547934e-07,
+        "mean_semantic_error": 0.0
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": -1.4817882143525195e-09,
+        "mean_error_amplification_ratio": 142340500221486.38,
+        "mean_error_norm": 1.575992890708235e-06,
+        "mean_semantic_error": 0.0
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 6.552706492968241e-09,
+        "mean_error_amplification_ratio": 70515751372593.73,
+        "mean_error_norm": 9.656413347143174e-07,
+        "mean_semantic_error": 0.0
+      }
+    },
+    "confirmatory:factorized_multistep_direction_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.11853883623327784,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.011651243122147737,
+        "mean_semantic_error": 0.4660000000000001
+      }
+    },
+    "confirmatory:oracle_factorized_pca_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.7081199774204363,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.024052132385996034,
+        "mean_semantic_error": 0.89
+      }
+    },
+    "confirmatory:oracle_joint_pca_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.07410333719267412,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.00909187378173552,
+        "mean_semantic_error": 0.406
+      }
+    },
+    "confirmatory:unified_causal_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.07144029987339275,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.009033450914887376,
+        "mean_semantic_error": 0.37
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.4592801522031925,
+        "mean_error_amplification_ratio": 0.7622385960000819,
+        "mean_error_norm": 0.005700986838151999,
+        "mean_semantic_error": 0.898
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.17208735663317365,
+        "mean_error_amplification_ratio": 0.7353011229241873,
+        "mean_error_norm": 0.006585883599765118,
+        "mean_semantic_error": 0.6679999999999999
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.3236920104487247,
+        "mean_error_amplification_ratio": 1.8257981771949385,
+        "mean_error_norm": 0.011924911083524892,
+        "mean_semantic_error": 0.814
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.4835403495148081,
+        "mean_error_amplification_ratio": 0.7852674826779749,
+        "mean_error_norm": 0.007737520184974019,
+        "mean_semantic_error": 0.9259999999999999
+      }
+    },
+    "factorized_stage1:factorized_cache_pca_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.8207858041510473,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.024682265761504847,
+        "mean_semantic_error": 0.9259999999999999
+      }
+    },
+    "factorized_stage1:factorized_cache_pca_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.7931350300054955,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.024482857690222543,
+        "mean_semantic_error": 0.9279999999999999
+      }
+    },
+    "factorized_stage1:factorized_cache_pca_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.7105478248121213,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.02381425649771403,
+        "mean_semantic_error": 0.9159999999999998
+      }
+    },
+    "factorized_stage1:factorized_cache_pca_no_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.8272577629090031,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.02477443040324092,
+        "mean_semantic_error": 0.936
+      }
+    },
+    "factorized_stage1:factorized_cache_pca_no_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.7733332263221635,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.02429767642048595,
+        "mean_semantic_error": 0.9179999999999999
+      }
+    },
+    "factorized_stage1:factorized_cache_pca_no_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.654323811242262,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.023319868627783305,
+        "mean_semantic_error": 0.8980000000000001
+      }
+    },
+    "factorized_stage1:factorized_causal_composite_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.25513313596820825,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.015867242219775105,
+        "mean_semantic_error": 0.6140000000000001
+      }
+    },
+    "factorized_stage1:factorized_causal_composite_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.23818924312831607,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.01561059874373432,
+        "mean_semantic_error": 0.604
+      }
+    },
+    "factorized_stage1:factorized_causal_composite_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.18445256128729287,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.013653971855099551,
+        "mean_semantic_error": 0.568
+      }
+    },
+    "factorized_stage1:factorized_causal_composite_no_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.30051822638118003,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.017308492162585513,
+        "mean_semantic_error": 0.652
+      }
+    },
+    "factorized_stage1:factorized_causal_composite_no_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.2572017423479816,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.015810203868009878,
+        "mean_semantic_error": 0.624
+      }
+    },
+    "factorized_stage1:factorized_causal_composite_no_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.19233918442263653,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.014050728527140746,
+        "mean_semantic_error": 0.536
+      }
+    },
+    "factorized_stage1:factorized_effect_weighted_multistep_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.20757946296271662,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.014238449932187165,
+        "mean_semantic_error": 0.586
+      }
+    },
+    "factorized_stage1:factorized_effect_weighted_multistep_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.16717832220923448,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.013003755685321663,
+        "mean_semantic_error": 0.5060000000000001
+      }
+    },
+    "factorized_stage1:factorized_effect_weighted_multistep_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.15117371293077103,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.012555861380231577,
+        "mean_semantic_error": 0.508
+      }
+    },
+    "factorized_stage1:factorized_effect_weighted_multistep_no_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.2263310172114326,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.015236331700635465,
+        "mean_semantic_error": 0.584
+      }
+    },
+    "factorized_stage1:factorized_effect_weighted_multistep_no_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.1848858151356251,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.013836071216589509,
+        "mean_semantic_error": 0.5539999999999999
+      }
+    },
+    "factorized_stage1:factorized_effect_weighted_multistep_no_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.1599686496534491,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.012865190783230838,
+        "mean_semantic_error": 0.49200000000000005
+      }
+    },
+    "factorized_stage1:factorized_h1_direction_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.19730081539569652,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.01412833097657062,
+        "mean_semantic_error": 0.57
+      }
+    },
+    "factorized_stage1:factorized_h1_direction_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.16485444587786188,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.012867480041983568,
+        "mean_semantic_error": 0.546
+      }
+    },
+    "factorized_stage1:factorized_h1_direction_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.14787079764832567,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.012109511682922102,
+        "mean_semantic_error": 0.47800000000000004
+      }
+    },
+    "factorized_stage1:factorized_h1_direction_no_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.23998838353498558,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.015446093296788102,
+        "mean_semantic_error": 0.6240000000000001
+      }
+    },
+    "factorized_stage1:factorized_h1_direction_no_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.1826360709974002,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.013716079529306258,
+        "mean_semantic_error": 0.53
+      }
+    },
+    "factorized_stage1:factorized_h1_direction_no_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.15475769935561612,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.01251064333787159,
+        "mean_semantic_error": 0.48200000000000004
+      }
+    },
+    "factorized_stage1:factorized_manifold_regularized_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.2388558394522628,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.0154574209217779,
+        "mean_semantic_error": 0.6260000000000001
+      }
+    },
+    "factorized_stage1:factorized_manifold_regularized_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.23818924312831607,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.01561059874373432,
+        "mean_semantic_error": 0.604
+      }
+    },
+    "factorized_stage1:factorized_manifold_regularized_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.18445256128729287,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.013653971855099551,
+        "mean_semantic_error": 0.568
+      }
+    },
+    "factorized_stage1:factorized_manifold_regularized_no_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.30051822638118003,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.017308492162585513,
+        "mean_semantic_error": 0.652
+      }
+    },
+    "factorized_stage1:factorized_manifold_regularized_no_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.24926302874859385,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.015676267549782776,
+        "mean_semantic_error": 0.634
+      }
+    },
+    "factorized_stage1:factorized_manifold_regularized_no_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.19233918442263653,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.014050728527140746,
+        "mean_semantic_error": 0.536
+      }
+    },
+    "factorized_stage1:factorized_multistep_direction_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.20997285104567087,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.014368609264152517,
+        "mean_semantic_error": 0.5680000000000001
+      }
+    },
+    "factorized_stage1:factorized_multistep_direction_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.16413917799039646,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.01276275598423068,
+        "mean_semantic_error": 0.528
+      }
+    },
+    "factorized_stage1:factorized_multistep_direction_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.14098046757118526,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.011962020233914678,
+        "mean_semantic_error": 0.48400000000000004
+      }
+    },
+    "factorized_stage1:factorized_multistep_direction_no_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.2398775649061843,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.01550985976892569,
+        "mean_semantic_error": 0.5820000000000001
+      }
+    },
+    "factorized_stage1:factorized_multistep_direction_no_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.19186467043863267,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.014065367834984957,
+        "mean_semantic_error": 0.522
+      }
+    },
+    "factorized_stage1:factorized_multistep_direction_no_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.15074345235655237,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.012480537401873508,
+        "mean_semantic_error": 0.49200000000000005
+      }
+    },
+    "factorized_stage1:factorized_output_h1_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.3425472411511777,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.01777868589360871,
+        "mean_semantic_error": 0.682
+      }
+    },
+    "factorized_stage1:factorized_output_h1_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.2947919492494294,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.016651037219683834,
+        "mean_semantic_error": 0.65
+      }
+    },
+    "factorized_stage1:factorized_output_h1_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.27327144869058484,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.016174282889484505,
+        "mean_semantic_error": 0.6360000000000001
+      }
+    },
+    "factorized_stage1:factorized_output_h1_no_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.35001394580972883,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.018065655390217483,
+        "mean_semantic_error": 0.722
+      }
+    },
+    "factorized_stage1:factorized_output_h1_no_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.2899783276718648,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.0167171871493796,
+        "mean_semantic_error": 0.644
+      }
+    },
+    "factorized_stage1:factorized_output_h1_no_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.2820196884348009,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.01651441652588388,
+        "mean_semantic_error": 0.624
+      }
+    },
+    "factorized_stage1:factorized_semantic_h1_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.2337182398346548,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.015336762313857204,
+        "mean_semantic_error": 0.606
+      }
+    },
+    "factorized_stage1:factorized_semantic_h1_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.24352242913363537,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.01563114991579042,
+        "mean_semantic_error": 0.6080000000000001
+      }
+    },
+    "factorized_stage1:factorized_semantic_h1_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.18770453413420554,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.01374624648418309,
+        "mean_semantic_error": 0.544
+      }
+    },
+    "factorized_stage1:factorized_semantic_h1_no_int_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.29982124199965454,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.017196870429550242,
+        "mean_semantic_error": 0.666
+      }
+    },
+    "factorized_stage1:factorized_semantic_h1_no_int_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.24828838544116522,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.01563527918500268,
+        "mean_semantic_error": 0.636
+      }
+    },
+    "factorized_stage1:factorized_semantic_h1_no_int_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.18880560258929496,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.013895796815803612,
+        "mean_semantic_error": 0.552
+      }
+    },
+    "oracle:oracle_factorized_pca_d128": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.8176248885734754,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.02465387774205655,
+        "mean_semantic_error": 0.9520000000000002
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.53497426533781,
+        "mean_error_amplification_ratio": 0.8388785589013531,
+        "mean_error_norm": 0.006328657534096727,
+        "mean_semantic_error": 0.9339999999999999
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.6995939559107697,
+        "mean_error_amplification_ratio": 0.48559815714477333,
+        "mean_error_norm": 0.01152821670832611,
+        "mean_semantic_error": 0.9560000000000001
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.6108656811911907,
+        "mean_error_amplification_ratio": 1.3625928009133423,
+        "mean_error_norm": 0.01550033800258044,
+        "mean_semantic_error": 0.9380000000000002
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.5171782675272042,
+        "mean_error_amplification_ratio": 0.5277927685345979,
+        "mean_error_norm": 0.007493575443388447,
+        "mean_semantic_error": 0.914
+      }
+    },
+    "oracle:oracle_factorized_pca_d192": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.8155676108996615,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.024623200667434415,
+        "mean_semantic_error": 0.96
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.5315924928799058,
+        "mean_error_amplification_ratio": 0.8357206966758305,
+        "mean_error_norm": 0.0063128089034488475,
+        "mean_semantic_error": 0.9139999999999999
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.6879721900793265,
+        "mean_error_amplification_ratio": 0.4848394694170059,
+        "mean_error_norm": 0.011457837576406515,
+        "mean_semantic_error": 0.9599999999999999
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.6000358022956107,
+        "mean_error_amplification_ratio": 1.3477660434852663,
+        "mean_error_norm": 0.015237487795983303,
+        "mean_semantic_error": 0.938
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.5203229679456247,
+        "mean_error_amplification_ratio": 0.5303714062964022,
+        "mean_error_norm": 0.007518256243616505,
+        "mean_semantic_error": 0.9259999999999999
+      }
+    },
+    "oracle:oracle_factorized_pca_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.8272577629090031,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.02477443040324092,
+        "mean_semantic_error": 0.936
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.5387832319224747,
+        "mean_error_amplification_ratio": 0.8430143490727098,
+        "mean_error_norm": 0.006344437660355383,
+        "mean_semantic_error": 0.93
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.6917166875310728,
+        "mean_error_amplification_ratio": 0.4851096461437194,
+        "mean_error_norm": 0.011493809782296065,
+        "mean_semantic_error": 0.922
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.5934975357946142,
+        "mean_error_amplification_ratio": 1.340675793722005,
+        "mean_error_norm": 0.015233927609821365,
+        "mean_semantic_error": 0.9279999999999999
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.5133391284368419,
+        "mean_error_amplification_ratio": 0.5295197552462357,
+        "mean_error_norm": 0.007486898995560343,
+        "mean_semantic_error": 0.91
+      }
+    },
+    "oracle:oracle_factorized_pca_d320": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.789135217664836,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.024410697849689633,
+        "mean_semantic_error": 0.946
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.5345704502346524,
+        "mean_error_amplification_ratio": 0.8274695647934383,
+        "mean_error_norm": 0.006288467307736962,
+        "mean_semantic_error": 0.9100000000000001
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.6848089149385035,
+        "mean_error_amplification_ratio": 0.48796321318936037,
+        "mean_error_norm": 0.011447743988920322,
+        "mean_semantic_error": 0.9680000000000001
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.5985467311057778,
+        "mean_error_amplification_ratio": 1.3554730205534014,
+        "mean_error_norm": 0.015283194222982103,
+        "mean_semantic_error": 0.9420000000000001
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.530910419647989,
+        "mean_error_amplification_ratio": 0.5378968719900554,
+        "mean_error_norm": 0.007592071063299959,
+        "mean_semantic_error": 0.938
+      }
+    },
+    "oracle:oracle_factorized_pca_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.7733332263221635,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.02429767642048595,
+        "mean_semantic_error": 0.9179999999999999
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.5359047534285323,
+        "mean_error_amplification_ratio": 0.8398292662572188,
+        "mean_error_norm": 0.006359730847791158,
+        "mean_semantic_error": 0.888
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.6693934177623707,
+        "mean_error_amplification_ratio": 0.49025423189302864,
+        "mean_error_norm": 0.011364121933844104,
+        "mean_semantic_error": 0.9420000000000001
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.5855892706447815,
+        "mean_error_amplification_ratio": 1.3494664622302295,
+        "mean_error_norm": 0.01516722463095709,
+        "mean_semantic_error": 0.946
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.5185823208954295,
+        "mean_error_amplification_ratio": 0.5372349182436424,
+        "mean_error_norm": 0.007554072769682485,
+        "mean_semantic_error": 0.9259999999999999
+      }
+    },
+    "oracle:oracle_factorized_pca_d448": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.7536001911719491,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.02419176627449728,
+        "mean_semantic_error": 0.9259999999999999
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.5184534474853613,
+        "mean_error_amplification_ratio": 0.8273376215941302,
+        "mean_error_norm": 0.006217741556188799,
+        "mean_semantic_error": 0.9039999999999999
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.6398694371374863,
+        "mean_error_amplification_ratio": 0.48688437403029455,
+        "mean_error_norm": 0.011226182884499208,
+        "mean_semantic_error": 0.932
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.5615064696820397,
+        "mean_error_amplification_ratio": 1.354656727553329,
+        "mean_error_norm": 0.015016450997188442,
+        "mean_semantic_error": 0.9219999999999999
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.5166242252934984,
+        "mean_error_amplification_ratio": 0.5453272840523575,
+        "mean_error_norm": 0.007487244641837681,
+        "mean_semantic_error": 0.926
+      }
+    },
+    "oracle:oracle_factorized_pca_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.654323811242262,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.023319868627783305,
+        "mean_semantic_error": 0.8980000000000001
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.5151892999892946,
+        "mean_error_amplification_ratio": 0.8286011525973364,
+        "mean_error_norm": 0.006262698637472237,
+        "mean_semantic_error": 0.9220000000000002
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.5802490321011533,
+        "mean_error_amplification_ratio": 0.48735632341945956,
+        "mean_error_norm": 0.010823004969102861,
+        "mean_semantic_error": 0.9179999999999999
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.5335837959960303,
+        "mean_error_amplification_ratio": 1.373671414122582,
+        "mean_error_norm": 0.014697412933240468,
+        "mean_semantic_error": 0.932
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.5139378995484072,
+        "mean_error_amplification_ratio": 0.5581350239530103,
+        "mean_error_norm": 0.0074984138110272,
+        "mean_semantic_error": 0.9059999999999998
+      }
+    },
+    "oracle:oracle_factorized_pca_d64": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.8281357819208027,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.024733526767283052,
+        "mean_semantic_error": 0.93
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.5339042666003234,
+        "mean_error_amplification_ratio": 0.8401760937509911,
+        "mean_error_norm": 0.006279856213210648,
+        "mean_semantic_error": 0.9179999999999999
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.6926428222041959,
+        "mean_error_amplification_ratio": 0.4863376766503535,
+        "mean_error_norm": 0.01149494848546127,
+        "mean_semantic_error": 0.9540000000000001
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.6084458051214213,
+        "mean_error_amplification_ratio": 1.3659389031241855,
+        "mean_error_norm": 0.0154647722561583,
+        "mean_semantic_error": 0.9440000000000001
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.5119671287436898,
+        "mean_error_amplification_ratio": 0.524739030523477,
+        "mean_error_norm": 0.0074905164818463675,
+        "mean_semantic_error": 0.9
+      }
+    },
+    "oracle:oracle_joint_pca_d128": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.785002000801747,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.024403746585219138,
+        "mean_semantic_error": 0.924
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.5252331603699156,
+        "mean_error_amplification_ratio": 0.8218156361855997,
+        "mean_error_norm": 0.006260962727229435,
+        "mean_semantic_error": 0.9320000000000002
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.6787297712770362,
+        "mean_error_amplification_ratio": 0.48645747811294576,
+        "mean_error_norm": 0.011400149184300427,
+        "mean_semantic_error": 0.97
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.5930255336322313,
+        "mean_error_amplification_ratio": 1.3558663211418014,
+        "mean_error_norm": 0.015288202519484198,
+        "mean_semantic_error": 0.94
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.5252629478362553,
+        "mean_error_amplification_ratio": 0.5411681070192234,
+        "mean_error_norm": 0.007602251270898638,
+        "mean_semantic_error": 0.9079999999999999
+      }
+    },
+    "oracle:oracle_joint_pca_d192": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.6973253264827776,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.023619442660676854,
+        "mean_semantic_error": 0.898
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.5235516590174151,
+        "mean_error_amplification_ratio": 0.8267304528449203,
+        "mean_error_norm": 0.006270560891620499,
+        "mean_semantic_error": 0.9159999999999999
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.6323895871643516,
+        "mean_error_amplification_ratio": 0.488081050184565,
+        "mean_error_norm": 0.011105892234970424,
+        "mean_semantic_error": 0.96
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.5761584943730156,
+        "mean_error_amplification_ratio": 1.3792467721716022,
+        "mean_error_norm": 0.01513061384030338,
+        "mean_semantic_error": 0.9420000000000001
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.5255592721281839,
+        "mean_error_amplification_ratio": 0.5430082328050468,
+        "mean_error_norm": 0.007543731571669866,
+        "mean_semantic_error": 0.9080000000000001
+      }
+    },
+    "oracle:oracle_joint_pca_d256": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.5902380661636786,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.02251117848334503,
+        "mean_semantic_error": 0.83
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.5191897766912593,
+        "mean_error_amplification_ratio": 0.8303187072106556,
+        "mean_error_norm": 0.006219809131068836,
+        "mean_semantic_error": 0.9139999999999999
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.5777515083426359,
+        "mean_error_amplification_ratio": 0.49589877124434045,
+        "mean_error_norm": 0.010719321247448378,
+        "mean_semantic_error": 0.9
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.5516858461882921,
+        "mean_error_amplification_ratio": 1.395298316659579,
+        "mean_error_norm": 0.014846689765427858,
+        "mean_semantic_error": 0.924
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.5145883893935902,
+        "mean_error_amplification_ratio": 0.5475633785520998,
+        "mean_error_norm": 0.00748223159804611,
+        "mean_semantic_error": 0.916
+      }
+    },
+    "oracle:oracle_joint_pca_d320": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.28288289692736,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.017063083760602157,
+        "mean_semantic_error": 0.6379999999999999
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.4978292035346877,
+        "mean_error_amplification_ratio": 0.8256630048204329,
+        "mean_error_norm": 0.006129564581534762,
+        "mean_semantic_error": 0.9079999999999999
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.38277510162002004,
+        "mean_error_amplification_ratio": 0.5571093672566921,
+        "mean_error_norm": 0.00917617458541612,
+        "mean_semantic_error": 0.8220000000000001
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.4554403152531157,
+        "mean_error_amplification_ratio": 1.5400403302643315,
+        "mean_error_norm": 0.01384110273029697,
+        "mean_semantic_error": 0.8839999999999999
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.502675680982553,
+        "mean_error_amplification_ratio": 0.5882281288546841,
+        "mean_error_norm": 0.007435820752201201,
+        "mean_semantic_error": 0.898
+      }
+    },
+    "oracle:oracle_joint_pca_d384": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.127911283194533,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.011511702035360614,
+        "mean_semantic_error": 0.46399999999999997
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.4865534777226524,
+        "mean_error_amplification_ratio": 0.8322462476361077,
+        "mean_error_norm": 0.006117024614489319,
+        "mean_semantic_error": 0.9079999999999998
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.23173134680587013,
+        "mean_error_amplification_ratio": 0.6560531446954144,
+        "mean_error_norm": 0.007386713213397444,
+        "mean_semantic_error": 0.7
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.35539815185363216,
+        "mean_error_amplification_ratio": 1.750621748647123,
+        "mean_error_norm": 0.012697152937183844,
+        "mean_semantic_error": 0.8140000000000001
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.4869331140323983,
+        "mean_error_amplification_ratio": 0.6671331966490146,
+        "mean_error_norm": 0.007347651430443191,
+        "mean_semantic_error": 0.882
+      }
+    },
+    "oracle:oracle_joint_pca_d448": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.08490772180855131,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.009330835528113772,
+        "mean_semantic_error": 0.36400000000000005
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.4677258614421613,
+        "mean_error_amplification_ratio": 0.8178086236832095,
+        "mean_error_norm": 0.006013931385533879,
+        "mean_semantic_error": 0.8859999999999999
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.18940179126566065,
+        "mean_error_amplification_ratio": 0.7286665786143839,
+        "mean_error_norm": 0.0067207340539299975,
+        "mean_semantic_error": 0.6680000000000001
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.32622124388109003,
+        "mean_error_amplification_ratio": 1.8340689000174288,
+        "mean_error_norm": 0.012217452932147876,
+        "mean_semantic_error": 0.816
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.4773345394344685,
+        "mean_error_amplification_ratio": 0.7064960776692125,
+        "mean_error_norm": 0.0073480181854093385,
+        "mean_semantic_error": 0.9019999999999999
+      }
+    },
+    "oracle:oracle_joint_pca_d512": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.07884754184162106,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.008913511548565522,
+        "mean_semantic_error": 0.38199999999999995
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.46634741216675524,
+        "mean_error_amplification_ratio": 0.8339122672797903,
+        "mean_error_norm": 0.0060626712054149216,
+        "mean_semantic_error": 0.8660000000000001
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.18413750521131386,
+        "mean_error_amplification_ratio": 0.7513543009908727,
+        "mean_error_norm": 0.0066339460168950105,
+        "mean_semantic_error": 0.674
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.31638284145032974,
+        "mean_error_amplification_ratio": 1.8460318136899907,
+        "mean_error_norm": 0.012092410800697551,
+        "mean_semantic_error": 0.76
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.47678686428452643,
+        "mean_error_amplification_ratio": 0.704297443937624,
+        "mean_error_norm": 0.007306719655015137,
+        "mean_semantic_error": 0.882
+      }
+    },
+    "oracle:oracle_joint_pca_d64": {
+      "1": {
+        "count": 50,
+        "mean_direction_error": 0.8234246835081871,
+        "mean_error_amplification_ratio": null,
+        "mean_error_norm": 0.02468181548953892,
+        "mean_semantic_error": 0.912
+      },
+      "16": {
+        "count": 50,
+        "mean_direction_error": 0.516091087932033,
+        "mean_error_amplification_ratio": 0.823907800384247,
+        "mean_error_norm": 0.006211852750020328,
+        "mean_semantic_error": 0.9339999999999999
+      },
+      "2": {
+        "count": 50,
+        "mean_direction_error": 0.6912332773441863,
+        "mean_error_amplification_ratio": 0.48654761647413436,
+        "mean_error_norm": 0.0114984425746315,
+        "mean_semantic_error": 0.9440000000000001
+      },
+      "4": {
+        "count": 50,
+        "mean_direction_error": 0.6041122736948289,
+        "mean_error_amplification_ratio": 1.3469925877457773,
+        "mean_error_norm": 0.015322744228336705,
+        "mean_semantic_error": 0.938
+      },
+      "8": {
+        "count": 50,
+        "mean_direction_error": 0.5211571427507996,
+        "mean_error_amplification_ratio": 0.5307101781163008,
+        "mean_error_norm": 0.007536168794466144,
+        "mean_semantic_error": 0.9079999999999998
+      }
+    }
+  },
+  "error_definition": "sqrt(||teacher||^2+||decoded||^2-2||teacher||||decoded||cosine)",
+  "jacobian_status": "NOT_ESTIMATED; finite teacher-forced horizon ratios are the frozen local dynamical amplification proxy",
+  "protocol_version": "architecture_resolved_causal_geometry_v11",
+  "records": "results/v11/processed/causal_error_amplification_v11.parquet",
+  "records_sha256": "ef9a3ccbc477ef5f4e48024a848bd9b64d4aa3c25fe621580c5e733288084887",
+  "schema_version": 14,
+  "source_freeze_digest": "753b48824a27a9b5934b774ba0594dc26d98a4d031c6a8c183b065c55470ca9f"
+}

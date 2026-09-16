@@ -202,3 +202,348 @@ scripts/finalize_reports_v10.sh --run-suffix amendment-aware-final
 ```
 
 <!-- V10-RESULTS:END -->
+
+<!-- V11_START -->
+## V11 — Architecture-resolved causal geometry
+
+V11 used a new 50-pair independent confirmatory bank (10/family), disjoint from the 50 v10
+development pairs. Development split hash:
+`882c53041d9806ddde1915542e132dd14e43db1d146f9de1e53fffd999e4d635`; confirmatory split hash:
+`b22941ec58285ad1cbed6f541d9cfe4ab1cee36983faf81dc16986f3f2851df3`; confirmatory program hash:
+`db79342cf71638baa9e71b873937ce6931377c65dd314a400bcdf057d343626f`.
+
+Frozen gates: `{"direction_cosine_minimum": 0.8, "magnitude_ratio_maximum": 1.2, "magnitude_ratio_minimum": 0.8, "output_direction_minimum": 0.8, "semantic_delta_agreement_minimum": 0.8, "task_decision_sign_minimum": 0.8}`.
+Freeze digests: `{"base": "91cca911c33e1c5829d978fa307a54cfa7093118d039de35785a2fc388986ff3", "confirmatory": "753b48824a27a9b5934b774ba0594dc26d98a4d031c6a8c183b065c55470ca9f", "prepared": "58a31c7022b99b035b915054c64fe1b4e345b886838f75ea4d6ac401fb8675b8", "stage2": "d040b22427c48fcec1b4564b2fb14aa8d742b70047e11c1ce655a707e1308135"}`.
+
+### Channel-wise hybrid interventions
+
+| method/condition | h | direction | magnitude | semantic | output | sign | gate |
+|---|---:|---:|---:|---:|---:|---:|:---:|
+| decoded_all | 1 | 0.923 | 0.977 | 0.614 | 0.896 | 0.820 | FAIL |
+| decoded_all | 2 | 0.823 | 0.980 | 0.352 | 0.795 | 0.740 | FAIL |
+| decoded_all | 4 | 0.688 | 0.987 | 0.206 | 0.660 | 0.696 | FAIL |
+| decoded_all | 8 | 0.532 | 0.998 | 0.086 | 0.528 | 0.660 | FAIL |
+| decoded_conv | 1 | 0.934 | 0.984 | 0.672 | 0.904 | 0.900 | FAIL |
+| decoded_conv | 2 | 0.837 | 0.998 | 0.366 | 0.806 | 0.760 | FAIL |
+| decoded_conv | 4 | 0.705 | 0.989 | 0.242 | 0.676 | 0.761 | FAIL |
+| decoded_conv | 8 | 0.544 | 1.010 | 0.110 | 0.512 | 0.740 | FAIL |
+| decoded_conv_kv | 1 | 0.932 | 0.978 | 0.656 | 0.907 | 0.860 | FAIL |
+| decoded_conv_kv | 2 | 0.840 | 0.998 | 0.384 | 0.805 | 0.740 | FAIL |
+| decoded_conv_kv | 4 | 0.703 | 0.991 | 0.228 | 0.671 | 0.761 | FAIL |
+| decoded_conv_kv | 8 | 0.554 | 1.011 | 0.132 | 0.544 | 0.680 | FAIL |
+| decoded_kv | 1 | 0.970 | 0.995 | 0.760 | 0.945 | 0.820 | FAIL |
+| decoded_kv | 2 | 0.911 | 0.997 | 0.500 | 0.874 | 0.800 | FAIL |
+| decoded_kv | 4 | 0.861 | 0.989 | 0.406 | 0.807 | 0.783 | FAIL |
+| decoded_kv | 8 | 0.770 | 1.010 | 0.266 | 0.660 | 0.740 | FAIL |
+| decoded_rec | 1 | 0.942 | 0.997 | 0.674 | 0.913 | 0.940 | FAIL |
+| decoded_rec | 2 | 0.833 | 0.995 | 0.382 | 0.818 | 0.740 | FAIL |
+| decoded_rec | 4 | 0.697 | 0.993 | 0.222 | 0.628 | 0.804 | FAIL |
+| decoded_rec | 8 | 0.530 | 1.003 | 0.096 | 0.527 | 0.700 | FAIL |
+| decoded_rec_conv | 1 | 0.923 | 0.979 | 0.624 | 0.900 | 0.860 | FAIL |
+| decoded_rec_conv | 2 | 0.826 | 0.991 | 0.352 | 0.802 | 0.760 | FAIL |
+| decoded_rec_conv | 4 | 0.691 | 0.987 | 0.212 | 0.652 | 0.565 | FAIL |
+| decoded_rec_conv | 8 | 0.529 | 1.004 | 0.072 | 0.519 | 0.620 | FAIL |
+| decoded_rec_kv | 1 | 0.941 | 1.000 | 0.682 | 0.914 | 0.940 | FAIL |
+| decoded_rec_kv | 2 | 0.832 | 0.998 | 0.404 | 0.814 | 0.800 | FAIL |
+| decoded_rec_kv | 4 | 0.697 | 0.995 | 0.212 | 0.655 | 0.696 | FAIL |
+| decoded_rec_kv | 8 | 0.527 | 1.006 | 0.080 | 0.517 | 0.720 | FAIL |
+| teacher_reference | 1 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | PASS |
+| teacher_reference | 2 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | PASS |
+| teacher_reference | 4 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | PASS |
+| teacher_reference | 8 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | PASS |
+
+### Oracle low-rank sweep
+
+| method/condition | h | direction | magnitude | semantic | output | sign | gate |
+|---|---:|---:|---:|---:|---:|---:|:---:|
+| oracle_factorized_pca_d128 | 1 | 0.182 | 0.332 | 0.048 | 0.225 | 0.540 | FAIL |
+| oracle_factorized_pca_d128 | 2 | 0.300 | 0.564 | 0.044 | 0.328 | 0.640 | FAIL |
+| oracle_factorized_pca_d128 | 4 | 0.389 | 0.775 | 0.062 | 0.384 | 0.609 | FAIL |
+| oracle_factorized_pca_d128 | 8 | 0.483 | 0.975 | 0.086 | 0.459 | 0.720 | FAIL |
+| oracle_factorized_pca_d128 | 16 | 0.465 | 0.940 | 0.066 | 0.478 | 0.596 | FAIL |
+| oracle_factorized_pca_d192 | 1 | 0.184 | 0.328 | 0.040 | 0.221 | 0.620 | FAIL |
+| oracle_factorized_pca_d192 | 2 | 0.312 | 0.567 | 0.040 | 0.308 | 0.680 | FAIL |
+| oracle_factorized_pca_d192 | 4 | 0.400 | 0.770 | 0.062 | 0.419 | 0.761 | FAIL |
+| oracle_factorized_pca_d192 | 8 | 0.480 | 0.976 | 0.074 | 0.453 | 0.760 | FAIL |
+| oracle_factorized_pca_d192 | 16 | 0.468 | 0.947 | 0.086 | 0.438 | 0.681 | FAIL |
+| oracle_factorized_pca_d256 | 1 | 0.173 | 0.342 | 0.064 | 0.237 | 0.560 | FAIL |
+| oracle_factorized_pca_d256 | 2 | 0.308 | 0.571 | 0.078 | 0.355 | 0.540 | FAIL |
+| oracle_factorized_pca_d256 | 4 | 0.407 | 0.780 | 0.072 | 0.376 | 0.543 | FAIL |
+| oracle_factorized_pca_d256 | 8 | 0.487 | 0.979 | 0.090 | 0.485 | 0.760 | FAIL |
+| oracle_factorized_pca_d256 | 16 | 0.461 | 0.947 | 0.070 | 0.444 | 0.553 | FAIL |
+| oracle_factorized_pca_d320 | 1 | 0.211 | 0.342 | 0.054 | 0.259 | 0.500 | FAIL |
+| oracle_factorized_pca_d320 | 2 | 0.315 | 0.574 | 0.032 | 0.352 | 0.640 | FAIL |
+| oracle_factorized_pca_d320 | 4 | 0.401 | 0.773 | 0.058 | 0.409 | 0.457 | FAIL |
+| oracle_factorized_pca_d320 | 8 | 0.469 | 0.972 | 0.062 | 0.501 | 0.780 | FAIL |
+| oracle_factorized_pca_d320 | 16 | 0.465 | 0.939 | 0.090 | 0.493 | 0.660 | FAIL |
+| oracle_factorized_pca_d384 | 1 | 0.227 | 0.345 | 0.082 | 0.259 | 0.580 | FAIL |
+| oracle_factorized_pca_d384 | 2 | 0.331 | 0.578 | 0.058 | 0.348 | 0.700 | FAIL |
+| oracle_factorized_pca_d384 | 4 | 0.414 | 0.787 | 0.054 | 0.469 | 0.609 | FAIL |
+| oracle_factorized_pca_d384 | 8 | 0.481 | 0.983 | 0.074 | 0.510 | 0.700 | FAIL |
+| oracle_factorized_pca_d384 | 16 | 0.464 | 0.945 | 0.112 | 0.479 | 0.638 | FAIL |
+| oracle_factorized_pca_d448 | 1 | 0.246 | 0.366 | 0.074 | 0.276 | 0.620 | FAIL |
+| oracle_factorized_pca_d448 | 2 | 0.360 | 0.608 | 0.068 | 0.389 | 0.620 | FAIL |
+| oracle_factorized_pca_d448 | 4 | 0.438 | 0.798 | 0.078 | 0.403 | 0.587 | FAIL |
+| oracle_factorized_pca_d448 | 8 | 0.483 | 0.967 | 0.074 | 0.471 | 0.600 | FAIL |
+| oracle_factorized_pca_d448 | 16 | 0.482 | 0.932 | 0.096 | 0.472 | 0.574 | FAIL |
+| oracle_factorized_pca_d512 | 1 | 0.346 | 0.409 | 0.102 | 0.293 | 0.580 | FAIL |
+| oracle_factorized_pca_d512 | 2 | 0.420 | 0.644 | 0.082 | 0.407 | 0.500 | FAIL |
+| oracle_factorized_pca_d512 | 4 | 0.466 | 0.819 | 0.068 | 0.445 | 0.565 | FAIL |
+| oracle_factorized_pca_d512 | 8 | 0.486 | 0.979 | 0.094 | 0.495 | 0.740 | FAIL |
+| oracle_factorized_pca_d512 | 16 | 0.485 | 0.957 | 0.078 | 0.478 | 0.596 | FAIL |
+| oracle_factorized_pca_d64 | 1 | 0.172 | 0.332 | 0.070 | 0.251 | 0.520 | FAIL |
+| oracle_factorized_pca_d64 | 2 | 0.307 | 0.566 | 0.046 | 0.295 | 0.620 | FAIL |
+| oracle_factorized_pca_d64 | 4 | 0.392 | 0.786 | 0.056 | 0.416 | 0.674 | FAIL |
+| oracle_factorized_pca_d64 | 8 | 0.488 | 0.973 | 0.100 | 0.490 | 0.720 | FAIL |
+| oracle_factorized_pca_d64 | 16 | 0.466 | 0.939 | 0.082 | 0.468 | 0.574 | FAIL |
+| oracle_joint_pca_d128 | 1 | 0.215 | 0.337 | 0.076 | 0.268 | 0.640 | FAIL |
+| oracle_joint_pca_d128 | 2 | 0.321 | 0.569 | 0.030 | 0.339 | 0.700 | FAIL |
+| oracle_joint_pca_d128 | 4 | 0.407 | 0.778 | 0.060 | 0.421 | 0.674 | FAIL |
+| oracle_joint_pca_d128 | 8 | 0.475 | 0.982 | 0.092 | 0.492 | 0.800 | FAIL |
+| oracle_joint_pca_d128 | 16 | 0.475 | 0.938 | 0.068 | 0.463 | 0.702 | FAIL |
+| oracle_joint_pca_d192 | 1 | 0.303 | 0.353 | 0.102 | 0.291 | 0.620 | FAIL |
+| oracle_joint_pca_d192 | 2 | 0.368 | 0.584 | 0.040 | 0.376 | 0.580 | FAIL |
+| oracle_joint_pca_d192 | 4 | 0.424 | 0.783 | 0.058 | 0.433 | 0.587 | FAIL |
+| oracle_joint_pca_d192 | 8 | 0.474 | 0.972 | 0.092 | 0.486 | 0.640 | FAIL |
+| oracle_joint_pca_d192 | 16 | 0.476 | 0.947 | 0.084 | 0.452 | 0.638 | FAIL |
+| oracle_joint_pca_d256 | 1 | 0.410 | 0.388 | 0.170 | 0.427 | 0.580 | FAIL |
+| oracle_joint_pca_d256 | 2 | 0.422 | 0.607 | 0.100 | 0.440 | 0.620 | FAIL |
+| oracle_joint_pca_d256 | 4 | 0.448 | 0.793 | 0.076 | 0.478 | 0.630 | FAIL |
+| oracle_joint_pca_d256 | 8 | 0.485 | 0.973 | 0.084 | 0.495 | 0.660 | FAIL |
+| oracle_joint_pca_d256 | 16 | 0.481 | 0.944 | 0.086 | 0.472 | 0.723 | FAIL |
+| oracle_joint_pca_d320 | 1 | 0.717 | 0.621 | 0.362 | 0.662 | 0.700 | FAIL |
+| oracle_joint_pca_d320 | 2 | 0.617 | 0.725 | 0.178 | 0.559 | 0.700 | FAIL |
+| oracle_joint_pca_d320 | 4 | 0.545 | 0.855 | 0.116 | 0.503 | 0.739 | FAIL |
+| oracle_joint_pca_d320 | 8 | 0.497 | 0.985 | 0.102 | 0.493 | 0.660 | FAIL |
+| oracle_joint_pca_d320 | 16 | 0.502 | 0.968 | 0.092 | 0.457 | 0.660 | FAIL |
+| oracle_joint_pca_d384 | 1 | 0.872 | 0.849 | 0.536 | 0.831 | 0.800 | FAIL |
+| oracle_joint_pca_d384 | 2 | 0.768 | 0.872 | 0.300 | 0.736 | 0.720 | FAIL |
+| oracle_joint_pca_d384 | 4 | 0.645 | 0.938 | 0.186 | 0.607 | 0.804 | FAIL |
+| oracle_joint_pca_d384 | 8 | 0.513 | 0.993 | 0.118 | 0.508 | 0.640 | FAIL |
+| oracle_joint_pca_d384 | 16 | 0.513 | 0.984 | 0.092 | 0.503 | 0.596 | FAIL |
+| oracle_joint_pca_d448 | 1 | 0.915 | 0.939 | 0.636 | 0.890 | 0.820 | FAIL |
+| oracle_joint_pca_d448 | 2 | 0.811 | 0.951 | 0.332 | 0.771 | 0.700 | FAIL |
+| oracle_joint_pca_d448 | 4 | 0.674 | 0.961 | 0.184 | 0.652 | 0.761 | FAIL |
+| oracle_joint_pca_d448 | 8 | 0.523 | 1.010 | 0.098 | 0.510 | 0.660 | FAIL |
+| oracle_joint_pca_d448 | 16 | 0.532 | 0.984 | 0.114 | 0.518 | 0.702 | FAIL |
+| oracle_joint_pca_d512 | 1 | 0.921 | 0.963 | 0.618 | 0.890 | 0.820 | FAIL |
+| oracle_joint_pca_d512 | 2 | 0.816 | 0.964 | 0.326 | 0.779 | 0.700 | FAIL |
+| oracle_joint_pca_d512 | 4 | 0.684 | 0.973 | 0.240 | 0.642 | 0.739 | FAIL |
+| oracle_joint_pca_d512 | 8 | 0.523 | 0.997 | 0.118 | 0.514 | 0.720 | FAIL |
+| oracle_joint_pca_d512 | 16 | 0.534 | 0.994 | 0.134 | 0.494 | 0.660 | FAIL |
+| oracle_joint_pca_d64 | 1 | 0.177 | 0.327 | 0.088 | 0.243 | 0.460 | FAIL |
+| oracle_joint_pca_d64 | 2 | 0.309 | 0.574 | 0.056 | 0.346 | 0.440 | FAIL |
+| oracle_joint_pca_d64 | 4 | 0.396 | 0.772 | 0.062 | 0.392 | 0.717 | FAIL |
+| oracle_joint_pca_d64 | 8 | 0.479 | 0.975 | 0.092 | 0.481 | 0.640 | FAIL |
+| oracle_joint_pca_d64 | 16 | 0.484 | 0.949 | 0.066 | 0.476 | 0.702 | FAIL |
+
+### Unified/factorized and causal-loss ablations
+
+| method/condition | h | direction | magnitude | semantic | output | sign | gate |
+|---|---:|---:|---:|---:|---:|---:|:---:|
+| factorized_cache_pca_int_d256 | 1 | 0.179 | 0.331 | 0.074 | 0.236 | 0.620 | FAIL |
+| factorized_cache_pca_int_d384 | 1 | 0.207 | 0.344 | 0.072 | 0.210 | 0.440 | FAIL |
+| factorized_cache_pca_int_d512 | 1 | 0.289 | 0.384 | 0.084 | 0.314 | 0.600 | FAIL |
+| factorized_cache_pca_no_int_d256 | 1 | 0.173 | 0.342 | 0.064 | 0.237 | 0.560 | FAIL |
+| factorized_cache_pca_no_int_d384 | 1 | 0.227 | 0.345 | 0.082 | 0.259 | 0.580 | FAIL |
+| factorized_cache_pca_no_int_d512 | 1 | 0.346 | 0.409 | 0.102 | 0.293 | 0.580 | FAIL |
+| factorized_causal_composite_int_d256 | 1 | 0.745 | 0.744 | 0.386 | 0.679 | 0.680 | FAIL |
+| factorized_causal_composite_int_d384 | 1 | 0.762 | 0.752 | 0.396 | 0.692 | 0.680 | FAIL |
+| factorized_causal_composite_int_d512 | 1 | 0.816 | 0.818 | 0.432 | 0.770 | 0.740 | FAIL |
+| factorized_causal_composite_no_int_d256 | 1 | 0.699 | 0.676 | 0.348 | 0.611 | 0.680 | FAIL |
+| factorized_causal_composite_no_int_d384 | 1 | 0.743 | 0.730 | 0.376 | 0.709 | 0.640 | FAIL |
+| factorized_causal_composite_no_int_d512 | 1 | 0.808 | 0.807 | 0.464 | 0.749 | 0.760 | FAIL |
+| factorized_effect_weighted_multistep_int_d256 | 1 | 0.792 | 0.809 | 0.414 | 0.770 | 0.660 | FAIL |
+| factorized_effect_weighted_multistep_int_d384 | 1 | 0.833 | 0.825 | 0.494 | 0.789 | 0.720 | FAIL |
+| factorized_effect_weighted_multistep_int_d512 | 1 | 0.849 | 0.855 | 0.492 | 0.821 | 0.740 | FAIL |
+| factorized_effect_weighted_multistep_no_int_d256 | 1 | 0.774 | 0.749 | 0.416 | 0.721 | 0.700 | FAIL |
+| factorized_effect_weighted_multistep_no_int_d384 | 1 | 0.815 | 0.784 | 0.446 | 0.771 | 0.680 | FAIL |
+| factorized_effect_weighted_multistep_no_int_d512 | 1 | 0.840 | 0.832 | 0.508 | 0.805 | 0.720 | FAIL |
+| factorized_h1_direction_int_d256 | 1 | 0.803 | 0.815 | 0.430 | 0.772 | 0.800 | FAIL |
+| factorized_h1_direction_int_d384 | 1 | 0.835 | 0.857 | 0.454 | 0.804 | 0.700 | FAIL |
+| factorized_h1_direction_int_d512 | 1 | 0.852 | 0.875 | 0.522 | 0.821 | 0.740 | FAIL |
+| factorized_h1_direction_no_int_d256 | 1 | 0.760 | 0.730 | 0.376 | 0.713 | 0.740 | FAIL |
+| factorized_h1_direction_no_int_d384 | 1 | 0.817 | 0.797 | 0.470 | 0.776 | 0.760 | FAIL |
+| factorized_h1_direction_no_int_d512 | 1 | 0.845 | 0.853 | 0.518 | 0.802 | 0.800 | FAIL |
+| factorized_manifold_regularized_int_d256 | 1 | 0.761 | 0.750 | 0.374 | 0.707 | 0.740 | FAIL |
+| factorized_manifold_regularized_int_d384 | 1 | 0.762 | 0.752 | 0.396 | 0.692 | 0.680 | FAIL |
+| factorized_manifold_regularized_int_d512 | 1 | 0.816 | 0.818 | 0.432 | 0.770 | 0.740 | FAIL |
+| factorized_manifold_regularized_no_int_d256 | 1 | 0.699 | 0.676 | 0.348 | 0.611 | 0.680 | FAIL |
+| factorized_manifold_regularized_no_int_d384 | 1 | 0.751 | 0.725 | 0.366 | 0.664 | 0.700 | FAIL |
+| factorized_manifold_regularized_no_int_d512 | 1 | 0.808 | 0.807 | 0.464 | 0.749 | 0.760 | FAIL |
+| factorized_multistep_direction_int_d256 | 1 | 0.790 | 0.784 | 0.432 | 0.749 | 0.720 | FAIL |
+| factorized_multistep_direction_int_d384 | 1 | 0.836 | 0.841 | 0.472 | 0.790 | 0.720 | FAIL |
+| factorized_multistep_direction_int_d512 | 1 | 0.859 | 0.880 | 0.516 | 0.827 | 0.760 | FAIL |
+| factorized_multistep_direction_no_int_d256 | 1 | 0.760 | 0.732 | 0.418 | 0.729 | 0.720 | FAIL |
+| factorized_multistep_direction_no_int_d384 | 1 | 0.808 | 0.798 | 0.478 | 0.767 | 0.800 | FAIL |
+| factorized_multistep_direction_no_int_d512 | 1 | 0.849 | 0.847 | 0.508 | 0.810 | 0.780 | FAIL |
+| factorized_output_h1_int_d256 | 1 | 0.657 | 0.651 | 0.318 | 0.601 | 0.660 | FAIL |
+| factorized_output_h1_int_d384 | 1 | 0.705 | 0.712 | 0.350 | 0.655 | 0.760 | FAIL |
+| factorized_output_h1_int_d512 | 1 | 0.727 | 0.705 | 0.364 | 0.665 | 0.740 | FAIL |
+| factorized_output_h1_no_int_d256 | 1 | 0.650 | 0.629 | 0.278 | 0.589 | 0.700 | FAIL |
+| factorized_output_h1_no_int_d384 | 1 | 0.710 | 0.685 | 0.356 | 0.650 | 0.700 | FAIL |
+| factorized_output_h1_no_int_d512 | 1 | 0.718 | 0.691 | 0.376 | 0.651 | 0.720 | FAIL |
+| factorized_semantic_h1_int_d256 | 1 | 0.766 | 0.758 | 0.394 | 0.716 | 0.640 | FAIL |
+| factorized_semantic_h1_int_d384 | 1 | 0.756 | 0.757 | 0.392 | 0.688 | 0.640 | FAIL |
+| factorized_semantic_h1_int_d512 | 1 | 0.812 | 0.816 | 0.456 | 0.766 | 0.840 | FAIL |
+| factorized_semantic_h1_no_int_d256 | 1 | 0.700 | 0.678 | 0.334 | 0.623 | 0.680 | FAIL |
+| factorized_semantic_h1_no_int_d384 | 1 | 0.752 | 0.729 | 0.364 | 0.704 | 0.720 | FAIL |
+| factorized_semantic_h1_no_int_d512 | 1 | 0.811 | 0.800 | 0.448 | 0.748 | 0.800 | FAIL |
+
+Stage-2 result:
+
+GATED: no h1-qualified method.
+
+### Independent h1/h2/h4/h8/h16 causal fidelity
+
+| method/condition | h | direction | magnitude | semantic | output | sign | gate |
+|---|---:|---:|---:|---:|---:|---:|:---:|
+| factorized_multistep_direction_int_d512 | 1 | 0.881 | 0.873 | 0.534 | 0.835 | 0.900 | FAIL |
+| oracle_factorized_pca_d512 | 1 | 0.292 | 0.383 | 0.110 | 0.263 | 0.740 | FAIL |
+| oracle_joint_pca_d512 | 1 | 0.926 | 0.964 | 0.594 | 0.895 | 0.860 | FAIL |
+| unified_causal_d512 | 1 | 0.929 | 0.988 | 0.630 | 0.899 | 0.820 | FAIL |
+| unified_causal_d512 | 2 | 0.828 | 0.997 | 0.332 | 0.788 | 0.760 | FAIL |
+| unified_causal_d512 | 4 | 0.676 | 1.005 | 0.186 | 0.607 | 0.739 | FAIL |
+| unified_causal_d512 | 8 | 0.516 | 1.005 | 0.074 | 0.526 | 0.800 | FAIL |
+| unified_causal_d512 | 16 | 0.541 | 1.017 | 0.102 | 0.528 | 0.653 | FAIL |
+
+### Architecture ceiling gaps
+
+# Architecture-resolved ceiling — V11
+
+- Ceiling A: combined block-normalized raw dual-PCA, 599D.
+- Ceiling B: separate REC + conv + KV coordinates, 1797D.
+- Ceiling C: raw full persistent intervention, whose causal identity fidelity is 1 by definition.
+
+| target | combined 599 | architecture 1797 | B − A | metric |
+|---|---:|---:|---:|---|
+| h1_j_effect | 0.530 | 0.642 | +0.112 | direction_cosine |
+| h4_j_effect | 0.190 | 0.230 | +0.040 | direction_cosine |
+| output_effect | 0.503 | 0.610 | +0.107 | correlation |
+
+The old 599D result is therefore called a **combined-reference ceiling**, not a complete raw
+persistent-state ceiling.
+
+Machine records: `results/v11/processed/architecture_ceiling_v11.parquet` (`ef74609c1c412286a35643f199dc0c4bc03df72fdac54aaa4527f35b4cf7f41a`).
+
+
+### Adjudication
+
+- Decision-tree outcome: **C**.
+- Strongest warranted conclusion: tested low-rank oracle projections do not establish writable sufficiency.
+- Smallest causally validated dimension: `None`.
+- Hypothesis status: **H2**.
+- Autonomous-controller training authorized: **False**.
+- Free continuation executed: **False**.
+- Manifold record: `results/v11/processed/causal_state_manifold_v11.parquet`.
+- Amplification record: `results/v11/processed/causal_error_amplification_v11.parquet`.
+
+### Exact commands
+
+- `bash scripts/run_causal_geometry_v11.sh freeze-base`
+- `bash scripts/run_causal_geometry_v11.sh select-models`
+- `bash scripts/run_causal_geometry_v11.sh prepare-development`
+- `bash scripts/run_causal_geometry_v11.sh freeze-prepared`
+- `bash scripts/run_causal_geometry_v11.sh channel-audit`
+- `bash scripts/run_causal_geometry_v11.sh oracle-development`
+- `bash scripts/run_causal_geometry_v11.sh factorized-stage1`
+- `bash scripts/run_causal_geometry_v11.sh freeze-stage2`
+- `bash scripts/run_causal_geometry_v11.sh factorized-stage2`
+- `bash scripts/run_causal_geometry_v11.sh freeze-confirm`
+- `bash scripts/run_causal_geometry_v11.sh prepare-confirmatory`
+- `bash scripts/run_causal_geometry_v11.sh confirmatory`
+- `bash scripts/run_causal_geometry_v11.sh analyze`
+- `bash scripts/run_causal_geometry_v11.sh report`
+
+### V11 changed/generated files
+
+- `artifacts/causal_geometry_v11.freeze.json`
+- `artifacts/causal_geometry_v11_confirmatory.freeze.json`
+- `artifacts/causal_geometry_v11_manifold_amendment.freeze.json`
+- `artifacts/causal_geometry_v11_prepared.freeze.json`
+- `artifacts/causal_geometry_v11_stage2.freeze.json`
+- `artifacts/v10_immutable.sha256.json`
+- `configs/causal_geometry_v11.yaml`
+- `reports/ARCH_RESOLVED_CEILING_V11.md`
+- `reports/CAUSAL_ERROR_AMPLIFICATION_V11.md`
+- `reports/CAUSAL_STATE_MANIFOLD_AUDIT_V11.md`
+- `reports/CHANNELWISE_CAUSAL_DECODER_AUDIT_V11.md`
+- `reports/FACTORIZED_CAUSAL_STATE_V11.md`
+- `reports/ORACLE_LOWRANK_CAUSAL_STATE_V11.md`
+- `results/v11/processed/adjudication_v11.json`
+- `results/v11/processed/allocation_search_v11.parquet`
+- `results/v11/processed/architecture_ceiling_v11.json`
+- `results/v11/processed/architecture_ceiling_v11.parquet`
+- `results/v11/processed/causal_confirmatory_v11.json`
+- `results/v11/processed/causal_confirmatory_v11.parquet`
+- `results/v11/processed/causal_error_amplification_v11.json`
+- `results/v11/processed/causal_error_amplification_v11.parquet`
+- `results/v11/processed/causal_state_manifold_v11.json`
+- `results/v11/processed/causal_state_manifold_v11.parquet`
+- `results/v11/processed/causal_state_manifold_v11_amendment_1.json`
+- `results/v11/processed/causal_state_manifold_v11_amendment_1.parquet`
+- `results/v11/processed/channel_compatibility_v11.parquet`
+- `results/v11/processed/channel_interaction_nonadditivity_v11.json`
+- `results/v11/processed/channel_interaction_nonadditivity_v11.parquet`
+- `results/v11/processed/channelwise_causal_v11.json`
+- `results/v11/processed/channelwise_causal_v11.parquet`
+- `results/v11/processed/confirmatory_states_v11.json`
+- `results/v11/processed/development_states_v11.json`
+- `results/v11/processed/factorized_causal_stage1_v11.json`
+- `results/v11/processed/factorized_causal_stage1_v11.parquet`
+- `results/v11/processed/factorized_causal_stage2_v11.json`
+- `results/v11/processed/factorized_causal_stage2_v11.parquet`
+- `results/v11/processed/method_specs_v11.json`
+- `results/v11/processed/oracle_lowrank_causal_v11.json`
+- `results/v11/processed/oracle_lowrank_causal_v11.parquet`
+- `results/v11/raw/analyze-v11-20260916T130456Z-0f38a5ef-s20260828/manifest.json`
+- `results/v11/raw/analyze-v11-20260916T130911Z-0f38a5ef-s20260828/manifest.json`
+- `results/v11/raw/causal-v11-20260916T122416Z-0f38a5ef-s20260828/channel_audit_progress.json`
+- `results/v11/raw/causal-v11-20260916T122416Z-0f38a5ef-s20260828/manifest.json`
+- `results/v11/raw/causal-v11-20260916T123047Z-0f38a5ef-s20260828/manifest.json`
+- `results/v11/raw/causal-v11-20260916T123047Z-0f38a5ef-s20260828/oracle_lowrank_causal_projection_progress.json`
+- `results/v11/raw/causal-v11-20260916T125009Z-0f38a5ef-s20260828/factorized_causal_stage1_progress.json`
+- `results/v11/raw/causal-v11-20260916T125009Z-0f38a5ef-s20260828/manifest.json`
+- `results/v11/raw/causal-v11-20260916T125529Z-0f38a5ef-s20260828/manifest.json`
+- `results/v11/raw/causal-v11-20260916T125538Z-0f38a5ef-s20260828/manifest.json`
+- `results/v11/raw/causal-v11-20260916T125555Z-0f38a5ef-s20260828/manifest.json`
+- `results/v11/raw/causal-v11-20260916T125710Z-0f38a5ef-s20260828/independent_causal_confirmatory_progress.json`
+- `results/v11/raw/causal-v11-20260916T125710Z-0f38a5ef-s20260828/manifest.json`
+- `results/v11/raw/prepare-v11-20260916T121550Z-0f38a5ef-s20260828/manifest.json`
+- `results/v11/raw/prepare-v11-20260916T121642Z-0f38a5ef-s20260828/manifest.json`
+- `results/v11/raw/prepare-v11-20260916T121849Z-0f38a5ef-s20260828/manifest.json`
+- `results/v11/raw/prepare-v11-20260916T121849Z-0f38a5ef-s20260828/prepare_progress.json`
+- `results/v11/raw/prepare-v11-20260916T122402Z-0f38a5ef-s20260828/manifest.json`
+- `results/v11/raw/prepare-v11-20260916T125610Z-0f38a5ef-s20260828/manifest.json`
+- `results/v11/raw/prepare-v11-20260916T125610Z-0f38a5ef-s20260828/prepare_progress.json`
+- `results/v11/raw/v11-manifold-amendment-20260916T130850Z-0f38a5ef-s20260828/manifest.json`
+- `results/v11/raw/v11-manifold-amendment-20260916T130854Z-0f38a5ef-s20260828/manifest.json`
+- `schemas/protocol-v11-record.schema.json`
+- `scripts/run_causal_geometry_v11.sh`
+- `scripts/run_causal_geometry_v11_manifold_amendment.sh`
+- `src/jclosure/experiments/analyze_v11.py`
+- `src/jclosure/experiments/analyze_v11_amendment.py`
+- `src/jclosure/experiments/causal_v11.py`
+- `src/jclosure/experiments/prepare_v11.py`
+- `src/jclosure/protocol_v11.py`
+- `src/jclosure/protocol_v11_manifold_amendment.py`
+- `src/jclosure/reporting_v11.py`
+- `src/jclosure/reporting_v11_amendment.py`
+- `src/jclosure/state_models_v11.py`
+- `tests/test_v11.py`
+- `tests/test_v11_manifold_amendment.py`
+<!-- V11_END -->
+
+
+<!-- V11_MANIFOLD_AMENDMENT_1 -->
+### V11 manifold metric amendment 1
+
+The clean-zero relative cycle metric in the original V11 manifold record is undefined
+because its denominator is zero. It is superseded only for that row by
+`causal_state_manifold_v11_amendment_1`; nonzero teacher/decoded metrics are unchanged.
+Channel joint-error nonadditivity is additionally reported as a frozen norm proxy.
+Amendment freeze: `f17f62532f1136c9cc73109ecf55e2f6689b55638313979eb9c1d5068ac5c14f`. Commands:
+
+- `bash scripts/run_causal_geometry_v11_manifold_amendment.sh freeze`
+- `bash scripts/run_causal_geometry_v11_manifold_amendment.sh analyze`
+- `bash scripts/run_causal_geometry_v11_manifold_amendment.sh report`

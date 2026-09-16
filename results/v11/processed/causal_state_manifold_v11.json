@@ -1,0 +1,193 @@
+{
+  "aggregates": {
+    "clean_zero": {
+      "conv": {
+        "cycle_relative_error": 122674440.05065188,
+        "local_pca_reconstruction_error": 0.9999965187537897,
+        "mahalanobis_distance": 0.00028815370751544833,
+        "mean_k_neighbor_distance": 0.9959349632263184,
+        "nearest_neighbor_distance": 0.9799845814704895,
+        "outside_global_subspace_energy_fraction": 0.6267145262811917
+      },
+      "joint_compatibility": {
+        "all_channels_same_neighbor": 0.0,
+        "pairwise_neighbor_agreement": 0.0
+      },
+      "kv": {
+        "cycle_relative_error": 201487633.0017068,
+        "local_pca_reconstruction_error": 0.999999921041513,
+        "mahalanobis_distance": 0.0002557091065682471,
+        "mean_k_neighbor_distance": 0.9996288418769836,
+        "nearest_neighbor_distance": 0.9989740252494812,
+        "outside_global_subspace_energy_fraction": 0.7103264431940499
+      },
+      "recurrent": {
+        "cycle_relative_error": 119411186.66786158,
+        "local_pca_reconstruction_error": 0.999998337369435,
+        "mahalanobis_distance": 0.00016915635205805302,
+        "mean_k_neighbor_distance": 0.9968099594116211,
+        "nearest_neighbor_distance": 0.9896726012229919,
+        "outside_global_subspace_energy_fraction": 0.6472843129218377
+      }
+    },
+    "factorized_multistep_direction_int_d512": {
+      "conv": {
+        "cycle_relative_error": 1.7842624485679283e-07,
+        "local_pca_reconstruction_error": 0.9772522290166055,
+        "mahalanobis_distance": 9.953817434310913,
+        "mean_k_neighbor_distance": 1.0318531954288483,
+        "nearest_neighbor_distance": 0.9685286486148834,
+        "outside_global_subspace_energy_fraction": 0.9872319570119366
+      },
+      "joint_compatibility": {
+        "all_channels_same_neighbor": 0.32,
+        "pairwise_neighbor_agreement": 0.4599999999999999
+      },
+      "kv": {
+        "cycle_relative_error": 2.1376419155102242e-07,
+        "local_pca_reconstruction_error": 0.9794916429531549,
+        "mahalanobis_distance": 8.3538529586792,
+        "mean_k_neighbor_distance": 1.0183966040611268,
+        "nearest_neighbor_distance": 0.9642042577266693,
+        "outside_global_subspace_energy_fraction": 0.983941521431305
+      },
+      "recurrent": {
+        "cycle_relative_error": 2.277253926237481e-07,
+        "local_pca_reconstruction_error": 0.9575538966819046,
+        "mahalanobis_distance": 13.5177374458313,
+        "mean_k_neighbor_distance": 1.079750692844391,
+        "nearest_neighbor_distance": 0.9707800149917603,
+        "outside_global_subspace_energy_fraction": 0.9896635342805424
+      }
+    },
+    "oracle_factorized_pca_d512": {
+      "conv": {
+        "cycle_relative_error": 3.973121718193593e-07,
+        "local_pca_reconstruction_error": 0.9976247369605895,
+        "mahalanobis_distance": 7.545524835586548,
+        "mean_k_neighbor_distance": 1.018501455783844,
+        "nearest_neighbor_distance": 0.9983494293689728,
+        "outside_global_subspace_energy_fraction": 0.21927726735158937
+      },
+      "joint_compatibility": {
+        "all_channels_same_neighbor": 0.08,
+        "pairwise_neighbor_agreement": 0.21333333333333332
+      },
+      "kv": {
+        "cycle_relative_error": 3.399840341411483e-07,
+        "local_pca_reconstruction_error": 0.9949973626206742,
+        "mahalanobis_distance": 5.592122128009796,
+        "mean_k_neighbor_distance": 1.0040626907348633,
+        "nearest_neighbor_distance": 0.9805249071121216,
+        "outside_global_subspace_energy_fraction": 4.101208111215638e-14
+      },
+      "recurrent": {
+        "cycle_relative_error": 2.859266733182736e-07,
+        "local_pca_reconstruction_error": 0.9903972343578822,
+        "mahalanobis_distance": 12.380719394683839,
+        "mean_k_neighbor_distance": 1.076977219581604,
+        "nearest_neighbor_distance": 1.0267309606075288,
+        "outside_global_subspace_energy_fraction": 0.5359242624539278
+      }
+    },
+    "oracle_joint_pca_d512": {
+      "conv": {
+        "cycle_relative_error": 1.8968477023314064e-07,
+        "local_pca_reconstruction_error": 0.9367506042131182,
+        "mahalanobis_distance": 14.103225708007812,
+        "mean_k_neighbor_distance": 1.0781322979927064,
+        "nearest_neighbor_distance": 0.9207338297367096,
+        "outside_global_subspace_energy_fraction": 0.8281119796058846
+      },
+      "joint_compatibility": {
+        "all_channels_same_neighbor": 0.98,
+        "pairwise_neighbor_agreement": 0.9866666666666666
+      },
+      "kv": {
+        "cycle_relative_error": 2.39889934784036e-07,
+        "local_pca_reconstruction_error": 0.9336364848777469,
+        "mahalanobis_distance": 14.103225688934327,
+        "mean_k_neighbor_distance": 1.077854118347168,
+        "nearest_neighbor_distance": 0.920601087808609,
+        "outside_global_subspace_energy_fraction": 0.8387024116819656
+      },
+      "recurrent": {
+        "cycle_relative_error": 2.152890709185991e-07,
+        "local_pca_reconstruction_error": 0.9299713447798318,
+        "mahalanobis_distance": 14.10322582244873,
+        "mean_k_neighbor_distance": 1.077994225025177,
+        "nearest_neighbor_distance": 0.9207091796398162,
+        "outside_global_subspace_energy_fraction": 0.8457004536847077
+      }
+    },
+    "teacher_raw": {
+      "conv": {
+        "cycle_relative_error": 2.090491167033693e-07,
+        "local_pca_reconstruction_error": 0.9568360888621225,
+        "mahalanobis_distance": 16.732960948944093,
+        "mean_k_neighbor_distance": 1.1333275508880616,
+        "nearest_neighbor_distance": 0.9842579638957978,
+        "outside_global_subspace_energy_fraction": 0.8355879216050391
+      },
+      "joint_compatibility": {
+        "all_channels_same_neighbor": 0.42,
+        "pairwise_neighbor_agreement": 0.5333333333333333
+      },
+      "kv": {
+        "cycle_relative_error": 2.4223551324443444e-07,
+        "local_pca_reconstruction_error": 0.887571504134368,
+        "mahalanobis_distance": 16.748315410614012,
+        "mean_k_neighbor_distance": 1.1238065958023071,
+        "nearest_neighbor_distance": 0.9080742800235748,
+        "outside_global_subspace_energy_fraction": 0.8276603106949127
+      },
+      "recurrent": {
+        "cycle_relative_error": 2.2764040843850543e-07,
+        "local_pca_reconstruction_error": 0.9480843930591111,
+        "mahalanobis_distance": 20.185249309539795,
+        "mean_k_neighbor_distance": 1.2086930537223817,
+        "nearest_neighbor_distance": 1.0369226491451264,
+        "outside_global_subspace_energy_fraction": 0.8219577825341767
+      }
+    },
+    "unified_causal_d512": {
+      "conv": {
+        "cycle_relative_error": 3.2982263702319574e-07,
+        "local_pca_reconstruction_error": 0.998498995848612,
+        "mahalanobis_distance": 52.939536552429196,
+        "mean_k_neighbor_distance": 2.3030888843536377,
+        "nearest_neighbor_distance": 2.2634837293624877,
+        "outside_global_subspace_energy_fraction": 0.884270779548453
+      },
+      "joint_compatibility": {
+        "all_channels_same_neighbor": 0.0,
+        "pairwise_neighbor_agreement": 0.0
+      },
+      "kv": {
+        "cycle_relative_error": 2.372259486480299e-07,
+        "local_pca_reconstruction_error": 0.9984336124690439,
+        "mahalanobis_distance": 25.917823638916015,
+        "mean_k_neighbor_distance": 1.3927795028686523,
+        "nearest_neighbor_distance": 1.3612936425209046,
+        "outside_global_subspace_energy_fraction": 0.8602943470285759
+      },
+      "recurrent": {
+        "cycle_relative_error": 2.577601491634283e-07,
+        "local_pca_reconstruction_error": 0.9986362350986606,
+        "mahalanobis_distance": 33.70488227844238,
+        "mean_k_neighbor_distance": 1.6308564567565917,
+        "nearest_neighbor_distance": 1.597804572582245,
+        "outside_global_subspace_energy_fraction": 0.8675770363836774
+      }
+    }
+  },
+  "compatibility_records": "results/v11/processed/channel_compatibility_v11.parquet",
+  "compatibility_records_sha256": "c33c0aa686277f8299d69fc08e76b9ed902ba2e455bb13e26ec9307e2e12183b",
+  "natural_reference": "training teacher raw intervention deltas only",
+  "protocol_version": "architecture_resolved_causal_geometry_v11",
+  "records": "results/v11/processed/causal_state_manifold_v11.parquet",
+  "records_sha256": "06f13b242adae1b38ac10e7e76c2401b5b20850fc13e9161a7e60efbda93465e",
+  "schema_version": 14,
+  "source_freeze_digest": "753b48824a27a9b5934b774ba0594dc26d98a4d031c6a8c183b065c55470ca9f",
+  "split_role": "independent_confirmatory"
+}

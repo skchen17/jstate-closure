@@ -1,0 +1,130 @@
+{
+  "aggregates": {
+    "all": {
+      "1": {
+        "count": 50,
+        "mean_joint_error_norm": 0.008883665275674269,
+        "mean_joint_minus_single_sum": -0.01250148333323448,
+        "mean_joint_to_rss_ratio": 0.7063568037507005,
+        "mean_single_error_rss": 0.01255601363286165
+      },
+      "2": {
+        "count": 50,
+        "mean_joint_error_norm": 0.006518212472561157,
+        "mean_joint_minus_single_sum": -0.010887521934459032,
+        "mean_joint_to_rss_ratio": 0.642962245450302,
+        "mean_single_error_rss": 0.010154201984956866
+      },
+      "4": {
+        "count": 50,
+        "mean_joint_error_norm": 0.012043643489127625,
+        "mean_joint_minus_single_sum": -0.01959885554488914,
+        "mean_joint_to_rss_ratio": 0.6493075048373614,
+        "mean_single_error_rss": 0.018546201196999058
+      },
+      "8": {
+        "count": 50,
+        "mean_joint_error_norm": 0.007208936146759398,
+        "mean_joint_minus_single_sum": -0.012287233159061287,
+        "mean_joint_to_rss_ratio": 0.6331493719812802,
+        "mean_single_error_rss": 0.01140387484674456
+      }
+    },
+    "conv_kv": {
+      "1": {
+        "count": 50,
+        "mean_joint_error_norm": 0.008430362758220006,
+        "mean_joint_minus_single_sum": -0.005369405614660796,
+        "mean_joint_to_rss_ratio": 0.8431979371031447,
+        "mean_single_error_rss": 0.009980824911076273
+      },
+      "2": {
+        "count": 50,
+        "mean_joint_error_norm": 0.006273310051995183,
+        "mean_joint_minus_single_sum": -0.004738911487461438,
+        "mean_joint_to_rss_ratio": 0.7968317842134186,
+        "mean_single_error_rss": 0.00788183582486469
+      },
+      "4": {
+        "count": 50,
+        "mean_joint_error_norm": 0.01171144255931456,
+        "mean_joint_minus_single_sum": -0.00800935172062858,
+        "mean_joint_to_rss_ratio": 0.8219918066381959,
+        "mean_single_error_rss": 0.01419684582307381
+      },
+      "8": {
+        "count": 50,
+        "mean_joint_error_norm": 0.007100274846212166,
+        "mean_joint_minus_single_sum": -0.0051255447454215996,
+        "mean_joint_to_rss_ratio": 0.80712990562877,
+        "mean_single_error_rss": 0.008780357946227758
+      }
+    },
+    "rec_conv": {
+      "1": {
+        "count": 50,
+        "mean_joint_error_norm": 0.008859826284261307,
+        "mean_joint_minus_single_sum": -0.007045129017811403,
+        "mean_joint_to_rss_ratio": 0.7851502499272146,
+        "mean_single_error_rss": 0.011283028752663769
+      },
+      "2": {
+        "count": 50,
+        "mean_joint_error_norm": 0.006481435108136388,
+        "mean_joint_minus_single_sum": -0.006239219392202209,
+        "mean_joint_to_rss_ratio": 0.7211642660643731,
+        "mean_single_error_rss": 0.009001370298791367
+      },
+      "4": {
+        "count": 50,
+        "mean_joint_error_norm": 0.011985518543793901,
+        "mean_joint_minus_single_sum": -0.011633843255891809,
+        "mean_joint_to_rss_ratio": 0.7206342351199335,
+        "mean_single_error_rss": 0.016710337633842127
+      },
+      "8": {
+        "count": 50,
+        "mean_joint_error_norm": 0.007248319758361322,
+        "mean_joint_minus_single_sum": -0.007181486790767584,
+        "mean_joint_to_rss_ratio": 0.7130413649015874,
+        "mean_single_error_rss": 0.010208508163978542
+      }
+    },
+    "rec_kv": {
+      "1": {
+        "count": 50,
+        "mean_joint_error_norm": 0.00764340614309302,
+        "mean_joint_minus_single_sum": -0.005422167399770963,
+        "mean_joint_to_rss_ratio": 0.8156025465804002,
+        "mean_single_error_rss": 0.009373873410375115
+      },
+      "2": {
+        "count": 50,
+        "mean_joint_error_norm": 0.006436263562697928,
+        "mean_joint_minus_single_sum": -0.004642329211547228,
+        "mean_joint_to_rss_ratio": 0.8132394370097566,
+        "mean_single_error_rss": 0.007933737899671243
+      },
+      "4": {
+        "count": 50,
+        "mean_joint_error_norm": 0.011941614942835757,
+        "mean_joint_minus_single_sum": -0.008003227045568925,
+        "mean_joint_to_rss_ratio": 0.8303507791750833,
+        "mean_single_error_rss": 0.014381807318314184
+      },
+      "8": {
+        "count": 50,
+        "mean_joint_error_norm": 0.007290886028082484,
+        "mean_joint_minus_single_sum": -0.005045826442796211,
+        "mean_joint_to_rss_ratio": 0.8212633155634521,
+        "mean_single_error_rss": 0.008869388930069949
+      }
+    }
+  },
+  "interpretation_limit": "ratio >1 is compatible with constructive cross-channel error interaction; ratio <1 with cancellation. It is not an exact vector interaction because per-example error vectors were not retained.",
+  "protocol_version": "causal_geometry_v11_manifold_metric_amendment_1",
+  "proxy_definition": "observed joint error norm divided by root-sum-square single-channel error norms; descriptive only because error-vector cross terms were not retained",
+  "records": "results/v11/processed/channel_interaction_nonadditivity_v11.parquet",
+  "records_sha256": "c8014adb7c99d2c0d04fa451d671c5828c741f81cde78c6538564a16148c3a13",
+  "source_freeze_digest": "f17f62532f1136c9cc73109ecf55e2f6689b55638313979eb9c1d5068ac5c14f"
+}

@@ -1,0 +1,70 @@
+{
+  "base_freeze_digest": "91cca911c33e1c5829d978fa307a54cfa7093118d039de35785a2fc388986ff3",
+  "confirmatory_used": false,
+  "freeze_digest": "753b48824a27a9b5934b774ba0594dc26d98a4d031c6a8c183b065c55470ca9f",
+  "hashes": {
+    "artifacts/causal_geometry_v11_stage2.freeze.json": "20614946e65fee563c7e34870df84148509cf932f242b9d302a4c048ea0788d8",
+    "results/v11/processed/factorized_causal_stage1_v11.json": "d94daf1892c7a1902faee6017a521d02481c66871d9767cdcf765b272d6e6535",
+    "results/v11/processed/factorized_causal_stage1_v11.parquet": "669cdecda89e4742d67a77a29228982c698d36a98854122bf9d185e1d355c0d9",
+    "results/v11/processed/factorized_causal_stage2_v11.json": "2a24a98927de79852ff4bde6ccf3a864cefa287c5392cd7ff4f98681911e7dcc",
+    "results/v11/processed/factorized_causal_stage2_v11.parquet": "e7172c5578d86d1624b9c689cdaf1fbaf81dbf071967187f129039465b068b2a",
+    "results/v11/processed/oracle_lowrank_causal_v11.json": "6ee1ad673c9d9a6bb31edb63d6b6965eff632372134516e8e582a7a487b8e333",
+    "results/v11/processed/oracle_lowrank_causal_v11.parquet": "d4434d624419e318a6c8d06252f9bdd31bafbcf7aa9e236d5a6876a50e671e93"
+  },
+  "method_count": 4,
+  "method_specs": [
+    {
+      "class": "unified",
+      "confirmatory_role": "historical_unified_baseline",
+      "dimension": 512,
+      "kind": "unified",
+      "maximum_confirmatory_horizon": 16,
+      "method": "unified_causal_d512",
+      "objective": "h1_direction"
+    },
+    {
+      "class": "oracle_joint",
+      "confirmatory_role": "development_selected_oracle",
+      "dimension": 512,
+      "kind": "oracle_joint",
+      "maximum_confirmatory_horizon": 1,
+      "method": "oracle_joint_pca_d512",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        256,
+        160,
+        96,
+        0
+      ],
+      "class": "oracle_factorized",
+      "confirmatory_role": "development_selected_oracle",
+      "dimension": 512,
+      "kind": "factorized",
+      "maximum_confirmatory_horizon": 1,
+      "method": "oracle_factorized_pca_d512",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        224,
+        144,
+        112,
+        32
+      ],
+      "class": "factorized_int",
+      "confirmatory_role": "development_selected_factorized",
+      "dimension": 512,
+      "kind": "factorized",
+      "maximum_confirmatory_horizon": 1,
+      "method": "factorized_multistep_direction_int_d512",
+      "objective": "multistep_direction"
+    }
+  ],
+  "protocol_version": "architecture_resolved_causal_geometry_v11",
+  "purpose": "freeze development-selected methods before independent v11 confirmation",
+  "schema_version": 14,
+  "selection_split": "development",
+  "staged_rule": "h1-only after h1 failure; h1/h2/h4 qualify a method for h8/h16"
+}

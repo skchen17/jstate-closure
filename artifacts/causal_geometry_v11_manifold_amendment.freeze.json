@@ -1,0 +1,21 @@
+{
+  "amendment_protocol": "causal_geometry_v11_manifold_metric_amendment_1",
+  "base_freeze_digest": "91cca911c33e1c5829d978fa307a54cfa7093118d039de35785a2fc388986ff3",
+  "correction": "report clean-zero relative cycle as null and its absolute score-space reconstruction error separately",
+  "declared_issue": "relative cycle error is undefined for the exactly zero clean-delta reference; the original nonzero-state cycle metrics remain valid",
+  "freeze_digest": "f17f62532f1136c9cc73109ecf55e2f6689b55638313979eb9c1d5068ac5c14f",
+  "hashes": {
+    "results/v11/processed/causal_state_manifold_v11.json": "c8fae61c1b5a24c3dbcce49b1f39feb101836968190c97690410342a450d5935",
+    "results/v11/processed/causal_state_manifold_v11.parquet": "06f13b242adae1b38ac10e7e76c2401b5b20850fc13e9161a7e60efbda93465e",
+    "results/v11/processed/channelwise_causal_v11.json": "f03a2072184f5537e53fd3167367fcf43d9d84ea011e0b1baac92c6796fbadc4",
+    "results/v11/processed/channelwise_causal_v11.parquet": "f46ab7afc99287e6106ba6eb5ce032632d656d8e163a813b17bd583602b2063e",
+    "scripts/run_causal_geometry_v11_manifold_amendment.sh": "905e19208bb9c519a7fb37df220f0c313e176ad6fc2a04039def657fa2637b08",
+    "src/jclosure/experiments/analyze_v11_amendment.py": "9aa4369b38e6202d23d886ad66819ed59e4727bfac686aefb06061116d46dca5",
+    "src/jclosure/protocol_v11_manifold_amendment.py": "a8c7346cf59759725f2bae3a041fe72f7f2aded94ae7ffb6c60febd5f2739c81",
+    "src/jclosure/reporting_v11_amendment.py": "4aefc197f743a9f25b480ebabc72f81c2ae2508e8efc8d247a15b7098e702565"
+  },
+  "interaction_proxy": "observed joint error norm divided by root-sum-square single-channel error norms; descriptive only because error-vector cross terms were not retained",
+  "protocol_version": "architecture_resolved_causal_geometry_v11",
+  "purpose": "correct undefined relative cycle error for clean zero and add a predeclared channel nonadditivity norm proxy",
+  "schema_version": 14
+}

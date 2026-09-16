@@ -1,0 +1,804 @@
+{
+  "allocation_search_records": "results/v11/processed/allocation_search_v11.parquet",
+  "allocation_search_sha256": "5518373bc26b5e26d2e80f9b8f495f3dc04175ae454d7b21a76379c6dcae9a90",
+  "final_confirmatory_not_used": true,
+  "method_count": 65,
+  "methods": [
+    {
+      "class": "unified",
+      "dimension": 512,
+      "kind": "unified",
+      "method": "unified_causal_d512",
+      "objective": "h1_direction"
+    },
+    {
+      "class": "oracle_joint",
+      "dimension": 64,
+      "kind": "oracle_joint",
+      "method": "oracle_joint_pca_d64",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        29,
+        22,
+        13,
+        0
+      ],
+      "class": "oracle_factorized",
+      "dimension": 64,
+      "kind": "factorized",
+      "method": "oracle_factorized_pca_d64",
+      "objective": "cache_pca"
+    },
+    {
+      "class": "oracle_joint",
+      "dimension": 128,
+      "kind": "oracle_joint",
+      "method": "oracle_joint_pca_d128",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        64,
+        38,
+        26,
+        0
+      ],
+      "class": "oracle_factorized",
+      "dimension": 128,
+      "kind": "factorized",
+      "method": "oracle_factorized_pca_d128",
+      "objective": "cache_pca"
+    },
+    {
+      "class": "oracle_joint",
+      "dimension": 192,
+      "kind": "oracle_joint",
+      "method": "oracle_joint_pca_d192",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        86,
+        67,
+        39,
+        0
+      ],
+      "class": "oracle_factorized",
+      "dimension": 192,
+      "kind": "factorized",
+      "method": "oracle_factorized_pca_d192",
+      "objective": "cache_pca"
+    },
+    {
+      "class": "oracle_joint",
+      "dimension": 256,
+      "kind": "oracle_joint",
+      "method": "oracle_joint_pca_d256",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        128,
+        64,
+        64,
+        0
+      ],
+      "class": "oracle_factorized",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "oracle_factorized_pca_d256",
+      "objective": "cache_pca"
+    },
+    {
+      "class": "oracle_joint",
+      "dimension": 320,
+      "kind": "oracle_joint",
+      "method": "oracle_joint_pca_d320",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        144,
+        112,
+        64,
+        0
+      ],
+      "class": "oracle_factorized",
+      "dimension": 320,
+      "kind": "factorized",
+      "method": "oracle_factorized_pca_d320",
+      "objective": "cache_pca"
+    },
+    {
+      "class": "oracle_joint",
+      "dimension": 384,
+      "kind": "oracle_joint",
+      "method": "oracle_joint_pca_d384",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        176,
+        112,
+        96,
+        0
+      ],
+      "class": "oracle_factorized",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "oracle_factorized_pca_d384",
+      "objective": "cache_pca"
+    },
+    {
+      "class": "oracle_joint",
+      "dimension": 448,
+      "kind": "oracle_joint",
+      "method": "oracle_joint_pca_d448",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        224,
+        134,
+        90,
+        0
+      ],
+      "class": "oracle_factorized",
+      "dimension": 448,
+      "kind": "factorized",
+      "method": "oracle_factorized_pca_d448",
+      "objective": "cache_pca"
+    },
+    {
+      "class": "oracle_joint",
+      "dimension": 512,
+      "kind": "oracle_joint",
+      "method": "oracle_joint_pca_d512",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        256,
+        160,
+        96,
+        0
+      ],
+      "class": "oracle_factorized",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "oracle_factorized_pca_d512",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        128,
+        64,
+        64,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_cache_pca_no_int_d256",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        96,
+        80,
+        48,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_cache_pca_int_d256",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        112,
+        96,
+        48,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_h1_direction_no_int_d256",
+      "objective": "h1_direction"
+    },
+    {
+      "allocation": [
+        96,
+        80,
+        48,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_h1_direction_int_d256",
+      "objective": "h1_direction"
+    },
+    {
+      "allocation": [
+        112,
+        96,
+        48,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_semantic_h1_no_int_d256",
+      "objective": "semantic_h1"
+    },
+    {
+      "allocation": [
+        96,
+        80,
+        48,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_semantic_h1_int_d256",
+      "objective": "semantic_h1"
+    },
+    {
+      "allocation": [
+        112,
+        96,
+        48,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_output_h1_no_int_d256",
+      "objective": "output_h1"
+    },
+    {
+      "allocation": [
+        96,
+        80,
+        48,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_output_h1_int_d256",
+      "objective": "output_h1"
+    },
+    {
+      "allocation": [
+        112,
+        96,
+        48,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_multistep_direction_no_int_d256",
+      "objective": "multistep_direction"
+    },
+    {
+      "allocation": [
+        112,
+        72,
+        40,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_multistep_direction_int_d256",
+      "objective": "multistep_direction"
+    },
+    {
+      "allocation": [
+        112,
+        96,
+        48,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_effect_weighted_multistep_no_int_d256",
+      "objective": "effect_weighted_multistep"
+    },
+    {
+      "allocation": [
+        96,
+        80,
+        48,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_effect_weighted_multistep_int_d256",
+      "objective": "effect_weighted_multistep"
+    },
+    {
+      "allocation": [
+        112,
+        96,
+        48,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_causal_composite_no_int_d256",
+      "objective": "causal_composite"
+    },
+    {
+      "allocation": [
+        96,
+        80,
+        48,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_causal_composite_int_d256",
+      "objective": "causal_composite"
+    },
+    {
+      "allocation": [
+        112,
+        96,
+        48,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_manifold_regularized_no_int_d256",
+      "objective": "manifold_regularized"
+    },
+    {
+      "allocation": [
+        112,
+        72,
+        40,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 256,
+      "kind": "factorized",
+      "method": "factorized_manifold_regularized_int_d256",
+      "objective": "manifold_regularized"
+    },
+    {
+      "allocation": [
+        176,
+        112,
+        96,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_cache_pca_no_int_d384",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        192,
+        128,
+        48,
+        16
+      ],
+      "class": "factorized_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_cache_pca_int_d384",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        176,
+        112,
+        96,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_h1_direction_no_int_d384",
+      "objective": "h1_direction"
+    },
+    {
+      "allocation": [
+        160,
+        128,
+        64,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_h1_direction_int_d384",
+      "objective": "h1_direction"
+    },
+    {
+      "allocation": [
+        176,
+        112,
+        96,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_semantic_h1_no_int_d384",
+      "objective": "semantic_h1"
+    },
+    {
+      "allocation": [
+        192,
+        96,
+        64,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_semantic_h1_int_d384",
+      "objective": "semantic_h1"
+    },
+    {
+      "allocation": [
+        160,
+        144,
+        80,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_output_h1_no_int_d384",
+      "objective": "output_h1"
+    },
+    {
+      "allocation": [
+        160,
+        128,
+        64,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_output_h1_int_d384",
+      "objective": "output_h1"
+    },
+    {
+      "allocation": [
+        176,
+        112,
+        96,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_multistep_direction_no_int_d384",
+      "objective": "multistep_direction"
+    },
+    {
+      "allocation": [
+        160,
+        128,
+        64,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_multistep_direction_int_d384",
+      "objective": "multistep_direction"
+    },
+    {
+      "allocation": [
+        176,
+        112,
+        96,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_effect_weighted_multistep_no_int_d384",
+      "objective": "effect_weighted_multistep"
+    },
+    {
+      "allocation": [
+        160,
+        128,
+        64,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_effect_weighted_multistep_int_d384",
+      "objective": "effect_weighted_multistep"
+    },
+    {
+      "allocation": [
+        176,
+        112,
+        96,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_causal_composite_no_int_d384",
+      "objective": "causal_composite"
+    },
+    {
+      "allocation": [
+        192,
+        96,
+        64,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_causal_composite_int_d384",
+      "objective": "causal_composite"
+    },
+    {
+      "allocation": [
+        176,
+        112,
+        96,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_manifold_regularized_no_int_d384",
+      "objective": "manifold_regularized"
+    },
+    {
+      "allocation": [
+        192,
+        96,
+        64,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 384,
+      "kind": "factorized",
+      "method": "factorized_manifold_regularized_int_d384",
+      "objective": "manifold_regularized"
+    },
+    {
+      "allocation": [
+        256,
+        160,
+        96,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_cache_pca_no_int_d512",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        240,
+        144,
+        96,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_cache_pca_int_d512",
+      "objective": "cache_pca"
+    },
+    {
+      "allocation": [
+        240,
+        144,
+        128,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_h1_direction_no_int_d512",
+      "objective": "h1_direction"
+    },
+    {
+      "allocation": [
+        224,
+        144,
+        112,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_h1_direction_int_d512",
+      "objective": "h1_direction"
+    },
+    {
+      "allocation": [
+        240,
+        144,
+        128,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_semantic_h1_no_int_d512",
+      "objective": "semantic_h1"
+    },
+    {
+      "allocation": [
+        224,
+        144,
+        112,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_semantic_h1_int_d512",
+      "objective": "semantic_h1"
+    },
+    {
+      "allocation": [
+        240,
+        144,
+        128,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_output_h1_no_int_d512",
+      "objective": "output_h1"
+    },
+    {
+      "allocation": [
+        224,
+        144,
+        112,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_output_h1_int_d512",
+      "objective": "output_h1"
+    },
+    {
+      "allocation": [
+        240,
+        144,
+        128,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_multistep_direction_no_int_d512",
+      "objective": "multistep_direction"
+    },
+    {
+      "allocation": [
+        224,
+        144,
+        112,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_multistep_direction_int_d512",
+      "objective": "multistep_direction"
+    },
+    {
+      "allocation": [
+        240,
+        144,
+        128,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_effect_weighted_multistep_no_int_d512",
+      "objective": "effect_weighted_multistep"
+    },
+    {
+      "allocation": [
+        224,
+        144,
+        112,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_effect_weighted_multistep_int_d512",
+      "objective": "effect_weighted_multistep"
+    },
+    {
+      "allocation": [
+        240,
+        144,
+        128,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_causal_composite_no_int_d512",
+      "objective": "causal_composite"
+    },
+    {
+      "allocation": [
+        240,
+        144,
+        96,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_causal_composite_int_d512",
+      "objective": "causal_composite"
+    },
+    {
+      "allocation": [
+        240,
+        144,
+        128,
+        0
+      ],
+      "class": "factorized_no_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_manifold_regularized_no_int_d512",
+      "objective": "manifold_regularized"
+    },
+    {
+      "allocation": [
+        240,
+        144,
+        96,
+        32
+      ],
+      "class": "factorized_int",
+      "dimension": 512,
+      "kind": "factorized",
+      "method": "factorized_manifold_regularized_int_d512",
+      "objective": "manifold_regularized"
+    }
+  ],
+  "protocol_version": "architecture_resolved_causal_geometry_v11",
+  "run_id": "prepare-v11-20260916T121642Z-0f38a5ef-s20260828",
+  "schema_version": 14,
+  "selection_split": "validation",
+  "source_freeze_digest": "91cca911c33e1c5829d978fa307a54cfa7093118d039de35785a2fc388986ff3"
+}

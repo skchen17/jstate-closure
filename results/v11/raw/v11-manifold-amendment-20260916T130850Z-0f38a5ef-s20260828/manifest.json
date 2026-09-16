@@ -1,0 +1,1240 @@
+{
+  "command": [
+    "/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/analyze_v11_amendment.py",
+    "--stage",
+    "freeze"
+  ],
+  "config": {
+    "causal_geometry_v11": {
+      "authorization_horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "baseline_commit": "10c24a475852ecf6370c8ad0d5e1cae5ad3cc92e",
+      "bootstrap_resamples": 10000,
+      "causal_gates": {
+        "direction_cosine_minimum": 0.8,
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "output_direction_minimum": 0.8,
+        "semantic_delta_agreement_minimum": 0.8,
+        "task_decision_sign_minimum": 0.8
+      },
+      "channel_audit": {
+        "conditions": [
+          "decoded_rec",
+          "decoded_conv",
+          "decoded_kv",
+          "decoded_rec_conv",
+          "decoded_rec_kv",
+          "decoded_conv_kv",
+          "decoded_all"
+        ],
+        "dimension": 512
+      },
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "confirmatory": {
+        "effect_enriched_per_family": 5,
+        "per_family": 10,
+        "selection_seed": 20270111
+      },
+      "confirmatory_method_limit": 4,
+      "decoder": {
+        "reconstruction_chunk": 65536,
+        "shard_size": 5
+      },
+      "development_source": "artifacts/causal_sufficiency_v10_candidates.freeze.json",
+      "factorized": {
+        "allocations": {
+          "256": {
+            "interaction": [
+              [
+                112,
+                72,
+                40,
+                32
+              ],
+              [
+                96,
+                80,
+                48,
+                32
+              ],
+              [
+                112,
+                64,
+                48,
+                32
+              ]
+            ],
+            "no_interaction": [
+              [
+                128,
+                80,
+                48,
+                0
+              ],
+              [
+                112,
+                96,
+                48,
+                0
+              ],
+              [
+                128,
+                64,
+                64,
+                0
+              ]
+            ]
+          },
+          "384": {
+            "interaction": [
+              [
+                192,
+                96,
+                64,
+                32
+              ],
+              [
+                160,
+                128,
+                64,
+                32
+              ],
+              [
+                192,
+                128,
+                48,
+                16
+              ]
+            ],
+            "no_interaction": [
+              [
+                192,
+                112,
+                80,
+                0
+              ],
+              [
+                160,
+                144,
+                80,
+                0
+              ],
+              [
+                176,
+                112,
+                96,
+                0
+              ]
+            ]
+          },
+          "512": {
+            "interaction": [
+              [
+                240,
+                144,
+                96,
+                32
+              ],
+              [
+                224,
+                160,
+                96,
+                32
+              ],
+              [
+                224,
+                144,
+                112,
+                32
+              ]
+            ],
+            "no_interaction": [
+              [
+                256,
+                160,
+                96,
+                0
+              ],
+              [
+                224,
+                192,
+                96,
+                0
+              ],
+              [
+                240,
+                144,
+                128,
+                0
+              ]
+            ]
+          }
+        },
+        "objectives": [
+          "cache_pca",
+          "h1_direction",
+          "semantic_h1",
+          "output_h1",
+          "multistep_direction",
+          "effect_weighted_multistep",
+          "causal_composite",
+          "manifold_regularized"
+        ],
+        "stage1_methods_per_class": 1,
+        "stage2_total_methods": 6,
+        "total_budgets": [
+          256,
+          384,
+          512
+        ]
+      },
+      "horizons": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "manifold": {
+        "global_subspace_rank": 128,
+        "local_pca_rank": 8,
+        "nearest_neighbors": 16
+      },
+      "oracle": {
+        "dimensions": [
+          64,
+          128,
+          192,
+          256,
+          320,
+          384,
+          448,
+          512
+        ],
+        "families": [
+          "joint_pca",
+          "factorized_pca"
+        ]
+      }
+    },
+    "causal_sufficiency_v10": {
+      "bootstrap_resamples": 10000,
+      "candidate_selection": {
+        "fallback_diagnostic_dimensions": [
+          384,
+          448,
+          512
+        ],
+        "include_reference_dimension": 512,
+        "maximum_candidates": 3
+      },
+      "causal": {
+        "authorization_horizons": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "direction_cosine_minimum": 0.8,
+        "free_continuation_requires_teacher_forced_authorization": true,
+        "horizons": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "output_direction_minimum": 0.8,
+        "semantic_delta_agreement_minimum": 0.8,
+        "strict_interface_required": true,
+        "task_decision_sign_minimum": 0.8
+      },
+      "conditional_residual_gain_maximum": 0.02,
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "confirmatory_subset": {
+        "effect_enriched_per_family": 5,
+        "per_family": 10,
+        "random_seed": 20261201,
+        "score_columns": [
+          "output_js_divergence",
+          "future_j_trajectory_divergence",
+          "target_log_odds_abs_change"
+        ]
+      },
+      "decoder": {
+        "reconstruction_chunk": 65536,
+        "shard_size": 5
+      },
+      "dimensions": [
+        64,
+        96,
+        128,
+        160,
+        192,
+        224,
+        256,
+        288,
+        320,
+        352,
+        384,
+        416,
+        448,
+        480,
+        512
+      ],
+      "gap_denominator_epsilon": 0.002,
+      "methods": [
+        "causal_bottleneck",
+        "predictive_bottleneck",
+        "pca"
+      ],
+      "predictive_gap_closed_minimum": 0.95,
+      "primary_method": "causal_bottleneck",
+      "requested_dimensions": [
+        64,
+        96,
+        128,
+        160,
+        192,
+        256,
+        320,
+        384,
+        448,
+        512
+      ],
+      "residual_audit_dimensions": [
+        384,
+        512
+      ],
+      "residualization_folds": 5,
+      "ridge_alpha": 1.0,
+      "semantic_relative_retention_minimum": 0.95,
+      "semantic_residual_gain_maximum": 0.02
+    },
+    "closure": {
+      "clamp_conditions": [
+        "single",
+        "persistent"
+      ],
+      "conditions": [
+        "clean",
+        "j_positive",
+        "full_patch",
+        "random",
+        "non_j"
+      ],
+      "future_min_layers": 3,
+      "max_attempt_multiplier": 10,
+      "perturbation_sources": [
+        "activation_difference",
+        "natural_collision",
+        "targeted_probe"
+      ],
+      "strengths": [
+        0.25,
+        0.5,
+        1.0
+      ],
+      "targeted_probe_min_score": 0.75
+    },
+    "compact_state_v4": {
+      "controller_parameter_target": 5000000,
+      "controller_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "dictionary_size": 4096,
+      "dimensions": [
+        64,
+        128,
+        256,
+        512
+      ],
+      "divergence_cosine": 0.8,
+      "early_stopping_patience": 5,
+      "families": [
+        "pca",
+        "predictive_bottleneck",
+        "sparse_j",
+        "learned_predictive_encoder"
+      ],
+      "histories": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "maximum_epochs": 50,
+      "maximum_predicted_feedback": 0.8,
+      "memory_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "minimum_causal_direction_retention": 0.8,
+      "minimum_causal_magnitude_retention": 0.8,
+      "minimum_semantic_retention": 0.8,
+      "objective_weights": {
+        "causal_retention": 0.5,
+        "future_prediction": 1.0,
+        "reconstruction": 1.0,
+        "semantic_retention": 0.5
+      },
+      "parameter_tolerance": 0.05,
+      "reference_remainder_dimensions": [
+        128,
+        512,
+        2560
+      ],
+      "rollout_horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "screen_epochs": 40,
+      "screen_patience": 5,
+      "teacher_forcing_fraction": 0.2,
+      "workspace_layers": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ]
+    },
+    "controller": {
+      "budget_tolerance": 0.05,
+      "counterfactual_traces": 256,
+      "families": [
+        "mlp",
+        "gru",
+        "transformer"
+      ],
+      "histories": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "lambda_answer": 1.0,
+      "lambda_counterfactual": 0.25,
+      "lambda_j": 1.0,
+      "max_predicted_feedback": 0.8,
+      "parameter_budgets": [
+        1000000,
+        5000000,
+        20000000,
+        50000000,
+        100000000
+      ],
+      "remainder_pca_dims": [
+        32,
+        128,
+        512
+      ],
+      "stable_dense_cosine": 0.9,
+      "stable_intervention_agreement": 0.8,
+      "stable_sparse_f1": 0.7,
+      "stable_teacher_accuracy_fraction": 0.9,
+      "teacher_forcing_warmup_fraction": 0.2
+    },
+    "data": {
+      "upstream_root": "data/upstream/anthropic"
+    },
+    "h2_replication_v5": {
+      "bootstrap_resamples": 10000,
+      "controls": [
+        "clean",
+        "identity",
+        "matched_random",
+        "j_positive",
+        "full_perturbation",
+        "j_preserving"
+      ],
+      "counts_by_family": {
+        "boolean_logic": 80,
+        "modular_arithmetic": 32,
+        "short_graph_traversal": 32,
+        "simple_state_transition": 80,
+        "variable_binding": 32
+      },
+      "dense_cosine_threshold": 0.995,
+      "dictionary_size": 4096,
+      "formal_displacement_fraction": 0.2,
+      "future_workspace_layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "horizons": [
+        4,
+        8
+      ],
+      "initial_strength": 0.25,
+      "layer": 23,
+      "null_js_floor": 0.0001,
+      "position_scope": "final",
+      "protocol_version": "h2_family_replication_v5",
+      "rms_drift_threshold": 0.02,
+      "seeds": {
+        "evaluation": 20260925
+      },
+      "target_valid_by_family": {
+        "boolean_logic": 32,
+        "modular_arithmetic": 12,
+        "short_graph_traversal": 12,
+        "simple_state_transition": 32,
+        "variable_binding": 12
+      },
+      "top10_overlap_threshold": 0.8,
+      "variants": {
+        "boolean_logic": "binary_xor_pairs",
+        "modular_arithmetic": "increment_1",
+        "short_graph_traversal": "directed_cycle",
+        "simple_state_transition": "toggle_or_keep",
+        "variable_binding": "four_way_lookup"
+      }
+    },
+    "jstate": {
+      "concept_vocab_size": 4096,
+      "dense_cosine_threshold": 0.995,
+      "k": 25,
+      "min_remainder_fraction": 0.2,
+      "primary_position": -1,
+      "rms_drift_threshold": 0.02,
+      "top10_overlap_threshold": 0.8
+    },
+    "lens": {
+      "file": "qwen3.5-4b/jlens/Salesforce-wikitext/Qwen3.5-4B_jacobian_lens_n1000.pt",
+      "metadata_prompts_fitted": 417,
+      "repo": "neuronpedia/jacobian-lens",
+      "revision": "16a01f309fcec900fdcec3f4cd5b64f3d00e4d5a",
+      "sha256": "1f9a8f8fd593f0ffec1a9640993257ca4560f8ae3e5602315643d5cc6818534e",
+      "upstream_commit": "581d398613e5602a5af361e1c34d3a92ea82ba8e"
+    },
+    "model": {
+      "compile": false,
+      "device": 0,
+      "device_map": "cuda",
+      "dtype": "bfloat16",
+      "force_bos": true,
+      "id": "Qwen/Qwen3.5-4B",
+      "max_seq_len": 512,
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "trust_remote_code": false
+    },
+    "outputs": {
+      "artifacts": "../../artifacts",
+      "figures": "figures",
+      "processed": "processed",
+      "raw": "raw",
+      "reports": "../../reports",
+      "root": "results/v11"
+    },
+    "peripheral_v5": {
+      "batch_size": 128,
+      "bootstrap_resamples": 10000,
+      "compact_gap_closed": 0.8,
+      "compact_maximum_conditional_gain": 0.002,
+      "compact_minimum_causal_direction_cosine": 0.8,
+      "compact_minimum_output_sign_agreement": 0.8,
+      "confidence": 0.95,
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "derived_trace_summary": "results/v5/processed/peripheral_traces_v5.json",
+      "dictionary_size": 4096,
+      "dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "early_stopping_patience": 5,
+      "encoder_families": [
+        "pca_remainder",
+        "predictive_bottleneck",
+        "nonlinear_bottleneck"
+      ],
+      "full_remainder_minimum_cosine_gain": 0.005,
+      "hidden_width": 512,
+      "history_length": 4,
+      "learning_rate": 0.0003,
+      "maximum_action_accuracy_loss": 0.02,
+      "maximum_epochs": 30,
+      "recurrent_architectures": [
+        "gated_mlp",
+        "gru",
+        "residual_recurrent"
+      ],
+      "recurrent_horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "recurrent_maximum_state_dimension": 128,
+      "recurrent_parameter_target": 5000000,
+      "recurrent_parameter_tolerance": 0.05,
+      "reference_architectures": [
+        "mlp",
+        "gated_mlp",
+        "attention"
+      ],
+      "residual_conditioning_rank": 512,
+      "screen_seed": 20260828,
+      "source_teacher_summary": "results/v4/processed/teacher_formal_v4.json",
+      "source_trace_summary": "results/v4/processed/teacher_traces_v4.json",
+      "weight_decay": 0.0001,
+      "workspace_layer": 23
+    },
+    "peripheral_v6": {
+      "bootstrap_resamples": 10000,
+      "causal_direction_count": 16,
+      "causal_fit_fraction": 0.5,
+      "causal_split_seed": 20261001,
+      "ceiling_rules": {
+        "causal_direction_minimum_absolute": 0.2,
+        "causal_direction_minimum_gain": 0.05,
+        "causal_projection_minimum_relative_rmse_reduction": 0.1,
+        "global_cosine_minimum_gain": 0.005,
+        "maximum_action_accuracy_loss": 0.02,
+        "semantic_accuracy_minimum_gain": 0.02
+      },
+      "compact_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "compact_families": [
+        "pca",
+        "predictive_bottleneck",
+        "nonlinear_bottleneck"
+      ],
+      "compact_gap_closed": 0.8,
+      "compact_maximum_conditional_gain": 0.002,
+      "confidence": 0.95,
+      "dictionary_size": 4096,
+      "f64_projection_sensitivity": true,
+      "future_workspace_layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "initial_strength": 0.25,
+      "layer": 23,
+      "null_js_floor": 0.0001,
+      "objective_weights": {
+        "action": 1.0,
+        "causal_counterfactual": 2.0,
+        "causal_projection": 2.0,
+        "full_profile": 1.0,
+        "top_causal_dimensions": 2.0
+      },
+      "precision_dtype": "float32",
+      "reference_architectures": [
+        "j_only_residual",
+        "j_history_attention",
+        "full_remainder_linear",
+        "full_remainder_gated",
+        "full_remainder_residual",
+        "full_remainder_attention"
+      ],
+      "reference_batch_size": 128,
+      "reference_confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "reference_epochs": 40,
+      "reference_learning_rate": 0.0003,
+      "reference_patience": 6,
+      "reference_screen_seed": 20260828,
+      "reference_weight_decay": 0.0001,
+      "reference_width": 512,
+      "source_h2_records": "results/v5/processed/h2_replication_v5.parquet",
+      "source_h2_summary": "results/v5/processed/h2_replication_v5.json",
+      "source_mediation_summary": "results/v5/processed/h2_mediation_v5.json",
+      "source_reference_summary": "results/v5/processed/full_remainder_reference_v5.json",
+      "source_trace_summary": "results/v5/processed/peripheral_traces_v5.json",
+      "top_causal_dimension_count": 64
+    },
+    "persistent_channels_v7": {
+      "attribution_split_seed": 20261011,
+      "bootstrap_resamples": 10000,
+      "cache_restore_tolerances": {
+        "hidden_max_abs": 1e-06,
+        "j_max_abs": 1e-06,
+        "logits_max_abs": 1e-06
+      },
+      "channel_gate": {
+        "maximum_additive_interaction_ratio": 0.25,
+        "minimum_delta_cosine": 0.2,
+        "minimum_delta_cosine_ci_lower": 0.0,
+        "minimum_full_delta_l2": 1e-06,
+        "minimum_magnitude_ratio": 0.1
+      },
+      "compression": {
+        "causal_direction_minimum": 0.8,
+        "causal_gap_closed": 0.8,
+        "dimensions": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512
+        ],
+        "maximum_conditional_gain": 0.02,
+        "methods": [
+          "pca",
+          "predictive_bottleneck",
+          "causal_bottleneck",
+          "nonlinear_encoder"
+        ],
+        "predictive_gap_closed": 0.8
+      },
+      "downstream_attention_layers": [
+        27,
+        31
+      ],
+      "downstream_recurrent_layers": [
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      "intervention_layer": 23,
+      "localization": {
+        "attention_token_windows": [
+          1,
+          4,
+          16,
+          64
+        ],
+        "minimum_channel_fraction": 0.05
+      },
+      "measured_layers": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "restore_test_count": 8,
+      "source_tasks": "data/v5/h2_replication.json",
+      "source_v6_artifact": "artifacts/causal/v6/causal-endpoint-v6-20260914T161620Z-a20b5a8c-s20260828-full-66/causal_endpoint_f32.npz",
+      "source_v6_artifact_sha256": "af945e0432cd7b1f1f256f1f0c60c91ec7d9aca7956dae745387247732c0444e",
+      "source_v6_records": "results/v6/processed/causal_endpoint_precision_v6.parquet",
+      "source_v6_summary": "results/v6/processed/causal_endpoint_v6.json",
+      "source_v6_trials": "results/v6/processed/restoration_null_v6.parquet",
+      "teacher_forced_tokens": 4
+    },
+    "persistent_channels_v7_corrective": {
+      "authorization": {
+        "require_channel_attribution": true,
+        "require_positive_cosine_or_rmse_gain_ci": true
+      },
+      "predictor": {
+        "added_features": "mixed_channel_delta_dual_pca_scores",
+        "alpha": 1.0,
+        "baseline_features": "current_intervened_j",
+        "target": "next_j_intervention_delta"
+      },
+      "reason": "endpoint_serialization_alias_bug",
+      "source_capture_summary": "results/v7/processed/raw_arch_channel_ceiling_v7.json",
+      "source_v6_artifact": "artifacts/causal/v6/causal-endpoint-v6-20260914T161620Z-a20b5a8c-s20260828-full-66/causal_endpoint_f32.npz"
+    },
+    "persistent_state_v8": {
+      "bootstrap_resamples": 10000,
+      "calibration": {
+        "count_per_family_horizon": 30,
+        "horizons": [
+          2,
+          3,
+          5
+        ],
+        "minimum_accuracy": 0.7,
+        "preferred_accuracy": 0.8,
+        "seed": 20261103,
+        "version": "r6"
+      },
+      "component_atoms": [
+        "rec_matrix_all",
+        "conv_all",
+        "kv_l27_h3",
+        "kv_other"
+      ],
+      "compression": {
+        "causal_direction_minimum": 0.8,
+        "causal_evaluation_requires_predictive_and_conditional_pass": true,
+        "causal_gap_closed": 0.8,
+        "confirmation_seeds": [
+          20260828,
+          20260829,
+          20260830
+        ],
+        "diagnostic_sketch_dimension": 8192,
+        "dimensions": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512
+        ],
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "maximum_conditional_residual_gain": 0.02,
+        "methods": [
+          "pca",
+          "predictive_bottleneck",
+          "causal_bottleneck",
+          "nonlinear_encoder",
+          "layerwise_fusion"
+        ],
+        "output_sign_agreement_minimum": 0.8,
+        "predictive_gap_closed": 0.8,
+        "raw_dual_pca_tolerance": 1e-08,
+        "reconstruction_ridge_alpha": 0.01,
+        "semantic_agreement_minimum": 0.8
+      },
+      "formal": {
+        "candidates_per_family": {
+          "final_test": 80,
+          "train": 180,
+          "validation": 80
+        },
+        "horizon_overrides": {
+          "modular_arithmetic": 2
+        },
+        "split_seeds": {
+          "final_test": 20261113,
+          "train": 20261111,
+          "validation": 20261112
+        },
+        "target_valid_per_family": {
+          "final_test": 50,
+          "train": 120,
+          "validation": 50
+        },
+        "version": "competence_corrective_r3_parser"
+      },
+      "intervention": {
+        "causal_write_layer": 24,
+        "dense_cosine_threshold": 0.995,
+        "formal_displacement_fraction": 0.2,
+        "initial_strength": 0.25,
+        "layer": 23,
+        "measured_layers": [
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "rms_drift_threshold": 0.02,
+        "teacher_forced_tokens": 4,
+        "top10_overlap_threshold": 0.8
+      },
+      "kernel_ridge_alphas": [
+        0.001,
+        0.01,
+        0.1,
+        1.0
+      ],
+      "persistent_components": {
+        "attention_layers": [
+          27,
+          31
+        ],
+        "kv_positions": "final",
+        "kv_primary_head": 3,
+        "kv_primary_layer": 27,
+        "recurrent_layers": [
+          24,
+          25,
+          26,
+          28,
+          29,
+          30
+        ],
+        "top_recurrent_layer": [
+          30
+        ],
+        "top_recurrent_layers": [
+          28,
+          29,
+          30
+        ]
+      },
+      "raw_screen": {
+        "maximum_output_sign_loss": 0.02,
+        "minimum_causal_direction_cosine": 0.8,
+        "minimum_full_gap_fraction": 0.9
+      },
+      "raw_sets": {
+        "R0": [],
+        "R1": [
+          "rec_matrix_l30"
+        ],
+        "R2": [
+          "rec_matrix_l28",
+          "rec_matrix_l29",
+          "rec_matrix_l30"
+        ],
+        "R3": [
+          "conv_all"
+        ],
+        "R4": [
+          "rec_matrix_all",
+          "conv_all"
+        ],
+        "R5": [
+          "kv_l27_h3"
+        ],
+        "R6": [
+          "rec_matrix_all",
+          "conv_all",
+          "kv_l27_h3"
+        ],
+        "R7": [
+          "rec_matrix_all",
+          "conv_all",
+          "kv_all"
+        ]
+      }
+    },
+    "reproducibility": {
+      "bootstrap_seed": 20260901,
+      "controller_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "dataset_seed": 20260828,
+      "deterministic": true
+    },
+    "run": {
+      "protocol_version": "architecture_resolved_causal_geometry_v11",
+      "stage": "causal_geometry_v11",
+      "timeout_hours": 72
+    },
+    "single_arm_v4": {
+      "bootstrap_resamples": 10000,
+      "confidence": 0.95,
+      "confirmation_valid_base_trials": 500,
+      "construction": "dense_optimized",
+      "controls": [
+        "clean",
+        "identity",
+        "matched_random",
+        "j_positive",
+        "full_perturbation",
+        "j_preserving"
+      ],
+      "dense_cosine_threshold": 0.995,
+      "dictionary_size": 4096,
+      "formal_displacement_fraction": 0.2,
+      "future_workspace_layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "generation_horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "initial_strength": 0.25,
+      "layer": 23,
+      "max_attempt_multiplier": 10,
+      "null_js_floor": 0.0001,
+      "null_quantile": 0.99,
+      "pilot_valid_base_trials": 100,
+      "position_scope": "final",
+      "rms_drift_threshold": 0.02,
+      "state_definition": "V3-Dense-operational-control",
+      "top10_overlap_threshold": 0.8
+    },
+    "statistics": {
+      "bootstrap_resamples": 10000,
+      "confidence": 0.95,
+      "eta_threshold": 0.2,
+      "null_js_floor": 0.0001,
+      "null_quantile": 0.99
+    },
+    "sufficiency_v9": {
+      "behavior_enriched": {
+        "fraction_per_family": 0.4,
+        "minimum_per_family": 15,
+        "score_columns": [
+          "output_js_divergence",
+          "future_j_trajectory_divergence",
+          "target_log_odds_abs_change"
+        ]
+      },
+      "bootstrap_resamples": 10000,
+      "captured_horizons": [
+        1,
+        2,
+        4
+      ],
+      "causal_decoding_requires_all_observational_gates": true,
+      "causal_direction_minimum": 0.8,
+      "causal_magnitude_maximum": 1.2,
+      "causal_magnitude_minimum": 0.8,
+      "conditional_residual_gain_maximum": 0.02,
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "gap_denominator_epsilon": 0.002,
+      "horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "methods": [
+        "pca",
+        "predictive_bottleneck",
+        "causal_bottleneck",
+        "semantic_causal_bottleneck"
+      ],
+      "newly_evaluated_dimensions": [
+        512,
+        576,
+        599,
+        768,
+        1024,
+        1536,
+        2048
+      ],
+      "output_sign_agreement_minimum": 0.8,
+      "predictive_gap_closed_minimum": 0.8,
+      "primary_method": "causal_bottleneck",
+      "primary_methods": [
+        "pca",
+        "predictive_bottleneck",
+        "causal_bottleneck"
+      ],
+      "requested_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        576,
+        599,
+        768,
+        1024,
+        1536,
+        2048
+      ],
+      "residual_blocks": [
+        "recurrent",
+        "conv",
+        "kv"
+      ],
+      "residual_localization_dimensions": [
+        512,
+        599,
+        768,
+        1024,
+        1536
+      ],
+      "ridge_alpha": 1.0,
+      "semantic_agreement_minimum": 0.8,
+      "semantic_objective_weights": {
+        "future_causal_delta": 0.2,
+        "next_absolute": 0.4,
+        "next_causal_delta": 0.4
+      }
+    },
+    "teacher_tasks_v4": {
+      "calibration_per_cell": 16,
+      "calibration_seed": 20260914,
+      "formal_counts_per_family": {
+        "causal_test": 40,
+        "rollout_test": 40,
+        "train": 64,
+        "validation": 16
+      },
+      "formal_evaluation_mode": "environment_stepwise",
+      "formal_seeds": {
+        "causal_test": 20260917,
+        "rollout_test": 20260918,
+        "train": 20260915,
+        "validation": 20260916
+      },
+      "generation_batch_size": 8,
+      "horizons": [
+        4,
+        8,
+        16,
+        32
+      ],
+      "maximum_extra_tokens": 8,
+      "minimum_cell_full_trajectory_accuracy": 0.7,
+      "preferred_cell_full_trajectory_accuracy": 0.8,
+      "variants": {
+        "boolean_logic": [
+          "binary_xor_pairs",
+          "not_each",
+          "xor_one"
+        ],
+        "modular_arithmetic": [
+          "increment_1",
+          "increment_2",
+          "decrement_1"
+        ],
+        "short_graph_traversal": [
+          "directed_cycle"
+        ],
+        "simple_state_transition": [
+          "toggle_every_step",
+          "toggle_or_keep"
+        ],
+        "variable_binding": [
+          "four_way_lookup"
+        ]
+      }
+    },
+    "validation": {
+      "band_min_layers": 3,
+      "band_peak_fraction": 0.5,
+      "bootstrap_resamples": 10000,
+      "discovery_fraction": 0.5,
+      "hit10_threshold": 0.2,
+      "min_primary_position": 16,
+      "positive_control_trials": 24,
+      "report_sensitivity_peak_fractions": [
+        0.25,
+        0.4,
+        0.6
+      ]
+    }
+  },
+  "config_digest": "0f38a5ef31eba59931fd0dd3d13b60c21d65759ef39aa152989af1543ab1e603",
+  "created_at": "2026-09-16T13:08:50.128749+00:00",
+  "environment": {
+    "cuda_available": true,
+    "gpus": [
+      {
+        "compute_capability": [
+          8,
+          9
+        ],
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "total_memory_bytes": 25386352640
+      },
+      {
+        "compute_capability": [
+          8,
+          9
+        ],
+        "index": 1,
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "total_memory_bytes": 25386352640
+      }
+    ],
+    "nvidia_smi": "NVIDIA GeForce RTX 4090 D, 550.144.03, 24564 MiB\nNVIDIA GeForce RTX 4090 D, 550.144.03, 24564 MiB",
+    "platform": "Linux-6.2.0-26-generic-x86_64-with-glibc2.35",
+    "python": "3.12.2",
+    "python_executable": "/home/user/anaconda3/bin/python",
+    "torch": "2.10.0+cu128",
+    "torch_cuda_runtime": "12.8"
+  },
+  "git_commit": "e4d50683eefaa8d15b3b49c44a9b3bfddc70009a",
+  "git_worktree": {
+    "capture": "process_init",
+    "dirty": true,
+    "entries": 43,
+    "status_sha256": "2b1aff19f856868b1b1ce135f8f7c6f8e35ecac0cfdf11e47ce0d81d0ca1d1bd"
+  },
+  "kind": "v11-manifold-amendment",
+  "run_id": "v11-manifold-amendment-20260916T130850Z-0f38a5ef-s20260828",
+  "schema_version": 3,
+  "seed": 20260828,
+  "status": "COMPLETED_V11_MANIFOLD_AMENDMENT",
+  "summary": {
+    "amendment_protocol": "causal_geometry_v11_manifold_metric_amendment_1",
+    "base_freeze_digest": "91cca911c33e1c5829d978fa307a54cfa7093118d039de35785a2fc388986ff3",
+    "correction": "report clean-zero relative cycle as null and its absolute score-space reconstruction error separately",
+    "declared_issue": "relative cycle error is undefined for the exactly zero clean-delta reference; the original nonzero-state cycle metrics remain valid",
+    "freeze_digest": "f17f62532f1136c9cc73109ecf55e2f6689b55638313979eb9c1d5068ac5c14f",
+    "hashes": {
+      "results/v11/processed/causal_state_manifold_v11.json": "c8fae61c1b5a24c3dbcce49b1f39feb101836968190c97690410342a450d5935",
+      "results/v11/processed/causal_state_manifold_v11.parquet": "06f13b242adae1b38ac10e7e76c2401b5b20850fc13e9161a7e60efbda93465e",
+      "results/v11/processed/channelwise_causal_v11.json": "f03a2072184f5537e53fd3167367fcf43d9d84ea011e0b1baac92c6796fbadc4",
+      "results/v11/processed/channelwise_causal_v11.parquet": "f46ab7afc99287e6106ba6eb5ce032632d656d8e163a813b17bd583602b2063e",
+      "scripts/run_causal_geometry_v11_manifold_amendment.sh": "905e19208bb9c519a7fb37df220f0c313e176ad6fc2a04039def657fa2637b08",
+      "src/jclosure/experiments/analyze_v11_amendment.py": "9aa4369b38e6202d23d886ad66819ed59e4727bfac686aefb06061116d46dca5",
+      "src/jclosure/protocol_v11_manifold_amendment.py": "a8c7346cf59759725f2bae3a041fe72f7f2aded94ae7ffb6c60febd5f2739c81",
+      "src/jclosure/reporting_v11_amendment.py": "4aefc197f743a9f25b480ebabc72f81c2ae2508e8efc8d247a15b7098e702565"
+    },
+    "interaction_proxy": "observed joint error norm divided by root-sum-square single-channel error norms; descriptive only because error-vector cross terms were not retained",
+    "protocol_version": "architecture_resolved_causal_geometry_v11",
+    "purpose": "correct undefined relative cycle error for clean zero and add a predeclared channel nonadditivity norm proxy",
+    "schema_version": 14
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "base_freeze_digest": "91cca911c33e1c5829d978fa307a54cfa7093118d039de35785a2fc388986ff3",
+  "confirmatory_used": false,
+  "eligible_method_count": 0,
+  "freeze_digest": "d040b22427c48fcec1b4564b2fb14aa8d742b70047e11c1ce655a707e1308135",
+  "hashes": {
+    "artifacts/causal_geometry_v11_prepared.freeze.json": "ca65a54be9480d7fa0ae4ef3d81522c64b0cf94c972b4df59ee77ca78dbf849f",
+    "results/v11/processed/factorized_causal_stage1_v11.json": "d94daf1892c7a1902faee6017a521d02481c66871d9767cdcf765b272d6e6535",
+    "results/v11/processed/factorized_causal_stage1_v11.parquet": "669cdecda89e4742d67a77a29228982c698d36a98854122bf9d185e1d355c0d9"
+  },
+  "method_specs": [],
+  "protocol_version": "architecture_resolved_causal_geometry_v11",
+  "purpose": "freeze h1-qualified factorized methods before h2/h4",
+  "schema_version": 14,
+  "selected_methods": [],
+  "selection_split": "development",
+  "stage1_gate": "h1 all-family frozen causal gate"
+}

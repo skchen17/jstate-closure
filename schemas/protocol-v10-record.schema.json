@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Protocol v10 machine record",
+  "type": "object",
+  "required": ["schema_version", "protocol_version", "record_type", "run_id"],
+  "properties": {
+    "schema_version": {"const": 13},
+    "protocol_version": {"const": "corrected_causal_sufficiency_protocol_v10"},
+    "record_type": {"type": "string"},
+    "run_id": {"type": "string"}
+  },
+  "additionalProperties": true
+}

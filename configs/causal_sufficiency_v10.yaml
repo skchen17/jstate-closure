@@ -1,0 +1,56 @@
+extends: sufficiency_v9.yaml
+
+run:
+  stage: causal_sufficiency_v10
+  protocol_version: corrected_causal_sufficiency_protocol_v10
+  timeout_hours: 48
+
+causal_sufficiency_v10:
+  dimensions: [64, 96, 128, 160, 192, 224, 256, 288, 320, 352, 384, 416, 448, 480, 512]
+  requested_dimensions: [64, 96, 128, 160, 192, 256, 320, 384, 448, 512]
+  methods: [causal_bottleneck, predictive_bottleneck, pca]
+  primary_method: causal_bottleneck
+  residual_audit_dimensions: [384, 512]
+  residualization_folds: 5
+  confirmation_seeds: [20260828, 20260829, 20260830]
+  bootstrap_resamples: 10000
+  ridge_alpha: 1.0
+  gap_denominator_epsilon: 0.002
+  predictive_gap_closed_minimum: 0.95
+  conditional_residual_gain_maximum: 0.02
+  semantic_relative_retention_minimum: 0.95
+  semantic_residual_gain_maximum: 0.02
+  candidate_selection:
+    maximum_candidates: 3
+    include_reference_dimension: 512
+    fallback_diagnostic_dimensions: [384, 448, 512]
+  confirmatory_subset:
+    per_family: 10
+    effect_enriched_per_family: 5
+    random_seed: 20261201
+    score_columns:
+      - output_js_divergence
+      - future_j_trajectory_divergence
+      - target_log_odds_abs_change
+  decoder:
+    reconstruction_chunk: 65536
+    shard_size: 5
+  causal:
+    horizons: [1, 2, 4, 8, 16]
+    authorization_horizons: [1, 2, 4, 8]
+    direction_cosine_minimum: 0.80
+    magnitude_ratio_minimum: 0.80
+    magnitude_ratio_maximum: 1.20
+    semantic_delta_agreement_minimum: 0.80
+    output_direction_minimum: 0.80
+    task_decision_sign_minimum: 0.80
+    strict_interface_required: true
+    free_continuation_requires_teacher_forced_authorization: true
+
+outputs:
+  root: results/v10
+  raw: raw
+  processed: processed
+  figures: figures
+  reports: ../../reports
+  artifacts: ../../artifacts

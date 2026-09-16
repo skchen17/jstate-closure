@@ -1,0 +1,25 @@
+{
+  "finite_required_metric_counts": {
+    "decoded_j_effect_norm": 0,
+    "direction_cosine": 0,
+    "output_direction_cosine": 0,
+    "teacher_j_effect_norm": 0
+  },
+  "freeze_digest": "0e41131702e13d504ac9bf7f52ee2da80d5a90223107e36a72827f77ee34a7eb",
+  "hashes": {
+    "artifacts/causal_geometry_v12_runtime_amendment_3_hybrid.freeze.json": "5a934dec75dcb333e7964f069f591e33ee621f4eae93301b74204316b065a48d",
+    "results/v12/processed/data_rank_scaling_causal_v12_INVALID_hybrid_am3.json": "823fa81e388a75719d66d2280b7bc3886d95ac3c28f1829461a9cbce0e129db5",
+    "results/v12/processed/data_rank_scaling_causal_v12_INVALID_hybrid_am3.parquet": "035ee84f228996daea5ee79419089bf7466f9e62ae673cdd85c174fd45bd91df",
+    "src/jclosure/experiments/protocol_v12_hybrid_nullification.py": "1a8d8112a50f8531bc3a2d198dfe0e5708e16ab88e2862827519896da5d500e0"
+  },
+  "parent_base_freeze_digest": "30ce09031d3361cc8f5e3cddbdd3dbf3a2388a11e673f6521d01ea32c27e4eb1",
+  "parent_runtime_amendment": "artifacts/causal_geometry_v12_runtime_amendment_3_hybrid.freeze.json",
+  "protocol_version": "local_causal_geometry_v12_hybrid_nullification_1",
+  "reason": "accelerate auto-map across CPU/GPU produced non-finite teacher and decoded trajectories in every scaling record",
+  "record_count": 900,
+  "replacement_execution": "runtime_amendment_2_cpu",
+  "schema_version": 19,
+  "status": "NULLIFIED_NUMERICAL_INVALIDITY",
+  "usable_for_model_or_method_selection": false,
+  "usable_for_scientific_inference": false
+}

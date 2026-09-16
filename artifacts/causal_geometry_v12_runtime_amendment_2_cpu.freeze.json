@@ -1,0 +1,19 @@
+{
+  "algorithm_changed": false,
+  "estimand_changed": false,
+  "execution_device": "cpu",
+  "freeze_digest": "7effb4f7a3cf08f4ce559fd6066099f41f10ff691a17da342821514c6bd0541c",
+  "hashes": {
+    "artifacts/causal_geometry_v12.freeze.json": "2d7585c062c56eaf5a574794a2101c8db704856b6c99f51c3f7d051de18e5fe0",
+    "artifacts/causal_geometry_v12_runtime_amendment_1.freeze.json": "5aae3ebe63372e8305b40cc31590b9a316536b3b45cde0522ac0278cfb3823bf",
+    "src/jclosure/experiments/runtime_v12_amendment_2.py": "8eb3076a641cc46079c5c7a97322c43571983c5b227fb3222d49d110195b502b"
+  },
+  "model_dtype_changed": false,
+  "model_weights_changed": false,
+  "parent_base_freeze_digest": "30ce09031d3361cc8f5e3cddbdd3dbf3a2388a11e673f6521d01ea32c27e4eb1",
+  "protocol_version": "local_causal_geometry_v12_runtime_amendment_2_cpu",
+  "purpose": "CPU execution fallback while both shared GPUs lack safe capacity",
+  "reason": "both physical GPUs were occupied by unrelated jobs; two pre-record OOM attempts occurred before any V12 measurement row was emitted",
+  "schema_version": 17,
+  "split_changed": false
+}

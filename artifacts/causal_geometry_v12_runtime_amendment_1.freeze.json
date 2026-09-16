@@ -1,0 +1,18 @@
+{
+  "algorithm_changed": false,
+  "estimand_changed": false,
+  "failure_stage": "model/encoder loading before the first V12 measurement record",
+  "freeze_digest": "abface01ba7fd6d3aefa5efea198eac67f612ba4988210df3b90c618fe93e384",
+  "hashes": {
+    "artifacts/causal_geometry_v12.freeze.json": "2d7585c062c56eaf5a574794a2101c8db704856b6c99f51c3f7d051de18e5fe0",
+    "artifacts/causal_geometry_v12_jvp.freeze.json": "2b88991b3d91bde8b8b162d57c7d785ac4f6a5ceaf85a6180112a582ff3b33fe",
+    "artifacts/causal_geometry_v12_prepared.freeze.json": "75663d3593f38233326e4898b5affec66796a7d85a10119114af7330d8b6bc44",
+    "src/jclosure/experiments/runtime_v12_amendment.py": "f1d929a5a7b7482497721597def47c489ff09a466717f55f3ec8e82abdeaebbc"
+  },
+  "numerical_equivalence": "select frozen vocabulary rows before float32 CPU copy instead of casting the full unembedding matrix before selecting the same rows",
+  "parent_base_freeze_digest": "30ce09031d3361cc8f5e3cddbdd3dbf3a2388a11e673f6521d01ea32c27e4eb1",
+  "protocol_version": "local_causal_geometry_v12_runtime_amendment_1",
+  "purpose": "memory-order-only correction after pre-measurement CUDA OOM",
+  "schema_version": 16,
+  "split_changed": false
+}

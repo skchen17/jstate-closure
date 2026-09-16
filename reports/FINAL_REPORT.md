@@ -547,3 +547,31 @@ Amendment freeze: `f17f62532f1136c9cc73109ecf55e2f6689b55638313979eb9c1d5068ac5c
 - `bash scripts/run_causal_geometry_v11_manifold_amendment.sh freeze`
 - `bash scripts/run_causal_geometry_v11_manifold_amendment.sh analyze`
 - `bash scripts/run_causal_geometry_v11_manifold_amendment.sh report`
+
+<!-- V12_START -->
+## V12 — local causal geometry and intrinsic-dimension audit
+
+Formal decision: **V12-A — MORE_DATA_REQUIRED**. Hypothesis remains **H2**. Smallest independently validated writable dimension: **None**. Autonomous controller authorized: **False**.
+
+### Required scientific answers
+
+1. Semantic metric instability materially explains V11: **False**.
+2. 512D data/rank saturation: **not identified**; only train sizes `[600]` had adequate centered rank, so `MORE_DATA_REQUIRED`.
+3. Local causal effective rank: stable `1.81`, entropy-effective `3.99`, restricted median r90/r95/r99 `4/6/14` within the frozen 64-direction probe.
+4. Causal/PCA overlap: see `VARIANCE_VS_CAUSAL_GEOMETRY_V12.md`; conclusions are restricted to the 64-direction operator.
+5. Low-variance/high-causal directions: **True**.
+6. Tangent rotation is large under the frozen rule: **True**.
+7. Locally-low-dimensional/globally-curved state established: **False** unless both low local rank and successful local oracle hold; current outcome does not authorize that claim.
+8. Local causal oracle clearly exceeds global PCA: adjudicated from the independent table, but **no method is authorized** unless listed here: `[]`.
+9. A 128/256/384/512D local candidate passes h1: **False** (512D local itself was rank-limited).
+10. h2/h4/h8 pass: **False** under the all-family frozen gates.
+11. Dominant trajectory failure: **direction_rotation_and_semantic_divergence**; finite-horizon ratios were not treated as eigenvalues.
+12. Strict full-state replacement succeeded: **False**.
+13. Writable dimension is proven higher than predictive dimension: **not proven globally**; current restricted causal spectrum and failed writeback remain consistent with a larger writable state.
+14. Strongest supported outcome: **V12-A — MORE_DATA_REQUIRED**.
+15. H2 remains: **True**.
+16. Upgrade to H3: **False**.
+17. Autonomous controller authorization: **False**.
+
+The learned state-dependent decoder was not run because the protocol did not authorize it before causal geometry and strict replacement succeeded.
+<!-- V12_END -->

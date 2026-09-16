@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JState Closure V12 Record",
+  "type": "object",
+  "required": ["schema_version", "protocol_version", "record_type"],
+  "properties": {
+    "schema_version": {"const": 15},
+    "protocol_version": {"type": "string"},
+    "record_type": {"type": "string"},
+    "base_trial_id": {"type": ["string", "null"]},
+    "split_role": {"type": ["string", "null"]},
+    "method": {"type": ["string", "null"]},
+    "dimension": {"type": ["integer", "null"]},
+    "status": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

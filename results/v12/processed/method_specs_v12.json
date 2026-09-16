@@ -1,0 +1,641 @@
+{
+  "causal_scaling_methods": [
+    {
+      "class": "scaling_combined_pca",
+      "dimension": 128,
+      "kind": "combined_pca",
+      "method": "scaling_combined_pca_n150_d128",
+      "status": "IDENTIFIED",
+      "train_size": 150
+    },
+    {
+      "class": "scaling_architecture_joint_pca",
+      "dimension": 128,
+      "kind": "architecture_joint_pca",
+      "method": "scaling_architecture_joint_pca_n150_d128",
+      "status": "IDENTIFIED",
+      "train_size": 150
+    },
+    {
+      "class": "scaling_causal_weighted",
+      "dimension": 128,
+      "kind": "causal_weighted",
+      "method": "scaling_causal_weighted_n150_d128",
+      "status": "IDENTIFIED",
+      "train_size": 150
+    },
+    {
+      "class": "scaling_combined_pca",
+      "dimension": 128,
+      "kind": "combined_pca",
+      "method": "scaling_combined_pca_n300_d128",
+      "status": "IDENTIFIED",
+      "train_size": 300
+    },
+    {
+      "class": "scaling_combined_pca",
+      "dimension": 256,
+      "kind": "combined_pca",
+      "method": "scaling_combined_pca_n300_d256",
+      "status": "IDENTIFIED",
+      "train_size": 300
+    },
+    {
+      "class": "scaling_architecture_joint_pca",
+      "dimension": 128,
+      "kind": "architecture_joint_pca",
+      "method": "scaling_architecture_joint_pca_n300_d128",
+      "status": "IDENTIFIED",
+      "train_size": 300
+    },
+    {
+      "class": "scaling_architecture_joint_pca",
+      "dimension": 256,
+      "kind": "architecture_joint_pca",
+      "method": "scaling_architecture_joint_pca_n300_d256",
+      "status": "IDENTIFIED",
+      "train_size": 300
+    },
+    {
+      "class": "scaling_causal_weighted",
+      "dimension": 128,
+      "kind": "causal_weighted",
+      "method": "scaling_causal_weighted_n300_d128",
+      "status": "IDENTIFIED",
+      "train_size": 300
+    },
+    {
+      "class": "scaling_causal_weighted",
+      "dimension": 256,
+      "kind": "causal_weighted",
+      "method": "scaling_causal_weighted_n300_d256",
+      "status": "IDENTIFIED",
+      "train_size": 300
+    },
+    {
+      "class": "scaling_combined_pca",
+      "dimension": 128,
+      "kind": "combined_pca",
+      "method": "scaling_combined_pca_n450_d128",
+      "status": "IDENTIFIED",
+      "train_size": 450
+    },
+    {
+      "class": "scaling_combined_pca",
+      "dimension": 256,
+      "kind": "combined_pca",
+      "method": "scaling_combined_pca_n450_d256",
+      "status": "IDENTIFIED",
+      "train_size": 450
+    },
+    {
+      "class": "scaling_combined_pca",
+      "dimension": 384,
+      "kind": "combined_pca",
+      "method": "scaling_combined_pca_n450_d384",
+      "status": "IDENTIFIED",
+      "train_size": 450
+    },
+    {
+      "class": "scaling_architecture_joint_pca",
+      "dimension": 128,
+      "kind": "architecture_joint_pca",
+      "method": "scaling_architecture_joint_pca_n450_d128",
+      "status": "IDENTIFIED",
+      "train_size": 450
+    },
+    {
+      "class": "scaling_architecture_joint_pca",
+      "dimension": 256,
+      "kind": "architecture_joint_pca",
+      "method": "scaling_architecture_joint_pca_n450_d256",
+      "status": "IDENTIFIED",
+      "train_size": 450
+    },
+    {
+      "class": "scaling_architecture_joint_pca",
+      "dimension": 384,
+      "kind": "architecture_joint_pca",
+      "method": "scaling_architecture_joint_pca_n450_d384",
+      "status": "IDENTIFIED",
+      "train_size": 450
+    },
+    {
+      "class": "scaling_causal_weighted",
+      "dimension": 128,
+      "kind": "causal_weighted",
+      "method": "scaling_causal_weighted_n450_d128",
+      "status": "IDENTIFIED",
+      "train_size": 450
+    },
+    {
+      "class": "scaling_causal_weighted",
+      "dimension": 256,
+      "kind": "causal_weighted",
+      "method": "scaling_causal_weighted_n450_d256",
+      "status": "IDENTIFIED",
+      "train_size": 450
+    },
+    {
+      "class": "scaling_causal_weighted",
+      "dimension": 384,
+      "kind": "causal_weighted",
+      "method": "scaling_causal_weighted_n450_d384",
+      "status": "IDENTIFIED",
+      "train_size": 450
+    },
+    {
+      "class": "scaling_combined_pca",
+      "dimension": 128,
+      "kind": "combined_pca",
+      "method": "scaling_combined_pca_n600_d128",
+      "status": "IDENTIFIED",
+      "train_size": 600
+    },
+    {
+      "class": "scaling_combined_pca",
+      "dimension": 256,
+      "kind": "combined_pca",
+      "method": "scaling_combined_pca_n600_d256",
+      "status": "IDENTIFIED",
+      "train_size": 600
+    },
+    {
+      "class": "scaling_combined_pca",
+      "dimension": 384,
+      "kind": "combined_pca",
+      "method": "scaling_combined_pca_n600_d384",
+      "status": "IDENTIFIED",
+      "train_size": 600
+    },
+    {
+      "class": "scaling_combined_pca",
+      "dimension": 512,
+      "kind": "combined_pca",
+      "method": "scaling_combined_pca_n600_d512",
+      "status": "IDENTIFIED",
+      "train_size": 600
+    },
+    {
+      "class": "scaling_architecture_joint_pca",
+      "dimension": 128,
+      "kind": "architecture_joint_pca",
+      "method": "scaling_architecture_joint_pca_n600_d128",
+      "status": "IDENTIFIED",
+      "train_size": 600
+    },
+    {
+      "class": "scaling_architecture_joint_pca",
+      "dimension": 256,
+      "kind": "architecture_joint_pca",
+      "method": "scaling_architecture_joint_pca_n600_d256",
+      "status": "IDENTIFIED",
+      "train_size": 600
+    },
+    {
+      "class": "scaling_architecture_joint_pca",
+      "dimension": 384,
+      "kind": "architecture_joint_pca",
+      "method": "scaling_architecture_joint_pca_n600_d384",
+      "status": "IDENTIFIED",
+      "train_size": 600
+    },
+    {
+      "class": "scaling_architecture_joint_pca",
+      "dimension": 512,
+      "kind": "architecture_joint_pca",
+      "method": "scaling_architecture_joint_pca_n600_d512",
+      "status": "IDENTIFIED",
+      "train_size": 600
+    },
+    {
+      "class": "scaling_causal_weighted",
+      "dimension": 128,
+      "kind": "causal_weighted",
+      "method": "scaling_causal_weighted_n600_d128",
+      "status": "IDENTIFIED",
+      "train_size": 600
+    },
+    {
+      "class": "scaling_causal_weighted",
+      "dimension": 256,
+      "kind": "causal_weighted",
+      "method": "scaling_causal_weighted_n600_d256",
+      "status": "IDENTIFIED",
+      "train_size": 600
+    },
+    {
+      "class": "scaling_causal_weighted",
+      "dimension": 384,
+      "kind": "causal_weighted",
+      "method": "scaling_causal_weighted_n600_d384",
+      "status": "IDENTIFIED",
+      "train_size": 600
+    },
+    {
+      "class": "scaling_causal_weighted",
+      "dimension": 512,
+      "kind": "causal_weighted",
+      "method": "scaling_causal_weighted_n600_d512",
+      "status": "IDENTIFIED",
+      "train_size": 600
+    }
+  ],
+  "confirmatory_used": false,
+  "data_rank_records": "results/v12/processed/data_rank_scaling_v12.parquet",
+  "data_rank_records_sha256": "109b19d9d990ff8ab7ce34d9be148014a729d124f1668c32fa7f14a027fc5ded",
+  "identified_oracle_methods": [
+    {
+      "class": "global_combined_pca",
+      "dimension": 64,
+      "empirical_rank_bound": 599,
+      "kind": "combined_pca",
+      "method": "global_combined_pca_d64",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_architecture_pca",
+      "dimension": 64,
+      "empirical_rank_bound": 600,
+      "kind": "architecture_pca",
+      "method": "global_architecture_pca_d64",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_causal_basis",
+      "dimension": 64,
+      "empirical_rank_bound": 599,
+      "kind": "global_causal",
+      "method": "global_causal_basis_d64",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_pca",
+      "dimension": 64,
+      "empirical_rank_bound": 511,
+      "kind": "local_pca",
+      "method": "local_pca_d64",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_causal_basis",
+      "dimension": 64,
+      "empirical_rank_bound": 511,
+      "kind": "local_causal",
+      "method": "local_causal_basis_d64",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_combined_pca",
+      "dimension": 128,
+      "empirical_rank_bound": 599,
+      "kind": "combined_pca",
+      "method": "global_combined_pca_d128",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_architecture_pca",
+      "dimension": 128,
+      "empirical_rank_bound": 600,
+      "kind": "architecture_pca",
+      "method": "global_architecture_pca_d128",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_causal_basis",
+      "dimension": 128,
+      "empirical_rank_bound": 599,
+      "kind": "global_causal",
+      "method": "global_causal_basis_d128",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_pca",
+      "dimension": 128,
+      "empirical_rank_bound": 511,
+      "kind": "local_pca",
+      "method": "local_pca_d128",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_causal_basis",
+      "dimension": 128,
+      "empirical_rank_bound": 511,
+      "kind": "local_causal",
+      "method": "local_causal_basis_d128",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_combined_pca",
+      "dimension": 256,
+      "empirical_rank_bound": 599,
+      "kind": "combined_pca",
+      "method": "global_combined_pca_d256",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_architecture_pca",
+      "dimension": 256,
+      "empirical_rank_bound": 600,
+      "kind": "architecture_pca",
+      "method": "global_architecture_pca_d256",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_causal_basis",
+      "dimension": 256,
+      "empirical_rank_bound": 599,
+      "kind": "global_causal",
+      "method": "global_causal_basis_d256",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_pca",
+      "dimension": 256,
+      "empirical_rank_bound": 511,
+      "kind": "local_pca",
+      "method": "local_pca_d256",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_causal_basis",
+      "dimension": 256,
+      "empirical_rank_bound": 511,
+      "kind": "local_causal",
+      "method": "local_causal_basis_d256",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_combined_pca",
+      "dimension": 384,
+      "empirical_rank_bound": 599,
+      "kind": "combined_pca",
+      "method": "global_combined_pca_d384",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_architecture_pca",
+      "dimension": 384,
+      "empirical_rank_bound": 600,
+      "kind": "architecture_pca",
+      "method": "global_architecture_pca_d384",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_causal_basis",
+      "dimension": 384,
+      "empirical_rank_bound": 599,
+      "kind": "global_causal",
+      "method": "global_causal_basis_d384",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_pca",
+      "dimension": 384,
+      "empirical_rank_bound": 511,
+      "kind": "local_pca",
+      "method": "local_pca_d384",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_causal_basis",
+      "dimension": 384,
+      "empirical_rank_bound": 511,
+      "kind": "local_causal",
+      "method": "local_causal_basis_d384",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_combined_pca",
+      "dimension": 512,
+      "empirical_rank_bound": 599,
+      "kind": "combined_pca",
+      "method": "global_combined_pca_d512",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_architecture_pca",
+      "dimension": 512,
+      "empirical_rank_bound": 600,
+      "kind": "architecture_pca",
+      "method": "global_architecture_pca_d512",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_causal_basis",
+      "dimension": 512,
+      "empirical_rank_bound": 599,
+      "kind": "global_causal",
+      "method": "global_causal_basis_d512",
+      "status": "IDENTIFIED"
+    }
+  ],
+  "oracle_methods": [
+    {
+      "class": "global_combined_pca",
+      "dimension": 64,
+      "empirical_rank_bound": 599,
+      "kind": "combined_pca",
+      "method": "global_combined_pca_d64",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_architecture_pca",
+      "dimension": 64,
+      "empirical_rank_bound": 600,
+      "kind": "architecture_pca",
+      "method": "global_architecture_pca_d64",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_causal_basis",
+      "dimension": 64,
+      "empirical_rank_bound": 599,
+      "kind": "global_causal",
+      "method": "global_causal_basis_d64",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_pca",
+      "dimension": 64,
+      "empirical_rank_bound": 511,
+      "kind": "local_pca",
+      "method": "local_pca_d64",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_causal_basis",
+      "dimension": 64,
+      "empirical_rank_bound": 511,
+      "kind": "local_causal",
+      "method": "local_causal_basis_d64",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_combined_pca",
+      "dimension": 128,
+      "empirical_rank_bound": 599,
+      "kind": "combined_pca",
+      "method": "global_combined_pca_d128",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_architecture_pca",
+      "dimension": 128,
+      "empirical_rank_bound": 600,
+      "kind": "architecture_pca",
+      "method": "global_architecture_pca_d128",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_causal_basis",
+      "dimension": 128,
+      "empirical_rank_bound": 599,
+      "kind": "global_causal",
+      "method": "global_causal_basis_d128",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_pca",
+      "dimension": 128,
+      "empirical_rank_bound": 511,
+      "kind": "local_pca",
+      "method": "local_pca_d128",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_causal_basis",
+      "dimension": 128,
+      "empirical_rank_bound": 511,
+      "kind": "local_causal",
+      "method": "local_causal_basis_d128",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_combined_pca",
+      "dimension": 256,
+      "empirical_rank_bound": 599,
+      "kind": "combined_pca",
+      "method": "global_combined_pca_d256",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_architecture_pca",
+      "dimension": 256,
+      "empirical_rank_bound": 600,
+      "kind": "architecture_pca",
+      "method": "global_architecture_pca_d256",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_causal_basis",
+      "dimension": 256,
+      "empirical_rank_bound": 599,
+      "kind": "global_causal",
+      "method": "global_causal_basis_d256",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_pca",
+      "dimension": 256,
+      "empirical_rank_bound": 511,
+      "kind": "local_pca",
+      "method": "local_pca_d256",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_causal_basis",
+      "dimension": 256,
+      "empirical_rank_bound": 511,
+      "kind": "local_causal",
+      "method": "local_causal_basis_d256",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_combined_pca",
+      "dimension": 384,
+      "empirical_rank_bound": 599,
+      "kind": "combined_pca",
+      "method": "global_combined_pca_d384",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_architecture_pca",
+      "dimension": 384,
+      "empirical_rank_bound": 600,
+      "kind": "architecture_pca",
+      "method": "global_architecture_pca_d384",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_causal_basis",
+      "dimension": 384,
+      "empirical_rank_bound": 599,
+      "kind": "global_causal",
+      "method": "global_causal_basis_d384",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_pca",
+      "dimension": 384,
+      "empirical_rank_bound": 511,
+      "kind": "local_pca",
+      "method": "local_pca_d384",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_causal_basis",
+      "dimension": 384,
+      "empirical_rank_bound": 511,
+      "kind": "local_causal",
+      "method": "local_causal_basis_d384",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_combined_pca",
+      "dimension": 512,
+      "empirical_rank_bound": 599,
+      "kind": "combined_pca",
+      "method": "global_combined_pca_d512",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_architecture_pca",
+      "dimension": 512,
+      "empirical_rank_bound": 600,
+      "kind": "architecture_pca",
+      "method": "global_architecture_pca_d512",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_causal_basis",
+      "dimension": 512,
+      "empirical_rank_bound": 599,
+      "kind": "global_causal",
+      "method": "global_causal_basis_d512",
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_pca",
+      "dimension": 512,
+      "empirical_rank_bound": 511,
+      "kind": "local_pca",
+      "method": "local_pca_d512",
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    },
+    {
+      "class": "local_causal_basis",
+      "dimension": 512,
+      "empirical_rank_bound": 511,
+      "kind": "local_causal",
+      "method": "local_causal_basis_d512",
+      "status": "NOT_IDENTIFIED_RANK_LIMIT"
+    }
+  ],
+  "primary_neighbors": 512,
+  "protocol_version": "local_causal_geometry_v12",
+  "run_id": "prepare-v12-20260916T160054Z-942a9ba5-s20260828-fit-models",
+  "schema_version": 15,
+  "selection_split": "validation",
+  "source_freeze_digest": "30ce09031d3361cc8f5e3cddbdd3dbf3a2388a11e673f6521d01ea32c27e4eb1"
+}

@@ -1,0 +1,38 @@
+{
+  "available_train_sizes": [
+    150,
+    300,
+    450,
+    600
+  ],
+  "causal_records_sha256": "6b5daad40012e8e11bf5c02cc407c4b7d31af6dd7ba53c409ee4636215ce1577",
+  "direction_improvement_n150_to_n600_at_d128": {
+    "scaling_architecture_joint_pca": -0.3502959999843001,
+    "scaling_causal_weighted": 0.3283792241290821,
+    "scaling_combined_pca": -0.276180916806582
+  },
+  "fixed_512_saturation_identified": false,
+  "identified_512_train_sizes": [
+    600
+  ],
+  "more_data_required": true,
+  "offline_records_sha256": "109b19d9d990ff8ab7ce34d9be148014a729d124f1668c32fa7f14a027fc5ded",
+  "protocol_version": "local_causal_geometry_v12",
+  "reason": "only N=600 has enough centered empirical rank for 512D, so fixed-512 saturation cannot be estimated",
+  "requested_train_sizes": [
+    150,
+    300,
+    450,
+    600,
+    1000,
+    2000,
+    4000
+  ],
+  "schema_version": 15,
+  "unavailable_status": "NOT_IDENTIFIED_BANK_SIZE",
+  "unavailable_train_sizes": [
+    1000,
+    2000,
+    4000
+  ]
+}

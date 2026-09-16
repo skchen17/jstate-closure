@@ -1,0 +1,64 @@
+{
+  "large_tangent_rotation": true,
+  "local_rank_probe_limited": false,
+  "protocol_version": "local_causal_geometry_v12",
+  "records": "results/v12/processed/causal_tangent_geometry_v12.parquet",
+  "records_sha256": "5475e85d20d7ed1d8407ad474825a2700fef0d57d2c3375dd692cff20a3f681e",
+  "relation_rank_means": [
+    {
+      "grassmann_distance": 1.8116694569587708,
+      "maximum_principal_angle_degrees": 84.56553592681885,
+      "mean_principal_angle_degrees": 38.54420027732849,
+      "rank": 8,
+      "relation": "across_family",
+      "token_distance": 0.5,
+      "topk_overlap": 0.5886379033327103
+    },
+    {
+      "grassmann_distance": 2.793264204263687,
+      "maximum_principal_angle_degrees": 87.49064044952392,
+      "mean_principal_angle_degrees": 43.92437143325806,
+      "rank": 16,
+      "relation": "across_family",
+      "token_distance": 0.5,
+      "topk_overlap": 0.5108783364295959
+    },
+    {
+      "grassmann_distance": 3.505855882167816,
+      "maximum_principal_angle_degrees": 88.24049282073975,
+      "mean_principal_angle_degrees": 35.85433759689331,
+      "rank": 32,
+      "relation": "across_family",
+      "token_distance": 0.5,
+      "topk_overlap": 0.6153168424963951
+    },
+    {
+      "grassmann_distance": 1.754560112953186,
+      "maximum_principal_angle_degrees": 84.34611511230469,
+      "mean_principal_angle_degrees": 36.53253860473633,
+      "rank": 8,
+      "relation": "same_prompt_successive_position",
+      "token_distance": 1.0,
+      "topk_overlap": 0.6144286513328552
+    },
+    {
+      "grassmann_distance": 2.6874886035919188,
+      "maximum_principal_angle_degrees": 87.2772720336914,
+      "mean_principal_angle_degrees": 41.28924331665039,
+      "rank": 16,
+      "relation": "same_prompt_successive_position",
+      "token_distance": 1.0,
+      "topk_overlap": 0.5482332944869995
+    },
+    {
+      "grassmann_distance": 3.431127738952637,
+      "maximum_principal_angle_degrees": 88.6994140625,
+      "mean_principal_angle_degrees": 34.65511856079102,
+      "rank": 32,
+      "relation": "same_prompt_successive_position",
+      "token_distance": 1.0,
+      "topk_overlap": 0.6315036892890931
+    }
+  ],
+  "schema_version": 15
+}

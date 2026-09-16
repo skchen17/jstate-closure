@@ -1,0 +1,72 @@
+{
+  "base_freeze_digest": "30ce09031d3361cc8f5e3cddbdd3dbf3a2388a11e673f6521d01ea32c27e4eb1",
+  "confirmatory_used": false,
+  "freeze_digest": "2793e752b7ae166a1f71d44810da2d7e9aa58534d372672c954acce06d103599",
+  "hashes": {
+    "artifacts/causal_geometry_v12_prepared.freeze.json": "75663d3593f38233326e4898b5affec66796a7d85a10119114af7330d8b6bc44",
+    "results/v12/processed/local_causal_oracle_stage1_v12.json": "e94fa613284d6bbbd071a35adf84a4d2c27f50bd83b7d6c46c72c0fa8943da39",
+    "results/v12/processed/local_causal_oracle_stage1_v12.parquet": "d03964a1b1d04a7cfe31ae7edd365167bb16f273cc2f825c9836c9f0ea867a3a"
+  },
+  "method_specs": [
+    {
+      "class": "global_architecture_pca",
+      "dimension": 512,
+      "empirical_rank_bound": 600,
+      "kind": "architecture_pca",
+      "method": "global_architecture_pca_d512",
+      "selection_role": "global_pca",
+      "stage2_horizons": [
+        2,
+        4,
+        8
+      ],
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_causal_basis",
+      "dimension": 512,
+      "empirical_rank_bound": 599,
+      "kind": "global_causal",
+      "method": "global_causal_basis_d512",
+      "selection_role": "global_causal",
+      "stage2_horizons": [
+        2,
+        4,
+        8
+      ],
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_pca",
+      "dimension": 384,
+      "empirical_rank_bound": 511,
+      "kind": "local_pca",
+      "method": "local_pca_d384",
+      "selection_role": "local_pca",
+      "stage2_horizons": [
+        2,
+        4,
+        8
+      ],
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_causal_basis",
+      "dimension": 384,
+      "empirical_rank_bound": 511,
+      "kind": "local_causal",
+      "method": "local_causal_basis_d384",
+      "selection_role": "local_causal",
+      "stage2_horizons": [
+        2,
+        4,
+        8
+      ],
+      "status": "IDENTIFIED"
+    }
+  ],
+  "protocol_version": "local_causal_geometry_v12",
+  "purpose": "freeze one development-selected v12 oracle per causal-geometry class",
+  "schema_version": 15,
+  "selection_split": "development"
+}

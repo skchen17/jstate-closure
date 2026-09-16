@@ -1,0 +1,68 @@
+extends: causal_geometry_v11.yaml
+
+run:
+  stage: causal_geometry_v12
+  protocol_version: local_causal_geometry_v12
+  timeout_hours: 96
+
+outputs:
+  root: results/v12
+  raw: raw
+  processed: processed
+  figures: figures
+  reports: ../../reports
+  artifacts: ../../artifacts
+
+causal_geometry_v12:
+  baseline_commit: f5118642f12e3b60e22df52930610867773b108a
+  train_sizes: [150, 300, 450, 600, 1000, 2000, 4000]
+  dimensions: [128, 256, 384, 512, 768, 1024, 1536, 2048]
+  train_subset_seed: 20271201
+  confirmatory:
+    per_family: 10
+    effect_enriched_per_family: 5
+    selection_seed: 20271202
+  development:
+    per_family: 10
+    source: v10_development_bank
+  validation_panel:
+    per_family: 2
+    selection_seed: 20271203
+  jvp:
+    anchors_per_family: 1
+    selection_seed: 20271204
+    probe_directions: 64
+    leading_directions: 32
+    token_positions: [0, 1]
+    target_horizons: [1, 2, 4]
+    selected_logit_count: 16
+    causal_ranks: [8, 16, 32, 64]
+    energy_thresholds: [0.90, 0.95, 0.99]
+  local_geometry:
+    neighbor_candidates: [128, 256, 512]
+    primary_neighbors: 512
+    oracle_dimensions: [64, 128, 256, 384, 512]
+    jvp_oracle_dimensions: [16, 32, 64, 128, 256, 384, 512]
+  measurement:
+    raw_scales: [0.99, 1.01]
+    mixture_epsilon: 0.01
+    audit_pairs_per_family: 4
+    top_k: 10
+  causal_gates:
+    direction_cosine_minimum: 0.8
+    magnitude_ratio_minimum: 0.8
+    magnitude_ratio_maximum: 1.2
+    semantic_delta_agreement_minimum: 0.8
+    output_direction_minimum: 0.8
+    task_decision_sign_minimum: 0.8
+  horizons: [1, 2, 4, 8, 16]
+  authorization_horizons: [1, 2, 4, 8]
+  confirmatory_method_limit: 4
+  decoder:
+    reconstruction_chunk: 65536
+    shard_size: 5
+  replacement:
+    dimension: 512
+    horizon_if_h1_fails: 1
+  bootstrap_resamples: 10000
+  confirmation_seeds: [20260828, 20260829, 20260830]

@@ -1,0 +1,15 @@
+{
+  "decision": "FULL_STATE_REPLACEMENT_NOT_IDENTIFIED",
+  "freeze_digest": "b99379b96479525b9dd18ba734841dc24ec3290b84056b6f899554842ada7574",
+  "hashes": {
+    "artifacts/causal_geometry_v12_confirmatory.freeze.json": "2d29f53781e370755499e6744459417a57bed5bc7d8e03d9b582275e22a3acba",
+    "results/v12/processed/causal_confirmatory_v12.json": "63d3a7fa1285a0ecf47ef56331a0c329c73b3a53c1c44a00f3cbfa7b01903eb9",
+    "results/v12/processed/causal_confirmatory_v12.parquet": "3a3f788c919a7fcf5e3839fe8c707ebc66acb67c59910d27adcaeda879518f54",
+    "src/jclosure/experiments/replacement_v12_amendment.py": "666374b7f680e1e53752ca3d4cd90757e8e83dfc2099a0bef2b7eddfbd409eee"
+  },
+  "parent_base_freeze_digest": "30ce09031d3361cc8f5e3cddbdd3dbf3a2388a11e673f6521d01ea32c27e4eb1",
+  "protocol_version": "strict_state_replacement_v12_amendment_1",
+  "raw_clean_scaffold_counts_as_bypass": true,
+  "reason": "the frozen V12 representations encode persistent intervention deltas; they do not encode an absolute complete REC/conv/KV/model-cache state",
+  "schema_version": 22
+}

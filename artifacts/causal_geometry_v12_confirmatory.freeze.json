@@ -1,0 +1,100 @@
+{
+  "base_freeze_digest": "30ce09031d3361cc8f5e3cddbdd3dbf3a2388a11e673f6521d01ea32c27e4eb1",
+  "confirmatory_used": false,
+  "freeze_digest": "841724d04ccbf9d6b85162fe350e4819a236e19b749c97d09e0127a852dca8cb",
+  "hashes": {
+    "artifacts/causal_geometry_v12_stage2.freeze.json": "345ee10e1165d83669600f5ae34a504bac55b33460cfe356b25dd737282e6b16",
+    "results/v12/processed/local_causal_oracle_stage2_v12.json": "834ab02dc24e6fe3199b4062a92294e35a229a71da02aa6cf4a76fa3de9b1709",
+    "results/v12/processed/local_causal_oracle_stage2_v12.parquet": "30f9bce54db48578dd3ec40798b86fbab6671d2b03019f3c85150a75b701796d"
+  },
+  "method_specs": [
+    {
+      "class": "global_architecture_pca",
+      "confirmatory_horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "development_stage2_score": 0.6260111419171217,
+      "dimension": 512,
+      "empirical_rank_bound": 600,
+      "kind": "architecture_pca",
+      "method": "global_architecture_pca_d512",
+      "selection_role": "global_pca",
+      "stage2_horizons": [
+        2,
+        4,
+        8
+      ],
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "global_causal_basis",
+      "confirmatory_horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "development_stage2_score": 0.6180708941034835,
+      "dimension": 512,
+      "empirical_rank_bound": 599,
+      "kind": "global_causal",
+      "method": "global_causal_basis_d512",
+      "selection_role": "global_causal",
+      "stage2_horizons": [
+        2,
+        4,
+        8
+      ],
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_pca",
+      "confirmatory_horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "development_stage2_score": 0.6018508212714153,
+      "dimension": 384,
+      "empirical_rank_bound": 511,
+      "kind": "local_pca",
+      "method": "local_pca_d384",
+      "selection_role": "local_pca",
+      "stage2_horizons": [
+        2,
+        4,
+        8
+      ],
+      "status": "IDENTIFIED"
+    },
+    {
+      "class": "local_causal_basis",
+      "confirmatory_horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "development_stage2_score": 0.6294227760943099,
+      "dimension": 384,
+      "empirical_rank_bound": 511,
+      "kind": "local_causal",
+      "method": "local_causal_basis_d384",
+      "selection_role": "local_causal",
+      "stage2_horizons": [
+        2,
+        4,
+        8
+      ],
+      "status": "IDENTIFIED"
+    }
+  ],
+  "protocol_version": "local_causal_geometry_v12",
+  "purpose": "freeze v12 methods before the new independent confirmation",
+  "schema_version": 15,
+  "selection_split": "development"
+}

@@ -1,0 +1,18 @@
+{
+  "exact_autograd_jvp": true,
+  "flash_sdp_disabled_for_higher_order_derivative": true,
+  "full_raw_jacobian_claimed": false,
+  "mean_effective_rank": 3.9855875764202118,
+  "mean_stable_rank": 1.8142352490703932,
+  "median_rank_90": 3.5,
+  "median_rank_95": 6.0,
+  "median_rank_99": 14.0,
+  "operator_scope": "64 frozen empirical joint-PC input directions; selected 256 J coordinates plus 16 logits at h1/h2/h4",
+  "protocol_version": "local_causal_geometry_v12_runtime_amendment_6_jvp_dual_gpu",
+  "records": "results/v12/processed/local_causal_jacobian_v12.parquet",
+  "records_sha256": "922f3981e73c0fea0a9e10a4ac207eb1c1690300e202d7085253ef52faaef4d5",
+  "run_id": "jvp-v12-20260916T182514Z-942a9ba5-s20260828-exact-jvp-dualgpu-am6",
+  "schema_version": 21,
+  "source_freeze_digest": "bf3c8fc6566bf88b8cbe4a5e86001348cff7ac710f9c41de5ccdc4804e158934",
+  "state_count": 10
+}

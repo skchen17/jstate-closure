@@ -1,0 +1,1671 @@
+{
+  "base_trial_ids": [
+    "v8-validation-a3ef4d2636d36f70bdea",
+    "v8-validation-215acecb4d8ea13c2543",
+    "v8-validation-0922c0bce053c8779351",
+    "v8-validation-2b544b6bb9297d82541f",
+    "v8-validation-4226dc211b0f97cdb6c8",
+    "v8-validation-5cb9940f4ba9583b4464",
+    "v8-validation-4908eac5b76a586f76dc",
+    "v8-validation-1dabfabd6b01dfe9325d",
+    "v8-validation-1d82749cd419a074084b",
+    "v8-validation-911fbb7ad4bcf60ca164"
+  ],
+  "method_count": 30,
+  "methods": [
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 11.423672847039585,
+          "score_reconstruction_max_abs_error": 8.533119010001311e-09,
+          "smallest_singular_value": 0.20219364923804148
+        },
+        "kv": {
+          "largest_singular_value": 11.423672847039585,
+          "score_reconstruction_max_abs_error": 8.533119010001311e-09,
+          "smallest_singular_value": 0.20219364923804148
+        },
+        "recurrent": {
+          "largest_singular_value": 11.423672847039585,
+          "score_reconstruction_max_abs_error": 8.533119010001311e-09,
+          "smallest_singular_value": 0.20219364923804148
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 150
+      },
+      "selected_latent_mean_square": 0.5197508063919167,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n150_d128/state_000_005.pt",
+          "sha256": "e1dc01fa3b199708e8eb497b5afbdd39955d7233fc00045855d3105d52f7e6ad"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n150_d128/state_005_010.pt",
+          "sha256": "36dc793ca1cbd37f2885d284edf62f062d7c85dbf41a0767f1434516bd90cd27"
+        }
+      ],
+      "spec": {
+        "class": "scaling_combined_pca",
+        "dimension": 128,
+        "kind": "combined_pca",
+        "method": "scaling_combined_pca_n150_d128",
+        "status": "IDENTIFIED",
+        "train_size": 150
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 8.070290106400646,
+          "score_reconstruction_max_abs_error": 3.505367860562325e-09,
+          "smallest_singular_value": 0.09169853318029138
+        },
+        "kv": {
+          "largest_singular_value": 3.7700777135840258,
+          "score_reconstruction_max_abs_error": 9.929047105339261e-09,
+          "smallest_singular_value": 0.13031462056589938
+        },
+        "recurrent": {
+          "largest_singular_value": 7.877362783042949,
+          "score_reconstruction_max_abs_error": 4.385560548395007e-09,
+          "smallest_singular_value": 0.10485836305469032
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 150
+      },
+      "selected_latent_mean_square": 1.1061209497765458,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n150_d128/state_000_005.pt",
+          "sha256": "5032dfd4f047be990d612bb89f0353be32b35b9d54be8726efc6c0d7b4e8ea9c"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n150_d128/state_005_010.pt",
+          "sha256": "7f1813cfd19dd18e8f6236969478d0ea98abae0de61a3914933e89b538ad124a"
+        }
+      ],
+      "spec": {
+        "class": "scaling_architecture_joint_pca",
+        "dimension": 128,
+        "kind": "architecture_joint_pca",
+        "method": "scaling_architecture_joint_pca_n150_d128",
+        "status": "IDENTIFIED",
+        "train_size": 150
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 8.070290106400646,
+          "score_reconstruction_max_abs_error": 3.084489562203696e-09,
+          "smallest_singular_value": 0.09169853318029138
+        },
+        "kv": {
+          "largest_singular_value": 3.7700777135840258,
+          "score_reconstruction_max_abs_error": 9.617315742393995e-09,
+          "smallest_singular_value": 0.13031462056589938
+        },
+        "recurrent": {
+          "largest_singular_value": 7.877362783042949,
+          "score_reconstruction_max_abs_error": 6.6373258035545835e-09,
+          "smallest_singular_value": 0.10485836305469032
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 149
+      },
+      "selected_latent_mean_square": 1.0847144015525516,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n150_d128/state_000_005.pt",
+          "sha256": "5a6e0cb6dbb98a8fde19ade6892808a773bf4b63192ee8a1c0c308d14e5c306f"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n150_d128/state_005_010.pt",
+          "sha256": "31517ac3ad1fd686194e76ea439c6d7773c4ba8ad6446d19e99bf7e15155d646"
+        }
+      ],
+      "spec": {
+        "class": "scaling_causal_weighted",
+        "dimension": 128,
+        "kind": "causal_weighted",
+        "method": "scaling_causal_weighted_n150_d128",
+        "status": "IDENTIFIED",
+        "train_size": 150
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 16.46831472511116,
+          "score_reconstruction_max_abs_error": 9.210824658545391e-09,
+          "smallest_singular_value": 0.1875344150471224
+        },
+        "kv": {
+          "largest_singular_value": 16.46831472511116,
+          "score_reconstruction_max_abs_error": 9.210824658545391e-09,
+          "smallest_singular_value": 0.1875344150471224
+        },
+        "recurrent": {
+          "largest_singular_value": 16.46831472511116,
+          "score_reconstruction_max_abs_error": 9.210824658545391e-09,
+          "smallest_singular_value": 0.1875344150471224
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 300
+      },
+      "selected_latent_mean_square": 0.6042887602056707,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n300_d128/state_000_005.pt",
+          "sha256": "a372baf7ec46af935636dc0b4e137b2c072066bb8fa34183a4c8b7d80c9be9b4"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n300_d128/state_005_010.pt",
+          "sha256": "fa8f478a563ccc7b40a5f180383b87886a3f748152da55f40929f480760a237d"
+        }
+      ],
+      "spec": {
+        "class": "scaling_combined_pca",
+        "dimension": 128,
+        "kind": "combined_pca",
+        "method": "scaling_combined_pca_n300_d128",
+        "status": "IDENTIFIED",
+        "train_size": 300
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 16.46831472511116,
+          "score_reconstruction_max_abs_error": 9.135251586439574e-09,
+          "smallest_singular_value": 0.1875344150471224
+        },
+        "kv": {
+          "largest_singular_value": 16.46831472511116,
+          "score_reconstruction_max_abs_error": 9.135251586439574e-09,
+          "smallest_singular_value": 0.1875344150471224
+        },
+        "recurrent": {
+          "largest_singular_value": 16.46831472511116,
+          "score_reconstruction_max_abs_error": 9.135251586439574e-09,
+          "smallest_singular_value": 0.1875344150471224
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 300
+      },
+      "selected_latent_mean_square": 0.560824034503363,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n300_d256/state_000_005.pt",
+          "sha256": "9ce9aed7df218957003a0839212977d761e80e49bd305471692da45edd658e94"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n300_d256/state_005_010.pt",
+          "sha256": "e4c562e3c125bc363af8a80ed7150d571ec617d9487f71fe1c218016957162cc"
+        }
+      ],
+      "spec": {
+        "class": "scaling_combined_pca",
+        "dimension": 256,
+        "kind": "combined_pca",
+        "method": "scaling_combined_pca_n300_d256",
+        "status": "IDENTIFIED",
+        "train_size": 300
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 11.406650868011956,
+          "score_reconstruction_max_abs_error": 1.583431686116854e-09,
+          "smallest_singular_value": 0.08215962298299821
+        },
+        "kv": {
+          "largest_singular_value": 5.179553365049719,
+          "score_reconstruction_max_abs_error": 8.088761832211744e-09,
+          "smallest_singular_value": 0.11992620743596115
+        },
+        "recurrent": {
+          "largest_singular_value": 11.53212481633947,
+          "score_reconstruction_max_abs_error": 2.072440965367184e-09,
+          "smallest_singular_value": 0.09537237022182413
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 300
+      },
+      "selected_latent_mean_square": 1.230894547494389,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n300_d128/state_000_005.pt",
+          "sha256": "bc24c409117e6a61a4bfbcd7a7e782b6d532b6a0cb060d398be42bfc50b885cc"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n300_d128/state_005_010.pt",
+          "sha256": "11f67b040fa5069f5e0cbe38bdfc5fe6c241de52ff6200f8336099ecf2488a3a"
+        }
+      ],
+      "spec": {
+        "class": "scaling_architecture_joint_pca",
+        "dimension": 128,
+        "kind": "architecture_joint_pca",
+        "method": "scaling_architecture_joint_pca_n300_d128",
+        "status": "IDENTIFIED",
+        "train_size": 300
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 11.406650868011956,
+          "score_reconstruction_max_abs_error": 2.4321338372088053e-09,
+          "smallest_singular_value": 0.08215962298299821
+        },
+        "kv": {
+          "largest_singular_value": 5.179553365049719,
+          "score_reconstruction_max_abs_error": 8.07590332108088e-09,
+          "smallest_singular_value": 0.11992620743596115
+        },
+        "recurrent": {
+          "largest_singular_value": 11.53212481633947,
+          "score_reconstruction_max_abs_error": 4.204159093773585e-09,
+          "smallest_singular_value": 0.09537237022182413
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 300
+      },
+      "selected_latent_mean_square": 1.2216122653698545,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n300_d256/state_000_005.pt",
+          "sha256": "15d1442ce075dbcc1a31be436eb6b5a582bd1a133be4b58fe606394ec05908be"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n300_d256/state_005_010.pt",
+          "sha256": "d8ec88629b0b3f744a2a6f220568f734a5175106b55ed7829e1fae23461d9aef"
+        }
+      ],
+      "spec": {
+        "class": "scaling_architecture_joint_pca",
+        "dimension": 256,
+        "kind": "architecture_joint_pca",
+        "method": "scaling_architecture_joint_pca_n300_d256",
+        "status": "IDENTIFIED",
+        "train_size": 300
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 11.406650868011956,
+          "score_reconstruction_max_abs_error": 2.518252021840861e-09,
+          "smallest_singular_value": 0.08215962298299821
+        },
+        "kv": {
+          "largest_singular_value": 5.179553365049719,
+          "score_reconstruction_max_abs_error": 6.188249881706326e-09,
+          "smallest_singular_value": 0.11992620743596115
+        },
+        "recurrent": {
+          "largest_singular_value": 11.53212481633947,
+          "score_reconstruction_max_abs_error": 4.942839103294627e-09,
+          "smallest_singular_value": 0.09537237022182413
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 299
+      },
+      "selected_latent_mean_square": 1.3096177145145707,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n300_d128/state_000_005.pt",
+          "sha256": "32bc661515b6ccf2fda050e33fb2e2fe9e2a22fb64f043b022d23e9144af2dcf"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n300_d128/state_005_010.pt",
+          "sha256": "daa5d6401a699ac6ff9d16cff7e4b3e8d3d66a5e86e0226518031b9185b081c7"
+        }
+      ],
+      "spec": {
+        "class": "scaling_causal_weighted",
+        "dimension": 128,
+        "kind": "causal_weighted",
+        "method": "scaling_causal_weighted_n300_d128",
+        "status": "IDENTIFIED",
+        "train_size": 300
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 11.406650868011956,
+          "score_reconstruction_max_abs_error": 3.5149264974304595e-09,
+          "smallest_singular_value": 0.08215962298299821
+        },
+        "kv": {
+          "largest_singular_value": 5.179553365049719,
+          "score_reconstruction_max_abs_error": 8.219932397940388e-09,
+          "smallest_singular_value": 0.11992620743596115
+        },
+        "recurrent": {
+          "largest_singular_value": 11.53212481633947,
+          "score_reconstruction_max_abs_error": 5.363158648956368e-09,
+          "smallest_singular_value": 0.09537237022182413
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 299
+      },
+      "selected_latent_mean_square": 1.215311768052206,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n300_d256/state_000_005.pt",
+          "sha256": "9768268baf0708eb40721725e8f27ab7b4cd75e4966b400564dd1186f0798a38"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n300_d256/state_005_010.pt",
+          "sha256": "b8c133f0e8ffc8ce73e8ff4d86ef1a92764190b0087e040b3ad8e7f0262e177b"
+        }
+      ],
+      "spec": {
+        "class": "scaling_causal_weighted",
+        "dimension": 256,
+        "kind": "causal_weighted",
+        "method": "scaling_causal_weighted_n300_d256",
+        "status": "IDENTIFIED",
+        "train_size": 300
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 20.10664463618887,
+          "score_reconstruction_max_abs_error": 3.1885237228301833e-09,
+          "smallest_singular_value": 0.1769578057954735
+        },
+        "kv": {
+          "largest_singular_value": 20.10664463618887,
+          "score_reconstruction_max_abs_error": 3.1885237228301833e-09,
+          "smallest_singular_value": 0.1769578057954735
+        },
+        "recurrent": {
+          "largest_singular_value": 20.10664463618887,
+          "score_reconstruction_max_abs_error": 3.1885237228301833e-09,
+          "smallest_singular_value": 0.1769578057954735
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 450
+      },
+      "selected_latent_mean_square": 0.5767779554490918,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n450_d128/state_000_005.pt",
+          "sha256": "761a610b70bc84b2c20c0ef0be65eb4c7cebcbbe45f5a3631f25b8732c32b3fc"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n450_d128/state_005_010.pt",
+          "sha256": "67f2ccff9fab6178d5faa86ac7cb94c32cae6e6a3ef93abbf38ca0e5f444d88e"
+        }
+      ],
+      "spec": {
+        "class": "scaling_combined_pca",
+        "dimension": 128,
+        "kind": "combined_pca",
+        "method": "scaling_combined_pca_n450_d128",
+        "status": "IDENTIFIED",
+        "train_size": 450
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 20.10664463618887,
+          "score_reconstruction_max_abs_error": 5.970336780514174e-09,
+          "smallest_singular_value": 0.1769578057954735
+        },
+        "kv": {
+          "largest_singular_value": 20.10664463618887,
+          "score_reconstruction_max_abs_error": 5.970336780514174e-09,
+          "smallest_singular_value": 0.1769578057954735
+        },
+        "recurrent": {
+          "largest_singular_value": 20.10664463618887,
+          "score_reconstruction_max_abs_error": 5.970336780514174e-09,
+          "smallest_singular_value": 0.1769578057954735
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 450
+      },
+      "selected_latent_mean_square": 0.5603179583968185,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n450_d256/state_000_005.pt",
+          "sha256": "cfe75bff3cf6a6f4eae2ec5e8a700f7df8f94935c4b77be8dfce87ebbd7977ba"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n450_d256/state_005_010.pt",
+          "sha256": "56f41235be9b1d39b00a9dd81098c6938fda4e00f275237a9bc954d36c70962a"
+        }
+      ],
+      "spec": {
+        "class": "scaling_combined_pca",
+        "dimension": 256,
+        "kind": "combined_pca",
+        "method": "scaling_combined_pca_n450_d256",
+        "status": "IDENTIFIED",
+        "train_size": 450
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 20.10664463618887,
+          "score_reconstruction_max_abs_error": 7.184005953054379e-09,
+          "smallest_singular_value": 0.1769578057954735
+        },
+        "kv": {
+          "largest_singular_value": 20.10664463618887,
+          "score_reconstruction_max_abs_error": 7.184005953054379e-09,
+          "smallest_singular_value": 0.1769578057954735
+        },
+        "recurrent": {
+          "largest_singular_value": 20.10664463618887,
+          "score_reconstruction_max_abs_error": 7.184005953054379e-09,
+          "smallest_singular_value": 0.1769578057954735
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 450
+      },
+      "selected_latent_mean_square": 0.530129725034394,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n450_d384/state_000_005.pt",
+          "sha256": "2b6595b3f35d023d1c734699e090af8958d5b0c4354fc80f67a06a1b723723cc"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n450_d384/state_005_010.pt",
+          "sha256": "dcad5acbbaeb144f822195eb7eef734a5ebe623c7e4dd2b6cb0bd36347938b3f"
+        }
+      ],
+      "spec": {
+        "class": "scaling_combined_pca",
+        "dimension": 384,
+        "kind": "combined_pca",
+        "method": "scaling_combined_pca_n450_d384",
+        "status": "IDENTIFIED",
+        "train_size": 450
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 14.019169270075041,
+          "score_reconstruction_max_abs_error": 8.656471481467698e-10,
+          "smallest_singular_value": 0.061274644935655154
+        },
+        "kv": {
+          "largest_singular_value": 6.248477176943152,
+          "score_reconstruction_max_abs_error": 5.4997905032244665e-09,
+          "smallest_singular_value": 0.11188216071563671
+        },
+        "recurrent": {
+          "largest_singular_value": 13.969744230592843,
+          "score_reconstruction_max_abs_error": 1.6052445483971667e-09,
+          "smallest_singular_value": 0.08533423567731026
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 450
+      },
+      "selected_latent_mean_square": 1.4996528907106388,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n450_d128/state_000_005.pt",
+          "sha256": "84b40206963d6282ea00b1352ce7b578ee5d03d8388e4d2be12800423b9659f9"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n450_d128/state_005_010.pt",
+          "sha256": "e57e51d1a6b91e0734a09ee327dbc45f9fa13ae749bbf3b8b724ee9825497adc"
+        }
+      ],
+      "spec": {
+        "class": "scaling_architecture_joint_pca",
+        "dimension": 128,
+        "kind": "architecture_joint_pca",
+        "method": "scaling_architecture_joint_pca_n450_d128",
+        "status": "IDENTIFIED",
+        "train_size": 450
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 14.019169270075041,
+          "score_reconstruction_max_abs_error": 2.1719304185013888e-09,
+          "smallest_singular_value": 0.061274644935655154
+        },
+        "kv": {
+          "largest_singular_value": 6.248477176943152,
+          "score_reconstruction_max_abs_error": 6.818297287880526e-09,
+          "smallest_singular_value": 0.11188216071563671
+        },
+        "recurrent": {
+          "largest_singular_value": 13.969744230592843,
+          "score_reconstruction_max_abs_error": 2.4195278775299145e-09,
+          "smallest_singular_value": 0.08533423567731026
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 450
+      },
+      "selected_latent_mean_square": 1.2894838566557774,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n450_d256/state_000_005.pt",
+          "sha256": "1c7757da343f8894d9074ac3b187231c6d9d114572c7a25eb5316014216a6639"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n450_d256/state_005_010.pt",
+          "sha256": "eb0bcde9cf3469452da8dafa495923474794d01137eac30c45a33e3c846f57b4"
+        }
+      ],
+      "spec": {
+        "class": "scaling_architecture_joint_pca",
+        "dimension": 256,
+        "kind": "architecture_joint_pca",
+        "method": "scaling_architecture_joint_pca_n450_d256",
+        "status": "IDENTIFIED",
+        "train_size": 450
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 14.019169270075041,
+          "score_reconstruction_max_abs_error": 1.4092693114906019e-09,
+          "smallest_singular_value": 0.061274644935655154
+        },
+        "kv": {
+          "largest_singular_value": 6.248477176943152,
+          "score_reconstruction_max_abs_error": 5.832142761785786e-09,
+          "smallest_singular_value": 0.11188216071563671
+        },
+        "recurrent": {
+          "largest_singular_value": 13.969744230592843,
+          "score_reconstruction_max_abs_error": 2.107826029603549e-09,
+          "smallest_singular_value": 0.08533423567731026
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 450
+      },
+      "selected_latent_mean_square": 1.2150012953519156,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n450_d384/state_000_005.pt",
+          "sha256": "31413c8e99081dc65233891045e41836b3392b7aaa0bb542d656d7aa661f3da3"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n450_d384/state_005_010.pt",
+          "sha256": "a847a01db423620bb5f08ff0cc61e8f9cc286ae45288336935b3ba76ff14b644"
+        }
+      ],
+      "spec": {
+        "class": "scaling_architecture_joint_pca",
+        "dimension": 384,
+        "kind": "architecture_joint_pca",
+        "method": "scaling_architecture_joint_pca_n450_d384",
+        "status": "IDENTIFIED",
+        "train_size": 450
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 14.019169270075041,
+          "score_reconstruction_max_abs_error": 2.0537496477762707e-09,
+          "smallest_singular_value": 0.061274644935655154
+        },
+        "kv": {
+          "largest_singular_value": 6.248477176943152,
+          "score_reconstruction_max_abs_error": 5.188172943343394e-09,
+          "smallest_singular_value": 0.11188216071563671
+        },
+        "recurrent": {
+          "largest_singular_value": 13.969744230592843,
+          "score_reconstruction_max_abs_error": 3.122541180049926e-09,
+          "smallest_singular_value": 0.08533423567731026
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 449
+      },
+      "selected_latent_mean_square": 1.4861151475935914,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n450_d128/state_000_005.pt",
+          "sha256": "90459d41d738534040b85272c33e1456229ba9fef5e8aa458fa0c0d7bf303687"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n450_d128/state_005_010.pt",
+          "sha256": "dd2f5f997de174b509c27825f64797924238e5eb394bd60f946f8298e08702af"
+        }
+      ],
+      "spec": {
+        "class": "scaling_causal_weighted",
+        "dimension": 128,
+        "kind": "causal_weighted",
+        "method": "scaling_causal_weighted_n450_d128",
+        "status": "IDENTIFIED",
+        "train_size": 450
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 14.019169270075041,
+          "score_reconstruction_max_abs_error": 3.324332796018903e-09,
+          "smallest_singular_value": 0.061274644935655154
+        },
+        "kv": {
+          "largest_singular_value": 6.248477176943152,
+          "score_reconstruction_max_abs_error": 8.731389359792341e-09,
+          "smallest_singular_value": 0.11188216071563671
+        },
+        "recurrent": {
+          "largest_singular_value": 13.969744230592843,
+          "score_reconstruction_max_abs_error": 4.6411051382241886e-09,
+          "smallest_singular_value": 0.08533423567731026
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 449
+      },
+      "selected_latent_mean_square": 1.3421031702743498,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n450_d256/state_000_005.pt",
+          "sha256": "5ce04ab2686d3b40daf808b79a0a819485ca0f06bf54f2406b1d38337ad6b5b5"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n450_d256/state_005_010.pt",
+          "sha256": "6a80dbcc9d3b79a88e795d837f80e40b10516856e3dec388a66a4aa606e27d31"
+        }
+      ],
+      "spec": {
+        "class": "scaling_causal_weighted",
+        "dimension": 256,
+        "kind": "causal_weighted",
+        "method": "scaling_causal_weighted_n450_d256",
+        "status": "IDENTIFIED",
+        "train_size": 450
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 14.019169270075041,
+          "score_reconstruction_max_abs_error": 2.873200305279766e-09,
+          "smallest_singular_value": 0.061274644935655154
+        },
+        "kv": {
+          "largest_singular_value": 6.248477176943152,
+          "score_reconstruction_max_abs_error": 7.532632845708327e-09,
+          "smallest_singular_value": 0.11188216071563671
+        },
+        "recurrent": {
+          "largest_singular_value": 13.969744230592843,
+          "score_reconstruction_max_abs_error": 5.048097618740033e-09,
+          "smallest_singular_value": 0.08533423567731026
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 449
+      },
+      "selected_latent_mean_square": 1.2058093604487576,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n450_d384/state_000_005.pt",
+          "sha256": "8f6cc53c2c076e7e76b4cb5389bf9c08409fb1e35212404bebce8d73ab2368ea"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n450_d384/state_005_010.pt",
+          "sha256": "afbc2bdba2a71878d5e436534883bee586f71f5212d5f5dba0e8d96cf3778360"
+        }
+      ],
+      "spec": {
+        "class": "scaling_causal_weighted",
+        "dimension": 384,
+        "kind": "causal_weighted",
+        "method": "scaling_causal_weighted_n450_d384",
+        "status": "IDENTIFIED",
+        "train_size": 450
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 23.047044143426152,
+          "score_reconstruction_max_abs_error": 1.6930901125533637e-15,
+          "smallest_singular_value": 0.17362543486852883
+        },
+        "kv": {
+          "largest_singular_value": 23.047044143426152,
+          "score_reconstruction_max_abs_error": 1.6930901125533637e-15,
+          "smallest_singular_value": 0.17362543486852883
+        },
+        "recurrent": {
+          "largest_singular_value": 23.047044143426152,
+          "score_reconstruction_max_abs_error": 1.6930901125533637e-15,
+          "smallest_singular_value": 0.17362543486852883
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 599
+      },
+      "selected_latent_mean_square": 0.39962000776442996,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n600_d128/state_000_005.pt",
+          "sha256": "c096eed171cdf5b6e59e841cb808f6553d48f1015be5f8700c15af58349be7fb"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n600_d128/state_005_010.pt",
+          "sha256": "29b9b5f08870dae3789b5c5167be62bb961628f7b35b29bbef390f0140a208e8"
+        }
+      ],
+      "spec": {
+        "class": "scaling_combined_pca",
+        "dimension": 128,
+        "kind": "combined_pca",
+        "method": "scaling_combined_pca_n600_d128",
+        "status": "IDENTIFIED",
+        "train_size": 600
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 23.047044143426152,
+          "score_reconstruction_max_abs_error": 8.076872504148014e-15,
+          "smallest_singular_value": 0.17362543486852883
+        },
+        "kv": {
+          "largest_singular_value": 23.047044143426152,
+          "score_reconstruction_max_abs_error": 8.076872504148014e-15,
+          "smallest_singular_value": 0.17362543486852883
+        },
+        "recurrent": {
+          "largest_singular_value": 23.047044143426152,
+          "score_reconstruction_max_abs_error": 8.076872504148014e-15,
+          "smallest_singular_value": 0.17362543486852883
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 599
+      },
+      "selected_latent_mean_square": 0.42548536209425747,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n600_d256/state_000_005.pt",
+          "sha256": "d1a4455a2c0f0243d342512f5c1178736cbd3a20a6151f9a13590fb435b5c9f2"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n600_d256/state_005_010.pt",
+          "sha256": "eb8a830df50abfee5aa6e62c0becf69898b78e3019c3a75f5358469f540b2efb"
+        }
+      ],
+      "spec": {
+        "class": "scaling_combined_pca",
+        "dimension": 256,
+        "kind": "combined_pca",
+        "method": "scaling_combined_pca_n600_d256",
+        "status": "IDENTIFIED",
+        "train_size": 600
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 23.047044143426152,
+          "score_reconstruction_max_abs_error": 8.215650382226158e-15,
+          "smallest_singular_value": 0.17362543486852883
+        },
+        "kv": {
+          "largest_singular_value": 23.047044143426152,
+          "score_reconstruction_max_abs_error": 8.215650382226158e-15,
+          "smallest_singular_value": 0.17362543486852883
+        },
+        "recurrent": {
+          "largest_singular_value": 23.047044143426152,
+          "score_reconstruction_max_abs_error": 8.215650382226158e-15,
+          "smallest_singular_value": 0.17362543486852883
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 599
+      },
+      "selected_latent_mean_square": 0.5558247639600656,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n600_d384/state_000_005.pt",
+          "sha256": "dc20dad324d0d043b019728f6be8735cd6d7fa1193ab431348cfe4dde22d6831"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n600_d384/state_005_010.pt",
+          "sha256": "8eb8f17db5beb0426ba22b5db14ddeb7aa13d11c3e2da2d4f66db321bb2ec95d"
+        }
+      ],
+      "spec": {
+        "class": "scaling_combined_pca",
+        "dimension": 384,
+        "kind": "combined_pca",
+        "method": "scaling_combined_pca_n600_d384",
+        "status": "IDENTIFIED",
+        "train_size": 600
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 23.047044143426152,
+          "score_reconstruction_max_abs_error": 1.479372180313021e-14,
+          "smallest_singular_value": 0.17362543486852883
+        },
+        "kv": {
+          "largest_singular_value": 23.047044143426152,
+          "score_reconstruction_max_abs_error": 1.479372180313021e-14,
+          "smallest_singular_value": 0.17362543486852883
+        },
+        "recurrent": {
+          "largest_singular_value": 23.047044143426152,
+          "score_reconstruction_max_abs_error": 1.479372180313021e-14,
+          "smallest_singular_value": 0.17362543486852883
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 599
+      },
+      "selected_latent_mean_square": 0.5490261011819783,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n600_d512/state_000_005.pt",
+          "sha256": "ac4db997926dbf68651e498735e76519b86d0ff14ed00bd8b9f373168a97ad7d"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_combined_pca_n600_d512/state_005_010.pt",
+          "sha256": "cfa4a0317802115fc476c840d7301d09d3986505bb29cc1ab9491719e5791ae5"
+        }
+      ],
+      "spec": {
+        "class": "scaling_combined_pca",
+        "dimension": 512,
+        "kind": "combined_pca",
+        "method": "scaling_combined_pca_n600_d512",
+        "status": "IDENTIFIED",
+        "train_size": 600
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 16.105029927423622,
+          "score_reconstruction_max_abs_error": 3.7816971776294395e-16,
+          "smallest_singular_value": 0.07019169691789674
+        },
+        "kv": {
+          "largest_singular_value": 7.154776536402628,
+          "score_reconstruction_max_abs_error": 2.8449465006019636e-16,
+          "smallest_singular_value": 0.10585578962355152
+        },
+        "recurrent": {
+          "largest_singular_value": 15.999665368574378,
+          "score_reconstruction_max_abs_error": 5.620504062164855e-16,
+          "smallest_singular_value": 0.08491802573318324
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 600
+      },
+      "selected_latent_mean_square": 0.7443146245984327,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n600_d128/state_000_005.pt",
+          "sha256": "1fc13cc0443096d9c9c2c58aedb488c034559338c4fa5b158ffe2812b208c49e"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n600_d128/state_005_010.pt",
+          "sha256": "a7adf80b8836fa808941b88b556abedbf0ffc244f268de909a2ef5a6f8a716b6"
+        }
+      ],
+      "spec": {
+        "class": "scaling_architecture_joint_pca",
+        "dimension": 128,
+        "kind": "architecture_joint_pca",
+        "method": "scaling_architecture_joint_pca_n600_d128",
+        "status": "IDENTIFIED",
+        "train_size": 600
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 16.105029927423622,
+          "score_reconstruction_max_abs_error": 7.771561172376096e-16,
+          "smallest_singular_value": 0.07019169691789674
+        },
+        "kv": {
+          "largest_singular_value": 7.154776536402628,
+          "score_reconstruction_max_abs_error": 4.0419056990259605e-16,
+          "smallest_singular_value": 0.10585578962355152
+        },
+        "recurrent": {
+          "largest_singular_value": 15.999665368574378,
+          "score_reconstruction_max_abs_error": 1.27675647831893e-15,
+          "smallest_singular_value": 0.08491802573318324
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 600
+      },
+      "selected_latent_mean_square": 0.9094378123886304,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n600_d256/state_000_005.pt",
+          "sha256": "2db436bf80ea174351a114ad9bf78e8cc48bab795911314af620d4dc1670778d"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n600_d256/state_005_010.pt",
+          "sha256": "28632e5c09e61d83db7df0b8c6df2c66c1e8797aff193e10e33150f386a10298"
+        }
+      ],
+      "spec": {
+        "class": "scaling_architecture_joint_pca",
+        "dimension": 256,
+        "kind": "architecture_joint_pca",
+        "method": "scaling_architecture_joint_pca_n600_d256",
+        "status": "IDENTIFIED",
+        "train_size": 600
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 16.105029927423622,
+          "score_reconstruction_max_abs_error": 1.6341095143701523e-15,
+          "smallest_singular_value": 0.07019169691789674
+        },
+        "kv": {
+          "largest_singular_value": 7.154776536402628,
+          "score_reconstruction_max_abs_error": 3.608224830031759e-15,
+          "smallest_singular_value": 0.10585578962355152
+        },
+        "recurrent": {
+          "largest_singular_value": 15.999665368574378,
+          "score_reconstruction_max_abs_error": 5.891120924417237e-15,
+          "smallest_singular_value": 0.08491802573318324
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 600
+      },
+      "selected_latent_mean_square": 1.2449965598508834,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n600_d384/state_000_005.pt",
+          "sha256": "c095434cb2056c8d06fc33140ade24d8125e0d60fbfc6e3f040135a6aedbd424"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n600_d384/state_005_010.pt",
+          "sha256": "27a05005aaf1b57a2997b950d3924b02ef995c5c2b24eb32cae7ff0a35d47f35"
+        }
+      ],
+      "spec": {
+        "class": "scaling_architecture_joint_pca",
+        "dimension": 384,
+        "kind": "architecture_joint_pca",
+        "method": "scaling_architecture_joint_pca_n600_d384",
+        "status": "IDENTIFIED",
+        "train_size": 600
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 16.105029927423622,
+          "score_reconstruction_max_abs_error": 1.8214596497756474e-15,
+          "smallest_singular_value": 0.07019169691789674
+        },
+        "kv": {
+          "largest_singular_value": 7.154776536402628,
+          "score_reconstruction_max_abs_error": 3.973384121724877e-15,
+          "smallest_singular_value": 0.10585578962355152
+        },
+        "recurrent": {
+          "largest_singular_value": 15.999665368574378,
+          "score_reconstruction_max_abs_error": 7.5842110369706e-15,
+          "smallest_singular_value": 0.08491802573318324
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 600
+      },
+      "selected_latent_mean_square": 1.1921521921733542,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n600_d512/state_000_005.pt",
+          "sha256": "1b807107bae88bd39c800535213e74dd288f53e2aa412dfff3191b0b62f8f2f3"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_architecture_joint_pca_n600_d512/state_005_010.pt",
+          "sha256": "9b33de0b1103cb3a1d5c5a3e0d003610e50d346f6e56fb5e0cdfaa321f251711"
+        }
+      ],
+      "spec": {
+        "class": "scaling_architecture_joint_pca",
+        "dimension": 512,
+        "kind": "architecture_joint_pca",
+        "method": "scaling_architecture_joint_pca_n600_d512",
+        "status": "IDENTIFIED",
+        "train_size": 600
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 16.105029927423622,
+          "score_reconstruction_max_abs_error": 2.2690183065776637e-15,
+          "smallest_singular_value": 0.07019169691789674
+        },
+        "kv": {
+          "largest_singular_value": 7.154776536402628,
+          "score_reconstruction_max_abs_error": 3.8441472227646045e-15,
+          "smallest_singular_value": 0.10585578962355152
+        },
+        "recurrent": {
+          "largest_singular_value": 15.999665368574378,
+          "score_reconstruction_max_abs_error": 7.771561172376096e-15,
+          "smallest_singular_value": 0.08491802573318324
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 599
+      },
+      "selected_latent_mean_square": 1.5945353271310976,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n600_d128/state_000_005.pt",
+          "sha256": "c7724660c4b315a543218a539aeb2b4e0af7e292fa1edaffca0a4349cd2e9564"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n600_d128/state_005_010.pt",
+          "sha256": "00846cc1ed915b3c8757c623aecb502d4fa6dd299bc90d251572d93629606ebf"
+        }
+      ],
+      "spec": {
+        "class": "scaling_causal_weighted",
+        "dimension": 128,
+        "kind": "causal_weighted",
+        "method": "scaling_causal_weighted_n600_d128",
+        "status": "IDENTIFIED",
+        "train_size": 600
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 16.105029927423622,
+          "score_reconstruction_max_abs_error": 2.2100377083944522e-15,
+          "smallest_singular_value": 0.07019169691789674
+        },
+        "kv": {
+          "largest_singular_value": 7.154776536402628,
+          "score_reconstruction_max_abs_error": 4.135580766728708e-15,
+          "smallest_singular_value": 0.10585578962355152
+        },
+        "recurrent": {
+          "largest_singular_value": 15.999665368574378,
+          "score_reconstruction_max_abs_error": 7.882583474838611e-15,
+          "smallest_singular_value": 0.08491802573318324
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 599
+      },
+      "selected_latent_mean_square": 1.3710011154481885,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n600_d256/state_000_005.pt",
+          "sha256": "fb9c36d85b59a6955e164dc97706b642bb605006f197f0e46f94138f4ac8a697"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n600_d256/state_005_010.pt",
+          "sha256": "3d4d810791ac2a40f2dc68b62713a5e4dd688eb67ab471738b63205727fe946c"
+        }
+      ],
+      "spec": {
+        "class": "scaling_causal_weighted",
+        "dimension": 256,
+        "kind": "causal_weighted",
+        "method": "scaling_causal_weighted_n600_d256",
+        "status": "IDENTIFIED",
+        "train_size": 600
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 16.105029927423622,
+          "score_reconstruction_max_abs_error": 1.994931997373328e-15,
+          "smallest_singular_value": 0.07019169691789674
+        },
+        "kv": {
+          "largest_singular_value": 7.154776536402628,
+          "score_reconstruction_max_abs_error": 4.08006961549745e-15,
+          "smallest_singular_value": 0.10585578962355152
+        },
+        "recurrent": {
+          "largest_singular_value": 15.999665368574378,
+          "score_reconstruction_max_abs_error": 7.827072323607354e-15,
+          "smallest_singular_value": 0.08491802573318324
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 599
+      },
+      "selected_latent_mean_square": 1.2748974701186566,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n600_d384/state_000_005.pt",
+          "sha256": "7eddb357cabf5f00d25948157a0add556b6758cb9bb053c8d7a4fbb4c263710a"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n600_d384/state_005_010.pt",
+          "sha256": "59e4dd047e9707d954d2ac99d705328a1adf578eb8e9033ece515c840bda8d97"
+        }
+      ],
+      "spec": {
+        "class": "scaling_causal_weighted",
+        "dimension": 384,
+        "kind": "causal_weighted",
+        "method": "scaling_causal_weighted_n600_d384",
+        "status": "IDENTIFIED",
+        "train_size": 600
+      }
+    },
+    {
+      "decoder_diagnostics": {
+        "conv": {
+          "largest_singular_value": 16.105029927423622,
+          "score_reconstruction_max_abs_error": 1.9133999940024182e-15,
+          "smallest_singular_value": 0.07019169691789674
+        },
+        "kv": {
+          "largest_singular_value": 7.154776536402628,
+          "score_reconstruction_max_abs_error": 4.107825191113079e-15,
+          "smallest_singular_value": 0.10585578962355152
+        },
+        "recurrent": {
+          "largest_singular_value": 15.999665368574378,
+          "score_reconstruction_max_abs_error": 7.764622278472189e-15,
+          "smallest_singular_value": 0.08491802573318324
+        }
+      },
+      "model_metadata": {
+        "empirical_rank": 599
+      },
+      "selected_latent_mean_square": 1.1875035804474992,
+      "shards": [
+        {
+          "base_trial_ids": [
+            "v8-validation-a3ef4d2636d36f70bdea",
+            "v8-validation-215acecb4d8ea13c2543",
+            "v8-validation-0922c0bce053c8779351",
+            "v8-validation-2b544b6bb9297d82541f",
+            "v8-validation-4226dc211b0f97cdb6c8"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n600_d512/state_000_005.pt",
+          "sha256": "40a31becb097d235b2e8b273d8c4f788209c293cc882a5a5b26f347da9bcc23f"
+        },
+        {
+          "base_trial_ids": [
+            "v8-validation-5cb9940f4ba9583b4464",
+            "v8-validation-4908eac5b76a586f76dc",
+            "v8-validation-1dabfabd6b01dfe9325d",
+            "v8-validation-1d82749cd419a074084b",
+            "v8-validation-911fbb7ad4bcf60ca164"
+          ],
+          "path": "artifacts/causal/v12/prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling/validation_scaling/scaling_causal_weighted_n600_d512/state_005_010.pt",
+          "sha256": "a45b9970dd566e92fff16109c0ab3239daac19d1cff719e9212cda900a0ee8a2"
+        }
+      ],
+      "spec": {
+        "class": "scaling_causal_weighted",
+        "dimension": 512,
+        "kind": "causal_weighted",
+        "method": "scaling_causal_weighted_n600_d512",
+        "status": "IDENTIFIED",
+        "train_size": 600
+      }
+    }
+  ],
+  "protocol_version": "local_causal_geometry_v12",
+  "run_id": "prepare-v12-20260916T160234Z-942a9ba5-s20260828-prepare-scaling",
+  "schema_version": 15,
+  "split": "validation_panel"
+}

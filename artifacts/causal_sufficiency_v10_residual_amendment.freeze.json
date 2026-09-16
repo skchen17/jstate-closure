@@ -1,0 +1,18 @@
+{
+  "base_freeze_digest": "cf1f153f10f2aa9d522beb44ee6c0b7cb2df2d0b2353db72bcfa5d18eb0d3dc5",
+  "code_commit": "2836e80d22456e7aeb01035646e5b2e9516269f7",
+  "freeze_digest": "f5b2e0654f389740058dadb9bd17951d8c623fe7f9352b401f381e29cd2d9cf7",
+  "hashes": {
+    "artifacts/causal_sufficiency_v10.freeze.json": "b307a6d8956667df20c5650b4d28bb4c3245fef84f6fcd047257783ba6f9a8b4",
+    "results/v10/processed/corrected_sub512_sufficiency_v10.json": "006f7de61930d7ac4fd59974aa5d4b5c65fb7057b31ea58f211f22fefbb9879c",
+    "results/v10/processed/corrected_sub512_sufficiency_v10.parquet": "e954fe30b3ba060b2bf109b25856f0a51c330a142494110bdfb8dc78dff5e03d",
+    "results/v10/processed/residual_localization_audit_v10_pre_estimand_fix.json": "cb71871451709aa0b35b425a1bfa2ae32f19fcdabf77c7bc6f1b100b0b39750c",
+    "results/v10/processed/residual_localization_audit_v10_pre_estimand_fix.parquet": "b378a217b110532cd4cd04770160780d96934c9a217c8a6c66aa5959fd204391",
+    "scripts/run_causal_sufficiency_v10_residual_amendment.sh": "c2593d6aff6c23b3f8cbdf6333902ab63c789301e52412ddecbdc6a53ab0d672",
+    "src/jclosure/experiments/residual_audit_v10_amendment.py": "1a9b0571041ab94a51af3415521a42aa5c05d3b0c08f982a3ef2b522710ae490",
+    "src/jclosure/protocol_v10_residual_amendment.py": "0dbeb5477ad6bc1550d9845e490c6b999d04ce51562451e906d8572068c7f16f",
+    "tests/test_v10_residual_amendment.py": "03d9cfd6227eb06b3e878e149d4c81ef2732954348de2fbb393c7a5d611f26a5"
+  },
+  "protocol_version": "residual_estimand_amendment_v10_1",
+  "reason": "The first residual audit refit the base coefficients in an augmented coordinate system, allowing ridge regularization changes to appear as incremental information. The amendment freezes the base prediction, uses OOF target residuals, and makes combined_reference exactly equal to the unified full-minus-compact comparator."
+}

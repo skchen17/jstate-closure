@@ -1,0 +1,308 @@
+{
+  "dimensions": {
+    "384": {
+      "architecture_joint": {
+        "estimate": 0.060337540950626135,
+        "lower": 0.05238277461538091,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.05238277461538091,
+            "upper": 0.06886693788096308
+          },
+          "20260829": {
+            "lower": 0.052467066139355305,
+            "upper": 0.06878275191718712
+          },
+          "20260830": {
+            "lower": 0.052501903529465196,
+            "upper": 0.06864571810308844
+          }
+        },
+        "upper": 0.06886693788096308
+      },
+      "combined_reference": {
+        "estimate": 0.027436499685049055,
+        "lower": 0.023826363212242723,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.02387514576911926,
+            "upper": 0.03125435700658708
+          },
+          "20260829": {
+            "lower": 0.023826363212242723,
+            "upper": 0.031240047392621637
+          },
+          "20260830": {
+            "lower": 0.02384611247163266,
+            "upper": 0.031164686761982738
+          }
+        },
+        "upper": 0.03125435700658708
+      },
+      "conv": {
+        "estimate": 0.027848096676170827,
+        "lower": 0.02406780161298811,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.02406780161298811,
+            "upper": 0.03187709601297974
+          },
+          "20260829": {
+            "lower": 0.0241774836152792,
+            "upper": 0.03185134707000106
+          },
+          "20260830": {
+            "lower": 0.024121341898292303,
+            "upper": 0.031764338623732326
+          }
+        },
+        "upper": 0.03187709601297974
+      },
+      "interaction": {
+        "estimate": -0.018262211203575133,
+        "lower": -0.021272684223577382,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": -0.021272684223577382,
+            "upper": -0.015426995209604503
+          },
+          "20260829": {
+            "lower": -0.021174018501490355,
+            "upper": -0.01547530231550336
+          },
+          "20260830": {
+            "lower": -0.021175888169929383,
+            "upper": -0.015428091972321274
+          }
+        },
+        "upper": -0.015426995209604503
+      },
+      "kv": {
+        "estimate": 0.021371845852583646,
+        "lower": 0.0180057382049039,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.0180057382049039,
+            "upper": 0.02495318953189999
+          },
+          "20260829": {
+            "lower": 0.01801411646967754,
+            "upper": 0.0249151617847383
+          },
+          "20260830": {
+            "lower": 0.018024395841080697,
+            "upper": 0.02489447051361203
+          }
+        },
+        "upper": 0.02495318953189999
+      },
+      "recurrent": {
+        "estimate": 0.029379809431731702,
+        "lower": 0.025287058645486832,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.025287058645486832,
+            "upper": 0.03372890121750534
+          },
+          "20260829": {
+            "lower": 0.025294948608800768,
+            "upper": 0.0337295289715752
+          },
+          "20260830": {
+            "lower": 0.02534389887917787,
+            "upper": 0.033665127332694826
+          }
+        },
+        "upper": 0.0337295289715752
+      },
+      "residualization": {
+        "combined_reference": {
+          "evaluation_residual_fraction": 0.16034497944044596,
+          "train_oof_residual_fraction": 0.6138994962615378
+        },
+        "conv": {
+          "evaluation_residual_fraction": 0.16464196102587217,
+          "train_oof_residual_fraction": 0.6092878454647821
+        },
+        "kv": {
+          "evaluation_residual_fraction": 0.16656253344690164,
+          "train_oof_residual_fraction": 0.6059421678405905
+        },
+        "recurrent": {
+          "evaluation_residual_fraction": 0.17180537177220728,
+          "train_oof_residual_fraction": 0.6264799935166612
+        }
+      }
+    },
+    "512": {
+      "architecture_joint": {
+        "estimate": 0.05931130178272724,
+        "lower": 0.052022154168039555,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.052022154168039555,
+            "upper": 0.06701998452171683
+          },
+          "20260829": {
+            "lower": 0.05207554829046131,
+            "upper": 0.06710669447854162
+          },
+          "20260830": {
+            "lower": 0.05208350820429623,
+            "upper": 0.06687537749670446
+          }
+        },
+        "upper": 0.06710669447854162
+      },
+      "combined_reference": {
+        "estimate": 0.025986891388893128,
+        "lower": 0.022859849163889886,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.022872857403010132,
+            "upper": 0.02926732121258974
+          },
+          "20260829": {
+            "lower": 0.022859849163889886,
+            "upper": 0.029295304299518463
+          },
+          "20260830": {
+            "lower": 0.022878224132582545,
+            "upper": 0.029239532171189783
+          }
+        },
+        "upper": 0.029295304299518463
+      },
+      "conv": {
+        "estimate": 0.027212626941502095,
+        "lower": 0.023786793659068644,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.023786793659068644,
+            "upper": 0.030890378174185752
+          },
+          "20260829": {
+            "lower": 0.023843399851210416,
+            "upper": 0.030870680485665797
+          },
+          "20260830": {
+            "lower": 0.02383308261651546,
+            "upper": 0.03079207109156996
+          }
+        },
+        "upper": 0.030890378174185752
+      },
+      "interaction": {
+        "estimate": -0.016237615510821344,
+        "lower": -0.01847097505517304,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": -0.01847097505517304,
+            "upper": -0.014138280633836986
+          },
+          "20260829": {
+            "lower": -0.01845610560923815,
+            "upper": -0.014194866568222641
+          },
+          "20260830": {
+            "lower": -0.0184364437751472,
+            "upper": -0.014171798648685218
+          }
+        },
+        "upper": -0.014138280633836986
+      },
+      "kv": {
+        "estimate": 0.0194787057004869,
+        "lower": 0.016688772061187775,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.016688772061187775,
+            "upper": 0.02231553476881236
+          },
+          "20260829": {
+            "lower": 0.016747284465096893,
+            "upper": 0.022350655675400045
+          },
+          "20260830": {
+            "lower": 0.016747452324349436,
+            "upper": 0.022314815517887467
+          }
+        },
+        "upper": 0.022350655675400045
+      },
+      "recurrent": {
+        "estimate": 0.028857584595680236,
+        "lower": 0.025093548764288424,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.025093548764288424,
+            "upper": 0.032891150499135255
+          },
+          "20260829": {
+            "lower": 0.02513593038916588,
+            "upper": 0.03285742789879441
+          },
+          "20260830": {
+            "lower": 0.02511105448156595,
+            "upper": 0.032835666897892954
+          }
+        },
+        "upper": 0.032891150499135255
+      },
+      "residualization": {
+        "combined_reference": {
+          "evaluation_residual_fraction": 0.21385537554241435,
+          "train_oof_residual_fraction": 0.8544406350690759
+        },
+        "conv": {
+          "evaluation_residual_fraction": 0.21781096726562807,
+          "train_oof_residual_fraction": 0.8507565657170775
+        },
+        "kv": {
+          "evaluation_residual_fraction": 0.22102724392480905,
+          "train_oof_residual_fraction": 0.8502240137660404
+        },
+        "recurrent": {
+          "evaluation_residual_fraction": 0.22334335692104626,
+          "train_oof_residual_fraction": 0.8623648222206972
+        }
+      }
+    }
+  },
+  "protocol_version": "corrected_causal_sufficiency_protocol_v10",
+  "records": "results/v10/processed/residual_localization_audit_v10.parquet",
+  "records_sha256": "b378a217b110532cd4cd04770160780d96934c9a217c8a6c66aa5959fd204391",
+  "run_id": "sufficiency-v10-20260916T052832Z-e29627c0-s20260828-corrected-audit",
+  "schema_version": 13,
+  "source_freeze_digest": "cf1f153f10f2aa9d522beb44ee6c0b7cb2df2d0b2353db72bcfa5d18eb0d3dc5",
+  "v9_comparator_audit": {
+    "correction": "five-fold cross-fitted block residualization on train and full-train residualization on held-out splits",
+    "mathematically_consistent_with_corrected_joint": false,
+    "problem": "v9 appended raw block scores to compact coordinates without train-only residualization",
+    "reference_space_note": "architecture_joint uses 3x599 block-specific scores and is richer than the 599D combined ceiling"
+  }
+}

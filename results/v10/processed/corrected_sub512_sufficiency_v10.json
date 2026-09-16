@@ -1,0 +1,26 @@
+{
+  "candidate_selection_status": "OBSERVATIONAL_GATE_PASS",
+  "effective_rank": 599,
+  "final_test_not_used_for_candidate_selection": true,
+  "protocol_version": "corrected_causal_sufficiency_protocol_v10",
+  "records": "results/v10/processed/corrected_sub512_sufficiency_v10.parquet",
+  "records_sha256": "e954fe30b3ba060b2bf109b25856f0a51c330a142494110bdfb8dc78dff5e03d",
+  "run_id": "sufficiency-v10-20260916T052832Z-e29627c0-s20260828-corrected-audit",
+  "schema_version": 13,
+  "selected_confirmatory_candidates": [
+    384,
+    448,
+    512
+  ],
+  "selection_split": "validation",
+  "smallest_observationally_sufficient_dimension": 384,
+  "source_freeze_digest": "cf1f153f10f2aa9d522beb44ee6c0b7cb2df2d0b2353db72bcfa5d18eb0d3dc5",
+  "status": "COMPLETED_CORRECTED_OBSERVATIONAL_AUDIT",
+  "validation_all_family_eligible_dimensions": [
+    384,
+    416,
+    448,
+    480,
+    512
+  ]
+}

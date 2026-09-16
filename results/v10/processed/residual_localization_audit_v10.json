@@ -1,0 +1,309 @@
+{
+  "dimensions": {
+    "384": {
+      "architecture_joint": {
+        "estimate": 0.16503967168927192,
+        "lower": 0.14703771434053778,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.14726201131641864,
+            "upper": 0.18388250422328709
+          },
+          "20260829": {
+            "lower": 0.14703771434053778,
+            "upper": 0.18427695425823332
+          },
+          "20260830": {
+            "lower": 0.14711024385914206,
+            "upper": 0.18384746403843163
+          }
+        },
+        "upper": 0.18427695425823332
+      },
+      "base_prediction_frozen": true,
+      "combined_reference": {
+        "estimate": -0.00046047439053654673,
+        "lower": -0.0019705386099405585,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": -0.0019620319304056466,
+            "upper": 0.000998678605817258
+          },
+          "20260829": {
+            "lower": -0.0019705386099405585,
+            "upper": 0.0009709174389019606
+          },
+          "20260830": {
+            "lower": -0.001956552020087838,
+            "upper": 0.0009546452344395208
+          }
+        },
+        "upper": 0.000998678605817258
+      },
+      "conv": {
+        "estimate": 0.15882737770676614,
+        "lower": 0.14044933811724186,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.14044933811724186,
+            "upper": 0.17845573761835695
+          },
+          "20260829": {
+            "lower": 0.14046732342243196,
+            "upper": 0.17837275693938137
+          },
+          "20260830": {
+            "lower": 0.1405010985210538,
+            "upper": 0.1781452894926071
+          }
+        },
+        "upper": 0.17845573761835695
+      },
+      "interaction": {
+        "estimate": -0.28354209089279175,
+        "lower": -0.3193937055826187,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": -0.31909679204821584,
+            "upper": -0.2500550770074129
+          },
+          "20260829": {
+            "lower": -0.3193937055826187,
+            "upper": -0.25023859316408636
+          },
+          "20260830": {
+            "lower": -0.31887611782848835,
+            "upper": -0.24998322209119797
+          }
+        },
+        "upper": -0.24998322209119797
+      },
+      "kv": {
+        "estimate": 0.1315620030462742,
+        "lower": 0.11588996122553943,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.11588996122553943,
+            "upper": 0.14823335140794516
+          },
+          "20260829": {
+            "lower": 0.11593502743840217,
+            "upper": 0.14837663387432692
+          },
+          "20260830": {
+            "lower": 0.1158992909617722,
+            "upper": 0.1481790251761675
+          }
+        },
+        "upper": 0.14837663387432692
+      },
+      "recurrent": {
+        "estimate": 0.15819238001108168,
+        "lower": 0.13933783818781376,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.13937355655133726,
+            "upper": 0.1782923173934221
+          },
+          "20260829": {
+            "lower": 0.13941326364129783,
+            "upper": 0.17826355152279139
+          },
+          "20260830": {
+            "lower": 0.13933783818781376,
+            "upper": 0.17770620787143707
+          }
+        },
+        "upper": 0.1782923173934221
+      },
+      "residualization": {
+        "conv": {
+          "evaluation_residual_fraction": 0.16464196102587217,
+          "train_oof_residual_fraction": 0.6092878454647821
+        },
+        "kv": {
+          "evaluation_residual_fraction": 0.16656253344690164,
+          "train_oof_residual_fraction": 0.6059421678405905
+        },
+        "recurrent": {
+          "evaluation_residual_fraction": 0.17180537177220728,
+          "train_oof_residual_fraction": 0.6264799935166612
+        }
+      }
+    },
+    "512": {
+      "architecture_joint": {
+        "estimate": 0.1672700747847557,
+        "lower": 0.14908623968362808,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.14917771156728268,
+            "upper": 0.18606274257749317
+          },
+          "20260829": {
+            "lower": 0.14908623968362808,
+            "upper": 0.18644723550230263
+          },
+          "20260830": {
+            "lower": 0.14932441677302122,
+            "upper": 0.1862969029664993
+          }
+        },
+        "upper": 0.18644723550230263
+      },
+      "base_prediction_frozen": true,
+      "combined_reference": {
+        "estimate": -0.0006906941942870616,
+        "lower": -0.0014503446108661592,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": -0.0014503446108661592,
+            "upper": 4.573277113959184e-05
+          },
+          "20260829": {
+            "lower": -0.0014489200892858207,
+            "upper": 3.476140871644019e-05
+          },
+          "20260830": {
+            "lower": -0.0014501543762162328,
+            "upper": 5.965475682169149e-05
+          }
+        },
+        "upper": 5.965475682169149e-05
+      },
+      "conv": {
+        "estimate": 0.16052913856506348,
+        "lower": 0.1418309917896986,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.1419900887966156,
+            "upper": 0.18002343073636293
+          },
+          "20260829": {
+            "lower": 0.1418309917896986,
+            "upper": 0.18028706210553644
+          },
+          "20260830": {
+            "lower": 0.14208314629346133,
+            "upper": 0.17999872053861618
+          }
+        },
+        "upper": 0.18028706210553644
+      },
+      "interaction": {
+        "estimate": -0.28417875730991365,
+        "lower": -0.31968428531587123,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": -0.31940718920230865,
+            "upper": -0.2506283838301897
+          },
+          "20260829": {
+            "lower": -0.31968428531587123,
+            "upper": -0.2508494519919157
+          },
+          "20260830": {
+            "lower": -0.3192545000374317,
+            "upper": -0.2510476395815611
+          }
+        },
+        "upper": -0.2506283838301897
+      },
+      "kv": {
+        "estimate": 0.13087416124343873,
+        "lower": 0.11538026452735066,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.11538026452735066,
+            "upper": 0.14723283884748817
+          },
+          "20260829": {
+            "lower": 0.11543004305809737,
+            "upper": 0.1474338720522821
+          },
+          "20260830": {
+            "lower": 0.11546941866874695,
+            "upper": 0.14727743828818202
+          }
+        },
+        "upper": 0.1474338720522821
+      },
+      "recurrent": {
+        "estimate": 0.16004553157091142,
+        "lower": 0.1408159380823374,
+        "n_clusters": 250,
+        "n_resamples_per_seed": 10000,
+        "seeds": {
+          "20260828": {
+            "lower": 0.1408159380823374,
+            "upper": 0.18014713930487633
+          },
+          "20260829": {
+            "lower": 0.14108422884345054,
+            "upper": 0.18029994332939384
+          },
+          "20260830": {
+            "lower": 0.14108394787907602,
+            "upper": 0.1797097134143114
+          }
+        },
+        "upper": 0.18029994332939384
+      },
+      "residualization": {
+        "conv": {
+          "evaluation_residual_fraction": 0.21781096726562807,
+          "train_oof_residual_fraction": 0.8507565657170775
+        },
+        "kv": {
+          "evaluation_residual_fraction": 0.22102724392480905,
+          "train_oof_residual_fraction": 0.8502240137660404
+        },
+        "recurrent": {
+          "evaluation_residual_fraction": 0.22334335692104626,
+          "train_oof_residual_fraction": 0.8623648222206972
+        }
+      }
+    }
+  },
+  "estimand": {
+    "architecture_sources": "five-fold OOF B-E[B|C] residuals predict OOF target residuals and are added to a frozen compact prediction",
+    "base_prediction_frozen": true,
+    "combined_reference": "exact unified full-information prediction minus the frozen compact prediction; no coordinate-dependent refit",
+    "heldout_residualization_uses_train_only": true
+  },
+  "methodological_amendment": "residual_estimand_amendment_v10_1",
+  "protocol_version": "corrected_causal_sufficiency_protocol_v10",
+  "records": "results/v10/processed/residual_localization_audit_v10.parquet",
+  "records_sha256": "8a0447ee1ff3fb171ed86e744e275328d793282cbc3996edcd827ff65d0916bc",
+  "run_id": "residual-amendment-v10-20260916T053835Z-e29627c0-s20260828-frozen-base-audit",
+  "schema_version": 13,
+  "source_amendment_freeze_digest": "f5b2e0654f389740058dadb9bd17951d8c623fe7f9352b401f381e29cd2d9cf7",
+  "supersedes": {
+    "json": "results/v10/processed/residual_localization_audit_v10_pre_estimand_fix.json",
+    "parquet": "results/v10/processed/residual_localization_audit_v10_pre_estimand_fix.parquet",
+    "reason": "The first residual audit refit the base coefficients in an augmented coordinate system, allowing ridge regularization changes to appear as incremental information. The amendment freezes the base prediction, uses OOF target residuals, and makes combined_reference exactly equal to the unified full-minus-compact comparator."
+  },
+  "unified_comparator_max_abs_difference": 0.0
+}

@@ -7,10 +7,10 @@
 
 ## Bundle provenance
 
-- Source commit: `f5118642f12e3b60e22df52930610867773b108a`
-- Generated at: `2026-09-16T19:24:27.802045+00:00`
+- Source commit: `e270629aee6a310491f9b9113056ba720b83c7cc`
+- Generated at: `2026-09-16T19:26:13.639415+00:00`
 - Included standalone reports: `8`
-- Indexed machine-record files: `30`
+- Indexed machine-record files: `31`
 - Generator: `scripts/build_complete_version_report.py`
 
 ## Version summary and adjudication
@@ -83,6 +83,7 @@ The learned state-dependent decoder was not run because the protocol did not aut
 | `results/v12/processed/measurement_audit_v12.json` | 3984 | `c73d77b4c3dd402de2b8386bb7f7425bfec4b59fc55b3729e05b987756478f1f` |
 | `results/v12/processed/measurement_audit_v12.parquet` | 26395 | `edad149e1c88784ca50aa8c6df8e712f9cf87848c673ad19618bc4f35132d0dd` |
 | `results/v12/processed/method_specs_v12.json` | 17441 | `de3245f8a43b331745008e5ee32932258a0a7bdde86ef45bfbdc620a4a7d2af5` |
+| `results/v12/processed/report_integrity_v12.json` | 1634 | `054bc6f4d065ebed1051fa75f73f36bd9799198546edbfc8a7fac0a3055ae8fa` |
 | `results/v12/processed/scaling_validation_states_v12.json` | 67923 | `d3c4b5bc89f3c8a71c5a5e58f0fc09bb2abab047acf2ed8baeadaa0487882e90` |
 | `results/v12/processed/strict_state_replacement_v12.json` | 115940 | `da636be0c9d5016e801be81084d34460976c95f5a264b2e2b95d0b40a99e5128` |
 | `results/v12/processed/strict_state_replacement_v12.parquet` | 66077 | `1d0a1f1dcdd743cbbd190ab7015a8949e1c3534524f0d3c6b1bb195fe86b93f0` |

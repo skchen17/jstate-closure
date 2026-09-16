@@ -1,0 +1,24 @@
+{
+  "candidate_freeze_digest": "3e2368a3b21738f7c00e8ca56290c03d228e978634e31491087bf7507da8a235",
+  "code_commit": "3fe0e9061b4c4dab5c8930c4f4d5d4c2a11d5c36",
+  "decoder_run_id": "decoded-causal-v10-20260916T053954Z-e29627c0-s20260828-decoder",
+  "freeze_digest": "cb0df76882a701452f3973782b44aaa0ea5a0984881d81465c5e1037ecdef3a5",
+  "hashes": {
+    "artifacts/causal_sufficiency_v10_candidates.freeze.json": "f0f5cd678d14b91ab55e6b1bd8920631748f92afbbf122ca125921063c860b3a",
+    "data/v8/persistent_causal_formal.json": "109661ce267d8db4551dfebfb3414efd5ff64f3bcaf08913fa5d96c600fd15dc",
+    "results/v10/processed/compact_decoder_v10.json": "19a8e4ba847636dafa82df617de885c11c688b1c69b493629baafd348ec14bf0",
+    "results/v8/processed/persistent_capture_final_test_v8.json": "51e829e7df2e7831e82603acf7d1facebee36053a951ac357a4cba4916eee28b",
+    "results/v8/processed/persistent_capture_train_v8.json": "386b2f7eb5942c9afbb8c3c9618f03305fe67eac753ba0aeb1ebc6c5494da4de",
+    "results/v8/processed/persistent_capture_validation_v8.json": "ca9f8191c634edab9b603feaebfb70a2c02f1b2a1ad04e5a86628c5d69423d38",
+    "results/v8/raw/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-train-full/persistent_pairs_train_v8.jsonl": "dcd2ff7c050d5585bc4b06c0fbbbf3a8843e510845952b6281902481d1703c24",
+    "results/v8/raw/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/persistent_pairs_validation_v8.jsonl": "c44e8f4016a57e86b60b8352fdc37b3bebe3f0b510cc18ff412a542e51b83554",
+    "results/v8/raw/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/persistent_pairs_final_test_v8.jsonl": "2c36f5931d80f2fed1ba810ecfae436118949a97d99676f4f522dd19435ff8f3",
+    "scripts/run_causal_sufficiency_v10_causal_amendment.sh": "1037835276feb335174f2c0cf073c5ab972e91779d156e4ace77df80f852c739",
+    "src/jclosure/experiments/decoded_causal_v10_amendment.py": "8725b1dc49258a709c9a293ff034d69e8cf56109dbdde43e071a1c51dc109483",
+    "src/jclosure/protocol_v10_causal_amendment.py": "d0715959ee60066c3425480dd0003dac02070a148ad4b2b18dc2ce52339196c1",
+    "tests/test_v10_causal_amendment.py": "7529deee9fca05367fc9d0b16e788bc1c782cff49434cf7a01e93ebb155a3e7d"
+  },
+  "mapping_definition": "pair_record.prompt_id -> ProgramTraceTask.example_id loaded from the frozen v8 formal dataset",
+  "protocol_version": "causal_metadata_mapping_amendment_v10_1",
+  "reason": "The frozen base runner incorrectly loaded the legacy v7 replication task table although all selected pairs are protocol-v8 tasks."
+}

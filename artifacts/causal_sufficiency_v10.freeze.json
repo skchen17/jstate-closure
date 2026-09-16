@@ -1,0 +1,139 @@
+{
+  "code_commit": "c4f26e2bacd4330467ea1d5dec78af8a1e5a600c",
+  "config_digest": "e29627c0e949f340890ffdbde669b4eb6c56c0be93a97482f41b31abaeee2eee",
+  "effective_feature_rank": 599,
+  "freeze_digest": "cf1f153f10f2aa9d522beb44ee6c0b7cb2df2d0b2353db72bcfa5d18eb0d3dc5",
+  "hashes": {
+    "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-train-full/endpoints_train_f16.npz": "56e333bb13c091cfc84efe9386b947e1c2aead12518ee23a3eeb2dc1f18aaeab",
+    "artifacts/persistent/v8/persistent-state-v8-20260915T082301Z-bcb732e4-s20260828-validation-full/endpoints_validation_f16.npz": "6be8487e7c7f2b04c69d1ec9d4d3af5df0536abcce41895bfb438a83b51428c6",
+    "artifacts/persistent/v8/persistent-state-v8-20260915T085336Z-bcb732e4-s20260828-final-full/endpoints_final_test_f16.npz": "b54a234b38fbfbd9da4d63d9a816a77be8e53d0b338502c7ae6463494efbdcf7",
+    "artifacts/persistent/v8/structured_features_v8.npz": "df4f5a26d8ce69d5f00fe228cba239ba9908f67ae58ed83b9e502695ae652688",
+    "artifacts/persistent_state_v8.freeze.json": "5700833a609fa156b4260893856ee3f39e6901f224e9305cdb110b628986709e",
+    "artifacts/sufficiency_protocol_v9.freeze.json": "5486c4c162f9d73f4b705944a89726bd79763d28afd0cffe9e5da3361f749dd3",
+    "artifacts/sufficiency_protocol_v9_reporting_amendment_3.freeze.json": "3cd91bb858e94e0d35ee43e3ac7e0fb717b8adee7c5f9249798c7fd8537f99a8",
+    "configs/causal_sufficiency_v10.yaml": "78b50d58812ac97317063a4c8b9bb63dfc46d40ef2d7a2c363c055f79faf8208",
+    "results/v8/processed/persistent_capture_final_test_v8.json": "51e829e7df2e7831e82603acf7d1facebee36053a951ac357a4cba4916eee28b",
+    "results/v8/processed/persistent_capture_train_v8.json": "386b2f7eb5942c9afbb8c3c9618f03305fe67eac753ba0aeb1ebc6c5494da4de",
+    "results/v8/processed/persistent_capture_validation_v8.json": "ca9f8191c634edab9b603feaebfb70a2c02f1b2a1ad04e5a86628c5d69423d38",
+    "results/v8/processed/structured_component_screen_v8.json": "8fe142af32c79b322bd0e4ff4b72eb374696829bb61ff57a718ae1101ef3cee9",
+    "results/v8/processed/structured_component_screen_v8.parquet": "30dae17d022d89204aed70357fcd96552506f77592a005ce6815da91492126d8",
+    "results/v8/processed/structured_features_v8.json": "179a5b8cc42ca36604bf85bb7925d02d5a49ca42113d4f465624fd1e339eacd5",
+    "results/v9/processed/residual_information_localization_v9.json": "e2df5b9a4a8bdc6ef4396dc2887001a44a4182f301f79c6f9cb2061573d58d97",
+    "results/v9/processed/residual_information_localization_v9.parquet": "7b0f9947377b714b93cd0f110aa9ba249c8d22974c5acb99db778f0f7878d4dd",
+    "results/v9/processed/sufficiency_dimension_sweep_v9.json": "e981ef3a3bcdb7b73cce87923c2e792957c4194251b1ffb0e0e9a7f840f771a6",
+    "results/v9/processed/sufficiency_dimension_sweep_v9.parquet": "e21ab4f44e1ff10c86346b8e201ed06b08d33aee454abb046e4273ab81599467",
+    "schemas/protocol-v10-record.schema.json": "7ca4919d305d401247609cd56a129acdf3ed1226b72d16850d5fda325f6b94dd",
+    "scripts/run_causal_sufficiency_v10.sh": "dbdbcc52f2b3ae09a3d48dc6e5627334f31aed690de89b6e0543d71a5629c1eb",
+    "src/jclosure/experiments/decoded_causal_v10.py": "772ccbc40b622a95e6f912eecbe24f29486736c34d7d3ba7d81fa7fa67fd410b",
+    "src/jclosure/experiments/report_v10.py": "ea5ee66fb2c5c28a6e0d175d2781170c90b68e7babd160cddcce163462455cc2",
+    "src/jclosure/experiments/sufficiency_v10.py": "628036ccd527b58a61b3a2afa1440e34b86186142b88eb1dbe9f88a3730cceaa",
+    "src/jclosure/protocol_v10.py": "e304b45e6a983c83bb74fc5247336479d70dd24e0a4431dc6641544b2e11692e",
+    "src/jclosure/reporting_v10.py": "6f1c39ca7209aa33ffcc4d92b43416a7da7c8b939215a307c1bdeadb5677da15",
+    "tests/test_v10.py": "45d4f1164753d8e6f64809882b6eb953906ba2f82a6b40cc324ad1480d0fc1db"
+  },
+  "history_guard_digest": "4e32966277ffc8812ac9503f619e44f02c78879d4c1f1b4f3da5c8121af1e600",
+  "protocol_version": "corrected_causal_sufficiency_protocol_v10",
+  "schema_version": 13,
+  "thresholds": {
+    "bootstrap_resamples": 10000,
+    "candidate_selection": {
+      "fallback_diagnostic_dimensions": [
+        384,
+        448,
+        512
+      ],
+      "include_reference_dimension": 512,
+      "maximum_candidates": 3
+    },
+    "causal": {
+      "authorization_horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "direction_cosine_minimum": 0.8,
+      "free_continuation_requires_teacher_forced_authorization": true,
+      "horizons": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "magnitude_ratio_maximum": 1.2,
+      "magnitude_ratio_minimum": 0.8,
+      "output_direction_minimum": 0.8,
+      "semantic_delta_agreement_minimum": 0.8,
+      "strict_interface_required": true,
+      "task_decision_sign_minimum": 0.8
+    },
+    "conditional_residual_gain_maximum": 0.02,
+    "confirmation_seeds": [
+      20260828,
+      20260829,
+      20260830
+    ],
+    "confirmatory_subset": {
+      "effect_enriched_per_family": 5,
+      "per_family": 10,
+      "random_seed": 20261201,
+      "score_columns": [
+        "output_js_divergence",
+        "future_j_trajectory_divergence",
+        "target_log_odds_abs_change"
+      ]
+    },
+    "decoder": {
+      "reconstruction_chunk": 65536,
+      "shard_size": 5
+    },
+    "dimensions": [
+      64,
+      96,
+      128,
+      160,
+      192,
+      224,
+      256,
+      288,
+      320,
+      352,
+      384,
+      416,
+      448,
+      480,
+      512
+    ],
+    "gap_denominator_epsilon": 0.002,
+    "methods": [
+      "causal_bottleneck",
+      "predictive_bottleneck",
+      "pca"
+    ],
+    "predictive_gap_closed_minimum": 0.95,
+    "primary_method": "causal_bottleneck",
+    "requested_dimensions": [
+      64,
+      96,
+      128,
+      160,
+      192,
+      256,
+      320,
+      384,
+      448,
+      512
+    ],
+    "residual_audit_dimensions": [
+      384,
+      512
+    ],
+    "residualization_folds": 5,
+    "ridge_alpha": 1.0,
+    "semantic_relative_retention_minimum": 0.95,
+    "semantic_residual_gain_maximum": 0.02
+  },
+  "v8_source_freeze_digest": "1cbb255ddfd42438a18fc374daceebdf0f7ec6fe6f56c94a3f914654c1ab61ad",
+  "v9_source_freeze_digest": "6651aca6427c909b77c3930ae8487aa840b153679a9a80fd754292b2fa905d6f"
+}

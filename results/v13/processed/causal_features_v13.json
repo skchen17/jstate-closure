@@ -1,0 +1,38 @@
+{
+  "architecture_blocks": [
+    {
+      "block_index": 0,
+      "elements": 3145728,
+      "train_rms": 0.0006828760220035594
+    },
+    {
+      "block_index": 1,
+      "elements": 196608,
+      "train_rms": 0.061908333637352056
+    },
+    {
+      "block_index": 2,
+      "elements": 1048576,
+      "train_rms": 0.005128976199470119
+    },
+    {
+      "combined_rank": 4799,
+      "largest_eigenvalue": 5445.8828125,
+      "smallest_retained_eigenvalue": 0.011893216520547867
+    }
+  ],
+  "artifact": "artifacts/causal/v13/causal_features_v13.npz",
+  "artifact_sha256": "511623733a70354484db45b85586dfa9e1fab533d238aa92aa67fb8e1f4f02b5",
+  "count": 5550,
+  "feature_dimension": 4799,
+  "layerwise_dimension": 14397,
+  "protocol_version": "causal_path_geometry_v13_feature_memory_amendment_15",
+  "run_id": "geometry-v13-20260917T183234Z-7bc7c600-s20260828-features-memory-amendment-15-gpu1",
+  "schema_version": 22,
+  "source_capture_freeze_digest": "167f69a3b5ddfd95775728f77e46fd94e1e432dd7097e531d8e801bc7169422b",
+  "split_counts": {
+    "final_test": 250,
+    "train": 4800,
+    "validation": 500
+  }
+}

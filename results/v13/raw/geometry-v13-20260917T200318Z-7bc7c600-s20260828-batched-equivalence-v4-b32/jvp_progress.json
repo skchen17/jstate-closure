@@ -1,0 +1,8 @@
+{
+  "batch_size": 32,
+  "completed_directions_current_state": 512,
+  "completed_local_states": 0,
+  "error": "RuntimeError: batched JVP equivalence failed: {'reference_matrix': 'results/v13/processed/jvp_matrices/anchor_00_position_0.npz', 'batch_size': 32, 'maximum_absolute_difference': 0.375, 'mean_absolute_difference': 0.0005828714208516, 'minimum_column_cosine': 0.9985527123724158, 'mean_column_cosine': 0.9997450737834495, 'passed': False}",
+  "status": "FAILED",
+  "total_local_states": 20
+}

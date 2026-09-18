@@ -1,0 +1,30 @@
+{
+  "algorithm_changed": false,
+  "estimand_changed": false,
+  "failure_stage": "dual-PCA before the first V13 feature artifact",
+  "floating_reduction_schedule_changed": false,
+  "freeze_digest": "5cf33617bb2d2101e9dab582d3581a65c865f1cd724083e8585bb25e6a95f3bb",
+  "hashes": {
+    "artifacts/causal_geometry_v13_feature_memory_amendment_9.freeze.json": "f424f4696fb895038579ec7f7c41402fe4f5faf202119364395c1306acec82c8",
+    "artifacts/causal_path_geometry_v13.freeze.json": "e05c962dba3be1b8657810eea10c25b8850df4f4a1cb8e6c161d70b0886397a4",
+    "src/jclosure/experiments/runtime_v13_features_v10.py": "eb216fcadc0302ec78942753636d6a94333d85aad818ea4d34a242ea311e5406",
+    "src/jclosure/experiments/runtime_v13_features_v9.py": "5d0cc69ce005019a91bd03be58e5e73fe36026efd32ec2676ca05466698c8ba7"
+  },
+  "observed_parent_failure": {
+    "cause": "the identity index_select kernel retained internal gather blocks; the run was stopped before OOM and before any estimand output",
+    "feature_artifact_written": false,
+    "parent_run_suffix": "features-memory-amendment-9-gpu1"
+  },
+  "parent_base_freeze_digest": "98066eedffd1255db439f99f0689aa26bb91659f06242f796658bf9b8324ba85",
+  "parent_feature_memory_amendment_sha256": "f424f4696fb895038579ec7f7c41402fe4f5faf202119364395c1306acec82c8",
+  "protocol_version": "causal_path_geometry_v13_feature_memory_amendment_10",
+  "purpose": "avoid allocator retention in the two V13 BF16 identity gathers",
+  "runtime": {
+    "MALLOC_ARENA_MAX": "2",
+    "torch_interop_threads": 1,
+    "torch_intraop_threads": 8
+  },
+  "schema_version": 22,
+  "scope": "allocation placement only: the frozen train and all-row indices are identity prefixes, so copy the same BF16 column slices directly into the amendment-9 BF16 staging buffers; all subsequent casts, reductions, normalization, chunk order, Gram updates, and eigensolver are unchanged",
+  "split_changed": false
+}

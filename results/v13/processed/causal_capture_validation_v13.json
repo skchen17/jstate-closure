@@ -1,0 +1,898 @@
+{
+  "architecture": {
+    "attention_layers": [
+      27,
+      31
+    ],
+    "kv_token_scope": "all_prefill_positions",
+    "recurrent_layers": [
+      24,
+      25,
+      26,
+      28,
+      29,
+      30
+    ],
+    "state_dtype": "bfloat16"
+  },
+  "complete": true,
+  "endpoint_artifact": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/endpoints_validation_v13.npz",
+  "endpoint_artifact_sha256": "4d7568622a705cf3537a7ca1692348d62eacbe30c895a257cab6db959db6e29c",
+  "excluded_reasons": {
+    "intervention_ineligible": 10
+  },
+  "horizons": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "pair_records": "results/v13/raw/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/causal_pairs_validation_v13.jsonl",
+  "pair_records_sha256": "9a4b50bfd8f72517ab303aca4b641c9c72dd8237634e1975134c24866c4dc695",
+  "protocol_version": "causal_path_geometry_v13",
+  "run_id": "bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation",
+  "schema_version": 22,
+  "source_freeze_digest": "98066eedffd1255db439f99f0689aa26bb91659f06242f796658bf9b8324ba85",
+  "split": "validation",
+  "state_shards": [
+    {
+      "base_trial_ids": [
+        "v13-validation-22f4254cba72353ac12a",
+        "v13-validation-3fae73d68f798477bc8f",
+        "v13-validation-7df6b2e1b9152caaed71",
+        "v13-validation-99098a75372fd23116a1",
+        "v13-validation-78f7b0d75a864054fc37",
+        "v13-validation-e58e739fc78e958650d1",
+        "v13-validation-67ff4256db477321f40f",
+        "v13-validation-605426c240ac8a073dbf",
+        "v13-validation-81ea187fd5459f41462b",
+        "v13-validation-45844da37edcce8e2ce4"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0000.pt",
+      "sha256": "34b7aa3f01677a5130f3c044db54d42e3b2c39bfe79f1db489269ce3c2c3e9d8"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-e7fc3a1ccdef681c01ca",
+        "v13-validation-714b47cb03dda84d18d1",
+        "v13-validation-ad8b014c96293bd9052c",
+        "v13-validation-6e0ce629fff303f72082",
+        "v13-validation-d82fa88165a297470bfc",
+        "v13-validation-75251bcb0e1e82110fbf",
+        "v13-validation-a1fc71375787978b2a8f",
+        "v13-validation-80a6f9f0d091d29a81e0",
+        "v13-validation-1aea6269de195483948a",
+        "v13-validation-0ac271d01735996bb67e"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0001.pt",
+      "sha256": "0a72990431e699bcf09e611ee4ff77cb67d11bbf2a454c31628801b824d0b9fc"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-fd48bbf1982ec67dfabd",
+        "v13-validation-db1ee81e1dfc4cecc89d",
+        "v13-validation-587428b4ef890f0e02a6",
+        "v13-validation-e590095258a8c8b01a4f",
+        "v13-validation-ae8f3aa5d43263a291f5",
+        "v13-validation-a0f4fb6db3fd943bc538",
+        "v13-validation-d4353b12928c06c62de7",
+        "v13-validation-81e7ec81e46d4eace185",
+        "v13-validation-38f4f71e36f79ae9e4bf",
+        "v13-validation-8346793920a4e3555aaf"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0002.pt",
+      "sha256": "232b070d4eaaa1ac00d5b6f16f885bea3be92360f30f33ffb2fde1f07f6f904f"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-05b16f2ddc0eb3bb0927",
+        "v13-validation-52db75646ce07457b63d",
+        "v13-validation-dd9930b6d83c7bdd8c46",
+        "v13-validation-5b387b3d51d51a6d7793",
+        "v13-validation-4995812e71a3f0fdf003",
+        "v13-validation-12e6f0ca1317cd403d90",
+        "v13-validation-f11e37faa88c5e2a2705",
+        "v13-validation-8306b8d4932af51a6343",
+        "v13-validation-b3250568651fcfdfb984",
+        "v13-validation-0a32c4dc8ce85d795cb1"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0003.pt",
+      "sha256": "4efd175a459369a177ae73c7fa45987584b66ae9563051efa20b3d9a3e43c0e3"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-128dfb66040a1616685c",
+        "v13-validation-23f918c842c062500a83",
+        "v13-validation-0bff420f70fc317a9557",
+        "v13-validation-5c3e806e96ae1d2d474f",
+        "v13-validation-a895cdb2f15c99bd0732",
+        "v13-validation-211d5b4edf99cb14faf1",
+        "v13-validation-a75c28225e73f8c2f21d",
+        "v13-validation-7ba0751f412e0ee13c00",
+        "v13-validation-b5c13904727aed2f8ecf",
+        "v13-validation-68754add50ee33fa5371"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0004.pt",
+      "sha256": "730258d36c291fe9eacb7c0d668fbd27fac7b66748825b16a99e141bbd70dba2"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-848d5007f9c33b51b1c9",
+        "v13-validation-f4ca44112e6df7fb836f",
+        "v13-validation-e711838e55fdfecca4a4",
+        "v13-validation-a8d65e457fc56a9ce6cf",
+        "v13-validation-0dfa4c5945ade8451b06",
+        "v13-validation-9002e0d0a20ab7e120ea",
+        "v13-validation-e4453d896548248f57dc",
+        "v13-validation-cd252be7b42cb617323f",
+        "v13-validation-35c7682883cf24a1e725",
+        "v13-validation-7fbf1bfdea7566701a77"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0005.pt",
+      "sha256": "706a4dbda8211affad7c5da71f893985d53c7f1c20338b273aa786617625dbf0"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-89cc3feb90632b9fce1f",
+        "v13-validation-1a3a677803c367a578e6",
+        "v13-validation-4126d29807a08be95dbf",
+        "v13-validation-3e0dcb5a1d9e67b654c1",
+        "v13-validation-fb0aff1f6bf547e1340c",
+        "v13-validation-b537d615a02cd128763a",
+        "v13-validation-14dfb6645009e9b28e85",
+        "v13-validation-1733b1bc977c13e18e90",
+        "v13-validation-421271d2ff785d9d5171",
+        "v13-validation-9713c4038c2b352c3662"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0006.pt",
+      "sha256": "6368c64fd3e0bda368456f9403d890aa86f26705ca08a8f0e03b522a41a30caa"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-7648b9970e4207cb914c",
+        "v13-validation-1c50553c26dec8be86f9",
+        "v13-validation-f70cd03c35ae52256bec",
+        "v13-validation-e88c7cb88e8dd939da89",
+        "v13-validation-474b78d9029d5ae7ef04",
+        "v13-validation-a9f42964525007dced8c",
+        "v13-validation-17d7a3b5943bb0c6d30b",
+        "v13-validation-88a57903bd4ae73d7f54",
+        "v13-validation-5c3b9a5bdf0f4289d03b",
+        "v13-validation-b4bbd75d608a671782d3"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0007.pt",
+      "sha256": "2d47fb41caa2072c4c9b5340e2ef2dbd21b2ab07d75b73d381490feed6835a8e"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-3847eb74323daaa7de48",
+        "v13-validation-b1ffffaafa4df72991ff",
+        "v13-validation-080c44bc9c2f581b8115",
+        "v13-validation-bc25eb27aa942f07a9f4",
+        "v13-validation-e7e9afc55ab61abcff4f",
+        "v13-validation-bda3809517fd2849e917",
+        "v13-validation-1462109ddda03eafdab2",
+        "v13-validation-01905ef67be4196221d1",
+        "v13-validation-57b2358fba5f19b3ce34",
+        "v13-validation-4e8fb1f3c82266e15b2e"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0008.pt",
+      "sha256": "1b4b031513f471e532d421bff8d07f16281d77c767c5e48c0742b84938353ff1"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-63fd7b9f2a86d2db93cc",
+        "v13-validation-6a813aadad50bc513576",
+        "v13-validation-f6f8f7e7a9210a9d983c",
+        "v13-validation-bb24329f0903db162986",
+        "v13-validation-f778119fa5444cddf184",
+        "v13-validation-e53443e6e2a288c167fc",
+        "v13-validation-6eb26a0fda68f8ae7f27",
+        "v13-validation-299fd30f23968fb38bbe",
+        "v13-validation-cfc741a4621ae0dc1a63",
+        "v13-validation-c9e1e6884fd336a48a4b"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0009.pt",
+      "sha256": "a418c38a789e65161f076358a96a15e7b9eebb7745d660bd3ca164f007eea0a6"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-404fa2636d8cd60b36e1",
+        "v13-validation-25618d127046cf856d8a",
+        "v13-validation-213a9cd7b9edd6239feb",
+        "v13-validation-f29303bdc6aad9e7cbba",
+        "v13-validation-d68c6571e500dbee4f8d",
+        "v13-validation-c3fc21305e050472ecd5",
+        "v13-validation-0a8237629ba47d00c216",
+        "v13-validation-855bc2498bc2674ff25f",
+        "v13-validation-eeba620e267cbe5d7119",
+        "v13-validation-c7d477c6b383b2116331"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0010.pt",
+      "sha256": "e442a1e2f54c8943619da2bf4bd042eef488ddc1c5e31cf6fdf2b0a745c2faaa"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-2f010aa995803e05fdef",
+        "v13-validation-94a45b937b76ead09349",
+        "v13-validation-9737025bff5720dc512a",
+        "v13-validation-8566f5864a64a447a6a9",
+        "v13-validation-a76b9aff66d771c256b7",
+        "v13-validation-6e65acd55db697f3e071",
+        "v13-validation-807ded1335bfc718e38d",
+        "v13-validation-8fdc7029f6070b49f5ee",
+        "v13-validation-05d731c8f0bdc2e968f7",
+        "v13-validation-95ff87267da7a65cd3d1"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0011.pt",
+      "sha256": "9f4751a05e5128607c3b4be645af4f7f690aa1150699f8226368058c9cec34cc"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-bb4faf8a7424e1644164",
+        "v13-validation-bc7503d1bf96b410188b",
+        "v13-validation-ca9eefd79d6d1b718181",
+        "v13-validation-43d85b3d07f59d8242e7",
+        "v13-validation-221658197c7d8e02c57e",
+        "v13-validation-17607204aff6a50fafb8",
+        "v13-validation-ae46438d746fbfb73bde",
+        "v13-validation-77efeb93eb499a982a5f",
+        "v13-validation-45b1e6b899846030b689",
+        "v13-validation-e90c994fddc43c7448ae"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0012.pt",
+      "sha256": "187d77902c8f6634278eb99e3c3cc94b92fcea58f474ba109702d4d07bab9ac9"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-32446430c82202b60325",
+        "v13-validation-642fb8ab3a44b9483d3d",
+        "v13-validation-74ab49a3109d8f3eaf9d",
+        "v13-validation-01738d754d1e67f5a86c",
+        "v13-validation-f13d33d005e3089d6c2c",
+        "v13-validation-6f4a0b848729d39d2dc7",
+        "v13-validation-55f19b70c547a4c3a324",
+        "v13-validation-c9481643002aa3edc769",
+        "v13-validation-ff5ce6f872cae5bc2d2d",
+        "v13-validation-eb4b511a5e93bccbcf7e"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0013.pt",
+      "sha256": "35ac42c3e0190bf7c73a03bd155cb5464fefb8792490962202a310b2f5ff3c64"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-224a05dfbb7332466dc7",
+        "v13-validation-f4b6cd4574b62d8d173b",
+        "v13-validation-7e03a0db90f25b4d5aad",
+        "v13-validation-c65900a71bb6faf080e5",
+        "v13-validation-7048a5945f882d02f64d",
+        "v13-validation-bfdb41bb30833742653c",
+        "v13-validation-c261575705156736ad4c",
+        "v13-validation-917a26dd0a429447b36c",
+        "v13-validation-829fb8ff63a43993579e",
+        "v13-validation-479ffb7174daf8fe2489"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0014.pt",
+      "sha256": "e2f68ef1061408b2ba4f7874bacb3fbd12f0db6b0d9d795bdf25486b1fb9b7e1"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-83ed19834c97b93e6ff5",
+        "v13-validation-b5b774a50ffc539b970c",
+        "v13-validation-c1c782de39fcffc2cd79",
+        "v13-validation-eef3acb1fd88009d323e",
+        "v13-validation-ce27a33768bd3b37517d",
+        "v13-validation-cd7d96b25af43ae032ae",
+        "v13-validation-82f290631067b7eaf622",
+        "v13-validation-71608f3192587bd473f5",
+        "v13-validation-94e599eb9c47571c633d",
+        "v13-validation-f94df929244a82a0006c"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0015.pt",
+      "sha256": "74f700865612626ed66856e4436191c456c4a9a1506404c00c2ffc7a100257be"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-d95aebdd9f979ca935a9",
+        "v13-validation-59b9dfd3589598ad9405",
+        "v13-validation-1fff680d8c79e8f6101e",
+        "v13-validation-253cf50776ef3871350a",
+        "v13-validation-38bbe9e836a1b7227935",
+        "v13-validation-426f720ee8dcd1750cfd",
+        "v13-validation-ddd60c9ebdc90f40e182",
+        "v13-validation-49e7e6eff76c21179b53",
+        "v13-validation-e71144ef5aa6ed40aead",
+        "v13-validation-0ae7922658c4599bf42a"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0016.pt",
+      "sha256": "79d813de61556f640815a6571ef4b27d717f4621b7d47e6610e7d01adad210a8"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-66e2c65b484fe66fa745",
+        "v13-validation-29483f35aacd278fb5c9",
+        "v13-validation-a8ceff803d9dd7f86125",
+        "v13-validation-da656c0d744077872a6a",
+        "v13-validation-b805531c517c94a87c37",
+        "v13-validation-46fbd300d6923d2ded62",
+        "v13-validation-8f6af8af7a6549afa206",
+        "v13-validation-01c0dafbbc339d5eb895",
+        "v13-validation-bb87f7dd06f394c10e90",
+        "v13-validation-bd13e5217c3bfc437f5a"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0017.pt",
+      "sha256": "8983b3ef25d933f01c5264b38cae2a12c29cae6ce0b9fc084bf9c3f5d74d1fc6"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-e48e62ae86bb302d43f8",
+        "v13-validation-daa3512cf39c0db6f6a9",
+        "v13-validation-471d78fc233fff620390",
+        "v13-validation-67e086136a122d45b099",
+        "v13-validation-755a78c318476f660a70",
+        "v13-validation-a5c2781c0a4e882eb7b3",
+        "v13-validation-8f88b2ae98319d14f489",
+        "v13-validation-56e486ba12e64a7b467d",
+        "v13-validation-e61fe2fc58c6749d6782",
+        "v13-validation-dc6b5b7eea54b8508a85"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0018.pt",
+      "sha256": "14b6c42eb97fd40d59ed924e7e95c4537dbf89ed5f4a5642ff30f2361316a3b1"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-6dabc51b7e70cb3f9c6d",
+        "v13-validation-597e7f6b4aab7d92d1a4",
+        "v13-validation-d94076dc727db46a80c5",
+        "v13-validation-2b4de293d53ae6d833b0",
+        "v13-validation-564218a81ebb3ba95494",
+        "v13-validation-dc173bd56c3324a70646",
+        "v13-validation-b32c5790f2acaf44683d",
+        "v13-validation-eff0218c70c1f5862910",
+        "v13-validation-8144b0c3c9690d419235",
+        "v13-validation-e493904837459951a121"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0019.pt",
+      "sha256": "22b67bf0c394ddeb4893f5ac174472a5aa314a778212a54c434ec3cdb92f71e4"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-c879c4c3d3c318210897",
+        "v13-validation-6652c9086ecd00164bd2",
+        "v13-validation-b7f1380b1ae60dd2b57b",
+        "v13-validation-38b89c57d05ff81d558c",
+        "v13-validation-1b473acbdeb54d90c895",
+        "v13-validation-47ae10e547fca69f9d3d",
+        "v13-validation-36193310fefa84467e1e",
+        "v13-validation-f9a60eb6ed325c6dd812",
+        "v13-validation-5c9a98c5144a4c16b30b",
+        "v13-validation-821652e06168d9046b05"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0020.pt",
+      "sha256": "56d2ae8454b7f643d2f55f876558f3074e2b4a82f6303247e2d143aa4d53e8b4"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-402265bff531b740a591",
+        "v13-validation-1150f194d23365371978",
+        "v13-validation-0a87fd340da29c5c8170",
+        "v13-validation-ac6ad067e319b99a1fbf",
+        "v13-validation-63b6bab6a3fec04adc63",
+        "v13-validation-3c0a3104a71b55e058e8",
+        "v13-validation-d33d3c558a7d4e92bd99",
+        "v13-validation-ba8043bd6818203c3966",
+        "v13-validation-5352dd0637fb3d46ec03",
+        "v13-validation-2e3af9ded272c695ab5c"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0021.pt",
+      "sha256": "9a9ea6bdafde1de6edb8ffe8b4d0f72e575bec5ec6088c99032e04dd683c36f4"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-45fcff55cb78d5989963",
+        "v13-validation-01448449182a942eaedc",
+        "v13-validation-1e9a3171c869122f0b02",
+        "v13-validation-b8e9011f523c8ed9f473",
+        "v13-validation-038581198b66689562db",
+        "v13-validation-08eaf2ac75b88b35bd47",
+        "v13-validation-94c0d71db2168996b878",
+        "v13-validation-c76c95344d53d3e69a5d",
+        "v13-validation-eed4e037c02f821c4003",
+        "v13-validation-bee803d52f2f81cf9a47"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0022.pt",
+      "sha256": "2b37dc8c6e38831d83d56762865c7ee5d7d5bd2c0c60daed429779ab217c6411"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-1262f1a748d5affe866f",
+        "v13-validation-186d8f80fd64f3529738",
+        "v13-validation-50c61d6af65d59ec6c06",
+        "v13-validation-0fdf64cf023c6264d4de",
+        "v13-validation-0ab69631eab5f0193a95",
+        "v13-validation-174417864cf9e2c12c88",
+        "v13-validation-5181cf3c972ff15b8d93",
+        "v13-validation-2e68b92b780d1491b5df",
+        "v13-validation-6d58b0c4d81337780d54",
+        "v13-validation-a92a44b4743c86437560"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0023.pt",
+      "sha256": "5ab7876013705b37ae5ee43c29d78d8bc00a2cb18cdd74fdf723494f40140f39"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-dee3d3163d9bc40a9b6c",
+        "v13-validation-6e2ae455d409a474f9ab",
+        "v13-validation-183cdbe3ed58a920d734",
+        "v13-validation-321569388285d8efa73a",
+        "v13-validation-eed1ec8e5a6f4ab4b014",
+        "v13-validation-503473530e09fac83d5f",
+        "v13-validation-c6e14ab772552a53abf2",
+        "v13-validation-8a7bfe2e05bb7d7e22d0",
+        "v13-validation-51a2830e52549eca5e1a",
+        "v13-validation-004558750b625a6dacbf"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0024.pt",
+      "sha256": "1981969424b01951090b114bc8cc302b2351bf1a4ffbedf95b49d4b2976e0478"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-8bdadb644251c3ec2e49",
+        "v13-validation-53e9cc149a823a468503",
+        "v13-validation-f6815d085cb6ffea263d",
+        "v13-validation-4b7f3291dd64ff1195a5",
+        "v13-validation-60be2a92164366c1583e",
+        "v13-validation-4ddd7a7d0d9fbcdb5de0",
+        "v13-validation-fce3daadf976892e51d6",
+        "v13-validation-9e5be13c4725332080a9",
+        "v13-validation-5f4cc4cb4f7e01208c45",
+        "v13-validation-7cb5032eaaadc3b090bc"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0025.pt",
+      "sha256": "a7872227d0e797b9f51b1ae344d862ae1030011c48ec40f0d8e20e41b368245f"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-f8009ccfe210359f254a",
+        "v13-validation-1a7fb3fbed142677abf2",
+        "v13-validation-8ca67623835520889ecd",
+        "v13-validation-9ccf4c996946a99b74ad",
+        "v13-validation-dd275d1a8cc0efc047ca",
+        "v13-validation-9dcd52bdd025141be316",
+        "v13-validation-bbac0a971e9c1241f909",
+        "v13-validation-d16cd3528e19cb38a338",
+        "v13-validation-deee9ec032ec406f93df",
+        "v13-validation-d520a8d71efeee5ea78a"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0026.pt",
+      "sha256": "b348bb30ceca38db6fb6c297a79fae79d0afa26f2de61ddd56bf56e4c02d2045"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-9857d9dbb76cceb1b2db",
+        "v13-validation-ba2839b02e03a52c1090",
+        "v13-validation-385b9b3352db351e2fbe",
+        "v13-validation-56f11f9b334c8f73e760",
+        "v13-validation-e2b0e87c796ef24aef62",
+        "v13-validation-8865b614fcf87df97b51",
+        "v13-validation-4430ec4c5518bfe91d81",
+        "v13-validation-fa8d66c5a7c3ee392350",
+        "v13-validation-2f99b720ac61a629e2c0",
+        "v13-validation-d187ec5247fcbc5f3609"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0027.pt",
+      "sha256": "da32bf913a07f1b832a6ddc51516ffd4226054fd389c691fc27971428d3e6a96"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-552e96c65bf194798c31",
+        "v13-validation-2079cbf0970a6b15ce66",
+        "v13-validation-679027b6c556f22c2786",
+        "v13-validation-01811a7776d145e954dc",
+        "v13-validation-94729c74990dfaac8159",
+        "v13-validation-e2f53bb2a9e7d0815137",
+        "v13-validation-b5cacc39bde250b8bf19",
+        "v13-validation-796e6e8d3fa7fa35b2a2",
+        "v13-validation-723726543684e2c5860e",
+        "v13-validation-fadcd773f02555aca77b"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0028.pt",
+      "sha256": "f3bc3a93cd0184e4c3f17c8648e2a7f8716ae61333b1c5b1c1a26e9940d056f2"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-b9a65128288907ce5a74",
+        "v13-validation-3c25adc6d4cc51351185",
+        "v13-validation-afb44cd0e66ee0ccb960",
+        "v13-validation-23af8ce55b65e33d1c1a",
+        "v13-validation-60a1c68642e7267561a6",
+        "v13-validation-73ec492fd502da54cdf0",
+        "v13-validation-cbf79838ac490df09d68",
+        "v13-validation-b2e4fb3a868711fac30d",
+        "v13-validation-ea7e11c3497784a04736",
+        "v13-validation-67ddd9205eb97f11f011"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0029.pt",
+      "sha256": "2026a372f8cb417545873bd6c99aa09bcf4983eb37950ba98bf983a9dd90a45a"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-c3c4c356183d12e83e9c",
+        "v13-validation-ae47df4b124b4299a3ce",
+        "v13-validation-cee8faf991bf5738b47e",
+        "v13-validation-0cd9859d57d9007981bb",
+        "v13-validation-4c1176c8692192549d95",
+        "v13-validation-efc78b11508e70364f7c",
+        "v13-validation-33b2327241e2768854d7",
+        "v13-validation-6932a058d0d59f4482d0",
+        "v13-validation-636c0d8aa46c13cde738",
+        "v13-validation-cd67ad4a8338615616f9"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0030.pt",
+      "sha256": "007b50c8ea9ce851b243565e72d557810671416d43eedb7bbfd9a75d629d2993"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-54d8c559d3284d582211",
+        "v13-validation-8ebd4077f3c548360712",
+        "v13-validation-572620683928d47d21c6",
+        "v13-validation-ccee6887337d8297825c",
+        "v13-validation-b6d89d92a3c30cec41e4",
+        "v13-validation-0b3256edcc9bbed9e1a1",
+        "v13-validation-1607e252b4b7e859618b",
+        "v13-validation-ad258b8099398c7e3637",
+        "v13-validation-260ad5dc196ed0d99949",
+        "v13-validation-4f4b35a416cfd7af1978"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0031.pt",
+      "sha256": "5d8267ddeb2f91adc042025dde1465d0f2ce8ccf64e1501737aac7a8ff07f908"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-df9a2a9451246a96d28d",
+        "v13-validation-526ec1b89ad430c96e60",
+        "v13-validation-a09bfeea7e64f40a7295",
+        "v13-validation-5781d26e1a5e73dd6481",
+        "v13-validation-e522e07b37c1e5a8c5e4",
+        "v13-validation-ee24579033f8d3fe5492",
+        "v13-validation-34b81b1528b0a6bae0f5",
+        "v13-validation-9d02fcc3d145fa183a61",
+        "v13-validation-529b278b9950f75adbe7",
+        "v13-validation-d9ed9887a6e4df845206"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0032.pt",
+      "sha256": "9b1d9a35171bb93a955ab0c6121319d898708366897d60a0f10b4c72bd4594cf"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-f551d08df9ba8be95d83",
+        "v13-validation-c5dc5cdd722b791f0a45",
+        "v13-validation-5f87d3b088e34044e75b",
+        "v13-validation-204a9fa1c9223fa1b90f",
+        "v13-validation-ab182d263c555f38e5bb",
+        "v13-validation-2403886a383e964e5b9c",
+        "v13-validation-9d26bff8ca78ed8f9807",
+        "v13-validation-38fac4949345c01feb49",
+        "v13-validation-5ee199fd8409bef3591d",
+        "v13-validation-e3d7d2510abe5df35594"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0033.pt",
+      "sha256": "9f1ca53c1750826e78f1cb0ab48d7d1e06f2ff1413e5b1a006db260e1d42e00a"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-1c00a3eb730ee66cb951",
+        "v13-validation-87818607141de2434723",
+        "v13-validation-4a82e5de3e3915349b03",
+        "v13-validation-ca9a3517d074f1e09542",
+        "v13-validation-c29fad34c539730cca3b",
+        "v13-validation-3d9e1ae1eee26590be9d",
+        "v13-validation-598badd95f2d2a129376",
+        "v13-validation-8caf15b2b4fde2ecc510",
+        "v13-validation-846ab80ffc85250ed88d",
+        "v13-validation-298bb4e7a1a2bc1de65a"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0034.pt",
+      "sha256": "277b8083636c4a7e013d99a4bb2756caf229d7954529691634a9371641931bec"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-c887e521e22eb39d15d5",
+        "v13-validation-e1b01ebc6f9d71937800",
+        "v13-validation-e357808d3ce03aadf380",
+        "v13-validation-99ab007178248ea487f1",
+        "v13-validation-75fce876535827823c39",
+        "v13-validation-2299353f3486b607ad97",
+        "v13-validation-39ac06febc03317a60f6",
+        "v13-validation-86bf6e7eb0c9e8bd11f0",
+        "v13-validation-6e9e8472955e9d77977f",
+        "v13-validation-80d3cf570eb9be3f13b6"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0035.pt",
+      "sha256": "1b75f8bdc70aee5953e758286e6c9cbc64ac985baaf7cab000a85c629bf0b75d"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-b3dc05cb85574c6c1721",
+        "v13-validation-092ad96801f993d5aca9",
+        "v13-validation-4ce1faeae83fe141d657",
+        "v13-validation-2b888030fe710c2cfcec",
+        "v13-validation-a1870542ff6a211e62ec",
+        "v13-validation-6b54316cade0d37a22af",
+        "v13-validation-c71e88c4584d6751beab",
+        "v13-validation-247ef082bd4533273be8",
+        "v13-validation-a114cb923add225bab17",
+        "v13-validation-b367090876b33ed19cb5"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0036.pt",
+      "sha256": "dfb8b3acabe293439e351edb7183b51975fc066c755df15bf8b3d57b1869938d"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-013feec34acd8447ec38",
+        "v13-validation-5394c1a6f372602fbdbb",
+        "v13-validation-c79ce66595fc2ef5070f",
+        "v13-validation-17e47bfb3fbc324d6e0e",
+        "v13-validation-86d68cbed55b15602cf3",
+        "v13-validation-45efaeba89d430e27002",
+        "v13-validation-69e8703454b4891d9fb5",
+        "v13-validation-216816cb7da5fde7da65",
+        "v13-validation-f3700f12bd1f043d7bee",
+        "v13-validation-56f0ce6639717a3b1712"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0037.pt",
+      "sha256": "f3bd1ae60c5e22e909b4931466fe3bb0530731f64fec190ccdde9f752f48c14f"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-489209421fafd421ef03",
+        "v13-validation-0c8c454b7f3dc6a05b41",
+        "v13-validation-b20230d134d9a22c3584",
+        "v13-validation-51edbf93ee4cb8558e28",
+        "v13-validation-d1dd38507fb1f275a418",
+        "v13-validation-2bfe95cbc048059f6987",
+        "v13-validation-c09f76760cd6555bca3c",
+        "v13-validation-7d5786141b8d35027858",
+        "v13-validation-67bc6f03ebc579d51d49",
+        "v13-validation-7d28432ec495473c1e25"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0038.pt",
+      "sha256": "90ef1fa44025f55e30536a49839d75eec2409f09ebb47d0c69f8ca5f7da5ea05"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-0885d27f00e45d73ee7c",
+        "v13-validation-766c4d289e0861aa746e",
+        "v13-validation-1a84012f5f4055a00e7c",
+        "v13-validation-ba60ca0dce4c86d7ec2f",
+        "v13-validation-b4873d35863863f525db",
+        "v13-validation-9163c02f6de86312592e",
+        "v13-validation-9540e6f5e52b1ecf259d",
+        "v13-validation-4b6684bf05c243f607ff",
+        "v13-validation-bb2313576a1812a75160",
+        "v13-validation-ecb101834d6748194874"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0039.pt",
+      "sha256": "8962ffad0b3e734216af80a6f6d0a08a3ea64db315502dc46b03b393a5ba8499"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-cba292296a871449caf1",
+        "v13-validation-2842679b565469090752",
+        "v13-validation-15cd9c8f2d67e26e5ba0",
+        "v13-validation-600701d6e333433ca19a",
+        "v13-validation-23d4782e40a3eef6d1aa",
+        "v13-validation-4612ce6e9997ed21df54",
+        "v13-validation-30ad4e00da5d7d358947",
+        "v13-validation-c6cf92739b12c03555ff",
+        "v13-validation-8d41544f3b6fb921b721",
+        "v13-validation-fbcce5769e9c73c965ce"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0040.pt",
+      "sha256": "e4d6305dd8bf4340eaa7977434d76fc4dad1c89795fc6f6b011de6b34b212888"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-a439a3f577028a5c14fb",
+        "v13-validation-b3d441d6e0197acd65e2",
+        "v13-validation-381454fcbd8995d43ba9",
+        "v13-validation-006efd77b166c04b2abc",
+        "v13-validation-51ded46b2c092ebf008e",
+        "v13-validation-e5a8aafcd733bc6df2aa",
+        "v13-validation-f738d918ba1d44618f78",
+        "v13-validation-a4b1e2f03bc76d7becf1",
+        "v13-validation-0f4f2eb06fb38ca9873c",
+        "v13-validation-d120675fbd1a885d568a"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0041.pt",
+      "sha256": "fd43d2d464bfa14c8adb8a9534ffa52703012f725e908d65eb75cf22292468ef"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-bbc92ada6c38882a2735",
+        "v13-validation-773f5279574cee0b3784",
+        "v13-validation-3153dbe0153d1fc263ca",
+        "v13-validation-4ec2d93c56ac6de09223",
+        "v13-validation-229689e52ac071e2c625",
+        "v13-validation-4604a8a37e8bbd14c574",
+        "v13-validation-c033c0d568ac82ee1b52",
+        "v13-validation-9a4add8397d7f9f57dad",
+        "v13-validation-1387459168f3b7af9c13",
+        "v13-validation-6c1aff3311ac6cc9cac9"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0042.pt",
+      "sha256": "e3b61401881d40e667474ac3ab0adfb3b1a3f631aae5689cc58145751a386ca0"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-49f8fdc291b4114bc8b9",
+        "v13-validation-e6021811b9e8865b959e",
+        "v13-validation-50f20745f2e15417ed98",
+        "v13-validation-89c51a45abf3a5818ec4",
+        "v13-validation-9a0ce75a396b88860677",
+        "v13-validation-19fba22bd88f12e43796",
+        "v13-validation-d2c6e65e0b99a9ca20b8",
+        "v13-validation-975ee01949837864ff26",
+        "v13-validation-16f5280e9502153a001c",
+        "v13-validation-e22e4a64689e26f1038f"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0043.pt",
+      "sha256": "ed88a4d75412a2995a3f67404fc7e37a5767aa35a400db61c78497712a2eba69"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-f66d9eafc2a5341e428e",
+        "v13-validation-a6aa029ba76a8130a9a9",
+        "v13-validation-c6c0084b91890d752d51",
+        "v13-validation-0a634a3677f08804f599",
+        "v13-validation-5191e867ada03ad15f07",
+        "v13-validation-0c005f28b9c0565a8b51",
+        "v13-validation-3ae52485c242896cafcb",
+        "v13-validation-9449f758e6884d93c280",
+        "v13-validation-712432fa94110ead70f0",
+        "v13-validation-8455e26f4027addff1ec"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0044.pt",
+      "sha256": "2e5d3f5a5cff74d156e67fba0a6c951f5d24dba4cd9c398da3a795e438ba8f4c"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-3fa9fc10f69be4d9ffe2",
+        "v13-validation-d0b23670f1eb273d8e72",
+        "v13-validation-fdf3f4774e9cb1e010d0",
+        "v13-validation-893f93276fa435d7b59d",
+        "v13-validation-cfc21994c03b7954a59d",
+        "v13-validation-2d60123b80adeb90efc9",
+        "v13-validation-0933b815eb01c38e23c7",
+        "v13-validation-c262206014d4d318c054",
+        "v13-validation-7a520674021b4fb1810b",
+        "v13-validation-bf4cd31d3d30bf526a14"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0045.pt",
+      "sha256": "de72d49a92fcdc1d18406eab2cde72f4cafcfd4ae330980334558aca436c163f"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-4d5f700934e1f858412d",
+        "v13-validation-c3145a268dca901a4513",
+        "v13-validation-02ab5f865a86e9d07cae",
+        "v13-validation-3993c3797eac7537d494",
+        "v13-validation-5598cc6b6308a241e338",
+        "v13-validation-3e1edd8a243a509e44f8",
+        "v13-validation-9028000a6aaa5a3233f2",
+        "v13-validation-302b28507225e25f151c",
+        "v13-validation-40d4731a28c9d26002aa",
+        "v13-validation-fad392f7cbae09a42bff"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0046.pt",
+      "sha256": "ffafd570120db910b5032ca8c7fc35821c1a44aacf9aaea8d77b53eb633ea692"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-70023743ee97ae2a3926",
+        "v13-validation-108db015bab1935a3e55",
+        "v13-validation-750d7688ab13f4f575a9",
+        "v13-validation-33e0454da1872a3e7df0",
+        "v13-validation-ec4d548c029f11f865f3",
+        "v13-validation-274a8cbb91d9da00ab07",
+        "v13-validation-382bf334fa9a9db26ae4",
+        "v13-validation-fe6ff6daa4b73eaf5795",
+        "v13-validation-4a3d499e164c5d1f9a1f",
+        "v13-validation-a9fc258957ff8e863c74"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0047.pt",
+      "sha256": "8bbc2534606a1a6a52061c0889ca7868b47c2cf2add6d5a9f97da7f4af16c950"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-1bfab23f4c2577888e1a",
+        "v13-validation-a8db30a9ce5733087d60",
+        "v13-validation-5a8fe65fbc9edd244e86",
+        "v13-validation-d362630c0a25f900dcdb",
+        "v13-validation-8aacb92f273613d8e99d",
+        "v13-validation-423aa4444ea4b2729d7e",
+        "v13-validation-46a61d83c22fddfa288d",
+        "v13-validation-007b355d2d41f4b05f69",
+        "v13-validation-2ef0e797b72a9f977341",
+        "v13-validation-87efd1a896a90a9e8d9f"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0048.pt",
+      "sha256": "bba54234650acf6658df870d3909971347f755648fe645f2f2c901ba26796f5b"
+    },
+    {
+      "base_trial_ids": [
+        "v13-validation-b2f03891ab9f7af2f0f5",
+        "v13-validation-9ee8d62aaf1b9128d435",
+        "v13-validation-2310f15d3ab0f2305510",
+        "v13-validation-0e452298d931061d93a9",
+        "v13-validation-d20629e61ce6e9b2b9c8",
+        "v13-validation-67c2af31b374dc30fa54",
+        "v13-validation-21cde6693b49fc18ace2",
+        "v13-validation-7c7b023a8dd3cfd27162",
+        "v13-validation-71bfc9d552172c4916a5",
+        "v13-validation-adf205feb34bdf5c5e31"
+      ],
+      "count": 10,
+      "path": "artifacts/causal/v13/bank-v13-20260917T032238Z-7bc7c600-s20260828-capture-validation/validation/state_shard_0049.pt",
+      "sha256": "52d297695ec97a69a13106f9b4d3fc4f9687502619d9063f87bd7053e01a5b07"
+    }
+  ],
+  "target_per_family": 100,
+  "valid_count": 500,
+  "valid_counts": {
+    "boolean_logic": 100,
+    "modular_arithmetic": 100,
+    "short_graph_traversal": 100,
+    "simple_state_transition": 100,
+    "variable_binding": 100
+  }
+}

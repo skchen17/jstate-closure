@@ -1,0 +1,28 @@
+{
+  "confirmatory_used_for_selection": false,
+  "freeze_digest": "17b5b0ec8743d99a4fa5cbe91a7f5458fd97087f02c4d4c1991e57d84c61dd38",
+  "hashes": {
+    "artifacts/causal/v13/causal_features_v13.npz": "511623733a70354484db45b85586dfa9e1fab533d238aa92aa67fb8e1f4f02b5",
+    "artifacts/causal/v13/probe_directions_v13.pt": "77aeccb5dccaef52c444d94b65797a18ce2984c76b6655e8a90714976cf51891",
+    "results/v13/processed/causal_features_v13.json": "33320cfe55b2a18516a0b4ee99eb9669c5184f56cf9019b609069768425f969e",
+    "results/v13/processed/data_dimension_scaling_v13.json": "0269ac94933c6b120603b1a92c426a4ccb2583d382bc936f7ae3ac2f8fe6af5f",
+    "results/v13/processed/data_dimension_scaling_v13.parquet": "6c689660c3c75ebf6e749aaa9fc40268e33c33bc00ab7eaf691979e5b14fa810",
+    "results/v13/processed/probe_directions_v13.json": "2a98ff65431c7c1e8cf43f3c34ec999b15cc4194edf246331bb29e7e9ecbc5b4"
+  },
+  "parent_freeze_digest": "98066eedffd1255db439f99f0689aa26bb91659f06242f796658bf9b8324ba85",
+  "probe_sizes": [
+    64,
+    128,
+    256,
+    512
+  ],
+  "protocol_version": "causal_path_geometry_v13",
+  "purpose": "freeze V13 mixed probe operator, scaling records, target bundles, and atlas anchors",
+  "schema_version": 22,
+  "target_bundles": [
+    "j_only",
+    "j_logits",
+    "j_logits_semantic",
+    "complete_workspace"
+  ]
+}

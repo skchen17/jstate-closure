@@ -1,0 +1,2008 @@
+{
+  "command": [
+    "/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/bank_v13.py",
+    "--stage",
+    "guard",
+    "--run-suffix",
+    "guard"
+  ],
+  "config": {
+    "causal_geometry_v11": {
+      "authorization_horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "baseline_commit": "10c24a475852ecf6370c8ad0d5e1cae5ad3cc92e",
+      "bootstrap_resamples": 10000,
+      "causal_gates": {
+        "direction_cosine_minimum": 0.8,
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "output_direction_minimum": 0.8,
+        "semantic_delta_agreement_minimum": 0.8,
+        "task_decision_sign_minimum": 0.8
+      },
+      "channel_audit": {
+        "conditions": [
+          "decoded_rec",
+          "decoded_conv",
+          "decoded_kv",
+          "decoded_rec_conv",
+          "decoded_rec_kv",
+          "decoded_conv_kv",
+          "decoded_all"
+        ],
+        "dimension": 512
+      },
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "confirmatory": {
+        "effect_enriched_per_family": 5,
+        "per_family": 10,
+        "selection_seed": 20270111
+      },
+      "confirmatory_method_limit": 4,
+      "decoder": {
+        "reconstruction_chunk": 65536,
+        "shard_size": 5
+      },
+      "development_source": "artifacts/causal_sufficiency_v10_candidates.freeze.json",
+      "factorized": {
+        "allocations": {
+          "256": {
+            "interaction": [
+              [
+                112,
+                72,
+                40,
+                32
+              ],
+              [
+                96,
+                80,
+                48,
+                32
+              ],
+              [
+                112,
+                64,
+                48,
+                32
+              ]
+            ],
+            "no_interaction": [
+              [
+                128,
+                80,
+                48,
+                0
+              ],
+              [
+                112,
+                96,
+                48,
+                0
+              ],
+              [
+                128,
+                64,
+                64,
+                0
+              ]
+            ]
+          },
+          "384": {
+            "interaction": [
+              [
+                192,
+                96,
+                64,
+                32
+              ],
+              [
+                160,
+                128,
+                64,
+                32
+              ],
+              [
+                192,
+                128,
+                48,
+                16
+              ]
+            ],
+            "no_interaction": [
+              [
+                192,
+                112,
+                80,
+                0
+              ],
+              [
+                160,
+                144,
+                80,
+                0
+              ],
+              [
+                176,
+                112,
+                96,
+                0
+              ]
+            ]
+          },
+          "512": {
+            "interaction": [
+              [
+                240,
+                144,
+                96,
+                32
+              ],
+              [
+                224,
+                160,
+                96,
+                32
+              ],
+              [
+                224,
+                144,
+                112,
+                32
+              ]
+            ],
+            "no_interaction": [
+              [
+                256,
+                160,
+                96,
+                0
+              ],
+              [
+                224,
+                192,
+                96,
+                0
+              ],
+              [
+                240,
+                144,
+                128,
+                0
+              ]
+            ]
+          }
+        },
+        "objectives": [
+          "cache_pca",
+          "h1_direction",
+          "semantic_h1",
+          "output_h1",
+          "multistep_direction",
+          "effect_weighted_multistep",
+          "causal_composite",
+          "manifold_regularized"
+        ],
+        "stage1_methods_per_class": 1,
+        "stage2_total_methods": 6,
+        "total_budgets": [
+          256,
+          384,
+          512
+        ]
+      },
+      "horizons": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "manifold": {
+        "global_subspace_rank": 128,
+        "local_pca_rank": 8,
+        "nearest_neighbors": 16
+      },
+      "oracle": {
+        "dimensions": [
+          64,
+          128,
+          192,
+          256,
+          320,
+          384,
+          448,
+          512
+        ],
+        "families": [
+          "joint_pca",
+          "factorized_pca"
+        ]
+      }
+    },
+    "causal_geometry_v12": {
+      "authorization_horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "baseline_commit": "f5118642f12e3b60e22df52930610867773b108a",
+      "bootstrap_resamples": 10000,
+      "causal_gates": {
+        "direction_cosine_minimum": 0.8,
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "output_direction_minimum": 0.8,
+        "semantic_delta_agreement_minimum": 0.8,
+        "task_decision_sign_minimum": 0.8
+      },
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "confirmatory": {
+        "effect_enriched_per_family": 5,
+        "per_family": 10,
+        "selection_seed": 20271202
+      },
+      "confirmatory_method_limit": 4,
+      "decoder": {
+        "reconstruction_chunk": 65536,
+        "shard_size": 5
+      },
+      "development": {
+        "per_family": 10,
+        "source": "v10_development_bank"
+      },
+      "dimensions": [
+        128,
+        256,
+        384,
+        512,
+        768,
+        1024,
+        1536,
+        2048
+      ],
+      "horizons": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "jvp": {
+        "anchors_per_family": 1,
+        "causal_ranks": [
+          8,
+          16,
+          32,
+          64
+        ],
+        "energy_thresholds": [
+          0.9,
+          0.95,
+          0.99
+        ],
+        "leading_directions": 32,
+        "probe_directions": 64,
+        "selected_logit_count": 16,
+        "selection_seed": 20271204,
+        "target_horizons": [
+          1,
+          2,
+          4
+        ],
+        "token_positions": [
+          0,
+          1
+        ]
+      },
+      "local_geometry": {
+        "jvp_oracle_dimensions": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          384,
+          512
+        ],
+        "neighbor_candidates": [
+          128,
+          256,
+          512
+        ],
+        "oracle_dimensions": [
+          64,
+          128,
+          256,
+          384,
+          512
+        ],
+        "primary_neighbors": 512
+      },
+      "measurement": {
+        "audit_pairs_per_family": 4,
+        "mixture_epsilon": 0.01,
+        "raw_scales": [
+          0.99,
+          1.01
+        ],
+        "top_k": 10
+      },
+      "replacement": {
+        "dimension": 512,
+        "horizon_if_h1_fails": 1
+      },
+      "train_sizes": [
+        150,
+        300,
+        450,
+        600,
+        1000,
+        2000,
+        4000
+      ],
+      "train_subset_seed": 20271201,
+      "validation_panel": {
+        "per_family": 2,
+        "selection_seed": 20271203
+      }
+    },
+    "causal_geometry_v13": {
+      "authorization_horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "baseline_commit": "2b94a65daee29e5547530261194b7de34860df4e",
+      "bootstrap_resamples": 10000,
+      "candidate_per_family": {
+        "final_test": 150,
+        "train": 1500,
+        "validation": 250
+      },
+      "causal_gates": {
+        "direction_cosine_minimum": 0.8,
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "output_direction_minimum": 0.8,
+        "semantic_delta_agreement_minimum": 0.8,
+        "task_decision_sign_minimum": 0.8
+      },
+      "confirmatory_panel_per_family": 5,
+      "decoder": {
+        "reconstruction_chunk": 65536
+      },
+      "dimensions": [
+        64,
+        128,
+        256,
+        384,
+        512,
+        768,
+        1024,
+        1536,
+        2048
+      ],
+      "evaluation_panel_per_family": 2,
+      "horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "jvp": {
+        "anchors_per_family": 2,
+        "energy_thresholds": [
+          0.9,
+          0.95,
+          0.99
+        ],
+        "maximum_probe_directions": 512,
+        "probe_families": [
+          "high_variance_pca",
+          "causal_weighted",
+          "random_raw",
+          "low_variance",
+          "architecture_balanced"
+        ],
+        "probe_sizes": [
+          64,
+          128,
+          256,
+          512
+        ],
+        "selected_j_count": 128,
+        "selected_logit_count": 32,
+        "selected_workspace_count": 32,
+        "tangent_ranks": [
+          4,
+          8,
+          16,
+          32
+        ],
+        "target_horizons": [
+          1,
+          2,
+          4
+        ],
+        "token_positions": [
+          0,
+          1
+        ],
+        "workspace_layers": [
+          23,
+          26,
+          30
+        ]
+      },
+      "kv_analysis_tokens": 256,
+      "linearity_scales": [
+        0.05,
+        0.1,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "moving_tangent": {
+        "alphas": [
+          1.0,
+          0.5,
+          0.25,
+          0.125
+        ],
+        "atlas_neighbors": [
+          1,
+          3,
+          5
+        ],
+        "maximum_steps": 8,
+        "residual_threshold": 0.01,
+        "retrieval_metrics": [
+          "j_state",
+          "raw_score",
+          "frozen_state_similarity"
+        ]
+      },
+      "saturation": {
+        "epsilon": 0.01,
+        "practical_zero_ci": 0.01,
+        "required_consecutive_doublings": 2
+      },
+      "split_seeds": {
+        "final_test": 20270920,
+        "train": 20270918,
+        "validation": 20270919
+      },
+      "state_shard_size": 10,
+      "target_bundles": [
+        "j_only",
+        "j_logits",
+        "j_logits_semantic",
+        "complete_workspace"
+      ],
+      "target_per_family": {
+        "final_test": 50,
+        "train": 960,
+        "validation": 100
+      },
+      "task_seed": 20270917,
+      "teacher_generation_batch": 16,
+      "train_capture_horizons": [
+        1,
+        2,
+        4
+      ],
+      "train_sizes": [
+        600,
+        1200,
+        2400,
+        4800
+      ]
+    },
+    "causal_sufficiency_v10": {
+      "bootstrap_resamples": 10000,
+      "candidate_selection": {
+        "fallback_diagnostic_dimensions": [
+          384,
+          448,
+          512
+        ],
+        "include_reference_dimension": 512,
+        "maximum_candidates": 3
+      },
+      "causal": {
+        "authorization_horizons": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "direction_cosine_minimum": 0.8,
+        "free_continuation_requires_teacher_forced_authorization": true,
+        "horizons": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "output_direction_minimum": 0.8,
+        "semantic_delta_agreement_minimum": 0.8,
+        "strict_interface_required": true,
+        "task_decision_sign_minimum": 0.8
+      },
+      "conditional_residual_gain_maximum": 0.02,
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "confirmatory_subset": {
+        "effect_enriched_per_family": 5,
+        "per_family": 10,
+        "random_seed": 20261201,
+        "score_columns": [
+          "output_js_divergence",
+          "future_j_trajectory_divergence",
+          "target_log_odds_abs_change"
+        ]
+      },
+      "decoder": {
+        "reconstruction_chunk": 65536,
+        "shard_size": 5
+      },
+      "dimensions": [
+        64,
+        96,
+        128,
+        160,
+        192,
+        224,
+        256,
+        288,
+        320,
+        352,
+        384,
+        416,
+        448,
+        480,
+        512
+      ],
+      "gap_denominator_epsilon": 0.002,
+      "methods": [
+        "causal_bottleneck",
+        "predictive_bottleneck",
+        "pca"
+      ],
+      "predictive_gap_closed_minimum": 0.95,
+      "primary_method": "causal_bottleneck",
+      "requested_dimensions": [
+        64,
+        96,
+        128,
+        160,
+        192,
+        256,
+        320,
+        384,
+        448,
+        512
+      ],
+      "residual_audit_dimensions": [
+        384,
+        512
+      ],
+      "residualization_folds": 5,
+      "ridge_alpha": 1.0,
+      "semantic_relative_retention_minimum": 0.95,
+      "semantic_residual_gain_maximum": 0.02
+    },
+    "closure": {
+      "clamp_conditions": [
+        "single",
+        "persistent"
+      ],
+      "conditions": [
+        "clean",
+        "j_positive",
+        "full_patch",
+        "random",
+        "non_j"
+      ],
+      "future_min_layers": 3,
+      "max_attempt_multiplier": 10,
+      "perturbation_sources": [
+        "activation_difference",
+        "natural_collision",
+        "targeted_probe"
+      ],
+      "strengths": [
+        0.25,
+        0.5,
+        1.0
+      ],
+      "targeted_probe_min_score": 0.75
+    },
+    "compact_state_v4": {
+      "controller_parameter_target": 5000000,
+      "controller_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "dictionary_size": 4096,
+      "dimensions": [
+        64,
+        128,
+        256,
+        512
+      ],
+      "divergence_cosine": 0.8,
+      "early_stopping_patience": 5,
+      "families": [
+        "pca",
+        "predictive_bottleneck",
+        "sparse_j",
+        "learned_predictive_encoder"
+      ],
+      "histories": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "maximum_epochs": 50,
+      "maximum_predicted_feedback": 0.8,
+      "memory_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "minimum_causal_direction_retention": 0.8,
+      "minimum_causal_magnitude_retention": 0.8,
+      "minimum_semantic_retention": 0.8,
+      "objective_weights": {
+        "causal_retention": 0.5,
+        "future_prediction": 1.0,
+        "reconstruction": 1.0,
+        "semantic_retention": 0.5
+      },
+      "parameter_tolerance": 0.05,
+      "reference_remainder_dimensions": [
+        128,
+        512,
+        2560
+      ],
+      "rollout_horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "screen_epochs": 40,
+      "screen_patience": 5,
+      "teacher_forcing_fraction": 0.2,
+      "workspace_layers": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ]
+    },
+    "controller": {
+      "budget_tolerance": 0.05,
+      "counterfactual_traces": 256,
+      "families": [
+        "mlp",
+        "gru",
+        "transformer"
+      ],
+      "histories": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "lambda_answer": 1.0,
+      "lambda_counterfactual": 0.25,
+      "lambda_j": 1.0,
+      "max_predicted_feedback": 0.8,
+      "parameter_budgets": [
+        1000000,
+        5000000,
+        20000000,
+        50000000,
+        100000000
+      ],
+      "remainder_pca_dims": [
+        32,
+        128,
+        512
+      ],
+      "stable_dense_cosine": 0.9,
+      "stable_intervention_agreement": 0.8,
+      "stable_sparse_f1": 0.7,
+      "stable_teacher_accuracy_fraction": 0.9,
+      "teacher_forcing_warmup_fraction": 0.2
+    },
+    "data": {
+      "upstream_root": "data/upstream/anthropic"
+    },
+    "h2_replication_v5": {
+      "bootstrap_resamples": 10000,
+      "controls": [
+        "clean",
+        "identity",
+        "matched_random",
+        "j_positive",
+        "full_perturbation",
+        "j_preserving"
+      ],
+      "counts_by_family": {
+        "boolean_logic": 80,
+        "modular_arithmetic": 32,
+        "short_graph_traversal": 32,
+        "simple_state_transition": 80,
+        "variable_binding": 32
+      },
+      "dense_cosine_threshold": 0.995,
+      "dictionary_size": 4096,
+      "formal_displacement_fraction": 0.2,
+      "future_workspace_layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "horizons": [
+        4,
+        8
+      ],
+      "initial_strength": 0.25,
+      "layer": 23,
+      "null_js_floor": 0.0001,
+      "position_scope": "final",
+      "protocol_version": "h2_family_replication_v5",
+      "rms_drift_threshold": 0.02,
+      "seeds": {
+        "evaluation": 20260925
+      },
+      "target_valid_by_family": {
+        "boolean_logic": 32,
+        "modular_arithmetic": 12,
+        "short_graph_traversal": 12,
+        "simple_state_transition": 32,
+        "variable_binding": 12
+      },
+      "top10_overlap_threshold": 0.8,
+      "variants": {
+        "boolean_logic": "binary_xor_pairs",
+        "modular_arithmetic": "increment_1",
+        "short_graph_traversal": "directed_cycle",
+        "simple_state_transition": "toggle_or_keep",
+        "variable_binding": "four_way_lookup"
+      }
+    },
+    "jstate": {
+      "concept_vocab_size": 4096,
+      "dense_cosine_threshold": 0.995,
+      "k": 25,
+      "min_remainder_fraction": 0.2,
+      "primary_position": -1,
+      "rms_drift_threshold": 0.02,
+      "top10_overlap_threshold": 0.8
+    },
+    "lens": {
+      "file": "qwen3.5-4b/jlens/Salesforce-wikitext/Qwen3.5-4B_jacobian_lens_n1000.pt",
+      "metadata_prompts_fitted": 417,
+      "repo": "neuronpedia/jacobian-lens",
+      "revision": "16a01f309fcec900fdcec3f4cd5b64f3d00e4d5a",
+      "sha256": "1f9a8f8fd593f0ffec1a9640993257ca4560f8ae3e5602315643d5cc6818534e",
+      "upstream_commit": "581d398613e5602a5af361e1c34d3a92ea82ba8e"
+    },
+    "model": {
+      "compile": false,
+      "device": 0,
+      "device_map": "cuda",
+      "dtype": "bfloat16",
+      "force_bos": true,
+      "id": "Qwen/Qwen3.5-4B",
+      "max_seq_len": 512,
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "trust_remote_code": false
+    },
+    "outputs": {
+      "artifacts": "../../artifacts",
+      "figures": "figures",
+      "processed": "processed",
+      "raw": "raw",
+      "reports": "../../reports",
+      "root": "results/v13"
+    },
+    "peripheral_v5": {
+      "batch_size": 128,
+      "bootstrap_resamples": 10000,
+      "compact_gap_closed": 0.8,
+      "compact_maximum_conditional_gain": 0.002,
+      "compact_minimum_causal_direction_cosine": 0.8,
+      "compact_minimum_output_sign_agreement": 0.8,
+      "confidence": 0.95,
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "derived_trace_summary": "results/v5/processed/peripheral_traces_v5.json",
+      "dictionary_size": 4096,
+      "dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "early_stopping_patience": 5,
+      "encoder_families": [
+        "pca_remainder",
+        "predictive_bottleneck",
+        "nonlinear_bottleneck"
+      ],
+      "full_remainder_minimum_cosine_gain": 0.005,
+      "hidden_width": 512,
+      "history_length": 4,
+      "learning_rate": 0.0003,
+      "maximum_action_accuracy_loss": 0.02,
+      "maximum_epochs": 30,
+      "recurrent_architectures": [
+        "gated_mlp",
+        "gru",
+        "residual_recurrent"
+      ],
+      "recurrent_horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "recurrent_maximum_state_dimension": 128,
+      "recurrent_parameter_target": 5000000,
+      "recurrent_parameter_tolerance": 0.05,
+      "reference_architectures": [
+        "mlp",
+        "gated_mlp",
+        "attention"
+      ],
+      "residual_conditioning_rank": 512,
+      "screen_seed": 20260828,
+      "source_teacher_summary": "results/v4/processed/teacher_formal_v4.json",
+      "source_trace_summary": "results/v4/processed/teacher_traces_v4.json",
+      "weight_decay": 0.0001,
+      "workspace_layer": 23
+    },
+    "peripheral_v6": {
+      "bootstrap_resamples": 10000,
+      "causal_direction_count": 16,
+      "causal_fit_fraction": 0.5,
+      "causal_split_seed": 20261001,
+      "ceiling_rules": {
+        "causal_direction_minimum_absolute": 0.2,
+        "causal_direction_minimum_gain": 0.05,
+        "causal_projection_minimum_relative_rmse_reduction": 0.1,
+        "global_cosine_minimum_gain": 0.005,
+        "maximum_action_accuracy_loss": 0.02,
+        "semantic_accuracy_minimum_gain": 0.02
+      },
+      "compact_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "compact_families": [
+        "pca",
+        "predictive_bottleneck",
+        "nonlinear_bottleneck"
+      ],
+      "compact_gap_closed": 0.8,
+      "compact_maximum_conditional_gain": 0.002,
+      "confidence": 0.95,
+      "dictionary_size": 4096,
+      "f64_projection_sensitivity": true,
+      "future_workspace_layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "initial_strength": 0.25,
+      "layer": 23,
+      "null_js_floor": 0.0001,
+      "objective_weights": {
+        "action": 1.0,
+        "causal_counterfactual": 2.0,
+        "causal_projection": 2.0,
+        "full_profile": 1.0,
+        "top_causal_dimensions": 2.0
+      },
+      "precision_dtype": "float32",
+      "reference_architectures": [
+        "j_only_residual",
+        "j_history_attention",
+        "full_remainder_linear",
+        "full_remainder_gated",
+        "full_remainder_residual",
+        "full_remainder_attention"
+      ],
+      "reference_batch_size": 128,
+      "reference_confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "reference_epochs": 40,
+      "reference_learning_rate": 0.0003,
+      "reference_patience": 6,
+      "reference_screen_seed": 20260828,
+      "reference_weight_decay": 0.0001,
+      "reference_width": 512,
+      "source_h2_records": "results/v5/processed/h2_replication_v5.parquet",
+      "source_h2_summary": "results/v5/processed/h2_replication_v5.json",
+      "source_mediation_summary": "results/v5/processed/h2_mediation_v5.json",
+      "source_reference_summary": "results/v5/processed/full_remainder_reference_v5.json",
+      "source_trace_summary": "results/v5/processed/peripheral_traces_v5.json",
+      "top_causal_dimension_count": 64
+    },
+    "persistent_channels_v7": {
+      "attribution_split_seed": 20261011,
+      "bootstrap_resamples": 10000,
+      "cache_restore_tolerances": {
+        "hidden_max_abs": 1e-06,
+        "j_max_abs": 1e-06,
+        "logits_max_abs": 1e-06
+      },
+      "channel_gate": {
+        "maximum_additive_interaction_ratio": 0.25,
+        "minimum_delta_cosine": 0.2,
+        "minimum_delta_cosine_ci_lower": 0.0,
+        "minimum_full_delta_l2": 1e-06,
+        "minimum_magnitude_ratio": 0.1
+      },
+      "compression": {
+        "causal_direction_minimum": 0.8,
+        "causal_gap_closed": 0.8,
+        "dimensions": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512
+        ],
+        "maximum_conditional_gain": 0.02,
+        "methods": [
+          "pca",
+          "predictive_bottleneck",
+          "causal_bottleneck",
+          "nonlinear_encoder"
+        ],
+        "predictive_gap_closed": 0.8
+      },
+      "downstream_attention_layers": [
+        27,
+        31
+      ],
+      "downstream_recurrent_layers": [
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      "intervention_layer": 23,
+      "localization": {
+        "attention_token_windows": [
+          1,
+          4,
+          16,
+          64
+        ],
+        "minimum_channel_fraction": 0.05
+      },
+      "measured_layers": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "restore_test_count": 8,
+      "source_tasks": "data/v5/h2_replication.json",
+      "source_v6_artifact": "artifacts/causal/v6/causal-endpoint-v6-20260914T161620Z-a20b5a8c-s20260828-full-66/causal_endpoint_f32.npz",
+      "source_v6_artifact_sha256": "af945e0432cd7b1f1f256f1f0c60c91ec7d9aca7956dae745387247732c0444e",
+      "source_v6_records": "results/v6/processed/causal_endpoint_precision_v6.parquet",
+      "source_v6_summary": "results/v6/processed/causal_endpoint_v6.json",
+      "source_v6_trials": "results/v6/processed/restoration_null_v6.parquet",
+      "teacher_forced_tokens": 4
+    },
+    "persistent_channels_v7_corrective": {
+      "authorization": {
+        "require_channel_attribution": true,
+        "require_positive_cosine_or_rmse_gain_ci": true
+      },
+      "predictor": {
+        "added_features": "mixed_channel_delta_dual_pca_scores",
+        "alpha": 1.0,
+        "baseline_features": "current_intervened_j",
+        "target": "next_j_intervention_delta"
+      },
+      "reason": "endpoint_serialization_alias_bug",
+      "source_capture_summary": "results/v7/processed/raw_arch_channel_ceiling_v7.json",
+      "source_v6_artifact": "artifacts/causal/v6/causal-endpoint-v6-20260914T161620Z-a20b5a8c-s20260828-full-66/causal_endpoint_f32.npz"
+    },
+    "persistent_state_v8": {
+      "bootstrap_resamples": 10000,
+      "calibration": {
+        "count_per_family_horizon": 30,
+        "horizons": [
+          2,
+          3,
+          5
+        ],
+        "minimum_accuracy": 0.7,
+        "preferred_accuracy": 0.8,
+        "seed": 20261103,
+        "version": "r6"
+      },
+      "component_atoms": [
+        "rec_matrix_all",
+        "conv_all",
+        "kv_l27_h3",
+        "kv_other"
+      ],
+      "compression": {
+        "causal_direction_minimum": 0.8,
+        "causal_evaluation_requires_predictive_and_conditional_pass": true,
+        "causal_gap_closed": 0.8,
+        "confirmation_seeds": [
+          20260828,
+          20260829,
+          20260830
+        ],
+        "diagnostic_sketch_dimension": 8192,
+        "dimensions": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512
+        ],
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "maximum_conditional_residual_gain": 0.02,
+        "methods": [
+          "pca",
+          "predictive_bottleneck",
+          "causal_bottleneck",
+          "nonlinear_encoder",
+          "layerwise_fusion"
+        ],
+        "output_sign_agreement_minimum": 0.8,
+        "predictive_gap_closed": 0.8,
+        "raw_dual_pca_tolerance": 1e-08,
+        "reconstruction_ridge_alpha": 0.01,
+        "semantic_agreement_minimum": 0.8
+      },
+      "formal": {
+        "candidates_per_family": {
+          "final_test": 80,
+          "train": 180,
+          "validation": 80
+        },
+        "horizon_overrides": {
+          "modular_arithmetic": 2
+        },
+        "split_seeds": {
+          "final_test": 20261113,
+          "train": 20261111,
+          "validation": 20261112
+        },
+        "target_valid_per_family": {
+          "final_test": 50,
+          "train": 120,
+          "validation": 50
+        },
+        "version": "competence_corrective_r3_parser"
+      },
+      "intervention": {
+        "causal_write_layer": 24,
+        "dense_cosine_threshold": 0.995,
+        "formal_displacement_fraction": 0.2,
+        "initial_strength": 0.25,
+        "layer": 23,
+        "measured_layers": [
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "rms_drift_threshold": 0.02,
+        "teacher_forced_tokens": 4,
+        "top10_overlap_threshold": 0.8
+      },
+      "kernel_ridge_alphas": [
+        0.001,
+        0.01,
+        0.1,
+        1.0
+      ],
+      "persistent_components": {
+        "attention_layers": [
+          27,
+          31
+        ],
+        "kv_positions": "final",
+        "kv_primary_head": 3,
+        "kv_primary_layer": 27,
+        "recurrent_layers": [
+          24,
+          25,
+          26,
+          28,
+          29,
+          30
+        ],
+        "top_recurrent_layer": [
+          30
+        ],
+        "top_recurrent_layers": [
+          28,
+          29,
+          30
+        ]
+      },
+      "raw_screen": {
+        "maximum_output_sign_loss": 0.02,
+        "minimum_causal_direction_cosine": 0.8,
+        "minimum_full_gap_fraction": 0.9
+      },
+      "raw_sets": {
+        "R0": [],
+        "R1": [
+          "rec_matrix_l30"
+        ],
+        "R2": [
+          "rec_matrix_l28",
+          "rec_matrix_l29",
+          "rec_matrix_l30"
+        ],
+        "R3": [
+          "conv_all"
+        ],
+        "R4": [
+          "rec_matrix_all",
+          "conv_all"
+        ],
+        "R5": [
+          "kv_l27_h3"
+        ],
+        "R6": [
+          "rec_matrix_all",
+          "conv_all",
+          "kv_l27_h3"
+        ],
+        "R7": [
+          "rec_matrix_all",
+          "conv_all",
+          "kv_all"
+        ]
+      }
+    },
+    "reproducibility": {
+      "bootstrap_seed": 20260901,
+      "controller_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "dataset_seed": 20260828,
+      "deterministic": true
+    },
+    "run": {
+      "protocol_version": "causal_path_geometry_v13",
+      "stage": "causal_geometry_v13",
+      "timeout_hours": 120
+    },
+    "single_arm_v4": {
+      "bootstrap_resamples": 10000,
+      "confidence": 0.95,
+      "confirmation_valid_base_trials": 500,
+      "construction": "dense_optimized",
+      "controls": [
+        "clean",
+        "identity",
+        "matched_random",
+        "j_positive",
+        "full_perturbation",
+        "j_preserving"
+      ],
+      "dense_cosine_threshold": 0.995,
+      "dictionary_size": 4096,
+      "formal_displacement_fraction": 0.2,
+      "future_workspace_layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "generation_horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "initial_strength": 0.25,
+      "layer": 23,
+      "max_attempt_multiplier": 10,
+      "null_js_floor": 0.0001,
+      "null_quantile": 0.99,
+      "pilot_valid_base_trials": 100,
+      "position_scope": "final",
+      "rms_drift_threshold": 0.02,
+      "state_definition": "V3-Dense-operational-control",
+      "top10_overlap_threshold": 0.8
+    },
+    "statistics": {
+      "bootstrap_resamples": 10000,
+      "confidence": 0.95,
+      "eta_threshold": 0.2,
+      "null_js_floor": 0.0001,
+      "null_quantile": 0.99
+    },
+    "sufficiency_v9": {
+      "behavior_enriched": {
+        "fraction_per_family": 0.4,
+        "minimum_per_family": 15,
+        "score_columns": [
+          "output_js_divergence",
+          "future_j_trajectory_divergence",
+          "target_log_odds_abs_change"
+        ]
+      },
+      "bootstrap_resamples": 10000,
+      "captured_horizons": [
+        1,
+        2,
+        4
+      ],
+      "causal_decoding_requires_all_observational_gates": true,
+      "causal_direction_minimum": 0.8,
+      "causal_magnitude_maximum": 1.2,
+      "causal_magnitude_minimum": 0.8,
+      "conditional_residual_gain_maximum": 0.02,
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "gap_denominator_epsilon": 0.002,
+      "horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "methods": [
+        "pca",
+        "predictive_bottleneck",
+        "causal_bottleneck",
+        "semantic_causal_bottleneck"
+      ],
+      "newly_evaluated_dimensions": [
+        512,
+        576,
+        599,
+        768,
+        1024,
+        1536,
+        2048
+      ],
+      "output_sign_agreement_minimum": 0.8,
+      "predictive_gap_closed_minimum": 0.8,
+      "primary_method": "causal_bottleneck",
+      "primary_methods": [
+        "pca",
+        "predictive_bottleneck",
+        "causal_bottleneck"
+      ],
+      "requested_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        576,
+        599,
+        768,
+        1024,
+        1536,
+        2048
+      ],
+      "residual_blocks": [
+        "recurrent",
+        "conv",
+        "kv"
+      ],
+      "residual_localization_dimensions": [
+        512,
+        599,
+        768,
+        1024,
+        1536
+      ],
+      "ridge_alpha": 1.0,
+      "semantic_agreement_minimum": 0.8,
+      "semantic_objective_weights": {
+        "future_causal_delta": 0.2,
+        "next_absolute": 0.4,
+        "next_causal_delta": 0.4
+      }
+    },
+    "teacher_tasks_v4": {
+      "calibration_per_cell": 16,
+      "calibration_seed": 20260914,
+      "formal_counts_per_family": {
+        "causal_test": 40,
+        "rollout_test": 40,
+        "train": 64,
+        "validation": 16
+      },
+      "formal_evaluation_mode": "environment_stepwise",
+      "formal_seeds": {
+        "causal_test": 20260917,
+        "rollout_test": 20260918,
+        "train": 20260915,
+        "validation": 20260916
+      },
+      "generation_batch_size": 8,
+      "horizons": [
+        4,
+        8,
+        16,
+        32
+      ],
+      "maximum_extra_tokens": 8,
+      "minimum_cell_full_trajectory_accuracy": 0.7,
+      "preferred_cell_full_trajectory_accuracy": 0.8,
+      "variants": {
+        "boolean_logic": [
+          "binary_xor_pairs",
+          "not_each",
+          "xor_one"
+        ],
+        "modular_arithmetic": [
+          "increment_1",
+          "increment_2",
+          "decrement_1"
+        ],
+        "short_graph_traversal": [
+          "directed_cycle"
+        ],
+        "simple_state_transition": [
+          "toggle_every_step",
+          "toggle_or_keep"
+        ],
+        "variable_binding": [
+          "four_way_lookup"
+        ]
+      }
+    },
+    "validation": {
+      "band_min_layers": 3,
+      "band_peak_fraction": 0.5,
+      "bootstrap_resamples": 10000,
+      "discovery_fraction": 0.5,
+      "hit10_threshold": 0.2,
+      "min_primary_position": 16,
+      "positive_control_trials": 24,
+      "report_sensitivity_peak_fractions": [
+        0.25,
+        0.4,
+        0.6
+      ]
+    }
+  },
+  "config_digest": "7bc7c600a2bd17f27ecbf687b603c2826c758fb1ec159bc1191977f80ddb8029",
+  "created_at": "2026-09-17T03:18:34.382610+00:00",
+  "environment": {
+    "cuda_available": true,
+    "gpus": [
+      {
+        "compute_capability": [
+          8,
+          9
+        ],
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "total_memory_bytes": 25386352640
+      },
+      {
+        "compute_capability": [
+          8,
+          9
+        ],
+        "index": 1,
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "total_memory_bytes": 25386352640
+      }
+    ],
+    "nvidia_smi": "NVIDIA GeForce RTX 4090 D, 550.144.03, 24564 MiB\nNVIDIA GeForce RTX 4090 D, 550.144.03, 24564 MiB",
+    "platform": "Linux-6.2.0-26-generic-x86_64-with-glibc2.35",
+    "python": "3.12.2",
+    "python_executable": "/home/user/anaconda3/bin/python",
+    "torch": "2.10.0+cu128",
+    "torch_cuda_runtime": "12.8"
+  },
+  "git_commit": "2b94a65daee29e5547530261194b7de34860df4e",
+  "git_worktree": {
+    "capture": "process_init",
+    "dirty": true,
+    "entries": 37,
+    "status_sha256": "8d06807f1a8481838dd2745da4464c8fc219f11fb7cb76921c14618066c6191b"
+  },
+  "kind": "bank-v13",
+  "run_id": "bank-v13-20260917T031834Z-7bc7c600-s20260828-guard",
+  "run_suffix": "guard",
+  "schema_version": 3,
+  "seed": 20260828,
+  "status": "COMPLETED_V13_BANK_STAGE",
+  "summary": {
+    "baseline_commit": "2b94a65daee29e5547530261194b7de34860df4e",
+    "excluded_mutable_paths": [
+      "reports/FINAL_REPORT.md"
+    ],
+    "file_count": 487,
+    "freeze_digest": "a989dce50384d6217fe6f06c031aba0578e59cec545820f645cfcdc7a5b1e821",
+    "hashes": {
+      "artifacts/MANIFEST.json": "d4a8f52e86fa9883e13b08755f9342daa54a72e5a4ef3c6ca08071e8abd08aff",
+      "artifacts/arch_compression_v7.freeze.json": "a5c7db7bcfa06da6c0d252015f39c5921c5a7bbe778955df8e6d3d4e65c38b03",
+      "artifacts/arch_compression_v7_corrective.freeze.json": "148c97db55d19bfe951249950c4b2ce379613fbe3083e0b38d5959f0c0ac31ce",
+      "artifacts/causal_geometry_v11.freeze.json": "e008264555b20534a83f097e41ce54dcaf0c0d00759ae00c1948d6b2caaa5418",
+      "artifacts/causal_geometry_v11_confirmatory.freeze.json": "140deb24f3aab4fe3561fdf936faf9aacf857f78731ac630868a7a666ad5564d",
+      "artifacts/causal_geometry_v11_manifold_amendment.freeze.json": "fad4e8c389ae2193201cefbb1e71e3508468d96eae4768b01e9dbae9b848fa57",
+      "artifacts/causal_geometry_v11_prepared.freeze.json": "ca65a54be9480d7fa0ae4ef3d81522c64b0cf94c972b4df59ee77ca78dbf849f",
+      "artifacts/causal_geometry_v11_stage2.freeze.json": "20614946e65fee563c7e34870df84148509cf932f242b9d302a4c048ea0788d8",
+      "artifacts/causal_geometry_v12.freeze.json": "2d7585c062c56eaf5a574794a2101c8db704856b6c99f51c3f7d051de18e5fe0",
+      "artifacts/causal_geometry_v12_confirmatory.freeze.json": "2d29f53781e370755499e6744459417a57bed5bc7d8e03d9b582275e22a3acba",
+      "artifacts/causal_geometry_v12_hybrid_nullification_1.freeze.json": "b2987aabc4a973c6fbad4166977bfcbc84eb891e1e92e124b1ea4fcb71e14cea",
+      "artifacts/causal_geometry_v12_jvp.freeze.json": "2b88991b3d91bde8b8b162d57c7d785ac4f6a5ceaf85a6180112a582ff3b33fe",
+      "artifacts/causal_geometry_v12_prepared.freeze.json": "75663d3593f38233326e4898b5affec66796a7d85a10119114af7330d8b6bc44",
+      "artifacts/causal_geometry_v12_runtime_amendment_1.freeze.json": "5aae3ebe63372e8305b40cc31590b9a316536b3b45cde0522ac0278cfb3823bf",
+      "artifacts/causal_geometry_v12_runtime_amendment_2_cpu.freeze.json": "d67e3512232b7b87218feb10c30362e3cd876558b974f73b87832278537ad432",
+      "artifacts/causal_geometry_v12_runtime_amendment_3_hybrid.freeze.json": "5a934dec75dcb333e7964f069f591e33ee621f4eae93301b74204316b065a48d",
+      "artifacts/causal_geometry_v12_runtime_amendment_5_dual_gpu.freeze.json": "01639ab8fdc13a84d49ae686df1b49f618b8762414a14bfa537a689fb4e26a38",
+      "artifacts/causal_geometry_v12_runtime_amendment_6_jvp_dual_gpu.freeze.json": "5eb6be7531956695c81703c3ffbf15092271273f472e9fb785c46fe8c52e8454",
+      "artifacts/causal_geometry_v12_stage2.freeze.json": "345ee10e1165d83669600f5ae34a504bac55b33460cfe356b25dd737282e6b16",
+      "artifacts/causal_sufficiency_v10.freeze.json": "b307a6d8956667df20c5650b4d28bb4c3245fef84f6fcd047257783ba6f9a8b4",
+      "artifacts/causal_sufficiency_v10_candidates.freeze.json": "f0f5cd678d14b91ab55e6b1bd8920631748f92afbbf122ca125921063c860b3a",
+      "artifacts/causal_sufficiency_v10_causal_metadata_amendment.freeze.json": "3d9bc70e1b3e0fcba0e09905da058f46b730af5fedc847581c984427d1426e77",
+      "artifacts/causal_sufficiency_v10_residual_amendment.freeze.json": "f0cd517d50c1a734bfdccc473f6420219857423ed2718e53ad57734043b441ef",
+      "artifacts/channel_localization_analysis_v7.freeze.json": "7f45fd821e25123a4d6d26809042fc6704af766de8dc5a14465c81d646b5772d",
+      "artifacts/channel_localization_v7.freeze.json": "58b41602e2b3307d2d877faffd6b72a75c5c937db98de2cfe1e9ca7e4fe4d83f",
+      "artifacts/closure_protocol_v3_2.calibration.freeze.json": "caf4ee6ed2431194051cee7447212670e6356ddfcd8e3a592ff9e74594425671",
+      "artifacts/closure_protocol_v3_2.calibration.freeze.rev1.sha256.json": "9ee72ebbd24e0988495240040be15235e4a348b829273ad68472e9232106db29",
+      "artifacts/compact_memory_reference_v3_2.freeze.json": "c75cdd3d973f02a60d142aeabd632d7d0670bb3e0901e83983cd2f2881fb9c09",
+      "artifacts/compact_memory_reference_v3_2.freeze.rev1.sha256.json": "1b4fce0605df4a88a5723c606fc9910eeacd28d580fd25e40c6cf2cb84e5e85a",
+      "artifacts/compact_memory_v3_1.freeze.json": "ca812594e895b1de9d6fd75fdcffa2fa421b3d1fd457454481835394618702b6",
+      "artifacts/compact_memory_v3_2.freeze.json": "1da90d57c15b3a48b6163a6656d2035afb2b37bc3cb721f594910afb61685a7e",
+      "artifacts/compact_memory_v3_2.freeze.rev1.sha256.json": "ac2d94358ef60fb505be2d4d7ea4769715174f8f10c261705c63e59f259e1697",
+      "artifacts/compact_memory_v3_2.freeze.rev2.sha256.json": "cf8277643b5f0697b377000822b21553a13e3442ffc7fb4295e58a904c8dc67c",
+      "artifacts/compression_protocol_v8_1.freeze.json": "bba373e80c79d8b348a0ad6fd702c2d553cc7697846507f0077d5af84801185d",
+      "artifacts/peripheral_v5.freeze.json": "98e2e70eda1f5eae06abc98fd067838a511b521c9b7ce98654205078ef4ea6ce",
+      "artifacts/peripheral_v6.freeze.json": "70d401cd8ed5a92915fc61265b4b0f9561089f0334a15215ba64a3916a34f935",
+      "artifacts/persistent_channels_v7.freeze.json": "87bf50922ce54db9a609c638025854fda14fbd5353e5c22085a54ab0d646ed8a",
+      "artifacts/persistent_state_v8.freeze.json": "5700833a609fa156b4260893856ee3f39e6901f224e9305cdb110b628986709e",
+      "artifacts/phase0_protocol_v2.freeze.json": "d8b384c9b7f87c98a106d74dbd0cc70fff6e15a53bbd54890151a4b1bd731628",
+      "artifacts/phase0_v2_immutable.sha256.json": "9d973cd58d3c4288702e08fb7e3268a1280e4ecbf05d3b9e675ec17eb3e376ab",
+      "artifacts/phase3_protocol_v3.freeze.json": "d5be7c38315f3a8d3db4363f73dd866dd5ebe19cfdd9769bb5929534ea428fdd",
+      "artifacts/program_tasks_v4.freeze.json": "e3ed382e9fb7827053259d90e456a1bae977633f08e9a305b9c7b259e4798df3",
+      "artifacts/strict_interface_audit_v10.freeze.json": "6414f4b8b10ce54ca3e4152895df0f93a0a4bdcc1c1c717409d5610e9f2618dc",
+      "artifacts/strict_state_replacement_v12_amendment_1.freeze.json": "d55d1859fca6c5819ae643df7a06acae30edf7cf290f8e0bd86a3c29218d3d5d",
+      "artifacts/sufficiency_protocol_v9.freeze.json": "5486c4c162f9d73f4b705944a89726bd79763d28afd0cffe9e5da3361f749dd3",
+      "artifacts/sufficiency_protocol_v9_reporting_amendment_1.freeze.json": "454e0432ad0ae7b9e3f2ccd30ad2ca1f76fe05fa1ee7ece500f8945292bc8cb9",
+      "artifacts/sufficiency_protocol_v9_reporting_amendment_2.freeze.json": "1be38b05346347e913361232051e475330a2f385d92303a89cda43ea81beae62",
+      "artifacts/sufficiency_protocol_v9_reporting_amendment_3.freeze.json": "3cd91bb858e94e0d35ee43e3ac7e0fb717b8adee7c5f9249798c7fd8537f99a8",
+      "artifacts/v10_immutable.sha256.json": "25b071913d47810c9de7b7df503ab8462eaf794ad989948ef10a9ba32bb9b3cd",
+      "artifacts/v11_immutable.sha256.json": "0f1ad0de46e4b475c4e9dbf07e718ffcecc417554627fa2cda6f33113ceb716c",
+      "artifacts/v3_1_data_manifest.json": "409dff744ff0e1ae9e20ce05ccdc84a3b5d7908a30c23f091c164f9b56777262",
+      "artifacts/v3_2_data_manifest.json": "f5eae700aaea30bda8c5b5687c37c642c9fdd1eca5cbcf56e24eae9855e95d35",
+      "artifacts/v3_immutable.sha256.json": "ff8efcad63db31603e35e923977a9e236cd38896eae7156b26294d5db0c6576a",
+      "artifacts/v4_immutable.sha256.json": "f93e5f1666b13e882ae5827a790708724f0d83ac49c743d43e7f50a1e1887df9",
+      "artifacts/v5_immutable.sha256.json": "62260e111a0f04817bb48ad1b25cb04a3666983dde3831a784a8ca9aa88f4e90",
+      "artifacts/v6_immutable.sha256.json": "eb5ebe4600ff3533b04b3c0eb001e8d905ac5efec824ae15d210d17b73ff08df",
+      "artifacts/v7_immutable.sha256.json": "58448a979ae582631c754b51dbeec53426a7c4d9b3eabf098475609cb84b0796",
+      "artifacts/v8_immutable.sha256.json": "d12c8ac7f7877f369442f76cf0e51505c104e85e13eaec003789892819eba327",
+      "artifacts/v9_immutable.sha256.json": "d371dee8424d4dc479d2802ae63f47833b6f4638661dac34a70ed444a01779a1",
+      "configs/causal_geometry_v11.yaml": "7972a8c034052fd7395a275df13a06376aceabf983715fa0036c51f055a1b854",
+      "configs/causal_geometry_v12.yaml": "fae62d6b5a232c398acc7c59ce25a1dfe9f96e29eeb9c75a3cf8e90a15d08d53",
+      "configs/causal_sufficiency_v10.yaml": "78b50d58812ac97317063a4c8b9bb63dfc46d40ef2d7a2c363c055f79faf8208",
+      "configs/closure_v3_1.yaml": "383aa3609377e936a55491bad93aab82bf676de132332e3d2a7f250d1b9ee2ef",
+      "configs/closure_v3_2.yaml": "c38c6807d2896e79a233776f9d7a28d17db3914fca6eaea72c532c5f544ec957",
+      "configs/closure_v3_confirm.yaml": "f97b0e9129a30eb00c699edc65fde622b56ef07484171a3e9355cf7f99e154dc",
+      "configs/closure_v3_pilot.yaml": "36e051000e49b101405710ea1802e598b5e58434f77ad2c0c8ebcfc961ae5fb8",
+      "configs/compact_memory_v3_1.yaml": "556057372b061dd827364a3029f740e370503e415ccf446f38105fa601509275",
+      "configs/compact_memory_v3_2.yaml": "76763aba68ef6f55fc89baebf13c93f7d78c97ac318d5032df360d385ecc11b7",
+      "configs/confirm.yaml": "205c0e2e866d3a14bda3089b807372cf962d65b7d1a1fe2cbeeba3565c1ef24d",
+      "configs/confirm_v2.yaml": "4b70f65f10eba38efe1643c363f07200110655cf4a4a076859432f576d509422",
+      "configs/geometry_v3.yaml": "73eb5dacf93bbf842f22add0192b81354c08b96acb81810bb8398b5728aaf292",
+      "configs/peripheral_v5.yaml": "419805d7f21a7626b68f16189fa1b24b6d5b69f113538a3ff7298ed1769b3e2b",
+      "configs/peripheral_v6.yaml": "a0002c6f03500dce4079ed8a2f8fca81c14af6665d85418f4a1f1efe43ed228b",
+      "configs/persistent_channels_v7.yaml": "d0e10f723b295863c22c07f3938b0f3145eab2731c315ada9a97cb7582672b81",
+      "configs/persistent_channels_v7_corrective.yaml": "43988602cfe971e9f7c3ee7d32bdb525598e39b22c690174994d46052d325f3b",
+      "configs/persistent_state_v8.yaml": "50bda672da5bb3ea5860bd8d58a1375cc235b66ac982fe353cc0207d21fb1581",
+      "configs/phase0_v1_replay.yaml": "ff70491e74a8a8427f4ec576c3557a7178bf5d563871e1cce992be189d913519",
+      "configs/phase0_v2_calibration.yaml": "bc9a18898a94926b19bec741af2cc0d8571e0179cf470b773b111994ead8e87c",
+      "configs/phase0_v2_confirmatory.yaml": "69f0062646e68b7c19cb73168eeafdae260dfdef76f7b94952a0c3e9b84fba90",
+      "configs/pilot.yaml": "2493c8050b9faa3cbce90df0e823b7d09d52812f767fb3f68583b7694375b7f4",
+      "configs/pilot_v2.yaml": "3a077f81fb6961d5d032c112747722a9face1ea486b5b133ee727b0a405089a0",
+      "configs/predictive_v4.yaml": "51e0efdd27634eee9832c600ce256713e3bd2a8f8591479e475b8628baa37e42",
+      "configs/qwen3_5_4b.yaml": "e3970be1451f66ebbbbdeef09e44d2d0539a4580fc340e2d30a5590c87b3079d",
+      "configs/sufficiency_v9.yaml": "126480961342177fe82ef0ae9f4d694e34d8bab3a9d1829c8aa62a058f231c35",
+      "data/phase0_v2/MANIFEST.json": "456800883ba8c3e75696d4b22214ceb88d9cebfcca09d067f52f6f31acd50ed9",
+      "data/phase0_v2/fresh_multihop.json": "65ebb36d8c7e68e2496d8f05f6e3c990a37aac2ab53d4a16d430d9b44e1fbc6d",
+      "data/phase0_v2/fresh_order_ops.json": "7dc46e93126399c5fd492fe8af762a0fc64b436c502fcc3ef4dc5a72d75fc8cc",
+      "data/upstream/MANIFEST.json": "46a61ad9aaceaaea9b3d3ffcd52773c856cb4a39f5909ee4d92b71a01efe6af0",
+      "data/upstream/README.md": "d9b97f5bec6b2047fc550949762f8f0706c6e849c03e7726be91a84a8acc1765",
+      "data/upstream/anthropic/evaluations/lens-eval-association.json": "d1a98cd4911b594282e74168091c77d849dae18ffe2acb5761074853f327d71c",
+      "data/upstream/anthropic/evaluations/lens-eval-multihop.json": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+      "data/upstream/anthropic/evaluations/lens-eval-multilingual.json": "fa70b9bd89416a6d8d985a80dc628b109ae6fd3b25b9275c0fc5065d7ff4a0ef",
+      "data/upstream/anthropic/evaluations/lens-eval-order-ops.json": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+      "data/upstream/anthropic/evaluations/lens-eval-poetry.json": "6aeb3415c5a5c3f3827c9efe63f006de02f5ef39a816bbac68e15e733aba60cc",
+      "data/upstream/anthropic/evaluations/lens-eval-typo.json": "9d05e16b7234a57d0773d120a4e1c4e94fd3bc2235a8125d4200a70e60ab17aa",
+      "data/upstream/anthropic/experiments/capacity.json": "6dd4dcd7adef79585dbdad9d09766afe750da721d6b14ffd31a30523ba72f22e",
+      "data/upstream/anthropic/experiments/directed-modulation.json": "f3478bb7f3b9e19423f0c056a289fdaf1759942daf67e5304e4f55d9ad555b92",
+      "data/upstream/anthropic/experiments/dual-task.json": "48519e75a6104a04a32573126b55977347e76e62834f7fd3a99b794072c07c70",
+      "data/upstream/anthropic/experiments/flexible-generalization.json": "f48d8e877c7422e14fa60794984fde07bbd11acbda4030c0149ec0a593773fdd",
+      "data/upstream/anthropic/experiments/ignition.json": "4cb961861174f466a6c37c9a5ff39cbb5a477721a89ffa4bc319b3b6d40cc1b1",
+      "data/upstream/anthropic/experiments/probe-swap.json": "a0edd27ca23f7b4d0fbe90448c2ddcc7457a3d812121bf024ed12a032ff86796",
+      "data/upstream/anthropic/experiments/selectivity-language.json": "be35ac37e304b28dbe1aa65a6491b102bbe9bf84a9e896886307e8218bcfd2b2",
+      "data/upstream/anthropic/experiments/selectivity-linecount.json": "ae562a8cceadcf2293813d6255437b165a520e7928f941fc531f72332de394de",
+      "data/upstream/anthropic/experiments/top-down-summoning.json": "0c33be04bf1aa35ad1066d3999ec4e7b66f6112a91e68b5aadcfdd20c7abb02c",
+      "data/upstream/anthropic/experiments/verbal-introspection.json": "c16e92d32b43e50027863d939445bb839301457f494363c00e2d00e5c6e73560",
+      "data/upstream/anthropic/experiments/verbal-report.json": "9a33b48074c4565413247bace11d37537a963774936740287f0fb7dff460652c",
+      "data/v3_1/arithmetic_calibration.json": "1ff89c52a21536b7a04e0ae5e1b1b1da253f05ae1f9b3c8be1c6505c0e0e03a9",
+      "data/v3_1/arithmetic_confirmation.json": "113f72fadef4dfff1a41f0b46092ebf6a74885235db9cfb62a9beead55bf28c4",
+      "data/v3_1/arithmetic_naturality_fit.json": "b1b7d7c9ac153a1bacef676943c711945ef19894eee0e016ebddc9a7b8eff384",
+      "data/v3_1/arithmetic_pilot.json": "912f7b5e1890b463d821060ab02c92ca2e0e6da2b2a29dc3fc69c65f1f779d01",
+      "data/v3_1/compact_memory_test.json": "8a83ab5965cebb709793bb9aa00ed6378d263fa171c6c3075e78268f86766547",
+      "data/v3_1/compact_memory_train.json": "654fd239cd52142d27b539c3e13868c9baa7055765aee3b7ac1770ac8493d39e",
+      "data/v3_1/compact_memory_validation.json": "9f0755d735a486d248e30fb7456ade4df5938cbf149d92e49976e8e1cb99cc1b",
+      "data/v3_2/arithmetic_calibration.json": "e1771c36a772a77a6beeda28c5999def1513a861d0f6c1c8060b5e0e1ade552b",
+      "data/v3_2/arithmetic_confirmation.json": "0f274398ecb9bffb6d8b3f7fa395e0950b1893f8a64499e81359652c7b2acad8",
+      "data/v3_2/arithmetic_naturality_fit.json": "492edae5c3e7146eba4dba0be71680496719c287752170579cd65c729488074d",
+      "data/v3_2/arithmetic_pilot.json": "2a19ebc1232261461a73ebb78090f2979519a5f1b2848fe192c383e3e4a0a459",
+      "data/v4/causal_test.json": "874175e8ed729c2c13ac3b62e6cbc364fe61451c7d4137c6f05fb1d085270037",
+      "data/v4/rollout_test.json": "e7db86a962f2196952c2d15aefc0679d5328a32267f6a88af16ba2b150e317cd",
+      "data/v4/train.json": "25a069f72996e752c6aac6ea8abbb6f7075772aada72a9aa898dc1e5cff43ab7",
+      "data/v4/validation.json": "dec771953cb3ebafbae8b668afccbd873cae3a70f1e22234fecdcc756eb9f8f0",
+      "data/v5/h2_replication.json": "11c928d03dbf92be32669923d3f4aa1f28dc7cf735d99a6c03e7136c43348596",
+      "data/v6/causal_pair_split.json": "cf0f094e946e21d3afa733c7d8e1e5ea398f04bb0de773b287e53663c25d6999",
+      "data/v7/persistent_channel_split.json": "b6d365bdc34623d4146405661fb98cc1b510072271fde0d2e836caadb6262e62",
+      "data/v8/difficulty_calibration.json": "de12cb6a896ab00f313cbe6174c24422bd6179a02b1be6e485a68dcd79eaa789",
+      "data/v8/difficulty_calibration_r2.json": "38485decf059508921b19d7f96e425367f49ff5130c8b6b5eef2f32900c6d4b6",
+      "data/v8/difficulty_calibration_r3.json": "6d7ede65708da6c39510f6ca7221ee4b628c8a210df47321c629b397e0611ea8",
+      "data/v8/difficulty_calibration_r4.json": "1ee86b02cc5905dae02a87bc162ed309ea10695dddfb30f5b285446c5b64c42c",
+      "data/v8/difficulty_calibration_r5.json": "7c72671203bc3d10c3b2bcb9dadd5f1ca0f5c78cdba3919d8995d379f78b5e97",
+      "data/v8/difficulty_calibration_r6.json": "2daa8606ab8fa0c2c195b8537ee9ead3be9857a84d00fb658cf9eefc0edea912",
+      "data/v8/persistent_causal_formal.json": "109661ce267d8db4551dfebfb3414efd5ff64f3bcaf08913fa5d96c600fd15dc",
+      "data/v8/persistent_causal_formal_r6_attempt.json": "73e0ee2bcf5b681a1cf8c8361035758691753d23e1e540811499d53505786b08",
+      "data/v8/persistent_causal_selection.json": "d9f6c5706a040b13e437c45445e92fc7237e7963d2c4e270a30a066ebb0efb37",
+      "reports/ARCH_ALIGNED_COMPACT_STATE_V7.md": "57aa9ba03e05201c245153f5df6eb9116d78e7ccf303668481a78b86a74245cf",
+      "reports/ARCH_RESOLVED_CEILING_V11.md": "c0073fb60f7f1d0f89d04cda5b824163355cdec2edfb147b9a5059c772c0868f",
+      "reports/BEHAVIOR_ENRICHED_CAUSAL_V9.md": "1a8b99a242a137dbebf86e380a7737c557a8229efcbdb67d19c50bae86244ea3",
+      "reports/BEHAVIOR_ENRICHED_CONFIRMATORY_V10.md": "ff9bc359b0e93c593098b0e395d0f423307cd690472db8cca08774a7c7f4cb06",
+      "reports/CAUSAL_ERROR_AMPLIFICATION_V11.md": "d49de610fefa462e3abcacab925629c564b88cb689bbf14e0e95d47db85d22a8",
+      "reports/CAUSAL_MEASUREMENT_AUDIT_V12.md": "31728d5a63a2631f6e11ba85b0d8345333d79408cf26228932f84c936d15d824",
+      "reports/CAUSAL_STATE_FIDELITY_V8.md": "27889165e6f63b8f1cdc95d8e3f902d29cf13ffb3ffcc626e0c89d1a71a0fc62",
+      "reports/CAUSAL_STATE_MANIFOLD_AUDIT_V11.md": "cdebd0c095aba845b19e46abd5d7485645bc548b5c6a57a6e89c57ee0902242a",
+      "reports/CAUSAL_TANGENT_GEOMETRY_V12.md": "1ae023fe8e5552ecdda88a6c31f27d6e1509cf92451dd95c398c62988bcf04ae",
+      "reports/CAUSAL_TRAJECTORY_DYNAMICS_V12.md": "811642d410d7d02505b15da0b62e0cf449bb095034fa06b7482af50aaab594ed",
+      "reports/CHANNELWISE_CAUSAL_DECODER_AUDIT_V11.md": "68fefc323c26b516cfd7b83fe7642f5ccd8c4c3a4b739c7f44fffa94d88a9ecd",
+      "reports/CLAMP_V3_CALIBRATION.md": "306e83cc2c6a022225494767f82b88a763bbe45a49b51efe7114c12364c2e265",
+      "reports/CLOSURE_CAUSAL_REPORT.md": "c0583afda78636bdb7bdfe84a1d9d009dadc64922e1eee9cf490cdd27cd959fb",
+      "reports/CLOSURE_V3_1_CALIBRATION.md": "c1e0c061ec0855b18581bf9a52bceffb16a6d471a090082366586095609c0252",
+      "reports/CLOSURE_V3_1_CAUSAL.md": "a86d25f9728509197bd0421a4605bdd58ab842ee2bad344a759020eae2cfe686",
+      "reports/CLOSURE_V3_2_CALIBRATION.md": "4c0a84db3658f3031d04689baf4173fb23ffdc0b396f10e5217c1ee3791674c1",
+      "reports/CLOSURE_V3_2_CAUSAL.md": "939e7fa21397bc9f5c1bf3a27f45b7a9b76c2f082b132631ba979951f1bb9ce0",
+      "reports/COMPACT_MEMORY_EXPLORATORY.md": "5174b4b59cb160e1675237d4dfd936d88372f5827d261295a38a709dbfc684fe",
+      "reports/COMPACT_MEMORY_TRACE_AUDIT.md": "19581bd5121df44976677b4f6bd17afd0083f41725e9af00892ab9d2823c63ce",
+      "reports/COMPACT_PERIPHERAL_STATE_V6.md": "38bcafd2ea48eae4ff54b641b813495c2dffa1b5a92b8d9024f1672c6264f256",
+      "reports/CONDITIONAL_SUFFICIENCY_V8.md": "72daeba5602064a741cc9e7485c638860f6ae01a3eb03c74e6cf0ec35c35c502",
+      "reports/CORRECTED_SUB512_SUFFICIENCY_V10.md": "e4673f006d1aa1fcb864650cdfabe971d26f1fdbde997b07f78b0e76d21ba8da",
+      "reports/DATA_RANK_SCALING_V12.md": "df2f82c1296ee841485debff3fc84efe1404716dd422800ea53429d895d67a63",
+      "reports/DECODED_CAUSAL_STATE_VALIDATION_V10.md": "782bddd49ff82b6125b5abc047875c12a5865d55ba388ac979b603dae196dfe6",
+      "reports/FACTORIZED_CAUSAL_STATE_V11.md": "97040781df67202a655d860531212436f113ae3fa2f6a6fb735fd0aece7df05e",
+      "reports/JSTATE_GEOMETRY_AUDIT.md": "ec4fdb9c7b2e2f4ed5ca92efa221a2a7e32ef33b53c369094a0a733540db90d8",
+      "reports/KV_REC_STATE_SWAP_V7.md": "19800fd8c10186af8a00db673e1f92a8049e6d1b6a630e0cefa65921257e8c8d",
+      "reports/KV_STATE_COMPRESSION_V7.md": "b02a15da224e374968f8640c16d3c449ad56a05124e8a1cd54206989d79fa6a9",
+      "reports/LAYER_CALIBRATION.md": "7db53c50b9d961277a9de21441bf3e3a585598bea8e57c3dc1e0b4e3f0647d27",
+      "reports/LOCAL_CAUSAL_JACOBIAN_V12.md": "63a4c9d66dcf2dcfdf375649b58e2e0e6164c472f45c50f7249eb1d38be5eba9",
+      "reports/LOCAL_CAUSAL_ORACLE_V12.md": "2e59a7e100bb4391a92d8aeccf830a5b4340fd6221719033657b9b025b3da5af",
+      "reports/LONG_HORIZON_STATE_SUFFICIENCY_V10.md": "8b38f889ca13e52fdd25a5eab1bbbbc192323a393c82c65a550a80154a518a57",
+      "reports/MULTIHORIZON_SUFFICIENCY_V9.md": "d50aa393631bc298ecc3a808665c9781187d76b8730c0978d83a71726e705bda",
+      "reports/ORACLE_LOWRANK_CAUSAL_STATE_V11.md": "4758228ad7891e4cf4d799259648c62e09b789e91b3aa263acc499e040a1a42f",
+      "reports/PERIPHERAL_CAUSAL_FIDELITY_V6.md": "f36d9a66c9ef45b72f8198dee42c8db0ddbe7907b02f3d2148853f85d6d3fad0",
+      "reports/PERIPHERAL_CEILING_V6.md": "929c6dbd8b259b15194494684915c8fa5a5aa669857abd4084e5683a36b85615",
+      "reports/PERIPHERAL_STATE_V5.md": "0d585b9cccef51369da106ede127522c613df6c2c2e7449c44aa3811b8eb1521",
+      "reports/PERSISTENT_CAUSAL_DATASET_V8.md": "878b205df295e8f181d4da3c6e34691e9c00d9a578cb7ac7df1d9291f3d3d524",
+      "reports/PERSISTENT_CHANNEL_ATTRIBUTION_V7.md": "57a1c126ab41a37ee80a6ec6649a8f5ed790c38aafa0a26d4113a87fa4483592",
+      "reports/PERSISTENT_STATE_COMPRESSION_V8.md": "2136de479c2c89c8fd25bd3adb2cdfe333fc4ed7c939e75cb2f847537bbb2d3d",
+      "reports/PHASE0_PROTOCOL_AUDIT.md": "6c287f7c25ddab9069fd82780145fcfe74c2a2d8ca27f933d6cb1b231e86e144",
+      "reports/PHASE0_V2_CALIBRATION.md": "47203ab1f5500bcbbf1ff75bdd989db3f8dc2bc68f686d9b972d19d85a92f8ee",
+      "reports/PHASE0_V2_CONFIRMATORY.md": "276888243ea971f8f83ea0dab7112ee661841bbac768b63f96eebbc8276a6ee8",
+      "reports/PHASE0_VALIDATION.md": "c0ad9dadc8dc496648017d13c75d92b47e69413354365e8bfe451225db9be836",
+      "reports/PREDICTIVE_JSTATE_V4.md": "4df083fcf13545f507052f91df7271c8f5e4f535716fbaa9f7cda6ccb2291416",
+      "reports/RECURRENT_STATE_COMPRESSION_V7.md": "da08f24869e5b38fcbd85e0aa6b15299f96e29add5a80f582b3fd6e601678020",
+      "reports/REPORTING_CONVENTION.md": "72c69c1f6f76e7fd5617117567ca62e8daff58794e5ab61e44a2504f2133b082",
+      "reports/RESIDUAL_INFORMATION_LOCALIZATION_V9.md": "ff67cc4efeedaee0e2de9b0048d1187bb82a17b32c9470771d6eed85764c329d",
+      "reports/RESIDUAL_LOCALIZATION_AUDIT_V10.md": "5474f098af8771aea97a5c62f13df0ba576741d79566d15ad6ef5b1e36c0046e",
+      "reports/RESTORATION_NULL_CONTROL_V6.md": "06a9704f4f2f2216bb59acde9a1e9b9110e64a8ebf411bd5f957c6432579aaab",
+      "reports/SEMANTIC_SUFFICIENCY_AUDIT_V10.md": "f164ad1bb936de2ce6e19e02d34edee989c301b5ace6d9c1aa1bc71391dd3211",
+      "reports/STRICT_STATE_REPLACEMENT_V12.md": "45b07ee9118ed0530f4154374039c16e93722f66fbfc10979137c5cb243dadb2",
+      "reports/STRUCTURED_COMPONENT_SCREEN_V8.md": "9b63695ee52dfaf10aa470a490eb43a5eedd2010af06c03b736ee99cc972cfae",
+      "reports/SUFFICIENCY_DIMENSION_SWEEP_V9.md": "1d5e072a039f9aa9f137ddbe8ce864b8bd811bdeba212358c29a3836e5d703f8",
+      "reports/TOKEN_TIME_CLOSURE.md": "0d1313952cf879b4c08683d28154d7665dc6e01f3b39d9dbfad9c625a66d51ac",
+      "reports/V11_COMPLETE_REPORT.md": "e309aedbba929a5e4ddc1db3cddda90e8d46f28c5e8da3300145fb81ce72da90",
+      "reports/V12_COMPLETE_REPORT.md": "760f571b4f767d88026772062ed2f87dc6d682bf981a838a3f2b1b7c5e5050c6",
+      "reports/VARIANCE_VS_CAUSAL_GEOMETRY_V12.md": "a85847f960373f772f78a68f73f2fa6178f41a1c760d7e5b255706f596b51afe",
+      "schemas/compact-memory-record-v3-1.schema.json": "748b71b85de62d4f5c77734201a4f4fce6c8c4e372a56952a727b0302451ab05",
+      "schemas/compact-memory-record-v3-2.schema.json": "e342c92e932cac120a8f666d553b026dbddfcc7ef4820eaa8e8d318d4f9f964a",
+      "schemas/figure-manifest.schema.json": "d0fa3ad98304e3dcafbdb45f22731d914dc10ec84ee6f00b72c6dbe65cb5b22b",
+      "schemas/geometry-record-v3.schema.json": "afdf182e5b4a30ddc2298344be2fdc2f8b466b67d2558062de7d95ebce5a443c",
+      "schemas/protocol-v10-record.schema.json": "7ca4919d305d401247609cd56a129acdf3ed1226b72d16850d5fda325f6b94dd",
+      "schemas/protocol-v11-record.schema.json": "ee8d728e47bcfc30c0e622d37e2485bfaa0568a3a49ff7f7645d30772378e727",
+      "schemas/protocol-v12-record.schema.json": "824f8d6be3cac11b041f94b712e46ea75759fddee024cf5a6bd48403d1e6b8c8",
+      "schemas/protocol-v4-record.schema.json": "89697b3278f1c4c27e55b62ad8ec9d31f1501fc1af51ef1059a267511fdddbfe",
+      "schemas/protocol-v5-record.schema.json": "1b9e07142d3682408bcf49edd45eb3e1c04045aa609691c065ccf30b25a395bf",
+      "schemas/protocol-v6-record.schema.json": "19d160db5dcc17fbe1d6995387c6bd0b202cd3963a16f95614f8542abeee5633",
+      "schemas/protocol-v7-record.schema.json": "b357dd097fba8a522743895c938a49416983b2d556a8a255c0766599930c439c",
+      "schemas/protocol-v8-record.schema.json": "814fb1a2045dd6804d300380487c49ea04135c6d61533c74fc8eb93718dbd108",
+      "schemas/protocol-v9-record.schema.json": "4fa9f7ed7e87f2e24240d9eb89868e59d95f7270b9fb5a102ad6c2ddcfa87dbb",
+      "schemas/run-manifest.schema.json": "c73392cf9d4ed1b4a8159ce56e8ce7c73a66b584e4576baa6a87c3d67eab3e2d",
+      "schemas/trial-record-v3-1.schema.json": "684eb8cbe5a01b47bb972ce74de575cbbeba6d0493c843a1c8847b8d10976217",
+      "schemas/trial-record-v3-2.schema.json": "4ff3efa2e1a312ade2fa79e60333d1e2263a8685c64fd7f3cc3cc3bc974df5f3",
+      "schemas/trial-record-v3.schema.json": "0be1749dd695e8ed7cb0eedc6a1526ee4aa9fce03742721ce6b058f8fe22ce16",
+      "schemas/trial-record.schema.json": "dc10df6c213db52106d128deb12844e85e12ff3a4ca0a3a05d8425da65f47a94",
+      "scripts/analyze_memory_v3_2.sh": "c0a44c5712e75c6511a15fa5607b4d4a12656106fed1bbd3b2e92035c5663d3e",
+      "scripts/build_complete_version_report.py": "0151b814d0752f51e817c0417a65a0ac609bbce12731d9e01add261a0ef14710",
+      "scripts/build_geometry_report.sh": "0287f09713ec65d4f08bff6c9fb39ca69da0d39a6a0c7f91638bb895ab3e7af5",
+      "scripts/build_postrun_report_v5.sh": "a7712738f3849495b4be737d0e632242d23d1a5305130ba18890484aa62a2729",
+      "scripts/build_report.sh": "f91761e418d4d833df54a84d6fd5f53e9f47365f80ed1ef3d113fc1518d88fce",
+      "scripts/build_report_v3_1.sh": "4200950d267a5a9f6a52524f1d7b3c218373d0aa2754ded110a6ef96247d24c8",
+      "scripts/build_report_v3_2.sh": "665ec83707707e1167b6f65ff1c6395b4b4225d65734299a5e67becce887a592",
+      "scripts/build_report_v5.sh": "4897700b3e75bf818a0af11713505a4c4dd35546ecf1976af586802f07e1251c",
+      "scripts/build_report_v6.sh": "09c550d294233de506c3e54a2b4c9f393c57d10ec05e6b164e0cbfec5f93cca9",
+      "scripts/build_report_v7.sh": "d5ee948bbedbbcd1ad0c35839dcae379b02eebabef98f139001444bca4b0f431",
+      "scripts/check_repository_artifacts.py": "422aa369470292cceabe712c04ec407d36c1939752aaf59a454bfa8bc6b7360f",
+      "scripts/check_v2_hashes.py": "09485a42e360ca681d2735b8590e3e0658e8830987c44aa9ca30533cc5e7ca9e",
+      "scripts/check_v3_immutable.py": "966597e445a774c82219365ad25fc841ba885d3c8adcddc4426691587032561c",
+      "scripts/check_v4_immutable.py": "e92f0cfb0806e79a397433b421a485d3cba652fdb82d7bceb3723e36e8d54c3b",
+      "scripts/create_v3_immutable.py": "bd2da3affc4048b2f986444ecc15aebbace436cfb8fc78176de013a206ce5bcc",
+      "scripts/create_v4_immutable.py": "dd217bf14568e5953107dd50644e48e61d586de1a392fd6bd0778e4c3e5582cb",
+      "scripts/finalize_reports_v10.sh": "a596fbb68cdb403e5caf5e69573cfcd5759add5dc97fcc5d6303b2f3a9b2ef39",
+      "scripts/freeze_phase3_v3.sh": "15a37ca563e5b8505d38bb27a77276d3267f44bea7b497f0e3c9e3e9a5864637",
+      "scripts/freeze_v3_1.sh": "902cf846c51c2104458e84e690c921555aa0cabe24dd7627e32b849d7d8dc4d5",
+      "scripts/prepare_v3_2.sh": "23eafe9b2906c8ecabae01b2b246176b28842b286c15ec97d22d2bd4fafac757",
+      "scripts/prepush_checks.sh": "29da1540e5700126aa57ff0e8482bc7dda5e48eee98d78f72631901adc08f2db",
+      "scripts/run_arch_compression_v7_corrective.sh": "8f7761acf73c17343851d99c0214abad1e1cfa06325604599fe0518ca7e90cb6",
+      "scripts/run_arch_state_v7.sh": "99d950dd862d9bb908d2176131156e14c7ab857319477d830bc083053da5637c",
+      "scripts/run_calibration_v3_1.sh": "ca7ed6ca94e0d23879a605282538b35a37777eda09b61ae032cc85e5c401144c",
+      "scripts/run_calibration_v3_2.sh": "6a22d93da0c1694475932752dd199c0381e1e5756d8c3de307bd72cec170a134",
+      "scripts/run_causal_geometry_v11.sh": "9b5a6858ec8b90198944c42b642e22fee7923b01714a76ad5f49fd0986862a2d",
+      "scripts/run_causal_geometry_v11_manifold_amendment.sh": "905e19208bb9c519a7fb37df220f0c313e176ad6fc2a04039def657fa2637b08",
+      "scripts/run_causal_geometry_v12.sh": "e6901d96c199e6f69188f2dea24b6660bef846caf2bb23581d2fbe0576ca53e6",
+      "scripts/run_causal_sufficiency_v10.sh": "dbdbcc52f2b3ae09a3d48dc6e5627334f31aed690de89b6e0543d71a5629c1eb",
+      "scripts/run_causal_sufficiency_v10_causal_amendment.sh": "1037835276feb335174f2c0cf073c5ab972e91779d156e4ace77df80f852c739",
+      "scripts/run_causal_sufficiency_v10_residual_amendment.sh": "c2593d6aff6c23b3f8cbdf6333902ab63c789301e52412ddecbdc6a53ab0d672",
+      "scripts/run_clamp_v3_calibration.sh": "4b179e4cb42c4e02efbd81938a13a677068f3372c2a21b8804f555ec067a228c",
+      "scripts/run_closure_confirm.sh": "47767992ec543ec5b0ec5b2465bd0af2983307fc18840db388465012bf4dc6b2",
+      "scripts/run_closure_pilot.sh": "ee11ebacaf21b3e56be9248b742a521d014069d7026cc51fb93d619dcb988644",
+      "scripts/run_closure_v3_1_confirm.sh": "a8442da7b8ecf3e8942bf7ee982bf134648b321402231b53e384cfbe0343ae4c",
+      "scripts/run_closure_v3_1_pilot.sh": "09927064b5e5fcaf4fd0e8fec17528537994b7754c36b2d56b8fecc1828c79e1",
+      "scripts/run_closure_v3_2_confirm.sh": "65cfed018a0ffc531bea136a9bba0d97449efce9867fc52f2a1f811da16a8d73",
+      "scripts/run_closure_v3_2_pilot.sh": "5222f547d635955ef721290ba5e8471327b50307663003acdcd00df268f4cbe6",
+      "scripts/run_closure_v3_confirm.sh": "72fbc30ea530ec6b4e60e287c4f29d0ef58fe727b3a2e4e8cdcfccb08810aa0b",
+      "scripts/run_closure_v3_pilot.sh": "5405939df381912fb44e71c2e4b99d1ecd6c76cbb4ea61ccb01a2241120d92c5",
+      "scripts/run_collision_search.sh": "a2b25df2002b5526362b353358e8cca633d2080a39e69d537be25971a7f63a20",
+      "scripts/run_compact_memory_references_v3_1.sh": "9ba7fa7bf2bc4f6d1ddb2d8442caf7bed93ef3d520450eacfcc0a0a666914136",
+      "scripts/run_compact_memory_references_v3_2.sh": "24d9e70c4d0abcf5b09bf51601272bc36feb6d913c6246e2f4066b43070bb4ba",
+      "scripts/run_compact_memory_v3_1.sh": "2e2066cf8fe7593f7541b294a3f269ccea64f64815f728987a21f0fd954ae65f",
+      "scripts/run_compact_memory_v3_2.sh": "6aa403129cfb22988ebd862e9ecc2e819713375e8fd89fe3314381f891497bcb",
+      "scripts/run_compression_v8_1.sh": "e1543318a9cb0b73eabd345b4a0966f943ce8b33b7d8610382ce193e2011b77b",
+      "scripts/run_controllers_v4.sh": "f01efca10e1a1429b0ef028b6301a80a5f5dc66a3ee662ebbcc5b74f15f244fe",
+      "scripts/run_dictionary_sensitivity.sh": "891fcba8ed7f68af79583a5fe293eccf16c687be8a66c04954d8f5ad8fc52445",
+      "scripts/run_dictionary_v3.sh": "0cd800ee91c13d95ce33df06095684ee2f1df00378428acdea6656170cc3f0ba",
+      "scripts/run_distillation.sh": "006f435acdcbc3a9cea7136527245de6ea1d82150cc497f5b3ea3ab82eb00fc6",
+      "scripts/run_geometry_v3.sh": "1edc7f45f1c71d1a2bcb1cae6c7e2b9f1e52b242f5ab00c3a9d3efeb9357b453",
+      "scripts/run_h2_replication_v5.sh": "e5b6d8109d5096ed91f4616034735ce5e8a2d2c86e5eefbfd2bc2243fb0503f9",
+      "scripts/run_layer_calibration.sh": "3948f39f85e2294efb6d7e4327fa3564b23a2698ff921859c1cc4b8e46ef186e",
+      "scripts/run_localization_analysis_v7.sh": "1f39f9c4738d34b084d0ba7a6d7df2874b215fb05162209a806ba66f29439365",
+      "scripts/run_lowdim_search.sh": "02dc5dea1e40a70e188eaef600469e4f99b82217a6424ee441d4724c336035bb",
+      "scripts/run_mediation_v3.sh": "0cd800ee91c13d95ce33df06095684ee2f1df00378428acdea6656170cc3f0ba",
+      "scripts/run_memory_order.sh": "6ae3dbe3f127724edc9ea1a36d576984b421988c2b7f63063336fb34d7624e09",
+      "scripts/run_peripheral_v5.sh": "e1cb28605034fdc33ce0498890386e8e5f1ab3c0418b7f9a582832893d01c35f",
+      "scripts/run_peripheral_v6.sh": "d8f114ee99a1194bec000bf1adb96b2f555b668c4bad8e46eca8b68f714f65d7",
+      "scripts/run_persistent_channels_v7.sh": "5c475371cd320bcd88800c6f5f87fad1c298f5d78cc27183510b5ed8b1a1f4a6",
+      "scripts/run_persistent_state_v8.sh": "e7974eeedeb2abe9ef9ea2afb950132c7ad11b409c28f0e96cc28b0b482d7caf",
+      "scripts/run_predictive_state_v4.sh": "bc5103bf27b635ffdb6faf784888f6181a1cb854f65422500d1edbd458221db7",
+      "scripts/run_single_arm_v4.sh": "eaba62f252ac703a93bae4090d15741d2a7715d17e52fb0f8d03c767ac7f54b3",
+      "scripts/run_strict_interface_v10.sh": "5e35ee56b8e952ad2d9bdad4ec20333eadf404c470c033e0a32aefe2681b5f66",
+      "scripts/run_sufficiency_v9.sh": "22b2e68f0b01016e483f78aa6773550ee9bea4f16bc52fb12e1874f5ce1eeb4a",
+      "scripts/run_sufficiency_v9_reporting_amendment_1.sh": "e2b6467bb5d6dea569a05fe9da896d936adcdb3a091c6217101dfd73719551ea",
+      "scripts/run_sufficiency_v9_reporting_amendment_2.sh": "eed324972cc8ab319becaa5f81b1967b3ad8aff79e31dd00b37192170499b40b",
+      "scripts/run_sufficiency_v9_reporting_amendment_3.sh": "9f1b0924f53b6cf7025d9cfbbdc45b3e8f9a6ae7d7e5d804797ca5ce4377273e",
+      "scripts/run_teacher_v4.sh": "62b7c5276f7f17811fcd18fa34d02e382553eed9efc98301ea613ae6fd04774e",
+      "scripts/run_token_time.sh": "b5d9ec0e185aaad1d23fa40706a2bcf19829c06a6275d69f3387e457286b71b4",
+      "scripts/run_validation.sh": "03658baebf4e6bbd43f2b1d9feeb27844650067b9337d9da6caf0107a7925609",
+      "scripts/run_validation_v2.sh": "663ab83ccfa815a119aed677ddc8039e9fa18e613dce6213bede80fc47b0c17f",
+      "src/jclosure/__init__.py": "090645cd46e42a45af5f7d98e06f01e750e87c2d6da6907a11805ca81fa8232c",
+      "src/jclosure/arch_compression_v7.py": "014dc52f391b7af1ff0e99955af3886135d2314d1fc9bfc762c534f38306b455",
+      "src/jclosure/baseline_guard.py": "94ae412e4e9997b3adc565f6947ae605b789f363b6a86b27d00a5cf34ec3c895",
+      "src/jclosure/cache_v7.py": "e494c3377cbd85f97cc210dd8abb32b5eadba8424fafca7243ec91f5a8c95369",
+      "src/jclosure/clamp.py": "646487209cf971cf9a785eea0f3dba95ad24e5423ecbdd7e9928e4d0d32d3bd1",
+      "src/jclosure/clamp_v3.py": "05091d9092172aee91a33103a2514946d2b79438be4aed1aa02c3769de9adc14",
+      "src/jclosure/clamp_v3_1.py": "f0e2a1ad26407eaa07c331bcf1da065bbe43c98d39812a4b28c26753c27396c5",
+      "src/jclosure/clamp_v3_2.py": "4d1d7549a363e58c9adcc9eb5797d648cef1ff716f5ec36fe30bf49ba7c738bf",
+      "src/jclosure/compact_memory_references_v3_1.py": "ed8d17779771d2d811b8cb4dca8e529c123a284d8f795205eac2a916f5a9132b",
+      "src/jclosure/compact_memory_v3_1.py": "b5be5a3d35267c8ac65ce63e0755c6e7009aaf8fd011e511d35008e276d44ea0",
+      "src/jclosure/compact_memory_v3_2.py": "7941f4956e221e5e2b60b67efe20e0baef2a5da269749486133b18fa42f3361c",
+      "src/jclosure/config.py": "563d6490a2508a800e69081f06130a03f978bd39265745493d3689d384947525",
+      "src/jclosure/datasets.py": "c279d35a29b308c0ac261dc21b9b50cdcc93d5ca59b8e36dfe3214567f4c21bd",
+      "src/jclosure/datasets_v3_1.py": "995358ed3689daf32abd04239334e5336104a76b0517e34dd5478375f021ee40",
+      "src/jclosure/datasets_v4.py": "49e5a156b3fbf444d2bbaa28b56f3cdf89e01a35bd081c032e1feec97be39ea2",
+      "src/jclosure/datasets_v5.py": "f4b2e32570dd8a4d12eadd8ddc78e928b9dbd0ed29b717aef1ed9f77bf026894",
+      "src/jclosure/datasets_v8.py": "4e1db1ab6b2a76fac4e9c68219675f78368688faab2ac408d546c6d4598447ef",
+      "src/jclosure/decomposition.py": "64783e4e5eb3456e17b4182ffce8924081d8efb0ecd0e60101410d99cf606640",
+      "src/jclosure/experiments/__init__.py": "ffdd26f74c2209e6b0700c048eb84ac622ecefd922443ae8e51a252a1bb6467e",
+      "src/jclosure/experiments/analyze_memory_v3_2.py": "5be2d6ff9be64e3db626718ed15d4e51a2986c4415190e18f43b187f5475a7b0",
+      "src/jclosure/experiments/analyze_v11.py": "607a78d9f0fe2e19eb45bf91b9aa236b4299388ddd9298e00a507b3aa47c77af",
+      "src/jclosure/experiments/analyze_v11_amendment.py": "9aa4369b38e6202d23d886ad66819ed59e4727bfac686aefb06061116d46dca5",
+      "src/jclosure/experiments/analyze_v12.py": "987a9b0c3f1309545d316c1e8d3264146f31170636c026d72ef0d6fda2457410",
+      "src/jclosure/experiments/arch_compression_v7.py": "9594a8853ff46d75429e6dba769ed1f830b71017b2f6ff53265084de13d8f085",
+      "src/jclosure/experiments/arch_compression_v7_corrective.py": "a82b0f6a5afe75e3d883d892f630f275a98caddf7a844743b86cbf8592ae787e",
+      "src/jclosure/experiments/calibrate_layers.py": "63a545449f0fa3588fed2903d8c5d99710c2f2f44cef3d4cd400e634c8854ad1",
+      "src/jclosure/experiments/calibrate_v3_1.py": "4a5f95f2ad17da727fde557104827dca4031c73b67ab7701c35df800cb5e1ac6",
+      "src/jclosure/experiments/calibrate_v3_2.py": "e4b9682da1cf7004ebf0547fa2381f6c2174e79be2998017aec197569035d024",
+      "src/jclosure/experiments/calibrate_v8.py": "7f85b265f86584260d4ec9d94157079fb70f9c245f0533189f749c3fba9e31e9",
+      "src/jclosure/experiments/causal_endpoint_v6.py": "99d01b10f72e76a1b4c0b1a51f7347de72930128c4d6741d843ae4f59adceca5",
+      "src/jclosure/experiments/causal_single_v4.py": "84851ff0505c834372c876563595c4d3d013e23aab27cc2d0be16ac4a765cdc9",
+      "src/jclosure/experiments/causal_v11.py": "ef974fd5a4959d0d05d135bb58e2038997013b017a0118676e7857b279c92099",
+      "src/jclosure/experiments/causal_v12.py": "27820468ac60872af147fce539395dbfd205ddbc2996bb23917803f40324b6c3",
+      "src/jclosure/experiments/clamp_v3_calibration.py": "efb4d54f0d7baa6f1680749f4fb557636e6a00f5077a13c4b605295c41bd0b49",
+      "src/jclosure/experiments/closure.py": "fdec214a5b0c1e2bdf07a53bbcd25fb2cee191a81a381a626cf209d6dab48542",
+      "src/jclosure/experiments/closure_v3.py": "281c6b410ffe15b0f799c44c04633aaea52bc16e1c44c49d61b0cba7e0f6d4cf",
+      "src/jclosure/experiments/closure_v3_1.py": "480de8d22c2441403f1e411ce10242061bb4b43e5880a9ceae68b3ce3fd1067e",
+      "src/jclosure/experiments/closure_v3_2.py": "bbe8d0e7f46afc7f012a88ee7dd6d25ccaf35fc8ecf6972dacb7258cf9fdecf1",
+      "src/jclosure/experiments/common.py": "56dccaf68651492f0529daccc4fafd1b912f35cb34e08d50d141a08ce8dc9cb0",
+      "src/jclosure/experiments/compact_memory_references_v3_1.py": "eb099badbe518e6feae267eef7eff25d8aae7108ab1320987e4cf46fef00158d",
+      "src/jclosure/experiments/compact_memory_references_v3_2.py": "dcd8f25432cf345d64e626a4d76bdbab90e72b5739f59e5cd3d784ecfde55c82",
+      "src/jclosure/experiments/compact_memory_v3_1.py": "1f50ba2df9b2ba9a45d1febcc971989d002e054c9ff5df87a511ef04c1c47ebf",
+      "src/jclosure/experiments/compact_memory_v3_2.py": "a32543275f98de73c02c56c066e26c03ff9c8dfa13e5e4e49c13332325e1f60b",
+      "src/jclosure/experiments/compress_persistent_v8.py": "84c061b508f5d1dda4bd1940df8f236b1a522c6e709fdf5083db23745d418e8a",
+      "src/jclosure/experiments/compress_persistent_v8_1.py": "4e14808edcadedd9ddab05788b1efab2a29f1c71d62ef436d0e5eaf39b7e038c",
+      "src/jclosure/experiments/controllers_v4.py": "578836451cc4d47bcbbf500c6824ad03254829985a38f02aee4ba60d3e252eaf",
+      "src/jclosure/experiments/decoded_causal_v10.py": "772ccbc40b622a95e6f912eecbe24f29486736c34d7d3ba7d81fa7fa67fd410b",
+      "src/jclosure/experiments/decoded_causal_v10_amendment.py": "8725b1dc49258a709c9a293ff034d69e8cf56109dbdde43e071a1c51dc109483",
+      "src/jclosure/experiments/dictionary_sensitivity.py": "f6dfe0547499c81c1ba0847f035138da14f74af94a602cdc0e904383f3eb33da",
+      "src/jclosure/experiments/distill_controller.py": "9d952093cad5d84aabc349e05dd26797ecc02b8a4c5ba616c3d602ab2868e30c",
+      "src/jclosure/experiments/finalize_reports_v10.py": "0296f14315f09424201e443499dc3c54e0a42f9e434f2adb1d0a2fbec83cf832",
+      "src/jclosure/experiments/freeze_phase0_v2.py": "0568f4b3804ac58aec3d14287422a05bc4aa3dd27f13f447499280318d6dfcef",
+      "src/jclosure/experiments/freeze_phase3_v3.py": "9e29b65979777adb26c437fcbe0b654db64efc615bbae8ef0cad93f8cd57c59b",
+      "src/jclosure/experiments/freeze_v3_1.py": "e267e45ca9f1fca9389602f3da5f638c4558ec028a8230ac29faef2862327fe7",
+      "src/jclosure/experiments/freeze_v3_2.py": "6b6c36da674e3569e65b8265176c7a27fcd0021e2babf01f54144370f728defa",
+      "src/jclosure/experiments/geometry_v3.py": "0eadd41773a338fe7a06d97ad852c573184f955102d14ed574ae92cd0d801e72",
+      "src/jclosure/experiments/h2_replication_v5.py": "73a485e39f47d8753939a61640ef2b45a0bc62a9346489510a50925dbe9947cd",
+      "src/jclosure/experiments/jvp_v12.py": "3cbb0a4f4dc196e9c63e75d5e519e3c8384cd0d3511ff7b48dd0746c2c8bd364",
+      "src/jclosure/experiments/localization_analysis_v7.py": "5f6770fb69b59ba67228ea7707c11cf66c015a5aba260bff0e86e7c557f91457",
+      "src/jclosure/experiments/localize_channels_v7.py": "7e8e743b9aba9d5a01b68cfb497402715262b9d19c8a29cab63eb5adcd442596",
+      "src/jclosure/experiments/lowdim_search.py": "a281d74a6f925ebd1031ffb80b68eaeb8c5ac0f60a5302494738b4092220bd41",
+      "src/jclosure/experiments/mediation_v4.py": "05169ef8408d93d43ac82d1c720e662dfbdc96b9dbd5aa852b9cf1d99896567c",
+      "src/jclosure/experiments/memory_order.py": "b2496b5f83c59d9dd056fc61c7ced97bde8a6cd4f6229281684e5514ac77356c",
+      "src/jclosure/experiments/modularity.py": "8a521d1e443b0c3501657c17f7e663eb2dfa3251c2b4e5cc8bb67041c443d343",
+      "src/jclosure/experiments/natural_collisions.py": "72f00be9fd1553811a9d33f094230fd1b966d56882c3deaa6c03b16968efaacc",
+      "src/jclosure/experiments/peripheral_ceiling_v6.py": "27e25690ff686e07b0c8370120d7019ff17cf2a2d674f6a4a3c5dcae6fa4d28a",
+      "src/jclosure/experiments/peripheral_v5.py": "3a574f105ccdafd283e64dd757aee381e3c5b082655607926f7ab92c6c69e75a",
+      "src/jclosure/experiments/persistent_channels_v7.py": "ed0584b66e148532efe8f1daac9589b8144ea1f611d0fd069ceeeb8606f6d321",
+      "src/jclosure/experiments/persistent_state_v8.py": "d8f09e504229cf28a5ef0077a15f657ffa41aafaa7f94c5714213137c11c51e0",
+      "src/jclosure/experiments/phase0_audit.py": "32d1bc43e3b3a3da90ca5b82010bf4f09e74840699382ed782ebc2b678ebdd7d",
+      "src/jclosure/experiments/predictive_state_v4.py": "d978d77a503ec3c1afdb79450ded5291fcb97d2306c5ee53d00550ad26772567",
+      "src/jclosure/experiments/prepare_phase0_v2.py": "fb413f131340db5d69b6681bd2dabce6217992808e9afca5c922fd19dd2d2d6b",
+      "src/jclosure/experiments/prepare_v11.py": "4f50d6b956cc51e8dcee1598b968957f088997ffcc95adecdec39c03ca4b9763",
+      "src/jclosure/experiments/prepare_v12.py": "c2c2a982dcfa2303235d4cd05507555b13d575c9353d62d1128b226e27982bcd",
+      "src/jclosure/experiments/prepare_v3_1.py": "a952b03a9fcd137e195084f1bad05af263a806b012d7c726bf2da32dade2996c",
+      "src/jclosure/experiments/prepare_v3_2.py": "4b15f4c920d894241243bf6c34d3ee388276d7b7801ff8249edc403a2d6be6c1",
+      "src/jclosure/experiments/protocol_v12_hybrid_nullification.py": "1a8d8112a50f8531bc3a2d198dfe0e5708e16ab88e2862827519896da5d500e0",
+      "src/jclosure/experiments/references_v4.py": "8eeabea34759624a0260cb87b4028932fab14e9c8c9dd9cc17f9893f88cd1a11",
+      "src/jclosure/experiments/replacement_v12_amendment.py": "666374b7f680e1e53752ca3d4cd90757e8e83dfc2099a0bef2b7eddfbd409eee",
+      "src/jclosure/experiments/report_v10.py": "ea5ee66fb2c5c28a6e0d175d2781170c90b68e7babd160cddcce163462455cc2",
+      "src/jclosure/experiments/report_v6.py": "a0417ff745ffa30c66fe395b3735fe416d967646e3fcbdc5b10b50adb582356a",
+      "src/jclosure/experiments/report_v7.py": "f7664082b104f2146a744c660f23a9740f4f00753e3f668e87266810c7aca135",
+      "src/jclosure/experiments/report_v8.py": "5b77081a14136332667c1fbe33e4d3a93ee8489ca25fcdd613ff532bae1682d7",
+      "src/jclosure/experiments/report_v9.py": "4fafb58905debe61db216dc1c126b8bef62f868b175577cbc29d80f9fc5e2d3b",
+      "src/jclosure/experiments/report_v9_amendment_1.py": "3ae8de6cafaa77bedd40d0f6de35c13d0db6bd72e596433a9920c55cd671638b",
+      "src/jclosure/experiments/report_v9_amendment_2.py": "eab0ede65091e21c609272a51949ec2967f48bf41277d5f4bc237be4985963da",
+      "src/jclosure/experiments/report_v9_amendment_3.py": "bfe392aeb956b7f39b6a6b9568df995d19ff2d1d52968b203c7f0dca973ce37f",
+      "src/jclosure/experiments/residual_audit_v10_amendment.py": "1a9b0571041ab94a51af3415521a42aa5c05d3b0c08f982a3ef2b522710ae490",
+      "src/jclosure/experiments/runtime_v12_amendment.py": "f1d929a5a7b7482497721597def47c489ff09a466717f55f3ec8e82abdeaebbc",
+      "src/jclosure/experiments/runtime_v12_amendment_2.py": "8eb3076a641cc46079c5c7a97322c43571983c5b227fb3222d49d110195b502b",
+      "src/jclosure/experiments/runtime_v12_amendment_3.py": "d8ca0d5f27003695fc4f257732c91d8b74e6c5f374c8f51a4e6a7f3eb5bc8d22",
+      "src/jclosure/experiments/runtime_v12_amendment_5.py": "78d7a2dfad9779ca5c3ae7354d19cd7a616e6f8916f98c3c725dba8ce75407c8",
+      "src/jclosure/experiments/runtime_v12_amendment_6.py": "42f0211e58aa9abcc962b7acf7093ca38f8be03b1ffaeb1e4b48d5de52ab3ef1",
+      "src/jclosure/experiments/strict_interface_v10.py": "2c2b661f469ce1b3767d12df6f2f4c9ccbb65afbf3c463ee2ffb97e6e51e41b6",
+      "src/jclosure/experiments/sufficiency_v10.py": "628036ccd527b58a61b3a2afa1440e34b86186142b88eb1dbe9f88a3730cceaa",
+      "src/jclosure/experiments/sufficiency_v9.py": "447465d2c5fa6c6029545359d80401cab9a7923187f07523a3d13658bbf371b9",
+      "src/jclosure/experiments/teacher_tasks_v4.py": "83764225a0ee8000b886c076ceb6e7030d8085f04a0989d8531e64fe4a516ec0",
+      "src/jclosure/experiments/token_time_closure.py": "259664c4b991cbfff19d2fc446c7d36bc48749b5afa5be19435bc7c9e5494119",
+      "src/jclosure/experiments/traces_v4.py": "3a951fdd0acd1df3200c24a398c1d9b41d12d3ddf6d112ffadd32e451cab1999",
+      "src/jclosure/experiments/validate_lens.py": "7ba6f7ca471f1145405736d20614e833e2fa5632e537a717de52b18ce1bdff6f",
+      "src/jclosure/experiments/validate_lens_v2.py": "286c6191d99d75fd490ac41c1be9dd47749fd1b4bbbe721a3d8c1c3818f149f5",
+      "src/jclosure/geometry.py": "020e70f4ae2dfead43807abf7340866314666c868ec0e2a2a64d682a1af94cb3",
+      "src/jclosure/interventions.py": "43f8451856c6e0042c3a27ec0caa18110ae02e6aa045ac9ee0a6eba458be8e8f",
+      "src/jclosure/jstate.py": "d1753907fe39e04d3586cd97f42b8d3227d35f8749c9ae41354395aad6c71adc",
+      "src/jclosure/memory_analysis_v3_2.py": "3ee44d6a143422acf36890c698829e9a6c48e55bae873a8be815b018d0fc44aa",
+      "src/jclosure/metrics.py": "d82837f5ba6c0b280d6c4d9c33ef03e7de1252f4542baf11f8acd9f75e82d376",
+      "src/jclosure/model.py": "201ab27880dbd46872bc00cd74cb3b4e3cb1a0c973f5540ed3d459ead564d1ba",
+      "src/jclosure/peripheral_v5.py": "831c42403eb27562f43ee8adedbc492ead67f75d589deebaa83e59752305cd86",
+      "src/jclosure/peripheral_v6.py": "51765ee5c9eda2b68f058054124b8b4c8fd34a467f0ef1a1a43351b54717ac13",
+      "src/jclosure/persistent_state_v8.py": "dc9a6f3205678451da8ba5b54ebd22506e6db9a6f50c51f3b9d3c95078926e10",
+      "src/jclosure/phase0.py": "3505abeae35ba399b204ac5e74d273e8ff02519f26d6fb4feb94fa61a12255d1",
+      "src/jclosure/predictive_state_v4.py": "7f46b02695cb84ec641a1ff7df6d99b0a0ceb67dcf8a4b58d0046c6706233998",
+      "src/jclosure/protocol.py": "c95bf84f1818ef9ac1e3888675fe21cd3ed134936dab3b07b30714d22008d2bc",
+      "src/jclosure/protocol_v10.py": "e304b45e6a983c83bb74fc5247336479d70dd24e0a4431dc6641544b2e11692e",
+      "src/jclosure/protocol_v10_causal_amendment.py": "d0715959ee60066c3425480dd0003dac02070a148ad4b2b18dc2ce52339196c1",
+      "src/jclosure/protocol_v10_residual_amendment.py": "0dbeb5477ad6bc1550d9845e490c6b999d04ce51562451e906d8572068c7f16f",
+      "src/jclosure/protocol_v10_strict_interface.py": "239c078d292427ea0eb92dcc681efa82b60197bfefce41da3d842e4c19247460",
+      "src/jclosure/protocol_v11.py": "9ed1b8f8883e155684ca99aeacc2d4d1853fbd0ecdecb40b33b92145c8984f69",
+      "src/jclosure/protocol_v11_manifold_amendment.py": "a8c7346cf59759725f2bae3a041fe72f7f2aded94ae7ffb6c60febd5f2739c81",
+      "src/jclosure/protocol_v12.py": "e1f6d68782fc286a10457d0a3ca997d862680ab0d79bc81d36c6eee03b67438f",
+      "src/jclosure/protocol_v3.py": "253ae02e43938c868101e566fb5caa937fb70161aab2dd497ca91bd0ee8e3ef9",
+      "src/jclosure/protocol_v3_1.py": "59c7c3b46991436f0973e24591bf94a31ea09d751e5809d1defd1bc880f092d1",
+      "src/jclosure/protocol_v3_2.py": "fe85db6382e0fc14c44aca7c1afadc715ea05175360e6fc45be2c6687f3ba091",
+      "src/jclosure/protocol_v4.py": "fdf5994ce356175515d3f9fe07dd25c6da4af1b8a3b8f8b0c74372c7df0822d8",
+      "src/jclosure/protocol_v5.py": "9005c3684a2dfa1ad9734a5e242b261b1a90ad69a59736891ebb94fdf7abda3f",
+      "src/jclosure/protocol_v6.py": "dc73f8da3f6b8de7e725b3df325675f1f9ba224e5b96c2f3fcec29c86848ea75",
+      "src/jclosure/protocol_v7.py": "e11860235b3af53492659a92ab30f9454787dc077148fca762eaf8bfdf60cadf",
+      "src/jclosure/protocol_v7_corrective.py": "9c8fdf91dad555d979380db5aee4fcb5e0f149c0df4b3e3625c5ab0fdee1f04b",
+      "src/jclosure/protocol_v7_stage2.py": "e161158a0753eab0b3c6a57b1832132141a640ac417b17c4c92c47f81bbdd248",
+      "src/jclosure/protocol_v8.py": "544923cc3a8bbfb88c3bdf67edfe0ecf7f1d4ab3845aa3ab4f1e5f8e4541248a",
+      "src/jclosure/protocol_v9.py": "498493c135716f00773e2356b75ffbee50c1b0b0fdd5bdfc1fa63eac903f3070",
+      "src/jclosure/protocol_v9_reporting_amendment_1.py": "6f866758d29d213acebf0a1f8bd7db2be74190bc4d269938561e03467b225b11",
+      "src/jclosure/protocol_v9_reporting_amendment_2.py": "c4d61f7e9dc693b67a842cb6d24ef2b607a0afc4995d89d00542d2344db8e521",
+      "src/jclosure/protocol_v9_reporting_amendment_3.py": "632ed817564aaaecc9dbcc0cc2661c3824663c4d857ddd94f950109122349162",
+      "src/jclosure/provenance.py": "18687a3e35d9a6b6d590818ea30ea29eb0bac1668a79853ddc6e939a114439ff",
+      "src/jclosure/recorder.py": "050c583cfda6b968f83e24e8b1e488cb0d588f8575353de5f8d32bba8c7f3627",
+      "src/jclosure/records.py": "25390ebada53e077e11f925e2895c41f7d6f292bd373b515f6fff174e3da10e4",
+      "src/jclosure/records_v3_1.py": "800c8e5790b8d0c93d32c33e2128e985f271dc8ab363207c66563a2ad44a5fc2",
+      "src/jclosure/records_v3_2.py": "777d6ce4538b1660f8b9a938d290bf28eacd70337d29b2f9b718cb35c682bbad",
+      "src/jclosure/records_v4.py": "ca038d7ba61210dc15d99ab28cbc7686b102ca5c709467c380bb00e535bc6241",
+      "src/jclosure/records_v5.py": "9230e88a589d9f3b109d2be07dddb477237f560cdaa47c4360550a92edc2b7e1",
+      "src/jclosure/records_v6.py": "e06e9c0a7556973068d7bc96b954e2aaefe9aa2f5a674d51b079755fd92886b8",
+      "src/jclosure/records_v7.py": "dc65a0b4c07796dab2535b0267b8570dacf0fa7cd63ec729e6fb1abb35303473",
+      "src/jclosure/records_v8.py": "eef4283a9e18f5b49445f2e0526c64380bd99928c270171413fbd3f148988a24",
+      "src/jclosure/reporting.py": "ab8eb9f262f4a41e0c64d41e9c447591f09a2fd02295fd797f407a534d81a2a8",
+      "src/jclosure/reporting_postrun_v3_2.py": "bf5ec700d276e4e5dbec7f59209fb29e3c20c57121dbc81fa398b2d8a5cf49f6",
+      "src/jclosure/reporting_postrun_v5.py": "b30ba912a0a61f20ddc45c9b4dac608befa9cdd332bb2d43ccb06f758a9be454",
+      "src/jclosure/reporting_v10.py": "6f1c39ca7209aa33ffcc4d92b43416a7da7c8b939215a307c1bdeadb5677da15",
+      "src/jclosure/reporting_v11.py": "04454e6707d11c9b3024f849e91ba9e7957e1d414c52b7a17c2c5ec13e4ef4f8",
+      "src/jclosure/reporting_v11_amendment.py": "4aefc197f743a9f25b480ebabc72f81c2ae2508e8efc8d247a15b7098e702565",
+      "src/jclosure/reporting_v12.py": "f555b3e86307eb63e7e6624bef38ff02a658013b3aee0912e1a40f415a1e7d4e",
+      "src/jclosure/reporting_v2.py": "96cb401b8a5cb63d975a860a5af4306bdd717b7ba982acdd58358e453ff74f68",
+      "src/jclosure/reporting_v3.py": "5b83dc1477dbcce5ec9e3e54c37b63cf2689531120084bd5f782f097b869ac2a",
+      "src/jclosure/reporting_v3_1.py": "6cc6ff515f301b6fe60a81b17a7aa563e1d3e9bf0b3dcaa422b0b9eec84110f3",
+      "src/jclosure/reporting_v3_2.py": "2184457f3963283934b6de02c6da7f99b659391b84bb6f36614aa85285f8b8c5",
+      "src/jclosure/reporting_v4.py": "96a0bd4c07bf157688a551ee72e9cf03a059dc0509f25a9785cfae3ccb42657f",
+      "src/jclosure/reporting_v5.py": "aae3d2a665aadcd1e20c13a90475e6d06f0c36140782eead9d6d903fbb0b23d3",
+      "src/jclosure/reporting_v6.py": "b9920ea6aee2770e93e2fd174786defc96a04e9fdc79765c1b67a83c02249bf7",
+      "src/jclosure/reporting_v7.py": "03026c5141cab10d34f1fabd0ec2ecc32c77f4fe2368587e6c946c64d6923bb6",
+      "src/jclosure/reporting_v8.py": "ce35af262648a61375ad009fbb069022571941aaba8c8742d77c21fdbfbfd829",
+      "src/jclosure/reporting_v9.py": "3bdef644b945b8b6be141147e2ce844ed26b522d6b53f63f4092365b03c4b338",
+      "src/jclosure/reporting_v9_amendment_1.py": "8e49ab2c612a32120cd7974ea39ca0860b8642912671ec58ee2a3be99d1880e0",
+      "src/jclosure/reporting_v9_amendment_2.py": "72d14a9600120c470ccbd50698ba11a7d4831b06f2c17886bc099940750ed13d",
+      "src/jclosure/reporting_v9_amendment_3.py": "c7026a7042103f2650bed84235a96f12b3c6b0d022dd30ed09b94f98b8822ea7",
+      "src/jclosure/runtime_v3_1.py": "56800bbdeb70f3441158a26b751e8efa9a414293efc9ebf2f15d679152fa2200",
+      "src/jclosure/runtime_v3_2.py": "1ead19b10a8542b32754ca185a2597762e235c6406db72c0f6e5aef0c798df52",
+      "src/jclosure/single_arm_v4.py": "fdf710c82e468824402a073935d05c98cdc1aff912352cd69327ffb42178b26f",
+      "src/jclosure/state_models_v11.py": "c9d95cac6fc2a4e0339120d8940ee808a70b50ad44d160615fc48a957cbd1fc7",
+      "src/jclosure/state_models_v12.py": "3e090403d713b586a17843f72534a3b0ac341ba4aff185305e4eefa114a86aa3",
+      "src/jclosure/statistics.py": "d53069f53f3a7382233f6c5b759149a7c2794cea573361afc8c568d6dee35beb",
+      "src/jclosure/statistics_v3_1.py": "e1d8b9e6a7505b61d870dc932769e79ebabe1bc3fc12fab2fcea68d97a24fec1",
+      "src/jclosure/statistics_v3_2.py": "5348a92d45dafeca81195c0e1c0c4b66319df68fb87286baf22412d778bec95e",
+      "tests/test_clamp.py": "fa7c45a9142abddb39bdd68ed78e7275d561a2f98c78138f3f8387e686f4654f",
+      "tests/test_clamp_v3.py": "e7f60a718c67797b20e6279588eba474cf8398b66e743b71c1c6fb3bd975f6cc",
+      "tests/test_closure_v3.py": "95081986ce48f10f1f2b445b5822c2ec79afa6303522d88187a863386301b2bd",
+      "tests/test_decomposition.py": "24fc0af4970eac70fc99646b321cc8976c3144d22f7b37b5d41f7394a268eb69",
+      "tests/test_dictionary_sensitivity.py": "29d56c905052655ec78e4cdf595590533d8e22ae64025ac9eae83656405deb17",
+      "tests/test_geometry.py": "b99f4986f4bfcc3e6cd5ce3d40a5b383c677383b7db26f15fb8cf868ce010867",
+      "tests/test_interventions.py": "d7181adcf420f318d48b86730f8220226c56196b95b3d5457d1981ec504c0922",
+      "tests/test_lowdim_search.py": "ede2113760fa5d9044da8bcc8a452ec8ef22c663d3c25e0fbd7409923b8952b1",
+      "tests/test_metrics.py": "13dcc718d3b1eec9c40ca17949ef1ec7a17e2489fa8f03c55a49079e9aabb093",
+      "tests/test_phase0_v2.py": "a747ceda5586e00a40d53ede514a4a273f2016e1b8913fb6fafba989b954a685",
+      "tests/test_recording.py": "211e9c7cf92dc1c7c19e8925abec62316e91a1d00cc347c57dadba157e6516dc",
+      "tests/test_reporting_v3.py": "3811fe9681b0ae59ebf459315fd93b4fbd4dbc212d6b556b379273fdd8fda075",
+      "tests/test_strict_interface_v10.py": "297a65d6bcfb4c4cdf8f34f74ee9cd3427ddc1757494297d97ed801cef45d18f",
+      "tests/test_token_time.py": "efd5d644f9a98121c42800e6d583f66cedcbb80d42874d6151a732c42e26a4fc",
+      "tests/test_v10.py": "45d4f1164753d8e6f64809882b6eb953906ba2f82a6b40cc324ad1480d0fc1db",
+      "tests/test_v10_causal_amendment.py": "7529deee9fca05367fc9d0b16e788bc1c782cff49434cf7a01e93ebb155a3e7d",
+      "tests/test_v10_residual_amendment.py": "03d9cfd6227eb06b3e878e149d4c81ef2732954348de2fbb393c7a5d611f26a5",
+      "tests/test_v11.py": "4a07f8527d6a94c4bdd44b4b9872a287edc189f4c833066e78dfe9acf689008e",
+      "tests/test_v11_manifold_amendment.py": "a164fbab823a82970baa5d4ab5f4667029a0d9a72cfbb9c4664fd5b054f607d1",
+      "tests/test_v12.py": "445fd183ce2624c6b022e88e979ed207f8ea17d042754df4ba867e3494b01fd6",
+      "tests/test_v3_1.py": "a3e5831f3fe34d24287897da916cdfdc4bd0af45fe48e0dd5e579534dee589ae",
+      "tests/test_v3_2.py": "c3de64c8d63d970f7b68f6f0c299fbb7ec28b8677e308439ad75a04a4d37100a",
+      "tests/test_v3_records.py": "bdf460a899741c2d8c15c97e83eda58235eb189faa39786bd2b01ef12d34831e",
+      "tests/test_v4.py": "d04627adc6ea104d94b22780f344997f7ae0675e5d1c139e72e1a0e8efc32a57",
+      "tests/test_v5.py": "1b3a4bd715071604287a666be390febe4dc61b7373bb4b19c6a44596046f8cd9",
+      "tests/test_v6.py": "b60cfc4d469f942a3f239f2a375664a6ed11541b1ec7cd1aff375d3eec113d11",
+      "tests/test_v7.py": "5e6e1713a22e71721b2bcaae400c84e36eceae21beac3bdbf83379f62beb75c2",
+      "tests/test_v7_corrective.py": "e675efe292723996d7e34cb462256bf14052dbc5d9435ab1bc0c2b2de7145bf2",
+      "tests/test_v8.py": "2f36a7aedd148ace15dd20ff4f01f8b4e37e0238ff4f29924640bb297fea23b0",
+      "tests/test_v8_1.py": "8b011f42364f18427a917ed0b125ffcbf1b15c922db4fa290b57b0c97abbd0a9",
+      "tests/test_v9.py": "96ece30243867e917afa06acb776cc6bbd3f375aa6711edb76d7d3715a412b49",
+      "tests/test_v9_reporting_amendment_1.py": "64ae3e9facd753edf05ce7c70eb26cc9d3558907daba779a6fef415e171f8032",
+      "tests/test_v9_reporting_amendment_2.py": "014da6898a7c98b01ba1e974aa96eb86c2d72f700ddb8ec4e6f8be1e65021b61",
+      "tests/test_v9_reporting_amendment_3.py": "015424c2f291d77f48d5470338ed6f16852df447e974050a4cd37dca6678db3b"
+    },
+    "protocol_version": "causal_path_geometry_v13",
+    "purpose": "protect every V1-V12 source, freeze, result, and standalone report",
+    "schema_version": 22
+  }
+}

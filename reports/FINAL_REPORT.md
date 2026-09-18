@@ -575,3 +575,24 @@ Formal decision: **V12-A — MORE_DATA_REQUIRED**. Hypothesis remains **H2**. Sm
 
 The learned state-dependent decoder was not run because the protocol did not authorize it before causal geometry and strict replacement succeeded.
 <!-- V12_END -->
+
+<!-- V13_START -->
+## V13 — expanded causal bank, probe scaling, and path geometry
+
+Formal decision: **V13-F — HIGH-DIMENSIONAL WRITABLE STATE**.
+
+- New bank sizes: `{'final_test': 250, 'train': 4800, 'validation': 500}`; independent final was not used for selection.
+- Restricted r95 curve m=64/128/256/512: `{'64': 5.0, '128': 6.5, '256': 8.0, '512': 9.0}`.
+- Stable low local causal rank under the frozen expanded probes: `True`.
+- Low-variance/high-causal directions: `False`.
+- Same-prompt rank-16 tangent angle: `29.18°`.
+- Moving tangent improves static: `True`; independent h1/h2/h4/h8 pass: `False`.
+- Practical local linear radius: `None`.
+- Instantaneous/cumulative median r95: `8.0` / `11.0`.
+- Smallest independently validated writable dimension: `None`.
+- Complete replacement state: **False** (`ABSOLUTE_REPLACEMENT_NOT_YET_TESTABLE_FROM_CURRENT_DELTA_REPRESENTATION`).
+- H2 remains: **True**. H3 authorized: **False**.
+- Autonomous controller authorized: **False**.
+
+Historical V1–V12 conclusions remain frozen. V13 causal-edit results are not described as absolute state replacement, and restricted exact-JVP rank is not described as full raw-state intrinsic dimension.
+<!-- V13_END -->

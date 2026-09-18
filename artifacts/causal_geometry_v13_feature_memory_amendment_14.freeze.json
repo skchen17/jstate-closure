@@ -1,0 +1,33 @@
+{
+  "algorithm_changed": true,
+  "estimand_changed": false,
+  "failure_stage": "dual-PCA eigensolver before the first V13 feature artifact",
+  "floating_reduction_schedule_changed": true,
+  "freeze_digest": "2cafe622d21f89eb46293c206cde20d690a586dd093cafaf999f61a63e980b71",
+  "hashes": {
+    "artifacts/causal_geometry_v13_feature_memory_amendment_13.freeze.json": "20ef712fbd63aad805758c6bce164d3e8cacb41ce29a1ec5bc55673c39dbc50d",
+    "artifacts/causal_path_geometry_v13.freeze.json": "e05c962dba3be1b8657810eea10c25b8850df4f4a1cb8e6c161d70b0886397a4",
+    "src/jclosure/experiments/runtime_v13_features_v12.py": "99e075f03eae0a932c6acd2e8155dda2a0df789b8a9ad62d9eb835bd15cd824c",
+    "src/jclosure/experiments/runtime_v13_features_v13.py": "9b7916065e17cf9c47632f7a69c01c0f738cbd768f039232d1c9201feeae03f4",
+    "src/jclosure/experiments/runtime_v13_features_v14.py": "cd664649ed4547fd03d7d4dc22df8ac85eca8d459e7dec50376cef49c27ddfed"
+  },
+  "observed_parent_failure": {
+    "cause": "the CUDA/MAGMA 4,800-square eigensolver retained one 38.4 MiB host workspace panel per internal tile; stopped before any output",
+    "feature_artifact_written": false,
+    "parent_run_suffix": "features-memory-amendment-13-gpu1"
+  },
+  "parent_base_freeze_digest": "98066eedffd1255db439f99f0689aa26bb91659f06242f796658bf9b8324ba85",
+  "parent_feature_memory_amendment_sha256": "20ef712fbd63aad805758c6bce164d3e8cacb41ce29a1ec5bc55673c39dbc50d",
+  "protocol_version": "causal_path_geometry_v13_feature_memory_amendment_14",
+  "purpose": "bound V13 large symmetric-eigensolver host workspace",
+  "runtime": {
+    "MALLOC_ARENA_MAX": "2",
+    "dual_pca_cpu_threads": 1,
+    "eigensolver_device": "cpu",
+    "eigensolver_threads": 8,
+    "torch_interop_threads": 1
+  },
+  "schema_version": 22,
+  "scope": "numerical backend only: copy each already-computed symmetric float32 Gram matrix to CPU, solve the same torch.linalg.eigh problem with the eight-thread CPU LAPACK backend, and return eigenpairs to the original CUDA device; Gram values, ordering rule, rank threshold, score formula, samples, and target estimand are unchanged",
+  "split_changed": false
+}

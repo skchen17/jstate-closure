@@ -1,0 +1,21 @@
+{
+  "algorithm_changed": false,
+  "estimand_changed": false,
+  "failure_stage": "dual-PCA before the first V13 feature artifact",
+  "freeze_digest": "6282eebbc677556fa95751554f2d7c9743b1522610bee3b7da28b3ecd33f6a49",
+  "hashes": {
+    "artifacts/causal_bank_v13_capture.freeze.json": "fec5f8eca7443e81ea32ef5bbda7ba98c3f3b9108d6c9c7be8fbb63b959e1a8a",
+    "artifacts/causal_geometry_v13_feature_memory_amendment_3.freeze.json": "9c9762aa9b9622d0c366bc113ca2eecad7b2b7f15f808cc425de34fec97e215c",
+    "artifacts/causal_path_geometry_v13.freeze.json": "e05c962dba3be1b8657810eea10c25b8850df4f4a1cb8e6c161d70b0886397a4",
+    "src/jclosure/experiments/runtime_v13_features_v3.py": "1de4307fe2a99f65589463830889e4f8dacff8d694d514978b5dee199c8bb690",
+    "src/jclosure/experiments/runtime_v13_features_v4.py": "62072148e9347c9af562f446e872e891bf72337441dbe4e82b8cfbf0de497384"
+  },
+  "numerical_equivalence": "retain the exact 65,536-dimensional chunk boundaries, operation order, dtypes, normalizations, Gram updates, and eigendecomposition; delete only already-consumed temporaries and release allocator caches",
+  "parent_base_freeze_digest": "98066eedffd1255db439f99f0689aa26bb91659f06242f796658bf9b8324ba85",
+  "parent_capture_freeze_digest": "167f69a3b5ddfd95775728f77e46fd94e1e432dd7097e531d8e801bc7169422b",
+  "parent_feature_memory_amendment_sha256": "9c9762aa9b9622d0c366bc113ca2eecad7b2b7f15f808cc425de34fec97e215c",
+  "protocol_version": "causal_path_geometry_v13_feature_memory_amendment_4",
+  "purpose": "release exact dual-PCA CPU/GPU chunk temporaries after every frozen chunk",
+  "schema_version": 22,
+  "split_changed": false
+}

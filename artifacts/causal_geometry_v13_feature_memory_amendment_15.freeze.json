@@ -1,0 +1,29 @@
+{
+  "algorithm_changed": false,
+  "estimand_changed": false,
+  "failure_stage": "endpoint collation before the first V13 feature artifact",
+  "floating_reduction_schedule_changed": true,
+  "freeze_digest": "1dd3167f3dc09da7ac7e5cb2479daf45f172d45f1bbc4977631108d3bdf45238",
+  "hashes": {
+    "artifacts/causal_geometry_v13_feature_memory_amendment_14.freeze.json": "370c588f4f246ba736b31f3a020fcb96a3988617276bcbe73eb1e5063c39e276",
+    "artifacts/causal_path_geometry_v13.freeze.json": "e05c962dba3be1b8657810eea10c25b8850df4f4a1cb8e6c161d70b0886397a4",
+    "src/jclosure/experiments/runtime_v13_features_v14.py": "cd664649ed4547fd03d7d4dc22df8ac85eca8d459e7dec50376cef49c27ddfed",
+    "src/jclosure/experiments/runtime_v13_features_v15.py": "4c4d8baaee9b63313d3f9ff0a61023f8847d84e3c438b6b0d294eabea6bd3884"
+  },
+  "observed_parent_failure": {
+    "cause": "the row loop repeatedly decompressed each complete NPZ member; the run was stopped after PCA/eigh but before endpoint or feature output",
+    "feature_artifact_written": false,
+    "parent_run_suffix": "features-memory-amendment-14-gpu1"
+  },
+  "parent_base_freeze_digest": "98066eedffd1255db439f99f0689aa26bb91659f06242f796658bf9b8324ba85",
+  "parent_feature_memory_amendment_sha256": "370c588f4f246ba736b31f3a020fcb96a3988617276bcbe73eb1e5063c39e276",
+  "protocol_version": "causal_path_geometry_v13_feature_memory_amendment_15",
+  "purpose": "decode each V13 endpoint NPZ member exactly once",
+  "runtime": {
+    "MALLOC_ARENA_MAX": "2",
+    "endpoint_member_decompressions": "once_per_capture_member"
+  },
+  "schema_version": 22,
+  "scope": "I/O schedule only: cache each identical NPZ endpoint member after one decompression, then select the same rows in the same frozen base-trial order; endpoint values, dtypes, names, stacking, and PCA outputs are unchanged",
+  "split_changed": false
+}

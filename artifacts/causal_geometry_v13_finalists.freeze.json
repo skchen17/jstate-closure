@@ -1,0 +1,20 @@
+{
+  "confirmatory_used_for_selection": false,
+  "finalists": [
+    "global_pca_oracle",
+    "global_causal_basis_oracle",
+    "static_local_causal_oracle",
+    "moving_tangent_interpolated_oracle",
+    "raw_teacher_intervention"
+  ],
+  "freeze_digest": "0f6c5531f5f288efe09fc26204adc0072c56bbbe3a7595729491ad3ff76a9ede",
+  "hashes": {
+    "results/v13/processed/moving_tangent_oracle_development_v13.parquet": "e2de0a15b294fb9c5678a7772340bdb359026bb7f354d8242cfeb7ad890dbfde"
+  },
+  "moving_alpha": 1.0,
+  "moving_method": "moving_tangent_interpolated_oracle",
+  "parent_freeze_digest": "98066eedffd1255db439f99f0689aa26bb91659f06242f796658bf9b8324ba85",
+  "protocol_version": "causal_path_geometry_v13",
+  "purpose": "freeze V13 moving-tangent alpha before independent confirmation",
+  "schema_version": 22
+}

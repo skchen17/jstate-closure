@@ -1,0 +1,70 @@
+{
+  "exact_autograd_jvp": true,
+  "full_raw_jacobian_claimed": false,
+  "local_state_count": 10,
+  "probe_family_mean_column_sensitivity": {
+    "architecture_balanced": 4.240107455955434,
+    "causal_weighted": 2.152371146255993,
+    "high_variance_pca": 0.6741860267098426,
+    "low_variance": 0.1434299271670193,
+    "random_raw": 0.7135373987236904
+  },
+  "probe_family_robustness": {
+    "architecture_balanced": {
+      "mean_r95": 9.4,
+      "median_r95": 10.0
+    },
+    "causal_weighted": {
+      "mean_r95": 5.3,
+      "median_r95": 5.0
+    },
+    "high_variance_pca": {
+      "mean_r95": 8.7,
+      "median_r95": 9.0
+    },
+    "low_variance": {
+      "mean_r95": 10.3,
+      "median_r95": 11.0
+    },
+    "random_raw": {
+      "mean_r95": 11.6,
+      "median_r95": 12.0
+    }
+  },
+  "probe_scaling": {
+    "128": {
+      "mean_effective_rank": 5.699232365601601,
+      "mean_stable_rank": 2.569860748612959,
+      "median_r90": 5.0,
+      "median_r95": 7.0,
+      "median_r99": 13.0
+    },
+    "256": {
+      "mean_effective_rank": 6.1650771326337175,
+      "mean_stable_rank": 2.609247254741624,
+      "median_r90": 6.0,
+      "median_r95": 8.0,
+      "median_r99": 17.0
+    },
+    "512": {
+      "mean_effective_rank": 6.545116331203301,
+      "mean_stable_rank": 2.6429932624654286,
+      "median_r90": 6.0,
+      "median_r95": 9.0,
+      "median_r99": 21.5
+    },
+    "64": {
+      "mean_effective_rank": 4.9247417054454825,
+      "mean_stable_rank": 2.475030033416009,
+      "median_r90": 5.0,
+      "median_r95": 5.5,
+      "median_r99": 9.0
+    }
+  },
+  "protocol_version": "causal_path_geometry_v13_scalar_jvp_sharded_amendment_1",
+  "records": "results/v13/processed/causal_probe_scaling_scalar_shard_1_v13.parquet",
+  "records_sha256": "a4cb9dc9a0c31253671ac09473ec18c71e7b0d5d8590d19e824de50e8770eb2f",
+  "run_id": "geometry-v13-20260917T201921Z-7bc7c600-s20260828-exact-scalar-shard-1",
+  "schema_version": 22,
+  "source_freeze_digest": "17b5b0ec8743d99a4fa5cbe91a7f5458fd97087f02c4d4c1991e57d84c61dd38"
+}

@@ -1,0 +1,35 @@
+{
+  "candidate_count": 9500,
+  "candidate_manifest_sha256": "b934305726a0c8dc622b58aab633c737fe688f5f18c3928c42ae823a0198b417",
+  "carried_teacher_rows": 7600,
+  "protocol_version": "causal_path_geometry_v13",
+  "records": "results/v13/raw/bank-v13-20260917T031621Z-7bc7c600-s20260828-teacher-modular-single-digit-b16/teacher_screen_v13.jsonl",
+  "records_sha256": "9b32a1b4cd9c612ef9f362013ac73019aa9b4c4964134dc422f7050b3aa8cf25",
+  "repair_source_records_sha256": "c6bd8ccddb95caea2dcd3095475f103c3c590b9b1057cda7a12db3c462b771e5",
+  "repaired_family": "modular_arithmetic",
+  "run_id": "bank-v13-20260917T031621Z-7bc7c600-s20260828-teacher-modular-single-digit-b16",
+  "schema_version": 22,
+  "teacher_correct_counts": {
+    "final_test": {
+      "boolean_logic": 112,
+      "modular_arithmetic": 112,
+      "short_graph_traversal": 129,
+      "simple_state_transition": 117,
+      "variable_binding": 137
+    },
+    "train": {
+      "boolean_logic": 1198,
+      "modular_arithmetic": 1091,
+      "short_graph_traversal": 1325,
+      "simple_state_transition": 1202,
+      "variable_binding": 1309
+    },
+    "validation": {
+      "boolean_logic": 193,
+      "modular_arithmetic": 168,
+      "short_graph_traversal": 220,
+      "simple_state_transition": 199,
+      "variable_binding": 229
+    }
+  }
+}

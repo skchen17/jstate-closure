@@ -1,0 +1,53 @@
+{
+  "algorithm_changed": false,
+  "estimand_changed": false,
+  "failure_stage": "dual-PCA before the first V13 feature artifact",
+  "freeze_digest": "8c0bc7551389e1698f863fed8440021814e630fcac611b176dcf39d65f51330e",
+  "hashes": {
+    "artifacts/causal/v13/feature_workspace_v13/conv.bf16": "e458cf88fec598baf5ea7746a2b7cb3d16d9cc3776baf4797373a14cbc178150",
+    "artifacts/causal/v13/feature_workspace_v13/kv.bf16": "271bfc5c017b08cebf6c533c3618915e8adad28849187ad522cadde1ec44dd7e",
+    "artifacts/causal/v13/feature_workspace_v13/recurrent.bf16": "5bd2528f7c15a866fb13340344f55d028a63f0ccdca67940e13c26e379a56703",
+    "artifacts/causal_bank_v13_capture.freeze.json": "fec5f8eca7443e81ea32ef5bbda7ba98c3f3b9108d6c9c7be8fbb63b959e1a8a",
+    "artifacts/causal_geometry_v13_feature_memory_amendment_5.freeze.json": "8fa2665379ca09a993aa3ee347a4a254461878602f559a79a5ce565a6f09f257",
+    "artifacts/causal_path_geometry_v13.freeze.json": "e05c962dba3be1b8657810eea10c25b8850df4f4a1cb8e6c161d70b0886397a4",
+    "src/jclosure/experiments/runtime_v13_features_v5.py": "df5dedf277f90fb320ff1beac5adb553867963ae80a7a916dcac1a325c405502",
+    "src/jclosure/experiments/runtime_v13_features_v6.py": "482f6b7664aa300a63e7c93f80ebf237f6008c37302c1ea9bbe4f20b425bd5d3"
+  },
+  "numerical_equivalence": "the frozen capture order places all 4,800 train rows first; direct prefix views contain the same BF16 values in the same order as advanced indexing, with unchanged casts, reductions, normalizations, Gram updates, and eigensolver",
+  "parent_base_freeze_digest": "98066eedffd1255db439f99f0689aa26bb91659f06242f796658bf9b8324ba85",
+  "parent_capture_freeze_digest": "167f69a3b5ddfd95775728f77e46fd94e1e432dd7097e531d8e801bc7169422b",
+  "parent_feature_memory_amendment_sha256": "8fa2665379ca09a993aa3ee347a4a254461878602f559a79a5ce565a6f09f257",
+  "protocol_version": "causal_path_geometry_v13_feature_memory_amendment_6",
+  "purpose": "freeze completed file-backed tensors and use their contiguous train prefix",
+  "schema_version": 22,
+  "split_changed": false,
+  "train_rows": "frozen contiguous prefix [0,4800)",
+  "workspace_hashes": {
+    "artifacts/causal/v13/feature_workspace_v13/conv.bf16": "e458cf88fec598baf5ea7746a2b7cb3d16d9cc3776baf4797373a14cbc178150",
+    "artifacts/causal/v13/feature_workspace_v13/kv.bf16": "271bfc5c017b08cebf6c533c3618915e8adad28849187ad522cadde1ec44dd7e",
+    "artifacts/causal/v13/feature_workspace_v13/recurrent.bf16": "5bd2528f7c15a866fb13340344f55d028a63f0ccdca67940e13c26e379a56703"
+  },
+  "workspace_shapes": {
+    "conv": [
+      5550,
+      6,
+      8192,
+      4
+    ],
+    "kv": [
+      5550,
+      2,
+      2,
+      4,
+      256,
+      256
+    ],
+    "recurrent": [
+      5550,
+      6,
+      32,
+      128,
+      128
+    ]
+  }
+}

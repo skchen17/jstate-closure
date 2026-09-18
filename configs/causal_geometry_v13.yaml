@@ -1,0 +1,80 @@
+extends: causal_geometry_v12.yaml
+
+run:
+  stage: causal_geometry_v13
+  protocol_version: causal_path_geometry_v13
+  timeout_hours: 120
+
+outputs:
+  root: results/v13
+  raw: raw
+  processed: processed
+  figures: figures
+  reports: ../../reports
+  artifacts: ../../artifacts
+
+causal_geometry_v13:
+  baseline_commit: 2b94a65daee29e5547530261194b7de34860df4e
+  task_seed: 20270917
+  split_seeds:
+    train: 20270918
+    validation: 20270919
+    final_test: 20270920
+  candidate_per_family:
+    train: 1500
+    validation: 250
+    final_test: 150
+  target_per_family:
+    train: 960
+    validation: 100
+    final_test: 50
+  train_sizes: [600, 1200, 2400, 4800]
+  dimensions: [64, 128, 256, 384, 512, 768, 1024, 1536, 2048]
+  horizons: [1, 2, 4, 8]
+  train_capture_horizons: [1, 2, 4]
+  evaluation_panel_per_family: 2
+  confirmatory_panel_per_family: 5
+  teacher_generation_batch: 16
+  state_shard_size: 10
+  kv_analysis_tokens: 256
+  bootstrap_resamples: 10000
+  saturation:
+    epsilon: 0.01
+    practical_zero_ci: 0.01
+    required_consecutive_doublings: 2
+  jvp:
+    anchors_per_family: 2
+    token_positions: [0, 1]
+    maximum_probe_directions: 512
+    probe_sizes: [64, 128, 256, 512]
+    probe_families:
+      - high_variance_pca
+      - causal_weighted
+      - random_raw
+      - low_variance
+      - architecture_balanced
+    target_horizons: [1, 2, 4]
+    selected_j_count: 128
+    selected_logit_count: 32
+    selected_workspace_count: 32
+    workspace_layers: [23, 26, 30]
+    tangent_ranks: [4, 8, 16, 32]
+    energy_thresholds: [0.90, 0.95, 0.99]
+  moving_tangent:
+    alphas: [1.0, 0.5, 0.25, 0.125]
+    maximum_steps: 8
+    residual_threshold: 0.01
+    atlas_neighbors: [1, 3, 5]
+    retrieval_metrics: [j_state, raw_score, frozen_state_similarity]
+  linearity_scales: [0.05, 0.10, 0.25, 0.50, 0.75, 1.00]
+  target_bundles: [j_only, j_logits, j_logits_semantic, complete_workspace]
+  causal_gates:
+    direction_cosine_minimum: 0.8
+    magnitude_ratio_minimum: 0.8
+    magnitude_ratio_maximum: 1.2
+    semantic_delta_agreement_minimum: 0.8
+    output_direction_minimum: 0.8
+    task_decision_sign_minimum: 0.8
+  authorization_horizons: [1, 2, 4, 8]
+  decoder:
+    reconstruction_chunk: 65536

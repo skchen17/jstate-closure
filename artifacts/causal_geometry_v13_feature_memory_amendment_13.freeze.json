@@ -1,0 +1,31 @@
+{
+  "algorithm_changed": false,
+  "estimand_changed": false,
+  "failure_stage": "dual-PCA before the first V13 feature artifact",
+  "floating_reduction_schedule_changed": true,
+  "freeze_digest": "6a78a1650192e316f8dfa7594e21940a6e9bd153f4aa228ae1b33d8218ac14a4",
+  "hashes": {
+    "artifacts/causal_geometry_v13_feature_memory_amendment_12.freeze.json": "ef9fd16151268e604e80b0527b1a35606e8786b83de710fd13698af7f4af7d33",
+    "artifacts/causal_path_geometry_v13.freeze.json": "e05c962dba3be1b8657810eea10c25b8850df4f4a1cb8e6c161d70b0886397a4",
+    "src/jclosure/experiments/runtime_v13_features_v12.py": "99e075f03eae0a932c6acd2e8155dda2a0df789b8a9ad62d9eb835bd15cd824c",
+    "src/jclosure/experiments/runtime_v13_features_v13.py": "9b7916065e17cf9c47632f7a69c01c0f738cbd768f039232d1c9201feeae03f4"
+  },
+  "observed_parent_failure": {
+    "cause": "large CPU copies retained one 38.4 MiB conversion panel per internal tile; the run was stopped before any estimand output",
+    "feature_artifact_written": false,
+    "parent_run_suffix": "features-memory-amendment-12-gpu1"
+  },
+  "parent_base_freeze_digest": "98066eedffd1255db439f99f0689aa26bb91659f06242f796658bf9b8324ba85",
+  "parent_feature_memory_amendment_sha256": "ef9fd16151268e604e80b0527b1a35606e8786b83de710fd13698af7f4af7d33",
+  "protocol_version": "causal_path_geometry_v13_feature_memory_amendment_13",
+  "purpose": "bound allocator panels in the V13 dual-PCA CPU copies",
+  "runtime": {
+    "MALLOC_ARENA_MAX": "2",
+    "copy_row_chunk": 32,
+    "dual_pca_cpu_threads": 1,
+    "torch_interop_threads": 1
+  },
+  "schema_version": 22,
+  "scope": "allocation schedule only: split each identical large two-dimensional CPU copy into 32-row panels so allocator temporaries are reused; copy values and row order are unchanged, and amendment-12 still controls all casts, reductions, normalization, GPU Gram updates, and eigensolver",
+  "split_changed": false
+}

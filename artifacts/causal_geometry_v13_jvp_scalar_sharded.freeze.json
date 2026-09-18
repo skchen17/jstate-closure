@@ -1,0 +1,28 @@
+{
+  "anchor_partition": "contiguous slices of the frozen sorted anchor list",
+  "anchors_per_shard": 5,
+  "derivative_backend": "torch.autograd.functional.jvp",
+  "direction_batch_size": 1,
+  "estimand_changed": false,
+  "freeze_digest": "5eac0070a1dfaaaaa52c41d539e7c476dcaa3307434710a20ba4ee6e942d82ba",
+  "hashes": {
+    "artifacts/causal_geometry_v13_jvp.freeze.json": "d82f7a5b7761ac7966710df7a7d2b9bebada516171c762aaf5ccdd6f8a7f1e2d",
+    "artifacts/causal_geometry_v13_runtime_dual_gpu.freeze.json": "a73aad38f2a17d6f808135c4e3423a28ce75d7d99c2c126e3efd6d88094085b8",
+    "configs/causal_geometry_v13.yaml": "a49d72f1d4630525b83672c0511e85d4cfc637445f866b66da9b1484ebc2e7fb",
+    "scripts/merge_v13_jvp_scalar_shards.py": "e8d9abc3cb0c7a79771e9891aaf801680a3e31c8b1275c4f7a20ec1c3145c8ae",
+    "src/jclosure/experiments/runtime_v13_jvp_scalar_sharded.py": "328f1d464adf31ee334afb155438454a1c86265577f7b93499ad298c50974798"
+  },
+  "matrix_roots": [
+    "results/v13/processed/jvp_matrices_scalar_shard_0",
+    "results/v13/processed/jvp_matrices_scalar_shard_1"
+  ],
+  "parent_jvp_freeze_digest": "17b5b0ec8743d99a4fa5cbe91a7f5458fd97087f02c4d4c1991e57d84c61dd38",
+  "parent_runtime_freeze_digest": "8aef08468ba1b5bf87785a5dff9fd252562c4cb7d749c2a3072d0e786657e6cb",
+  "probe_operator_changed": false,
+  "protocol_version": "causal_path_geometry_v13_scalar_jvp_sharded_amendment_1",
+  "purpose": "split frozen scalar exact-JVP anchors into two disjoint execution shards",
+  "schema_version": 22,
+  "shard_count": 2,
+  "split_changed": false,
+  "target_bundle_changed": false
+}

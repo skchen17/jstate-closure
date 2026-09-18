@@ -1,0 +1,1796 @@
+{
+  "command": [
+    "/data/CSK/J-space-project/jstate-closure/src/jclosure/experiments/geometry_v13.py",
+    "--stage",
+    "analyze",
+    "--run-suffix",
+    "analyze-v13"
+  ],
+  "config": {
+    "causal_geometry_v11": {
+      "authorization_horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "baseline_commit": "10c24a475852ecf6370c8ad0d5e1cae5ad3cc92e",
+      "bootstrap_resamples": 10000,
+      "causal_gates": {
+        "direction_cosine_minimum": 0.8,
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "output_direction_minimum": 0.8,
+        "semantic_delta_agreement_minimum": 0.8,
+        "task_decision_sign_minimum": 0.8
+      },
+      "channel_audit": {
+        "conditions": [
+          "decoded_rec",
+          "decoded_conv",
+          "decoded_kv",
+          "decoded_rec_conv",
+          "decoded_rec_kv",
+          "decoded_conv_kv",
+          "decoded_all"
+        ],
+        "dimension": 512
+      },
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "confirmatory": {
+        "effect_enriched_per_family": 5,
+        "per_family": 10,
+        "selection_seed": 20270111
+      },
+      "confirmatory_method_limit": 4,
+      "decoder": {
+        "reconstruction_chunk": 65536,
+        "shard_size": 5
+      },
+      "development_source": "artifacts/causal_sufficiency_v10_candidates.freeze.json",
+      "factorized": {
+        "allocations": {
+          "256": {
+            "interaction": [
+              [
+                112,
+                72,
+                40,
+                32
+              ],
+              [
+                96,
+                80,
+                48,
+                32
+              ],
+              [
+                112,
+                64,
+                48,
+                32
+              ]
+            ],
+            "no_interaction": [
+              [
+                128,
+                80,
+                48,
+                0
+              ],
+              [
+                112,
+                96,
+                48,
+                0
+              ],
+              [
+                128,
+                64,
+                64,
+                0
+              ]
+            ]
+          },
+          "384": {
+            "interaction": [
+              [
+                192,
+                96,
+                64,
+                32
+              ],
+              [
+                160,
+                128,
+                64,
+                32
+              ],
+              [
+                192,
+                128,
+                48,
+                16
+              ]
+            ],
+            "no_interaction": [
+              [
+                192,
+                112,
+                80,
+                0
+              ],
+              [
+                160,
+                144,
+                80,
+                0
+              ],
+              [
+                176,
+                112,
+                96,
+                0
+              ]
+            ]
+          },
+          "512": {
+            "interaction": [
+              [
+                240,
+                144,
+                96,
+                32
+              ],
+              [
+                224,
+                160,
+                96,
+                32
+              ],
+              [
+                224,
+                144,
+                112,
+                32
+              ]
+            ],
+            "no_interaction": [
+              [
+                256,
+                160,
+                96,
+                0
+              ],
+              [
+                224,
+                192,
+                96,
+                0
+              ],
+              [
+                240,
+                144,
+                128,
+                0
+              ]
+            ]
+          }
+        },
+        "objectives": [
+          "cache_pca",
+          "h1_direction",
+          "semantic_h1",
+          "output_h1",
+          "multistep_direction",
+          "effect_weighted_multistep",
+          "causal_composite",
+          "manifold_regularized"
+        ],
+        "stage1_methods_per_class": 1,
+        "stage2_total_methods": 6,
+        "total_budgets": [
+          256,
+          384,
+          512
+        ]
+      },
+      "horizons": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "manifold": {
+        "global_subspace_rank": 128,
+        "local_pca_rank": 8,
+        "nearest_neighbors": 16
+      },
+      "oracle": {
+        "dimensions": [
+          64,
+          128,
+          192,
+          256,
+          320,
+          384,
+          448,
+          512
+        ],
+        "families": [
+          "joint_pca",
+          "factorized_pca"
+        ]
+      }
+    },
+    "causal_geometry_v12": {
+      "authorization_horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "baseline_commit": "f5118642f12e3b60e22df52930610867773b108a",
+      "bootstrap_resamples": 10000,
+      "causal_gates": {
+        "direction_cosine_minimum": 0.8,
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "output_direction_minimum": 0.8,
+        "semantic_delta_agreement_minimum": 0.8,
+        "task_decision_sign_minimum": 0.8
+      },
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "confirmatory": {
+        "effect_enriched_per_family": 5,
+        "per_family": 10,
+        "selection_seed": 20271202
+      },
+      "confirmatory_method_limit": 4,
+      "decoder": {
+        "reconstruction_chunk": 65536,
+        "shard_size": 5
+      },
+      "development": {
+        "per_family": 10,
+        "source": "v10_development_bank"
+      },
+      "dimensions": [
+        128,
+        256,
+        384,
+        512,
+        768,
+        1024,
+        1536,
+        2048
+      ],
+      "horizons": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "jvp": {
+        "anchors_per_family": 1,
+        "causal_ranks": [
+          8,
+          16,
+          32,
+          64
+        ],
+        "energy_thresholds": [
+          0.9,
+          0.95,
+          0.99
+        ],
+        "leading_directions": 32,
+        "probe_directions": 64,
+        "selected_logit_count": 16,
+        "selection_seed": 20271204,
+        "target_horizons": [
+          1,
+          2,
+          4
+        ],
+        "token_positions": [
+          0,
+          1
+        ]
+      },
+      "local_geometry": {
+        "jvp_oracle_dimensions": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          384,
+          512
+        ],
+        "neighbor_candidates": [
+          128,
+          256,
+          512
+        ],
+        "oracle_dimensions": [
+          64,
+          128,
+          256,
+          384,
+          512
+        ],
+        "primary_neighbors": 512
+      },
+      "measurement": {
+        "audit_pairs_per_family": 4,
+        "mixture_epsilon": 0.01,
+        "raw_scales": [
+          0.99,
+          1.01
+        ],
+        "top_k": 10
+      },
+      "replacement": {
+        "dimension": 512,
+        "horizon_if_h1_fails": 1
+      },
+      "train_sizes": [
+        150,
+        300,
+        450,
+        600,
+        1000,
+        2000,
+        4000
+      ],
+      "train_subset_seed": 20271201,
+      "validation_panel": {
+        "per_family": 2,
+        "selection_seed": 20271203
+      }
+    },
+    "causal_geometry_v13": {
+      "authorization_horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "baseline_commit": "2b94a65daee29e5547530261194b7de34860df4e",
+      "bootstrap_resamples": 10000,
+      "candidate_per_family": {
+        "final_test": 150,
+        "train": 1500,
+        "validation": 250
+      },
+      "causal_gates": {
+        "direction_cosine_minimum": 0.8,
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "output_direction_minimum": 0.8,
+        "semantic_delta_agreement_minimum": 0.8,
+        "task_decision_sign_minimum": 0.8
+      },
+      "confirmatory_panel_per_family": 5,
+      "decoder": {
+        "reconstruction_chunk": 65536
+      },
+      "dimensions": [
+        64,
+        128,
+        256,
+        384,
+        512,
+        768,
+        1024,
+        1536,
+        2048
+      ],
+      "evaluation_panel_per_family": 2,
+      "horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "jvp": {
+        "anchors_per_family": 2,
+        "energy_thresholds": [
+          0.9,
+          0.95,
+          0.99
+        ],
+        "maximum_probe_directions": 512,
+        "probe_families": [
+          "high_variance_pca",
+          "causal_weighted",
+          "random_raw",
+          "low_variance",
+          "architecture_balanced"
+        ],
+        "probe_sizes": [
+          64,
+          128,
+          256,
+          512
+        ],
+        "selected_j_count": 128,
+        "selected_logit_count": 32,
+        "selected_workspace_count": 32,
+        "tangent_ranks": [
+          4,
+          8,
+          16,
+          32
+        ],
+        "target_horizons": [
+          1,
+          2,
+          4
+        ],
+        "token_positions": [
+          0,
+          1
+        ],
+        "workspace_layers": [
+          23,
+          26,
+          30
+        ]
+      },
+      "kv_analysis_tokens": 256,
+      "linearity_scales": [
+        0.05,
+        0.1,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "moving_tangent": {
+        "alphas": [
+          1.0,
+          0.5,
+          0.25,
+          0.125
+        ],
+        "atlas_neighbors": [
+          1,
+          3,
+          5
+        ],
+        "maximum_steps": 8,
+        "residual_threshold": 0.01,
+        "retrieval_metrics": [
+          "j_state",
+          "raw_score",
+          "frozen_state_similarity"
+        ]
+      },
+      "saturation": {
+        "epsilon": 0.01,
+        "practical_zero_ci": 0.01,
+        "required_consecutive_doublings": 2
+      },
+      "split_seeds": {
+        "final_test": 20270920,
+        "train": 20270918,
+        "validation": 20270919
+      },
+      "state_shard_size": 10,
+      "target_bundles": [
+        "j_only",
+        "j_logits",
+        "j_logits_semantic",
+        "complete_workspace"
+      ],
+      "target_per_family": {
+        "final_test": 50,
+        "train": 960,
+        "validation": 100
+      },
+      "task_seed": 20270917,
+      "teacher_generation_batch": 16,
+      "train_capture_horizons": [
+        1,
+        2,
+        4
+      ],
+      "train_sizes": [
+        600,
+        1200,
+        2400,
+        4800
+      ]
+    },
+    "causal_sufficiency_v10": {
+      "bootstrap_resamples": 10000,
+      "candidate_selection": {
+        "fallback_diagnostic_dimensions": [
+          384,
+          448,
+          512
+        ],
+        "include_reference_dimension": 512,
+        "maximum_candidates": 3
+      },
+      "causal": {
+        "authorization_horizons": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "direction_cosine_minimum": 0.8,
+        "free_continuation_requires_teacher_forced_authorization": true,
+        "horizons": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "output_direction_minimum": 0.8,
+        "semantic_delta_agreement_minimum": 0.8,
+        "strict_interface_required": true,
+        "task_decision_sign_minimum": 0.8
+      },
+      "conditional_residual_gain_maximum": 0.02,
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "confirmatory_subset": {
+        "effect_enriched_per_family": 5,
+        "per_family": 10,
+        "random_seed": 20261201,
+        "score_columns": [
+          "output_js_divergence",
+          "future_j_trajectory_divergence",
+          "target_log_odds_abs_change"
+        ]
+      },
+      "decoder": {
+        "reconstruction_chunk": 65536,
+        "shard_size": 5
+      },
+      "dimensions": [
+        64,
+        96,
+        128,
+        160,
+        192,
+        224,
+        256,
+        288,
+        320,
+        352,
+        384,
+        416,
+        448,
+        480,
+        512
+      ],
+      "gap_denominator_epsilon": 0.002,
+      "methods": [
+        "causal_bottleneck",
+        "predictive_bottleneck",
+        "pca"
+      ],
+      "predictive_gap_closed_minimum": 0.95,
+      "primary_method": "causal_bottleneck",
+      "requested_dimensions": [
+        64,
+        96,
+        128,
+        160,
+        192,
+        256,
+        320,
+        384,
+        448,
+        512
+      ],
+      "residual_audit_dimensions": [
+        384,
+        512
+      ],
+      "residualization_folds": 5,
+      "ridge_alpha": 1.0,
+      "semantic_relative_retention_minimum": 0.95,
+      "semantic_residual_gain_maximum": 0.02
+    },
+    "closure": {
+      "clamp_conditions": [
+        "single",
+        "persistent"
+      ],
+      "conditions": [
+        "clean",
+        "j_positive",
+        "full_patch",
+        "random",
+        "non_j"
+      ],
+      "future_min_layers": 3,
+      "max_attempt_multiplier": 10,
+      "perturbation_sources": [
+        "activation_difference",
+        "natural_collision",
+        "targeted_probe"
+      ],
+      "strengths": [
+        0.25,
+        0.5,
+        1.0
+      ],
+      "targeted_probe_min_score": 0.75
+    },
+    "compact_state_v4": {
+      "controller_parameter_target": 5000000,
+      "controller_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "dictionary_size": 4096,
+      "dimensions": [
+        64,
+        128,
+        256,
+        512
+      ],
+      "divergence_cosine": 0.8,
+      "early_stopping_patience": 5,
+      "families": [
+        "pca",
+        "predictive_bottleneck",
+        "sparse_j",
+        "learned_predictive_encoder"
+      ],
+      "histories": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "maximum_epochs": 50,
+      "maximum_predicted_feedback": 0.8,
+      "memory_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "minimum_causal_direction_retention": 0.8,
+      "minimum_causal_magnitude_retention": 0.8,
+      "minimum_semantic_retention": 0.8,
+      "objective_weights": {
+        "causal_retention": 0.5,
+        "future_prediction": 1.0,
+        "reconstruction": 1.0,
+        "semantic_retention": 0.5
+      },
+      "parameter_tolerance": 0.05,
+      "reference_remainder_dimensions": [
+        128,
+        512,
+        2560
+      ],
+      "rollout_horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "screen_epochs": 40,
+      "screen_patience": 5,
+      "teacher_forcing_fraction": 0.2,
+      "workspace_layers": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ]
+    },
+    "controller": {
+      "budget_tolerance": 0.05,
+      "counterfactual_traces": 256,
+      "families": [
+        "mlp",
+        "gru",
+        "transformer"
+      ],
+      "histories": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "lambda_answer": 1.0,
+      "lambda_counterfactual": 0.25,
+      "lambda_j": 1.0,
+      "max_predicted_feedback": 0.8,
+      "parameter_budgets": [
+        1000000,
+        5000000,
+        20000000,
+        50000000,
+        100000000
+      ],
+      "remainder_pca_dims": [
+        32,
+        128,
+        512
+      ],
+      "stable_dense_cosine": 0.9,
+      "stable_intervention_agreement": 0.8,
+      "stable_sparse_f1": 0.7,
+      "stable_teacher_accuracy_fraction": 0.9,
+      "teacher_forcing_warmup_fraction": 0.2
+    },
+    "data": {
+      "upstream_root": "data/upstream/anthropic"
+    },
+    "h2_replication_v5": {
+      "bootstrap_resamples": 10000,
+      "controls": [
+        "clean",
+        "identity",
+        "matched_random",
+        "j_positive",
+        "full_perturbation",
+        "j_preserving"
+      ],
+      "counts_by_family": {
+        "boolean_logic": 80,
+        "modular_arithmetic": 32,
+        "short_graph_traversal": 32,
+        "simple_state_transition": 80,
+        "variable_binding": 32
+      },
+      "dense_cosine_threshold": 0.995,
+      "dictionary_size": 4096,
+      "formal_displacement_fraction": 0.2,
+      "future_workspace_layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "horizons": [
+        4,
+        8
+      ],
+      "initial_strength": 0.25,
+      "layer": 23,
+      "null_js_floor": 0.0001,
+      "position_scope": "final",
+      "protocol_version": "h2_family_replication_v5",
+      "rms_drift_threshold": 0.02,
+      "seeds": {
+        "evaluation": 20260925
+      },
+      "target_valid_by_family": {
+        "boolean_logic": 32,
+        "modular_arithmetic": 12,
+        "short_graph_traversal": 12,
+        "simple_state_transition": 32,
+        "variable_binding": 12
+      },
+      "top10_overlap_threshold": 0.8,
+      "variants": {
+        "boolean_logic": "binary_xor_pairs",
+        "modular_arithmetic": "increment_1",
+        "short_graph_traversal": "directed_cycle",
+        "simple_state_transition": "toggle_or_keep",
+        "variable_binding": "four_way_lookup"
+      }
+    },
+    "jstate": {
+      "concept_vocab_size": 4096,
+      "dense_cosine_threshold": 0.995,
+      "k": 25,
+      "min_remainder_fraction": 0.2,
+      "primary_position": -1,
+      "rms_drift_threshold": 0.02,
+      "top10_overlap_threshold": 0.8
+    },
+    "lens": {
+      "file": "qwen3.5-4b/jlens/Salesforce-wikitext/Qwen3.5-4B_jacobian_lens_n1000.pt",
+      "metadata_prompts_fitted": 417,
+      "repo": "neuronpedia/jacobian-lens",
+      "revision": "16a01f309fcec900fdcec3f4cd5b64f3d00e4d5a",
+      "sha256": "1f9a8f8fd593f0ffec1a9640993257ca4560f8ae3e5602315643d5cc6818534e",
+      "upstream_commit": "581d398613e5602a5af361e1c34d3a92ea82ba8e"
+    },
+    "model": {
+      "compile": false,
+      "device": 0,
+      "device_map": "cuda",
+      "dtype": "bfloat16",
+      "force_bos": true,
+      "id": "Qwen/Qwen3.5-4B",
+      "max_seq_len": 512,
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "trust_remote_code": false
+    },
+    "outputs": {
+      "artifacts": "../../artifacts",
+      "figures": "figures",
+      "processed": "processed",
+      "raw": "raw",
+      "reports": "../../reports",
+      "root": "results/v13"
+    },
+    "peripheral_v5": {
+      "batch_size": 128,
+      "bootstrap_resamples": 10000,
+      "compact_gap_closed": 0.8,
+      "compact_maximum_conditional_gain": 0.002,
+      "compact_minimum_causal_direction_cosine": 0.8,
+      "compact_minimum_output_sign_agreement": 0.8,
+      "confidence": 0.95,
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "derived_trace_summary": "results/v5/processed/peripheral_traces_v5.json",
+      "dictionary_size": 4096,
+      "dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "early_stopping_patience": 5,
+      "encoder_families": [
+        "pca_remainder",
+        "predictive_bottleneck",
+        "nonlinear_bottleneck"
+      ],
+      "full_remainder_minimum_cosine_gain": 0.005,
+      "hidden_width": 512,
+      "history_length": 4,
+      "learning_rate": 0.0003,
+      "maximum_action_accuracy_loss": 0.02,
+      "maximum_epochs": 30,
+      "recurrent_architectures": [
+        "gated_mlp",
+        "gru",
+        "residual_recurrent"
+      ],
+      "recurrent_horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "recurrent_maximum_state_dimension": 128,
+      "recurrent_parameter_target": 5000000,
+      "recurrent_parameter_tolerance": 0.05,
+      "reference_architectures": [
+        "mlp",
+        "gated_mlp",
+        "attention"
+      ],
+      "residual_conditioning_rank": 512,
+      "screen_seed": 20260828,
+      "source_teacher_summary": "results/v4/processed/teacher_formal_v4.json",
+      "source_trace_summary": "results/v4/processed/teacher_traces_v4.json",
+      "weight_decay": 0.0001,
+      "workspace_layer": 23
+    },
+    "peripheral_v6": {
+      "bootstrap_resamples": 10000,
+      "causal_direction_count": 16,
+      "causal_fit_fraction": 0.5,
+      "causal_split_seed": 20261001,
+      "ceiling_rules": {
+        "causal_direction_minimum_absolute": 0.2,
+        "causal_direction_minimum_gain": 0.05,
+        "causal_projection_minimum_relative_rmse_reduction": 0.1,
+        "global_cosine_minimum_gain": 0.005,
+        "maximum_action_accuracy_loss": 0.02,
+        "semantic_accuracy_minimum_gain": 0.02
+      },
+      "compact_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "compact_families": [
+        "pca",
+        "predictive_bottleneck",
+        "nonlinear_bottleneck"
+      ],
+      "compact_gap_closed": 0.8,
+      "compact_maximum_conditional_gain": 0.002,
+      "confidence": 0.95,
+      "dictionary_size": 4096,
+      "f64_projection_sensitivity": true,
+      "future_workspace_layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "initial_strength": 0.25,
+      "layer": 23,
+      "null_js_floor": 0.0001,
+      "objective_weights": {
+        "action": 1.0,
+        "causal_counterfactual": 2.0,
+        "causal_projection": 2.0,
+        "full_profile": 1.0,
+        "top_causal_dimensions": 2.0
+      },
+      "precision_dtype": "float32",
+      "reference_architectures": [
+        "j_only_residual",
+        "j_history_attention",
+        "full_remainder_linear",
+        "full_remainder_gated",
+        "full_remainder_residual",
+        "full_remainder_attention"
+      ],
+      "reference_batch_size": 128,
+      "reference_confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "reference_epochs": 40,
+      "reference_learning_rate": 0.0003,
+      "reference_patience": 6,
+      "reference_screen_seed": 20260828,
+      "reference_weight_decay": 0.0001,
+      "reference_width": 512,
+      "source_h2_records": "results/v5/processed/h2_replication_v5.parquet",
+      "source_h2_summary": "results/v5/processed/h2_replication_v5.json",
+      "source_mediation_summary": "results/v5/processed/h2_mediation_v5.json",
+      "source_reference_summary": "results/v5/processed/full_remainder_reference_v5.json",
+      "source_trace_summary": "results/v5/processed/peripheral_traces_v5.json",
+      "top_causal_dimension_count": 64
+    },
+    "persistent_channels_v7": {
+      "attribution_split_seed": 20261011,
+      "bootstrap_resamples": 10000,
+      "cache_restore_tolerances": {
+        "hidden_max_abs": 1e-06,
+        "j_max_abs": 1e-06,
+        "logits_max_abs": 1e-06
+      },
+      "channel_gate": {
+        "maximum_additive_interaction_ratio": 0.25,
+        "minimum_delta_cosine": 0.2,
+        "minimum_delta_cosine_ci_lower": 0.0,
+        "minimum_full_delta_l2": 1e-06,
+        "minimum_magnitude_ratio": 0.1
+      },
+      "compression": {
+        "causal_direction_minimum": 0.8,
+        "causal_gap_closed": 0.8,
+        "dimensions": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512
+        ],
+        "maximum_conditional_gain": 0.02,
+        "methods": [
+          "pca",
+          "predictive_bottleneck",
+          "causal_bottleneck",
+          "nonlinear_encoder"
+        ],
+        "predictive_gap_closed": 0.8
+      },
+      "downstream_attention_layers": [
+        27,
+        31
+      ],
+      "downstream_recurrent_layers": [
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      "intervention_layer": 23,
+      "localization": {
+        "attention_token_windows": [
+          1,
+          4,
+          16,
+          64
+        ],
+        "minimum_channel_fraction": 0.05
+      },
+      "measured_layers": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "restore_test_count": 8,
+      "source_tasks": "data/v5/h2_replication.json",
+      "source_v6_artifact": "artifacts/causal/v6/causal-endpoint-v6-20260914T161620Z-a20b5a8c-s20260828-full-66/causal_endpoint_f32.npz",
+      "source_v6_artifact_sha256": "af945e0432cd7b1f1f256f1f0c60c91ec7d9aca7956dae745387247732c0444e",
+      "source_v6_records": "results/v6/processed/causal_endpoint_precision_v6.parquet",
+      "source_v6_summary": "results/v6/processed/causal_endpoint_v6.json",
+      "source_v6_trials": "results/v6/processed/restoration_null_v6.parquet",
+      "teacher_forced_tokens": 4
+    },
+    "persistent_channels_v7_corrective": {
+      "authorization": {
+        "require_channel_attribution": true,
+        "require_positive_cosine_or_rmse_gain_ci": true
+      },
+      "predictor": {
+        "added_features": "mixed_channel_delta_dual_pca_scores",
+        "alpha": 1.0,
+        "baseline_features": "current_intervened_j",
+        "target": "next_j_intervention_delta"
+      },
+      "reason": "endpoint_serialization_alias_bug",
+      "source_capture_summary": "results/v7/processed/raw_arch_channel_ceiling_v7.json",
+      "source_v6_artifact": "artifacts/causal/v6/causal-endpoint-v6-20260914T161620Z-a20b5a8c-s20260828-full-66/causal_endpoint_f32.npz"
+    },
+    "persistent_state_v8": {
+      "bootstrap_resamples": 10000,
+      "calibration": {
+        "count_per_family_horizon": 30,
+        "horizons": [
+          2,
+          3,
+          5
+        ],
+        "minimum_accuracy": 0.7,
+        "preferred_accuracy": 0.8,
+        "seed": 20261103,
+        "version": "r6"
+      },
+      "component_atoms": [
+        "rec_matrix_all",
+        "conv_all",
+        "kv_l27_h3",
+        "kv_other"
+      ],
+      "compression": {
+        "causal_direction_minimum": 0.8,
+        "causal_evaluation_requires_predictive_and_conditional_pass": true,
+        "causal_gap_closed": 0.8,
+        "confirmation_seeds": [
+          20260828,
+          20260829,
+          20260830
+        ],
+        "diagnostic_sketch_dimension": 8192,
+        "dimensions": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512
+        ],
+        "magnitude_ratio_maximum": 1.2,
+        "magnitude_ratio_minimum": 0.8,
+        "maximum_conditional_residual_gain": 0.02,
+        "methods": [
+          "pca",
+          "predictive_bottleneck",
+          "causal_bottleneck",
+          "nonlinear_encoder",
+          "layerwise_fusion"
+        ],
+        "output_sign_agreement_minimum": 0.8,
+        "predictive_gap_closed": 0.8,
+        "raw_dual_pca_tolerance": 1e-08,
+        "reconstruction_ridge_alpha": 0.01,
+        "semantic_agreement_minimum": 0.8
+      },
+      "formal": {
+        "candidates_per_family": {
+          "final_test": 80,
+          "train": 180,
+          "validation": 80
+        },
+        "horizon_overrides": {
+          "modular_arithmetic": 2
+        },
+        "split_seeds": {
+          "final_test": 20261113,
+          "train": 20261111,
+          "validation": 20261112
+        },
+        "target_valid_per_family": {
+          "final_test": 50,
+          "train": 120,
+          "validation": 50
+        },
+        "version": "competence_corrective_r3_parser"
+      },
+      "intervention": {
+        "causal_write_layer": 24,
+        "dense_cosine_threshold": 0.995,
+        "formal_displacement_fraction": 0.2,
+        "initial_strength": 0.25,
+        "layer": 23,
+        "measured_layers": [
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "rms_drift_threshold": 0.02,
+        "teacher_forced_tokens": 4,
+        "top10_overlap_threshold": 0.8
+      },
+      "kernel_ridge_alphas": [
+        0.001,
+        0.01,
+        0.1,
+        1.0
+      ],
+      "persistent_components": {
+        "attention_layers": [
+          27,
+          31
+        ],
+        "kv_positions": "final",
+        "kv_primary_head": 3,
+        "kv_primary_layer": 27,
+        "recurrent_layers": [
+          24,
+          25,
+          26,
+          28,
+          29,
+          30
+        ],
+        "top_recurrent_layer": [
+          30
+        ],
+        "top_recurrent_layers": [
+          28,
+          29,
+          30
+        ]
+      },
+      "raw_screen": {
+        "maximum_output_sign_loss": 0.02,
+        "minimum_causal_direction_cosine": 0.8,
+        "minimum_full_gap_fraction": 0.9
+      },
+      "raw_sets": {
+        "R0": [],
+        "R1": [
+          "rec_matrix_l30"
+        ],
+        "R2": [
+          "rec_matrix_l28",
+          "rec_matrix_l29",
+          "rec_matrix_l30"
+        ],
+        "R3": [
+          "conv_all"
+        ],
+        "R4": [
+          "rec_matrix_all",
+          "conv_all"
+        ],
+        "R5": [
+          "kv_l27_h3"
+        ],
+        "R6": [
+          "rec_matrix_all",
+          "conv_all",
+          "kv_l27_h3"
+        ],
+        "R7": [
+          "rec_matrix_all",
+          "conv_all",
+          "kv_all"
+        ]
+      }
+    },
+    "reproducibility": {
+      "bootstrap_seed": 20260901,
+      "controller_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "dataset_seed": 20260828,
+      "deterministic": true
+    },
+    "run": {
+      "protocol_version": "causal_path_geometry_v13",
+      "stage": "causal_geometry_v13",
+      "timeout_hours": 120
+    },
+    "single_arm_v4": {
+      "bootstrap_resamples": 10000,
+      "confidence": 0.95,
+      "confirmation_valid_base_trials": 500,
+      "construction": "dense_optimized",
+      "controls": [
+        "clean",
+        "identity",
+        "matched_random",
+        "j_positive",
+        "full_perturbation",
+        "j_preserving"
+      ],
+      "dense_cosine_threshold": 0.995,
+      "dictionary_size": 4096,
+      "formal_displacement_fraction": 0.2,
+      "future_workspace_layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "generation_horizons": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "initial_strength": 0.25,
+      "layer": 23,
+      "max_attempt_multiplier": 10,
+      "null_js_floor": 0.0001,
+      "null_quantile": 0.99,
+      "pilot_valid_base_trials": 100,
+      "position_scope": "final",
+      "rms_drift_threshold": 0.02,
+      "state_definition": "V3-Dense-operational-control",
+      "top10_overlap_threshold": 0.8
+    },
+    "statistics": {
+      "bootstrap_resamples": 10000,
+      "confidence": 0.95,
+      "eta_threshold": 0.2,
+      "null_js_floor": 0.0001,
+      "null_quantile": 0.99
+    },
+    "sufficiency_v9": {
+      "behavior_enriched": {
+        "fraction_per_family": 0.4,
+        "minimum_per_family": 15,
+        "score_columns": [
+          "output_js_divergence",
+          "future_j_trajectory_divergence",
+          "target_log_odds_abs_change"
+        ]
+      },
+      "bootstrap_resamples": 10000,
+      "captured_horizons": [
+        1,
+        2,
+        4
+      ],
+      "causal_decoding_requires_all_observational_gates": true,
+      "causal_direction_minimum": 0.8,
+      "causal_magnitude_maximum": 1.2,
+      "causal_magnitude_minimum": 0.8,
+      "conditional_residual_gain_maximum": 0.02,
+      "confirmation_seeds": [
+        20260828,
+        20260829,
+        20260830
+      ],
+      "gap_denominator_epsilon": 0.002,
+      "horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "methods": [
+        "pca",
+        "predictive_bottleneck",
+        "causal_bottleneck",
+        "semantic_causal_bottleneck"
+      ],
+      "newly_evaluated_dimensions": [
+        512,
+        576,
+        599,
+        768,
+        1024,
+        1536,
+        2048
+      ],
+      "output_sign_agreement_minimum": 0.8,
+      "predictive_gap_closed_minimum": 0.8,
+      "primary_method": "causal_bottleneck",
+      "primary_methods": [
+        "pca",
+        "predictive_bottleneck",
+        "causal_bottleneck"
+      ],
+      "requested_dimensions": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        576,
+        599,
+        768,
+        1024,
+        1536,
+        2048
+      ],
+      "residual_blocks": [
+        "recurrent",
+        "conv",
+        "kv"
+      ],
+      "residual_localization_dimensions": [
+        512,
+        599,
+        768,
+        1024,
+        1536
+      ],
+      "ridge_alpha": 1.0,
+      "semantic_agreement_minimum": 0.8,
+      "semantic_objective_weights": {
+        "future_causal_delta": 0.2,
+        "next_absolute": 0.4,
+        "next_causal_delta": 0.4
+      }
+    },
+    "teacher_tasks_v4": {
+      "calibration_per_cell": 16,
+      "calibration_seed": 20260914,
+      "formal_counts_per_family": {
+        "causal_test": 40,
+        "rollout_test": 40,
+        "train": 64,
+        "validation": 16
+      },
+      "formal_evaluation_mode": "environment_stepwise",
+      "formal_seeds": {
+        "causal_test": 20260917,
+        "rollout_test": 20260918,
+        "train": 20260915,
+        "validation": 20260916
+      },
+      "generation_batch_size": 8,
+      "horizons": [
+        4,
+        8,
+        16,
+        32
+      ],
+      "maximum_extra_tokens": 8,
+      "minimum_cell_full_trajectory_accuracy": 0.7,
+      "preferred_cell_full_trajectory_accuracy": 0.8,
+      "variants": {
+        "boolean_logic": [
+          "binary_xor_pairs",
+          "not_each",
+          "xor_one"
+        ],
+        "modular_arithmetic": [
+          "increment_1",
+          "increment_2",
+          "decrement_1"
+        ],
+        "short_graph_traversal": [
+          "directed_cycle"
+        ],
+        "simple_state_transition": [
+          "toggle_every_step",
+          "toggle_or_keep"
+        ],
+        "variable_binding": [
+          "four_way_lookup"
+        ]
+      }
+    },
+    "validation": {
+      "band_min_layers": 3,
+      "band_peak_fraction": 0.5,
+      "bootstrap_resamples": 10000,
+      "discovery_fraction": 0.5,
+      "hit10_threshold": 0.2,
+      "min_primary_position": 16,
+      "positive_control_trials": 24,
+      "report_sensitivity_peak_fractions": [
+        0.25,
+        0.4,
+        0.6
+      ]
+    }
+  },
+  "config_digest": "7bc7c600a2bd17f27ecbf687b603c2826c758fb1ec159bc1191977f80ddb8029",
+  "created_at": "2026-09-18T02:49:42.486935+00:00",
+  "environment": {
+    "cuda_available": true,
+    "gpus": [
+      {
+        "compute_capability": [
+          8,
+          9
+        ],
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "total_memory_bytes": 25386352640
+      },
+      {
+        "compute_capability": [
+          8,
+          9
+        ],
+        "index": 1,
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "total_memory_bytes": 25386352640
+      }
+    ],
+    "nvidia_smi": "NVIDIA GeForce RTX 4090 D, 550.144.03, 24564 MiB\nNVIDIA GeForce RTX 4090 D, 550.144.03, 24564 MiB",
+    "platform": "Linux-6.2.0-26-generic-x86_64-with-glibc2.35",
+    "python": "3.12.2",
+    "python_executable": "/home/user/anaconda3/bin/python",
+    "torch": "2.10.0+cu128",
+    "torch_cuda_runtime": "12.8"
+  },
+  "git_commit": "2b94a65daee29e5547530261194b7de34860df4e",
+  "git_worktree": {
+    "capture": "process_init",
+    "dirty": true,
+    "entries": 171,
+    "status_sha256": "566297abc709a02ab968441578f0e931b2357a6b86bdcc3ff5504e3b4f0f759f"
+  },
+  "kind": "geometry-v13",
+  "run_id": "geometry-v13-20260918T024942Z-7bc7c600-s20260828-analyze-v13",
+  "run_suffix": "analyze-v13",
+  "schema_version": 3,
+  "seed": 20260828,
+  "status": "COMPLETED_V13_GEOMETRY_STAGE",
+  "summary": {
+    "across_family_rank16_mean_angle": 32.49421375989914,
+    "autonomous_controller_authorized": false,
+    "candidate_causal_sufficient_state": false,
+    "candidate_complete_replacement_state": false,
+    "cross_channel_mixed_direction_fraction": 0.6015625,
+    "dominant_directions_cross_channel": true,
+    "fixed_512_data_limited": false,
+    "formal_outcome": "V13-F \u2014 HIGH-DIMENSIONAL WRITABLE STATE",
+    "global_causal_basis_passes_all_horizons": false,
+    "h2_remains": true,
+    "h3_authorized": false,
+    "high_path_dimension": false,
+    "independent_confirmatory_summary": [
+      {
+        "direction": 0.09688031494080115,
+        "gate_pass": false,
+        "horizon": 1,
+        "magnitude": 6.111155975877812,
+        "method": "global_causal_basis_oracle",
+        "output": 0.1330670481665363,
+        "semantic_continuous": 0.09688031494080115,
+        "semantic_legacy": 0.032,
+        "sign": 0.52
+      },
+      {
+        "direction": 0.10242758628000281,
+        "gate_pass": false,
+        "horizon": 2,
+        "magnitude": 5.5219288699226885,
+        "method": "global_causal_basis_oracle",
+        "output": 0.15436445626115594,
+        "semantic_continuous": 0.10242758628000281,
+        "semantic_legacy": 0.032,
+        "sign": 0.6
+      },
+      {
+        "direction": 0.16205818084469079,
+        "gate_pass": false,
+        "horizon": 4,
+        "magnitude": 3.9085818603620157,
+        "method": "global_causal_basis_oracle",
+        "output": 0.23059725319079072,
+        "semantic_continuous": 0.16205818084469079,
+        "semantic_legacy": 0.012000000000000002,
+        "sign": 0.625
+      },
+      {
+        "direction": 0.278714034979296,
+        "gate_pass": false,
+        "horizon": 8,
+        "magnitude": 2.1276007490208757,
+        "method": "global_causal_basis_oracle",
+        "output": 0.373193271421896,
+        "semantic_continuous": 0.278714034979296,
+        "semantic_legacy": 0.012000000000000002,
+        "sign": 0.68
+      },
+      {
+        "direction": 0.25643011486324147,
+        "gate_pass": false,
+        "horizon": 1,
+        "magnitude": 0.46117972008716357,
+        "method": "global_pca_oracle",
+        "output": 0.2959985136906058,
+        "semantic_continuous": 0.25643011486324147,
+        "semantic_legacy": 0.07600000000000001,
+        "sign": 0.76
+      },
+      {
+        "direction": 0.35645870259745477,
+        "gate_pass": false,
+        "horizon": 2,
+        "magnitude": 0.6438023429378198,
+        "method": "global_pca_oracle",
+        "output": 0.3523496785918999,
+        "semantic_continuous": 0.35645870259745477,
+        "semantic_legacy": 0.055999999999999994,
+        "sign": 0.48
+      },
+      {
+        "direction": 0.4178793458017047,
+        "gate_pass": false,
+        "horizon": 4,
+        "magnitude": 0.8580783634415239,
+        "method": "global_pca_oracle",
+        "output": 0.4007118443081145,
+        "semantic_continuous": 0.4178793458017047,
+        "semantic_legacy": 0.08,
+        "sign": 0.5833333333333334
+      },
+      {
+        "direction": 0.49446365546684673,
+        "gate_pass": false,
+        "horizon": 8,
+        "magnitude": 0.9572378391055106,
+        "method": "global_pca_oracle",
+        "output": 0.525648371637157,
+        "semantic_continuous": 0.49446365546684673,
+        "semantic_legacy": 0.084,
+        "sign": 0.56
+      },
+      {
+        "direction": 0.7720985833749724,
+        "gate_pass": false,
+        "horizon": 1,
+        "magnitude": 0.8709333652217879,
+        "method": "moving_tangent_interpolated_oracle",
+        "output": 0.7972565658330503,
+        "semantic_continuous": 0.7720985833749724,
+        "semantic_legacy": 0.35600000000000004,
+        "sign": 0.76
+      },
+      {
+        "direction": 0.6893556846626062,
+        "gate_pass": false,
+        "horizon": 2,
+        "magnitude": 0.8973216012263727,
+        "method": "moving_tangent_interpolated_oracle",
+        "output": 0.6692567553675406,
+        "semantic_continuous": 0.6893556846626062,
+        "semantic_legacy": 0.192,
+        "sign": 0.68
+      },
+      {
+        "direction": 0.5904020929445942,
+        "gate_pass": false,
+        "horizon": 4,
+        "magnitude": 0.9938537623984022,
+        "method": "moving_tangent_interpolated_oracle",
+        "output": 0.5671969938670515,
+        "semantic_continuous": 0.5904020929445942,
+        "semantic_legacy": 0.14800000000000002,
+        "sign": 0.7916666666666666
+      },
+      {
+        "direction": 0.5133328030418577,
+        "gate_pass": false,
+        "horizon": 8,
+        "magnitude": 0.9653638407473788,
+        "method": "moving_tangent_interpolated_oracle",
+        "output": 0.5457316490745959,
+        "semantic_continuous": 0.5133328030418577,
+        "semantic_legacy": 0.124,
+        "sign": 0.64
+      },
+      {
+        "direction": 0.9999999928075769,
+        "gate_pass": true,
+        "horizon": 1,
+        "magnitude": 1.0,
+        "method": "raw_teacher_intervention",
+        "output": 1.0000000111024614,
+        "semantic_continuous": 0.9999999928075769,
+        "semantic_legacy": 1.0,
+        "sign": 1.0
+      },
+      {
+        "direction": 1.0000000004307628,
+        "gate_pass": true,
+        "horizon": 2,
+        "magnitude": 1.0,
+        "method": "raw_teacher_intervention",
+        "output": 1.0000000149186916,
+        "semantic_continuous": 1.0000000004307628,
+        "semantic_legacy": 1.0,
+        "sign": 1.0
+      },
+      {
+        "direction": 1.0000000083955567,
+        "gate_pass": true,
+        "horizon": 4,
+        "magnitude": 1.0,
+        "method": "raw_teacher_intervention",
+        "output": 1.000000022643968,
+        "semantic_continuous": 1.0000000083955567,
+        "semantic_legacy": 1.0,
+        "sign": 1.0
+      },
+      {
+        "direction": 0.9999999969080775,
+        "gate_pass": true,
+        "horizon": 8,
+        "magnitude": 1.0,
+        "method": "raw_teacher_intervention",
+        "output": 0.9999999913687087,
+        "semantic_continuous": 0.9999999969080775,
+        "semantic_legacy": 1.0,
+        "sign": 1.0
+      },
+      {
+        "direction": 0.739436563952176,
+        "gate_pass": false,
+        "horizon": 1,
+        "magnitude": 0.8249044143155033,
+        "method": "static_local_causal_oracle",
+        "output": 0.7565096403978862,
+        "semantic_continuous": 0.739436563952176,
+        "semantic_legacy": 0.324,
+        "sign": 0.56
+      },
+      {
+        "direction": 0.6453683434649158,
+        "gate_pass": false,
+        "horizon": 2,
+        "magnitude": 0.8743177480257733,
+        "method": "static_local_causal_oracle",
+        "output": 0.6564938931216245,
+        "semantic_continuous": 0.6453683434649158,
+        "semantic_legacy": 0.128,
+        "sign": 0.8
+      },
+      {
+        "direction": 0.5783448918298285,
+        "gate_pass": false,
+        "horizon": 4,
+        "magnitude": 0.9660165097384881,
+        "method": "static_local_causal_oracle",
+        "output": 0.5508282603718668,
+        "semantic_continuous": 0.5783448918298285,
+        "semantic_legacy": 0.10400000000000001,
+        "sign": 0.7083333333333334
+      },
+      {
+        "direction": 0.4995612100656059,
+        "gate_pass": false,
+        "horizon": 8,
+        "magnitude": 0.984449851568245,
+        "method": "static_local_causal_oracle",
+        "output": 0.5338193143069813,
+        "semantic_continuous": 0.4995612100656059,
+        "semantic_legacy": 0.124,
+        "sign": 0.6
+      }
+    ],
+    "low_variance_high_causal_directions": false,
+    "median_cumulative_path_r95": 11.0,
+    "median_instantaneous_r95": 8.0,
+    "moving_tangent_improves_static": true,
+    "moving_tangent_passes_all_horizons": false,
+    "probe_family_mean_column_sensitivity": {
+      "architecture_balanced": 4.660962577444547,
+      "causal_weighted": 2.3885091807515764,
+      "high_variance_pca": 0.7592895979669425,
+      "low_variance": 0.15593450524121333,
+      "random_raw": 0.7876877453097142
+    },
+    "probe_r95_curve": {
+      "64": 5.0,
+      "128": 6.5,
+      "256": 8.0,
+      "512": 9.0
+    },
+    "protocol_version": "causal_path_geometry_v13",
+    "records": {
+      "path_dimension": "results/v13/processed/causal_path_dimension_v13.parquet",
+      "tangent_atlas": "results/v13/processed/causal_tangent_atlas_v13.parquet",
+      "target_completeness": "results/v13/processed/causal_target_completeness_v13.parquet"
+    },
+    "run_id": "geometry-v13-20260918T024942Z-7bc7c600-s20260828-analyze-v13",
+    "same_prompt_rank16_mean_angle": 29.175557708740236,
+    "same_prompt_tangent_rotation_by_channel_degrees": {
+      "conv": 21.926273423433305,
+      "kv": 36.89069223999977,
+      "recurrent": 25.403882221877573
+    },
+    "schema_version": 22,
+    "selected_moving_tangent_alpha": 1.0,
+    "selected_moving_tangent_method": "moving_tangent_interpolated_oracle",
+    "semantic_failure_consistent_with_target_omission": false,
+    "semantic_failure_present": true,
+    "smallest_independently_validated_writable_dimension": null,
+    "stable_low_local_causal_rank": true,
+    "strict_replacement_status": "ABSOLUTE_REPLACEMENT_NOT_YET_TESTABLE_FROM_CURRENT_DELTA_REPRESENTATION",
+    "tangent_angle_spearman_predictors": {
+      "j_state_distance": 0.5449396540981422,
+      "raw_score_distance": 0.248726960359016,
+      "same_family_indicator": -0.36000498625317734,
+      "semantic_state_distance": 0.20809790507219364,
+      "token_distance": 0.23811847306224734
+    },
+    "target_bundle_median_r95": {
+      "complete_workspace": 9.0,
+      "j_logits": 9.0,
+      "j_logits_semantic": 8.0,
+      "j_only": 8.0
+    }
+  }
+}

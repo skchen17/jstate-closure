@@ -1,0 +1,76 @@
+{
+  "direction_batch_size": 1,
+  "exact_autograd_jvp": true,
+  "execution_shards": 2,
+  "full_raw_jacobian_claimed": false,
+  "local_state_count": 20,
+  "probe_family_mean_column_sensitivity": {
+    "architecture_balanced": 4.660962577444547,
+    "causal_weighted": 2.3885091807515764,
+    "high_variance_pca": 0.7592895979669425,
+    "low_variance": 0.15593450524121333,
+    "random_raw": 0.7876877453097142
+  },
+  "probe_family_robustness": {
+    "architecture_balanced": {
+      "mean_r95": 9.15,
+      "median_r95": 9.0
+    },
+    "causal_weighted": {
+      "mean_r95": 5.0,
+      "median_r95": 5.0
+    },
+    "high_variance_pca": {
+      "mean_r95": 7.9,
+      "median_r95": 7.5
+    },
+    "low_variance": {
+      "mean_r95": 8.2,
+      "median_r95": 8.5
+    },
+    "random_raw": {
+      "mean_r95": 11.0,
+      "median_r95": 11.0
+    }
+  },
+  "probe_scaling": {
+    "128": {
+      "mean_effective_rank": 5.495608295017782,
+      "mean_stable_rank": 2.5362330881039727,
+      "median_r90": 5.0,
+      "median_r95": 6.5,
+      "median_r99": 12.0
+    },
+    "256": {
+      "mean_effective_rank": 5.960620893533418,
+      "mean_stable_rank": 2.5819219727009743,
+      "median_r90": 5.0,
+      "median_r95": 8.0,
+      "median_r99": 16.5
+    },
+    "512": {
+      "mean_effective_rank": 6.321124387429359,
+      "mean_stable_rank": 2.612986050528506,
+      "median_r90": 5.5,
+      "median_r95": 9.0,
+      "median_r99": 21.0
+    },
+    "64": {
+      "mean_effective_rank": 4.8042189458726146,
+      "mean_stable_rank": 2.460115628832446,
+      "median_r90": 4.0,
+      "median_r95": 5.0,
+      "median_r99": 8.0
+    }
+  },
+  "protocol_version": "causal_path_geometry_v13_scalar_jvp_sharded_amendment_1",
+  "records": "results/v13/processed/causal_probe_scaling_v13.parquet",
+  "records_sha256": "da45a7ec022c0ec2cfad43e47123cd595dd00de92bc57bcf56d19ea4487152af",
+  "run_ids": [
+    "geometry-v13-20260917T201920Z-7bc7c600-s20260828-exact-scalar-shard-0",
+    "geometry-v13-20260917T201921Z-7bc7c600-s20260828-exact-scalar-shard-1"
+  ],
+  "runtime_amendment_digest": "5eac0070a1dfaaaaa52c41d539e7c476dcaa3307434710a20ba4ee6e942d82ba",
+  "schema_version": 22,
+  "source_freeze_digest": "17b5b0ec8743d99a4fa5cbe91a7f5458fd97087f02c4d4c1991e57d84c61dd38"
+}

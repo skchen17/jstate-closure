@@ -1,0 +1,28 @@
+{
+  "correction": "DenseJMap.dense_state is evaluated row-wise for [batch,d_model] inputs",
+  "default_batch_size": 8,
+  "derivative_backend": "torch.autograd.functional.jvp",
+  "equivalence_gate": {
+    "maximum_absolute_difference": 0.0005,
+    "minimum_column_cosine": 0.99999,
+    "reference": "an already completed scalar-JVP local-state matrix"
+  },
+  "estimand_changed": false,
+  "freeze_digest": "4e2d719eae1625cb2a6f1e89a40843856713d875cbca60b91146d45ab5ecc754",
+  "hashes": {
+    "artifacts/causal_geometry_v13_jvp.freeze.json": "d82f7a5b7761ac7966710df7a7d2b9bebada516171c762aaf5ccdd6f8a7f1e2d",
+    "artifacts/causal_geometry_v13_runtime_dual_gpu.freeze.json": "a73aad38f2a17d6f808135c4e3423a28ce75d7d99c2c126e3efd6d88094085b8",
+    "configs/causal_geometry_v13.yaml": "a49d72f1d4630525b83672c0511e85d4cfc637445f866b66da9b1484ebc2e7fb",
+    "src/jclosure/experiments/runtime_v13_jvp_batched.py": "2f57a07400145c103150fa474a5a816cd177cd3c7dfb26e160e651e91b44b4e7",
+    "src/jclosure/experiments/runtime_v13_jvp_batched_v2.py": "ba0838907384794952522f833ae7ffb7d176714c0e5ed523a2f13105acde7d5d"
+  },
+  "parent_batched_jvp_freeze_digest": "b74f56f3b89e10da526dbafee57570141518bf831ced23d7cb50f1a91bad530b",
+  "parent_runtime_freeze_digest": "8aef08468ba1b5bf87785a5dff9fd252562c4cb7d749c2a3072d0e786657e6cb",
+  "probe_operator_changed": false,
+  "protocol_version": "causal_path_geometry_v13_jvp_batched_amendment_2",
+  "purpose": "support the same normalized dense-J readout independently for every batch member",
+  "resume_rule": "existing matrices are hash-read and re-analysed; incomplete local states are recomputed atomically",
+  "schema_version": 22,
+  "split_changed": false,
+  "target_bundle_changed": false
+}

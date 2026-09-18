@@ -1,0 +1,288 @@
+{
+  "across_family_rank16_mean_angle": 32.49421375989914,
+  "autonomous_controller_authorized": false,
+  "candidate_causal_sufficient_state": false,
+  "candidate_complete_replacement_state": false,
+  "cross_channel_mixed_direction_fraction": 0.6015625,
+  "dominant_directions_cross_channel": true,
+  "fixed_512_data_limited": false,
+  "formal_outcome": "V13-F \u2014 HIGH-DIMENSIONAL WRITABLE STATE",
+  "global_causal_basis_passes_all_horizons": false,
+  "h2_remains": true,
+  "h3_authorized": false,
+  "high_path_dimension": false,
+  "independent_confirmatory_summary": [
+    {
+      "direction": 0.09688031494080115,
+      "gate_pass": false,
+      "horizon": 1,
+      "magnitude": 6.111155975877812,
+      "method": "global_causal_basis_oracle",
+      "output": 0.1330670481665363,
+      "semantic_continuous": 0.09688031494080115,
+      "semantic_legacy": 0.032,
+      "sign": 0.52
+    },
+    {
+      "direction": 0.10242758628000281,
+      "gate_pass": false,
+      "horizon": 2,
+      "magnitude": 5.5219288699226885,
+      "method": "global_causal_basis_oracle",
+      "output": 0.15436445626115594,
+      "semantic_continuous": 0.10242758628000281,
+      "semantic_legacy": 0.032,
+      "sign": 0.6
+    },
+    {
+      "direction": 0.16205818084469079,
+      "gate_pass": false,
+      "horizon": 4,
+      "magnitude": 3.9085818603620157,
+      "method": "global_causal_basis_oracle",
+      "output": 0.23059725319079072,
+      "semantic_continuous": 0.16205818084469079,
+      "semantic_legacy": 0.012000000000000002,
+      "sign": 0.625
+    },
+    {
+      "direction": 0.278714034979296,
+      "gate_pass": false,
+      "horizon": 8,
+      "magnitude": 2.1276007490208757,
+      "method": "global_causal_basis_oracle",
+      "output": 0.373193271421896,
+      "semantic_continuous": 0.278714034979296,
+      "semantic_legacy": 0.012000000000000002,
+      "sign": 0.68
+    },
+    {
+      "direction": 0.25643011486324147,
+      "gate_pass": false,
+      "horizon": 1,
+      "magnitude": 0.46117972008716357,
+      "method": "global_pca_oracle",
+      "output": 0.2959985136906058,
+      "semantic_continuous": 0.25643011486324147,
+      "semantic_legacy": 0.07600000000000001,
+      "sign": 0.76
+    },
+    {
+      "direction": 0.35645870259745477,
+      "gate_pass": false,
+      "horizon": 2,
+      "magnitude": 0.6438023429378198,
+      "method": "global_pca_oracle",
+      "output": 0.3523496785918999,
+      "semantic_continuous": 0.35645870259745477,
+      "semantic_legacy": 0.055999999999999994,
+      "sign": 0.48
+    },
+    {
+      "direction": 0.4178793458017047,
+      "gate_pass": false,
+      "horizon": 4,
+      "magnitude": 0.8580783634415239,
+      "method": "global_pca_oracle",
+      "output": 0.4007118443081145,
+      "semantic_continuous": 0.4178793458017047,
+      "semantic_legacy": 0.08,
+      "sign": 0.5833333333333334
+    },
+    {
+      "direction": 0.49446365546684673,
+      "gate_pass": false,
+      "horizon": 8,
+      "magnitude": 0.9572378391055106,
+      "method": "global_pca_oracle",
+      "output": 0.525648371637157,
+      "semantic_continuous": 0.49446365546684673,
+      "semantic_legacy": 0.084,
+      "sign": 0.56
+    },
+    {
+      "direction": 0.7720985833749724,
+      "gate_pass": false,
+      "horizon": 1,
+      "magnitude": 0.8709333652217879,
+      "method": "moving_tangent_interpolated_oracle",
+      "output": 0.7972565658330503,
+      "semantic_continuous": 0.7720985833749724,
+      "semantic_legacy": 0.35600000000000004,
+      "sign": 0.76
+    },
+    {
+      "direction": 0.6893556846626062,
+      "gate_pass": false,
+      "horizon": 2,
+      "magnitude": 0.8973216012263727,
+      "method": "moving_tangent_interpolated_oracle",
+      "output": 0.6692567553675406,
+      "semantic_continuous": 0.6893556846626062,
+      "semantic_legacy": 0.192,
+      "sign": 0.68
+    },
+    {
+      "direction": 0.5904020929445942,
+      "gate_pass": false,
+      "horizon": 4,
+      "magnitude": 0.9938537623984022,
+      "method": "moving_tangent_interpolated_oracle",
+      "output": 0.5671969938670515,
+      "semantic_continuous": 0.5904020929445942,
+      "semantic_legacy": 0.14800000000000002,
+      "sign": 0.7916666666666666
+    },
+    {
+      "direction": 0.5133328030418577,
+      "gate_pass": false,
+      "horizon": 8,
+      "magnitude": 0.9653638407473788,
+      "method": "moving_tangent_interpolated_oracle",
+      "output": 0.5457316490745959,
+      "semantic_continuous": 0.5133328030418577,
+      "semantic_legacy": 0.124,
+      "sign": 0.64
+    },
+    {
+      "direction": 0.9999999928075769,
+      "gate_pass": true,
+      "horizon": 1,
+      "magnitude": 1.0,
+      "method": "raw_teacher_intervention",
+      "output": 1.0000000111024614,
+      "semantic_continuous": 0.9999999928075769,
+      "semantic_legacy": 1.0,
+      "sign": 1.0
+    },
+    {
+      "direction": 1.0000000004307628,
+      "gate_pass": true,
+      "horizon": 2,
+      "magnitude": 1.0,
+      "method": "raw_teacher_intervention",
+      "output": 1.0000000149186916,
+      "semantic_continuous": 1.0000000004307628,
+      "semantic_legacy": 1.0,
+      "sign": 1.0
+    },
+    {
+      "direction": 1.0000000083955567,
+      "gate_pass": true,
+      "horizon": 4,
+      "magnitude": 1.0,
+      "method": "raw_teacher_intervention",
+      "output": 1.000000022643968,
+      "semantic_continuous": 1.0000000083955567,
+      "semantic_legacy": 1.0,
+      "sign": 1.0
+    },
+    {
+      "direction": 0.9999999969080775,
+      "gate_pass": true,
+      "horizon": 8,
+      "magnitude": 1.0,
+      "method": "raw_teacher_intervention",
+      "output": 0.9999999913687087,
+      "semantic_continuous": 0.9999999969080775,
+      "semantic_legacy": 1.0,
+      "sign": 1.0
+    },
+    {
+      "direction": 0.739436563952176,
+      "gate_pass": false,
+      "horizon": 1,
+      "magnitude": 0.8249044143155033,
+      "method": "static_local_causal_oracle",
+      "output": 0.7565096403978862,
+      "semantic_continuous": 0.739436563952176,
+      "semantic_legacy": 0.324,
+      "sign": 0.56
+    },
+    {
+      "direction": 0.6453683434649158,
+      "gate_pass": false,
+      "horizon": 2,
+      "magnitude": 0.8743177480257733,
+      "method": "static_local_causal_oracle",
+      "output": 0.6564938931216245,
+      "semantic_continuous": 0.6453683434649158,
+      "semantic_legacy": 0.128,
+      "sign": 0.8
+    },
+    {
+      "direction": 0.5783448918298285,
+      "gate_pass": false,
+      "horizon": 4,
+      "magnitude": 0.9660165097384881,
+      "method": "static_local_causal_oracle",
+      "output": 0.5508282603718668,
+      "semantic_continuous": 0.5783448918298285,
+      "semantic_legacy": 0.10400000000000001,
+      "sign": 0.7083333333333334
+    },
+    {
+      "direction": 0.4995612100656059,
+      "gate_pass": false,
+      "horizon": 8,
+      "magnitude": 0.984449851568245,
+      "method": "static_local_causal_oracle",
+      "output": 0.5338193143069813,
+      "semantic_continuous": 0.4995612100656059,
+      "semantic_legacy": 0.124,
+      "sign": 0.6
+    }
+  ],
+  "low_variance_high_causal_directions": false,
+  "median_cumulative_path_r95": 11.0,
+  "median_instantaneous_r95": 8.0,
+  "moving_tangent_improves_static": true,
+  "moving_tangent_passes_all_horizons": false,
+  "probe_family_mean_column_sensitivity": {
+    "architecture_balanced": 4.660962577444547,
+    "causal_weighted": 2.3885091807515764,
+    "high_variance_pca": 0.7592895979669425,
+    "low_variance": 0.15593450524121333,
+    "random_raw": 0.7876877453097142
+  },
+  "probe_r95_curve": {
+    "64": 5.0,
+    "128": 6.5,
+    "256": 8.0,
+    "512": 9.0
+  },
+  "protocol_version": "causal_path_geometry_v13",
+  "records": {
+    "path_dimension": "results/v13/processed/causal_path_dimension_v13.parquet",
+    "tangent_atlas": "results/v13/processed/causal_tangent_atlas_v13.parquet",
+    "target_completeness": "results/v13/processed/causal_target_completeness_v13.parquet"
+  },
+  "run_id": "geometry-v13-20260918T024942Z-7bc7c600-s20260828-analyze-v13",
+  "same_prompt_rank16_mean_angle": 29.175557708740236,
+  "same_prompt_tangent_rotation_by_channel_degrees": {
+    "conv": 21.926273423433305,
+    "kv": 36.89069223999977,
+    "recurrent": 25.403882221877573
+  },
+  "schema_version": 22,
+  "selected_moving_tangent_alpha": 1.0,
+  "selected_moving_tangent_method": "moving_tangent_interpolated_oracle",
+  "semantic_failure_consistent_with_target_omission": false,
+  "semantic_failure_present": true,
+  "smallest_independently_validated_writable_dimension": null,
+  "stable_low_local_causal_rank": true,
+  "strict_replacement_status": "ABSOLUTE_REPLACEMENT_NOT_YET_TESTABLE_FROM_CURRENT_DELTA_REPRESENTATION",
+  "tangent_angle_spearman_predictors": {
+    "j_state_distance": 0.5449396540981422,
+    "raw_score_distance": 0.248726960359016,
+    "same_family_indicator": -0.36000498625317734,
+    "semantic_state_distance": 0.20809790507219364,
+    "token_distance": 0.23811847306224734
+  },
+  "target_bundle_median_r95": {
+    "complete_workspace": 9.0,
+    "j_logits": 9.0,
+    "j_logits_semantic": 8.0,
+    "j_only": 8.0
+  }
+}

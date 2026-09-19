@@ -1,0 +1,182 @@
+{
+  "config": {
+    "confirmatory": {
+      "historical_full_gate_unchanged": true,
+      "require_development_numerical_and_control_gate": true,
+      "seed": 20270927,
+      "source": "new_independent_v15_bank_only"
+    },
+    "development": {
+      "backtracking": [
+        1.0,
+        0.5,
+        0.25
+      ],
+      "h1_direction_min": 0.8,
+      "h1_magnitude_max": 1.2,
+      "h1_magnitude_min": 0.8,
+      "h1_output_min": 0.8,
+      "h1_semantic_continuous_min": 0.8,
+      "legacy_semantic_min": 0.8,
+      "maximum_steps": 4,
+      "objectives": [
+        [
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          4,
+          8
+        ]
+      ],
+      "per_family": 2,
+      "rank_r95": true,
+      "ranks": [
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "ridge": 0.01,
+      "source_split": "v13_validation",
+      "trust_radius": 0.5
+    },
+    "diagnostic": {
+      "anchors_per_family": 1,
+      "deadzone_zero_fraction_threshold": 0.5,
+      "direction_indices": [
+        0,
+        103,
+        206,
+        308,
+        410
+      ],
+      "min_causal_effect_norm": 0.006802803347818553,
+      "modes": [
+        "native_fp32_add_bf16_writeback",
+        "cast_after_add",
+        "native_bf16_add",
+        "fp32_shadow_rec_conv",
+        "fp32_rec_only",
+        "fp32_conv_only",
+        "fp32_kv_only"
+      ],
+      "realized_state_deadzone_norm": 0.0,
+      "reliable_state_cosine_min": 0.95,
+      "reliable_state_gain_max": 1.2,
+      "reliable_state_gain_min": 0.8,
+      "repeat_count": 2,
+      "saturation_gain_max": 5.0,
+      "saturation_gain_min": 0.2,
+      "scales": [
+        1e-05,
+        3e-05,
+        0.0001,
+        0.0003,
+        0.001,
+        0.003,
+        0.01,
+        0.03,
+        0.1,
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "source_split": "v13_train",
+      "target_blocks": [
+        "j",
+        "logits",
+        "semantic_continuous",
+        "workspace",
+        "stacked_normalized"
+      ],
+      "target_scale_source": "v13_train_jvp_matrices",
+      "ulp_multipliers": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ]
+    },
+    "historical_results_immutable": true,
+    "name": "Quantization-Aware Causal Actuation",
+    "operator": {
+      "adaptive_epsilon_candidates": [
+        1e-05,
+        3e-05,
+        0.0001,
+        0.0003,
+        0.001,
+        0.003,
+        0.01,
+        0.03,
+        0.1,
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "channel_modes": [
+        "joint",
+        "recurrent",
+        "conv",
+        "kv"
+      ],
+      "linearity_cosine_min": 0.9,
+      "linearity_norm_ratio_max": 1.3,
+      "linearity_norm_ratio_min": 0.7,
+      "linearity_relative_error_max": 0.3,
+      "pilot_direction_indices": [
+        0,
+        103,
+        206,
+        308,
+        410
+      ],
+      "rank_anchor_count": 5,
+      "rank_high_ratio_min": 2.0,
+      "rank_low_ratio_max": 1.5,
+      "rank_probe_counts": [
+        64,
+        128,
+        256,
+        512
+      ],
+      "rank_response_epsilon": 1.0,
+      "rank_state_stability_max_cv": 0.25,
+      "target_effect_snr_min": 10.0
+    },
+    "parent_commit": "832d1a57f316a59bd961739f7caea4c4e0c702c8",
+    "protocol_version": "quantization_aware_causal_actuation_v15"
+  },
+  "freeze_digest": "8cccf28e4fd09484e1dd2aaf6dcf2abb311695701e439a40eaee6bdee44f7c35",
+  "parent_commit": "832d1a57f316a59bd961739f7caea4c4e0c702c8",
+  "parent_final_report_hash_is_pre_v15": true,
+  "parent_hashes": {
+    "artifacts/causal_geometry_v13_jvp.freeze.json": "d82f7a5b7761ac7966710df7a7d2b9bebada516171c762aaf5ccdd6f8a7f1e2d",
+    "artifacts/finite_causal_control_v14.freeze.json": "8328bf510c87899b27b488a261d108e1d5feb992df0033a69dae3dcfdfedef50",
+    "artifacts/finite_causal_control_v14_finalist_decision.freeze.json": "119ec4fe1bad4db1645f4deddd7bb8909a77306f6a4509375a3a97cb20ef68d1",
+    "reports/FINAL_REPORT.md": "0d408f2068e3d7cec767d23ea70ea978becb3142fb62129c19e8a2b520eaf7c2",
+    "reports/V14_COMPLETE_REPORT.md": "c669fb66cd171f87ecc154e1c3b490c1b0fa2b1d50c2418bc22c3d57fc0aa713",
+    "results/v13/processed/causal_probe_scaling_v13.parquet": "da45a7ec022c0ec2cfad43e47123cd595dd00de92bc57bcf56d19ea4487152af",
+    "results/v14/processed/jvp_finite_writeback_audit_v14.parquet": "280a16eaaf5f7478221808ba8e09a42689bbd01daf79346e44aaa9637ed1ca28",
+    "results/v14/processed/numerical_snr_summary_v14.json": "85c1fbfcc707558668edc4ebae639dd3558b8314be4569f97dbfa89c621dfd4c"
+  },
+  "protocol_version": "quantization_aware_causal_actuation_v15",
+  "schema_version": 24,
+  "source_hashes": {
+    "configs/quantization_aware_actuation_v15.yaml": "1737308595d6b5e0a361670ac925f8566930b6adc608639785ea9063c6e2885f",
+    "src/jclosure/experiments/actuation_v15.py": "cec4bd85bb58572a5d18e8c6a72be87cde74c7a2e61fe93391b10b3c57f813dc",
+    "src/jclosure/protocol_v15.py": "31ee1c82d4d54941ee1e3f91133bfa25a2719f13993d4bbc8914ffbb45b77be7"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "FINITE_RESPONSE_LINEARITY_GATE": false,
+  "by_test": [
+    {
+      "median_cosine": 0.8014368312770784,
+      "median_norm_ratio": 0.9425449335892927,
+      "median_relative_l2": 0.6165019010945788,
+      "pass_count": 2,
+      "qualified": 10,
+      "test": "additive"
+    },
+    {
+      "median_cosine": 0.8649719784171197,
+      "median_norm_ratio": 0.7834943521083411,
+      "median_relative_l2": 0.49345176277115177,
+      "pass_count": 3,
+      "qualified": 10,
+      "test": "homogeneous"
+    },
+    {
+      "median_cosine": 0.3133365718698928,
+      "median_norm_ratio": 1.1021836526865503,
+      "median_relative_l2": 1.0567137290138244,
+      "pass_count": 0,
+      "qualified": 10,
+      "test": "odd"
+    },
+    {
+      "median_cosine": 0.8156276801342544,
+      "median_norm_ratio": 0.7777155830476381,
+      "median_relative_l2": 0.5780096148491484,
+      "pass_count": 1,
+      "qualified": 10,
+      "test": "rec_conv"
+    },
+    {
+      "median_cosine": 0.7612913615417027,
+      "median_norm_ratio": 0.6759936983268162,
+      "median_relative_l2": 0.6791611788678019,
+      "pass_count": 0,
+      "qualified": 10,
+      "test": "rec_conv_kv"
+    }
+  ],
+  "freeze_digest": "16b3cc515bdf4224a9a9f0bb818f7dca855318c66606f83b6513b385c21bc12c",
+  "records": "/data/CSK/J-space-project/jstate-closure/results/v15/processed/finite_response_linearity_v15.parquet",
+  "records_sha256": "c53506de141364332373b29548eeec11efcf481ac4b0aad8dacf9f4378b76d65",
+  "role": "diagnostic_train"
+}

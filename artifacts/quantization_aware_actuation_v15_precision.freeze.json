@@ -1,0 +1,30 @@
+{
+  "directions": [
+    0,
+    206
+  ],
+  "epsilons": [
+    0.1,
+    1.0
+  ],
+  "fp32_shadow_is_altered_forward_semantics": true,
+  "freeze_digest": "b1410a39973502064a9b8b516830e5c62fe9bc33efb902565a89be52ddea51b7",
+  "input_hashes": {
+    "results/v15/processed/actuator_transfer_v15.parquet": "2c719c29467cc6c6e5068e76472d757676d5ec9bb688e326046b4566c5e90cf8",
+    "src/jclosure/experiments/precision_v15.py": "1aec6b773c3b1315da0b12bdab3c3196cf2a21b6847f005fbfa4c7fd112bf3f8"
+  },
+  "modes": [
+    "native_fp32_add_bf16_writeback",
+    "cast_after_add",
+    "native_bf16_add",
+    "fp32_shadow_rec_conv",
+    "fp32_rec_only",
+    "fp32_conv_only",
+    "fp32_kv_only"
+  ],
+  "parent_freeze_digest": "8cccf28e4fd09484e1dd2aaf6dcf2abb311695701e439a40eaee6bdee44f7c35",
+  "pretrained_weights_changed": false,
+  "protocol_version": "quantization_aware_causal_actuation_v15_precision",
+  "role": "diagnostic_train",
+  "schema_version": 24
+}

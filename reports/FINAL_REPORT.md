@@ -604,3 +604,9 @@ Formal procedural outcome: **V14-STOP — NUMERICAL_INTERFACE_GATE_FAILED**. The
 
 Development closed-loop causal steering was run on ten validation cases; independent confirmation was **not** run because no numerically validated finalist was available. V14-A through V14-E are not fully established. H2 remains; H3 is not supported. Absolute state replacement and autonomous controller training are **not authorized**. V1–V13 conclusions remain frozen. See `reports/V14_COMPLETE_REPORT.md` for the full report bundle.
 <!-- V14_END -->
+
+<!-- V15_START -->
+## V15 — Quantization-Aware Causal Actuation
+
+Formal status: **V15-STOP — FINITE_RESPONSE_LINEARITY_GATE_FAILED**. Real BF16 writeback dead-zones were quantified per REC/Conv/K/V; only 16/100 adaptive state×direction×channel combinations met the predeclared finite-effect selection rule. At accurate realized state perturbations, some output targets still disagree with frozen exact JVP, supporting tested-regime V15-B. The restricted finite-response matrix has higher r95 than ideal JVP (V15-D pattern), but the frozen finite-response linearity gate failed, so spectra and actuator-aware closed-loop results remain diagnostic/development rather than validated finite control. No eligible finalist or new independent confirmatory bank was created. H2 remains; H3 and absolute state replacement are not supported; autonomous-controller training is not authorized. The required cumulative-report append invalidates one old V14 whole-file integrity test; V15's guard confirms all other historical bytes are unchanged. See `reports/V15_COMPLETE_REPORT.md` for all standalone reports, machine records, frozen gates and limitations.
+<!-- V15_END -->

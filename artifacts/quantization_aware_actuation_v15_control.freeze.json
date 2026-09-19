@@ -1,0 +1,42 @@
+{
+  "basis_rank_rule": "min(8, local realized-cost-weighted r95)",
+  "basis_reestimated_from_finite_response_at_each_step": true,
+  "epsilon": 1.0,
+  "freeze_digest": "d9df5d03b29c23f95c76022aad2d80e1c51c8e4d8342e3502896d1a9b9d79b54",
+  "independent_confirmatory": false,
+  "initial_probes": 64,
+  "input_hashes": {
+    "artifacts/quantization_aware_actuation_v15_splits.freeze.json": "2cef4e7bfdb7869056a96bc82e7c1643f40af150539e30647c272fa2200905bb",
+    "results/v15/processed/actuator_basis_v15.json": "c226e8249ba20cf1f93679331fe851de3c115a831519526b8c7b6f97437622f2",
+    "results/v15/processed/finite_response_linearity_v15.json": "c2e94e7e1fa3715886fd3b5bb746da35ab8eb4975dce8fe1f99a96a138d9f347",
+    "src/jclosure/experiments/control_v15.py": "46a80128613d2952f10cac0c666fb9d3e14704737439975db999403ad5d0c379"
+  },
+  "numerical_gate_failed_so_exploratory_only": true,
+  "objective_horizons": {
+    "h1": [
+      1
+    ],
+    "h1_h2_h4": [
+      1,
+      2,
+      4
+    ],
+    "h1_h2_h4_h8": [
+      1,
+      2,
+      4,
+      8
+    ]
+  },
+  "parent_freeze_digest": "8cccf28e4fd09484e1dd2aaf6dcf2abb311695701e439a40eaee6bdee44f7c35",
+  "protocol_version": "quantization_aware_causal_actuation_v15_control",
+  "raw_teacher_state_used_only_for_teacher_response_label": true,
+  "reachable_projection_floor_threshold": 0.2,
+  "role": "development_validation",
+  "schema_version": 24,
+  "trust_accept_ratio": 0.1,
+  "trust_expand_ratio": 0.75,
+  "trust_max": 1.0,
+  "trust_min": 0.05,
+  "trust_shrink_ratio": 0.25
+}

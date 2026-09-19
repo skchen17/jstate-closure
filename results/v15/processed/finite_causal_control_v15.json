@@ -1,0 +1,258 @@
+{
+  "fidelity": [
+    {
+      "direction": 0.28994744078967355,
+      "horizon": 1,
+      "magnitude": 0.307244155565236,
+      "method": "actuator_calibrated_h1",
+      "output": 0.30837710653477923,
+      "semantic_continuous": 0.23195795263173885,
+      "semantic_legacy": 0.22999999999999998,
+      "sign": 0.4
+    },
+    {
+      "direction": 0.3034203897207247,
+      "horizon": 2,
+      "magnitude": 0.49643004369606747,
+      "method": "actuator_calibrated_h1",
+      "output": 0.3168860038935701,
+      "semantic_continuous": 0.24273631177657978,
+      "semantic_legacy": 0.02,
+      "sign": 0.6
+    },
+    {
+      "direction": 0.4532013349742179,
+      "horizon": 4,
+      "magnitude": 0.7055420811116859,
+      "method": "actuator_calibrated_h1",
+      "output": 0.47205477324356115,
+      "semantic_continuous": 0.3625610679793743,
+      "semantic_legacy": 0.01,
+      "sign": 0.5
+    },
+    {
+      "direction": 0.508011575263585,
+      "horizon": 8,
+      "magnitude": 0.7770278597397566,
+      "method": "actuator_calibrated_h1",
+      "output": 0.5431115990658313,
+      "semantic_continuous": 0.406409260210868,
+      "semantic_legacy": 0.07,
+      "sign": 0.4
+    },
+    {
+      "direction": 0.12576439179725643,
+      "horizon": 1,
+      "magnitude": 0.2342944094878412,
+      "method": "actuator_calibrated_h1_h2_h4",
+      "output": 0.3005307837958574,
+      "semantic_continuous": 0.07545863507835385,
+      "semantic_legacy": 0.02,
+      "sign": 0.2
+    },
+    {
+      "direction": 0.257247516064534,
+      "horizon": 2,
+      "magnitude": 0.41330236332148057,
+      "method": "actuator_calibrated_h1_h2_h4",
+      "output": 0.3273884805997252,
+      "semantic_continuous": 0.1543485096387204,
+      "semantic_legacy": 0.039999999999999994,
+      "sign": 0.4
+    },
+    {
+      "direction": 0.435653514358671,
+      "horizon": 4,
+      "magnitude": 0.5554639512306958,
+      "method": "actuator_calibrated_h1_h2_h4",
+      "output": 0.5172860794845762,
+      "semantic_continuous": 0.26139210861520257,
+      "semantic_legacy": 0.02,
+      "sign": 0.5
+    },
+    {
+      "direction": 0.5279699601431286,
+      "horizon": 8,
+      "magnitude": 0.5652392136680023,
+      "method": "actuator_calibrated_h1_h2_h4",
+      "output": 0.5413990215149779,
+      "semantic_continuous": 0.3167819760858771,
+      "semantic_legacy": 0.05,
+      "sign": 0.5
+    },
+    {
+      "direction": 0.19010442123324667,
+      "horizon": 1,
+      "magnitude": 0.2178198920790769,
+      "method": "actuator_calibrated_h1_h2_h4_h8",
+      "output": 0.3081479163395076,
+      "semantic_continuous": 0.114062652739948,
+      "semantic_legacy": 0.06999999999999999,
+      "sign": 0.2
+    },
+    {
+      "direction": 0.2760794542929667,
+      "horizon": 2,
+      "magnitude": 0.3833185584524617,
+      "method": "actuator_calibrated_h1_h2_h4_h8",
+      "output": 0.30914113048910985,
+      "semantic_continuous": 0.16564767257578,
+      "semantic_legacy": 0.030000000000000006,
+      "sign": 0.6
+    },
+    {
+      "direction": 0.4645299001700354,
+      "horizon": 4,
+      "magnitude": 0.5422714760914011,
+      "method": "actuator_calibrated_h1_h2_h4_h8",
+      "output": 0.48755452849472153,
+      "semantic_continuous": 0.2787179401020213,
+      "semantic_legacy": 0.030000000000000006,
+      "sign": 0.5
+    },
+    {
+      "direction": 0.5264355149405641,
+      "horizon": 8,
+      "magnitude": 0.5479060934249133,
+      "method": "actuator_calibrated_h1_h2_h4_h8",
+      "output": 0.6097488185474326,
+      "semantic_continuous": 0.3158613089643384,
+      "semantic_legacy": 0.04,
+      "sign": 0.5
+    }
+  ],
+  "freeze_digest": "d9df5d03b29c23f95c76022aad2d80e1c51c8e4d8342e3502896d1a9b9d79b54",
+  "independent_confirmatory": false,
+  "panel_count": 10,
+  "reachability": [
+    {
+      "multi_step_floor": 0.7116717325852808,
+      "multi_step_rank": 18.0,
+      "objective": "h1",
+      "one_step_floor": 0.844725423931636,
+      "one_step_rank": 7.0,
+      "outside_fraction": 1.0
+    },
+    {
+      "multi_step_floor": 0.8532750970499592,
+      "multi_step_rank": 17.0,
+      "objective": "h1_h2_h4",
+      "one_step_floor": 0.9376270563190666,
+      "one_step_rank": 6.5,
+      "outside_fraction": 1.0
+    },
+    {
+      "multi_step_floor": 0.8909065992008796,
+      "multi_step_rank": 12.5,
+      "objective": "h1_h2_h4_h8",
+      "one_step_floor": 0.9768793548409606,
+      "one_step_rank": 6.0,
+      "outside_fraction": 1.0
+    }
+  ],
+  "records": {
+    "fidelity": {
+      "path": "results/v15/processed/control_fidelity_v15.parquet",
+      "sha256": "0c1892364e0926d349be327d192015715e97134472c66a31236ae664dfdf4cb5"
+    },
+    "ranks": {
+      "path": "results/v15/processed/control_rank_candidates_v15.parquet",
+      "sha256": "9b9dc6f1fc6dd4ac981abea565c674c1103a09044a3cb2b209583357f8ba0174"
+    },
+    "reachability": {
+      "path": "results/v15/processed/finite_controllability_v15.parquet",
+      "sha256": "7112827cc995b3397dee72c87a13242f0ce6f0faa9377567d04df4f0b12ec463"
+    },
+    "steps": {
+      "path": "results/v15/processed/control_development_v15.parquet",
+      "sha256": "a4a80f83c4b1c9a6a44dddb5f24114e0b90c897d65188db44777aab7c42816ae"
+    }
+  },
+  "residual_curves": [
+    {
+      "acceptance": 0.8,
+      "method": "actuator_calibrated_h1",
+      "raw_ratio": 0.9365773048062601,
+      "step": 1,
+      "weighted_ratio": 0.9333001342042244
+    },
+    {
+      "acceptance": 0.75,
+      "method": "actuator_calibrated_h1",
+      "raw_ratio": 0.8059111601171152,
+      "step": 2,
+      "weighted_ratio": 0.8257675218650271
+    },
+    {
+      "acceptance": 0.16666666666666666,
+      "method": "actuator_calibrated_h1",
+      "raw_ratio": 0.8059111601171152,
+      "step": 3,
+      "weighted_ratio": 0.8257675218650271
+    },
+    {
+      "acceptance": 1.0,
+      "method": "actuator_calibrated_h1",
+      "raw_ratio": 0.8499952202306792,
+      "step": 4,
+      "weighted_ratio": 0.8783673504776681
+    },
+    {
+      "acceptance": 0.6,
+      "method": "actuator_calibrated_h1_h2_h4",
+      "raw_ratio": 0.9545147926870052,
+      "step": 1,
+      "weighted_ratio": 0.9781164746502061
+    },
+    {
+      "acceptance": 0.8333333333333334,
+      "method": "actuator_calibrated_h1_h2_h4",
+      "raw_ratio": 0.8291847253635674,
+      "step": 2,
+      "weighted_ratio": 0.8451622120647804
+    },
+    {
+      "acceptance": 0.6,
+      "method": "actuator_calibrated_h1_h2_h4",
+      "raw_ratio": 0.7377137519573577,
+      "step": 3,
+      "weighted_ratio": 0.8341724465763093
+    },
+    {
+      "acceptance": 0.3333333333333333,
+      "method": "actuator_calibrated_h1_h2_h4",
+      "raw_ratio": 0.6669756174962306,
+      "step": 4,
+      "weighted_ratio": 0.8012621851809679
+    },
+    {
+      "acceptance": 0.6,
+      "method": "actuator_calibrated_h1_h2_h4_h8",
+      "raw_ratio": 0.9187938967209808,
+      "step": 1,
+      "weighted_ratio": 0.9902044370473315
+    },
+    {
+      "acceptance": 0.8333333333333334,
+      "method": "actuator_calibrated_h1_h2_h4_h8",
+      "raw_ratio": 0.7511989350774253,
+      "step": 2,
+      "weighted_ratio": 0.8926444314958161
+    },
+    {
+      "acceptance": 0.4,
+      "method": "actuator_calibrated_h1_h2_h4_h8",
+      "raw_ratio": 0.7476093176804385,
+      "step": 3,
+      "weighted_ratio": 0.8971712457044652
+    },
+    {
+      "acceptance": 1.0,
+      "method": "actuator_calibrated_h1_h2_h4_h8",
+      "raw_ratio": 0.6550697305899174,
+      "step": 4,
+      "weighted_ratio": 0.8291897407523112
+    }
+  ],
+  "role": "development_validation"
+}

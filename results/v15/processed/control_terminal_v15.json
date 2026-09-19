@@ -1,0 +1,38 @@
+{
+  "freeze_digest": "93b239663a1556494165fc7cb9bc142a38b859b0e92865f71eb77d4ba72c8b02",
+  "pooled": [
+    {
+      "case_count": 10,
+      "median_accepted_steps": 2.0,
+      "method": "actuator_calibrated_h1",
+      "raw_monotone_fraction": 0.9,
+      "terminal_improvement_fraction": 0.8,
+      "terminal_raw_ratio": 0.8542453592337325,
+      "terminal_weighted_ratio": 0.8631077057162111,
+      "weighted_monotone_fraction": 1.0
+    },
+    {
+      "case_count": 10,
+      "median_accepted_steps": 1.5,
+      "method": "actuator_calibrated_h1_h2_h4",
+      "raw_monotone_fraction": 0.8,
+      "terminal_improvement_fraction": 0.6,
+      "terminal_raw_ratio": 0.8993571283611634,
+      "terminal_weighted_ratio": 0.90229133894415,
+      "weighted_monotone_fraction": 1.0
+    },
+    {
+      "case_count": 10,
+      "median_accepted_steps": 1.5,
+      "method": "actuator_calibrated_h1_h2_h4_h8",
+      "raw_monotone_fraction": 0.8,
+      "terminal_improvement_fraction": 0.6,
+      "terminal_raw_ratio": 0.8345005669972367,
+      "terminal_weighted_ratio": 0.9112721963697268,
+      "weighted_monotone_fraction": 1.0
+    }
+  ],
+  "records": "/data/CSK/J-space-project/jstate-closure/results/v15/processed/control_terminal_v15.parquet",
+  "records_sha256": "8915f7a2b0a12e5b3c2dcee34147d8627aa36e83c5a05a78852e00770b81a5b4",
+  "role": "development_validation"
+}

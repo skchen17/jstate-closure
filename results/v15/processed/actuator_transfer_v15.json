@@ -1,0 +1,2932 @@
+{
+  "curves": [],
+  "deadzones": {},
+  "fp32_kv_consumption": "UNSUPPORTED_BY_FROZEN_MODEL_DTYPE_CONTRACT",
+  "fp32_shadow_is_diagnostic_not_canonical": true,
+  "freeze_digest": "8cccf28e4fd09484e1dd2aaf6dcf2abb311695701e439a40eaee6bdee44f7c35",
+  "panel_ids": [
+    "v13-train-90d330b478659e3d0bc3",
+    "v13-train-6bb01e7e53b688215c6e",
+    "v13-train-4e63d69f5c3f40704813",
+    "v13-train-c6eec494888d6d518e28",
+    "v13-train-07385890263e531ff8e3"
+  ],
+  "precision_modes": [
+    {
+      "channel": "conv",
+      "median_cosine": 0.014634892494161108,
+      "median_gain": 0.0,
+      "median_surviving_fraction": 0.0,
+      "mode": "cast_after_add",
+      "scale": 1e-05
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.018712904915158625,
+      "median_gain": 0.017324255950346278,
+      "median_surviving_fraction": 0.000244140625,
+      "mode": "cast_after_add",
+      "scale": 3e-05
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.03405761743178327,
+      "median_gain": 0.038885607365295616,
+      "median_surviving_fraction": 0.00067138671875,
+      "mode": "cast_after_add",
+      "scale": 0.0001
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.05470772531387993,
+      "median_gain": 0.07009895898354154,
+      "median_surviving_fraction": 0.00213623046875,
+      "mode": "cast_after_add",
+      "scale": 0.0003
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.09637775278907043,
+      "median_gain": 0.1314699161711792,
+      "median_surviving_fraction": 0.00677490234375,
+      "mode": "cast_after_add",
+      "scale": 0.001
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.16641983735442922,
+      "median_gain": 0.22232770220460357,
+      "median_surviving_fraction": 0.0194091796875,
+      "mode": "cast_after_add",
+      "scale": 0.003
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.3049670927046598,
+      "median_gain": 0.4008577507211959,
+      "median_surviving_fraction": 0.064697265625,
+      "mode": "cast_after_add",
+      "scale": 0.01
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.5035909722541692,
+      "median_gain": 0.6554301719738083,
+      "median_surviving_fraction": 0.1898193359375,
+      "mode": "cast_after_add",
+      "scale": 0.03
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.7984531168563616,
+      "median_gain": 1.0116943432241443,
+      "median_surviving_fraction": 0.49261474609375,
+      "mode": "cast_after_add",
+      "scale": 0.1
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9539909669448272,
+      "median_gain": 1.015770229724108,
+      "median_surviving_fraction": 0.75079345703125,
+      "mode": "cast_after_add",
+      "scale": 0.25
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9877679835864347,
+      "median_gain": 1.0103704960104962,
+      "median_surviving_fraction": 0.8681640625,
+      "mode": "cast_after_add",
+      "scale": 0.5
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9968719928309755,
+      "median_gain": 1.0011203961598794,
+      "median_surviving_fraction": 0.9339599609375,
+      "mode": "cast_after_add",
+      "scale": 1.0
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9992176486222171,
+      "median_gain": 1.0005299211594654,
+      "median_surviving_fraction": 0.96734619140625,
+      "mode": "cast_after_add",
+      "scale": 2.0
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.006402715479992467,
+      "median_gain": 0.0032923969173965176,
+      "median_surviving_fraction": 0.0,
+      "mode": "cast_after_add",
+      "scale": 1e-05
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.01282420746375039,
+      "median_gain": 0.005034820857412785,
+      "median_surviving_fraction": 0.0,
+      "mode": "cast_after_add",
+      "scale": 3e-05
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.035374855443607314,
+      "median_gain": 0.0395976674177826,
+      "median_surviving_fraction": 9.765625e-05,
+      "mode": "cast_after_add",
+      "scale": 0.0001
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.05846195133635555,
+      "median_gain": 0.06679695676085437,
+      "median_surviving_fraction": 0.0007091703869047619,
+      "mode": "cast_after_add",
+      "scale": 0.0003
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.0935082193365208,
+      "median_gain": 0.11274652885056008,
+      "median_surviving_fraction": 0.001953125,
+      "mode": "cast_after_add",
+      "scale": 0.001
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.16918158886445453,
+      "median_gain": 0.2386188631508206,
+      "median_surviving_fraction": 0.00517578125,
+      "mode": "cast_after_add",
+      "scale": 0.003
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.2900811650197602,
+      "median_gain": 0.39625254131114374,
+      "median_surviving_fraction": 0.018589564732142856,
+      "mode": "cast_after_add",
+      "scale": 0.01
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.4942676484181683,
+      "median_gain": 0.6365791371853498,
+      "median_surviving_fraction": 0.05263671875,
+      "mode": "cast_after_add",
+      "scale": 0.03
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.7576195374275825,
+      "median_gain": 0.9547047061839167,
+      "median_surviving_fraction": 0.16389508928571428,
+      "mode": "cast_after_add",
+      "scale": 0.1
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9217112401863954,
+      "median_gain": 1.0129498212997192,
+      "median_surviving_fraction": 0.34619140625,
+      "mode": "cast_after_add",
+      "scale": 0.25
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9735388562833831,
+      "median_gain": 1.0187668623200445,
+      "median_surviving_fraction": 0.547265625,
+      "mode": "cast_after_add",
+      "scale": 0.5
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9931389338816368,
+      "median_gain": 1.0060247978348267,
+      "median_surviving_fraction": 0.72978515625,
+      "mode": "cast_after_add",
+      "scale": 1.0
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9983289659399188,
+      "median_gain": 1.0021247331889025,
+      "median_surviving_fraction": 0.8487630208333333,
+      "mode": "cast_after_add",
+      "scale": 2.0
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.012564066281598603,
+      "median_gain": 0.0167897790084559,
+      "median_surviving_fraction": 5.7220458984375e-05,
+      "mode": "cast_after_add",
+      "scale": 1e-05
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.025186723078535166,
+      "median_gain": 0.03340009317831233,
+      "median_surviving_fraction": 0.0001811981201171875,
+      "mode": "cast_after_add",
+      "scale": 3e-05
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.04822026252960422,
+      "median_gain": 0.06250827659401273,
+      "median_surviving_fraction": 0.0006017684936523438,
+      "mode": "cast_after_add",
+      "scale": 0.0001
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.08880400191243842,
+      "median_gain": 0.11545898973204363,
+      "median_surviving_fraction": 0.001735687255859375,
+      "mode": "cast_after_add",
+      "scale": 0.0003
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.15585534513984237,
+      "median_gain": 0.20501739655924395,
+      "median_surviving_fraction": 0.0058765411376953125,
+      "mode": "cast_after_add",
+      "scale": 0.001
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.2636522129715666,
+      "median_gain": 0.35104891234380786,
+      "median_surviving_fraction": 0.017142295837402344,
+      "mode": "cast_after_add",
+      "scale": 0.003
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.46777532713344705,
+      "median_gain": 0.6162328192641775,
+      "median_surviving_fraction": 0.055370330810546875,
+      "mode": "cast_after_add",
+      "scale": 0.01
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.705418160454984,
+      "median_gain": 0.8795331198300648,
+      "median_surviving_fraction": 0.15458106994628906,
+      "mode": "cast_after_add",
+      "scale": 0.03
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9076125619702062,
+      "median_gain": 1.008674783361668,
+      "median_surviving_fraction": 0.3969154357910156,
+      "mode": "cast_after_add",
+      "scale": 0.1
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9740709635489196,
+      "median_gain": 1.0103804538178562,
+      "median_surviving_fraction": 0.6327419281005859,
+      "mode": "cast_after_add",
+      "scale": 0.25
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9920180141381156,
+      "median_gain": 1.0053907296647466,
+      "median_surviving_fraction": 0.7781486511230469,
+      "mode": "cast_after_add",
+      "scale": 0.5
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.997906827649469,
+      "median_gain": 1.0020753265135496,
+      "median_surviving_fraction": 0.878300666809082,
+      "mode": "cast_after_add",
+      "scale": 1.0
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.999478997256608,
+      "median_gain": 1.0003209101212684,
+      "median_surviving_fraction": 0.9369087219238281,
+      "mode": "cast_after_add",
+      "scale": 2.0
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.010983832713525769,
+      "median_gain": 0.00024109898754391877,
+      "median_surviving_fraction": 0.0,
+      "mode": "cast_after_add",
+      "scale": 1e-05
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.025684953015627954,
+      "median_gain": 0.009007772769970269,
+      "median_surviving_fraction": 0.0,
+      "mode": "cast_after_add",
+      "scale": 3e-05
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.037737830623675646,
+      "median_gain": 0.025492156610335562,
+      "median_surviving_fraction": 0.0,
+      "mode": "cast_after_add",
+      "scale": 0.0001
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.0494798496665793,
+      "median_gain": 0.05619383504252168,
+      "median_surviving_fraction": 0.000439453125,
+      "mode": "cast_after_add",
+      "scale": 0.0003
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.09277708551663164,
+      "median_gain": 0.12233809473007232,
+      "median_surviving_fraction": 0.00185546875,
+      "mode": "cast_after_add",
+      "scale": 0.001
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.1858651747511777,
+      "median_gain": 0.24319280541939559,
+      "median_surviving_fraction": 0.00712890625,
+      "mode": "cast_after_add",
+      "scale": 0.003
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.342545575078699,
+      "median_gain": 0.43443736162512314,
+      "median_surviving_fraction": 0.0234375,
+      "mode": "cast_after_add",
+      "scale": 0.01
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.5870346309355495,
+      "median_gain": 0.7443679370832315,
+      "median_surviving_fraction": 0.069091796875,
+      "mode": "cast_after_add",
+      "scale": 0.03
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.8123656139453372,
+      "median_gain": 0.9538490116243062,
+      "median_surviving_fraction": 0.20103236607142858,
+      "mode": "cast_after_add",
+      "scale": 0.1
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9200601405224644,
+      "median_gain": 1.0067710063844133,
+      "median_surviving_fraction": 0.3775809151785714,
+      "mode": "cast_after_add",
+      "scale": 0.25
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9674880267846868,
+      "median_gain": 1.0034404354392836,
+      "median_surviving_fraction": 0.5315290178571428,
+      "mode": "cast_after_add",
+      "scale": 0.5
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.990671527139875,
+      "median_gain": 1.0035684373418206,
+      "median_surviving_fraction": 0.6823381696428572,
+      "mode": "cast_after_add",
+      "scale": 1.0
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9970328417456455,
+      "median_gain": 1.0031359606775112,
+      "median_surviving_fraction": 0.8082449776785714,
+      "mode": "cast_after_add",
+      "scale": 2.0
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9928040294661036,
+      "median_gain": 1.0068927843747366,
+      "median_surviving_fraction": 0.89892578125,
+      "mode": "fp32_conv_only",
+      "scale": 1e-05
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9991943692235807,
+      "median_gain": 1.00041220242269,
+      "median_surviving_fraction": 0.9666748046875,
+      "mode": "fp32_conv_only",
+      "scale": 3e-05
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999265590606194,
+      "median_gain": 0.9999924244963516,
+      "median_surviving_fraction": 0.99066162109375,
+      "mode": "fp32_conv_only",
+      "scale": 0.0001
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.999991868128264,
+      "median_gain": 1.0000010089604818,
+      "median_surviving_fraction": 0.9969482421875,
+      "mode": "fp32_conv_only",
+      "scale": 0.0003
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999992734602654,
+      "median_gain": 0.9999968016962435,
+      "median_surviving_fraction": 0.99908447265625,
+      "mode": "fp32_conv_only",
+      "scale": 0.001
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999171424703,
+      "median_gain": 0.9999996043522905,
+      "median_surviving_fraction": 0.999755859375,
+      "mode": "fp32_conv_only",
+      "scale": 0.003
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999928611956,
+      "median_gain": 1.0000000645703704,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_conv_only",
+      "scale": 0.01
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999991760713,
+      "median_gain": 1.0000001022277851,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_conv_only",
+      "scale": 0.03
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999999296658,
+      "median_gain": 0.999999953142358,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_conv_only",
+      "scale": 0.1
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999999999771,
+      "median_gain": 1.0000000000000195,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_conv_only",
+      "scale": 0.25
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999999999989,
+      "median_gain": 1.0,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_conv_only",
+      "scale": 0.5
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999999999999,
+      "median_gain": 1.0,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_conv_only",
+      "scale": 1.0
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999999999999,
+      "median_gain": 1.0,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_conv_only",
+      "scale": 2.0
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.006402715479992467,
+      "median_gain": 0.0032923969173965176,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_conv_only",
+      "scale": 1e-05
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.01282420746375039,
+      "median_gain": 0.005034820857412785,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_conv_only",
+      "scale": 3e-05
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.035374855443607314,
+      "median_gain": 0.0395976674177826,
+      "median_surviving_fraction": 9.765625e-05,
+      "mode": "fp32_conv_only",
+      "scale": 0.0001
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.05846195133635555,
+      "median_gain": 0.06679695676085437,
+      "median_surviving_fraction": 0.0007091703869047619,
+      "mode": "fp32_conv_only",
+      "scale": 0.0003
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.0935082193365208,
+      "median_gain": 0.11274652885056008,
+      "median_surviving_fraction": 0.001953125,
+      "mode": "fp32_conv_only",
+      "scale": 0.001
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.16918158886445453,
+      "median_gain": 0.2386188631508206,
+      "median_surviving_fraction": 0.00517578125,
+      "mode": "fp32_conv_only",
+      "scale": 0.003
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.2900811650197602,
+      "median_gain": 0.39625254131114374,
+      "median_surviving_fraction": 0.018589564732142856,
+      "mode": "fp32_conv_only",
+      "scale": 0.01
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.4942676484181683,
+      "median_gain": 0.6365791371853498,
+      "median_surviving_fraction": 0.05263671875,
+      "mode": "fp32_conv_only",
+      "scale": 0.03
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.7576195374275825,
+      "median_gain": 0.9547047061839167,
+      "median_surviving_fraction": 0.16389508928571428,
+      "mode": "fp32_conv_only",
+      "scale": 0.1
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9217112401863954,
+      "median_gain": 1.0129498212997192,
+      "median_surviving_fraction": 0.34619140625,
+      "mode": "fp32_conv_only",
+      "scale": 0.25
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9735388562833831,
+      "median_gain": 1.0187668623200445,
+      "median_surviving_fraction": 0.547265625,
+      "mode": "fp32_conv_only",
+      "scale": 0.5
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9931389338816368,
+      "median_gain": 1.0060247978348267,
+      "median_surviving_fraction": 0.72978515625,
+      "mode": "fp32_conv_only",
+      "scale": 1.0
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9983289659399188,
+      "median_gain": 1.0021247331889025,
+      "median_surviving_fraction": 0.8487630208333333,
+      "mode": "fp32_conv_only",
+      "scale": 2.0
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.012564066281598603,
+      "median_gain": 0.0167897790084559,
+      "median_surviving_fraction": 5.7220458984375e-05,
+      "mode": "fp32_conv_only",
+      "scale": 1e-05
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.025186723078535166,
+      "median_gain": 0.03340009317831233,
+      "median_surviving_fraction": 0.0001811981201171875,
+      "mode": "fp32_conv_only",
+      "scale": 3e-05
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.04822026252960422,
+      "median_gain": 0.06250827659401273,
+      "median_surviving_fraction": 0.0006017684936523438,
+      "mode": "fp32_conv_only",
+      "scale": 0.0001
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.08880400191243842,
+      "median_gain": 0.11545898973204363,
+      "median_surviving_fraction": 0.001735687255859375,
+      "mode": "fp32_conv_only",
+      "scale": 0.0003
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.15585534513984237,
+      "median_gain": 0.20501739655924395,
+      "median_surviving_fraction": 0.0058765411376953125,
+      "mode": "fp32_conv_only",
+      "scale": 0.001
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.2636522129715666,
+      "median_gain": 0.35104891234380786,
+      "median_surviving_fraction": 0.017142295837402344,
+      "mode": "fp32_conv_only",
+      "scale": 0.003
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.46777532713344705,
+      "median_gain": 0.6162328192641775,
+      "median_surviving_fraction": 0.055370330810546875,
+      "mode": "fp32_conv_only",
+      "scale": 0.01
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.705418160454984,
+      "median_gain": 0.8795331198300648,
+      "median_surviving_fraction": 0.15458106994628906,
+      "mode": "fp32_conv_only",
+      "scale": 0.03
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9076125619702062,
+      "median_gain": 1.008674783361668,
+      "median_surviving_fraction": 0.3969154357910156,
+      "mode": "fp32_conv_only",
+      "scale": 0.1
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9740709635489196,
+      "median_gain": 1.0103804538178562,
+      "median_surviving_fraction": 0.6327419281005859,
+      "mode": "fp32_conv_only",
+      "scale": 0.25
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9920180141381156,
+      "median_gain": 1.0053907296647466,
+      "median_surviving_fraction": 0.7781486511230469,
+      "mode": "fp32_conv_only",
+      "scale": 0.5
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.997906827649469,
+      "median_gain": 1.0020753265135496,
+      "median_surviving_fraction": 0.878300666809082,
+      "mode": "fp32_conv_only",
+      "scale": 1.0
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.999478997256608,
+      "median_gain": 1.0003209101212684,
+      "median_surviving_fraction": 0.9369087219238281,
+      "mode": "fp32_conv_only",
+      "scale": 2.0
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.010983832713525769,
+      "median_gain": 0.00024109898754391877,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_conv_only",
+      "scale": 1e-05
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.025684953015627954,
+      "median_gain": 0.009007772769970269,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_conv_only",
+      "scale": 3e-05
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.037737830623675646,
+      "median_gain": 0.025492156610335562,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_conv_only",
+      "scale": 0.0001
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.0494798496665793,
+      "median_gain": 0.05619383504252168,
+      "median_surviving_fraction": 0.000439453125,
+      "mode": "fp32_conv_only",
+      "scale": 0.0003
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.09277708551663164,
+      "median_gain": 0.12233809473007232,
+      "median_surviving_fraction": 0.00185546875,
+      "mode": "fp32_conv_only",
+      "scale": 0.001
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.1858651747511777,
+      "median_gain": 0.24319280541939559,
+      "median_surviving_fraction": 0.00712890625,
+      "mode": "fp32_conv_only",
+      "scale": 0.003
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.342545575078699,
+      "median_gain": 0.43443736162512314,
+      "median_surviving_fraction": 0.0234375,
+      "mode": "fp32_conv_only",
+      "scale": 0.01
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.5870346309355495,
+      "median_gain": 0.7443679370832315,
+      "median_surviving_fraction": 0.069091796875,
+      "mode": "fp32_conv_only",
+      "scale": 0.03
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.8123656139453372,
+      "median_gain": 0.9538490116243062,
+      "median_surviving_fraction": 0.20103236607142858,
+      "mode": "fp32_conv_only",
+      "scale": 0.1
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9200601405224644,
+      "median_gain": 1.0067710063844133,
+      "median_surviving_fraction": 0.3775809151785714,
+      "mode": "fp32_conv_only",
+      "scale": 0.25
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9674880267846868,
+      "median_gain": 1.0034404354392836,
+      "median_surviving_fraction": 0.5315290178571428,
+      "mode": "fp32_conv_only",
+      "scale": 0.5
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.990671527139875,
+      "median_gain": 1.0035684373418206,
+      "median_surviving_fraction": 0.6823381696428572,
+      "mode": "fp32_conv_only",
+      "scale": 1.0
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9970328417456455,
+      "median_gain": 1.0031359606775112,
+      "median_surviving_fraction": 0.8082449776785714,
+      "mode": "fp32_conv_only",
+      "scale": 2.0
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.014634892494161108,
+      "median_gain": 0.0,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_kv_only",
+      "scale": 1e-05
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.018712904915158625,
+      "median_gain": 0.017324255950346278,
+      "median_surviving_fraction": 0.000244140625,
+      "mode": "fp32_kv_only",
+      "scale": 3e-05
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.03405761743178327,
+      "median_gain": 0.038885607365295616,
+      "median_surviving_fraction": 0.00067138671875,
+      "mode": "fp32_kv_only",
+      "scale": 0.0001
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.05470772531387993,
+      "median_gain": 0.07009895898354154,
+      "median_surviving_fraction": 0.00213623046875,
+      "mode": "fp32_kv_only",
+      "scale": 0.0003
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.09637775278907043,
+      "median_gain": 0.1314699161711792,
+      "median_surviving_fraction": 0.00677490234375,
+      "mode": "fp32_kv_only",
+      "scale": 0.001
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.16641983735442922,
+      "median_gain": 0.22232770220460357,
+      "median_surviving_fraction": 0.0194091796875,
+      "mode": "fp32_kv_only",
+      "scale": 0.003
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.3049670927046598,
+      "median_gain": 0.4008577507211959,
+      "median_surviving_fraction": 0.064697265625,
+      "mode": "fp32_kv_only",
+      "scale": 0.01
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.5035909722541692,
+      "median_gain": 0.6554301719738083,
+      "median_surviving_fraction": 0.1898193359375,
+      "mode": "fp32_kv_only",
+      "scale": 0.03
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.7984531168563616,
+      "median_gain": 1.0116943432241443,
+      "median_surviving_fraction": 0.49261474609375,
+      "mode": "fp32_kv_only",
+      "scale": 0.1
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9539909669448272,
+      "median_gain": 1.015770229724108,
+      "median_surviving_fraction": 0.75079345703125,
+      "mode": "fp32_kv_only",
+      "scale": 0.25
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9877679835864347,
+      "median_gain": 1.0103704960104962,
+      "median_surviving_fraction": 0.8681640625,
+      "mode": "fp32_kv_only",
+      "scale": 0.5
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9968719928309755,
+      "median_gain": 1.0011203961598794,
+      "median_surviving_fraction": 0.9339599609375,
+      "mode": "fp32_kv_only",
+      "scale": 1.0
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9992176486222171,
+      "median_gain": 1.0005299211594654,
+      "median_surviving_fraction": 0.96734619140625,
+      "mode": "fp32_kv_only",
+      "scale": 2.0
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9845065060963697,
+      "median_gain": 1.0166639397064654,
+      "median_surviving_fraction": 0.62294921875,
+      "mode": "fp32_kv_only",
+      "scale": 1e-05
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.99825803764956,
+      "median_gain": 1.0013922560756323,
+      "median_surviving_fraction": 0.8468098958333333,
+      "mode": "fp32_kv_only",
+      "scale": 3e-05
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9998395879330124,
+      "median_gain": 1.0001713051203318,
+      "median_surviving_fraction": 0.9500651041666667,
+      "mode": "fp32_kv_only",
+      "scale": 0.0001
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.99998281525425,
+      "median_gain": 1.0000274397968236,
+      "median_surviving_fraction": 0.98388671875,
+      "mode": "fp32_kv_only",
+      "scale": 0.0003
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.99999848376579,
+      "median_gain": 0.9999969021975348,
+      "median_surviving_fraction": 0.9949358258928571,
+      "mode": "fp32_kv_only",
+      "scale": 0.001
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9999998200124232,
+      "median_gain": 1.000003945764206,
+      "median_surviving_fraction": 0.9983142671130952,
+      "mode": "fp32_kv_only",
+      "scale": 0.003
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9999999832419779,
+      "median_gain": 0.999998479202518,
+      "median_surviving_fraction": 0.9993373325892857,
+      "mode": "fp32_kv_only",
+      "scale": 0.01
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9999999983122838,
+      "median_gain": 0.9999996052651025,
+      "median_surviving_fraction": 0.9998046875,
+      "mode": "fp32_kv_only",
+      "scale": 0.03
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9999999998500722,
+      "median_gain": 0.9999999886945344,
+      "median_surviving_fraction": 0.9999302455357143,
+      "mode": "fp32_kv_only",
+      "scale": 0.1
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9999999999998677,
+      "median_gain": 1.0000000000000444,
+      "median_surviving_fraction": 0.9999651227678572,
+      "mode": "fp32_kv_only",
+      "scale": 0.25
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9999999999999778,
+      "median_gain": 1.0,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_kv_only",
+      "scale": 0.5
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9999999999999989,
+      "median_gain": 0.9999999999999964,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_kv_only",
+      "scale": 1.0
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9999999999999999,
+      "median_gain": 1.0,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_kv_only",
+      "scale": 2.0
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.012564066281598603,
+      "median_gain": 0.0167897790084559,
+      "median_surviving_fraction": 5.7220458984375e-05,
+      "mode": "fp32_kv_only",
+      "scale": 1e-05
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.025186723078535166,
+      "median_gain": 0.03340009317831233,
+      "median_surviving_fraction": 0.0001811981201171875,
+      "mode": "fp32_kv_only",
+      "scale": 3e-05
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.04822026252960422,
+      "median_gain": 0.06250827659401273,
+      "median_surviving_fraction": 0.0006017684936523438,
+      "mode": "fp32_kv_only",
+      "scale": 0.0001
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.08880400191243842,
+      "median_gain": 0.11545898973204363,
+      "median_surviving_fraction": 0.001735687255859375,
+      "mode": "fp32_kv_only",
+      "scale": 0.0003
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.15585534513984237,
+      "median_gain": 0.20501739655924395,
+      "median_surviving_fraction": 0.0058765411376953125,
+      "mode": "fp32_kv_only",
+      "scale": 0.001
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.2636522129715666,
+      "median_gain": 0.35104891234380786,
+      "median_surviving_fraction": 0.017142295837402344,
+      "mode": "fp32_kv_only",
+      "scale": 0.003
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.46777532713344705,
+      "median_gain": 0.6162328192641775,
+      "median_surviving_fraction": 0.055370330810546875,
+      "mode": "fp32_kv_only",
+      "scale": 0.01
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.705418160454984,
+      "median_gain": 0.8795331198300648,
+      "median_surviving_fraction": 0.15458106994628906,
+      "mode": "fp32_kv_only",
+      "scale": 0.03
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9076125619702062,
+      "median_gain": 1.008674783361668,
+      "median_surviving_fraction": 0.3969154357910156,
+      "mode": "fp32_kv_only",
+      "scale": 0.1
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9740709635489196,
+      "median_gain": 1.0103804538178562,
+      "median_surviving_fraction": 0.6327419281005859,
+      "mode": "fp32_kv_only",
+      "scale": 0.25
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9920180141381156,
+      "median_gain": 1.0053907296647466,
+      "median_surviving_fraction": 0.7781486511230469,
+      "mode": "fp32_kv_only",
+      "scale": 0.5
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.997906827649469,
+      "median_gain": 1.0020753265135496,
+      "median_surviving_fraction": 0.878300666809082,
+      "mode": "fp32_kv_only",
+      "scale": 1.0
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.999478997256608,
+      "median_gain": 1.0003209101212684,
+      "median_surviving_fraction": 0.9369087219238281,
+      "mode": "fp32_kv_only",
+      "scale": 2.0
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9793578151357206,
+      "median_gain": 1.0111263077182677,
+      "median_surviving_fraction": 0.593017578125,
+      "mode": "fp32_kv_only",
+      "scale": 1e-05
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9969604466386123,
+      "median_gain": 1.003332845033746,
+      "median_surviving_fraction": 0.8040945870535714,
+      "mode": "fp32_kv_only",
+      "scale": 3e-05
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9997549316641492,
+      "median_gain": 1.0001532085416551,
+      "median_surviving_fraction": 0.9363257998511905,
+      "mode": "fp32_kv_only",
+      "scale": 0.0001
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9999671892121245,
+      "median_gain": 1.000131329223355,
+      "median_surviving_fraction": 0.9787946428571428,
+      "mode": "fp32_kv_only",
+      "scale": 0.0003
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9999977557955866,
+      "median_gain": 1.0000035976879151,
+      "median_surviving_fraction": 0.993359375,
+      "mode": "fp32_kv_only",
+      "scale": 0.001
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9999997076167628,
+      "median_gain": 1.0000025845340619,
+      "median_surviving_fraction": 0.9978678385416666,
+      "mode": "fp32_kv_only",
+      "scale": 0.003
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9999999750595807,
+      "median_gain": 1.0000008632243786,
+      "median_surviving_fraction": 0.9991629464285714,
+      "mode": "fp32_kv_only",
+      "scale": 0.01
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9999999973850491,
+      "median_gain": 0.9999999358040055,
+      "median_surviving_fraction": 0.9998046875,
+      "mode": "fp32_kv_only",
+      "scale": 0.03
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9999999997311224,
+      "median_gain": 0.9999999545174065,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_kv_only",
+      "scale": 0.1
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9999999999992992,
+      "median_gain": 1.000000000007843,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_kv_only",
+      "scale": 0.25
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9999999999999583,
+      "median_gain": 1.0,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_kv_only",
+      "scale": 0.5
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9999999999999982,
+      "median_gain": 1.0,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_kv_only",
+      "scale": 1.0
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9999999999999996,
+      "median_gain": 0.9999999999999982,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_kv_only",
+      "scale": 2.0
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.014634892494161108,
+      "median_gain": 0.0,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_rec_only",
+      "scale": 1e-05
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.018712904915158625,
+      "median_gain": 0.017324255950346278,
+      "median_surviving_fraction": 0.000244140625,
+      "mode": "fp32_rec_only",
+      "scale": 3e-05
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.03405761743178327,
+      "median_gain": 0.038885607365295616,
+      "median_surviving_fraction": 0.00067138671875,
+      "mode": "fp32_rec_only",
+      "scale": 0.0001
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.05470772531387993,
+      "median_gain": 0.07009895898354154,
+      "median_surviving_fraction": 0.00213623046875,
+      "mode": "fp32_rec_only",
+      "scale": 0.0003
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.09637775278907043,
+      "median_gain": 0.1314699161711792,
+      "median_surviving_fraction": 0.00677490234375,
+      "mode": "fp32_rec_only",
+      "scale": 0.001
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.16641983735442922,
+      "median_gain": 0.22232770220460357,
+      "median_surviving_fraction": 0.0194091796875,
+      "mode": "fp32_rec_only",
+      "scale": 0.003
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.3049670927046598,
+      "median_gain": 0.4008577507211959,
+      "median_surviving_fraction": 0.064697265625,
+      "mode": "fp32_rec_only",
+      "scale": 0.01
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.5035909722541692,
+      "median_gain": 0.6554301719738083,
+      "median_surviving_fraction": 0.1898193359375,
+      "mode": "fp32_rec_only",
+      "scale": 0.03
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.7984531168563616,
+      "median_gain": 1.0116943432241443,
+      "median_surviving_fraction": 0.49261474609375,
+      "mode": "fp32_rec_only",
+      "scale": 0.1
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9539909669448272,
+      "median_gain": 1.015770229724108,
+      "median_surviving_fraction": 0.75079345703125,
+      "mode": "fp32_rec_only",
+      "scale": 0.25
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9877679835864347,
+      "median_gain": 1.0103704960104962,
+      "median_surviving_fraction": 0.8681640625,
+      "mode": "fp32_rec_only",
+      "scale": 0.5
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9968719928309755,
+      "median_gain": 1.0011203961598794,
+      "median_surviving_fraction": 0.9339599609375,
+      "mode": "fp32_rec_only",
+      "scale": 1.0
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9992176486222171,
+      "median_gain": 1.0005299211594654,
+      "median_surviving_fraction": 0.96734619140625,
+      "mode": "fp32_rec_only",
+      "scale": 2.0
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.006402715479992467,
+      "median_gain": 0.0032923969173965176,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_rec_only",
+      "scale": 1e-05
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.01282420746375039,
+      "median_gain": 0.005034820857412785,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_rec_only",
+      "scale": 3e-05
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.035374855443607314,
+      "median_gain": 0.0395976674177826,
+      "median_surviving_fraction": 9.765625e-05,
+      "mode": "fp32_rec_only",
+      "scale": 0.0001
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.05846195133635555,
+      "median_gain": 0.06679695676085437,
+      "median_surviving_fraction": 0.0007091703869047619,
+      "mode": "fp32_rec_only",
+      "scale": 0.0003
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.0935082193365208,
+      "median_gain": 0.11274652885056008,
+      "median_surviving_fraction": 0.001953125,
+      "mode": "fp32_rec_only",
+      "scale": 0.001
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.16918158886445453,
+      "median_gain": 0.2386188631508206,
+      "median_surviving_fraction": 0.00517578125,
+      "mode": "fp32_rec_only",
+      "scale": 0.003
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.2900811650197602,
+      "median_gain": 0.39625254131114374,
+      "median_surviving_fraction": 0.018589564732142856,
+      "mode": "fp32_rec_only",
+      "scale": 0.01
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.4942676484181683,
+      "median_gain": 0.6365791371853498,
+      "median_surviving_fraction": 0.05263671875,
+      "mode": "fp32_rec_only",
+      "scale": 0.03
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.7576195374275825,
+      "median_gain": 0.9547047061839167,
+      "median_surviving_fraction": 0.16389508928571428,
+      "mode": "fp32_rec_only",
+      "scale": 0.1
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9217112401863954,
+      "median_gain": 1.0129498212997192,
+      "median_surviving_fraction": 0.34619140625,
+      "mode": "fp32_rec_only",
+      "scale": 0.25
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9735388562833831,
+      "median_gain": 1.0187668623200445,
+      "median_surviving_fraction": 0.547265625,
+      "mode": "fp32_rec_only",
+      "scale": 0.5
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9931389338816368,
+      "median_gain": 1.0060247978348267,
+      "median_surviving_fraction": 0.72978515625,
+      "mode": "fp32_rec_only",
+      "scale": 1.0
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9983289659399188,
+      "median_gain": 1.0021247331889025,
+      "median_surviving_fraction": 0.8487630208333333,
+      "mode": "fp32_rec_only",
+      "scale": 2.0
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9951570601343736,
+      "median_gain": 1.0038380738789705,
+      "median_surviving_fraction": 0.8229217529296875,
+      "mode": "fp32_rec_only",
+      "scale": 1e-05
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9994622158836042,
+      "median_gain": 1.0002197726254645,
+      "median_surviving_fraction": 0.9357452392578125,
+      "mode": "fp32_rec_only",
+      "scale": 3e-05
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9999487779512075,
+      "median_gain": 1.0000384501226023,
+      "median_surviving_fraction": 0.9806556701660156,
+      "mode": "fp32_rec_only",
+      "scale": 0.0001
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9999945594909049,
+      "median_gain": 1.000000217919402,
+      "median_surviving_fraction": 0.9934892654418945,
+      "mode": "fp32_rec_only",
+      "scale": 0.0003
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.999999506030703,
+      "median_gain": 0.9999955253399627,
+      "median_surviving_fraction": 0.9980621337890625,
+      "mode": "fp32_rec_only",
+      "scale": 0.001
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.999999946699861,
+      "median_gain": 0.9999993874824238,
+      "median_surviving_fraction": 0.999359130859375,
+      "mode": "fp32_rec_only",
+      "scale": 0.003
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9999999950392571,
+      "median_gain": 1.0000001056498329,
+      "median_surviving_fraction": 0.9998035430908203,
+      "mode": "fp32_rec_only",
+      "scale": 0.01
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9999999994364153,
+      "median_gain": 0.9999999779796047,
+      "median_surviving_fraction": 0.9999361038208008,
+      "mode": "fp32_rec_only",
+      "scale": 0.03
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.999999999952282,
+      "median_gain": 1.0000000183368403,
+      "median_surviving_fraction": 0.9999790191650391,
+      "mode": "fp32_rec_only",
+      "scale": 0.1
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9999999999999691,
+      "median_gain": 1.0000000000000746,
+      "median_surviving_fraction": 0.9999923706054688,
+      "mode": "fp32_rec_only",
+      "scale": 0.25
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9999999999999969,
+      "median_gain": 1.0000000000000002,
+      "median_surviving_fraction": 0.9999961853027344,
+      "mode": "fp32_rec_only",
+      "scale": 0.5
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9999999999999997,
+      "median_gain": 0.9999999999999996,
+      "median_surviving_fraction": 0.9999980926513672,
+      "mode": "fp32_rec_only",
+      "scale": 1.0
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 1.0,
+      "median_gain": 0.9999999999999992,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_rec_only",
+      "scale": 2.0
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.010983832713525769,
+      "median_gain": 0.00024109898754391877,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_rec_only",
+      "scale": 1e-05
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.025684953015627954,
+      "median_gain": 0.009007772769970269,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_rec_only",
+      "scale": 3e-05
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.037737830623675646,
+      "median_gain": 0.025492156610335562,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_rec_only",
+      "scale": 0.0001
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.0494798496665793,
+      "median_gain": 0.05619383504252168,
+      "median_surviving_fraction": 0.000439453125,
+      "mode": "fp32_rec_only",
+      "scale": 0.0003
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.09277708551663164,
+      "median_gain": 0.12233809473007232,
+      "median_surviving_fraction": 0.00185546875,
+      "mode": "fp32_rec_only",
+      "scale": 0.001
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.1858651747511777,
+      "median_gain": 0.24319280541939559,
+      "median_surviving_fraction": 0.00712890625,
+      "mode": "fp32_rec_only",
+      "scale": 0.003
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.342545575078699,
+      "median_gain": 0.43443736162512314,
+      "median_surviving_fraction": 0.0234375,
+      "mode": "fp32_rec_only",
+      "scale": 0.01
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.5870346309355495,
+      "median_gain": 0.7443679370832315,
+      "median_surviving_fraction": 0.069091796875,
+      "mode": "fp32_rec_only",
+      "scale": 0.03
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.8123656139453372,
+      "median_gain": 0.9538490116243062,
+      "median_surviving_fraction": 0.20103236607142858,
+      "mode": "fp32_rec_only",
+      "scale": 0.1
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9200601405224644,
+      "median_gain": 1.0067710063844133,
+      "median_surviving_fraction": 0.3775809151785714,
+      "mode": "fp32_rec_only",
+      "scale": 0.25
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9674880267846868,
+      "median_gain": 1.0034404354392836,
+      "median_surviving_fraction": 0.5315290178571428,
+      "mode": "fp32_rec_only",
+      "scale": 0.5
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.990671527139875,
+      "median_gain": 1.0035684373418206,
+      "median_surviving_fraction": 0.6823381696428572,
+      "mode": "fp32_rec_only",
+      "scale": 1.0
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9970328417456455,
+      "median_gain": 1.0031359606775112,
+      "median_surviving_fraction": 0.8082449776785714,
+      "mode": "fp32_rec_only",
+      "scale": 2.0
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9928040294661036,
+      "median_gain": 1.0068927843747366,
+      "median_surviving_fraction": 0.89892578125,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 1e-05
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9991943692235807,
+      "median_gain": 1.00041220242269,
+      "median_surviving_fraction": 0.9666748046875,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 3e-05
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999265590606194,
+      "median_gain": 0.9999924244963516,
+      "median_surviving_fraction": 0.99066162109375,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.0001
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.999991868128264,
+      "median_gain": 1.0000010089604818,
+      "median_surviving_fraction": 0.9969482421875,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.0003
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999992734602654,
+      "median_gain": 0.9999968016962435,
+      "median_surviving_fraction": 0.99908447265625,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.001
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999171424703,
+      "median_gain": 0.9999996043522905,
+      "median_surviving_fraction": 0.999755859375,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.003
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999928611956,
+      "median_gain": 1.0000000645703704,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.01
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999991760713,
+      "median_gain": 1.0000001022277851,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.03
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999999296658,
+      "median_gain": 0.999999953142358,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.1
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999999999771,
+      "median_gain": 1.0000000000000195,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.25
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999999999989,
+      "median_gain": 1.0,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.5
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999999999999,
+      "median_gain": 1.0,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 1.0
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9999999999999999,
+      "median_gain": 1.0,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 2.0
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.006402715479992467,
+      "median_gain": 0.0032923969173965176,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 1e-05
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.01282420746375039,
+      "median_gain": 0.005034820857412785,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 3e-05
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.035374855443607314,
+      "median_gain": 0.0395976674177826,
+      "median_surviving_fraction": 9.765625e-05,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.0001
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.05846195133635555,
+      "median_gain": 0.06679695676085437,
+      "median_surviving_fraction": 0.0007091703869047619,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.0003
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.0935082193365208,
+      "median_gain": 0.11274652885056008,
+      "median_surviving_fraction": 0.001953125,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.001
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.16918158886445453,
+      "median_gain": 0.2386188631508206,
+      "median_surviving_fraction": 0.00517578125,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.003
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.2900811650197602,
+      "median_gain": 0.39625254131114374,
+      "median_surviving_fraction": 0.018589564732142856,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.01
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.4942676484181683,
+      "median_gain": 0.6365791371853498,
+      "median_surviving_fraction": 0.05263671875,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.03
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.7576195374275825,
+      "median_gain": 0.9547047061839167,
+      "median_surviving_fraction": 0.16389508928571428,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.1
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9217112401863954,
+      "median_gain": 1.0129498212997192,
+      "median_surviving_fraction": 0.34619140625,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.25
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9735388562833831,
+      "median_gain": 1.0187668623200445,
+      "median_surviving_fraction": 0.547265625,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.5
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9931389338816368,
+      "median_gain": 1.0060247978348267,
+      "median_surviving_fraction": 0.72978515625,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 1.0
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9983289659399188,
+      "median_gain": 1.0021247331889025,
+      "median_surviving_fraction": 0.8487630208333333,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 2.0
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9951570601343736,
+      "median_gain": 1.0038380738789705,
+      "median_surviving_fraction": 0.8229217529296875,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 1e-05
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9994622158836042,
+      "median_gain": 1.0002197726254645,
+      "median_surviving_fraction": 0.9357452392578125,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 3e-05
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9999487779512075,
+      "median_gain": 1.0000384501226023,
+      "median_surviving_fraction": 0.9806556701660156,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.0001
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9999945594909049,
+      "median_gain": 1.000000217919402,
+      "median_surviving_fraction": 0.9934892654418945,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.0003
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.999999506030703,
+      "median_gain": 0.9999955253399627,
+      "median_surviving_fraction": 0.9980621337890625,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.001
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.999999946699861,
+      "median_gain": 0.9999993874824238,
+      "median_surviving_fraction": 0.999359130859375,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.003
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9999999950392571,
+      "median_gain": 1.0000001056498329,
+      "median_surviving_fraction": 0.9998035430908203,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.01
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9999999994364153,
+      "median_gain": 0.9999999779796047,
+      "median_surviving_fraction": 0.9999361038208008,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.03
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.999999999952282,
+      "median_gain": 1.0000000183368403,
+      "median_surviving_fraction": 0.9999790191650391,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.1
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9999999999999691,
+      "median_gain": 1.0000000000000746,
+      "median_surviving_fraction": 0.9999923706054688,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.25
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9999999999999969,
+      "median_gain": 1.0000000000000002,
+      "median_surviving_fraction": 0.9999961853027344,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.5
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9999999999999997,
+      "median_gain": 0.9999999999999996,
+      "median_surviving_fraction": 0.9999980926513672,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 1.0
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 1.0,
+      "median_gain": 0.9999999999999992,
+      "median_surviving_fraction": 1.0,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 2.0
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.010983832713525769,
+      "median_gain": 0.00024109898754391877,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 1e-05
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.025684953015627954,
+      "median_gain": 0.009007772769970269,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 3e-05
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.037737830623675646,
+      "median_gain": 0.025492156610335562,
+      "median_surviving_fraction": 0.0,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.0001
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.0494798496665793,
+      "median_gain": 0.05619383504252168,
+      "median_surviving_fraction": 0.000439453125,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.0003
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.09277708551663164,
+      "median_gain": 0.12233809473007232,
+      "median_surviving_fraction": 0.00185546875,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.001
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.1858651747511777,
+      "median_gain": 0.24319280541939559,
+      "median_surviving_fraction": 0.00712890625,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.003
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.342545575078699,
+      "median_gain": 0.43443736162512314,
+      "median_surviving_fraction": 0.0234375,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.01
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.5870346309355495,
+      "median_gain": 0.7443679370832315,
+      "median_surviving_fraction": 0.069091796875,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.03
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.8123656139453372,
+      "median_gain": 0.9538490116243062,
+      "median_surviving_fraction": 0.20103236607142858,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.1
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9200601405224644,
+      "median_gain": 1.0067710063844133,
+      "median_surviving_fraction": 0.3775809151785714,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.25
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9674880267846868,
+      "median_gain": 1.0034404354392836,
+      "median_surviving_fraction": 0.5315290178571428,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 0.5
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.990671527139875,
+      "median_gain": 1.0035684373418206,
+      "median_surviving_fraction": 0.6823381696428572,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 1.0
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9970328417456455,
+      "median_gain": 1.0031359606775112,
+      "median_surviving_fraction": 0.8082449776785714,
+      "mode": "fp32_shadow_rec_conv",
+      "scale": 2.0
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.014634892494161108,
+      "median_gain": 0.0,
+      "median_surviving_fraction": 0.0,
+      "mode": "native_bf16_add",
+      "scale": 1e-05
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.018712904915158625,
+      "median_gain": 0.017324255950346278,
+      "median_surviving_fraction": 0.000244140625,
+      "mode": "native_bf16_add",
+      "scale": 3e-05
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.03405761743178327,
+      "median_gain": 0.038885607365295616,
+      "median_surviving_fraction": 0.00067138671875,
+      "mode": "native_bf16_add",
+      "scale": 0.0001
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.05470772531387993,
+      "median_gain": 0.07009895898354154,
+      "median_surviving_fraction": 0.00213623046875,
+      "mode": "native_bf16_add",
+      "scale": 0.0003
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.09637763954410986,
+      "median_gain": 0.1314699161711792,
+      "median_surviving_fraction": 0.00677490234375,
+      "mode": "native_bf16_add",
+      "scale": 0.001
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.16640045672065423,
+      "median_gain": 0.22208864244822757,
+      "median_surviving_fraction": 0.019287109375,
+      "mode": "native_bf16_add",
+      "scale": 0.003
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.30496689135433186,
+      "median_gain": 0.40086354791352163,
+      "median_surviving_fraction": 0.064697265625,
+      "mode": "native_bf16_add",
+      "scale": 0.01
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.5035716211999555,
+      "median_gain": 0.6553472680470732,
+      "median_surviving_fraction": 0.1898193359375,
+      "mode": "native_bf16_add",
+      "scale": 0.03
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.7984589589266805,
+      "median_gain": 1.011723613806483,
+      "median_surviving_fraction": 0.49261474609375,
+      "mode": "native_bf16_add",
+      "scale": 0.1
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9539909669448272,
+      "median_gain": 1.015770229724108,
+      "median_surviving_fraction": 0.75079345703125,
+      "mode": "native_bf16_add",
+      "scale": 0.25
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9877679835864347,
+      "median_gain": 1.0103704960104962,
+      "median_surviving_fraction": 0.8681640625,
+      "mode": "native_bf16_add",
+      "scale": 0.5
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9968719928309755,
+      "median_gain": 1.0011203961598794,
+      "median_surviving_fraction": 0.9339599609375,
+      "mode": "native_bf16_add",
+      "scale": 1.0
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9992176486222171,
+      "median_gain": 1.0005299211594654,
+      "median_surviving_fraction": 0.96734619140625,
+      "mode": "native_bf16_add",
+      "scale": 2.0
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.006402715479992467,
+      "median_gain": 0.0032923969173965176,
+      "median_surviving_fraction": 0.0,
+      "mode": "native_bf16_add",
+      "scale": 1e-05
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.01282420746375039,
+      "median_gain": 0.005034820857412785,
+      "median_surviving_fraction": 0.0,
+      "mode": "native_bf16_add",
+      "scale": 3e-05
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.035374855443607314,
+      "median_gain": 0.0395976674177826,
+      "median_surviving_fraction": 9.765625e-05,
+      "mode": "native_bf16_add",
+      "scale": 0.0001
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.05846195133635555,
+      "median_gain": 0.06679695676085437,
+      "median_surviving_fraction": 0.0007091703869047619,
+      "mode": "native_bf16_add",
+      "scale": 0.0003
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.09393340076055606,
+      "median_gain": 0.11411591747419383,
+      "median_surviving_fraction": 0.001953125,
+      "mode": "native_bf16_add",
+      "scale": 0.001
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.16918158886445453,
+      "median_gain": 0.2386188631508206,
+      "median_surviving_fraction": 0.00517578125,
+      "mode": "native_bf16_add",
+      "scale": 0.003
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.2900870694935771,
+      "median_gain": 0.39640322480172313,
+      "median_surviving_fraction": 0.018589564732142856,
+      "mode": "native_bf16_add",
+      "scale": 0.01
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.49427137035149804,
+      "median_gain": 0.63655063979034,
+      "median_surviving_fraction": 0.05263671875,
+      "mode": "native_bf16_add",
+      "scale": 0.03
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.7576181580474315,
+      "median_gain": 0.9546581875945255,
+      "median_surviving_fraction": 0.16389508928571428,
+      "mode": "native_bf16_add",
+      "scale": 0.1
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9217112401863954,
+      "median_gain": 1.0129498212997192,
+      "median_surviving_fraction": 0.34619140625,
+      "mode": "native_bf16_add",
+      "scale": 0.25
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9735388562833831,
+      "median_gain": 1.0187668623200445,
+      "median_surviving_fraction": 0.547265625,
+      "mode": "native_bf16_add",
+      "scale": 0.5
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9931389338816368,
+      "median_gain": 1.0060247978348267,
+      "median_surviving_fraction": 0.72978515625,
+      "mode": "native_bf16_add",
+      "scale": 1.0
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9983289659399188,
+      "median_gain": 1.0021247331889025,
+      "median_surviving_fraction": 0.8487630208333333,
+      "mode": "native_bf16_add",
+      "scale": 2.0
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.012563482354499136,
+      "median_gain": 0.0165041170344139,
+      "median_surviving_fraction": 5.7220458984375e-05,
+      "mode": "native_bf16_add",
+      "scale": 1e-05
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.025013895579520346,
+      "median_gain": 0.03355946520679977,
+      "median_surviving_fraction": 0.00018215179443359375,
+      "mode": "native_bf16_add",
+      "scale": 3e-05
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.04859051943331871,
+      "median_gain": 0.06352753188195237,
+      "median_surviving_fraction": 0.0006036758422851562,
+      "mode": "native_bf16_add",
+      "scale": 0.0001
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.0885399152804896,
+      "median_gain": 0.11540371288209705,
+      "median_surviving_fraction": 0.0017337799072265625,
+      "mode": "native_bf16_add",
+      "scale": 0.0003
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.15584193529727314,
+      "median_gain": 0.20493338342630713,
+      "median_surviving_fraction": 0.0058765411376953125,
+      "mode": "native_bf16_add",
+      "scale": 0.001
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.2634388209532363,
+      "median_gain": 0.34844857930188466,
+      "median_surviving_fraction": 0.01709461212158203,
+      "mode": "native_bf16_add",
+      "scale": 0.003
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.4677885390523995,
+      "median_gain": 0.6162283211953876,
+      "median_surviving_fraction": 0.055370330810546875,
+      "mode": "native_bf16_add",
+      "scale": 0.01
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.7054151136361781,
+      "median_gain": 0.8793365308811982,
+      "median_surviving_fraction": 0.15458106994628906,
+      "mode": "native_bf16_add",
+      "scale": 0.03
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9076132124685298,
+      "median_gain": 1.0087500284601885,
+      "median_surviving_fraction": 0.3969154357910156,
+      "mode": "native_bf16_add",
+      "scale": 0.1
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9740709635489196,
+      "median_gain": 1.0103804538178562,
+      "median_surviving_fraction": 0.6327419281005859,
+      "mode": "native_bf16_add",
+      "scale": 0.25
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9920180141381156,
+      "median_gain": 1.0053907296647466,
+      "median_surviving_fraction": 0.7781486511230469,
+      "mode": "native_bf16_add",
+      "scale": 0.5
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.997906827649469,
+      "median_gain": 1.0020753265135496,
+      "median_surviving_fraction": 0.878300666809082,
+      "mode": "native_bf16_add",
+      "scale": 1.0
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.999478997256608,
+      "median_gain": 1.0003209101212684,
+      "median_surviving_fraction": 0.9369087219238281,
+      "mode": "native_bf16_add",
+      "scale": 2.0
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.010983832713525769,
+      "median_gain": 0.00024109898754391877,
+      "median_surviving_fraction": 0.0,
+      "mode": "native_bf16_add",
+      "scale": 1e-05
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.025684953015627954,
+      "median_gain": 0.009007772769970269,
+      "median_surviving_fraction": 0.0,
+      "mode": "native_bf16_add",
+      "scale": 3e-05
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.037737830623675646,
+      "median_gain": 0.025492156610335562,
+      "median_surviving_fraction": 0.0,
+      "mode": "native_bf16_add",
+      "scale": 0.0001
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.0494798496665793,
+      "median_gain": 0.05619383504252168,
+      "median_surviving_fraction": 0.000439453125,
+      "mode": "native_bf16_add",
+      "scale": 0.0003
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.09277708551663164,
+      "median_gain": 0.12233809473007232,
+      "median_surviving_fraction": 0.00185546875,
+      "mode": "native_bf16_add",
+      "scale": 0.001
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.1858651747511777,
+      "median_gain": 0.24319280541939559,
+      "median_surviving_fraction": 0.00703125,
+      "mode": "native_bf16_add",
+      "scale": 0.003
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.342545575078699,
+      "median_gain": 0.43443736162512314,
+      "median_surviving_fraction": 0.0234375,
+      "mode": "native_bf16_add",
+      "scale": 0.01
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.5870483495186769,
+      "median_gain": 0.744340055010088,
+      "median_surviving_fraction": 0.069091796875,
+      "mode": "native_bf16_add",
+      "scale": 0.03
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.8123661155297611,
+      "median_gain": 0.9538253641377585,
+      "median_surviving_fraction": 0.20103236607142858,
+      "mode": "native_bf16_add",
+      "scale": 0.1
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9200601405224644,
+      "median_gain": 1.0067710063844133,
+      "median_surviving_fraction": 0.3775809151785714,
+      "mode": "native_bf16_add",
+      "scale": 0.25
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9674880267846868,
+      "median_gain": 1.0034404354392836,
+      "median_surviving_fraction": 0.5315290178571428,
+      "mode": "native_bf16_add",
+      "scale": 0.5
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.990671527139875,
+      "median_gain": 1.0035684373418206,
+      "median_surviving_fraction": 0.6823381696428572,
+      "mode": "native_bf16_add",
+      "scale": 1.0
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9970328417456455,
+      "median_gain": 1.0031359606775112,
+      "median_surviving_fraction": 0.8082449776785714,
+      "mode": "native_bf16_add",
+      "scale": 2.0
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.014634892494161108,
+      "median_gain": 0.0,
+      "median_surviving_fraction": 0.0,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 1e-05
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.018712904915158625,
+      "median_gain": 0.017324255950346278,
+      "median_surviving_fraction": 0.000244140625,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 3e-05
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.03405761743178327,
+      "median_gain": 0.038885607365295616,
+      "median_surviving_fraction": 0.00067138671875,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.0001
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.05470772531387993,
+      "median_gain": 0.07009895898354154,
+      "median_surviving_fraction": 0.00213623046875,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.0003
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.09637775278907043,
+      "median_gain": 0.1314699161711792,
+      "median_surviving_fraction": 0.00677490234375,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.001
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.16641983735442922,
+      "median_gain": 0.22232770220460357,
+      "median_surviving_fraction": 0.0194091796875,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.003
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.3049670927046598,
+      "median_gain": 0.4008577507211959,
+      "median_surviving_fraction": 0.064697265625,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.01
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.5035909722541692,
+      "median_gain": 0.6554301719738083,
+      "median_surviving_fraction": 0.1898193359375,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.03
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.7984531168563616,
+      "median_gain": 1.0116943432241443,
+      "median_surviving_fraction": 0.49261474609375,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.1
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9539909669448272,
+      "median_gain": 1.015770229724108,
+      "median_surviving_fraction": 0.75079345703125,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.25
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9877679835864347,
+      "median_gain": 1.0103704960104962,
+      "median_surviving_fraction": 0.8681640625,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.5
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9968719928309755,
+      "median_gain": 1.0011203961598794,
+      "median_surviving_fraction": 0.9339599609375,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 1.0
+    },
+    {
+      "channel": "conv",
+      "median_cosine": 0.9992176486222171,
+      "median_gain": 1.0005299211594654,
+      "median_surviving_fraction": 0.96734619140625,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 2.0
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.006402715479992467,
+      "median_gain": 0.0032923969173965176,
+      "median_surviving_fraction": 0.0,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 1e-05
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.01282420746375039,
+      "median_gain": 0.005034820857412785,
+      "median_surviving_fraction": 0.0,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 3e-05
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.035374855443607314,
+      "median_gain": 0.0395976674177826,
+      "median_surviving_fraction": 9.765625e-05,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.0001
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.05846195133635555,
+      "median_gain": 0.06679695676085437,
+      "median_surviving_fraction": 0.0007091703869047619,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.0003
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.0935082193365208,
+      "median_gain": 0.11274652885056008,
+      "median_surviving_fraction": 0.001953125,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.001
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.16918158886445453,
+      "median_gain": 0.2386188631508206,
+      "median_surviving_fraction": 0.00517578125,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.003
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.2900811650197602,
+      "median_gain": 0.39625254131114374,
+      "median_surviving_fraction": 0.018589564732142856,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.01
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.4942676484181683,
+      "median_gain": 0.6365791371853498,
+      "median_surviving_fraction": 0.05263671875,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.03
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.7576195374275825,
+      "median_gain": 0.9547047061839167,
+      "median_surviving_fraction": 0.16389508928571428,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.1
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9217112401863954,
+      "median_gain": 1.0129498212997192,
+      "median_surviving_fraction": 0.34619140625,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.25
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9735388562833831,
+      "median_gain": 1.0187668623200445,
+      "median_surviving_fraction": 0.547265625,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.5
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9931389338816368,
+      "median_gain": 1.0060247978348267,
+      "median_surviving_fraction": 0.72978515625,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 1.0
+    },
+    {
+      "channel": "keys",
+      "median_cosine": 0.9983289659399188,
+      "median_gain": 1.0021247331889025,
+      "median_surviving_fraction": 0.8487630208333333,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 2.0
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.012564066281598603,
+      "median_gain": 0.0167897790084559,
+      "median_surviving_fraction": 5.7220458984375e-05,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 1e-05
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.025186723078535166,
+      "median_gain": 0.03340009317831233,
+      "median_surviving_fraction": 0.0001811981201171875,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 3e-05
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.04822026252960422,
+      "median_gain": 0.06250827659401273,
+      "median_surviving_fraction": 0.0006017684936523438,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.0001
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.08880400191243842,
+      "median_gain": 0.11545898973204363,
+      "median_surviving_fraction": 0.001735687255859375,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.0003
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.15585534513984237,
+      "median_gain": 0.20501739655924395,
+      "median_surviving_fraction": 0.0058765411376953125,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.001
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.2636522129715666,
+      "median_gain": 0.35104891234380786,
+      "median_surviving_fraction": 0.017142295837402344,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.003
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.46777532713344705,
+      "median_gain": 0.6162328192641775,
+      "median_surviving_fraction": 0.055370330810546875,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.01
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.705418160454984,
+      "median_gain": 0.8795331198300648,
+      "median_surviving_fraction": 0.15458106994628906,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.03
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9076125619702062,
+      "median_gain": 1.008674783361668,
+      "median_surviving_fraction": 0.3969154357910156,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.1
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9740709635489196,
+      "median_gain": 1.0103804538178562,
+      "median_surviving_fraction": 0.6327419281005859,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.25
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.9920180141381156,
+      "median_gain": 1.0053907296647466,
+      "median_surviving_fraction": 0.7781486511230469,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.5
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.997906827649469,
+      "median_gain": 1.0020753265135496,
+      "median_surviving_fraction": 0.878300666809082,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 1.0
+    },
+    {
+      "channel": "recurrent",
+      "median_cosine": 0.999478997256608,
+      "median_gain": 1.0003209101212684,
+      "median_surviving_fraction": 0.9369087219238281,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 2.0
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.010983832713525769,
+      "median_gain": 0.00024109898754391877,
+      "median_surviving_fraction": 0.0,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 1e-05
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.025684953015627954,
+      "median_gain": 0.009007772769970269,
+      "median_surviving_fraction": 0.0,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 3e-05
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.037737830623675646,
+      "median_gain": 0.025492156610335562,
+      "median_surviving_fraction": 0.0,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.0001
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.0494798496665793,
+      "median_gain": 0.05619383504252168,
+      "median_surviving_fraction": 0.000439453125,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.0003
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.09277708551663164,
+      "median_gain": 0.12233809473007232,
+      "median_surviving_fraction": 0.00185546875,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.001
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.1858651747511777,
+      "median_gain": 0.24319280541939559,
+      "median_surviving_fraction": 0.00712890625,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.003
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.342545575078699,
+      "median_gain": 0.43443736162512314,
+      "median_surviving_fraction": 0.0234375,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.01
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.5870346309355495,
+      "median_gain": 0.7443679370832315,
+      "median_surviving_fraction": 0.069091796875,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.03
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.8123656139453372,
+      "median_gain": 0.9538490116243062,
+      "median_surviving_fraction": 0.20103236607142858,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.1
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9200601405224644,
+      "median_gain": 1.0067710063844133,
+      "median_surviving_fraction": 0.3775809151785714,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.25
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9674880267846868,
+      "median_gain": 1.0034404354392836,
+      "median_surviving_fraction": 0.5315290178571428,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 0.5
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.990671527139875,
+      "median_gain": 1.0035684373418206,
+      "median_surviving_fraction": 0.6823381696428572,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 1.0
+    },
+    {
+      "channel": "values",
+      "median_cosine": 0.9970328417456455,
+      "median_gain": 1.0031359606775112,
+      "median_surviving_fraction": 0.8082449776785714,
+      "mode": "native_fp32_add_bf16_writeback",
+      "scale": 2.0
+    }
+  ],
+  "protocol_version": "quantization_aware_causal_actuation_v15",
+  "records": "results/v15/processed/actuator_transfer_v15.parquet",
+  "records_sha256": "2c719c29467cc6c6e5068e76472d757676d5ec9bb688e326046b4566c5e90cf8",
+  "role": "diagnostic_train"
+}

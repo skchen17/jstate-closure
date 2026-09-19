@@ -1,0 +1,20 @@
+{
+  "fixed_finite_scale": 1.0,
+  "freeze_digest": "1692a35f4de1db7a64d99ef5cecff6cc0c238a827ab777ba204c4e6083ef737a",
+  "input_hashes": {
+    "results/v15/processed/autograd_vs_actuator_v15.parquet": "28a645be8151630a8b02c8d60dcfc6735314197add35e85fdb90faf51a29eaae",
+    "src/jclosure/experiments/operator_v15.py": "841e6eb133a5bb241092f402aabd079a340c4993bac6713e6bccdd5d58ccb782"
+  },
+  "interpretation": "restricted frozen 512-probe domain, not intrinsic full-state rank",
+  "parent_freeze_digest": "8cccf28e4fd09484e1dd2aaf6dcf2abb311695701e439a40eaee6bdee44f7c35",
+  "protocol_version": "quantization_aware_causal_actuation_v15_rank",
+  "rank_anchor_count": 5,
+  "rank_probe_counts": [
+    64,
+    128,
+    256,
+    512
+  ],
+  "role": "diagnostic_train",
+  "schema_version": 24
+}

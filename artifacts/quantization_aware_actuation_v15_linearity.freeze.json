@@ -1,0 +1,34 @@
+{
+  "epsilon": 1.0,
+  "freeze_digest": "16b3cc515bdf4224a9a9f0bb818f7dca855318c66606f83b6513b385c21bc12c",
+  "gate": {
+    "linearity_cosine_min": 0.9,
+    "linearity_norm_ratio_max": 1.3,
+    "linearity_norm_ratio_min": 0.7,
+    "linearity_relative_error_max": 0.3
+  },
+  "input_hashes": {
+    "results/v15/processed/autograd_vs_actuator_v15.parquet": "28a645be8151630a8b02c8d60dcfc6735314197add35e85fdb90faf51a29eaae",
+    "src/jclosure/experiments/operator_v15.py": "841e6eb133a5bb241092f402aabd079a340c4993bac6713e6bccdd5d58ccb782"
+  },
+  "pairs": [
+    [
+      0,
+      103
+    ],
+    [
+      206,
+      308
+    ]
+  ],
+  "parent_freeze_digest": "8cccf28e4fd09484e1dd2aaf6dcf2abb311695701e439a40eaee6bdee44f7c35",
+  "protocol_version": "quantization_aware_causal_actuation_v15_linearity",
+  "role": "diagnostic_train",
+  "schema_version": 24,
+  "tests": [
+    "odd",
+    "additive",
+    "homogeneous",
+    "cross_channel"
+  ]
+}

@@ -1,0 +1,1089 @@
+{
+  "freeze_digest": "b295fa97cfbdee0a51c564aea4b1c8f105a85d0d6548bc72111eb890d4c8aae8",
+  "interpretation": "shadow advantages concern accumulated requests before one BF16 consumption cast; not a high-precision forward semantics change",
+  "pooled": [
+    {
+      "channel": "conv",
+      "increment": 0.001,
+      "median_cosine": 0.09637775278907043,
+      "median_gain": 0.1314699161711792,
+      "median_surviving_fraction": 0.00677490234375,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 1
+    },
+    {
+      "channel": "conv",
+      "increment": 0.001,
+      "median_cosine": 0.13458606512500312,
+      "median_gain": 0.17402588090036963,
+      "median_surviving_fraction": 0.01300048828125,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 2
+    },
+    {
+      "channel": "conv",
+      "increment": 0.001,
+      "median_cosine": 0.1915669320846123,
+      "median_gain": 0.25067725725648626,
+      "median_surviving_fraction": 0.02587890625,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 4
+    },
+    {
+      "channel": "conv",
+      "increment": 0.001,
+      "median_cosine": 0.2743752785638915,
+      "median_gain": 0.36652357242162703,
+      "median_surviving_fraction": 0.05242919921875,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 8
+    },
+    {
+      "channel": "conv",
+      "increment": 0.001,
+      "median_cosine": 0.3785548928629383,
+      "median_gain": 0.49847411786465484,
+      "median_surviving_fraction": 0.10357666015625,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 16
+    },
+    {
+      "channel": "conv",
+      "increment": 0.01,
+      "median_cosine": 0.3049670927046598,
+      "median_gain": 0.4008577507211959,
+      "median_surviving_fraction": 0.064697265625,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 1
+    },
+    {
+      "channel": "conv",
+      "increment": 0.01,
+      "median_cosine": 0.4209455262248834,
+      "median_gain": 0.551940009172267,
+      "median_surviving_fraction": 0.129150390625,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 2
+    },
+    {
+      "channel": "conv",
+      "increment": 0.01,
+      "median_cosine": 0.5720429296125162,
+      "median_gain": 0.7509505323393031,
+      "median_surviving_fraction": 0.24432373046875,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 4
+    },
+    {
+      "channel": "conv",
+      "increment": 0.01,
+      "median_cosine": 0.7431455189662267,
+      "median_gain": 0.944454623285057,
+      "median_surviving_fraction": 0.42572021484375,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 8
+    },
+    {
+      "channel": "conv",
+      "increment": 0.01,
+      "median_cosine": 0.9000732555629734,
+      "median_gain": 1.0104233099442994,
+      "median_surviving_fraction": 0.63720703125,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 16
+    },
+    {
+      "channel": "conv",
+      "increment": 0.03,
+      "median_cosine": 0.5035909722541692,
+      "median_gain": 0.6554301719738083,
+      "median_surviving_fraction": 0.1898193359375,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 1
+    },
+    {
+      "channel": "conv",
+      "increment": 0.03,
+      "median_cosine": 0.6715706874016567,
+      "median_gain": 0.8484986619993132,
+      "median_surviving_fraction": 0.34185791015625,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 2
+    },
+    {
+      "channel": "conv",
+      "increment": 0.03,
+      "median_cosine": 0.8402430985648637,
+      "median_gain": 1.0134162398139306,
+      "median_surviving_fraction": 0.55010986328125,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 4
+    },
+    {
+      "channel": "conv",
+      "increment": 0.03,
+      "median_cosine": 0.9499172895359599,
+      "median_gain": 1.0132017372423796,
+      "median_surviving_fraction": 0.74127197265625,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 8
+    },
+    {
+      "channel": "conv",
+      "increment": 0.03,
+      "median_cosine": 0.9867932480802131,
+      "median_gain": 1.0136896651416771,
+      "median_surviving_fraction": 0.8623046875,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 16
+    },
+    {
+      "channel": "keys",
+      "increment": 0.001,
+      "median_cosine": 0.0935082193365208,
+      "median_gain": 0.11274652885056008,
+      "median_surviving_fraction": 0.001953125,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 1
+    },
+    {
+      "channel": "keys",
+      "increment": 0.001,
+      "median_cosine": 0.12312209077470287,
+      "median_gain": 0.16461144765377694,
+      "median_surviving_fraction": 0.0035993303571428574,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 2
+    },
+    {
+      "channel": "keys",
+      "increment": 0.001,
+      "median_cosine": 0.19950340571814254,
+      "median_gain": 0.25894394460973863,
+      "median_surviving_fraction": 0.007666015625,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 4
+    },
+    {
+      "channel": "keys",
+      "increment": 0.001,
+      "median_cosine": 0.25491228333318056,
+      "median_gain": 0.3335500721859004,
+      "median_surviving_fraction": 0.015345982142857144,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 8
+    },
+    {
+      "channel": "keys",
+      "increment": 0.001,
+      "median_cosine": 0.36847569778588024,
+      "median_gain": 0.49425943974080283,
+      "median_surviving_fraction": 0.027727399553571428,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 16
+    },
+    {
+      "channel": "keys",
+      "increment": 0.01,
+      "median_cosine": 0.2900811650197602,
+      "median_gain": 0.39625254131114374,
+      "median_surviving_fraction": 0.018589564732142856,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 1
+    },
+    {
+      "channel": "keys",
+      "increment": 0.01,
+      "median_cosine": 0.41847897138293383,
+      "median_gain": 0.5587929945604536,
+      "median_surviving_fraction": 0.03464006696428571,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 2
+    },
+    {
+      "channel": "keys",
+      "increment": 0.01,
+      "median_cosine": 0.552247678005999,
+      "median_gain": 0.6948636544448998,
+      "median_surviving_fraction": 0.06912667410714286,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 4
+    },
+    {
+      "channel": "keys",
+      "increment": 0.01,
+      "median_cosine": 0.7039768270985978,
+      "median_gain": 0.8978028862909695,
+      "median_surviving_fraction": 0.13404017857142858,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 8
+    },
+    {
+      "channel": "keys",
+      "increment": 0.01,
+      "median_cosine": 0.852109379322525,
+      "median_gain": 0.9943065080316953,
+      "median_surviving_fraction": 0.24661690848214285,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 16
+    },
+    {
+      "channel": "keys",
+      "increment": 0.03,
+      "median_cosine": 0.4942676484181683,
+      "median_gain": 0.6365791371853498,
+      "median_surviving_fraction": 0.05263671875,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 1
+    },
+    {
+      "channel": "keys",
+      "increment": 0.03,
+      "median_cosine": 0.6421245525534691,
+      "median_gain": 0.8139491673293857,
+      "median_surviving_fraction": 0.10159737723214286,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 2
+    },
+    {
+      "channel": "keys",
+      "increment": 0.03,
+      "median_cosine": 0.7964225159781533,
+      "median_gain": 0.9712522542727599,
+      "median_surviving_fraction": 0.19273158482142858,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 4
+    },
+    {
+      "channel": "keys",
+      "increment": 0.03,
+      "median_cosine": 0.9170163607396452,
+      "median_gain": 1.012018444959881,
+      "median_surviving_fraction": 0.337109375,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 8
+    },
+    {
+      "channel": "keys",
+      "increment": 0.03,
+      "median_cosine": 0.97179895903958,
+      "median_gain": 1.019838889120615,
+      "median_surviving_fraction": 0.537109375,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 16
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.001,
+      "median_cosine": 0.15585534513984237,
+      "median_gain": 0.20501739655924395,
+      "median_surviving_fraction": 0.0058765411376953125,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 1
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.001,
+      "median_cosine": 0.2184415929116309,
+      "median_gain": 0.28859196125718123,
+      "median_surviving_fraction": 0.011509895324707031,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 2
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.001,
+      "median_cosine": 0.30705103776939147,
+      "median_gain": 0.4051541309008667,
+      "median_surviving_fraction": 0.022553443908691406,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 4
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.001,
+      "median_cosine": 0.4264171055066681,
+      "median_gain": 0.5566741107037665,
+      "median_surviving_fraction": 0.04469108581542969,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 8
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.001,
+      "median_cosine": 0.5680077741482843,
+      "median_gain": 0.7278450614168337,
+      "median_surviving_fraction": 0.0866861343383789,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 16
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.01,
+      "median_cosine": 0.46777532713344705,
+      "median_gain": 0.6162328192641775,
+      "median_surviving_fraction": 0.055370330810546875,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 1
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.01,
+      "median_cosine": 0.6177358484096197,
+      "median_gain": 0.7932647132326249,
+      "median_surviving_fraction": 0.10687255859375,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 2
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.01,
+      "median_cosine": 0.7662842327740154,
+      "median_gain": 0.9368228843365232,
+      "median_surviving_fraction": 0.19910335540771484,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 4
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.01,
+      "median_cosine": 0.877234974975402,
+      "median_gain": 1.0055388272918317,
+      "median_surviving_fraction": 0.34226512908935547,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 8
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.01,
+      "median_cosine": 0.9510920842290027,
+      "median_gain": 1.00949668947275,
+      "median_surviving_fraction": 0.5192012786865234,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 16
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.03,
+      "median_cosine": 0.705418160454984,
+      "median_gain": 0.8795331198300648,
+      "median_surviving_fraction": 0.15458106994628906,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 1
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.03,
+      "median_cosine": 0.8355110612025397,
+      "median_gain": 0.9841384287793029,
+      "median_surviving_fraction": 0.27704429626464844,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 2
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.03,
+      "median_cosine": 0.9268053846857897,
+      "median_gain": 1.011321581360412,
+      "median_surviving_fraction": 0.4432516098022461,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 4
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.03,
+      "median_cosine": 0.9723800237921032,
+      "median_gain": 1.0087543446108713,
+      "median_surviving_fraction": 0.6226778030395508,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 8
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.03,
+      "median_cosine": 0.991460551239232,
+      "median_gain": 1.006495841809055,
+      "median_surviving_fraction": 0.7707614898681641,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 16
+    },
+    {
+      "channel": "values",
+      "increment": 0.001,
+      "median_cosine": 0.09277708551663164,
+      "median_gain": 0.12233809473007232,
+      "median_surviving_fraction": 0.00185546875,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 1
+    },
+    {
+      "channel": "values",
+      "increment": 0.001,
+      "median_cosine": 0.15905230823648708,
+      "median_gain": 0.1966249890658397,
+      "median_surviving_fraction": 0.004443359375,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 2
+    },
+    {
+      "channel": "values",
+      "increment": 0.001,
+      "median_cosine": 0.22714391383252008,
+      "median_gain": 0.2836226448506375,
+      "median_surviving_fraction": 0.009633091517857142,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 4
+    },
+    {
+      "channel": "values",
+      "increment": 0.001,
+      "median_cosine": 0.3123293075555434,
+      "median_gain": 0.3987226721334339,
+      "median_surviving_fraction": 0.016810825892857144,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 8
+    },
+    {
+      "channel": "values",
+      "increment": 0.001,
+      "median_cosine": 0.4713278885816481,
+      "median_gain": 0.6168872338300017,
+      "median_surviving_fraction": 0.03791155133928571,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 16
+    },
+    {
+      "channel": "values",
+      "increment": 0.01,
+      "median_cosine": 0.342545575078699,
+      "median_gain": 0.43443736162512314,
+      "median_surviving_fraction": 0.0234375,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 1
+    },
+    {
+      "channel": "values",
+      "increment": 0.01,
+      "median_cosine": 0.5188035351375195,
+      "median_gain": 0.6669837117224664,
+      "median_surviving_fraction": 0.045863560267857144,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 2
+    },
+    {
+      "channel": "values",
+      "increment": 0.01,
+      "median_cosine": 0.6443776053728112,
+      "median_gain": 0.8234629255812563,
+      "median_surviving_fraction": 0.09071568080357142,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 4
+    },
+    {
+      "channel": "values",
+      "increment": 0.01,
+      "median_cosine": 0.7743714961772579,
+      "median_gain": 0.92503055885273,
+      "median_surviving_fraction": 0.16688755580357142,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 8
+    },
+    {
+      "channel": "values",
+      "increment": 0.01,
+      "median_cosine": 0.8779497949288972,
+      "median_gain": 0.9857736125427699,
+      "median_surviving_fraction": 0.289306640625,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 16
+    },
+    {
+      "channel": "values",
+      "increment": 0.03,
+      "median_cosine": 0.5870346309355495,
+      "median_gain": 0.7443679370832315,
+      "median_surviving_fraction": 0.069091796875,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 1
+    },
+    {
+      "channel": "values",
+      "increment": 0.03,
+      "median_cosine": 0.7246974029313589,
+      "median_gain": 0.8653350763826757,
+      "median_surviving_fraction": 0.1316615513392857,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 2
+    },
+    {
+      "channel": "values",
+      "increment": 0.03,
+      "median_cosine": 0.8431992959489756,
+      "median_gain": 0.9723266088131319,
+      "median_surviving_fraction": 0.2296665736607143,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 4
+    },
+    {
+      "channel": "values",
+      "increment": 0.03,
+      "median_cosine": 0.9170644747434998,
+      "median_gain": 1.0046863520000329,
+      "median_surviving_fraction": 0.37032645089285715,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 8
+    },
+    {
+      "channel": "values",
+      "increment": 0.03,
+      "median_cosine": 0.9655383961717159,
+      "median_gain": 1.0030637891470706,
+      "median_surviving_fraction": 0.5220424107142857,
+      "mode": "fp32_shadow_cast_at_consumption",
+      "steps": 16
+    },
+    {
+      "channel": "conv",
+      "increment": 0.001,
+      "median_cosine": 0.09637775278907043,
+      "median_gain": 0.1314699161711792,
+      "median_surviving_fraction": 0.00677490234375,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 1
+    },
+    {
+      "channel": "conv",
+      "increment": 0.001,
+      "median_cosine": 0.09637788974132874,
+      "median_gain": 0.13106882866604277,
+      "median_surviving_fraction": 0.00677490234375,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 2
+    },
+    {
+      "channel": "conv",
+      "increment": 0.001,
+      "median_cosine": 0.09637776491401424,
+      "median_gain": 0.13089646727807155,
+      "median_surviving_fraction": 0.00677490234375,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 4
+    },
+    {
+      "channel": "conv",
+      "increment": 0.001,
+      "median_cosine": 0.09641576831783505,
+      "median_gain": 0.12947947679301103,
+      "median_surviving_fraction": 0.00677490234375,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 8
+    },
+    {
+      "channel": "conv",
+      "increment": 0.001,
+      "median_cosine": 0.09641789741574894,
+      "median_gain": 0.12812961555431251,
+      "median_surviving_fraction": 0.00677490234375,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 16
+    },
+    {
+      "channel": "conv",
+      "increment": 0.01,
+      "median_cosine": 0.3049670927046598,
+      "median_gain": 0.4008577507211959,
+      "median_surviving_fraction": 0.064697265625,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 1
+    },
+    {
+      "channel": "conv",
+      "increment": 0.01,
+      "median_cosine": 0.3050063356544732,
+      "median_gain": 0.39956966615376843,
+      "median_surviving_fraction": 0.064697265625,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 2
+    },
+    {
+      "channel": "conv",
+      "increment": 0.01,
+      "median_cosine": 0.3049595529853815,
+      "median_gain": 0.39848759441484444,
+      "median_surviving_fraction": 0.064697265625,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 4
+    },
+    {
+      "channel": "conv",
+      "increment": 0.01,
+      "median_cosine": 0.3046810555480933,
+      "median_gain": 0.39702976474802054,
+      "median_surviving_fraction": 0.064697265625,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 8
+    },
+    {
+      "channel": "conv",
+      "increment": 0.01,
+      "median_cosine": 0.30422172476167275,
+      "median_gain": 0.39398867040072916,
+      "median_surviving_fraction": 0.064697265625,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 16
+    },
+    {
+      "channel": "conv",
+      "increment": 0.03,
+      "median_cosine": 0.5035909722541692,
+      "median_gain": 0.6554301719738083,
+      "median_surviving_fraction": 0.1898193359375,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 1
+    },
+    {
+      "channel": "conv",
+      "increment": 0.03,
+      "median_cosine": 0.5036588349763044,
+      "median_gain": 0.6540515585548095,
+      "median_surviving_fraction": 0.1898193359375,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 2
+    },
+    {
+      "channel": "conv",
+      "increment": 0.03,
+      "median_cosine": 0.5034733639860229,
+      "median_gain": 0.653234002046929,
+      "median_surviving_fraction": 0.1898193359375,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 4
+    },
+    {
+      "channel": "conv",
+      "increment": 0.03,
+      "median_cosine": 0.503321637355497,
+      "median_gain": 0.651551247208741,
+      "median_surviving_fraction": 0.1898193359375,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 8
+    },
+    {
+      "channel": "conv",
+      "increment": 0.03,
+      "median_cosine": 0.502868822865969,
+      "median_gain": 0.6455454464389379,
+      "median_surviving_fraction": 0.1898193359375,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 16
+    },
+    {
+      "channel": "keys",
+      "increment": 0.001,
+      "median_cosine": 0.0935082193365208,
+      "median_gain": 0.11274652885056008,
+      "median_surviving_fraction": 0.001953125,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 1
+    },
+    {
+      "channel": "keys",
+      "increment": 0.001,
+      "median_cosine": 0.09362880492330787,
+      "median_gain": 0.11274652885056008,
+      "median_surviving_fraction": 0.001953125,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 2
+    },
+    {
+      "channel": "keys",
+      "increment": 0.001,
+      "median_cosine": 0.0938651159972381,
+      "median_gain": 0.11275571120545713,
+      "median_surviving_fraction": 0.001953125,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 4
+    },
+    {
+      "channel": "keys",
+      "increment": 0.001,
+      "median_cosine": 0.09379806716234873,
+      "median_gain": 0.1129027531080121,
+      "median_surviving_fraction": 0.001953125,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 8
+    },
+    {
+      "channel": "keys",
+      "increment": 0.001,
+      "median_cosine": 0.09359766009079634,
+      "median_gain": 0.11489440863769089,
+      "median_surviving_fraction": 0.001953125,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 16
+    },
+    {
+      "channel": "keys",
+      "increment": 0.01,
+      "median_cosine": 0.2900811650197602,
+      "median_gain": 0.39625254131114374,
+      "median_surviving_fraction": 0.018589564732142856,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 1
+    },
+    {
+      "channel": "keys",
+      "increment": 0.01,
+      "median_cosine": 0.29008254637549685,
+      "median_gain": 0.39606998249312286,
+      "median_surviving_fraction": 0.018589564732142856,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 2
+    },
+    {
+      "channel": "keys",
+      "increment": 0.01,
+      "median_cosine": 0.2900498124641259,
+      "median_gain": 0.39589028936801085,
+      "median_surviving_fraction": 0.018589564732142856,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 4
+    },
+    {
+      "channel": "keys",
+      "increment": 0.01,
+      "median_cosine": 0.2898160728585072,
+      "median_gain": 0.3947988252089629,
+      "median_surviving_fraction": 0.018589564732142856,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 8
+    },
+    {
+      "channel": "keys",
+      "increment": 0.01,
+      "median_cosine": 0.2884006997735962,
+      "median_gain": 0.39018878760194053,
+      "median_surviving_fraction": 0.018589564732142856,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 16
+    },
+    {
+      "channel": "keys",
+      "increment": 0.03,
+      "median_cosine": 0.4942676484181683,
+      "median_gain": 0.6365791371853498,
+      "median_surviving_fraction": 0.05263671875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 1
+    },
+    {
+      "channel": "keys",
+      "increment": 0.03,
+      "median_cosine": 0.4943353318492806,
+      "median_gain": 0.6298138179525097,
+      "median_surviving_fraction": 0.05263671875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 2
+    },
+    {
+      "channel": "keys",
+      "increment": 0.03,
+      "median_cosine": 0.4941318447775242,
+      "median_gain": 0.628834279853867,
+      "median_surviving_fraction": 0.05263671875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 4
+    },
+    {
+      "channel": "keys",
+      "increment": 0.03,
+      "median_cosine": 0.4938710668506251,
+      "median_gain": 0.6263396865544125,
+      "median_surviving_fraction": 0.05263671875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 8
+    },
+    {
+      "channel": "keys",
+      "increment": 0.03,
+      "median_cosine": 0.49355290150482045,
+      "median_gain": 0.6226444647170835,
+      "median_surviving_fraction": 0.05263671875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 16
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.001,
+      "median_cosine": 0.15585534513984237,
+      "median_gain": 0.20501739655924395,
+      "median_surviving_fraction": 0.0058765411376953125,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 1
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.001,
+      "median_cosine": 0.15583971532034485,
+      "median_gain": 0.20425053784427993,
+      "median_surviving_fraction": 0.0058765411376953125,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 2
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.001,
+      "median_cosine": 0.15581463125756906,
+      "median_gain": 0.20380324661148685,
+      "median_surviving_fraction": 0.0058765411376953125,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 4
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.001,
+      "median_cosine": 0.15577803434494214,
+      "median_gain": 0.20323090310693365,
+      "median_surviving_fraction": 0.0058765411376953125,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 8
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.001,
+      "median_cosine": 0.15574441702096598,
+      "median_gain": 0.20219519940884623,
+      "median_surviving_fraction": 0.0058765411376953125,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 16
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.01,
+      "median_cosine": 0.46777532713344705,
+      "median_gain": 0.6162328192641775,
+      "median_surviving_fraction": 0.055370330810546875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 1
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.01,
+      "median_cosine": 0.46793668594201726,
+      "median_gain": 0.6126859798706095,
+      "median_surviving_fraction": 0.055370330810546875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 2
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.01,
+      "median_cosine": 0.467798924665178,
+      "median_gain": 0.6107665450863637,
+      "median_surviving_fraction": 0.055370330810546875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 4
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.01,
+      "median_cosine": 0.46759991666462086,
+      "median_gain": 0.6069283212386624,
+      "median_surviving_fraction": 0.055370330810546875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 8
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.01,
+      "median_cosine": 0.4674847350877302,
+      "median_gain": 0.5992382330529997,
+      "median_surviving_fraction": 0.055370330810546875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 16
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.03,
+      "median_cosine": 0.705418160454984,
+      "median_gain": 0.8795331198300648,
+      "median_surviving_fraction": 0.15458106994628906,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 1
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.03,
+      "median_cosine": 0.7054751633836072,
+      "median_gain": 0.8798569422164317,
+      "median_surviving_fraction": 0.15458106994628906,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 2
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.03,
+      "median_cosine": 0.705472900397988,
+      "median_gain": 0.8788237991040022,
+      "median_surviving_fraction": 0.15458106994628906,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 4
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.03,
+      "median_cosine": 0.70561502358872,
+      "median_gain": 0.8757860659658461,
+      "median_surviving_fraction": 0.15458106994628906,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 8
+    },
+    {
+      "channel": "recurrent",
+      "increment": 0.03,
+      "median_cosine": 0.7068557104472128,
+      "median_gain": 0.8699470832579954,
+      "median_surviving_fraction": 0.15458106994628906,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 16
+    },
+    {
+      "channel": "values",
+      "increment": 0.001,
+      "median_cosine": 0.09277708551663164,
+      "median_gain": 0.12233809473007232,
+      "median_surviving_fraction": 0.00185546875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 1
+    },
+    {
+      "channel": "values",
+      "increment": 0.001,
+      "median_cosine": 0.09277708551663164,
+      "median_gain": 0.12233809473007232,
+      "median_surviving_fraction": 0.00185546875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 2
+    },
+    {
+      "channel": "values",
+      "increment": 0.001,
+      "median_cosine": 0.0927238930658931,
+      "median_gain": 0.12233809473007232,
+      "median_surviving_fraction": 0.00185546875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 4
+    },
+    {
+      "channel": "values",
+      "increment": 0.001,
+      "median_cosine": 0.09269898617449032,
+      "median_gain": 0.12233809473007232,
+      "median_surviving_fraction": 0.00185546875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 8
+    },
+    {
+      "channel": "values",
+      "increment": 0.001,
+      "median_cosine": 0.09209642445667064,
+      "median_gain": 0.11796270749435947,
+      "median_surviving_fraction": 0.00185546875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 16
+    },
+    {
+      "channel": "values",
+      "increment": 0.01,
+      "median_cosine": 0.342545575078699,
+      "median_gain": 0.43443736162512314,
+      "median_surviving_fraction": 0.0234375,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 1
+    },
+    {
+      "channel": "values",
+      "increment": 0.01,
+      "median_cosine": 0.34254197802989894,
+      "median_gain": 0.43440554695611644,
+      "median_surviving_fraction": 0.0234375,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 2
+    },
+    {
+      "channel": "values",
+      "increment": 0.01,
+      "median_cosine": 0.34258537164737446,
+      "median_gain": 0.4338862466019858,
+      "median_surviving_fraction": 0.0234375,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 4
+    },
+    {
+      "channel": "values",
+      "increment": 0.01,
+      "median_cosine": 0.3425285331805208,
+      "median_gain": 0.43221820308104303,
+      "median_surviving_fraction": 0.0234375,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 8
+    },
+    {
+      "channel": "values",
+      "increment": 0.01,
+      "median_cosine": 0.3423752772412191,
+      "median_gain": 0.4308258554997852,
+      "median_surviving_fraction": 0.0234375,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 16
+    },
+    {
+      "channel": "values",
+      "increment": 0.03,
+      "median_cosine": 0.5870346309355495,
+      "median_gain": 0.7443679370832315,
+      "median_surviving_fraction": 0.069091796875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 1
+    },
+    {
+      "channel": "values",
+      "increment": 0.03,
+      "median_cosine": 0.5870307201548793,
+      "median_gain": 0.7444788649520945,
+      "median_surviving_fraction": 0.069091796875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 2
+    },
+    {
+      "channel": "values",
+      "increment": 0.03,
+      "median_cosine": 0.5871071832568899,
+      "median_gain": 0.7432714447062104,
+      "median_surviving_fraction": 0.069091796875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 4
+    },
+    {
+      "channel": "values",
+      "increment": 0.03,
+      "median_cosine": 0.5870632257703394,
+      "median_gain": 0.7395133344955176,
+      "median_surviving_fraction": 0.069091796875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 8
+    },
+    {
+      "channel": "values",
+      "increment": 0.03,
+      "median_cosine": 0.5873024018345541,
+      "median_gain": 0.7331962232911204,
+      "median_surviving_fraction": 0.069091796875,
+      "mode": "repeated_bf16_storage_write",
+      "steps": 16
+    }
+  ],
+  "records": "/data/CSK/J-space-project/jstate-closure/results/v15/processed/shadow_accumulation_v15.parquet",
+  "records_sha256": "16bdf27bafda5ff8ec21c8fe0064f06f01beac7880ed6a897cc152a1ae6f7e28",
+  "role": "diagnostic_train"
+}

@@ -1,0 +1,14 @@
+{
+  "SNR_rule": "both signed J effects >= frozen V14 MIN_CAUSAL_EFFECT_NORM; clean-repeat floor 0 on V14 panel",
+  "freeze_digest": "a6e55f93d6d71c617e549d85c1c8820f152f2d42e39f63bdb1d07f402812fde7",
+  "input_hashes": {
+    "results/v15/processed/finite_operator_columns_v15.parquet": "df5fd1a7dd75814773d5bbe41e66164bd769ed5b343bfbb83468ee24a618a87d",
+    "results/v15/processed/finite_operator_spectra_v15.json": "89a1555d0c4b5e4f684778fc0312a7325b39ce97667d88351843e18fd6852969",
+    "scripts/analyze_writable_rank_v15.py": "36eb064d027ff4fafb3c46beb20690c3b4ac4135be8d04adfa4d9b2f72e3c7a3"
+  },
+  "parent_freeze_digest": "8cccf28e4fd09484e1dd2aaf6dcf2abb311695701e439a40eaee6bdee44f7c35",
+  "protocol_version": "quantization_aware_causal_actuation_v15_rank_analysis",
+  "qualified_spectrum_is_restricted_submatrix": true,
+  "role": "diagnostic_train",
+  "schema_version": 24
+}

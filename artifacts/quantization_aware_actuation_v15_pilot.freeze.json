@@ -1,0 +1,12 @@
+{
+  "freeze_digest": "a6e84657c6add7c19b6dc8223c5a475f7c6860a112e2ff41c93eefb71365091e",
+  "input_hashes": {
+    "results/v15/processed/actuator_transfer_v15.parquet": "2c719c29467cc6c6e5068e76472d757676d5ec9bb688e326046b4566c5e90cf8",
+    "src/jclosure/experiments/operator_v15.py": "841e6eb133a5bb241092f402aabd079a340c4993bac6713e6bccdd5d58ccb782"
+  },
+  "parent_freeze_digest": "8cccf28e4fd09484e1dd2aaf6dcf2abb311695701e439a40eaee6bdee44f7c35",
+  "protocol_version": "quantization_aware_causal_actuation_v15_pilot",
+  "role": "diagnostic_train",
+  "schema_version": 24,
+  "selection_rule": "first candidate with both signed J effects >= V14 threshold, nonzero writeback, state gain in frozen interval, and signed-effect norm ratio <=5; no post-hoc epsilon adjustment"
+}

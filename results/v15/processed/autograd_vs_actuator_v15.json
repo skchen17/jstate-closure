@@ -1,0 +1,151 @@
+{
+  "freeze_digest": "a6e84657c6add7c19b6dc8223c5a475f7c6860a112e2ff41c93eefb71365091e",
+  "medians_by_target_channel": [
+    {
+      "channel": "conv",
+      "cosine": 0.9031086014957543,
+      "count": 6,
+      "norm_ratio": 1.0170222208327195,
+      "realized_state_cosine": 0.9998128858525697,
+      "relative_l2": 0.44558022630272964,
+      "target": "j"
+    },
+    {
+      "channel": "conv",
+      "cosine": 0.748738276048085,
+      "count": 6,
+      "norm_ratio": 1.0138791154445752,
+      "realized_state_cosine": 0.9998128858525697,
+      "relative_l2": 0.7005075200446054,
+      "target": "logits"
+    },
+    {
+      "channel": "conv",
+      "cosine": 0.7483364662214769,
+      "count": 6,
+      "norm_ratio": 1.0574568488631004,
+      "realized_state_cosine": 0.9998128858525697,
+      "relative_l2": 0.6922823247948489,
+      "target": "semantic_continuous"
+    },
+    {
+      "channel": "conv",
+      "cosine": 0.7835214509432699,
+      "count": 6,
+      "norm_ratio": 1.0150420134937779,
+      "realized_state_cosine": 0.9998128858525697,
+      "relative_l2": 0.651427730632395,
+      "target": "stacked_normalized"
+    },
+    {
+      "channel": "conv",
+      "cosine": 0.7170213006318202,
+      "count": 6,
+      "norm_ratio": 0.9526262927365154,
+      "realized_state_cosine": 0.9998128858525697,
+      "relative_l2": 0.7534997648265327,
+      "target": "workspace"
+    },
+    {
+      "channel": "joint",
+      "cosine": 0.9971463655126914,
+      "count": 7,
+      "norm_ratio": 1.0246506600117096,
+      "realized_state_cosine": 0.9996942508541953,
+      "relative_l2": 0.08000431754396735,
+      "target": "j"
+    },
+    {
+      "channel": "joint",
+      "cosine": 0.9836513784811464,
+      "count": 7,
+      "norm_ratio": 1.0367433976138434,
+      "realized_state_cosine": 0.9996942508541953,
+      "relative_l2": 0.193816197095347,
+      "target": "logits"
+    },
+    {
+      "channel": "joint",
+      "cosine": 0.9847344082464615,
+      "count": 7,
+      "norm_ratio": 0.9965579589228011,
+      "realized_state_cosine": 0.9996942508541953,
+      "relative_l2": 0.17513206713139753,
+      "target": "semantic_continuous"
+    },
+    {
+      "channel": "joint",
+      "cosine": 0.9807213254431177,
+      "count": 7,
+      "norm_ratio": 1.0109547333478996,
+      "realized_state_cosine": 0.9996942508541953,
+      "relative_l2": 0.19644686449100957,
+      "target": "stacked_normalized"
+    },
+    {
+      "channel": "joint",
+      "cosine": 0.9548110431666393,
+      "count": 7,
+      "norm_ratio": 1.020277481783722,
+      "realized_state_cosine": 0.9996942508541953,
+      "relative_l2": 0.2985040963710305,
+      "target": "workspace"
+    },
+    {
+      "channel": "recurrent",
+      "cosine": 0.31676871252054395,
+      "count": 3,
+      "norm_ratio": 0.3576082857677017,
+      "realized_state_cosine": 0.999940050139463,
+      "relative_l2": 0.9514148833299118,
+      "target": "j"
+    },
+    {
+      "channel": "recurrent",
+      "cosine": 0.19924366594832027,
+      "count": 3,
+      "norm_ratio": 0.5645919148172688,
+      "realized_state_cosine": 0.999940050139463,
+      "relative_l2": 1.0172681051640564,
+      "target": "logits"
+    },
+    {
+      "channel": "recurrent",
+      "cosine": 0.03148899711025698,
+      "count": 3,
+      "norm_ratio": 0.3922111468748349,
+      "realized_state_cosine": 0.999940050139463,
+      "relative_l2": 1.0561520186778743,
+      "target": "semantic_continuous"
+    },
+    {
+      "channel": "recurrent",
+      "cosine": 0.1301415191614755,
+      "count": 3,
+      "norm_ratio": 0.43147842594915636,
+      "realized_state_cosine": 0.999940050139463,
+      "relative_l2": 1.0362755986622048,
+      "target": "stacked_normalized"
+    },
+    {
+      "channel": "recurrent",
+      "cosine": 0.5110342276327936,
+      "count": 3,
+      "norm_ratio": 0.6280650760771979,
+      "realized_state_cosine": 0.999940050139463,
+      "relative_l2": 0.8925653431182323,
+      "target": "workspace"
+    }
+  ],
+  "records": "/data/CSK/J-space-project/jstate-closure/results/v15/processed/autograd_vs_actuator_v15.parquet",
+  "records_sha256": "28a645be8151630a8b02c8d60dcfc6735314197add35e85fdb90faf51a29eaae",
+  "requested_direction_channel_count": 100,
+  "role": "diagnostic_train",
+  "selected_direction_channel_count": 16,
+  "target_scales": {
+    "j": 0.00637603926805087,
+    "logits": 0.37930603920841477,
+    "semantic_continuous": 0.4250155426398896,
+    "workspace": 0.14939923966331858
+  }
+}

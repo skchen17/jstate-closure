@@ -1,0 +1,23 @@
+{
+  "freeze_digest": "b366c35f00f78a10b9fc70fc10b493d6ade00249036f454a7e6d242b9e198c2f",
+  "heldout_probe_rule": "first half basis / second half target coverage",
+  "input_hashes": {
+    "results/v15/processed/finite_operator_columns_v15.parquet": "df5fd1a7dd75814773d5bbe41e66164bd769ed5b343bfbb83468ee24a618a87d",
+    "results/v15/processed/writable_causal_rank_v15.json": "56f08b0403bc276f548d7368264bf54abaa8c09d7dc78a20d4f103c74b5e4527",
+    "src/jclosure/experiments/basis_v15.py": "96d716f2a8225b51b26c835ecea7efb0ed9d0ffcf2f033254c7940a5be04f5d6"
+  },
+  "method": "SVD of target-normalized finite response columns divided by realized-state norm; diagonal physical cost approximation",
+  "not_full_physical_state_metric": true,
+  "not_pca": true,
+  "parent_freeze_digest": "8cccf28e4fd09484e1dd2aaf6dcf2abb311695701e439a40eaee6bdee44f7c35",
+  "protocol_version": "quantization_aware_causal_actuation_v15_basis",
+  "ranks": [
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "role": "diagnostic_train",
+  "schema_version": 24
+}

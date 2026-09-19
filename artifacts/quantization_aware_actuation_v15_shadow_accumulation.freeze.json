@@ -1,0 +1,25 @@
+{
+  "freeze_digest": "b295fa97cfbdee0a51c564aea4b1c8f105a85d0d6548bc72111eb890d4c8aae8",
+  "increments": [
+    0.001,
+    0.01,
+    0.03
+  ],
+  "input_hashes": {
+    "results/v15/processed/actuator_transfer_v15.parquet": "2c719c29467cc6c6e5068e76472d757676d5ec9bb688e326046b4566c5e90cf8",
+    "src/jclosure/experiments/shadow_v15.py": "01d450a6503f088e32009131f3a1b0dac94d867fdd5b1c4f6e318ef93fde0fe2"
+  },
+  "model_forward_executed": false,
+  "parent_freeze_digest": "8cccf28e4fd09484e1dd2aaf6dcf2abb311695701e439a40eaee6bdee44f7c35",
+  "protocol_version": "quantization_aware_causal_actuation_v15_shadow_accumulation",
+  "role": "diagnostic_train",
+  "schema_version": 24,
+  "shadow_definition": "FP32 accumulate all increments, one BF16 cast immediately before model consumption; for one final write equals cast-after-add of total delta",
+  "step_counts": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ]
+}

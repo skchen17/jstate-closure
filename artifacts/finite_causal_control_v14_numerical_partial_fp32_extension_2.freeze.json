@@ -1,0 +1,20 @@
+{
+  "epsilons": [
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "freeze_digest": "0125a0ff15632875abd1cfe81805f575762560c7f6e3f7f5e54708447afc940d",
+  "model_weights_changed": false,
+  "parent_freeze_digest": "d268ee6932dbe1bfa1eeecca57c3fc3e97c48fa2793c0564a5e05f6419431cbf",
+  "precision_mode": "fp32_recurrent_and_conv_bf16_kv",
+  "protocol_version": "finite_causal_control_v14_numerical_partial_fp32_extension_2",
+  "reason": "all-FP32 cache rejected by BF16 attention query; isolate REC/conv precision",
+  "schema_version": 23,
+  "source_hashes": {
+    "results/v14/processed/jvp_finite_writeback_audit_v14.parquet": "280a16eaaf5f7478221808ba8e09a42689bbd01daf79346e44aaa9637ed1ca28",
+    "src/jclosure/experiments/numerics_v14.py": "668fdbccacf8037873d4e9e521fe9f7264c0d825a919f31583041a01095fe97d",
+    "src/jclosure/experiments/numerics_v14_extension_2.py": "4119fca1c1de21024f3ac3950e4e38c6996da01b4a3fe0494b714ee09ce27654"
+  }
+}

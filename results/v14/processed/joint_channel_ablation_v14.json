@@ -1,0 +1,28 @@
+{
+  "by_channel": [
+    {
+      "j_cosine": 0.3855648895826823,
+      "j_norm_ratio": 0.32841226941914414,
+      "removed_channel": "conv",
+      "required_fraction": 1.0
+    },
+    {
+      "j_cosine": 0.9998953468271848,
+      "j_norm_ratio": 0.9985273185921134,
+      "removed_channel": "kv",
+      "required_fraction": 0.0
+    },
+    {
+      "j_cosine": 0.8403351413157839,
+      "j_norm_ratio": 0.9755449301096746,
+      "removed_channel": "recurrent",
+      "required_fraction": 0.26666666666666666
+    }
+  ],
+  "joint_required_fraction": 0.4222222222222222,
+  "protocol_version": "finite_causal_control_v14_channel_ablation",
+  "qualified_rows": 45,
+  "records": "results/v14/processed/joint_channel_ablation_v14.parquet",
+  "records_sha256": "726405bf2ee089e155b41d1af25852bfc8f89ad837850b51713e7fbd54bc7819",
+  "source_freeze_digest": "05da924b5b71038936b20005831b63145f3b24a3bcc8b282fb6b9531c6033df0"
+}

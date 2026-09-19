@@ -1,0 +1,102 @@
+{
+  "holonomy": [
+    {
+      "coordinate_return_error": 0.38976974728727554,
+      "direct_indirect_coordinate_error": 0.38976974728727554,
+      "j_effect_return_error": 0.11768050590339148,
+      "method": "grassmann_geodesic",
+      "subspace_holonomy_degrees": 22.586812699430357
+    },
+    {
+      "coordinate_return_error": 1.0506279077061154,
+      "direct_indirect_coordinate_error": 1.0621695465998795,
+      "j_effect_return_error": 0.31363254584241695,
+      "method": "j_response",
+      "subspace_holonomy_degrees": 67.99589283175563
+    },
+    {
+      "coordinate_return_error": 0.38976974728727554,
+      "direct_indirect_coordinate_error": 0.38976974728727554,
+      "j_effect_return_error": 0.11768050590339148,
+      "method": "procrustes",
+      "subspace_holonomy_degrees": 22.586812699430357
+    },
+    {
+      "coordinate_return_error": 0.5014141095578162,
+      "direct_indirect_coordinate_error": 0.3322220866393592,
+      "j_effect_return_error": 0.1807213435909684,
+      "method": "projector",
+      "subspace_holonomy_degrees": 49.1572324424459
+    },
+    {
+      "coordinate_return_error": 0.0,
+      "direct_indirect_coordinate_error": 0.0,
+      "j_effect_return_error": 0.0,
+      "method": "unaligned",
+      "subspace_holonomy_degrees": 0.0
+    }
+  ],
+  "parent_freeze_digest": "d268ee6932dbe1bfa1eeecca57c3fc3e97c48fa2793c0564a5e05f6419431cbf",
+  "protocol_version": "finite_causal_control_v14_transport",
+  "rank": 16,
+  "records": {
+    "holonomy_loops": {
+      "path": "results/v14/processed/holonomy_loops_v14.parquet",
+      "rows": 50,
+      "sha256": "ec3737f84f69848d887aaa9a73c31a5b69b542602cec4916fdf0113efdde45fe"
+    },
+    "transport_pairs": {
+      "path": "results/v14/processed/transport_pairs_v14.parquet",
+      "rows": 1900,
+      "sha256": "50be599741969de90e61304aaca1afa865f2e18af8819808399cacea856a67a1"
+    },
+    "transported_path_dimension": {
+      "path": "results/v14/processed/transported_path_dimension_v14.parquet",
+      "rows": 10,
+      "sha256": "fc2b55ad545dbf8a956078d07a89caddb0a036bea04857ed99d91e4747365395"
+    }
+  },
+  "same_prompt_comparison": [
+    {
+      "j_direction_cosine": 0.5837263087389815,
+      "logits_direction_cosine": 0.3110751844948558,
+      "method": "grassmann_geodesic",
+      "raw_direction_cosine": 0.7958496188499518,
+      "semantic_continuous_direction_cosine": 0.282049031270478,
+      "workspace_direction_cosine": 0.5364994761704491
+    },
+    {
+      "j_direction_cosine": 0.8319346051861576,
+      "logits_direction_cosine": 0.350981356661615,
+      "method": "j_response",
+      "raw_direction_cosine": 0.4623257780718547,
+      "semantic_continuous_direction_cosine": 0.281839043190053,
+      "workspace_direction_cosine": 0.4313561523539316
+    },
+    {
+      "j_direction_cosine": 0.5837263087389815,
+      "logits_direction_cosine": 0.3110751844948558,
+      "method": "procrustes",
+      "raw_direction_cosine": 0.7958496188499518,
+      "semantic_continuous_direction_cosine": 0.282049031270478,
+      "workspace_direction_cosine": 0.5364994761704491
+    },
+    {
+      "j_direction_cosine": 0.5970090564550024,
+      "logits_direction_cosine": 0.32457807608209627,
+      "method": "projector",
+      "raw_direction_cosine": 0.8327532235452191,
+      "semantic_continuous_direction_cosine": 0.29310551762679365,
+      "workspace_direction_cosine": 0.5486823543105752
+    },
+    {
+      "j_direction_cosine": 0.048094142907779906,
+      "logits_direction_cosine": -0.0010206203084241756,
+      "method": "unaligned",
+      "raw_direction_cosine": 0.03753160422635157,
+      "semantic_continuous_direction_cosine": 0.0010154831432204706,
+      "workspace_direction_cosine": 0.045648581459600504
+    }
+  ],
+  "stage_freeze_sha256": "4b9f7446dfdacfbd16fb084d7c6f4b2ff4528e7f81318ab974b9b5aebee7b9ae"
+}

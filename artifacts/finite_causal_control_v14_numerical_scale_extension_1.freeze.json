@@ -1,0 +1,22 @@
+{
+  "epsilons": [
+    0.15,
+    0.3,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "estimand_changed": false,
+  "freeze_digest": "a232ec478862444acd7a29ec2de7b1ff739e00710ac79f0e599f19280bcbc709",
+  "parent_freeze_digest": "d268ee6932dbe1bfa1eeecca57c3fc3e97c48fa2793c0564a5e05f6419431cbf",
+  "precision_modes_changed": false,
+  "protocol_version": "finite_causal_control_v14_numerical_scale_extension_1",
+  "reason": "no JVP/finite-difference agreement at epsilon <= 0.1",
+  "schema_version": 23,
+  "source_hashes": {
+    "results/v14/processed/jvp_finite_writeback_audit_v14.parquet": "280a16eaaf5f7478221808ba8e09a42689bbd01daf79346e44aaa9637ed1ca28",
+    "src/jclosure/experiments/numerics_v14.py": "668fdbccacf8037873d4e9e521fe9f7264c0d825a919f31583041a01095fe97d",
+    "src/jclosure/experiments/numerics_v14_extension_1.py": "71e0e0d7e90cd81d2a00b895c29003daf9275b4c13c7e5689d9668a5fb0b58e4"
+  },
+  "source_results_preserved": true
+}

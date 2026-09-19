@@ -596,3 +596,11 @@ Formal decision: **V13-F — HIGH-DIMENSIONAL WRITABLE STATE**.
 
 Historical V1–V12 conclusions remain frozen. V13 causal-edit results are not described as absolute state replacement, and restricted exact-JVP rank is not described as full raw-state intrinsic dimension.
 <!-- V13_END -->
+
+<!-- V14_START -->
+## V14 — Finite Causal Control and Tangent Transport
+
+Formal procedural outcome: **V14-STOP — NUMERICAL_INTERFACE_GATE_FAILED**. The BF16 persistent-state writeback creates a measured finite-effect floor; the frozen all-target exact-JVP/finite-difference equivalence gate did not pass through ε=2. `MIN_CAUSAL_EFFECT_NORM = 0.00680280`. SNR relabeling explains part of V13's small-alpha anomaly, not the later-horizon failures. First- and second-order valid radii: `None` / `None`. Train-atlas transport and holonomy are measurable, but they do not establish a global compact coordinate system.
+
+Development closed-loop causal steering was run on ten validation cases; independent confirmation was **not** run because no numerically validated finalist was available. V14-A through V14-E are not fully established. H2 remains; H3 is not supported. Absolute state replacement and autonomous controller training are **not authorized**. V1–V13 conclusions remain frozen. See `reports/V14_COMPLETE_REPORT.md` for the full report bundle.
+<!-- V14_END -->

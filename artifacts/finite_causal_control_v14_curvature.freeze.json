@@ -1,0 +1,30 @@
+{
+  "curvature_fit_radius": 1.0,
+  "freeze_digest": "4d27b2f63ed064c1ab10870a8eb1457280f0740b9057f5a64930a86996b0efed",
+  "heldout_radii": [
+    0.5,
+    2.0
+  ],
+  "interpretation": "finite-scale diagnostic only until JVP equivalence passes",
+  "local_rank": 9,
+  "mixed_pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "parent_freeze_digest": "d268ee6932dbe1bfa1eeecca57c3fc3e97c48fa2793c0564a5e05f6419431cbf",
+  "protocol_version": "finite_causal_control_v14_curvature",
+  "rank_source": "V13 median r95 at 512 probes",
+  "schema_version": 23,
+  "source_hashes": {
+    "results/v13/processed/causal_probe_scaling_v13.parquet": "da45a7ec022c0ec2cfad43e47123cd595dd00de92bc57bcf56d19ea4487152af",
+    "results/v14/processed/numerical_snr_summary_v14.json": "85c1fbfcc707558668edc4ebae639dd3558b8314be4569f97dbfa89c621dfd4c",
+    "src/jclosure/experiments/curvature_v14.py": "55f258ebffc484c7f215b9eb9357cea23f5c013568357f87817d0644b0f92634"
+  },
+  "source_split": "V13 train anchors"
+}

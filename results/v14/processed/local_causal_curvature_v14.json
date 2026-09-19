@@ -1,0 +1,147 @@
+{
+  "finite_scale_diagnostic_not_differential_hessian": true,
+  "first_order_valid_radius": null,
+  "pooled": [
+    {
+      "direction": 0.9210308674710073,
+      "magnitude": 1.2533643260743164,
+      "radius": 0.5,
+      "relative_l2": 0.5410409207324772,
+      "surrogate": "linear",
+      "target": "j"
+    },
+    {
+      "direction": 0.9487680196080863,
+      "magnitude": 1.1451466601660558,
+      "radius": 0.5,
+      "relative_l2": 0.421732643474977,
+      "surrogate": "quadratic",
+      "target": "j"
+    },
+    {
+      "direction": 0.8671103928475973,
+      "magnitude": 1.0964317846236107,
+      "radius": 0.5,
+      "relative_l2": 0.6018057011929393,
+      "surrogate": "linear",
+      "target": "logits"
+    },
+    {
+      "direction": 0.9073983851147469,
+      "magnitude": 1.1660828313007523,
+      "radius": 0.5,
+      "relative_l2": 0.528734530646044,
+      "surrogate": "quadratic",
+      "target": "logits"
+    },
+    {
+      "direction": 0.8542847255771728,
+      "magnitude": 1.0401649787186908,
+      "radius": 0.5,
+      "relative_l2": 0.681262040754953,
+      "surrogate": "linear",
+      "target": "semantic_continuous"
+    },
+    {
+      "direction": 0.9258590128137442,
+      "magnitude": 1.0634877804688478,
+      "radius": 0.5,
+      "relative_l2": 0.462769126631611,
+      "surrogate": "quadratic",
+      "target": "semantic_continuous"
+    },
+    {
+      "direction": 0.7547513992631533,
+      "magnitude": 0.9314404922984415,
+      "radius": 0.5,
+      "relative_l2": 0.7009970104719261,
+      "surrogate": "linear",
+      "target": "workspace"
+    },
+    {
+      "direction": 0.9243594013014657,
+      "magnitude": 1.028293225332836,
+      "radius": 0.5,
+      "relative_l2": 0.4081068977318352,
+      "surrogate": "quadratic",
+      "target": "workspace"
+    },
+    {
+      "direction": 0.6431388060993747,
+      "magnitude": 2.595025872467322,
+      "radius": 2.0,
+      "relative_l2": 2.288538130459621,
+      "surrogate": "linear",
+      "target": "j"
+    },
+    {
+      "direction": 0.8377418283778737,
+      "magnitude": 2.877783180146539,
+      "radius": 2.0,
+      "relative_l2": 2.2531621738578873,
+      "surrogate": "quadratic",
+      "target": "j"
+    },
+    {
+      "direction": 0.5558460392332929,
+      "magnitude": 1.546652418060621,
+      "radius": 2.0,
+      "relative_l2": 1.2565275899054553,
+      "surrogate": "linear",
+      "target": "logits"
+    },
+    {
+      "direction": 0.7992477900390956,
+      "magnitude": 2.2319272407027957,
+      "radius": 2.0,
+      "relative_l2": 1.4525297612688097,
+      "surrogate": "quadratic",
+      "target": "logits"
+    },
+    {
+      "direction": 0.53450523262615,
+      "magnitude": 1.561135573599029,
+      "radius": 2.0,
+      "relative_l2": 1.3893895728197458,
+      "surrogate": "linear",
+      "target": "semantic_continuous"
+    },
+    {
+      "direction": 0.8039680077560999,
+      "magnitude": 2.3146571371484455,
+      "radius": 2.0,
+      "relative_l2": 1.7235802426454845,
+      "surrogate": "quadratic",
+      "target": "semantic_continuous"
+    },
+    {
+      "direction": 0.17225045684781423,
+      "magnitude": 0.6401470338854535,
+      "radius": 2.0,
+      "relative_l2": 1.1182490421148636,
+      "surrogate": "linear",
+      "target": "workspace"
+    },
+    {
+      "direction": 0.9332065008354427,
+      "magnitude": 1.5868952084247236,
+      "radius": 2.0,
+      "relative_l2": 0.9019055849322093,
+      "surrogate": "quadratic",
+      "target": "workspace"
+    }
+  ],
+  "protocol_version": "finite_causal_control_v14_curvature",
+  "records": {
+    "directional": {
+      "path": "results/v14/processed/local_causal_curvature_v14.parquet",
+      "sha256": "b4f77dd87dec439efa6edf02b02650e5069d3b7a9e8180fced4715c30125c5f0"
+    },
+    "mixed": {
+      "path": "results/v14/processed/local_causal_mixed_curvature_v14.parquet",
+      "sha256": "43fc9297caaaa170a07bb1321e4e8615e905ac659f35705ac318eefd2d470d70"
+    }
+  },
+  "second_order_valid_radius": null,
+  "source_freeze_digest": "4d27b2f63ed064c1ab10870a8eb1457280f0740b9057f5a64930a86996b0efed"
+}

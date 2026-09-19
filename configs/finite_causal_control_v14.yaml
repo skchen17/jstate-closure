@@ -1,0 +1,40 @@
+name: Finite Causal Control and Tangent Transport
+protocol_version: finite_causal_control_v14
+parent_commit: 37df399e4bba8afaca6d99721fe8ceee653e78ee
+numerical_audit:
+  source_split: train
+  anchors_per_family: 1
+  token_positions: [0]
+  direction_indices: [0, 103, 206, 308, 410]
+  epsilons: [0.00001, 0.00003, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1]
+  clean_repeats: 3
+  target_horizon: 1
+  targets: [j, logits, semantic_continuous, workspace]
+  jvp_cosine_gate: 0.95
+  jvp_relative_error_gate: 0.2
+  snr_minimum: 10.0
+  minimum_effect_quantile: 0.05
+  precision_modes: [bf16_delta_then_writeback, v13_fp32_accumulate_bf16_writeback, fp32_cache_if_supported]
+development:
+  source_split: v13_validation
+  panel_per_family: 5
+  seed: 20270922
+confirmatory:
+  source: new_v14_teacher_correct_bank
+  candidate_seed: 20270923
+  panel_per_family: 5
+  selection_without_final_outcomes: true
+control:
+  horizons: [1, 2, 4, 8]
+  possible_horizon_objectives: [[1], [1, 2], [1, 2, 4], [1, 2, 4, 8]]
+  candidate_ranks: [8, 16, 21]
+  maximum_steps: 8
+  trust_radii: [0.05, 0.1, 0.25, 0.5, 1.0]
+  regularization: [0.0001, 0.001, 0.01]
+  causal_gates:
+    j_direction_minimum: 0.8
+    magnitude_minimum: 0.8
+    magnitude_maximum: 1.2
+    output_direction_minimum: 0.8
+    semantic_legacy_minimum: 0.8
+    task_sign_minimum: 0.8

@@ -1,0 +1,43 @@
+{
+  "development_validation": {
+    "base_trial_ids": [
+      "v13-validation-02ab5f865a86e9d07cae",
+      "v13-validation-1c00a3eb730ee66cb951",
+      "v13-validation-382bf334fa9a9db26ae4",
+      "v13-validation-39ac06febc03317a60f6",
+      "v13-validation-49f8fdc291b4114bc8b9",
+      "v13-validation-4a82e5de3e3915349b03",
+      "v13-validation-5181cf3c972ff15b8d93",
+      "v13-validation-6e2ae455d409a474f9ab",
+      "v13-validation-bc7503d1bf96b410188b",
+      "v13-validation-c29fad34c539730cca3b"
+    ],
+    "count": 10,
+    "id_sha256": "955ea2e3b3e0f05159838a99e88dfd9b752287a425d86a5374500f438f0547c9"
+  },
+  "diagnostic_development_disjoint": true,
+  "diagnostic_train": {
+    "base_trial_ids": [
+      "v13-train-07385890263e531ff8e3",
+      "v13-train-4e63d69f5c3f40704813",
+      "v13-train-6bb01e7e53b688215c6e",
+      "v13-train-90d330b478659e3d0bc3",
+      "v13-train-c6eec494888d6d518e28"
+    ],
+    "count": 5,
+    "id_sha256": "b7efb4bab88dd3c2ab6e89ab0b017136e2cc26efe14ced28b8fb0b9867e97544"
+  },
+  "freeze_digest": "07faac4e326aa22d3efbc852edc006f12668a7b7371865ca32461208e2a6c473",
+  "independent_final": {
+    "reason": "numerical-JVP agreement gate failed before finalist freeze",
+    "status": "NOT_YET_CREATED_OR_SELECTED"
+  },
+  "parent_freeze_digest": "d268ee6932dbe1bfa1eeecca57c3fc3e97c48fa2793c0564a5e05f6419431cbf",
+  "protocol_version": "finite_causal_control_v14_splits",
+  "schema_version": 23,
+  "source_hashes": {
+    "results/v13/processed/moving_tangent_oracle_development_v13.parquet": "e2de0a15b294fb9c5678a7772340bdb359026bb7f354d8242cfeb7ad890dbfde",
+    "results/v14/processed/jvp_finite_writeback_audit_v14.json": "7f28b811936037444f909d4f6ce586041f756e6ad54579222944cd4d04a25b1c",
+    "scripts/freeze_v14_splits.py": "04d32ef0b13f2116453b1785f469b14b3a477499deac4171261bb479aec84049"
+  }
+}

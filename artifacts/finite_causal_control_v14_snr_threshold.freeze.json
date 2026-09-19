@@ -1,0 +1,24 @@
+{
+  "development_only": true,
+  "freeze_digest": "0eb484ad5310d349e3ebe34fa39d929c5541b161afda90a4b6accf5825eb32cf",
+  "min_causal_effect_norm": 0.006802803347818553,
+  "parent_freeze_digest": "d268ee6932dbe1bfa1eeecca57c3fc3e97c48fa2793c0564a5e05f6419431cbf",
+  "protocol_version": "finite_causal_control_v14_snr_threshold",
+  "reliability_rule": "all targets median cosine>=0.95 and median relative L2<=0.20",
+  "schema_version": 23,
+  "signal_floor_rule": "5th percentile of nonzero finite-writeback effect per target",
+  "source_hashes": {
+    "results/v13/processed/local_linearity_radius_v13.parquet": "c520269f5e1624c949bf20f0375e9a8450cc25329a084dfd85dad05404a693ea",
+    "results/v13/processed/moving_tangent_oracle_development_v13.parquet": "e2de0a15b294fb9c5678a7772340bdb359026bb7f354d8242cfeb7ad890dbfde",
+    "results/v14/processed/jvp_finite_writeback_audit_v14.parquet": "280a16eaaf5f7478221808ba8e09a42689bbd01daf79346e44aaa9637ed1ca28",
+    "results/v14/processed/numerical_scale_extension_1/jvp_finite_writeback_audit_v14.parquet": "4391ad49b4533223297fe4ffff9f30e30a1b28b74832a6f6562117b37129b9ba",
+    "src/jclosure/experiments/analyze_numerics_v14.py": "5b5ca600636360dfc0f63b9573605ce0ea659e27c25af60fa56336af67ff580d"
+  },
+  "target_quantization_floors": {
+    "j": 0.0009409313033672384,
+    "logits": 0.125,
+    "semantic_continuous": 0.12495647843152638,
+    "workspace": 0.036365347332082194
+  },
+  "teacher_effect_quantile": 0.05
+}

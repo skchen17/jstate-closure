@@ -1,0 +1,28 @@
+{
+  "absolute_state_replacement_authorized": false,
+  "all_target_numerical_gate_pass": false,
+  "autonomous_controller_authorized": false,
+  "development_gate_pass": {
+    "closed_loop_finite_response_h1": false,
+    "closed_loop_finite_response_h1_h2_h4_h8": false
+  },
+  "finalist_status": "NO_ELIGIBLE_FINALIST",
+  "freeze_digest": "ffcab29c9b960d1f4dfc490225ced4bc44613ba8841e6f0ca74185015058144c",
+  "h2_remains": true,
+  "h3_supported": false,
+  "independent_final_panel_opened": false,
+  "new_independent_bank_created": false,
+  "parent_freeze_digest": "d268ee6932dbe1bfa1eeecca57c3fc3e97c48fa2793c0564a5e05f6419431cbf",
+  "protocol_version": "finite_causal_control_v14_finalist_decision",
+  "reason": "numerical-JVP gate and all-horizon development causal gates failed",
+  "schema_version": 23,
+  "source_hashes": {
+    "artifacts/finite_causal_control_v14_splits.freeze.json": "bff312bd0211fc9f53a11779357b2d37ae01b9dd2c2567c34a53d7b31deb1bd5",
+    "results/v14/processed/closed_loop_fidelity_development_v14.parquet": "a39458b89fbf8f3bc1d21ab14910389e4cd74c765f5bda1f7f9a8f4c7d3413e2",
+    "results/v14/processed/joint_channel_ablation_v14.json": "f198056f129e7b8773e7ce5b6870277fd3654ceac63d5bc5ef21afd5cd787e66",
+    "results/v14/processed/local_causal_curvature_v14.json": "81bbf67ad52f6858fad1511ba0e26c91ff4bd228588e06fd6d8d1cb7a33863b5",
+    "results/v14/processed/numerical_snr_summary_v14.json": "85c1fbfcc707558668edc4ebae639dd3558b8314be4569f97dbfa89c621dfd4c",
+    "results/v14/processed/transport_analysis_v14.json": "bae08997365378ef6ecaa084dcf5ba9c351ac3aa07bc30948b83c4004d29ca18",
+    "scripts/freeze_v14_finalist_decision.py": "0afa5297ff862e5ab091ea30d13293f8273e022e32b8491b71846dfa575ba623"
+  }
+}

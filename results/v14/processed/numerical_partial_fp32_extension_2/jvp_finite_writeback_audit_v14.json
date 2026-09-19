@@ -1,0 +1,194 @@
+{
+  "clean_repeat_records": "results/v14/processed/numerical_partial_fp32_extension_2/clean_repeat_noise_v14.parquet",
+  "clean_repeat_records_sha256": "00fa7cc7bd90f784129d290ae35ba55c2188bb57320a6a3f8f3a2b4799c525de",
+  "panel_ids": [
+    "v13-train-90d330b478659e3d0bc3",
+    "v13-train-6bb01e7e53b688215c6e",
+    "v13-train-4e63d69f5c3f40704813",
+    "v13-train-c6eec494888d6d518e28",
+    "v13-train-07385890263e531ff8e3"
+  ],
+  "pooled": [
+    {
+      "count": 25,
+      "epsilon": 0.001,
+      "median_cosine": 0.03798124947130163,
+      "median_effect_norm": 0.00112177239691491,
+      "median_relative_l2": 204.31299695309568,
+      "median_snr": 1.12177239691491e+17,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "j",
+      "zero_writeback_fraction": 0.0
+    },
+    {
+      "count": 25,
+      "epsilon": 0.001,
+      "median_cosine": 0.0055789995877196285,
+      "median_effect_norm": 0.16535945694153692,
+      "median_relative_l2": 423.54995638732044,
+      "median_snr": 1.6535945694153693e+19,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "logits",
+      "zero_writeback_fraction": 0.0
+    },
+    {
+      "count": 25,
+      "epsilon": 0.001,
+      "median_cosine": -0.0033992982005723706,
+      "median_effect_norm": 0.16219848946046095,
+      "median_relative_l2": 407.01723097177353,
+      "median_snr": 1.6219848946046095e+19,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "semantic_continuous",
+      "zero_writeback_fraction": 0.0
+    },
+    {
+      "count": 25,
+      "epsilon": 0.001,
+      "median_cosine": 0.05356524687885472,
+      "median_effect_norm": 0.057351745546976654,
+      "median_relative_l2": 334.36402941160054,
+      "median_snr": 5.735174554697666e+18,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "workspace",
+      "zero_writeback_fraction": 0.0
+    },
+    {
+      "count": 25,
+      "epsilon": 0.01,
+      "median_cosine": -0.04983436117398635,
+      "median_effect_norm": 0.00133140365727645,
+      "median_relative_l2": 33.680981487723436,
+      "median_snr": 1.3314036572764501e+17,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "j",
+      "zero_writeback_fraction": 0.0
+    },
+    {
+      "count": 25,
+      "epsilon": 0.01,
+      "median_cosine": -0.06022850597826393,
+      "median_effect_norm": 0.1875,
+      "median_relative_l2": 55.73636267401675,
+      "median_snr": 1.875e+19,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "logits",
+      "zero_writeback_fraction": 0.0
+    },
+    {
+      "count": 25,
+      "epsilon": 0.01,
+      "median_cosine": 0.05411204451771681,
+      "median_effect_norm": 0.1873512177456176,
+      "median_relative_l2": 74.34850679873364,
+      "median_snr": 1.8735121774561763e+19,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "semantic_continuous",
+      "zero_writeback_fraction": 0.0
+    },
+    {
+      "count": 25,
+      "epsilon": 0.01,
+      "median_cosine": 0.10072417512471865,
+      "median_effect_norm": 0.07177568291020688,
+      "median_relative_l2": 61.12634055330089,
+      "median_snr": 7.177568291020688e+18,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "workspace",
+      "zero_writeback_fraction": 0.0
+    },
+    {
+      "count": 25,
+      "epsilon": 0.1,
+      "median_cosine": 0.3661984235846443,
+      "median_effect_norm": 0.0013662496100191556,
+      "median_relative_l2": 3.293053494142582,
+      "median_snr": 1.3662496100191557e+17,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "j",
+      "zero_writeback_fraction": 0.0
+    },
+    {
+      "count": 25,
+      "epsilon": 0.1,
+      "median_cosine": 0.12070615392903356,
+      "median_effect_norm": 0.2072890493972125,
+      "median_relative_l2": 5.67074540076682,
+      "median_snr": 2.072890493972125e+19,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "logits",
+      "zero_writeback_fraction": 0.0
+    },
+    {
+      "count": 25,
+      "epsilon": 0.1,
+      "median_cosine": 0.09305778199946155,
+      "median_effect_norm": 0.20504979234785778,
+      "median_relative_l2": 5.681067060281537,
+      "median_snr": 2.050497923478578e+19,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "semantic_continuous",
+      "zero_writeback_fraction": 0.0
+    },
+    {
+      "count": 25,
+      "epsilon": 0.1,
+      "median_cosine": 0.14457339949702944,
+      "median_effect_norm": 0.0658962637876895,
+      "median_relative_l2": 6.685908161909088,
+      "median_snr": 6.589626378768949e+18,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "workspace",
+      "zero_writeback_fraction": 0.0
+    },
+    {
+      "count": 25,
+      "epsilon": 1.0,
+      "median_cosine": 0.9568609673707138,
+      "median_effect_norm": 0.002847575310599277,
+      "median_relative_l2": 0.35399555149046524,
+      "median_snr": 2.847575310599277e+17,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "j",
+      "zero_writeback_fraction": 0.0
+    },
+    {
+      "count": 25,
+      "epsilon": 1.0,
+      "median_cosine": 0.832087090332196,
+      "median_effect_norm": 0.2670001170411728,
+      "median_relative_l2": 0.588465315867299,
+      "median_snr": 2.6700011704117285e+19,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "logits",
+      "zero_writeback_fraction": 0.0
+    },
+    {
+      "count": 25,
+      "epsilon": 1.0,
+      "median_cosine": 0.7758127530088483,
+      "median_effect_norm": 0.2576652868100173,
+      "median_relative_l2": 0.7734626674372665,
+      "median_snr": 2.5766528681001734e+19,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "semantic_continuous",
+      "zero_writeback_fraction": 0.0
+    },
+    {
+      "count": 25,
+      "epsilon": 1.0,
+      "median_cosine": 0.712954663186899,
+      "median_effect_norm": 0.13615256649180246,
+      "median_relative_l2": 1.0419500564608655,
+      "median_snr": 1.3615256649180246e+19,
+      "precision_mode": "fp32_cache_if_supported",
+      "target": "workspace",
+      "zero_writeback_fraction": 0.0
+    }
+  ],
+  "protocol_version": "finite_causal_control_v14",
+  "records": "results/v14/processed/numerical_partial_fp32_extension_2/jvp_finite_writeback_audit_v14.parquet",
+  "records_sha256": "a6ff946fd1a55e2b0ac1894abba6ee955143cc2ad3f55bdb8e661c95f2584540",
+  "source_freeze_digest": "0125a0ff15632875abd1cfe81805f575762560c7f6e3f7f5e54708447afc940d",
+  "unsupported_modes": []
+}

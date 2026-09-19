@@ -1,0 +1,131 @@
+{
+  "baseline_commit": "37df399e4bba8afaca6d99721fe8ceee653e78ee",
+  "config": {
+    "confirmatory": {
+      "candidate_seed": 20270923,
+      "panel_per_family": 5,
+      "selection_without_final_outcomes": true,
+      "source": "new_v14_teacher_correct_bank"
+    },
+    "control": {
+      "candidate_ranks": [
+        8,
+        16,
+        21
+      ],
+      "causal_gates": {
+        "j_direction_minimum": 0.8,
+        "magnitude_maximum": 1.2,
+        "magnitude_minimum": 0.8,
+        "output_direction_minimum": 0.8,
+        "semantic_legacy_minimum": 0.8,
+        "task_sign_minimum": 0.8
+      },
+      "horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "maximum_steps": 8,
+      "possible_horizon_objectives": [
+        [
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          4,
+          8
+        ]
+      ],
+      "regularization": [
+        0.0001,
+        0.001,
+        0.01
+      ],
+      "trust_radii": [
+        0.05,
+        0.1,
+        0.25,
+        0.5,
+        1.0
+      ]
+    },
+    "development": {
+      "panel_per_family": 5,
+      "seed": 20270922,
+      "source_split": "v13_validation"
+    },
+    "name": "Finite Causal Control and Tangent Transport",
+    "numerical_audit": {
+      "anchors_per_family": 1,
+      "clean_repeats": 3,
+      "direction_indices": [
+        0,
+        103,
+        206,
+        308,
+        410
+      ],
+      "epsilons": [
+        1e-05,
+        3e-05,
+        0.0001,
+        0.0003,
+        0.001,
+        0.003,
+        0.01,
+        0.03,
+        0.1
+      ],
+      "jvp_cosine_gate": 0.95,
+      "jvp_relative_error_gate": 0.2,
+      "minimum_effect_quantile": 0.05,
+      "precision_modes": [
+        "bf16_delta_then_writeback",
+        "v13_fp32_accumulate_bf16_writeback",
+        "fp32_cache_if_supported"
+      ],
+      "snr_minimum": 10.0,
+      "source_split": "train",
+      "target_horizon": 1,
+      "targets": [
+        "j",
+        "logits",
+        "semantic_continuous",
+        "workspace"
+      ],
+      "token_positions": [
+        0
+      ]
+    },
+    "parent_commit": "37df399e4bba8afaca6d99721fe8ceee653e78ee",
+    "protocol_version": "finite_causal_control_v14"
+  },
+  "freeze_digest": "d268ee6932dbe1bfa1eeecca57c3fc3e97c48fa2793c0564a5e05f6419431cbf",
+  "no_historical_recomputation": true,
+  "protocol_version": "finite_causal_control_v14",
+  "purpose": "freeze V14 numerical audit and predeclared control candidates",
+  "schema_version": 23,
+  "source_hashes": {
+    "artifacts/causal_bank_v13_capture.freeze.json": "fec5f8eca7443e81ea32ef5bbda7ba98c3f3b9108d6c9c7be8fbb63b959e1a8a",
+    "artifacts/causal_geometry_v13_finalists.freeze.json": "45882556bc52155dfca6d92cf6cf5cfb56b4b6160bf605665ff23f81fa4c52ef",
+    "artifacts/causal_geometry_v13_jvp.freeze.json": "d82f7a5b7761ac7966710df7a7d2b9bebada516171c762aaf5ccdd6f8a7f1e2d",
+    "artifacts/causal_geometry_v13_jvp_scalar_sharded.freeze.json": "65a5d1fcefbef273718a93e7507aeb7841dc9de4d0cf87a46519b5413ca5e63a",
+    "configs/finite_causal_control_v14.yaml": "c7182ab7dc9411d367af2342a3067affd334caa0bfad6d6ef22abf01ea6cedae",
+    "reports/V13_COMPLETE_REPORT.md": "1ae5b92db5e95e0aef33ee19ee276d5fb56549310bfc1be0bd8d617b9977966b",
+    "results/v13/processed/causal_probe_scaling_v13.parquet": "da45a7ec022c0ec2cfad43e47123cd595dd00de92bc57bcf56d19ea4487152af",
+    "results/v13/processed/moving_tangent_oracle_confirmatory_v13.parquet": "afac610926b80c957a450f9cd39df2cdbdf800b7a71b550303185631342866e9",
+    "src/jclosure/experiments/numerics_v14.py": "668fdbccacf8037873d4e9e521fe9f7264c0d825a919f31583041a01095fe97d"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "backtracking": [
+    1.0,
+    0.5,
+    0.25
+  ],
+  "finite_response_epsilon": 1.0,
+  "freeze_digest": "53cbf8c9b6aa6092330489f4ac635bd55cad939db5cad655063cbd67a9634852",
+  "independent_confirmation": false,
+  "maximum_steps": 4,
+  "method_is_exploratory_because_jvp_gate_failed": true,
+  "objectives": {
+    "h1": [
+      1
+    ],
+    "h1_h2_h4_h8": [
+      1,
+      2,
+      4,
+      8
+    ]
+  },
+  "parent_freeze_digest": "d268ee6932dbe1bfa1eeecca57c3fc3e97c48fa2793c0564a5e05f6419431cbf",
+  "protocol_version": "finite_causal_control_v14_closed_loop_development",
+  "rank": 9,
+  "raw_teacher_state_used_only_for_target_effect": true,
+  "ridge": 0.01,
+  "schema_version": 23,
+  "source_hashes": {
+    "artifacts/causal_bank_v13_capture.freeze.json": "fec5f8eca7443e81ea32ef5bbda7ba98c3f3b9108d6c9c7be8fbb63b959e1a8a",
+    "results/v13/processed/moving_tangent_oracle_development_v13.parquet": "e2de0a15b294fb9c5678a7772340bdb359026bb7f354d8242cfeb7ad890dbfde",
+    "results/v14/processed/numerical_snr_summary_v14.json": "85c1fbfcc707558668edc4ebae639dd3558b8314be4569f97dbfa89c621dfd4c",
+    "src/jclosure/experiments/closed_loop_v14.py": "5bc6846b17d2935b334addc571f1feee56b54c6472c96d3e4c198f814127c1d0"
+  },
+  "source_split": "V13 validation",
+  "trust_radius": 0.5
+}

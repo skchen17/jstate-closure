@@ -1,0 +1,21 @@
+{
+  "freeze_digest": "a62a1063af82b0c8f6766cf3a16553f8364ab292b2ead750872654f4f9e07dd7",
+  "j_response_ridge": 0.0001,
+  "methods": [
+    "unaligned",
+    "procrustes",
+    "projector",
+    "grassmann_geodesic",
+    "j_response"
+  ],
+  "parent_freeze_digest": "d268ee6932dbe1bfa1eeecca57c3fc3e97c48fa2793c0564a5e05f6419431cbf",
+  "protocol_version": "finite_causal_control_v14_transport",
+  "rank": 16,
+  "schema_version": 23,
+  "selection_uses_final_test": false,
+  "source_hashes": {
+    "results/v13/processed/causal_probe_scaling_v13.parquet": "da45a7ec022c0ec2cfad43e47123cd595dd00de92bc57bcf56d19ea4487152af",
+    "src/jclosure/experiments/transport_v14.py": "78623b5e8caafaec14149fd1ed7f5e87b3bd1a723d38cdb1d96cd21d30fcc520"
+  },
+  "source_split": "V13 train exact-JVP anchors"
+}

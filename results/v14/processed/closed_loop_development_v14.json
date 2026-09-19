@@ -1,0 +1,156 @@
+{
+  "fidelity": [
+    {
+      "direction": 0.6992489222209273,
+      "horizon": 1,
+      "magnitude": 0.9811014152911586,
+      "method": "closed_loop_finite_response_h1",
+      "output": 0.6706730679695683,
+      "semantic_continuous": 0.6992489222209273,
+      "semantic_legacy": 0.43,
+      "sign": 0.8
+    },
+    {
+      "direction": 0.5351990887915042,
+      "horizon": 2,
+      "magnitude": 1.0050722057282058,
+      "method": "closed_loop_finite_response_h1",
+      "output": 0.5140250974873991,
+      "semantic_continuous": 0.5351990887915042,
+      "semantic_legacy": 0.11000000000000001,
+      "sign": 0.8
+    },
+    {
+      "direction": 0.49757382448511056,
+      "horizon": 4,
+      "magnitude": 1.0004200489034305,
+      "method": "closed_loop_finite_response_h1",
+      "output": 0.5370596436350012,
+      "semantic_continuous": 0.49757382448511056,
+      "semantic_legacy": 0.07,
+      "sign": 0.8
+    },
+    {
+      "direction": 0.5106032893189661,
+      "horizon": 8,
+      "magnitude": 1.0084274312075174,
+      "method": "closed_loop_finite_response_h1",
+      "output": 0.49090438624526433,
+      "semantic_continuous": 0.5106032893189661,
+      "semantic_legacy": 0.12,
+      "sign": 0.9
+    },
+    {
+      "direction": 0.6880006049519963,
+      "horizon": 1,
+      "magnitude": 0.8881695170359583,
+      "method": "closed_loop_finite_response_h1_h2_h4_h8",
+      "output": 0.6520388881126841,
+      "semantic_continuous": 0.6192005444567967,
+      "semantic_legacy": 0.38,
+      "sign": 0.6
+    },
+    {
+      "direction": 0.5927028429287718,
+      "horizon": 2,
+      "magnitude": 0.9047297411562681,
+      "method": "closed_loop_finite_response_h1_h2_h4_h8",
+      "output": 0.4924017492682879,
+      "semantic_continuous": 0.5334325586358947,
+      "semantic_legacy": 0.08,
+      "sign": 0.8
+    },
+    {
+      "direction": 0.48289482390412464,
+      "horizon": 4,
+      "magnitude": 0.8960193227528412,
+      "method": "closed_loop_finite_response_h1_h2_h4_h8",
+      "output": 0.5040470637128157,
+      "semantic_continuous": 0.43460534151371216,
+      "semantic_legacy": 0.1,
+      "sign": 0.8
+    },
+    {
+      "direction": 0.5238586086153992,
+      "horizon": 8,
+      "magnitude": 0.8554301899762675,
+      "method": "closed_loop_finite_response_h1_h2_h4_h8",
+      "output": 0.48806924759663833,
+      "semantic_continuous": 0.47147274775385933,
+      "semantic_legacy": 0.08,
+      "sign": 0.6
+    }
+  ],
+  "independent_confirmatory": false,
+  "panel_count": 10,
+  "protocol_version": "finite_causal_control_v14_closed_loop_development",
+  "records": {
+    "fidelity": {
+      "path": "results/v14/processed/closed_loop_fidelity_development_v14.parquet",
+      "sha256": "a39458b89fbf8f3bc1d21ab14910389e4cd74c765f5bda1f7f9a8f4c7d3413e2"
+    },
+    "steps": {
+      "path": "results/v14/processed/closed_loop_development_v14.parquet",
+      "sha256": "58a7c6e804bc568b31aea15bc4a294712d47bb4b6a3e26f5eb85da8de3c0add2"
+    }
+  },
+  "residual_curve": [
+    {
+      "acceptance": 1.0,
+      "method": "closed_loop_finite_response_h1",
+      "raw_ratio": 0.7356236669175366,
+      "step": 1,
+      "weighted_ratio": 0.7501111841139096
+    },
+    {
+      "acceptance": 0.9,
+      "method": "closed_loop_finite_response_h1",
+      "raw_ratio": 0.6368812945495305,
+      "step": 2,
+      "weighted_ratio": 0.6547196390711943
+    },
+    {
+      "acceptance": 0.5555555555555556,
+      "method": "closed_loop_finite_response_h1",
+      "raw_ratio": 0.5641628508380128,
+      "step": 3,
+      "weighted_ratio": 0.5636226093957071
+    },
+    {
+      "acceptance": 0.6,
+      "method": "closed_loop_finite_response_h1",
+      "raw_ratio": 0.4922994430999203,
+      "step": 4,
+      "weighted_ratio": 0.5793789066138354
+    },
+    {
+      "acceptance": 0.9,
+      "method": "closed_loop_finite_response_h1_h2_h4_h8",
+      "raw_ratio": 0.7618932543109915,
+      "step": 1,
+      "weighted_ratio": 0.8711582421787953
+    },
+    {
+      "acceptance": 0.5555555555555556,
+      "method": "closed_loop_finite_response_h1_h2_h4_h8",
+      "raw_ratio": 0.6768343939874635,
+      "step": 2,
+      "weighted_ratio": 0.8447437115710964
+    },
+    {
+      "acceptance": 0.6,
+      "method": "closed_loop_finite_response_h1_h2_h4_h8",
+      "raw_ratio": 0.5462296144920191,
+      "step": 3,
+      "weighted_ratio": 0.7769128375261145
+    },
+    {
+      "acceptance": 0.6666666666666666,
+      "method": "closed_loop_finite_response_h1_h2_h4_h8",
+      "raw_ratio": 0.4838497994421388,
+      "step": 4,
+      "weighted_ratio": 0.7236829252639627
+    }
+  ],
+  "source_freeze_digest": "53cbf8c9b6aa6092330489f4ac635bd55cad939db5cad655063cbd67a9634852"
+}

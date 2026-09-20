@@ -1,0 +1,17 @@
+{
+  "base_freeze_digest": "8d64a8093a39401513888fc5681ead119cd983411641b390f1e8cbbc9c8f013a",
+  "freeze_digest": "8767f723cb99e47df8324390befaaebddc202e47e6e2634e52a46ca6a098ec53",
+  "input_hashes": {
+    "artifacts/nonlinear_finite_causal_action_v16_splits.freeze.json": "b9ecafa1558527b68a74dfc487c63559890dade0253a86038b7655723c4fca39",
+    "src/jclosure/experiments/realized_v16.py": "f365301257be0a4da5844aa75e36b480a17e341cf45be3812882de7650ff0e44"
+  },
+  "model_comparison": "same train/validation rows for requested and realized inputs",
+  "projection": "least-squares of exact BF16 state delta onto 32 frozen raw directions; pseudo-inverse rtol 1e-5",
+  "protocol_version": "nonlinear_finite_causal_action_v16_realized",
+  "role": "train_fit_validation_test",
+  "schema_version": 25,
+  "state_subset_per_family": {
+    "train": 4,
+    "validation": 2
+  }
+}

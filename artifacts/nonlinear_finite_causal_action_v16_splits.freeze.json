@@ -1,0 +1,1114 @@
+{
+  "base_freeze_digest": "8d64a8093a39401513888fc5681ead119cd983411641b390f1e8cbbc9c8f013a",
+  "direction_families": [
+    "architecture_balanced",
+    "causal_weighted",
+    "high_finite_response",
+    "random_raw",
+    "residual_finite_response",
+    "architecture_balanced",
+    "causal_weighted",
+    "high_finite_response",
+    "random_raw",
+    "residual_finite_response",
+    "architecture_balanced",
+    "causal_weighted",
+    "high_finite_response",
+    "random_raw",
+    "residual_finite_response",
+    "architecture_balanced",
+    "causal_weighted",
+    "high_finite_response",
+    "random_raw",
+    "residual_finite_response",
+    "architecture_balanced",
+    "causal_weighted",
+    "high_finite_response",
+    "random_raw",
+    "residual_finite_response",
+    "architecture_balanced",
+    "causal_weighted",
+    "high_finite_response",
+    "random_raw",
+    "residual_finite_response",
+    "architecture_balanced",
+    "causal_weighted"
+  ],
+  "direction_indices": [
+    4,
+    1,
+    99,
+    2,
+    74,
+    9,
+    6,
+    39,
+    7,
+    3,
+    14,
+    11,
+    114,
+    12,
+    79,
+    19,
+    16,
+    69,
+    17,
+    64,
+    24,
+    21,
+    84,
+    22,
+    144,
+    29,
+    26,
+    159,
+    27,
+    44,
+    34,
+    31
+  ],
+  "freeze_digest": "a7d7176534cb3d497c48052c2a5ff67bb2fdcf7feaea3294f45506c16b693859",
+  "frozen_design": {
+    "calibration_scales": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "candidate_dimensions": [
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "dense_sobol_count": 8,
+    "design_train_extra_states_per_family": 4,
+    "design_validation_extra_states_per_family": 2,
+    "max_action_norm": 2.0,
+    "maximum_state_gain": 1.2,
+    "min_causal_effect_norm": 0.006802803347818553,
+    "minimum_signed_effect_norm": 0.006802803347818553,
+    "minimum_state_cosine": 0.95,
+    "minimum_state_gain": 0.8,
+    "pair_indices": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "pair_signs": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        -1,
+        -1
+      ]
+    ],
+    "proposal_count": 32,
+    "proposal_family_counts": {
+      "architecture_balanced": 7,
+      "causal_weighted": 7,
+      "high_finite_response": 6,
+      "random_raw": 6,
+      "residual_finite_response": 6
+    },
+    "scale_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "scale_multipliers": [
+      -2.0,
+      -1.5,
+      -1.0,
+      -0.5,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "triples": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  "frozen_response_gate": {
+    "direction_min": 0.9,
+    "magnitude_max": 1.2,
+    "magnitude_min": 0.8,
+    "relative_l2_max": 0.3,
+    "required_targets": [
+      "j",
+      "stacked_normalized"
+    ]
+  },
+  "independent_final": "NOT_CREATED_OR_OPENED_PENDING_RESPONSE_AND_CONTROL_GATES",
+  "input_hashes": {
+    "artifacts/quantization_aware_actuation_v15_splits.freeze.json": "2cef4e7bfdb7869056a96bc82e7c1643f40af150539e30647c272fa2200905bb",
+    "results/v13/processed/probe_directions_v13.json": "2a98ff65431c7c1e8cf43f3c34ec999b15cc4194edf246331bb29e7e9ecbc5b4",
+    "results/v15/processed/finite_operator_columns_v15.parquet": "df5fd1a7dd75814773d5bbe41e66164bd769ed5b343bfbb83468ee24a618a87d",
+    "src/jclosure/experiments/action_bank_v16.py": "6973a4911c11839568b61c1947ea6d79c4bcf1e59887e2d56622ebf0a70c2db6"
+  },
+  "protocol_version": "nonlinear_finite_causal_action_v16_splits",
+  "role": "train_and_validation_pre_response",
+  "schema_version": 25,
+  "selected_j": [
+    6,
+    7,
+    5,
+    11,
+    8,
+    13,
+    9,
+    10,
+    12,
+    14,
+    4020,
+    16,
+    15,
+    3965,
+    2895,
+    1087,
+    1110,
+    1523,
+    463,
+    1429,
+    18,
+    2,
+    1792,
+    1558,
+    992,
+    1757,
+    1580,
+    4002,
+    1612,
+    4,
+    625,
+    24,
+    280,
+    1681,
+    2414,
+    2033,
+    2602,
+    1313,
+    697,
+    2068,
+    1897,
+    2381,
+    2922,
+    2204,
+    1596,
+    1599,
+    2729,
+    1895,
+    3060,
+    556,
+    3153,
+    243,
+    3150,
+    1497,
+    588,
+    283,
+    337,
+    1577,
+    2765,
+    2436,
+    2990,
+    1640,
+    1153,
+    682,
+    829,
+    985,
+    1415,
+    3,
+    66,
+    1883,
+    3483,
+    1916,
+    359,
+    1514,
+    3382,
+    2208,
+    2841,
+    830,
+    2693,
+    1949,
+    1518,
+    2706,
+    2504,
+    2506,
+    1457,
+    220,
+    3514,
+    1696,
+    2104,
+    3294,
+    764,
+    800,
+    673,
+    816,
+    3115,
+    1373,
+    2351,
+    575,
+    1034,
+    4034,
+    2806,
+    2111,
+    809,
+    2559,
+    1093,
+    1040,
+    176,
+    842,
+    877,
+    2247,
+    379,
+    398,
+    832,
+    1178,
+    879,
+    2278,
+    1463,
+    3292,
+    1912,
+    742,
+    1667,
+    1111,
+    3695,
+    1425,
+    217,
+    1978,
+    3191,
+    981
+  ],
+  "selected_logits": [
+    20,
+    220,
+    248046,
+    1799,
+    198,
+    11,
+    457,
+    13,
+    18,
+    695,
+    271,
+    1543,
+    1116,
+    17,
+    15,
+    23,
+    4558,
+    373,
+    256,
+    57,
+    3966,
+    783,
+    1358,
+    641,
+    1088,
+    2228,
+    54,
+    417,
+    3433,
+    471,
+    361,
+    21
+  ],
+  "target_scales": {
+    "j": 0.00637603926805087,
+    "logits": 0.37930603920841477,
+    "semantic_continuous": 0.4250155426398896,
+    "workspace": 0.14939923966331858
+  },
+  "train": [
+    {
+      "base_trial_id": "v13-train-e130f0cb9118dbc47ae3",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-4b6d610672e661a05737",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-3491c362a9ee2fdd4a60",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-655483a25f2582beaa2b",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-3f67b7d7dca3c71a4775",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-8bc40ea5f664fb3d3950",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-44d706db5de826b9e3a5",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-fd5e8aa58469ec04ed21",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-a8a6927d25dd09f8fbab",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-8128e6c9c5822c0edffe",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-b9057e2cf3ce5c3a7313",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-4b99f3140ad12e97edfb",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-3174484fad2e9e105899",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-b3f7196aa39de7dbfa6b",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-dcc31f507f0cc7628630",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-496dbb73a01b80aef073",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-4af07dde98edb81eb224",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-6bb96a47f38a2d9a9e80",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-8a9a639ac4606b6543fa",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-09912b2503a8db67b3b8",
+      "family": "boolean_logic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-24de0a91684fd36158d3",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-8d763f38390f420505e2",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-481ab551a5e497016858",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-e43fa6b8bd24905b4a65",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-57719d42873d017f5310",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-7de924a7e657ce532ea4",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-7351edf0aa50216a2eb5",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-70e87a4cd972f9f48c73",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-94ee66adafca2291ac09",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-5d84081c81f59d8612bc",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-a82d70a7c66b9dda22c8",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-20ad58555874598e16d1",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-ab0fdea4e68afa7fe985",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-d7c0398fd38ae748c836",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-d4abe1f0662ca206cfdf",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-8eea19f8faa343d87375",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-45270e95ae8c5a43e3e3",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-fedb821e2ce52755e493",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-f79f209223d4b7866cd9",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-d319ae6d464162befd03",
+      "family": "modular_arithmetic",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-13fe5d1434ff030f6ef5",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-6544c398123d53aea536",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-9172aa9c33388c8a398d",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-2c6da278e0b0c409b4e0",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-e37952619b19d33b2d12",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-2ab30a2de1da29dd7442",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-863162b9a7af6df7fc8f",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-5461fb461cc71ce3cdbc",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-6a177136a92caa65266e",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-dde5926ce7810bf232af",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-3848f6736d132c23c419",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-e5dcfb65fa2055a45003",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-d9e8f405d603749a5c66",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-8d764b9d6f9375f115a9",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-b90f3269113f246e4c17",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-7e907755542005177e72",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-ddd9feed9adfee562ba2",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-09762126ff6485292e3a",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-88505bf2a6168fccd116",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-ca2b77662e86506c26a3",
+      "family": "short_graph_traversal",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-d6b2ad8f9593ad2bd507",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-f280e48df53ffdbfe496",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-d6db89e957bb25daa8ec",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-0ba162afc91609966fea",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-8d8e07f481832e74727d",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-d3d6eb5edba40ced6d02",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-b6ab97d16df5b2b57082",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-b749c2ae3d0768df5da0",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-a62b7c761f140fdb7d68",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-830632162e1c31e16322",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-476c6d0e778089017d86",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-d62365845cfbe0b101c7",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-a24ec849666704a2b74f",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-5e1dc1137d5e73cfa530",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-ff99c6bb5cd29bfc9afd",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-ec5f43edcf57bb6165b3",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-80f51d2f1f01c3328cb6",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-94f6143e66dddb79efed",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-0587cc030ce853a78a77",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-a72eaf2c108f8d101219",
+      "family": "simple_state_transition",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-a73f1d684527e265cfda",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-d64a2008ec703b59b1c0",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-a59b4fde4a2aa0fb5bc0",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-d895dadb085f745c939b",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-059dabce62fb18be54cf",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-588c9ba0705948365c72",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-47eaff3c302b9fec4385",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-bd925cb27d1c547a8b7f",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-5022b3c3a934803ae352",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-bfdf00abdf2edfe7370c",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-8038f0853104258d7157",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-4a86e63223929971303f",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-eefa06364c7ba392f6ed",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-77e451d2d555e23c69c6",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-01622c333e02f54b63c5",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-0cf7e2b41a73bc9d84c8",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-274fda7b450733df0a81",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-5afcc1e3319ceed63b9d",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-aa35c7ff7a12d14c3efa",
+      "family": "variable_binding",
+      "role": "train"
+    },
+    {
+      "base_trial_id": "v13-train-962107e6a365c8c7217c",
+      "family": "variable_binding",
+      "role": "train"
+    }
+  ],
+  "train_id_sha256": "d2c6cc991ebe5eb85a47e36895256ad5777141a9f334bacae3779c3136adbe4a",
+  "validation": [
+    {
+      "base_trial_id": "v13-validation-3e0dcb5a1d9e67b654c1",
+      "family": "boolean_logic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-a1fc71375787978b2a8f",
+      "family": "boolean_logic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-5a8fe65fbc9edd244e86",
+      "family": "boolean_logic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-a6aa029ba76a8130a9a9",
+      "family": "boolean_logic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-2b888030fe710c2cfcec",
+      "family": "boolean_logic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-bee803d52f2f81cf9a47",
+      "family": "boolean_logic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-ca9eefd79d6d1b718181",
+      "family": "boolean_logic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-0a634a3677f08804f599",
+      "family": "boolean_logic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-8fdc7029f6070b49f5ee",
+      "family": "boolean_logic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-05b16f2ddc0eb3bb0927",
+      "family": "boolean_logic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-71bfc9d552172c4916a5",
+      "family": "modular_arithmetic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-471d78fc233fff620390",
+      "family": "modular_arithmetic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-c79ce66595fc2ef5070f",
+      "family": "modular_arithmetic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-755a78c318476f660a70",
+      "family": "modular_arithmetic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-e53443e6e2a288c167fc",
+      "family": "modular_arithmetic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-21cde6693b49fc18ace2",
+      "family": "modular_arithmetic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-5c3b9a5bdf0f4289d03b",
+      "family": "modular_arithmetic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-7648b9970e4207cb914c",
+      "family": "modular_arithmetic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-f4ca44112e6df7fb836f",
+      "family": "modular_arithmetic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-6dabc51b7e70cb3f9c6d",
+      "family": "modular_arithmetic",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-1bfab23f4c2577888e1a",
+      "family": "short_graph_traversal",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-32446430c82202b60325",
+      "family": "short_graph_traversal",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-d0b23670f1eb273d8e72",
+      "family": "short_graph_traversal",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-8f88b2ae98319d14f489",
+      "family": "short_graph_traversal",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-bf4cd31d3d30bf526a14",
+      "family": "short_graph_traversal",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-a5c2781c0a4e882eb7b3",
+      "family": "short_graph_traversal",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-b537d615a02cd128763a",
+      "family": "short_graph_traversal",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-56f11f9b334c8f73e760",
+      "family": "short_graph_traversal",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-38fac4949345c01feb49",
+      "family": "short_graph_traversal",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-c6cf92739b12c03555ff",
+      "family": "short_graph_traversal",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-848d5007f9c33b51b1c9",
+      "family": "simple_state_transition",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-3c25adc6d4cc51351185",
+      "family": "simple_state_transition",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-e590095258a8c8b01a4f",
+      "family": "simple_state_transition",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-29483f35aacd278fb5c9",
+      "family": "simple_state_transition",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-db1ee81e1dfc4cecc89d",
+      "family": "simple_state_transition",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-0cd9859d57d9007981bb",
+      "family": "simple_state_transition",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-cba292296a871449caf1",
+      "family": "simple_state_transition",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-773f5279574cee0b3784",
+      "family": "simple_state_transition",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-bc25eb27aa942f07a9f4",
+      "family": "simple_state_transition",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-daa3512cf39c0db6f6a9",
+      "family": "simple_state_transition",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-dee3d3163d9bc40a9b6c",
+      "family": "variable_binding",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-4c1176c8692192549d95",
+      "family": "variable_binding",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-33e0454da1872a3e7df0",
+      "family": "variable_binding",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-a09bfeea7e64f40a7295",
+      "family": "variable_binding",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-eb4b511a5e93bccbcf7e",
+      "family": "variable_binding",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-b3d441d6e0197acd65e2",
+      "family": "variable_binding",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-1733b1bc977c13e18e90",
+      "family": "variable_binding",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-ba60ca0dce4c86d7ec2f",
+      "family": "variable_binding",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-183cdbe3ed58a920d734",
+      "family": "variable_binding",
+      "role": "validation"
+    },
+    {
+      "base_trial_id": "v13-validation-9449f758e6884d93c280",
+      "family": "variable_binding",
+      "role": "validation"
+    }
+  ],
+  "validation_id_sha256": "9dc52e5e18e2fbec634427fa91935ae192c445de2d80a4c765386e39e551aa43"
+}

@@ -1,0 +1,16 @@
+{
+  "action_selection": "first two reliable positive single coordinates by frozen index",
+  "base_freeze_digest": "8d64a8093a39401513888fc5681ead119cd983411641b390f1e8cbbc9c8f013a",
+  "dynamic_second_action": "same frozen raw direction reused at next teacher-forced step; transport not estimated",
+  "freeze_digest": "c79c01cdfab2c0d23fbea26f84967df33172abbd777ef863b1b9bdc8da72de6b",
+  "input_hashes": {
+    "artifacts/nonlinear_finite_causal_action_v16_splits.freeze.json": "b9ecafa1558527b68a74dfc487c63559890dade0253a86038b7655723c4fca39",
+    "src/jclosure/experiments/composition_v16.py": "02586a38072af3f217d7c76716ca28301a373f3e106f7f2d72f0ff5281e2f795"
+  },
+  "noncommutative_threshold": "static UV-vs-VU J order norm >1e-6 and relative to larger first-order J effect >0.01",
+  "not_a_lie_bracket": true,
+  "protocol_version": "nonlinear_finite_causal_action_v16_composition",
+  "role": "diagnostic_train_and_validation",
+  "schema_version": 25,
+  "state_selection": "first frozen state per family in each split"
+}

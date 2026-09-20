@@ -1,0 +1,31 @@
+{
+  "analysis_must_not_open_independent_final": true,
+  "base_freeze_digest": "8d64a8093a39401513888fc5681ead119cd983411641b390f1e8cbbc9c8f013a",
+  "freeze_digest": "df390b5c258b2705c6c2615e9d6729fb07aa533d9a481ee3bd2a823591237232",
+  "holdouts": [
+    "state",
+    "sign",
+    "scale",
+    "pair",
+    "dense",
+    "family"
+  ],
+  "input_hashes": {
+    "artifacts/nonlinear_finite_causal_action_v16_bank_source_amendment_1.freeze.json": "4e08b46f2a857164fd0f02af037adbd443f13e339f6f52225989c38c12358876",
+    "artifacts/nonlinear_finite_causal_action_v16_splits.freeze.json": "b9ecafa1558527b68a74dfc487c63559890dade0253a86038b7655723c4fca39",
+    "src/jclosure/experiments/analyze_v16.py": "a40365ac400a6fd8238922e886ecc6ad017cdfeaa1c954bfc37be0e3ba0daa19"
+  },
+  "protocol_version": "nonlinear_finite_causal_action_v16_analysis",
+  "response_gate": {
+    "direction_min": 0.9,
+    "magnitude_max": 1.2,
+    "magnitude_min": 0.8,
+    "relative_l2_max": 0.3,
+    "required_targets": [
+      "j",
+      "stacked_normalized"
+    ]
+  },
+  "role": "train_fit_validation_test",
+  "schema_version": 25
+}

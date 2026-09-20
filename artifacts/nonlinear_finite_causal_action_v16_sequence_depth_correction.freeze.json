@@ -1,0 +1,14 @@
+{
+  "base_freeze_digest": "8d64a8093a39401513888fc5681ead119cd983411641b390f1e8cbbc9c8f013a",
+  "freeze_digest": "0d5e681d29115718a25f52e00d0276e83292825ceee040bc568e89af23c10990",
+  "input_hashes": {
+    "results/v16/processed/sequence_reachability_v16.json": "a9c269ef4256fa9b2f081ebde23adea33a98e8d786156874019c852e6d8f4121",
+    "results/v16/processed/sequence_reachability_v16.parquet": "939cae6f7156b80f1f745b8d0b467506a45537d81e446e867e28e14170f9267b",
+    "scripts/analyze_sequence_depth_v16.py": "cfbe9de5ecf74aaafca37ed36dd470fbed9d6c271b8e95e0d32faf9d58646d5e"
+  },
+  "no_new_model_forward_or_teacher_label": true,
+  "protocol_version": "nonlinear_finite_causal_action_v16_sequence_depth_correction",
+  "reason": "original depth rows denote exactly 1/2/4 active actions; union over shallower depths is required for at-most-depth reachability",
+  "role": "validation_diagnostic_post_measurement_correction",
+  "schema_version": 25
+}

@@ -1,0 +1,22 @@
+{
+  "actions": "first two reliable positive single coordinates and their reliable negatives",
+  "base_freeze_digest": "8d64a8093a39401513888fc5681ead119cd983411641b390f1e8cbbc9c8f013a",
+  "common_target": "frozen V13 h4 teacher J on V16 selected J coordinates",
+  "continuation": "same teacher tokens, untransported raw action directions",
+  "depths": [
+    1,
+    2,
+    4
+  ],
+  "freeze_digest": "dfd3fbdda58baaa58bcc3ddc4182064760216c03ce85e8016490421349be2862",
+  "input_hashes": {
+    "artifacts/nonlinear_finite_causal_action_v16_splits.freeze.json": "b9ecafa1558527b68a74dfc487c63559890dade0253a86038b7655723c4fca39",
+    "src/jclosure/experiments/sequence_reachability_v16.py": "1353f244e41bac11669d2a6ce73cad467f81adc6fc7779f6bd3fb1b5cf622597"
+  },
+  "protocol_version": "nonlinear_finite_causal_action_v16_sequence_reachability",
+  "role": "validation_diagnostic",
+  "schema_version": 25,
+  "selection": "exhaustive over four primitives at each active step",
+  "states": "first frozen validation state per family",
+  "teacher_raw_state_usage": "labels for post-hoc nearest search only; no response model/controller input"
+}

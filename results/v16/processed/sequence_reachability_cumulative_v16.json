@@ -1,0 +1,32 @@
+{
+  "additional_model_forwards": 0,
+  "by_max_actions": [
+    {
+      "candidate_count_at_most": 4.0,
+      "max_actions": 1,
+      "median_best_exact_action_count": 1.0,
+      "nearest_relative_residual_at_most": 8.384231545225663,
+      "states": 5
+    },
+    {
+      "candidate_count_at_most": 20.0,
+      "max_actions": 2,
+      "median_best_exact_action_count": 2.0,
+      "nearest_relative_residual_at_most": 3.5490999260514005,
+      "states": 5
+    },
+    {
+      "candidate_count_at_most": 276.0,
+      "max_actions": 4,
+      "median_best_exact_action_count": 2.0,
+      "nearest_relative_residual_at_most": 3.5490999260514005,
+      "states": 5
+    }
+  ],
+  "freeze_digest": "0d5e681d29115718a25f52e00d0276e83292825ceee040bc568e89af23c10990",
+  "interpretation": "finite union over exact-depth candidate sets, same frozen h4 teacher J target",
+  "records": "results/v16/processed/sequence_reachability_cumulative_v16.parquet",
+  "records_sha256": "72fe681d85100ea1a3280665bd148b6fa6836b0d2f6bc21aac340c9e8208cb42",
+  "source_exact_depth_records": "results/v16/processed/sequence_reachability_v16.parquet",
+  "source_exact_depth_sha256": "939cae6f7156b80f1f745b8d0b467506a45537d81e446e867e28e14170f9267b"
+}

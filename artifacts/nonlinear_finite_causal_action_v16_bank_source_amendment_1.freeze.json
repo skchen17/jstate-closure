@@ -1,0 +1,15 @@
+{
+  "base_freeze_digest": "8d64a8093a39401513888fc5681ead119cd983411641b390f1e8cbbc9c8f013a",
+  "change": "skip null Sobol vector and take the first eight nonzero vectors from the same deterministic sequence",
+  "freeze_digest": "93b5d89ad9706ac933917e7dc55772776cbfe1dfa0b83edeb5473622ec80ca4d",
+  "input_hashes": {
+    "artifacts/nonlinear_finite_causal_action_v16_splits.freeze.json": "b9ecafa1558527b68a74dfc487c63559890dade0253a86038b7655723c4fca39",
+    "src/jclosure/experiments/action_bank_v16.py": "3605b1cce58d088fbf74e18ddb037b382dc7ce041c9955dbbe47301fbb05a062"
+  },
+  "old_source_sha256": "6973a4911c11839568b61c1947ea6d79c4bcf1e59887e2d56622ebf0a70c2db6",
+  "parent_split_freeze_digest": "a7d7176534cb3d497c48052c2a5ff67bb2fdcf7feaea3294f45506c16b693859",
+  "prior_v16_bank_records": 0,
+  "protocol_version": "nonlinear_finite_causal_action_v16_bank_source_amendment_1",
+  "reason": "frozen deterministic Sobol design included an all-zero vector; first state stopped before any bank record was written",
+  "schema_version": 25
+}

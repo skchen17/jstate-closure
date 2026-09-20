@@ -1,0 +1,144 @@
+{
+  "config": {
+    "conditional_test": {
+      "base_fixed_before_raw_correction": true,
+      "bootstrap_replicates": 1000,
+      "bootstrap_seed": 1709,
+      "bootstrap_unit": "state",
+      "raw_residual_crossfit_by_state": true,
+      "target_residual_crossfit_by_state": true,
+      "validation_never_fit": true
+    },
+    "design": {
+      "action_holdouts": [
+        "sign",
+        "scale",
+        "pair",
+        "dense",
+        "primitive",
+        "outside_encoder_fit"
+      ],
+      "action_key": "coordinate_index_and_sign",
+      "context_dimensions": [
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        384,
+        512
+      ],
+      "context_families": [
+        "pca",
+        "response_pls",
+        "conditional_response_bottleneck",
+        "architecture_shared",
+        "architecture_factorized"
+      ],
+      "cv_seed": 20260920,
+      "high_dimension_policy": "report_rank_limited_not_clamped",
+      "kernel_weight_grid": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "matched_capacity": "same_kernel_ridge_train_state_count_and_lambda",
+      "model_classes": [
+        "additive",
+        "bilinear",
+        "quadratic_interaction",
+        "small_state_conditioned_nonlinear"
+      ],
+      "predictions_rescaled_by_actual_calibration_alpha": true,
+      "primary_action_design": "single",
+      "require_exact_same_alpha_for_matched_pairs": true,
+      "response_min_train_states_per_action": 15,
+      "response_normalization": "divide_by_actual_calibration_alpha",
+      "ridge_lambda_grid": [
+        0.01,
+        0.1,
+        1.0
+      ],
+      "state_holdouts": [
+        "validation_states",
+        "leave_one_family_out",
+        "prompt",
+        "token_position",
+        "j_region"
+      ],
+      "state_kernel": "centered_train_only_linear_kernel",
+      "state_kernel_rank": "all_positive_train_eigenvalues",
+      "train_state_cv_folds": 5
+    },
+    "estimand": {
+      "auxiliary": [
+        "h1_logits",
+        "h1_semantic_continuous",
+        "h1_workspace"
+      ],
+      "current_clean_state_only_as_predictor": true,
+      "horizon_only_if_exact_teacher_forced_measurement": true,
+      "multi_horizon": [
+        2,
+        4,
+        8
+      ],
+      "primary": "h1_selected_j_and_normalized_stack",
+      "target": "perturbed_minus_clean_same_state_response"
+    },
+    "gates": {
+      "compact_near_raw_gap_fraction_min": 0.9,
+      "conditional_raw_gain_ci_upper_max": 0.03,
+      "conditional_raw_relative_l2_gain_max": 0.02,
+      "family_wise_required": true,
+      "independent_confirmation_required": true,
+      "material_raw_ceiling_relative_l2_gain_min": 0.05,
+      "multi_horizon_required_for_markov": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "next_c_and_next_j_raw_gain_max": 0.02,
+      "no_autonomous_before_independent_v17_d": true,
+      "response_direction_min": 0.9,
+      "response_relative_l2_max": 0.3,
+      "unseen_action_required": true
+    },
+    "historical_results_immutable": true,
+    "name": "Interventional State Sufficiency",
+    "parent_commit": "60060cb481b6fe2fe6a9bbf123611d37d4445fea",
+    "protocol_version": "interventional_state_sufficiency_v17",
+    "source": {
+      "action_bank": "results/v16/processed/finite_action_bank_v16.parquet",
+      "action_reliability": "reliable",
+      "development_train": "v16_train",
+      "development_validation": "v16_validation",
+      "independent_final": "unopened_until_finalist",
+      "measured_j": "v13_endpoint_current_j_clean",
+      "raw_state": "v13_clean_prefill_only"
+    }
+  },
+  "config_hash": "8a6d0b55309ab976b7b369f35d8197d2793ed4180183d8c0e8ad190f61456bad",
+  "freeze_digest": "71c0501d3289b4ecafa5957c3121a076aee665e8967db7890ff19c3c050b77f8",
+  "parent_commit": "60060cb481b6fe2fe6a9bbf123611d37d4445fea",
+  "parent_final_report_hash_is_pre_v17": true,
+  "parent_hashes": {
+    "artifacts/causal_geometry_v13_jvp.freeze.json": "d82f7a5b7761ac7966710df7a7d2b9bebada516171c762aaf5ccdd6f8a7f1e2d",
+    "artifacts/nonlinear_finite_causal_action_v16.freeze.json": "2cb657fd0923ef05e181615e7766bde8f5e6ae86c5eb9dc622dec5365e70fb4b",
+    "artifacts/nonlinear_finite_causal_action_v16_splits.freeze.json": "b9ecafa1558527b68a74dfc487c63559890dade0253a86038b7655723c4fca39",
+    "reports/FINAL_REPORT.md": "8e19cf16eb2247bca83851b693e7c42845569bcf84358b8450673beb4bc38086",
+    "reports/V16_COMPLETE_REPORT.md": "840231a00ef923ba14310fed65ff7e7c20fc5bd456c600b1a334983a50d33232",
+    "results/v13/processed/causal_capture_train_v13.json": "9aa75d01649d10f019e8c91607e425a2f2e3815fb3c3235449dd419144728419",
+    "results/v13/processed/causal_capture_validation_v13.json": "dc219f681106e7993df067b4a7edc3890e8421c43e09cca841c9527778176f40",
+    "results/v16/processed/finite_action_bank_v16.parquet": "680c01ed70c44a96bb46e8429eebee1e2ec3f6ebe5cecb6676ea114fd3025eef",
+    "results/v16/processed/v16_adjudication.json": "d288090a21a60e66e3d4e43909d8ba35b90e065a49b58cb03311574298a776a5",
+    "results/v16/processed/v16_analysis.json": "2193a9825934af5083f839dbd94d76a0f78d188963f06c3123b8299491dc6161"
+  },
+  "protocol_code_hash": "72f597ff200438942f70556fd5896d08adbccb97507f8e0f5392befb083f9627",
+  "protocol_version": "interventional_state_sufficiency_v17",
+  "schema_version": 26
+}

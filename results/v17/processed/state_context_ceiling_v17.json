@@ -1,0 +1,928 @@
+{
+  "action_design": "reliable_v16_single_only",
+  "action_key_count": 58,
+  "bootstrap": {
+    "j": {
+      "gain_ci_95": [
+        0.00791060309077974,
+        0.01681136587834107
+      ],
+      "gain_median": 0.012543757305349512
+    },
+    "stacked_normalized": {
+      "gain_ci_95": [
+        0.002569702453078568,
+        0.021050114743440172
+      ],
+      "gain_median": 0.01144728213638177
+    }
+  },
+  "gate_requires_both_j_and_stack_absolute_rel_l2_gain": 0.05,
+  "independent_final": "UNOPENED",
+  "kernel_sha256": "606ec5ee48bff6945eab4fb043cb9a5fc5e1c44c403bc210ba5e97d9e2fc2fdd",
+  "material_raw_context_gate_passed": false,
+  "other_action_designs_and_horizons": "NOT_EVALUATED_BY_CEILING_STAGE",
+  "raw_joint_gain_over_j": {
+    "j": 0.012580756229269408,
+    "stacked_normalized": 0.011277898838902678
+  },
+  "results": [
+    {
+      "by_family": {
+        "boolean_logic": {
+          "j": {
+            "direction_median": 0.9076910678146747,
+            "magnitude_ratio_median": 0.6537443208127383,
+            "n": 580,
+            "relative_l2": 0.505657750940229
+          },
+          "stacked_normalized": {
+            "direction_median": 0.8193096301449152,
+            "magnitude_ratio_median": 0.6619447367414528,
+            "n": 580,
+            "relative_l2": 0.5627034524458275
+          }
+        },
+        "modular_arithmetic": {
+          "j": {
+            "direction_median": 0.8910379534008919,
+            "magnitude_ratio_median": 0.8886822353384624,
+            "n": 578,
+            "relative_l2": 0.5010836048312223
+          },
+          "stacked_normalized": {
+            "direction_median": 0.8404753271126038,
+            "magnitude_ratio_median": 0.8911767700994044,
+            "n": 578,
+            "relative_l2": 0.5704256708131303
+          }
+        },
+        "short_graph_traversal": {
+          "j": {
+            "direction_median": 0.7803087274775422,
+            "magnitude_ratio_median": 1.0076865968119,
+            "n": 560,
+            "relative_l2": 0.5918187575844568
+          },
+          "stacked_normalized": {
+            "direction_median": 0.7892822609477159,
+            "magnitude_ratio_median": 0.8348145333247106,
+            "n": 560,
+            "relative_l2": 0.6283582707958797
+          }
+        },
+        "simple_state_transition": {
+          "j": {
+            "direction_median": 0.7554514629518079,
+            "magnitude_ratio_median": 1.2034694035403306,
+            "n": 540,
+            "relative_l2": 0.629604590928047
+          },
+          "stacked_normalized": {
+            "direction_median": 0.8030106834998776,
+            "magnitude_ratio_median": 1.0053770329876603,
+            "n": 540,
+            "relative_l2": 0.6291468677916128
+          }
+        },
+        "variable_binding": {
+          "j": {
+            "direction_median": 0.922154964981362,
+            "magnitude_ratio_median": 0.7697082529214512,
+            "n": 538,
+            "relative_l2": 0.45606245379676486
+          },
+          "stacked_normalized": {
+            "direction_median": 0.8727644577935332,
+            "magnitude_ratio_median": 0.7946746002862289,
+            "n": 538,
+            "relative_l2": 0.4817004426059762
+          }
+        }
+      },
+      "context": "action_only",
+      "j": {
+        "direction_median": 0.863328741676285,
+        "magnitude_ratio_median": 0.8727096158974958,
+        "n": 2796,
+        "relative_l2": 0.5314230474331852
+      },
+      "ridge": 0.1,
+      "stacked_normalized": {
+        "direction_median": 0.827551918684827,
+        "magnitude_ratio_median": 0.8346493750303057,
+        "n": 2796,
+        "relative_l2": 0.5764047238014753
+      }
+    },
+    {
+      "by_family": {
+        "boolean_logic": {
+          "j": {
+            "direction_median": 0.979390235545087,
+            "magnitude_ratio_median": 0.945698903766681,
+            "n": 580,
+            "relative_l2": 0.19740107190621148
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9729853881622115,
+            "magnitude_ratio_median": 0.9218895414419114,
+            "n": 580,
+            "relative_l2": 0.2596935004563243
+          }
+        },
+        "modular_arithmetic": {
+          "j": {
+            "direction_median": 0.9615347409996149,
+            "magnitude_ratio_median": 1.0120889000864428,
+            "n": 578,
+            "relative_l2": 0.35067921119878587
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9469691457287039,
+            "magnitude_ratio_median": 0.9835955326479671,
+            "n": 578,
+            "relative_l2": 0.42862324062400947
+          }
+        },
+        "short_graph_traversal": {
+          "j": {
+            "direction_median": 0.9401528648954072,
+            "magnitude_ratio_median": 0.9527726505975047,
+            "n": 560,
+            "relative_l2": 0.3366250993417096
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9474999219583395,
+            "magnitude_ratio_median": 0.923219297127029,
+            "n": 560,
+            "relative_l2": 0.3610141510811469
+          }
+        },
+        "simple_state_transition": {
+          "j": {
+            "direction_median": 0.9461460170736571,
+            "magnitude_ratio_median": 1.0319824134784072,
+            "n": 540,
+            "relative_l2": 0.32996370252104384
+          },
+          "stacked_normalized": {
+            "direction_median": 0.95298820500918,
+            "magnitude_ratio_median": 1.019209569474933,
+            "n": 540,
+            "relative_l2": 0.40364525221849373
+          }
+        },
+        "variable_binding": {
+          "j": {
+            "direction_median": 0.9609921223298674,
+            "magnitude_ratio_median": 0.9772235341178832,
+            "n": 538,
+            "relative_l2": 0.291786823811368
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9373412820128308,
+            "magnitude_ratio_median": 0.9556871372222691,
+            "n": 538,
+            "relative_l2": 0.31141414976571147
+          }
+        }
+      },
+      "context": "j",
+      "j": {
+        "direction_median": 0.9600913016687163,
+        "magnitude_ratio_median": 0.9778523107078416,
+        "n": 2796,
+        "relative_l2": 0.2988594759762016
+      },
+      "ridge": 0.1,
+      "stacked_normalized": {
+        "direction_median": 0.950536994143462,
+        "magnitude_ratio_median": 0.9613374121022856,
+        "n": 2796,
+        "relative_l2": 0.3518396581640695
+      }
+    },
+    {
+      "by_family": {
+        "boolean_logic": {
+          "j": {
+            "direction_median": 0.9810371391100132,
+            "magnitude_ratio_median": 0.959270737713507,
+            "n": 580,
+            "relative_l2": 0.18359026472560072
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9757142390161951,
+            "magnitude_ratio_median": 0.9350578398088083,
+            "n": 580,
+            "relative_l2": 0.2433645076095702
+          }
+        },
+        "modular_arithmetic": {
+          "j": {
+            "direction_median": 0.9656381773732345,
+            "magnitude_ratio_median": 1.0021789168610997,
+            "n": 578,
+            "relative_l2": 0.3325089648619126
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9512721265760709,
+            "magnitude_ratio_median": 0.9735250070600039,
+            "n": 578,
+            "relative_l2": 0.4241526906328296
+          }
+        },
+        "short_graph_traversal": {
+          "j": {
+            "direction_median": 0.9470698833023508,
+            "magnitude_ratio_median": 0.9623016104182948,
+            "n": 560,
+            "relative_l2": 0.32601320587562166
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9503664257099265,
+            "magnitude_ratio_median": 0.9278066789875657,
+            "n": 560,
+            "relative_l2": 0.3513926097806843
+          }
+        },
+        "simple_state_transition": {
+          "j": {
+            "direction_median": 0.9521634964286781,
+            "magnitude_ratio_median": 0.9974226236216008,
+            "n": 540,
+            "relative_l2": 0.3121584104058336
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9546867374147436,
+            "magnitude_ratio_median": 1.0025326074672098,
+            "n": 540,
+            "relative_l2": 0.39376810754702996
+          }
+        },
+        "variable_binding": {
+          "j": {
+            "direction_median": 0.9658928657066869,
+            "magnitude_ratio_median": 0.9656575356548701,
+            "n": 538,
+            "relative_l2": 0.2704317824082663
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9469168909404411,
+            "magnitude_ratio_median": 0.9532420764556493,
+            "n": 538,
+            "relative_l2": 0.2885767870020614
+          }
+        }
+      },
+      "context": "j+rec",
+      "j": {
+        "direction_median": 0.963770850737276,
+        "magnitude_ratio_median": 0.973295343795202,
+        "n": 2796,
+        "relative_l2": 0.2828443537235884
+      },
+      "ridge": 0.1,
+      "stacked_normalized": {
+        "direction_median": 0.9547959833557578,
+        "magnitude_ratio_median": 0.956981384136717,
+        "n": 2796,
+        "relative_l2": 0.34029130777349975
+      }
+    },
+    {
+      "by_family": {
+        "boolean_logic": {
+          "j": {
+            "direction_median": 0.9807791514926397,
+            "magnitude_ratio_median": 0.9573845996325924,
+            "n": 580,
+            "relative_l2": 0.1842831550232266
+          },
+          "stacked_normalized": {
+            "direction_median": 0.975617967094492,
+            "magnitude_ratio_median": 0.9321655839621357,
+            "n": 580,
+            "relative_l2": 0.2428758272334186
+          }
+        },
+        "modular_arithmetic": {
+          "j": {
+            "direction_median": 0.9648270526831453,
+            "magnitude_ratio_median": 1.001124229479701,
+            "n": 578,
+            "relative_l2": 0.33835849454620626
+          },
+          "stacked_normalized": {
+            "direction_median": 0.949543280997998,
+            "magnitude_ratio_median": 0.9764180918506997,
+            "n": 578,
+            "relative_l2": 0.42223447423702004
+          }
+        },
+        "short_graph_traversal": {
+          "j": {
+            "direction_median": 0.9461865994136547,
+            "magnitude_ratio_median": 0.9516304853884073,
+            "n": 560,
+            "relative_l2": 0.32304908157582185
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9510706041505725,
+            "magnitude_ratio_median": 0.9235939041733663,
+            "n": 560,
+            "relative_l2": 0.3535441704638114
+          }
+        },
+        "simple_state_transition": {
+          "j": {
+            "direction_median": 0.9508311608293418,
+            "magnitude_ratio_median": 1.0105921822404849,
+            "n": 540,
+            "relative_l2": 0.3174700195707246
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9554586312796263,
+            "magnitude_ratio_median": 1.0078827090305578,
+            "n": 540,
+            "relative_l2": 0.39932646672983907
+          }
+        },
+        "variable_binding": {
+          "j": {
+            "direction_median": 0.9644124362669064,
+            "magnitude_ratio_median": 0.9671915002939013,
+            "n": 538,
+            "relative_l2": 0.2799258915059763
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9440405394603439,
+            "magnitude_ratio_median": 0.9503390840659498,
+            "n": 538,
+            "relative_l2": 0.2965604143792263
+          }
+        }
+      },
+      "context": "j+conv",
+      "j": {
+        "direction_median": 0.9633667177407313,
+        "magnitude_ratio_median": 0.9741988272477845,
+        "n": 2796,
+        "relative_l2": 0.2864655612544479
+      },
+      "ridge": 0.1,
+      "stacked_normalized": {
+        "direction_median": 0.954294356795798,
+        "magnitude_ratio_median": 0.9564867219882436,
+        "n": 2796,
+        "relative_l2": 0.3424401947748005
+      }
+    },
+    {
+      "by_family": {
+        "boolean_logic": {
+          "j": {
+            "direction_median": 0.9805444628456614,
+            "magnitude_ratio_median": 0.9436810500531216,
+            "n": 580,
+            "relative_l2": 0.196804326650208
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9749928754128345,
+            "magnitude_ratio_median": 0.9204815291293477,
+            "n": 580,
+            "relative_l2": 0.2579659908287556
+          }
+        },
+        "modular_arithmetic": {
+          "j": {
+            "direction_median": 0.9603953438834725,
+            "magnitude_ratio_median": 1.0065799971325984,
+            "n": 578,
+            "relative_l2": 0.3381620583003172
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9460392356079257,
+            "magnitude_ratio_median": 0.9887735108846752,
+            "n": 578,
+            "relative_l2": 0.4144559076233548
+          }
+        },
+        "short_graph_traversal": {
+          "j": {
+            "direction_median": 0.9355951430430756,
+            "magnitude_ratio_median": 0.9815874969245727,
+            "n": 560,
+            "relative_l2": 0.3554794492565228
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9408790430344351,
+            "magnitude_ratio_median": 0.9283428040979285,
+            "n": 560,
+            "relative_l2": 0.3980815046583371
+          }
+        },
+        "simple_state_transition": {
+          "j": {
+            "direction_median": 0.948027610976343,
+            "magnitude_ratio_median": 0.9853696168295162,
+            "n": 540,
+            "relative_l2": 0.32698686282820777
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9530612224725712,
+            "magnitude_ratio_median": 0.996456836658999,
+            "n": 540,
+            "relative_l2": 0.3802310035167952
+          }
+        },
+        "variable_binding": {
+          "j": {
+            "direction_median": 0.9660041747509476,
+            "magnitude_ratio_median": 0.9642094976227973,
+            "n": 538,
+            "relative_l2": 0.2683332956921142
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9484499305248026,
+            "magnitude_ratio_median": 0.9523090035480324,
+            "n": 538,
+            "relative_l2": 0.2866228027092058
+          }
+        }
+      },
+      "context": "j+kv",
+      "j": {
+        "direction_median": 0.9601581144051918,
+        "magnitude_ratio_median": 0.9743266950298991,
+        "n": 2796,
+        "relative_l2": 0.2948756359491713
+      },
+      "ridge": 0.1,
+      "stacked_normalized": {
+        "direction_median": 0.9515465779776011,
+        "magnitude_ratio_median": 0.9566445771357308,
+        "n": 2796,
+        "relative_l2": 0.34905922044838245
+      }
+    },
+    {
+      "by_family": {
+        "boolean_logic": {
+          "j": {
+            "direction_median": 0.9810666528703331,
+            "magnitude_ratio_median": 0.9586133742827477,
+            "n": 580,
+            "relative_l2": 0.1822575429117939
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9758296225876908,
+            "magnitude_ratio_median": 0.9307676124253363,
+            "n": 580,
+            "relative_l2": 0.24245900446260857
+          }
+        },
+        "modular_arithmetic": {
+          "j": {
+            "direction_median": 0.9656455040720808,
+            "magnitude_ratio_median": 1.0030152311701401,
+            "n": 578,
+            "relative_l2": 0.3345793120594764
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9505606536503444,
+            "magnitude_ratio_median": 0.9734649521459928,
+            "n": 578,
+            "relative_l2": 0.42273019524864947
+          }
+        },
+        "short_graph_traversal": {
+          "j": {
+            "direction_median": 0.9469824324072164,
+            "magnitude_ratio_median": 0.9606828963846987,
+            "n": 560,
+            "relative_l2": 0.32403369070226534
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9508268690225294,
+            "magnitude_ratio_median": 0.9266897468444497,
+            "n": 560,
+            "relative_l2": 0.35145593427172256
+          }
+        },
+        "simple_state_transition": {
+          "j": {
+            "direction_median": 0.9518335113293943,
+            "magnitude_ratio_median": 1.0017150433920317,
+            "n": 540,
+            "relative_l2": 0.31404223876267195
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9549850666203812,
+            "magnitude_ratio_median": 1.0049918513946845,
+            "n": 540,
+            "relative_l2": 0.3968159211815177
+          }
+        },
+        "variable_binding": {
+          "j": {
+            "direction_median": 0.9652340385885556,
+            "magnitude_ratio_median": 0.9662236257785014,
+            "n": 538,
+            "relative_l2": 0.2746107193725369
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9459639492926117,
+            "magnitude_ratio_median": 0.9507912876570443,
+            "n": 538,
+            "relative_l2": 0.29182773362210707
+          }
+        }
+      },
+      "context": "j+rec+conv",
+      "j": {
+        "direction_median": 0.9637584868688147,
+        "magnitude_ratio_median": 0.9747866248920346,
+        "n": 2796,
+        "relative_l2": 0.28382298318011745
+      },
+      "ridge": 0.1,
+      "stacked_normalized": {
+        "direction_median": 0.954790586840274,
+        "magnitude_ratio_median": 0.9556120086600687,
+        "n": 2796,
+        "relative_l2": 0.3408361733888501
+      }
+    },
+    {
+      "by_family": {
+        "boolean_logic": {
+          "j": {
+            "direction_median": 0.9808198353461304,
+            "magnitude_ratio_median": 0.9542762599504809,
+            "n": 580,
+            "relative_l2": 0.18742507689295643
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9760995591930035,
+            "magnitude_ratio_median": 0.9270222529020737,
+            "n": 580,
+            "relative_l2": 0.24751620408056588
+          }
+        },
+        "modular_arithmetic": {
+          "j": {
+            "direction_median": 0.9624537637184787,
+            "magnitude_ratio_median": 0.9993920277692295,
+            "n": 578,
+            "relative_l2": 0.33163283191188125
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9494799079331355,
+            "magnitude_ratio_median": 0.9823168694650313,
+            "n": 578,
+            "relative_l2": 0.41917303530165206
+          }
+        },
+        "short_graph_traversal": {
+          "j": {
+            "direction_median": 0.9398548763903685,
+            "magnitude_ratio_median": 0.9706645023198172,
+            "n": 560,
+            "relative_l2": 0.3435774900378288
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9458326845345246,
+            "magnitude_ratio_median": 0.9273180612849248,
+            "n": 560,
+            "relative_l2": 0.37754483947722944
+          }
+        },
+        "simple_state_transition": {
+          "j": {
+            "direction_median": 0.9504432468220169,
+            "magnitude_ratio_median": 0.9857080333483637,
+            "n": 540,
+            "relative_l2": 0.3188544118538795
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9528057687254884,
+            "magnitude_ratio_median": 0.9975581227725702,
+            "n": 540,
+            "relative_l2": 0.37575811703257767
+          }
+        },
+        "variable_binding": {
+          "j": {
+            "direction_median": 0.9659079901453691,
+            "magnitude_ratio_median": 0.9644707977824776,
+            "n": 538,
+            "relative_l2": 0.2687573363901286
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9485502964153212,
+            "magnitude_ratio_median": 0.9529322590435004,
+            "n": 538,
+            "relative_l2": 0.2869915060132408
+          }
+        }
+      },
+      "context": "j+rec+kv",
+      "j": {
+        "direction_median": 0.9621522840930548,
+        "magnitude_ratio_median": 0.9744367092809334,
+        "n": 2796,
+        "relative_l2": 0.28790237577541833
+      },
+      "ridge": 0.1,
+      "stacked_normalized": {
+        "direction_median": 0.9532575374301175,
+        "magnitude_ratio_median": 0.9583808369567439,
+        "n": 2796,
+        "relative_l2": 0.3425420720299145
+      }
+    },
+    {
+      "by_family": {
+        "boolean_logic": {
+          "j": {
+            "direction_median": 0.9807399282372806,
+            "magnitude_ratio_median": 0.9534165882583936,
+            "n": 580,
+            "relative_l2": 0.18802889790471852
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9756745554443687,
+            "magnitude_ratio_median": 0.9243323030112676,
+            "n": 580,
+            "relative_l2": 0.2476277582188283
+          }
+        },
+        "modular_arithmetic": {
+          "j": {
+            "direction_median": 0.9615657313922998,
+            "magnitude_ratio_median": 1.0068435111990641,
+            "n": 578,
+            "relative_l2": 0.3343289048910234
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9477743325656004,
+            "magnitude_ratio_median": 0.9848908432710863,
+            "n": 578,
+            "relative_l2": 0.4181212441942301
+          }
+        },
+        "short_graph_traversal": {
+          "j": {
+            "direction_median": 0.9397070946770392,
+            "magnitude_ratio_median": 0.9640371310891944,
+            "n": 560,
+            "relative_l2": 0.34120614329464033
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9459826347145979,
+            "magnitude_ratio_median": 0.9252047293930283,
+            "n": 560,
+            "relative_l2": 0.3761837547641741
+          }
+        },
+        "simple_state_transition": {
+          "j": {
+            "direction_median": 0.9500799756145325,
+            "magnitude_ratio_median": 0.9932385532834493,
+            "n": 540,
+            "relative_l2": 0.3214543497308486
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9524512934579326,
+            "magnitude_ratio_median": 0.998735226397756,
+            "n": 540,
+            "relative_l2": 0.3779065897366747
+          }
+        },
+        "variable_binding": {
+          "j": {
+            "direction_median": 0.9654539809897842,
+            "magnitude_ratio_median": 0.9668067471557031,
+            "n": 538,
+            "relative_l2": 0.2737977272001205
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9470429425134257,
+            "magnitude_ratio_median": 0.9522292078186654,
+            "n": 538,
+            "relative_l2": 0.2906864705061817
+          }
+        }
+      },
+      "context": "j+conv+kv",
+      "j": {
+        "direction_median": 0.9616349368919175,
+        "magnitude_ratio_median": 0.9750016404023729,
+        "n": 2796,
+        "relative_l2": 0.2895014975175677
+      },
+      "ridge": 0.1,
+      "stacked_normalized": {
+        "direction_median": 0.9530489880467432,
+        "magnitude_ratio_median": 0.9562542794894506,
+        "n": 2796,
+        "relative_l2": 0.3429092216891868
+      }
+    },
+    {
+      "by_family": {
+        "boolean_logic": {
+          "j": {
+            "direction_median": 0.980943966395979,
+            "magnitude_ratio_median": 0.9570421954345896,
+            "n": 580,
+            "relative_l2": 0.18516664327382024
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9759269172057299,
+            "magnitude_ratio_median": 0.9296853079868117,
+            "n": 580,
+            "relative_l2": 0.24510295993862627
+          }
+        },
+        "modular_arithmetic": {
+          "j": {
+            "direction_median": 0.9629853565931217,
+            "magnitude_ratio_median": 1.0003449529626667,
+            "n": 578,
+            "relative_l2": 0.33058151005793635
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9492593122312549,
+            "magnitude_ratio_median": 0.981824646477691,
+            "n": 578,
+            "relative_l2": 0.41862028707378074
+          }
+        },
+        "short_graph_traversal": {
+          "j": {
+            "direction_median": 0.9418956237326739,
+            "magnitude_ratio_median": 0.9629585874377218,
+            "n": 560,
+            "relative_l2": 0.3368390973793482
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9471031404175534,
+            "magnitude_ratio_median": 0.9290183177479953,
+            "n": 560,
+            "relative_l2": 0.36818340089155716
+          }
+        },
+        "simple_state_transition": {
+          "j": {
+            "direction_median": 0.9506317247022269,
+            "magnitude_ratio_median": 0.993400526962571,
+            "n": 540,
+            "relative_l2": 0.3176511848106802
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9535569073421837,
+            "magnitude_ratio_median": 0.9980104922186587,
+            "n": 540,
+            "relative_l2": 0.3781282747679923
+          }
+        },
+        "variable_binding": {
+          "j": {
+            "direction_median": 0.9656701637165519,
+            "magnitude_ratio_median": 0.9664653581203783,
+            "n": 538,
+            "relative_l2": 0.2722172514757779
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9467706434038083,
+            "magnitude_ratio_median": 0.9508569711495123,
+            "n": 538,
+            "relative_l2": 0.2896823505377896
+          }
+        }
+      },
+      "context": "j+rec+conv+kv",
+      "j": {
+        "direction_median": 0.9626887465210796,
+        "magnitude_ratio_median": 0.9736743212273916,
+        "n": 2796,
+        "relative_l2": 0.2862787197469322
+      },
+      "ridge": 0.1,
+      "stacked_normalized": {
+        "direction_median": 0.9538952931498144,
+        "magnitude_ratio_median": 0.9573659021786121,
+        "n": 2796,
+        "relative_l2": 0.3405617593251668
+      }
+    },
+    {
+      "by_family": {
+        "boolean_logic": {
+          "j": {
+            "direction_median": 0.9815398043541317,
+            "magnitude_ratio_median": 0.9635426297487641,
+            "n": 580,
+            "relative_l2": 0.1824381448888472
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9764264961636926,
+            "magnitude_ratio_median": 0.933619354532744,
+            "n": 580,
+            "relative_l2": 0.2369686613512499
+          }
+        },
+        "modular_arithmetic": {
+          "j": {
+            "direction_median": 0.9647770154077654,
+            "magnitude_ratio_median": 0.9943850365121967,
+            "n": 578,
+            "relative_l2": 0.32188798159211085
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9515820666882312,
+            "magnitude_ratio_median": 0.9722132582077055,
+            "n": 578,
+            "relative_l2": 0.41475926214814585
+          }
+        },
+        "short_graph_traversal": {
+          "j": {
+            "direction_median": 0.9421215476345681,
+            "magnitude_ratio_median": 0.9746133828460599,
+            "n": 560,
+            "relative_l2": 0.3411509596199821
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9452157254758262,
+            "magnitude_ratio_median": 0.922044097027561,
+            "n": 560,
+            "relative_l2": 0.3850697091551809
+          }
+        },
+        "simple_state_transition": {
+          "j": {
+            "direction_median": 0.954546101562463,
+            "magnitude_ratio_median": 0.973057469551487,
+            "n": 540,
+            "relative_l2": 0.30902010707375605
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9555776808406444,
+            "magnitude_ratio_median": 0.9837503375734508,
+            "n": 540,
+            "relative_l2": 0.36626290336140344
+          }
+        },
+        "variable_binding": {
+          "j": {
+            "direction_median": 0.9689888179909315,
+            "magnitude_ratio_median": 0.9577795072973361,
+            "n": 538,
+            "relative_l2": 0.25469578343241445
+          },
+          "stacked_normalized": {
+            "direction_median": 0.9534856416223911,
+            "magnitude_ratio_median": 0.9460599381584611,
+            "n": 538,
+            "relative_l2": 0.2725123101195086
+          }
+        }
+      },
+      "context": "full_raw_reference",
+      "j": {
+        "direction_median": 0.9642081504504283,
+        "magnitude_ratio_median": 0.9712536251116628,
+        "n": 2796,
+        "relative_l2": 0.2799972327842135
+      },
+      "ridge": 0.1,
+      "stacked_normalized": {
+        "direction_median": 0.9566193740447563,
+        "magnitude_ratio_median": 0.9517583170842043,
+        "n": 2796,
+        "relative_l2": 0.33767012292768767
+      }
+    }
+  ],
+  "selected_ridge": 0.1,
+  "split_freeze_digest": "5096bead69209ec4a46747866ead84e5b99942f06f179216e0efd0e87d4682b9",
+  "train_only_ridge_cv": [
+    {
+      "ridge": 0.01,
+      "train_oof_stacked_relative_l2": 0.38985811909072193
+    },
+    {
+      "ridge": 0.1,
+      "train_oof_stacked_relative_l2": 0.3489816966035119
+    },
+    {
+      "ridge": 1.0,
+      "train_oof_stacked_relative_l2": 0.3494682414721927
+    }
+  ],
+  "validation_action_rows": 2796
+}

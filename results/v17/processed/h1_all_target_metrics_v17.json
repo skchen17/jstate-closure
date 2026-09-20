@@ -1,0 +1,569 @@
+{
+  "continuous_semantic_metric": "MEASURED",
+  "freeze_digest": "32e0e5d38e108c7513c8b3d379ad704d07d5aa09bddf279dd92ed2c7273a1470",
+  "independent": false,
+  "legacy_semantic_metric": "UNAVAILABLE_FROM_V16_BANK",
+  "metrics": [
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.505657750940229,
+        "modular_arithmetic": 0.5010836048312223,
+        "short_graph_traversal": 0.5918187575844568,
+        "simple_state_transition": 0.629604590928047,
+        "variable_binding": 0.45606245379676486
+      },
+      "component_sign_agreement": 0.8457152121290048,
+      "context": "action_only",
+      "direction_median": 0.863328741676285,
+      "magnitude_ratio_median": 0.8727096158974958,
+      "n": 2796,
+      "relative_l2": 0.5314230474331852,
+      "target": "j"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.5949982350507022,
+        "modular_arithmetic": 0.5832436627928446,
+        "short_graph_traversal": 0.6509283464569074,
+        "simple_state_transition": 0.6346929714831465,
+        "variable_binding": 0.495114625644762
+      },
+      "component_sign_agreement": 0.8292664809656453,
+      "context": "action_only",
+      "direction_median": 0.8202464168402224,
+      "magnitude_ratio_median": 0.8115009436235512,
+      "n": 2796,
+      "relative_l2": 0.5941249460458718,
+      "target": "logits"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.5671554454968682,
+        "modular_arithmetic": 0.5677185139743287,
+        "short_graph_traversal": 0.6630691659757909,
+        "simple_state_transition": 0.697696931967315,
+        "variable_binding": 0.4915136421229479
+      },
+      "component_sign_agreement": 0.8078896477716049,
+      "context": "action_only",
+      "direction_median": 0.838990402946265,
+      "magnitude_ratio_median": 0.8324355331632722,
+      "n": 2796,
+      "relative_l2": 0.5982020979828157,
+      "target": "semantic_continuous"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.5226882346160832,
+        "modular_arithmetic": 0.5744278653844289,
+        "short_graph_traversal": 0.5340197750080842,
+        "simple_state_transition": 0.49800510152882943,
+        "variable_binding": 0.43552398957980987
+      },
+      "component_sign_agreement": 0.840553221503266,
+      "context": "action_only",
+      "direction_median": 0.8567711953704903,
+      "magnitude_ratio_median": 0.8513412590000036,
+      "n": 2796,
+      "relative_l2": 0.5238036830567222,
+      "target": "workspace"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.5627034524458275,
+        "modular_arithmetic": 0.5704256708131303,
+        "short_graph_traversal": 0.6283582707958797,
+        "simple_state_transition": 0.6291468677916128,
+        "variable_binding": 0.4817004426059762
+      },
+      "component_sign_agreement": 0.8376674489875648,
+      "context": "action_only",
+      "direction_median": 0.827551918684827,
+      "magnitude_ratio_median": 0.8346493750303057,
+      "n": 2796,
+      "relative_l2": 0.5764047238014753,
+      "target": "stacked_normalized"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.19740107190621148,
+        "modular_arithmetic": 0.35067921119878587,
+        "short_graph_traversal": 0.3366250993417096,
+        "simple_state_transition": 0.32996370252104384,
+        "variable_binding": 0.291786823811368
+      },
+      "component_sign_agreement": 0.9086103859076349,
+      "context": "j",
+      "direction_median": 0.9600913016687163,
+      "magnitude_ratio_median": 0.9778523107078416,
+      "n": 2796,
+      "relative_l2": 0.2988594759762016,
+      "target": "j"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.2482234669783479,
+        "modular_arithmetic": 0.40366452398554925,
+        "short_graph_traversal": 0.37512098467730964,
+        "simple_state_transition": 0.38704838968761046,
+        "variable_binding": 0.33908726753414586
+      },
+      "component_sign_agreement": 0.9119281956050759,
+      "context": "j",
+      "direction_median": 0.9485309444215307,
+      "magnitude_ratio_median": 0.9636323340848785,
+      "n": 2796,
+      "relative_l2": 0.3471142045831249,
+      "target": "logits"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.3020569635108211,
+        "modular_arithmetic": 0.4229934965547736,
+        "short_graph_traversal": 0.3788998019449499,
+        "simple_state_transition": 0.444181511448974,
+        "variable_binding": 0.30320690077447754
+      },
+      "component_sign_agreement": 0.866765780972289,
+      "context": "j",
+      "direction_median": 0.9529830967713291,
+      "magnitude_ratio_median": 0.9549112524084993,
+      "n": 2796,
+      "relative_l2": 0.36684810934835266,
+      "target": "semantic_continuous"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.21746175891982208,
+        "modular_arithmetic": 0.4805062557949056,
+        "short_graph_traversal": 0.31073956068858055,
+        "simple_state_transition": 0.3717351345286123,
+        "variable_binding": 0.2866795380396828
+      },
+      "component_sign_agreement": 0.8962004354626023,
+      "context": "j",
+      "direction_median": 0.9418814663311548,
+      "magnitude_ratio_median": 0.9586719244625002,
+      "n": 2796,
+      "relative_l2": 0.346406527425894,
+      "target": "workspace"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.2596935004563243,
+        "modular_arithmetic": 0.42862324062400947,
+        "short_graph_traversal": 0.3610141510811469,
+        "simple_state_transition": 0.40364525221849373,
+        "variable_binding": 0.31141414976571147
+      },
+      "component_sign_agreement": 0.900610036665866,
+      "context": "j",
+      "direction_median": 0.950536994143462,
+      "magnitude_ratio_median": 0.9613374121022856,
+      "n": 2796,
+      "relative_l2": 0.3518396581640695,
+      "target": "stacked_normalized"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.18359026472560072,
+        "modular_arithmetic": 0.3325089648619126,
+        "short_graph_traversal": 0.32601320587562166,
+        "simple_state_transition": 0.3121584104058336,
+        "variable_binding": 0.2704317824082663
+      },
+      "component_sign_agreement": 0.9127249450739894,
+      "context": "j+rec",
+      "direction_median": 0.963770850737276,
+      "magnitude_ratio_median": 0.973295343795202,
+      "n": 2796,
+      "relative_l2": 0.2828443537235884,
+      "target": "j"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.22773198492241423,
+        "modular_arithmetic": 0.393322222277991,
+        "short_graph_traversal": 0.36809547287072936,
+        "simple_state_transition": 0.3756863766879512,
+        "variable_binding": 0.31525182440975535
+      },
+      "component_sign_agreement": 0.9175116063138348,
+      "context": "j+rec",
+      "direction_median": 0.9542297548368469,
+      "magnitude_ratio_median": 0.9574128141756106,
+      "n": 2796,
+      "relative_l2": 0.3332969068716348,
+      "target": "logits"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.2898282677761104,
+        "modular_arithmetic": 0.4236470330841363,
+        "short_graph_traversal": 0.3699992823207264,
+        "simple_state_transition": 0.43779626057235516,
+        "variable_binding": 0.28326861404132264
+      },
+      "component_sign_agreement": 0.8715612738796543,
+      "context": "j+rec",
+      "direction_median": 0.9574531762436429,
+      "magnitude_ratio_median": 0.9525684296974317,
+      "n": 2796,
+      "relative_l2": 0.35789136101548474,
+      "target": "semantic_continuous"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.1972183110445938,
+        "modular_arithmetic": 0.4788004284301481,
+        "short_graph_traversal": 0.2954355413971979,
+        "simple_state_transition": 0.35864414053942617,
+        "variable_binding": 0.2556656664260007
+      },
+      "component_sign_agreement": 0.9014995860038639,
+      "context": "j+rec",
+      "direction_median": 0.9466903837679282,
+      "magnitude_ratio_median": 0.9546656787464283,
+      "n": 2796,
+      "relative_l2": 0.33428307256172185,
+      "target": "workspace"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.2433645076095702,
+        "modular_arithmetic": 0.4241526906328296,
+        "short_graph_traversal": 0.3513926097806843,
+        "simple_state_transition": 0.39376810754702996,
+        "variable_binding": 0.2885767870020614
+      },
+      "component_sign_agreement": 0.9052576594617903,
+      "context": "j+rec",
+      "direction_median": 0.9547959833557578,
+      "magnitude_ratio_median": 0.956981384136717,
+      "n": 2796,
+      "relative_l2": 0.34029130777349975,
+      "target": "stacked_normalized"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.1842831550232266,
+        "modular_arithmetic": 0.33835849454620626,
+        "short_graph_traversal": 0.32304908157582185,
+        "simple_state_transition": 0.3174700195707246,
+        "variable_binding": 0.2799258915059763
+      },
+      "component_sign_agreement": 0.9116879196319259,
+      "context": "j+conv",
+      "direction_median": 0.9633667177407313,
+      "magnitude_ratio_median": 0.9741988272477845,
+      "n": 2796,
+      "relative_l2": 0.2864655612544479,
+      "target": "j"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.2290237907656665,
+        "modular_arithmetic": 0.3930117027613983,
+        "short_graph_traversal": 0.36686730086363506,
+        "simple_state_transition": 0.38300369386078764,
+        "variable_binding": 0.3236200717092077
+      },
+      "component_sign_agreement": 0.9161497988238936,
+      "context": "j+conv",
+      "direction_median": 0.9527866731749419,
+      "magnitude_ratio_median": 0.9587599237726262,
+      "n": 2796,
+      "relative_l2": 0.33577893218869703,
+      "target": "logits"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.28405997360234947,
+        "modular_arithmetic": 0.4224263449267074,
+        "short_graph_traversal": 0.3729371650123062,
+        "simple_state_transition": 0.44319806514443577,
+        "variable_binding": 0.2891766778232951
+      },
+      "component_sign_agreement": 0.8719078013391609,
+      "context": "j+conv",
+      "direction_median": 0.9566311134951284,
+      "magnitude_ratio_median": 0.9512510942778679,
+      "n": 2796,
+      "relative_l2": 0.35928892287444875,
+      "target": "semantic_continuous"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.20516315148359757,
+        "modular_arithmetic": 0.4730383660614942,
+        "short_graph_traversal": 0.30263601134936585,
+        "simple_state_transition": 0.3625748108003996,
+        "variable_binding": 0.26881459057311724
+      },
+      "component_sign_agreement": 0.8999478671532399,
+      "context": "j+conv",
+      "direction_median": 0.9449869151072927,
+      "magnitude_ratio_median": 0.9567203419456706,
+      "n": 2796,
+      "relative_l2": 0.3370029125110788,
+      "target": "workspace"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.2428758272334186,
+        "modular_arithmetic": 0.42223447423702004,
+        "short_graph_traversal": 0.3535441704638114,
+        "simple_state_transition": 0.39932646672983907,
+        "variable_binding": 0.2965604143792263
+      },
+      "component_sign_agreement": 0.9042462371908216,
+      "context": "j+conv",
+      "direction_median": 0.954294356795798,
+      "magnitude_ratio_median": 0.9564867219882436,
+      "n": 2796,
+      "relative_l2": 0.3424401947748005,
+      "target": "stacked_normalized"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.196804326650208,
+        "modular_arithmetic": 0.3381620583003172,
+        "short_graph_traversal": 0.3554794492565228,
+        "simple_state_transition": 0.32698686282820777,
+        "variable_binding": 0.2683332956921142
+      },
+      "component_sign_agreement": 0.9092560809942027,
+      "context": "j+kv",
+      "direction_median": 0.9601581144051918,
+      "magnitude_ratio_median": 0.9743266950298991,
+      "n": 2796,
+      "relative_l2": 0.2948756359491713,
+      "target": "j"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.24544954536671074,
+        "modular_arithmetic": 0.3925909131058547,
+        "short_graph_traversal": 0.39166735836719224,
+        "simple_state_transition": 0.3757409660417055,
+        "variable_binding": 0.31205860606672936
+      },
+      "component_sign_agreement": 0.9140699473847106,
+      "context": "j+kv",
+      "direction_median": 0.9496237977718531,
+      "magnitude_ratio_median": 0.9590944954124103,
+      "n": 2796,
+      "relative_l2": 0.3413703253983326,
+      "target": "logits"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.30188666710122275,
+        "modular_arithmetic": 0.4185645950694547,
+        "short_graph_traversal": 0.42545738259534044,
+        "simple_state_transition": 0.40559344387778895,
+        "variable_binding": 0.2825471731534619
+      },
+      "component_sign_agreement": 0.868979085391073,
+      "context": "j+kv",
+      "direction_median": 0.9536815359907962,
+      "magnitude_ratio_median": 0.9526339718713912,
+      "n": 2796,
+      "relative_l2": 0.36754680127881717,
+      "target": "semantic_continuous"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.2136688982815761,
+        "modular_arithmetic": 0.4515599146935148,
+        "short_graph_traversal": 0.36225819632125517,
+        "simple_state_transition": 0.35636208544467546,
+        "variable_binding": 0.25270923479094637
+      },
+      "component_sign_agreement": 0.8961759023582446,
+      "context": "j+kv",
+      "direction_median": 0.9426596879847757,
+      "magnitude_ratio_median": 0.9562062642027779,
+      "n": 2796,
+      "relative_l2": 0.3415897146438112,
+      "target": "workspace"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.2579659908287556,
+        "modular_arithmetic": 0.4144559076233548,
+        "short_graph_traversal": 0.3980815046583371,
+        "simple_state_transition": 0.3802310035167952,
+        "variable_binding": 0.2866228027092058
+      },
+      "component_sign_agreement": 0.9014724224648607,
+      "context": "j+kv",
+      "direction_median": 0.9515465779776011,
+      "magnitude_ratio_median": 0.9566445771357308,
+      "n": 2796,
+      "relative_l2": 0.34905922044838245,
+      "target": "stacked_normalized"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.18516664327382024,
+        "modular_arithmetic": 0.33058151005793635,
+        "short_graph_traversal": 0.3368390973793482,
+        "simple_state_transition": 0.3176511848106802,
+        "variable_binding": 0.2722172514757779
+      },
+      "component_sign_agreement": 0.9113077701437301,
+      "context": "j+rec+conv+kv",
+      "direction_median": 0.9626887465210796,
+      "magnitude_ratio_median": 0.9736743212273916,
+      "n": 2796,
+      "relative_l2": 0.2862787197469322,
+      "target": "j"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.23101010612925296,
+        "modular_arithmetic": 0.3902844609149043,
+        "short_graph_traversal": 0.3747967926756683,
+        "simple_state_transition": 0.3696359050389648,
+        "variable_binding": 0.3159709615018777
+      },
+      "component_sign_agreement": 0.9162612194367069,
+      "context": "j+rec+conv+kv",
+      "direction_median": 0.9521686166146645,
+      "magnitude_ratio_median": 0.9591983151274285,
+      "n": 2796,
+      "relative_l2": 0.3338477107947901,
+      "target": "logits"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.2887387877211689,
+        "modular_arithmetic": 0.4224163689768739,
+        "short_graph_traversal": 0.389315711016943,
+        "simple_state_transition": 0.40756988250396886,
+        "variable_binding": 0.28450955353025326
+      },
+      "component_sign_agreement": 0.8700745592953196,
+      "context": "j+rec+conv+kv",
+      "direction_median": 0.9555087346011836,
+      "magnitude_ratio_median": 0.9523533728468057,
+      "n": 2796,
+      "relative_l2": 0.3569478653000634,
+      "target": "semantic_continuous"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.20292785874756142,
+        "modular_arithmetic": 0.46513946855254645,
+        "short_graph_traversal": 0.3240566098724162,
+        "simple_state_transition": 0.35342241426533144,
+        "variable_binding": 0.2569188772328107
+      },
+      "component_sign_agreement": 0.8989174767702168,
+      "context": "j+rec+conv+kv",
+      "direction_median": 0.9449122797004075,
+      "magnitude_ratio_median": 0.9562653090149993,
+      "n": 2796,
+      "relative_l2": 0.335605531243618,
+      "target": "workspace"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.24510295993862627,
+        "modular_arithmetic": 0.41862028707378074,
+        "short_graph_traversal": 0.36818340089155716,
+        "simple_state_transition": 0.3781282747679923,
+        "variable_binding": 0.2896823505377896
+      },
+      "component_sign_agreement": 0.9035748495889198,
+      "context": "j+rec+conv+kv",
+      "direction_median": 0.9538952931498144,
+      "magnitude_ratio_median": 0.9573659021786121,
+      "n": 2796,
+      "relative_l2": 0.3405617593251668,
+      "target": "stacked_normalized"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.1824381448888472,
+        "modular_arithmetic": 0.32188798159211085,
+        "short_graph_traversal": 0.3411509596199821,
+        "simple_state_transition": 0.30902010707375605,
+        "variable_binding": 0.25469578343241445
+      },
+      "component_sign_agreement": 0.9127752589768389,
+      "context": "full_raw_reference",
+      "direction_median": 0.9642081504504283,
+      "magnitude_ratio_median": 0.9712536251116628,
+      "n": 2796,
+      "relative_l2": 0.2799972327842135,
+      "target": "j"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.22154319042730963,
+        "modular_arithmetic": 0.3825663168999246,
+        "short_graph_traversal": 0.3835269968740224,
+        "simple_state_transition": 0.3678164685961329,
+        "variable_binding": 0.2956416041554367
+      },
+      "component_sign_agreement": 0.9189229340761375,
+      "context": "full_raw_reference",
+      "direction_median": 0.9543514027329283,
+      "magnitude_ratio_median": 0.9515615806897157,
+      "n": 2796,
+      "relative_l2": 0.32865076509660174,
+      "target": "logits"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.2797816785228137,
+        "modular_arithmetic": 0.4248177241129455,
+        "short_graph_traversal": 0.40957475753759354,
+        "simple_state_transition": 0.39020318808785537,
+        "variable_binding": 0.2688874599041792
+      },
+      "component_sign_agreement": 0.8734839423646586,
+      "context": "full_raw_reference",
+      "direction_median": 0.9582869141775834,
+      "magnitude_ratio_median": 0.9500164604480344,
+      "n": 2796,
+      "relative_l2": 0.3555102915285151,
+      "target": "semantic_continuous"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.1968085375237086,
+        "modular_arithmetic": 0.4588600952079899,
+        "short_graph_traversal": 0.34887588636938205,
+        "simple_state_transition": 0.33833877330087514,
+        "variable_binding": 0.2422693944303608
+      },
+      "component_sign_agreement": 0.9007697261492226,
+      "context": "full_raw_reference",
+      "direction_median": 0.946436360151787,
+      "magnitude_ratio_median": 0.9523652563569505,
+      "n": 2796,
+      "relative_l2": 0.3340169229093779,
+      "target": "workspace"
+    },
+    {
+      "by_family_relative_l2": {
+        "boolean_logic": 0.2369686613512499,
+        "modular_arithmetic": 0.41475926214814585,
+        "short_graph_traversal": 0.3850697091551809,
+        "simple_state_transition": 0.36626290336140344,
+        "variable_binding": 0.2725123101195086
+      },
+      "component_sign_agreement": 0.9055238993728892,
+      "context": "full_raw_reference",
+      "direction_median": 0.9566193740447563,
+      "magnitude_ratio_median": 0.9517583170842043,
+      "n": 2796,
+      "relative_l2": 0.33767012292768767,
+      "target": "stacked_normalized"
+    }
+  ],
+  "selected_ridge": 0.1
+}

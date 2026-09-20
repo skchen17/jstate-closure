@@ -1,0 +1,30 @@
+{
+  "base_freeze_digest": "71c0501d3289b4ecafa5957c3121a076aee665e8967db7890ff19c3c050b77f8",
+  "design": {
+    "bootstrap_replicates": 1000,
+    "bootstrap_unit": "validation_state",
+    "conditional_context": "C_empty_J_only",
+    "heldout_validation": "V16_validation_states_reused_exploratory_not_independent",
+    "matched_pair_action": "same_coordinate_index_sign_and_exact_calibration_alpha",
+    "matched_pair_type_a": "largest_raw_minus_J_distance_percentile_gap_top_decile",
+    "matched_pair_type_b": "not_defined_without_compact_C",
+    "matched_pair_type_c": "largest_J_minus_raw_distance_percentile_gap_top_decile",
+    "raw_kernel_pca_rank": 32,
+    "raw_residualization": "KRR_from_J_to_train_PCA_raw_features_train_only_crossfit_by_state",
+    "residual_predictor": "ridge_linear_no_intercept_per_action_key",
+    "ridge": 0.1,
+    "seed": 1717,
+    "status": "diagnostic_after_material_ceiling_gate_failed",
+    "target_residualization": "KRR_from_J_to_response_train_only_crossfit_by_state_per_action_key",
+    "train_only_oof_folds": 5
+  },
+  "freeze_digest": "1f7f47ea02310b6a7068688be4656a2fb968cd08dfa98f7c63021f94b8c7b57f",
+  "input_hashes": {
+    "results/v17/processed/clean_state_kernels_v17.npz": "606ec5ee48bff6945eab4fb043cb9a5fc5e1c44c403bc210ba5e97d9e2fc2fdd",
+    "results/v17/processed/state_context_ceiling_v17.json": "8188224ddb370dccc917bf7c0636171c751940d7d562f4eb9e1db34db95c9a16",
+    "src/jclosure/experiments/conditional_v17.py": "6f990897e319339498ac1e902092e63c7bf83acb0361c6bb26aa00e7a59dbbfb"
+  },
+  "parent_split_freeze_digest": "5096bead69209ec4a46747866ead84e5b99942f06f179216e0efd0e87d4682b9",
+  "protocol_version": "interventional_state_sufficiency_v17_conditional_design",
+  "schema_version": 26
+}

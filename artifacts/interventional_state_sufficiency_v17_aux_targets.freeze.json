@@ -1,0 +1,34 @@
+{
+  "base_freeze_digest": "71c0501d3289b4ecafa5957c3121a076aee665e8967db7890ff19c3c050b77f8",
+  "design": {
+    "contexts": [
+      "action_only",
+      "j",
+      "j+rec",
+      "j+conv",
+      "j+kv",
+      "j+rec+conv+kv",
+      "full_raw_reference"
+    ],
+    "legacy_semantic": "not_in_V16_finite_action_bank; continuous_semantic_proxy_only",
+    "model": "same_frozen_per_action_kernel_ridge_as_ceiling",
+    "ridge": "train_only_selected_ceiling_ridge",
+    "targets": [
+      "j",
+      "logits",
+      "semantic_continuous",
+      "workspace",
+      "stacked_normalized"
+    ],
+    "validation": "V16_development_validation_reused"
+  },
+  "freeze_digest": "32e0e5d38e108c7513c8b3d379ad704d07d5aa09bddf279dd92ed2c7273a1470",
+  "input_hashes": {
+    "results/v17/processed/clean_state_kernels_v17.npz": "606ec5ee48bff6945eab4fb043cb9a5fc5e1c44c403bc210ba5e97d9e2fc2fdd",
+    "results/v17/processed/state_context_ceiling_v17.json": "8188224ddb370dccc917bf7c0636171c751940d7d562f4eb9e1db34db95c9a16",
+    "src/jclosure/experiments/aux_targets_v17.py": "2830273d77a8cbbf7fad26d86601497be556129d9740cc9a658d9f0cbca58db1"
+  },
+  "parent_split_freeze_digest": "5096bead69209ec4a46747866ead84e5b99942f06f179216e0efd0e87d4682b9",
+  "protocol_version": "interventional_state_sufficiency_v17_aux_targets",
+  "schema_version": 26
+}

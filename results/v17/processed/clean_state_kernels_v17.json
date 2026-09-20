@@ -1,0 +1,34 @@
+{
+  "clean_source_only": true,
+  "kernel_artifact": "results/v17/processed/clean_state_kernels_v17.npz",
+  "kernel_sha256": "606ec5ee48bff6945eab4fb043cb9a5fc5e1c44c403bc210ba5e97d9e2fc2fdd",
+  "raw_channels": [
+    "rec",
+    "conv",
+    "kv"
+  ],
+  "source_tensor_shapes": {
+    "conv": [
+      150,
+      196608
+    ],
+    "j": [
+      150,
+      4096
+    ],
+    "kv": [
+      150,
+      1048576
+    ],
+    "rec": [
+      150,
+      3145728
+    ]
+  },
+  "split_freeze_digest": "5096bead69209ec4a46747866ead84e5b99942f06f179216e0efd0e87d4682b9",
+  "state_count": 150,
+  "teacher_future_used_as_context": false,
+  "train_state_count": 100,
+  "v13_perturbed_states_used": false,
+  "validation_state_count": 50
+}

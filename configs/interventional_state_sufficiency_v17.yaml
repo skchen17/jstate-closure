@@ -1,0 +1,60 @@
+name: Interventional State Sufficiency
+protocol_version: interventional_state_sufficiency_v17
+parent_commit: 60060cb481b6fe2fe6a9bbf123611d37d4445fea
+historical_results_immutable: true
+source:
+  action_bank: results/v16/processed/finite_action_bank_v16.parquet
+  action_reliability: reliable
+  raw_state: v13_clean_prefill_only
+  measured_j: v13_endpoint_current_j_clean
+  development_train: v16_train
+  development_validation: v16_validation
+  independent_final: unopened_until_finalist
+estimand:
+  target: perturbed_minus_clean_same_state_response
+  primary: h1_selected_j_and_normalized_stack
+  auxiliary: [h1_logits, h1_semantic_continuous, h1_workspace]
+  multi_horizon: [2, 4, 8]
+  horizon_only_if_exact_teacher_forced_measurement: true
+  current_clean_state_only_as_predictor: true
+design:
+  primary_action_design: single
+  action_key: coordinate_index_and_sign
+  response_normalization: divide_by_actual_calibration_alpha
+  predictions_rescaled_by_actual_calibration_alpha: true
+  require_exact_same_alpha_for_matched_pairs: true
+  state_kernel: centered_train_only_linear_kernel
+  state_kernel_rank: all_positive_train_eigenvalues
+  matched_capacity: same_kernel_ridge_train_state_count_and_lambda
+  kernel_weight_grid: [0.0, 0.25, 0.5, 0.75, 1.0]
+  ridge_lambda_grid: [0.01, 0.1, 1.0]
+  train_state_cv_folds: 5
+  cv_seed: 20260920
+  response_min_train_states_per_action: 15
+  context_dimensions: [8, 16, 32, 64, 128, 256, 384, 512]
+  high_dimension_policy: report_rank_limited_not_clamped
+  context_families: [pca, response_pls, conditional_response_bottleneck, architecture_shared, architecture_factorized]
+  model_classes: [additive, bilinear, quadratic_interaction, small_state_conditioned_nonlinear]
+  action_holdouts: [sign, scale, pair, dense, primitive, outside_encoder_fit]
+  state_holdouts: [validation_states, leave_one_family_out, prompt, token_position, j_region]
+conditional_test:
+  base_fixed_before_raw_correction: true
+  target_residual_crossfit_by_state: true
+  raw_residual_crossfit_by_state: true
+  validation_never_fit: true
+  bootstrap_unit: state
+  bootstrap_replicates: 1000
+  bootstrap_seed: 1709
+gates:
+  material_raw_ceiling_relative_l2_gain_min: 0.05
+  compact_near_raw_gap_fraction_min: 0.90
+  conditional_raw_relative_l2_gain_max: 0.02
+  conditional_raw_gain_ci_upper_max: 0.03
+  response_direction_min: 0.90
+  response_relative_l2_max: 0.30
+  family_wise_required: true
+  unseen_action_required: true
+  multi_horizon_required_for_markov: [1, 2, 4, 8]
+  next_c_and_next_j_raw_gain_max: 0.02
+  independent_confirmation_required: true
+  no_autonomous_before_independent_v17_d: true

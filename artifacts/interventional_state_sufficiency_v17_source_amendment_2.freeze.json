@@ -1,0 +1,11 @@
+{
+  "base_freeze_digest": "71c0501d3289b4ecafa5957c3121a076aee665e8967db7890ff19c3c050b77f8",
+  "freeze_digest": "add57d3c26fdd1cd1a5c153d6ac864988d780ff039e24106ce57955c6a79e53c",
+  "input_hashes": {
+    "src/jclosure/experiments/state_sufficiency_v17.py": "66c399aa5d762be4896f0f073b4a7e874ddd0cc1cf09dfdf390430185600cc44"
+  },
+  "parent_split_freeze_digest": "acbb4f8e5158a70d6a2ecf90753232238a8234065c0f32870a389529de45704d",
+  "protocol_version": "interventional_state_sufficiency_v17_source_amendment_2",
+  "reason": "Clean V13 KV token lengths vary; pad each architecture KV block to frozen 256-token width before full-state kernel, retaining original prefix positions",
+  "schema_version": 26
+}

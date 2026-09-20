@@ -1,0 +1,3 @@
+# V17 compact-context dimensions
+
+The predeclared order makes compact-context search conditional on a material raw-context ceiling gain. That gate failed. Accordingly PCA, response-PLS, conditional-response bottleneck, architecture-shared and factorized encoders, and dimensions 8/16/32/64/128/256/384/512 were **not fit**. No curve, gap-closed score, conditional raw-gain curve, or smallest sufficient dimension exists. In addition, the 100 training states give at most 99 centered state-kernel directions; dimensions 128–512 are rank-limited in this response cohort and cannot silently be reported as tested. This is `NOT_ELIGIBLE`, not a failed 512-D empirical sufficiency claim.

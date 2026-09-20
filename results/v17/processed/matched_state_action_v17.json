@@ -1,0 +1,27 @@
+{
+  "design_freeze_digest": "1f7f47ea02310b6a7068688be4656a2fb968cd08dfa98f7c63021f94b8c7b57f",
+  "exact_same_action_key_and_alpha": true,
+  "pair_types": {
+    "A_similar_J_different_raw_rank_gap": {
+      "count": 5788,
+      "median_j_distance": 1.5168920755386353,
+      "median_raw_distance": 1.644300103187561,
+      "median_response_rel_divergence": 0.8104071448019187
+    },
+    "C_similar_raw_different_J_rank_gap": {
+      "count": 5808,
+      "median_j_distance": 1.674648642539978,
+      "median_raw_distance": 1.4882696866989136,
+      "median_response_rel_divergence": 0.9059917408515302
+    },
+    "other": {
+      "count": 46256,
+      "median_j_distance": 1.4450994729995728,
+      "median_raw_distance": 1.5100294351577759,
+      "median_response_rel_divergence": 0.7740586008131909
+    }
+  },
+  "selection_caveat": "rank-gap matching, not absolute close-neighbor matching; descriptive, no causal replacement inference",
+  "total_pairs": 57852,
+  "type_b": "NOT_DEFINED_NO_COMPACT_CONTEXT"
+}

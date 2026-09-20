@@ -1,0 +1,56 @@
+{
+  "base_freeze_digest": "0e76a756936e08d71aeee7feffc6dfc8c8e18d572ecd47a29a3048404c843b1a",
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 1919,
+  "bootstrap_unit": "base_state",
+  "created_utc": "2026-09-20T13:00:35.766711+00:00",
+  "dependence_lower_floor": 0.02,
+  "freeze_digest": "2080f9b2f5855522b9bffd3a424cbad6ad01dcf635397882c6e9e28095278f61",
+  "input_hashes": {
+    "artifacts/counterfactual_workspace_v19_q_amendment_2.freeze.json": "054ea5578630d60ed3c75e3f972e6f5caa42ac198383a1a19f7d71b630f08a63",
+    "artifacts/counterfactual_workspace_v19_teacher_amendment_3.freeze.json": "eaf5e3dde91f1825927ed25fe90ecf57fe4c0b8b7b61b91c987d445d8d826831",
+    "results/v18/processed/clean_state_scores_v18.npz": "c0a1138c9bf791ff5987230ee7a0cbfaddc909ad90391241029b6884bf41bb6e",
+    "src/jclosure/experiments/analyze_v19.py": "332744205f531f648baf1fa8c00650fe6229861b1805718209e16ab97cfe1408"
+  },
+  "matched_action_only_for_primary": true,
+  "modulation_margin": 0.1,
+  "natural_active_ratio_min": 0.1,
+  "prediction_action_sampling": "one_hash_selected_development_signed_action_per_base_state",
+  "prediction_budget": "same_states_one_row_per_state_same_136D_design_fixed_lambda",
+  "prediction_j_context": "frozen_V18_j_128D",
+  "prediction_model": "fixed_ridge_linear_intercept_128_state_8_action",
+  "prediction_raw_context": "frozen_V18_j_rec_conv_kv_128D",
+  "prediction_target_normalization": "frozen_V16_stack_and_train_mean_centered_denominator",
+  "primary_horizon": 1,
+  "primary_target": "stacked_normalized",
+  "protocol_version": "counterfactual_workspace_v19_analysis",
+  "q_freeze_digest": "572a827f6fba915490e9262767a1178d1eff7a24b6a17cb55b24f0a69ed529bb",
+  "response_rows_observed_at_freeze": 0,
+  "ridge_lambda": 1.0,
+  "schema_version": 28,
+  "split_freeze_digest": "9d50c11b81f98515fdb2191ec96167bae34e2908585e622084a3160c65503319",
+  "target_slices": {
+    "j": [
+      0,
+      128
+    ],
+    "logits": [
+      128,
+      160
+    ],
+    "semantic_continuous": [
+      160,
+      192
+    ],
+    "stacked_normalized": [
+      0,
+      288
+    ],
+    "workspace": [
+      192,
+      288
+    ]
+  },
+  "teacher_freeze_digest": "df10a2a96e423e7754cdbe3184eb366bbd40a4d5fef6dad5ee8e936ab53834c6",
+  "validation_rows_observed_at_freeze": 0
+}

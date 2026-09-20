@@ -630,3 +630,9 @@ Formal outcome: **V18-STOP — STRICT_MATCH_NOT_IDENTIFIED_AND_NO_MATERIAL_RAW_C
 Full-raw stack gain by horizon h1/h2/h4/h8: **-0.0014, -0.0055, -0.0188, 0.0061**. Earliest material horizon: **None**. Strict matching: **MATCH_NOT_IDENTIFIED**; history material: **False**. Compact search: **COMPACT_CONTEXT_SEARCH_NOT_AUTHORIZED**. Independent final: **UNOPENED_PENDING_FROZEN_FINALIST**.
 H2 remains. H3 candidate state and autonomous state-model training are not authorized without a response-sufficient compact state and independent V18-F confirmation. These are finite-action response results, not proof of a complete state or physical replacement. V1–V17 frozen records are unchanged. See `reports/V18_COMPLETE_REPORT.md` for all standalone reports and machine-record integrity index.
 <!-- V18_END -->
+
+<!-- V19_START -->
+## V19 — Counterfactual Workspace Sufficiency and Natural Dynamics
+
+Formal development outcome: **V19-B — CURRENT_J_IS_NOT_SUFFICIENT_FOR_TESTED_FINITE_ACTION_RESPONSE_CONTEXT (development)**. Active boundary-held-J q states and matched finite probe actions were crossed on 400 train/100 validation base states (five families); primary h1 M/R 0.7899, state-bootstrap CI [0.7577, 0.8097], natural N/R0 1.3284. Matched actuator rate 1.0000. h1 raw-context gain natural/action -0.0018/0.0133. C_response/C_dynamics search authorized: True/False; restricted C_response search ran with selected k=128. Independent final: UNOPENED_NO_ELIGIBLE_FINALIST_AFTER_RESTRICTED_COMPACT_SEARCH. H2 remains; H3 and autonomous state-model training are not authorized. No complete state or absolute replacement claim. See `reports/V19_COMPLETE_REPORT.md` for all standalone reports and integrity index.
+<!-- V19_END -->

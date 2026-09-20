@@ -1,0 +1,21 @@
+{
+  "branches": [
+    "A_snapshot_q_then_a",
+    "B_direct_q_then_a",
+    "C_direct_a_then_q",
+    "D_single_composed_write"
+  ],
+  "freeze_digest": "ec73a234096b3165fa7f74e5ec977325c6cd559ba4df7f9e8da0d46440f4b1be",
+  "median_stack_difference_from_A_by_branch": {
+    "A_snapshot_q_then_a": 0.0,
+    "B_direct_q_then_a": 0.0,
+    "C_direct_a_then_q": 0.17581114917993546,
+    "D_single_composed_write": 0.16907918453216553
+  },
+  "path": "results/v19/processed/writeback_order_audit_v19.parquet",
+  "primary_estimand_uses_only_A": true,
+  "rows": 80,
+  "sha256": "e85868f1ab1583f5017deafa1b5a0213181d6e33f58c3a8f476c8ef471b3cf97",
+  "snapshot_B_exact_fraction": 1.0,
+  "states": 5
+}

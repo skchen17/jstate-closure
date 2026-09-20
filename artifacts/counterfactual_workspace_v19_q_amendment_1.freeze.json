@@ -1,0 +1,229 @@
+{
+  "action_matching_threshold": {
+    "alpha": 0.5,
+    "coordinate_indices": [
+      5,
+      1,
+      7,
+      20,
+      11,
+      19,
+      17,
+      2
+    ],
+    "development_coordinates": [
+      5,
+      1,
+      7,
+      20
+    ],
+    "heldout_coordinates": [
+      11,
+      19,
+      17,
+      2
+    ],
+    "matched_norm_ratio_max": 1.1,
+    "matched_norm_ratio_min": 0.9,
+    "matched_realized_cosine_min": 0.98,
+    "reliability_gain_max": 1.2,
+    "reliability_gain_min": 0.8,
+    "reliability_min_cosine": 0.95,
+    "signs": [
+      -1,
+      1
+    ]
+  },
+  "base_freeze_digest": "0e76a756936e08d71aeee7feffc6dfc8c8e18d572ecd47a29a3048404c843b1a",
+  "created_utc": "2026-09-20T12:53:36.519117+00:00",
+  "freeze_digest": "0e79c12a9d5aed4dce602d5694994afc46b89e9bbdab8fd5750d0a830093319b",
+  "independent_final_opened": false,
+  "input_hashes": {
+    "artifacts/counterfactual_workspace_v19_interventions.freeze.json": "9e6fc32eb23eaf710f6225b054e22ddc7438bf1c96d1de99e73079f5b36b4b29",
+    "results/v19/processed/q_amendment_calibration_v19.parquet": "4ef8b545448b158d72f4206e20a9c8f39a815c232f5b5fb3e06884879db1fe7b",
+    "scripts/audit_q_vectors_v19.py": "ac5d5648d5c8bebb78b96483232cfc77cd1db72dd101d81cb5f9186591fc92eb",
+    "src/jclosure/experiments/q_amendment_v19.py": "5a7dda0e2e149294bbf877886330ee4fe3c8b71cd3cae584d0f7ef73977783c3"
+  },
+  "prior_intervention_freeze_digest": "9d4b8f250fcf100cfcef4d9c3e8acfbf1e7f9bda3f6f108510aacf44271637c7",
+  "probe_actions": [
+    {
+      "coordinate_index": 5,
+      "direction_index": 9,
+      "proposal_family": "architecture_balanced",
+      "v16_train_median_j_effect_norm": 0.18282173573970795,
+      "v16_train_reliable_fraction": 1.0
+    },
+    {
+      "coordinate_index": 1,
+      "direction_index": 1,
+      "proposal_family": "causal_weighted",
+      "v16_train_median_j_effect_norm": 0.1510821059346199,
+      "v16_train_reliable_fraction": 1.0
+    },
+    {
+      "coordinate_index": 7,
+      "direction_index": 39,
+      "proposal_family": "high_finite_response",
+      "v16_train_median_j_effect_norm": 0.12976288795471191,
+      "v16_train_reliable_fraction": 1.0
+    },
+    {
+      "coordinate_index": 20,
+      "direction_index": 24,
+      "proposal_family": "architecture_balanced",
+      "v16_train_median_j_effect_norm": 0.0986514687538147,
+      "v16_train_reliable_fraction": 1.0
+    },
+    {
+      "coordinate_index": 11,
+      "direction_index": 11,
+      "proposal_family": "causal_weighted",
+      "v16_train_median_j_effect_norm": 0.06917421519756317,
+      "v16_train_reliable_fraction": 1.0
+    },
+    {
+      "coordinate_index": 19,
+      "direction_index": 64,
+      "proposal_family": "residual_finite_response",
+      "v16_train_median_j_effect_norm": 0.026194329373538494,
+      "v16_train_reliable_fraction": 1.0
+    },
+    {
+      "coordinate_index": 17,
+      "direction_index": 69,
+      "proposal_family": "high_finite_response",
+      "v16_train_median_j_effect_norm": 0.068686842918396,
+      "v16_train_reliable_fraction": 1.0
+    },
+    {
+      "coordinate_index": 2,
+      "direction_index": 99,
+      "proposal_family": "high_finite_response",
+      "v16_train_median_j_effect_norm": 0.06805208697915077,
+      "v16_train_reliable_fraction": 1.0
+    }
+  ],
+  "protocol_version": "counterfactual_workspace_v19_q_amendment_1",
+  "q": [
+    {
+      "alpha": 1.0,
+      "calibration_status": "RELIABLE",
+      "channel": "conv",
+      "direction_index": 1,
+      "median_natural_to_action_ratio": 0.9457105398178101,
+      "median_raw_state_delta_norm": 1289.4240369370352,
+      "name": "conv_causal1",
+      "natural_active_train_pilot": true,
+      "reliable_fraction": 1.0
+    },
+    {
+      "alpha": 1.0,
+      "calibration_status": "RELIABLE",
+      "channel": "rec_conv",
+      "direction_index": 24,
+      "median_natural_to_action_ratio": 1.7464299201965332,
+      "median_raw_state_delta_norm": 1583.2943416728021,
+      "name": "rec_conv_arch24",
+      "natural_active_train_pilot": true,
+      "reliable_fraction": 1.0
+    },
+    {
+      "alpha": 1.0,
+      "calibration_status": "RELIABLE",
+      "channel": "joint",
+      "direction_index": 11,
+      "median_natural_to_action_ratio": 0.6945424675941467,
+      "median_raw_state_delta_norm": 624.0755426819499,
+      "name": "joint_causal11",
+      "natural_active_train_pilot": true,
+      "reliable_fraction": 1.0
+    },
+    {
+      "alpha": 1.0,
+      "calibration_status": "RELIABLE",
+      "channel": "joint",
+      "direction_index": 4,
+      "median_natural_to_action_ratio": 1.0326692461967468,
+      "median_raw_state_delta_norm": 108.00925821439199,
+      "name": "joint_arch4",
+      "natural_active_train_pilot": true,
+      "reliable_fraction": 1.0
+    },
+    {
+      "alpha": 1.0,
+      "calibration_status": "RELIABLE",
+      "channel": "joint",
+      "direction_index": 2,
+      "median_natural_to_action_ratio": 0.04403834789991379,
+      "median_raw_state_delta_norm": 22.933666221315832,
+      "name": "joint_random2",
+      "natural_active_train_pilot": false,
+      "reliable_fraction": 1.0
+    },
+    {
+      "alpha": 1.0,
+      "calibration_status": "RELIABLE",
+      "channel": "recurrent",
+      "direction_index": 7,
+      "median_natural_to_action_ratio": 0.033422572538256645,
+      "median_raw_state_delta_norm": 1.6689373294310252,
+      "name": "rec_random7_weak_control",
+      "natural_active_train_pilot": false,
+      "reliable_fraction": 1.0
+    },
+    {
+      "alpha": 1.0,
+      "calibration_status": "RELIABLE",
+      "channel": "recurrent",
+      "direction_index": 4,
+      "median_natural_to_action_ratio": 1.0326692461967468,
+      "median_raw_state_delta_norm": 108.00925821439199,
+      "name": "rec_arch4_amended",
+      "natural_active_train_pilot": true,
+      "reliable_fraction": 1.0
+    },
+    {
+      "alpha": 0.5,
+      "calibration_status": "RELIABLE",
+      "channel": "kv",
+      "direction_index": 14,
+      "median_natural_to_action_ratio": 0.0227590873837471,
+      "median_raw_state_delta_norm": 5.088569880731445,
+      "name": "kv_arch14_amended",
+      "natural_active_train_pilot": false,
+      "reliable_fraction": 1.0
+    }
+  ],
+  "q_calibration_rows": 120,
+  "q_calibration_state_count": 20,
+  "responses_already_observed": {
+    "factorial_train": 0,
+    "factorial_validation": 0,
+    "q_calibration": 480
+  },
+  "schema_version": 28,
+  "thresholds": {
+    "bootstrap_replicates": 1000,
+    "bootstrap_seed": 1919,
+    "bootstrap_unit": "base_state",
+    "dependence_lower_floor": 0.02,
+    "epsilon": 1e-08,
+    "horizons": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "modulation_equivalence_margin": 0.1,
+    "normalized_stack": "v16_frozen_scales",
+    "primary_horizon": 1,
+    "raw_gain_material_min": 0.05,
+    "require_multiple_actions": 2,
+    "require_multiple_q_families": 2,
+    "selected_j_and_logits": "v16_frozen",
+    "teacher": "v18_clean_same_state_greedy_frozen_per_base_state"
+  },
+  "validation_responses_observed": 0,
+  "when": "after 20-state train-only q calibration and before any V19 factorial/validation response",
+  "why": "Original REC direction 9 and KV direction 39 were zero in those isolated channels under train-only BF16 calibration; replace with nonzero architecture directions 4 and 14 while preserving the original failed record."
+}

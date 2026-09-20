@@ -1,0 +1,152 @@
+{
+  "config": {
+    "actions": {
+      "alpha": 0.5,
+      "coordinate_indices": [
+        5,
+        1,
+        7,
+        20,
+        11,
+        19,
+        17,
+        2
+      ],
+      "development_coordinates": [
+        5,
+        1,
+        7,
+        20
+      ],
+      "heldout_coordinates": [
+        11,
+        19,
+        17,
+        2
+      ],
+      "matched_norm_ratio_max": 1.1,
+      "matched_norm_ratio_min": 0.9,
+      "matched_realized_cosine_min": 0.98,
+      "reliability_gain_max": 1.2,
+      "reliability_gain_min": 0.8,
+      "reliability_min_cosine": 0.95,
+      "signs": [
+        -1,
+        1
+      ]
+    },
+    "autonomous_state_model_authorized": false,
+    "diagnostics": {
+      "h16": "not_run_compute_priority",
+      "replay_and_j_restored": "not_run_unless_safe_independent_restoration_verified",
+      "sign_scale_states_per_family": 2,
+      "writeback_order_states_per_family": 1
+    },
+    "independent_final": "unopened_until_frozen_eligible_finalist",
+    "name": "Counterfactual Workspace Sufficiency and Natural Dynamics",
+    "parent_commit": "3d670f434c0f86bba87e2bbb8d0f9c2c2d567df1",
+    "protocol_version": "counterfactual_workspace_v19",
+    "q": {
+      "alpha_candidates": [
+        0.5,
+        1.0,
+        0.25
+      ],
+      "candidates": [
+        {
+          "channel": "recurrent",
+          "direction_index": 9,
+          "name": "rec_arch9"
+        },
+        {
+          "channel": "conv",
+          "direction_index": 1,
+          "name": "conv_causal1"
+        },
+        {
+          "channel": "kv",
+          "direction_index": 39,
+          "name": "kv_finite39"
+        },
+        {
+          "channel": "rec_conv",
+          "direction_index": 24,
+          "name": "rec_conv_arch24"
+        },
+        {
+          "channel": "joint",
+          "direction_index": 11,
+          "name": "joint_causal11"
+        },
+        {
+          "channel": "joint",
+          "direction_index": 4,
+          "name": "joint_arch4"
+        },
+        {
+          "channel": "joint",
+          "direction_index": 2,
+          "name": "joint_random2"
+        },
+        {
+          "channel": "recurrent",
+          "direction_index": 7,
+          "name": "rec_random7_weak_control"
+        }
+      ],
+      "min_raw_state_delta_norm": 1e-06,
+      "min_survival_fraction": 0.01,
+      "natural_active_min_fraction": 0.5,
+      "natural_active_ratio_min": 0.1,
+      "reliability_gain_max": 1.2,
+      "reliability_gain_min": 0.8,
+      "reliability_min_cosine": 0.95
+    },
+    "roles": {
+      "calibration_per_family": 4,
+      "horizon_train_per_family": 10,
+      "horizon_validation_per_family": 3,
+      "seed": 20260920,
+      "source": "v18_crossed_bank_clean_states",
+      "train_per_family": 80,
+      "validation_per_family": 20
+    },
+    "targets": {
+      "bootstrap_replicates": 1000,
+      "bootstrap_seed": 1919,
+      "bootstrap_unit": "base_state",
+      "dependence_lower_floor": 0.02,
+      "epsilon": 1e-08,
+      "horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "modulation_equivalence_margin": 0.1,
+      "normalized_stack": "v16_frozen_scales",
+      "primary_horizon": 1,
+      "raw_gain_material_min": 0.05,
+      "require_multiple_actions": 2,
+      "require_multiple_q_families": 2,
+      "selected_j_and_logits": "v16_frozen",
+      "teacher": "v18_clean_same_state_greedy_frozen_per_base_state"
+    }
+  },
+  "config_hash": "9da5f4856040bd02281321473604f5eb726d11a739def73a6984391bd2781695",
+  "created_utc": "2026-09-20T12:50:00.795339+00:00",
+  "freeze_digest": "0e76a756936e08d71aeee7feffc6dfc8c8e18d572ecd47a29a3048404c843b1a",
+  "parent_commit": "3d670f434c0f86bba87e2bbb8d0f9c2c2d567df1",
+  "parent_hashes": {
+    "artifacts/nonlinear_finite_causal_action_v16_splits.freeze.json": "b9ecafa1558527b68a74dfc487c63559890dade0253a86038b7655723c4fca39",
+    "artifacts/strong_state_context_ceiling_v18_splits.freeze.json": "a067fb2bea5fb27682a878915b646477531ef66c0261502e287169fb9442bd2a",
+    "reports/FINAL_REPORT.md": "1dcc1c15cc8bdf4cb5b1644a4cb66d0333ec405c2fbfde5751ee5ad7939b9a51",
+    "reports/V18_COMPLETE_REPORT.md": "e8e53c95037fa59567cf705e29d66ecc3b47850b2185e18f240228d9e1a7b9f8",
+    "results/v15/processed/actuator_transfer_v15.json": "b6ef4af846d2015ce2cd3790b8a55249d9ab41026206a838080619a9857e829e",
+    "results/v18/processed/clean_state_scores_v18.npz": "c0a1138c9bf791ff5987230ee7a0cbfaddc909ad90391241029b6884bf41bb6e",
+    "results/v18/processed/v18_adjudication.json": "5384ede370935cbe0e05fe7119ff2db11d5ba684d747876cbb2cccefe3d7a99c"
+  },
+  "protocol_code_hash": "f9658e0ee557ee9d608dd05153c47ff1b553f70516a2eb8d550d6d0fbd411ce1",
+  "protocol_version": "counterfactual_workspace_v19",
+  "schema_version": 28
+}

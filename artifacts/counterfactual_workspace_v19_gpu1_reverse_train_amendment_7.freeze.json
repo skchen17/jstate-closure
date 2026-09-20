@@ -1,0 +1,28 @@
+{
+  "base_freeze_digest": "0e76a756936e08d71aeee7feffc6dfc8c8e18d572ecd47a29a3048404c843b1a",
+  "binding_parent_digest": "2d8c16526c1a6fb7c8433cabd1dd08b0c42ce1a8ef8f19699a936b4d7bf3a0b8",
+  "created_utc": "2026-09-20T14:04:42.123311+00:00",
+  "freeze_digest": "7fe85a5bf5b8b7a141dbfc18fa027ba42cb82d81d9014e2e606a85460fc87962",
+  "gpu1_runtime_parent_digest": "a8300501b9402e859f87065cd5b1c008a87fa7f6fede7e701ef6139cfb8c241d",
+  "hash_alg": "sha256",
+  "input_hashes": {
+    "artifacts/counterfactual_workspace_v19_execution_binding_amendment_6.freeze.json": "d7593c53a5e761082f65beea44ee14cd7b2b02bdabfdf56dac42504b8588ecdb",
+    "artifacts/counterfactual_workspace_v19_runtime_gpu1_amendment_4.freeze.json": "bce12bdebbfc56757e773f30699abdefbe7e598d6ddac925c4c7acc06bd55669",
+    "artifacts/counterfactual_workspace_v19_splits.freeze.json": "72e68df5b97c920b403c0e1a743b690e1696a268b461e4259472a9388ad8665d",
+    "src/jclosure/experiments/gpu1_reverse_freeze_v19.py": "f19fd6daeeebc4a5448dc3b39c37173b5fe86c3fb19d64e3f58c1d80255223e2",
+    "src/jclosure/experiments/gpu1_reverse_train_v19.py": "61de519b58dcdb0d45ea3a9bff828ffa96156b67b1c5c0ccdc83402612570386",
+    "src/jclosure/experiments/gpu1_v19.py": "6be544934d34c9c696a453bc1aef9d748a1f2c65bffebabdad75d2c093063224",
+    "src/jclosure/experiments/run_amended_v19.py": "91777f2a61dbcc11dc2978372877a1fc69cb1fc7572f7a9e90afaff854067ea4"
+  },
+  "protocol_version": "counterfactual_workspace_v19_gpu1_reverse_train_amendment_7",
+  "responses_already_observed": {
+    "independent_final_states": 0,
+    "train_states": 248,
+    "validation_states": 100
+  },
+  "schedule": "GPU0 ascending, GPU1 descending; stop GPU1 before any unfinished-state overlap; existing per-state parquet skipped",
+  "schema_version": 28,
+  "split_parent_digest": "9d50c11b81f98515fdb2191ec96167bae34e2908585e622084a3160c65503319",
+  "state_order_changes_estimand": false,
+  "why": "Run the remaining immutable train-state factorials on idle GPU1 in reverse order to reduce wall time; no protocol, split, q, action, teacher or estimand change."
+}

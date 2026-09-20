@@ -1,0 +1,443 @@
+{
+  "analysis_freeze_digest": "2080f9b2f5855522b9bffd3a424cbad6ad01dcf635397882c6e9e28095278f61",
+  "horizons": {
+    "1": {
+      "action_response": {
+        "j": {
+          "bootstrap_ci95": [
+            -0.017281897407321997,
+            0.029226019563185705
+          ],
+          "j_relative_l2": 0.9709542673584474,
+          "raw_gain": 0.006375101109938699,
+          "raw_relative_l2": 0.9645791662485087,
+          "states": 100
+        },
+        "logits": {
+          "bootstrap_ci95": [
+            -0.0004530537215523791,
+            0.0311771835124475
+          ],
+          "j_relative_l2": 1.0030880081308169,
+          "raw_gain": 0.015598678378225967,
+          "raw_relative_l2": 0.9874893297525908,
+          "states": 100
+        },
+        "semantic_continuous": {
+          "bootstrap_ci95": [
+            4.5909549123392926e-05,
+            0.029209746990891308
+          ],
+          "j_relative_l2": 1.008671622106308,
+          "raw_gain": 0.015178481033105748,
+          "raw_relative_l2": 0.9934931410732022,
+          "states": 100
+        },
+        "stacked_normalized": {
+          "bootstrap_ci95": [
+            -0.0017944694656044688,
+            0.02655157045217648
+          ],
+          "j_relative_l2": 1.0001492405715537,
+          "raw_gain": 0.013281521219023651,
+          "raw_relative_l2": 0.98686771935253,
+          "states": 100
+        },
+        "workspace": {
+          "bootstrap_ci95": [
+            -0.020797034234117204,
+            0.02280888570653697
+          ],
+          "j_relative_l2": 0.9760774450711777,
+          "raw_gain": 0.0030891247224837035,
+          "raw_relative_l2": 0.972988320348694,
+          "states": 100
+        }
+      },
+      "delta_gain_stack": -0.015120758260100184,
+      "natural": {
+        "j": {
+          "bootstrap_ci95": [
+            -0.001431744558327027,
+            0.022462072438900835
+          ],
+          "j_relative_l2": 0.6434004565211866,
+          "raw_gain": 0.010915759886995573,
+          "raw_relative_l2": 0.632484696634191,
+          "states": 100
+        },
+        "logits": {
+          "bootstrap_ci95": [
+            -0.0156637672369924,
+            0.010142145508412765
+          ],
+          "j_relative_l2": 0.5606414679745417,
+          "raw_gain": -0.002666308560747896,
+          "raw_relative_l2": 0.5633077765352896,
+          "states": 100
+        },
+        "semantic_continuous": {
+          "bootstrap_ci95": [
+            -0.015975908028451582,
+            0.009094195036699775
+          ],
+          "j_relative_l2": 0.5702216357255423,
+          "raw_gain": -0.002963403870452467,
+          "raw_relative_l2": 0.5731850395959948,
+          "states": 100
+        },
+        "stacked_normalized": {
+          "bootstrap_ci95": [
+            -0.014537437730841509,
+            0.009752367835534806
+          ],
+          "j_relative_l2": 0.5744027231379628,
+          "raw_gain": -0.001839237041076534,
+          "raw_relative_l2": 0.5762419601790394,
+          "states": 100
+        },
+        "workspace": {
+          "bootstrap_ci95": [
+            -0.018765398021104187,
+            0.01205175376067655
+          ],
+          "j_relative_l2": 0.5919654523260907,
+          "raw_gain": -0.003897097302748897,
+          "raw_relative_l2": 0.5958625496288396,
+          "states": 100
+        }
+      },
+      "train_states": 400,
+      "validation_states": 100
+    },
+    "2": {
+      "action_response": {
+        "j": {
+          "bootstrap_ci95": [
+            -0.1087986055349583,
+            0.017508045836571232
+          ],
+          "j_relative_l2": 1.0342408308057633,
+          "raw_gain": -0.043170625001921384,
+          "raw_relative_l2": 1.0774114558076848,
+          "states": 15
+        },
+        "logits": {
+          "bootstrap_ci95": [
+            -0.07140807732108308,
+            0.07438775411493607
+          ],
+          "j_relative_l2": 1.1182255046927394,
+          "raw_gain": -0.005672514045907531,
+          "raw_relative_l2": 1.123898018738647,
+          "states": 15
+        },
+        "semantic_continuous": {
+          "bootstrap_ci95": [
+            -0.046314964539897405,
+            0.08232160603128384
+          ],
+          "j_relative_l2": 1.1582900180233449,
+          "raw_gain": -0.0003359403280099983,
+          "raw_relative_l2": 1.1586259583513547,
+          "states": 15
+        },
+        "stacked_normalized": {
+          "bootstrap_ci95": [
+            -0.04976854833697614,
+            0.06062715694534134
+          ],
+          "j_relative_l2": 1.1283925719278145,
+          "raw_gain": -0.005162534211152049,
+          "raw_relative_l2": 1.1335551061389666,
+          "states": 15
+        },
+        "workspace": {
+          "bootstrap_ci95": [
+            -0.08761545896634124,
+            0.04021977528929947
+          ],
+          "j_relative_l2": 0.9915161981218882,
+          "raw_gain": -0.027705247576432255,
+          "raw_relative_l2": 1.0192214456983204,
+          "states": 15
+        }
+      },
+      "delta_gain_stack": -0.06693837637826656,
+      "natural": {
+        "j": {
+          "bootstrap_ci95": [
+            -0.15393024608010136,
+            -0.0022746038983470413
+          ],
+          "j_relative_l2": 0.7304158883630398,
+          "raw_gain": -0.07370544570549524,
+          "raw_relative_l2": 0.804121334068535,
+          "states": 15
+        },
+        "logits": {
+          "bootstrap_ci95": [
+            -0.16380870000809736,
+            -0.009862570923232524
+          ],
+          "j_relative_l2": 0.6819382120457568,
+          "raw_gain": -0.0760482539262252,
+          "raw_relative_l2": 0.757986465971982,
+          "states": 15
+        },
+        "semantic_continuous": {
+          "bootstrap_ci95": [
+            -0.13790019527408973,
+            -0.00559691793346764
+          ],
+          "j_relative_l2": 0.704223175385406,
+          "raw_gain": -0.06564649200627624,
+          "raw_relative_l2": 0.7698696673916823,
+          "states": 15
+        },
+        "stacked_normalized": {
+          "bootstrap_ci95": [
+            -0.15020767119963596,
+            -0.011695694791593639
+          ],
+          "j_relative_l2": 0.6980153065935226,
+          "raw_gain": -0.07210091058941862,
+          "raw_relative_l2": 0.7701162171829412,
+          "states": 15
+        },
+        "workspace": {
+          "bootstrap_ci95": [
+            -0.17046884595422437,
+            -0.003748271194766931
+          ],
+          "j_relative_l2": 0.7130342726672417,
+          "raw_gain": -0.0769635010452835,
+          "raw_relative_l2": 0.7899977737125253,
+          "states": 15
+        }
+      },
+      "train_states": 50,
+      "validation_states": 15
+    },
+    "4": {
+      "action_response": {
+        "j": {
+          "bootstrap_ci95": [
+            -0.10406241599658456,
+            0.03548306572074584
+          ],
+          "j_relative_l2": 0.9973063587147724,
+          "raw_gain": -0.04810062879399303,
+          "raw_relative_l2": 1.0454069875087655,
+          "states": 15
+        },
+        "logits": {
+          "bootstrap_ci95": [
+            -0.04713123391957776,
+            0.0913368336706031
+          ],
+          "j_relative_l2": 1.0628949953870612,
+          "raw_gain": 0.01972194841751048,
+          "raw_relative_l2": 1.0431730469695508,
+          "states": 15
+        },
+        "semantic_continuous": {
+          "bootstrap_ci95": [
+            -0.20097619436728603,
+            0.2353922730397122
+          ],
+          "j_relative_l2": 1.1105532808585603,
+          "raw_gain": -0.01810387930877568,
+          "raw_relative_l2": 1.128657160167336,
+          "states": 15
+        },
+        "stacked_normalized": {
+          "bootstrap_ci95": [
+            -0.14288899045096706,
+            0.16277044996796494
+          ],
+          "j_relative_l2": 1.0870531271964905,
+          "raw_gain": -0.008557703970064336,
+          "raw_relative_l2": 1.0956108311665549,
+          "states": 15
+        },
+        "workspace": {
+          "bootstrap_ci95": [
+            -0.09122777853262325,
+            0.06957374845757419
+          ],
+          "j_relative_l2": 1.0127810153896257,
+          "raw_gain": -0.03405674634044345,
+          "raw_relative_l2": 1.046837761730069,
+          "states": 15
+        }
+      },
+      "delta_gain_stack": -0.02177719543491033,
+      "natural": {
+        "j": {
+          "bootstrap_ci95": [
+            -0.05303988463614915,
+            0.08139887588166984
+          ],
+          "j_relative_l2": 0.8023156628725506,
+          "raw_gain": -0.00786519941791188,
+          "raw_relative_l2": 0.8101808622904625,
+          "states": 15
+        },
+        "logits": {
+          "bootstrap_ci95": [
+            -0.0886194305751514,
+            0.08158204152515838
+          ],
+          "j_relative_l2": 0.7652735967995359,
+          "raw_gain": -0.019241377624880575,
+          "raw_relative_l2": 0.7845149744244164,
+          "states": 15
+        },
+        "semantic_continuous": {
+          "bootstrap_ci95": [
+            -0.09618925732462637,
+            0.07048414385250136
+          ],
+          "j_relative_l2": 0.7554625470399471,
+          "raw_gain": -0.038065076878218286,
+          "raw_relative_l2": 0.7935276239181653,
+          "states": 15
+        },
+        "stacked_normalized": {
+          "bootstrap_ci95": [
+            -0.09672281570603102,
+            0.08298609689534929
+          ],
+          "j_relative_l2": 0.7682749467591687,
+          "raw_gain": -0.030334899404974663,
+          "raw_relative_l2": 0.7986098461641434,
+          "states": 15
+        },
+        "workspace": {
+          "bootstrap_ci95": [
+            -0.10997299053651838,
+            0.12410956736704654
+          ],
+          "j_relative_l2": 0.7948823328632899,
+          "raw_gain": -0.023218215855722212,
+          "raw_relative_l2": 0.8181005487190122,
+          "states": 15
+        }
+      },
+      "train_states": 50,
+      "validation_states": 15
+    },
+    "8": {
+      "action_response": {
+        "j": {
+          "bootstrap_ci95": [
+            -0.04360422867658212,
+            0.07240664236559652
+          ],
+          "j_relative_l2": 1.0404293305427923,
+          "raw_gain": -0.0018114515548274697,
+          "raw_relative_l2": 1.0422407820976198,
+          "states": 15
+        },
+        "logits": {
+          "bootstrap_ci95": [
+            -0.05409346128070851,
+            0.14342346606818537
+          ],
+          "j_relative_l2": 1.1033154752121388,
+          "raw_gain": 0.018802604529884488,
+          "raw_relative_l2": 1.0845128706822542,
+          "states": 15
+        },
+        "semantic_continuous": {
+          "bootstrap_ci95": [
+            -0.18265919440611456,
+            0.09078684173839721
+          ],
+          "j_relative_l2": 1.095756783593008,
+          "raw_gain": -0.04557048958985895,
+          "raw_relative_l2": 1.141327273182867,
+          "states": 15
+        },
+        "stacked_normalized": {
+          "bootstrap_ci95": [
+            -0.10119531238377256,
+            0.09817240466210604
+          ],
+          "j_relative_l2": 1.0935997265429185,
+          "raw_gain": -0.021933882992821164,
+          "raw_relative_l2": 1.1155336095357395,
+          "states": 15
+        },
+        "workspace": {
+          "bootstrap_ci95": [
+            -0.029188534616897344,
+            0.1266505367514923
+          ],
+          "j_relative_l2": 1.0502695420942512,
+          "raw_gain": 0.03385042540470491,
+          "raw_relative_l2": 1.0164191166895462,
+          "states": 15
+        }
+      },
+      "delta_gain_stack": -0.010611078638864051,
+      "natural": {
+        "j": {
+          "bootstrap_ci95": [
+            -0.09756390765079109,
+            0.08150469505462053
+          ],
+          "j_relative_l2": 0.8261323806494915,
+          "raw_gain": -0.03261907356196937,
+          "raw_relative_l2": 0.8587514542114609,
+          "states": 15
+        },
+        "logits": {
+          "bootstrap_ci95": [
+            -0.10525025141063833,
+            0.09504725621816479
+          ],
+          "j_relative_l2": 0.791749260765096,
+          "raw_gain": -0.022953556543090312,
+          "raw_relative_l2": 0.8147028173081863,
+          "states": 15
+        },
+        "semantic_continuous": {
+          "bootstrap_ci95": [
+            -0.07181381481422351,
+            0.07613398865535329
+          ],
+          "j_relative_l2": 0.7785491592918662,
+          "raw_gain": -0.02726925750689925,
+          "raw_relative_l2": 0.8058184167987654,
+          "states": 15
+        },
+        "stacked_normalized": {
+          "bootstrap_ci95": [
+            -0.08740563900911655,
+            0.08086328034252677
+          ],
+          "j_relative_l2": 0.8269043354314363,
+          "raw_gain": -0.032544961631685215,
+          "raw_relative_l2": 0.8594492970631215,
+          "states": 15
+        },
+        "workspace": {
+          "bootstrap_ci95": [
+            -0.0907234862824534,
+            0.0957709652092549
+          ],
+          "j_relative_l2": 0.903506545812977,
+          "raw_gain": -0.04674487534670367,
+          "raw_relative_l2": 0.9502514211596806,
+          "states": 15
+        }
+      },
+      "train_states": 50,
+      "validation_states": 15
+    }
+  },
+  "model_limitation": "Fixed linear ridge is a matched-capacity comparison, not an exhaustive nonlinear raw-state ceiling.",
+  "validation_is_development_not_independent": true
+}

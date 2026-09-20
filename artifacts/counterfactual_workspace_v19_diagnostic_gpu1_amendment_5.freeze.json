@@ -1,0 +1,44 @@
+{
+  "base_freeze_digest": "0e76a756936e08d71aeee7feffc6dfc8c8e18d572ecd47a29a3048404c843b1a",
+  "created_utc": "2026-09-20T13:37:51.866012+00:00",
+  "diagnostic_freeze_digest": "ec73a234096b3165fa7f74e5ec977325c6cd559ba4df7f9e8da0d46440f4b1be",
+  "equivalence_evidence": {
+    "y00_stack": {
+      "max_absolute": 0.0,
+      "relative_l2": 0.0
+    },
+    "y01_stack": {
+      "max_absolute": 0.0,
+      "relative_l2": 0.0
+    },
+    "y10_stack": {
+      "max_absolute": 0.0,
+      "relative_l2": 0.0
+    },
+    "y11_stack": {
+      "max_absolute": 0.0,
+      "relative_l2": 0.0
+    }
+  },
+  "freeze_digest": "c9e1da09054e4f950e1907aa64070ef77c7879a8a9291dd2b882feed0aded362",
+  "input_hashes": {
+    "artifacts/counterfactual_workspace_v19_diagnostics.freeze.json": "d8f00e1209b4d5cc0f7281a18b01b44bde9912dd92bd6b5a109f2ac51eac58f1",
+    "artifacts/counterfactual_workspace_v19_runtime_gpu1_amendment_4.freeze.json": "bce12bdebbfc56757e773f30699abdefbe7e598d6ddac925c4c7acc06bd55669",
+    "src/jclosure/experiments/diagnostic_gpu1_v19.py": "9ee8dcd7d3f2a609d018eef88c13aeb2ffd898fa143513eee0d9b18b03114ede"
+  },
+  "prior_runtime_digest": "a8300501b9402e859f87065cd5b1c008a87fa7f6fede7e701ef6139cfb8c241d",
+  "protocol_version": "counterfactual_workspace_v19_diagnostic_gpu1_amendment_5",
+  "responses_already_observed": {
+    "factorial_train_state_records": 160,
+    "factorial_validation_state_records": 100,
+    "order_rows": 0,
+    "sign_scale_rows": 0
+  },
+  "runtime_device_map": {
+    "": 1
+  },
+  "schema_version": 28,
+  "weights_changed": false,
+  "when": "after GPU1 validation bank completion and before V19 sign/scale or order diagnostic responses",
+  "why": "Reuse zero-error GPU0/GPU1 four-endpoint numerical equivalence for frozen small sign/scale and order diagnostics while GPU0 completes the larger train bank."
+}

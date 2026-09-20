@@ -1,0 +1,43 @@
+{
+  "base_freeze_digest": "0e76a756936e08d71aeee7feffc6dfc8c8e18d572ecd47a29a3048404c843b1a",
+  "comparison": {
+    "y00_stack": {
+      "max_absolute": 0.0,
+      "relative_l2": 0.0
+    },
+    "y01_stack": {
+      "max_absolute": 0.0,
+      "relative_l2": 0.0
+    },
+    "y10_stack": {
+      "max_absolute": 0.0,
+      "relative_l2": 0.0
+    },
+    "y11_stack": {
+      "max_absolute": 0.0,
+      "relative_l2": 0.0
+    }
+  },
+  "created_utc": "2026-09-20T13:10:51.410627+00:00",
+  "equivalence_passed": true,
+  "freeze_digest": "a8300501b9402e859f87065cd5b1c008a87fa7f6fede7e701ef6139cfb8c241d",
+  "input_hashes": {
+    "artifacts/counterfactual_workspace_v19_teacher_amendment_3.freeze.json": "eaf5e3dde91f1825927ed25fe90ecf57fe4c0b8b7b61b91c987d445d8d826831",
+    "results/v19/processed/gpu1_equivalence_audit_v19.json": "8480db670b830b556a4273b71d42d4e8136a27563fe89819073e9dbaa97bb6ba",
+    "src/jclosure/experiments/compare_gpu_v19.py": "df2c978a8f2c1273370f92c944578d0297b912a56468130b478fe38a7458e1e1",
+    "src/jclosure/experiments/gpu1_v19.py": "6be544934d34c9c696a453bc1aef9d748a1f2c65bffebabdad75d2c093063224"
+  },
+  "protocol_version": "counterfactual_workspace_v19_runtime_gpu1_amendment_4",
+  "responses_already_observed": {
+    "factorial_train_state_records": 9,
+    "factorial_validation_state_records": 0
+  },
+  "runtime_device_map": {
+    "": 1
+  },
+  "schema_version": 28,
+  "tolerance_relative_l2": 1e-06,
+  "weights_changed": false,
+  "when": "after GPU0 pilot and before any V19 validation factorial response",
+  "why": "GPU1 is available while GPU0 train factorial runs; verify all four h1 endpoints on the same frozen state, q and action before using GPU1 for validation. Same weights, dtype, BF16 writeback and tokens."
+}

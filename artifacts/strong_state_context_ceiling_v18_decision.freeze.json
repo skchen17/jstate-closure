@@ -1,0 +1,31 @@
+{
+  "base_freeze_digest": "989a0cfa8f50cd269d7d35dd12f3eb3f4a71179fe187defabacf5079bad41316",
+  "bootstrap_replicates": 1000,
+  "bootstrap_unit": "state",
+  "compact_authorization": "material_h1_or_any_h2_h4_h8_or_strict_match_positive",
+  "freeze_digest": "e5ae8b8e2c4e8d2e884c838c4a79fa5f508c6b42e14a3a70ab14353a8123106f",
+  "history_formal_requires_positive_bootstrap_lower_and_nonnegative_all_family": true,
+  "history_incremental_gain_threshold": 0.05,
+  "independent_final_requires_frozen_compact_dynamic_finalist": true,
+  "input_hashes": {
+    "artifacts/strong_state_context_ceiling_v18_history.freeze.json": "5c049e6fbb900e38d5f1c08c562c59bf2f598ce1933b2dffda1283171b759d4e",
+    "artifacts/strong_state_context_ceiling_v18_models.freeze.json": "a97e3a57e43bebf6b44ab232aaf42740b5499151ff9d159415fa8b55b14eb13c",
+    "artifacts/strong_state_context_ceiling_v18_splits.freeze.json": "a067fb2bea5fb27682a878915b646477531ef66c0261502e287169fb9442bd2a",
+    "artifacts/strong_state_context_ceiling_v18_strict_match.freeze.json": "dffe811881497b49ef15020cb821826cbe33ce60643be438c98a3ee754173ce1",
+    "src/jclosure/experiments/decision_v18.py": "31ba7cebc112defbcaf5378b37868a3616701e11652c0522063d123ced9abd28"
+  },
+  "material_raw_gain_threshold": 0.05,
+  "no_V18_A_or_G_if_strict_match_not_identified": true,
+  "protocol_version": "strong_state_context_ceiling_v18_decision",
+  "raw_gate_requires_positive_bootstrap_lower_and_nonnegative_all_family": true,
+  "raw_gate_targets": [
+    "j",
+    "stacked_normalized"
+  ],
+  "schema_version": 27,
+  "seed": 1822,
+  "split_freeze_digest": "5095039933f344b068534c92b1cff26252018b8d3bbbc4c60544830a4b280f9d",
+  "strict_match_median_divergence_min": 0.2,
+  "strict_match_min_independent_state_pairs": 20,
+  "strict_match_near_raw_control_gap_min": 0.1
+}

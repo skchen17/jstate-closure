@@ -1,0 +1,148 @@
+{
+  "config": {
+    "actions": {
+      "nested_amplitude_alpha": 1.0,
+      "nested_amplitude_only_on_horizon_panel": true,
+      "no_validation_action_selection": true,
+      "preserve_unreliable_rows": true,
+      "primary_alpha": 0.5,
+      "reliability_min_j_effect_norm": 0.006802803347818553,
+      "reliability_min_state_cosine": 0.95,
+      "reliability_state_gain_max": 1.2,
+      "reliability_state_gain_min": 0.8,
+      "signs": [
+        -1,
+        1
+      ],
+      "source_selection": "v16_train_reliability_only",
+      "v16_coordinate_indices": [
+        5,
+        1,
+        7,
+        20,
+        11,
+        19,
+        18,
+        8
+      ]
+    },
+    "gates": {
+      "bootstrap_ci_lower_must_exceed_zero": true,
+      "compact_search_if_material_h1_or_horizon_or_strict_match": true,
+      "conditional_raw_gain_max": 0.02,
+      "family_wise_required": true,
+      "independent_required_for_h3_candidate": true,
+      "material_raw_context_absolute_rel_l2_gain_min": 0.05,
+      "near_raw_gap_closed_min": 0.9,
+      "no_autonomous_before_independent_v18_f": true,
+      "strict_j_match_max_normalized_distance": 0.1,
+      "strict_raw_difference_min_normalized_distance": 0.5,
+      "strict_response_divergence_min": 0.2
+    },
+    "historical_results_immutable": true,
+    "models": {
+      "classes": [
+        "additive_linear",
+        "bilinear",
+        "quadratic_tensor",
+        "low_rank_interaction",
+        "small_state_conditioned_mlp"
+      ],
+      "matched_input_feature_dimension": true,
+      "mlp_epochs": 40,
+      "mlp_hidden": 128,
+      "mlp_seed": 1818,
+      "mlp_weight_decay_grid": [
+        0.0001,
+        0.001
+      ],
+      "no_per_action_key_state_models": true,
+      "ridge_grid": [
+        0.01,
+        0.1,
+        1.0
+      ],
+      "train_only_nested_validation": true,
+      "unified_state_action": true
+    },
+    "name": "Strong State-Context Ceiling and Horizon Localization",
+    "parent_commit": "a41592fef6f6499f002efe1356fb3a4b8edb53d3",
+    "protocol_version": "strong_state_context_ceiling_v18",
+    "roles": {
+      "horizon_train_per_family": 80,
+      "horizon_validation_per_family": 16,
+      "independent_confirmatory": "unopened_new_bank_only_after_frozen_finalist",
+      "seed": 20260921,
+      "train_per_family": 400,
+      "train_source": "v13_train_capture_excluding_v16_train",
+      "validation_per_family": 80,
+      "validation_source": "v13_validation_capture_excluding_v16_validation"
+    },
+    "runtime": {
+      "action_state_checkpoint_every": 1,
+      "maximum_wall_clock_hours": 72
+    },
+    "state_context": {
+      "contexts": [
+        "action_only",
+        "j",
+        "j_rec",
+        "j_conv",
+        "j_kv",
+        "j_rec_conv",
+        "j_rec_kv",
+        "j_conv_kv",
+        "j_rec_conv_kv",
+        "full_raw"
+      ],
+      "current_clean_REC_Conv_KV_only": true,
+      "kernel_bandwidth": "train_pairwise_distance_median",
+      "no_perturbed_or_future_label_as_input": true,
+      "no_rank_clamp": true,
+      "raw_kernel": "train_centered_linear_and_rbf",
+      "shared_feature_dimensions": [
+        128,
+        256
+      ]
+    },
+    "targets": {
+      "history_j_positions": 4,
+      "horizon_panel": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "horizon_primary": [
+        1
+      ],
+      "intervention_minus_same_state_clean": true,
+      "normalized_stack_v16_scales": true,
+      "selected_j_from_v16": true,
+      "selected_logits_from_v16": true,
+      "semantic_continuous": true,
+      "teacher_forced_clean_greedy_tokens": true,
+      "workspace": true
+    }
+  },
+  "config_hash": "bf6928020c2c5739c50a29af3516fa67fd315837e1175a692dc27496c50fe420",
+  "freeze_digest": "989a0cfa8f50cd269d7d35dd12f3eb3f4a71179fe187defabacf5079bad41316",
+  "parent_commit": "a41592fef6f6499f002efe1356fb3a4b8edb53d3",
+  "parent_final_report_hash_is_pre_v18": true,
+  "parent_hashes": {
+    "artifacts/interventional_state_sufficiency_v17.freeze.json": "c3a90dce73f656852209a86546bf54630bd0cacf5427eccb5cc8eee960857288",
+    "artifacts/interventional_state_sufficiency_v17_splits.freeze.json": "c137f8984a560a16ea3bdd47aed5f312808018c6ce140bf56803e7e054fc7197",
+    "artifacts/nonlinear_finite_causal_action_v16_splits.freeze.json": "b9ecafa1558527b68a74dfc487c63559890dade0253a86038b7655723c4fca39",
+    "reports/FINAL_REPORT.md": "c448a66ab93795c1acc5662a8aa06a33b9d318bcd41797366dea6dad74ab988b",
+    "reports/V17_COMPLETE_REPORT.md": "49e41c5eb0e5509b30520c51506b723711be7b36dc1c93a6aaa4a29e0c1dc806",
+    "results/v13/processed/causal_capture_train_v13.json": "9aa75d01649d10f019e8c91607e425a2f2e3815fb3c3235449dd419144728419",
+    "results/v13/processed/causal_capture_validation_v13.json": "dc219f681106e7993df067b4a7edc3890e8421c43e09cca841c9527778176f40",
+    "results/v16/processed/finite_action_bank_v16.parquet": "680c01ed70c44a96bb46e8429eebee1e2ec3f6ebe5cecb6676ea114fd3025eef",
+    "results/v17/processed/conditional_raw_residual_v17.json": "ea2cfcb7200b25f3fc2454283250fa877fea915ecc34ba405d38d14a183efe5e",
+    "results/v17/processed/state_context_ceiling_v17.json": "8188224ddb370dccc917bf7c0636171c751940d7d562f4eb9e1db34db95c9a16",
+    "results/v17/processed/v17_adjudication.json": "9c3f68a02cd0f54ee6f382f3d61760550c186420d72ccf69f38206ade2738df4"
+  },
+  "protocol_code_hash": "f742504e230edc275b509ed454e9b7ae66834a9dc0c94cac4b30d6df9430e724",
+  "protocol_version": "strong_state_context_ceiling_v18",
+  "schema_version": 27
+}

@@ -1,0 +1,71 @@
+name: Strong State-Context Ceiling and Horizon Localization
+protocol_version: strong_state_context_ceiling_v18
+parent_commit: a41592fef6f6499f002efe1356fb3a4b8edb53d3
+historical_results_immutable: true
+roles:
+  train_source: v13_train_capture_excluding_v16_train
+  validation_source: v13_validation_capture_excluding_v16_validation
+  train_per_family: 400
+  validation_per_family: 80
+  horizon_train_per_family: 80
+  horizon_validation_per_family: 16
+  independent_confirmatory: unopened_new_bank_only_after_frozen_finalist
+  seed: 20260921
+actions:
+  source_selection: v16_train_reliability_only
+  v16_coordinate_indices: [5, 1, 7, 20, 11, 19, 18, 8]
+  signs: [-1, 1]
+  primary_alpha: 0.5
+  nested_amplitude_alpha: 1.0
+  nested_amplitude_only_on_horizon_panel: true
+  reliability_min_state_cosine: 0.95
+  reliability_state_gain_min: 0.8
+  reliability_state_gain_max: 1.2
+  reliability_min_j_effect_norm: 0.006802803347818553
+  preserve_unreliable_rows: true
+  no_validation_action_selection: true
+targets:
+  selected_j_from_v16: true
+  selected_logits_from_v16: true
+  semantic_continuous: true
+  workspace: true
+  normalized_stack_v16_scales: true
+  horizon_primary: [1]
+  horizon_panel: [1, 2, 4, 8]
+  teacher_forced_clean_greedy_tokens: true
+  intervention_minus_same_state_clean: true
+  history_j_positions: 4
+state_context:
+  current_clean_REC_Conv_KV_only: true
+  no_perturbed_or_future_label_as_input: true
+  raw_kernel: train_centered_linear_and_rbf
+  kernel_bandwidth: train_pairwise_distance_median
+  shared_feature_dimensions: [128, 256]
+  no_rank_clamp: true
+  contexts: [action_only, j, j_rec, j_conv, j_kv, j_rec_conv, j_rec_kv, j_conv_kv, j_rec_conv_kv, full_raw]
+models:
+  unified_state_action: true
+  no_per_action_key_state_models: true
+  classes: [additive_linear, bilinear, quadratic_tensor, low_rank_interaction, small_state_conditioned_mlp]
+  matched_input_feature_dimension: true
+  train_only_nested_validation: true
+  ridge_grid: [0.01, 0.1, 1.0]
+  mlp_hidden: 128
+  mlp_epochs: 40
+  mlp_weight_decay_grid: [0.0001, 0.001]
+  mlp_seed: 1818
+gates:
+  material_raw_context_absolute_rel_l2_gain_min: 0.05
+  bootstrap_ci_lower_must_exceed_zero: true
+  family_wise_required: true
+  conditional_raw_gain_max: 0.02
+  near_raw_gap_closed_min: 0.90
+  compact_search_if_material_h1_or_horizon_or_strict_match: true
+  strict_j_match_max_normalized_distance: 0.10
+  strict_raw_difference_min_normalized_distance: 0.50
+  strict_response_divergence_min: 0.20
+  independent_required_for_h3_candidate: true
+  no_autonomous_before_independent_v18_f: true
+runtime:
+  action_state_checkpoint_every: 1
+  maximum_wall_clock_hours: 72

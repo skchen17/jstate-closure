@@ -1,0 +1,16 @@
+{
+  "base_freeze_digest": "989a0cfa8f50cd269d7d35dd12f3eb3f4a71179fe187defabacf5079bad41316",
+  "current_state_source": "frozen_V13_clean_endpoint_layer_23",
+  "freeze_digest": "6b7d2825b4afe52fdb7838df0f89f1232136c9e0f54b6243cfea5d99a60cc13a",
+  "history_source": "live_layer_23_previous_three_plus_frozen_V13_current",
+  "input_hashes": {
+    "artifacts/strong_state_context_ceiling_v18_state_layer_amendment_2.freeze.json": "93a7e748af2da47add10bd1b63fed061bb9837bb242ce908bb8cca9ddf8d3f73",
+    "src/jclosure/experiments/crossed_bank_v18.py": "139097535036f33e34bfc9f28892611bd05d4e24f82d1a524304169df01303d1"
+  },
+  "observed_first_state_live_to_v13_rel_l2": 0.016767999157309532,
+  "prior_source_sha256": "b07682084f07351188b94f8ea96452c435f0f85101d529a330002d14c8641971",
+  "protocol_version": "strong_state_context_ceiling_v18_reference_alignment_amendment_3",
+  "reason": "First corrected live layer-23 J had 0.016768 relative L2 versus frozen V13 current J, consistent with replay numerical drift. Use exact frozen V13 clean J for current state and final position of history; keep live pre-action positions -4,-3,-2 and record drift.",
+  "response_policy": "original_action_responses_unchanged",
+  "schema_version": 27
+}

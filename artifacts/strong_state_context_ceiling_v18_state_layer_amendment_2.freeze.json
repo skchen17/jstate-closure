@@ -1,0 +1,16 @@
+{
+  "base_freeze_digest": "989a0cfa8f50cd269d7d35dd12f3eb3f4a71179fe187defabacf5079bad41316",
+  "freeze_digest": "70c7f71091f9dd79bfee71646eb6005e6a38b4e4556a767bc6b8db1b88c476a5",
+  "input_hashes": {
+    "artifacts/strong_state_context_ceiling_v18_splits.freeze.json": "a067fb2bea5fb27682a878915b646477531ef66c0261502e287169fb9442bd2a",
+    "src/jclosure/experiments/crossed_bank_v18.py": "b07682084f07351188b94f8ea96452c435f0f85101d529a330002d14c8641971"
+  },
+  "pilot_state_records_before_correction": 401,
+  "prior_source_sha256": "d3a86fa69720c56af546991e24e4d98d7f1c32851d3e86775672d02f2e64edb5",
+  "prior_state_records_location": "/data/CSK/J-space-project/v18-crossed-bank-work/state_layer_amendment_2_prior",
+  "protocol_version": "strong_state_context_ceiling_v18_state_layer_amendment_2",
+  "reason": "V18 pilot history/current J was captured from output layer 30, whereas frozen V13 clean current J and V17 state context use intervention layer 23. Correct pre-action J history to layer 23 with cloned activations; keep output response readout at layer 30.",
+  "response_policy": "retain unchanged action-response records; archive and recompute state metadata only",
+  "schema_version": 27,
+  "v13_reference_check": "corrected_current_j_rel_l2_below_0.01_each_state"
+}

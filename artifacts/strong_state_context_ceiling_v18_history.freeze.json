@@ -1,0 +1,37 @@
+{
+  "base_freeze_digest": "989a0cfa8f50cd269d7d35dd12f3eb3f4a71179fe187defabacf5079bad41316",
+  "context_comparators": [
+    "current_j",
+    "last_2_j",
+    "last_4_j",
+    "current_j_raw",
+    "last_2_j_plus_raw",
+    "last_4_j_plus_raw"
+  ],
+  "freeze_digest": "ab05c0a5b6585f183c13352238aa26ce02e70e35c679650560509fc41e7786e5",
+  "histories": [
+    "last_2",
+    "last_4"
+  ],
+  "history_feature_PCA": "train_only_centered_randomized_rank_128",
+  "history_source": "last_4_prompt_prefill_J_positions_pre_action_only",
+  "horizons": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "input_hashes": {
+    "artifacts/strong_state_context_ceiling_v18_models.freeze.json": "a97e3a57e43bebf6b44ab232aaf42740b5499151ff9d159415fa8b55b14eb13c",
+    "artifacts/strong_state_context_ceiling_v18_splits.freeze.json": "a067fb2bea5fb27682a878915b646477531ef66c0261502e287169fb9442bd2a",
+    "src/jclosure/experiments/history_v18.py": "6bf6a6c38d529e6f3749201edc5b0a82bfa53affdff537883b2cd156eaa6c311"
+  },
+  "joint_history_raw_projection": "train_only_centered_PCA_rank_128_of_two_128D_sources",
+  "model": "frozen_M4_small_state_conditioned_mlp_same_budget",
+  "model_freeze_digest": "776f61ca1a94579b2f0fe7a8187f6ee6402a209af37ba3584b59097d1ce227b7",
+  "prior_intervention_actions": "unavailable_first_action_at_control_point",
+  "protocol_version": "strong_state_context_ceiling_v18_history",
+  "schema_version": 27,
+  "split_freeze_digest": "5095039933f344b068534c92b1cff26252018b8d3bbbc4c60544830a4b280f9d",
+  "validation_not_used_for_feature_or_model_selection": true
+}

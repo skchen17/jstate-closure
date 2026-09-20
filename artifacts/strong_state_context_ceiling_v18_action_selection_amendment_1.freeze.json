@@ -1,0 +1,32 @@
+{
+  "base_freeze_digest": "989a0cfa8f50cd269d7d35dd12f3eb3f4a71179fe187defabacf5079bad41316",
+  "corrected_coordinate_indices": [
+    5,
+    1,
+    7,
+    20,
+    11,
+    19,
+    17,
+    2
+  ],
+  "freeze_digest": "85335dcd4c2027f853d24cbf09eb8b3260cb47e3622e465b6c58523da1d9a98b",
+  "input_hashes": {
+    "configs/strong_state_context_ceiling_v18.yaml": "bf6928020c2c5739c50a29af3516fa67fd315837e1175a692dc27496c50fe420",
+    "results/v16/processed/finite_action_bank_v16.parquet": "680c01ed70c44a96bb46e8429eebee1e2ec3f6ebe5cecb6676ea114fd3025eef"
+  },
+  "new_v18_responses_at_amendment": 0,
+  "old_coordinate_indices": [
+    5,
+    1,
+    7,
+    20,
+    11,
+    19,
+    18,
+    8
+  ],
+  "protocol_version": "strong_state_context_ceiling_v18_action_selection_amendment_1",
+  "reason": "V16 train-only calibration shows indices 18 and 8 generally require alpha 1.0; replace with train-reliable alpha-0.5 indices 17 and 2 before any V18 response observation",
+  "schema_version": 27
+}

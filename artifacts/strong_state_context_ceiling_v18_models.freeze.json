@@ -1,0 +1,72 @@
+{
+  "M0": "intercept_plus_state_plus_signed_action",
+  "M1": "M0_plus_state_tensor_signed_action",
+  "M2": "M1_plus_action_squared_and_state_tensor_action_squared",
+  "M3": "rank_32_factorized_state_action_plus_linear_mains",
+  "M4": "two_hidden_layer_128_GELU_MLP_of_state_and_action",
+  "action_vector": "eight_shared_signed_alpha_coordinates",
+  "base_freeze_digest": "989a0cfa8f50cd269d7d35dd12f3eb3f4a71179fe187defabacf5079bad41316",
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 1819,
+  "bootstrap_unit": "state",
+  "contexts": [
+    "action_only",
+    "j",
+    "j_rec",
+    "j_conv",
+    "j_kv",
+    "j_rec_conv",
+    "j_rec_kv",
+    "j_conv_kv",
+    "j_rec_conv_kv",
+    "full_raw"
+  ],
+  "diagnostic_dimension": 256,
+  "family_gate": "nonnegative_gain_every_family",
+  "feature_dimension": 128,
+  "feature_freeze_digest": "7a40e3e14446e97e249421e944567e7f80f3dc7c81de4c128d4e4a8e13230de1",
+  "freeze_digest": "776f61ca1a94579b2f0fe7a8187f6ee6402a209af37ba3584b59097d1ce227b7",
+  "horizon_ceiling_model": "M4_same_architecture_and_training_budget",
+  "horizon_cohort": "same_frozen_400_train_80_validation_states_actions_alpha_0.5",
+  "horizons": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "input_hashes": {
+    "artifacts/strong_state_context_ceiling_v18_features.freeze.json": "85cecdddd95df03911fb6188df498e7cecf32eb0117fdf0541905ec7c7963e98",
+    "artifacts/strong_state_context_ceiling_v18_splits.freeze.json": "a067fb2bea5fb27682a878915b646477531ef66c0261502e287169fb9442bd2a",
+    "results/v18/processed/clean_state_scores_v18.npz": "c0a1138c9bf791ff5987230ee7a0cbfaddc909ad90391241029b6884bf41bb6e",
+    "src/jclosure/experiments/strong_ceiling_v18.py": "cc579066816a89a7881f52f79d58d975d6c2ead6f6e99152a54a071e7cde3658"
+  },
+  "mlp_batch_size": 2048,
+  "mlp_epochs": 40,
+  "mlp_learning_rate": 0.001,
+  "mlp_seed": 1818,
+  "mlp_selection": "train_only_state_grouped_internal_holdout_on_J_per_neural_model_shared_across_conditions",
+  "mlp_weight_decay_grid": [
+    0.0001,
+    0.001
+  ],
+  "model_classes": [
+    "M0_additive_linear",
+    "M1_bilinear",
+    "M2_quadratic_tensor",
+    "M3_low_rank_interaction",
+    "M4_small_state_conditioned_mlp"
+  ],
+  "primary_ceiling_model": "M4_small_state_conditioned_mlp_equal_128_feature_budget",
+  "primary_h1_cohort": "all_2000_train_400_validation_primary_alpha_0.5_reliable_rows_only",
+  "protocol_version": "strong_state_context_ceiling_v18_models",
+  "ridge_lambda_grid": [
+    0.01,
+    0.1,
+    1.0
+  ],
+  "ridge_selection": "train_only_state_grouped_20_percent_internal_holdout_on_J_M1_h1_shared_across_conditions",
+  "schema_version": 27,
+  "split_freeze_digest": "5095039933f344b068534c92b1cff26252018b8d3bbbc4c60544830a4b280f9d",
+  "target": "V16_normalized_stack_288_components",
+  "validation_not_used_for_selection": true
+}

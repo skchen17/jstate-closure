@@ -1,0 +1,46 @@
+{
+  "neural": {
+    "M3_low_rank_interaction": {
+      "selected_weight_decay": 0.0001,
+      "trials": [
+        {
+          "train_internal_stack_rel_l2": 0.684745233073151,
+          "weight_decay": 0.0001
+        },
+        {
+          "train_internal_stack_rel_l2": 0.6847815176416532,
+          "weight_decay": 0.001
+        }
+      ]
+    },
+    "M4_small_state_conditioned_mlp": {
+      "selected_weight_decay": 0.001,
+      "trials": [
+        {
+          "train_internal_stack_rel_l2": 0.3318019009740054,
+          "weight_decay": 0.0001
+        },
+        {
+          "train_internal_stack_rel_l2": 0.3317984661986103,
+          "weight_decay": 0.001
+        }
+      ]
+    }
+  },
+  "ridge_trials": [
+    {
+      "lambda": 0.01,
+      "train_internal_stack_rel_l2": 0.5169018841966943
+    },
+    {
+      "lambda": 0.1,
+      "train_internal_stack_rel_l2": 0.7746898157186699
+    },
+    {
+      "lambda": 1.0,
+      "train_internal_stack_rel_l2": 0.927952980476052
+    }
+  ],
+  "selected_ridge_lambda": 0.01,
+  "train_internal_holdout_state_count": 368
+}

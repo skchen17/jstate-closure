@@ -1,0 +1,18 @@
+{
+  "base_freeze_digest": "989a0cfa8f50cd269d7d35dd12f3eb3f4a71179fe187defabacf5079bad41316",
+  "freeze_digest": "a6f47e9810abe7b76ac67f9257c981eed8186c390d07c93bec0c67d2eb90c43c",
+  "history_values_changed": false,
+  "input_hashes": {
+    "artifacts/strong_state_context_ceiling_v18_history.freeze.json": "5c049e6fbb900e38d5f1c08c562c59bf2f598ce1933b2dffda1283171b759d4e",
+    "src/jclosure/experiments/history_v18.py": "24368964766bb6f3f3d9ab9dac3c5d34f46e79840cd465ca64a78436d572bd78"
+  },
+  "input_shape": [
+    4,
+    4096
+  ],
+  "prior_history_features_or_fits_created": false,
+  "prior_source_sha256": "6bf6a6c38d529e6f3749201edc5b0a82bfa53affdff537883b2cd156eaa6c311",
+  "protocol_version": "strong_state_context_ceiling_v18_history_array_amendment_7",
+  "reason": "Pandas reads nested Parquet history_j_last4 as an object array of four float arrays; np.asarray(..., dtype=float32) raises before feature fitting. Explicitly stack the four saved arrays without changing positions, values, split, comparator or model.",
+  "schema_version": 27
+}

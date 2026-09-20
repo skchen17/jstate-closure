@@ -1,0 +1,22 @@
+{
+  "base_freeze_digest": "989a0cfa8f50cd269d7d35dd12f3eb3f4a71179fe187defabacf5079bad41316",
+  "benchmark_gpu0_peak_allocated_GiB": 8.10276746749878,
+  "benchmark_single_gpu_state_seconds": 2.2727047111839056,
+  "freeze_digest": "e0aae1bdb28e01d74e4ac1358a8750fe87bbebe1b030b7fdf3c487524e255a4f",
+  "input_hashes": {
+    "artifacts/strong_state_context_ceiling_v18_reference_alignment_amendment_3.freeze.json": "cd01aa0d9142c2fe43e7ac7c16b1409aaba7b6082ce39f9430983ada79c7a451",
+    "scripts/benchmark_v18_single_gpu.py": "1210d158eb47078547efaf372f40cb8da7f2641aa79401f75d1da2f2a66607e7",
+    "src/jclosure/experiments/crossed_bank_v18.py": "bc3c40d689b5a98e2c1d4916ecdefa21d44b6eebb267b760340e07a36f5c4c1d"
+  },
+  "model_device_map": {
+    "": 0
+  },
+  "model_weights_changed": false,
+  "pilot_train_states_at_amendment": 426,
+  "prior_response_policy": "retain dual-GPU pilot response records; no recomputation",
+  "prior_source_sha256": "139097535036f33e34bfc9f28892611bd05d4e24f82d1a524304169df01303d1",
+  "protocol_version": "strong_state_context_ceiling_v18_runtime_placement_amendment_4",
+  "read_only_equivalence_test": "same frozen normal state, all 16 h1 action normalized stacks exactly equal to dual-GPU pilot, median and max relative L2 0.0",
+  "reason": "GPU 1 concurrently saturated; V18 model placement on GPU 0 alone preserves weight/dtype/action/estimand and removes inter-GPU transfer bottleneck.",
+  "schema_version": 27
+}

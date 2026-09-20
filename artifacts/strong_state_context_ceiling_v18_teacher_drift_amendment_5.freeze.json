@@ -1,0 +1,20 @@
+{
+  "base_freeze_digest": "989a0cfa8f50cd269d7d35dd12f3eb3f4a71179fe187defabacf5079bad41316",
+  "comparison_policy": "compare_only_shared_frozen_V13_prefix_and_audit_all_states",
+  "first_observed_mismatch_zero_based": 7,
+  "first_observed_validation_id": "v13-validation-572620683928d47d21c6",
+  "first_seven_tokens_identical": true,
+  "freeze_digest": "3f201b7b41dfd6a8d9c51c6441940730430ff0a76c0dcaad4d34501466e460d5",
+  "historical_V13_tokens_changed": false,
+  "input_hashes": {
+    "artifacts/strong_state_context_ceiling_v18_runtime_placement_amendment_4.freeze.json": "30f89b7d670d90dd8d487717cf38d04a0baca174766f41602c4935fe470e19cc",
+    "scripts/audit_v18_teacher_drift.py": "073a08d40082151cd36b13dabc018ea5e6b363a0b264427811a068f84105da77",
+    "src/jclosure/experiments/crossed_bank_v18.py": "9561aef6b9a79e8900cc9fc41dbb798d57e27c9e3d6650880309bf05a9217162"
+  },
+  "prior_pilot_response_policy": "retain_unchanged",
+  "prior_source_sha256": "bc3c40d689b5a98e2c1d4916ecdefa21d44b6eebb267b760340e07a36f5c4c1d",
+  "protocol_version": "strong_state_context_ceiling_v18_teacher_drift_amendment_5",
+  "reason": "Second validation clean replay differs from frozen V13 teacher token only at zero-based position 7; V18 teacher-forced estimand uses newly generated same-state clean greedy tokens, while V13 token agreement is descriptive, not an eligibility filter.",
+  "schema_version": 27,
+  "teacher_policy": "V18_clean_greedy_same_state_teacher_forcing"
+}

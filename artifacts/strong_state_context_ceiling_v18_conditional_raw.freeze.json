@@ -1,0 +1,30 @@
+{
+  "base_freeze_digest": "989a0cfa8f50cd269d7d35dd12f3eb3f4a71179fe187defabacf5079bad41316",
+  "base_model": "M4_J_action_frozen_training_hyperparameters",
+  "base_refit_after_raw_correction": false,
+  "bootstrap_replicates": 1000,
+  "bootstrap_unit": "state",
+  "correction": "linear_raw_residual_and_raw_residual_tensor_signed_action_ridge",
+  "crossfit": "five_state_grouped_training_folds_no_validation_fit",
+  "freeze_digest": "238990619de49530f01008cb4623ac99fea8a3b86ed5796140058c14fa3a0b12",
+  "horizons": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "input_hashes": {
+    "artifacts/strong_state_context_ceiling_v18_models.freeze.json": "a97e3a57e43bebf6b44ab232aaf42740b5499151ff9d159415fa8b55b14eb13c",
+    "results/v18/processed/clean_state_scores_v18.npz": "c0a1138c9bf791ff5987230ee7a0cbfaddc909ad90391241029b6884bf41bb6e",
+    "src/jclosure/experiments/conditional_raw_v18.py": "053a4679b407b1000e34fcc197c642650989eaebcc083d4eec4793fca7c56ac5"
+  },
+  "model_freeze_digest": "776f61ca1a94579b2f0fe7a8187f6ee6402a209af37ba3584b59097d1ce227b7",
+  "protocol_version": "strong_state_context_ceiling_v18_conditional_raw",
+  "raw_residualization": "ridge_raw_128D_on_J_128D_train_OOF",
+  "ridge": "frozen_train_selected_strong_ceiling_lambda",
+  "run_only_if_material_raw_ceiling": true,
+  "schema_version": 27,
+  "seed": 1821,
+  "split_freeze_digest": "5095039933f344b068534c92b1cff26252018b8d3bbbc4c60544830a4b280f9d",
+  "target_residualization": "five_state_grouped_M4_OOF"
+}

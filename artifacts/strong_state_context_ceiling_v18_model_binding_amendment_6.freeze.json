@@ -1,0 +1,19 @@
+{
+  "base_freeze_digest": "989a0cfa8f50cd269d7d35dd12f3eb3f4a71179fe187defabacf5079bad41316",
+  "bound_model_class": "M4_small_state_conditioned_mlp",
+  "freeze_digest": "e3d5843068e9ffbef249eb8eccfbf58baf9ffae47e2a6999c324a863b41e1e67",
+  "frozen_horizon_description": "M4_same_architecture_and_training_budget",
+  "frozen_primary_description": "M4_small_state_conditioned_mlp_equal_128_feature_budget",
+  "input_hashes": {
+    "artifacts/strong_state_context_ceiling_v18_models.freeze.json": "a97e3a57e43bebf6b44ab232aaf42740b5499151ff9d159415fa8b55b14eb13c",
+    "results/v18/processed/strong_ceiling_state_errors_pre_model_binding_amendment_v18.parquet": "af4785a3dcc05bbac58980765f0d494cac696cd5477e1724d3ae932331b20571",
+    "results/v18/processed/strong_model_train_selection_pre_model_binding_amendment_v18.json": "dbb215444d55ab4421ca51caeb3cf33ce134ce50de90b2c7063e059303f4b256",
+    "src/jclosure/experiments/strong_ceiling_v18.py": "f06999a682f8626070c957d5dcfcd0cce7665e4311234e0527365c8baae113c4"
+  },
+  "prior_predictions_archived": true,
+  "prior_source_sha256": "cc579066816a89a7881f52f79d58d975d6c2ead6f6e99152a54a071e7cde3658",
+  "protocol_version": "strong_state_context_ceiling_v18_model_binding_amendment_6",
+  "reason": "Frozen primary/horizon model strings are descriptive M4 labels, not MODEL_CLASSES keys; first h1 run completed all 50 fits but failed at summary lookup. Bind both summaries to the already-frozen M4_small_state_conditioned_mlp class without changing data, hyperparameters, fits or gates.",
+  "schema_version": 27,
+  "validation_not_used_to_select_binding": true
+}

@@ -622,3 +622,11 @@ Formal procedural status: **V16-STOP — NONLINEAR_RESPONSE_VALIDATION_GATE_NOT_
 
 Formal procedural outcome: **V17-STOP — STATE_CONTEXT_CEILING_GATE_NOT_PASSED**. Clean REC/Conv/KV raw-state linear-kernel context on the reused V16 reliable single-action bank improved held-out J/normalized-stack relative L2 by only **0.0126/0.0113** over J+action, below the frozen 0.05 materiality gate; a raw-only reference also did not reach it. REC yielded the largest individual ceiling gain, but fixed-base cross-fitted raw-residual corrections did not produce stable improvement. This does **not** establish J sufficiency or absence of useful persistent context under other models. The compact-context sweep, unseen-action sufficiency, h2/h4/h8, transitions and independent final bank were gated off. Smallest sufficient C dimension: **none identified**. H2 remains; H3 candidate state, absolute replacement and autonomous state-model training are **not authorized**. V1–V16 frozen results are unchanged; see `reports/V17_COMPLETE_REPORT.md` for standalone reports, records and limitations.
 <!-- V17_END -->
+
+<!-- V18_START -->
+## V18 — Strong State-Context Ceiling and Horizon Localization
+
+Formal outcome: **V18-STOP — STRICT_MATCH_NOT_IDENTIFIED_AND_NO_MATERIAL_RAW_CEILING**. The new crossed bank contains 2000 train and 400 validation states under eight shared signed finite action coordinates; h1/h2/h4/h8 use a fixed 400/80-state panel. The unified nonlinear h1 full-raw versus J-only absolute J/stack relative-L2 gains are **0.0008/-0.0011** (frozen material gate 0.05; passed: False).
+Full-raw stack gain by horizon h1/h2/h4/h8: **-0.0014, -0.0055, -0.0188, 0.0061**. Earliest material horizon: **None**. Strict matching: **MATCH_NOT_IDENTIFIED**; history material: **False**. Compact search: **COMPACT_CONTEXT_SEARCH_NOT_AUTHORIZED**. Independent final: **UNOPENED_PENDING_FROZEN_FINALIST**.
+H2 remains. H3 candidate state and autonomous state-model training are not authorized without a response-sufficient compact state and independent V18-F confirmation. These are finite-action response results, not proof of a complete state or physical replacement. V1–V17 frozen records are unchanged. See `reports/V18_COMPLETE_REPORT.md` for all standalone reports and machine-record integrity index.
+<!-- V18_END -->

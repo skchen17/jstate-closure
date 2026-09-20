@@ -1,0 +1,26 @@
+{
+  "base_freeze_digest": "989a0cfa8f50cd269d7d35dd12f3eb3f4a71179fe187defabacf5079bad41316",
+  "contexts": [
+    "j",
+    "j_rec_conv_kv"
+  ],
+  "freeze_digest": "095ce7e9b98cf8fb45128419b34be261178e622f9d222239842c98a3e07e464e",
+  "holdouts": [
+    "alpha_1_from_alpha_0_5",
+    "negative_sign_from_positive_sign"
+  ],
+  "input_hashes": {
+    "artifacts/strong_state_context_ceiling_v18_models.freeze.json": "a97e3a57e43bebf6b44ab232aaf42740b5499151ff9d159415fa8b55b14eb13c",
+    "results/v18/processed/clean_state_scores_v18.npz": "c0a1138c9bf791ff5987230ee7a0cbfaddc909ad90391241029b6884bf41bb6e",
+    "src/jclosure/experiments/action_generalization_v18.py": "3ae5061ddefdace5914cd4033cd8b365cb1ca329d9a8dc9729c3974e1454949f"
+  },
+  "model": "frozen_M4",
+  "model_freeze_digest": "776f61ca1a94579b2f0fe7a8187f6ee6402a209af37ba3584b59097d1ce227b7",
+  "no_validation_refitting": true,
+  "protocol_version": "strong_state_context_ceiling_v18_action_generalization",
+  "schema_version": 27,
+  "split_freeze_digest": "5095039933f344b068534c92b1cff26252018b8d3bbbc4c60544830a4b280f9d",
+  "train_hyperparameters": "frozen_train_only_h1_selection",
+  "unseen_direction_pair_dense": "not_in_shared_action_bank_not_tested",
+  "validation_role": "V18_development_validation_not_independent"
+}

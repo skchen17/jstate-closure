@@ -1,0 +1,67 @@
+{
+  "base_states": 150,
+  "final_heldout_actions_unopened": true,
+  "operator_design_freeze_digest": "21fe1ee0f69b1559b00cd84cdd107a9f3b65809b419c99f7473b946024ace015",
+  "operator_states": 600,
+  "outputs": [
+    {
+      "action_reliable_rate": 1.0,
+      "base_states": 30,
+      "family": "boolean_logic",
+      "matched_vs_P0_rate": 1.0,
+      "operator_states": 120,
+      "path": "results/v20/processed/response_operator_operator_train_boolean_logic_v20.parquet",
+      "q_reliable_rate": 1.0,
+      "response_rows": 4320,
+      "sha256": "06f1cb2b465af6f9115efc8eb4ad79d5e823c9ac5ea349eb73f8c9fa8c9e24d2"
+    },
+    {
+      "action_reliable_rate": 1.0,
+      "base_states": 30,
+      "family": "modular_arithmetic",
+      "matched_vs_P0_rate": 1.0,
+      "operator_states": 120,
+      "path": "results/v20/processed/response_operator_operator_train_modular_arithmetic_v20.parquet",
+      "q_reliable_rate": 1.0,
+      "response_rows": 4320,
+      "sha256": "21d3f8199c5e25424d65d44c605af1f20522b2b2edbb8f71fffe3b5d1c16c811"
+    },
+    {
+      "action_reliable_rate": 1.0,
+      "base_states": 30,
+      "family": "short_graph_traversal",
+      "matched_vs_P0_rate": 1.0,
+      "operator_states": 120,
+      "path": "results/v20/processed/response_operator_operator_train_short_graph_traversal_v20.parquet",
+      "q_reliable_rate": 1.0,
+      "response_rows": 4320,
+      "sha256": "c1842d06521f38e64c01a41356e4c0dcc73ec5157df3013a07480ea31e8fcc2b"
+    },
+    {
+      "action_reliable_rate": 1.0,
+      "base_states": 30,
+      "family": "simple_state_transition",
+      "matched_vs_P0_rate": 1.0,
+      "operator_states": 120,
+      "path": "results/v20/processed/response_operator_operator_train_simple_state_transition_v20.parquet",
+      "q_reliable_rate": 1.0,
+      "response_rows": 4320,
+      "sha256": "1a11222aa0dbf501c8ac3feb3cb837641d0dcd49d69583131ba0d74498939a1e"
+    },
+    {
+      "action_reliable_rate": 1.0,
+      "base_states": 30,
+      "family": "variable_binding",
+      "matched_vs_P0_rate": 1.0,
+      "operator_states": 120,
+      "path": "results/v20/processed/response_operator_operator_train_variable_binding_v20.parquet",
+      "q_reliable_rate": 1.0,
+      "response_rows": 4320,
+      "sha256": "498df5dbe6352a0b6f6e24454acca607389117ea982bf92e58e4ee30df765179"
+    }
+  ],
+  "response_rows": 21600,
+  "role": "operator_train",
+  "state_metadata_path": "results/v20/processed/operator_state_metadata_operator_train_v20.parquet",
+  "state_metadata_sha256": "ad484b8f62220027a1be8aaddd11f30509a1882da7afa032ca36f9736558cd0d"
+}

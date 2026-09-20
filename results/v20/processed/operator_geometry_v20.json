@@ -1,0 +1,111 @@
+{
+  "V13_exact_JVP_historical_median_cumulative_path_r95": 11.0,
+  "V13_exact_JVP_historical_median_instantaneous_r95": 8.0,
+  "by_channel": {
+    "conv": {
+      "gain_ratio_Pq_over_P0": 0.8646912866833215,
+      "mean_principal_angle_degrees": 38.08897258364372,
+      "operator_modulation_relative": 0.8837564793419289,
+      "procrustes_relative_residual": 0.7693639644014929,
+      "rank_change": 0.0,
+      "spectrum_Jensen_Shannon": 0.008270339641127082
+    },
+    "joint": {
+      "gain_ratio_Pq_over_P0": 1.0683720060770021,
+      "mean_principal_angle_degrees": 30.363089012844426,
+      "operator_modulation_relative": 0.6403150057559654,
+      "procrustes_relative_residual": 0.492162263533666,
+      "rank_change": 0.0,
+      "spectrum_Jensen_Shannon": 0.005664421739958963
+    },
+    "recurrent": {
+      "gain_ratio_Pq_over_P0": 1.1645314276882308,
+      "mean_principal_angle_degrees": 40.706882977544986,
+      "operator_modulation_relative": 0.7929104062274832,
+      "procrustes_relative_residual": 0.6923164661116596,
+      "rank_change": -3.0,
+      "spectrum_Jensen_Shannon": 0.03676571421902491
+    }
+  },
+  "geometry_freeze_digest": "5c1936e6d37e3f10ca8e7bae596cd79e072fa4d07cd2630532e26c5e0439d732",
+  "manifold_dimensions": {
+    "operator_train": {
+      "P0": {
+        "effective_rank": 11.83463476168226,
+        "r95": 39,
+        "states": 150,
+        "top_energy_fraction": 0.40791164587603934
+      },
+      "conv_causal1": {
+        "effective_rank": 11.900348877064642,
+        "r95": 44,
+        "states": 150,
+        "top_energy_fraction": 0.46924330393474445
+      },
+      "joint_causal11": {
+        "effective_rank": 13.096997641965675,
+        "r95": 39,
+        "states": 150,
+        "top_energy_fraction": 0.37844476726618714
+      },
+      "pooled_natural_plus_counterfactual": {
+        "effective_rank": 16.07420533137172,
+        "r95": 50,
+        "states": 600,
+        "top_energy_fraction": 0.311007197193549
+      },
+      "rec_arch4_amended": {
+        "effective_rank": 11.639025893053043,
+        "r95": 35,
+        "states": 150,
+        "top_energy_fraction": 0.3505485015212778
+      }
+    },
+    "operator_validation": {
+      "P0": {
+        "effective_rank": 8.22230217008451,
+        "r95": 20,
+        "states": 50,
+        "top_energy_fraction": 0.42399323659819665
+      },
+      "conv_causal1": {
+        "effective_rank": 9.158429006212948,
+        "r95": 23,
+        "states": 50,
+        "top_energy_fraction": 0.4626505262819236
+      },
+      "joint_causal11": {
+        "effective_rank": 9.114435650164056,
+        "r95": 20,
+        "states": 50,
+        "top_energy_fraction": 0.40118021064756065
+      },
+      "pooled_natural_plus_counterfactual": {
+        "effective_rank": 14.039464963550435,
+        "r95": 34,
+        "states": 200,
+        "top_energy_fraction": 0.3260349521605944
+      },
+      "rec_arch4_amended": {
+        "effective_rank": 7.726070612183155,
+        "r95": 19,
+        "states": 50,
+        "top_energy_fraction": 0.44112598282341087
+      }
+    }
+  },
+  "median_counterfactual_state_operator_r95": 7.0,
+  "median_natural_state_operator_r95": 7.0,
+  "median_pair_gain_ratio": 1.039943815717458,
+  "median_pair_principal_angle_degrees": 37.444136641885834,
+  "median_pair_procrustes_relative_residual": 0.6643493058101813,
+  "median_pair_rank_change": 0.0,
+  "pair_count": 600,
+  "pair_path": "results/v20/processed/operator_rotation_pairs_v20.parquet",
+  "pair_sha256": "0bd326c0faffad4188704aa2119b069ebbfe2acc7b21052d5372f184b7081d17",
+  "paired_JVP_limitation": "No exact JVP was measured for the frozen V20 base IDs; historical V13 aggregate rank is a comparison, not a paired tangent-rotation test.",
+  "paired_V20_state_JVP_subspace_similarity_measured": false,
+  "state_count": 800,
+  "state_spectra_path": "results/v20/processed/operator_singular_spectra_v20.parquet",
+  "state_spectra_sha256": "6f374861620e5c559a4637fc67d0fc260a571abeeabb8f32cb8c6d33c89bc112"
+}

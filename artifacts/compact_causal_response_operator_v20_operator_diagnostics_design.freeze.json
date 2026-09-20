@@ -1,0 +1,110 @@
+{
+  "base_freeze_digest": "8726bddd18d48665856ed35caefe4a32b25216ffddd578732b7f34565644069c",
+  "base_id_sha256": "1924f4e0f9ca9d9f8cfef22e63cd7bc780f2ff264f249da0d160f546b15a9cde",
+  "base_ids": [
+    "v13-validation-boolean_logic-4dc8b5b7e915de0b3b49",
+    "v13-validation-boolean_logic-80037509bf4ae5e53984",
+    "v13-validation-modular_arithmetic-4a3ba98192d85bfe95fe",
+    "v13-validation-modular_arithmetic-72f8c0e461b189b46f35",
+    "v13-validation-short_graph_traversal-81db9c9db9e888bb7d3c",
+    "v13-validation-short_graph_traversal-4293e49d81115f8540a4",
+    "v13-validation-simple_state_transition-af8d4c68996410a24234",
+    "v13-validation-simple_state_transition-8e3cc7c9e3335aea6950",
+    "v13-validation-variable_binding-86799fb58cae14c1c6a6",
+    "v13-validation-variable_binding-bb9447dc7a5006604ddd"
+  ],
+  "created_utc": "2026-09-20T17:07:39.636363+00:00",
+  "final_heldout_directions_opened": false,
+  "freeze_digest": "5543340e77d3b1cd2588d75eb93f6b42bff7e08cd1f6df12762b228225724261",
+  "independent_V20_final_opened": false,
+  "input_hashes": {
+    "artifacts/compact_causal_response_operator_v20_actions.freeze.json": "9ab92bf2d6feeff8fa2e78b2c9c21e4a679b1c76b18d6544f21d08ecce91c030",
+    "artifacts/compact_causal_response_operator_v20_operator_analysis.freeze.json": "d38b5f1a9431f7a6814090401b899cb48939b5d4f518588eb4d3990bbeab12f2",
+    "artifacts/compact_causal_response_operator_v20_operator_design.freeze.json": "02d460be88a61cb8fca0aa020aa8e89298279a6c688ebd6abf0bfabd3f2300cc",
+    "artifacts/compact_causal_response_operator_v20_splits.freeze.json": "fc51d5ad87f92bf85d1ac92832f9f7a4a30788fea60a024073011e8f43f8697c",
+    "src/jclosure/experiments/operator_diagnostics_v20.py": "e2c97af98043af9b6a7ebac0868a28ddab843866f774f8a9224424e20263e0fb"
+  },
+  "model_prediction_action_descriptor": "same_linear_sum_of_frozen_train_normalized_continuous_action_descriptors",
+  "operator_states": 40,
+  "protocol_version": "compact_causal_response_operator_v20_operator_diagnostics_design",
+  "raw_action_construction": "linear_sum_of_frozen_V13_full_REC_Conv_KV_directions_at_frozen_base_alpha_and_spec_multiplier",
+  "response_rows_already_observed": 0,
+  "response_target": "V16_normalized_stack_288",
+  "schema_version": 29,
+  "specs": [
+    {
+      "components": [
+        [
+          0,
+          2.0
+        ]
+      ],
+      "kind": "unseen_amplitude_train",
+      "name": "unseen_scale_train_0"
+    },
+    {
+      "components": [
+        [
+          20,
+          2.0
+        ]
+      ],
+      "kind": "unseen_amplitude_validation",
+      "name": "unseen_scale_validation_20"
+    },
+    {
+      "components": [
+        [
+          20,
+          1.0
+        ],
+        [
+          16,
+          1.0
+        ]
+      ],
+      "kind": "unseen_pair",
+      "name": "unseen_pair_20_16"
+    },
+    {
+      "components": [
+        [
+          21,
+          1.0
+        ],
+        [
+          17,
+          1.0
+        ]
+      ],
+      "kind": "unseen_pair",
+      "name": "unseen_pair_21_17"
+    },
+    {
+      "components": [
+        [
+          0,
+          0.5
+        ],
+        [
+          1,
+          0.5
+        ],
+        [
+          2,
+          0.5
+        ],
+        [
+          20,
+          0.5
+        ],
+        [
+          21,
+          0.5
+        ]
+      ],
+      "kind": "unseen_dense",
+      "name": "unseen_dense_0_1_2_20_21"
+    }
+  ]
+}

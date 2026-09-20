@@ -1,0 +1,26 @@
+{
+  "command": "CUDA_VISIBLE_DEVICES= PYTHONPATH=src /home/user/anaconda3/bin/python -m pytest -q",
+  "passed": 228,
+  "failed": 2,
+  "warnings": 3,
+  "v20_tests_passed": 6,
+  "failures": [
+    {
+      "test": "tests/test_v14.py::test_v14_integrity_manifest",
+      "cause": "Historical V14 manifest pins the then-current cumulative reports/FINAL_REPORT.md bytes; later version sections change that cumulative file.",
+      "file": "reports/FINAL_REPORT.md"
+    },
+    {
+      "test": "tests/test_v16.py::test_v16_historical_bytes_unchanged_and_manifest",
+      "cause": "Historical V16 manifest pins the then-current cumulative reports/FINAL_REPORT.md bytes; later version sections change that cumulative file.",
+      "file": "reports/FINAL_REPORT.md",
+      "V16_expected_sha256": "8e19cf16eb2247bca83851b693e7c42845569bcf84358b8450673beb4bc38086"
+    }
+  ],
+  "parent_commit": "3cefc7c61429770eeef7fd6544adf4b9b17a1de5",
+  "parent_FINAL_REPORT_sha256": "a07031ac51f0432a60a4216607afae9232f093776d8280ee0170307e9e4ddd60",
+  "FINAL_REPORT_sha256_at_test_time": "2ef0c472b39ea239b77b8d92b2a74d4cd92a05bb8329c5b151b349028314fe94",
+  "parent_already_differs_from_V16_expected": true,
+  "frozen_V14_V16_records_modified": false,
+  "interpretation": "Two known legacy cumulative-report hash tests fail; no V20 CPU invariant test failed. Historical frozen manifests were not changed to mask these failures."
+}

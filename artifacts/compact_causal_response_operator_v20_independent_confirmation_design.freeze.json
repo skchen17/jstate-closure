@@ -1,0 +1,79 @@
+{
+  "action_alpha": 0.5,
+  "action_rows": [
+    {
+      "coordinate_index": 5,
+      "direction_index": 9,
+      "proposal_family": "architecture_balanced",
+      "v16_train_median_j_effect_norm": 0.18282173573970795,
+      "v16_train_reliable_fraction": 1.0
+    },
+    {
+      "coordinate_index": 1,
+      "direction_index": 1,
+      "proposal_family": "causal_weighted",
+      "v16_train_median_j_effect_norm": 0.1510821059346199,
+      "v16_train_reliable_fraction": 1.0
+    },
+    {
+      "coordinate_index": 7,
+      "direction_index": 39,
+      "proposal_family": "high_finite_response",
+      "v16_train_median_j_effect_norm": 0.12976288795471191,
+      "v16_train_reliable_fraction": 1.0
+    },
+    {
+      "coordinate_index": 20,
+      "direction_index": 24,
+      "proposal_family": "architecture_balanced",
+      "v16_train_median_j_effect_norm": 0.0986514687538147,
+      "v16_train_reliable_fraction": 1.0
+    }
+  ],
+  "action_signs": [
+    -1,
+    1
+  ],
+  "active_q_names": [
+    "conv_causal1",
+    "conv_arch24_corrected",
+    "joint_causal11",
+    "rec_arch4_amended",
+    "rec_conv_causal1_amended"
+  ],
+  "base_freeze_digest": "8726bddd18d48665856ed35caefe4a32b25216ffddd578732b7f34565644069c",
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 2020,
+  "created_utc": "2026-09-20T16:36:04.636364+00:00",
+  "dependence_ci_lower_min": 0.02,
+  "dependence_median_min": 0.1,
+  "freeze_digest": "d69aafd276f1acb9e4f33d8b9e99dff49dfe7d86174ed916ee295e6870833a42",
+  "horizon": 1,
+  "input_hashes": {
+    "artifacts/compact_causal_response_operator_v20_splits.freeze.json": "fc51d5ad87f92bf85d1ac92832f9f7a4a30788fea60a024073011e8f43f8697c",
+    "artifacts/compact_causal_response_operator_v20_teacher.freeze.json": "7b2a5790e5d49f8c4cbcd134ea624bf6a795fc036f4810b4d2b8cfb8b9c072ad",
+    "artifacts/counterfactual_workspace_v19_q_amendment_2.freeze.json": "054ea5578630d60ed3c75e3f972e6f5caa42ac198383a1a19f7d71b630f08a63",
+    "artifacts/counterfactual_workspace_v19_splits.freeze.json": "72e68df5b97c920b403c0e1a743b690e1696a268b461e4259472a9388ad8665d",
+    "src/jclosure/experiments/independent_confirm_v20.py": "9c5b822ecb51d2e658b0ea3dfc640213386600c2f8a274616ab04faa7b82b626"
+  },
+  "matched_action_rate_min": 0.8,
+  "natural_to_action_ratio_min": 0.1,
+  "protocol_version": "compact_causal_response_operator_v20_independent_confirmation_design",
+  "q_freeze_digest": "572a827f6fba915490e9262767a1178d1eff7a24b6a17cb55b24f0a69ed529bb",
+  "q_names": [
+    "conv_causal1",
+    "conv_arch24_corrected",
+    "joint_causal11",
+    "joint_random2",
+    "rec_random7_weak_control",
+    "rec_arch4_amended",
+    "kv_arch14_amended",
+    "rec_conv_causal1_amended"
+  ],
+  "representation_learning_already_performed": false,
+  "response_rows_already_observed": 0,
+  "schema_version": 29,
+  "state_count": 250,
+  "state_id_sha256": "596fee5c8fe0bf6afa31fd615731f115782750536b37a75daa07aff432e6fce8",
+  "teacher_sha256": "f0f4c86669f4695847d8990014cb4710f7670539186d87b347c19fd0212c449a"
+}

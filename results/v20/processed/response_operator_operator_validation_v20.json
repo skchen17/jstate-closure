@@ -1,0 +1,67 @@
+{
+  "base_states": 50,
+  "final_heldout_actions_unopened": true,
+  "operator_design_freeze_digest": "21fe1ee0f69b1559b00cd84cdd107a9f3b65809b419c99f7473b946024ace015",
+  "operator_states": 200,
+  "outputs": [
+    {
+      "action_reliable_rate": 1.0,
+      "base_states": 10,
+      "family": "boolean_logic",
+      "matched_vs_P0_rate": 1.0,
+      "operator_states": 40,
+      "path": "results/v20/processed/response_operator_operator_validation_boolean_logic_v20.parquet",
+      "q_reliable_rate": 1.0,
+      "response_rows": 1440,
+      "sha256": "bd86a406a24e3541a6a7f8a4c63c5163d12f0d7ba70a849c45fb4fc91ae55196"
+    },
+    {
+      "action_reliable_rate": 1.0,
+      "base_states": 10,
+      "family": "modular_arithmetic",
+      "matched_vs_P0_rate": 1.0,
+      "operator_states": 40,
+      "path": "results/v20/processed/response_operator_operator_validation_modular_arithmetic_v20.parquet",
+      "q_reliable_rate": 1.0,
+      "response_rows": 1440,
+      "sha256": "3522982173be195f58ec8c791ada5f5669765206d18fbc24c769e6514147d12c"
+    },
+    {
+      "action_reliable_rate": 1.0,
+      "base_states": 10,
+      "family": "short_graph_traversal",
+      "matched_vs_P0_rate": 1.0,
+      "operator_states": 40,
+      "path": "results/v20/processed/response_operator_operator_validation_short_graph_traversal_v20.parquet",
+      "q_reliable_rate": 1.0,
+      "response_rows": 1440,
+      "sha256": "a1ac3faf6d90b5cdaa03d4aad653ed8d6ea6323be6b05b648b5f52e333d0d7d0"
+    },
+    {
+      "action_reliable_rate": 1.0,
+      "base_states": 10,
+      "family": "simple_state_transition",
+      "matched_vs_P0_rate": 1.0,
+      "operator_states": 40,
+      "path": "results/v20/processed/response_operator_operator_validation_simple_state_transition_v20.parquet",
+      "q_reliable_rate": 1.0,
+      "response_rows": 1440,
+      "sha256": "07e8b6043fedc167129fa8e51358d27301844322956ade940768d4a8ace99b46"
+    },
+    {
+      "action_reliable_rate": 1.0,
+      "base_states": 10,
+      "family": "variable_binding",
+      "matched_vs_P0_rate": 1.0,
+      "operator_states": 40,
+      "path": "results/v20/processed/response_operator_operator_validation_variable_binding_v20.parquet",
+      "q_reliable_rate": 1.0,
+      "response_rows": 1440,
+      "sha256": "2c24011e447cc6fc5616768f302db860852814cd0f6d2d2b6700106ac90772d0"
+    }
+  ],
+  "response_rows": 7200,
+  "role": "operator_validation",
+  "state_metadata_path": "results/v20/processed/operator_state_metadata_operator_validation_v20.parquet",
+  "state_metadata_sha256": "304f609f50e6ba8a38c140689f15ffc4d8790df771c68c5d2dbf3303a0470c24"
+}

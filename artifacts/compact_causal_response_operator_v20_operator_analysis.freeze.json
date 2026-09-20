@@ -1,0 +1,57 @@
+{
+  "base_freeze_digest": "8726bddd18d48665856ed35caefe4a32b25216ffddd578732b7f34565644069c",
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 2021,
+  "bootstrap_unit": "base_state",
+  "created_utc": "2026-09-20T17:04:28.238708+00:00",
+  "decoder_training": "operator_train_states_positive_train_actions_only",
+  "descriptor_sha256": "00311120a471c335335daac6d7ea5d23d491c187321a602d4a6bf2a51f453c97",
+  "dimensions": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "evaluation": "operator_validation_states_unseen_direction_positive_and_negative_plus_train_direction_unseen_negative",
+  "freeze_digest": "c3f518b116a4bdfe54f7db38c3eddbc5c29519ea87b8a6881138a8f0fb7f5ed4",
+  "heldout_gates": {
+    "cosine_min": 0.9,
+    "family_relative_l2_max": 0.35,
+    "norm_ratio_max": 1.2,
+    "norm_ratio_min": 0.8,
+    "relative_l2_max": 0.3
+  },
+  "independent_V20_final_opened": false,
+  "input_hashes": {
+    "artifacts/compact_causal_response_operator_v20_actions.freeze.json": "9ab92bf2d6feeff8fa2e78b2c9c21e4a679b1c76b18d6544f21d08ecce91c030",
+    "artifacts/compact_causal_response_operator_v20_operator_design.freeze.json": "02d460be88a61cb8fca0aa020aa8e89298279a6c688ebd6abf0bfabd3f2300cc",
+    "results/v20/processed/action_descriptors_v20.json": "00311120a471c335335daac6d7ea5d23d491c187321a602d4a6bf2a51f453c97",
+    "src/jclosure/experiments/operator_model_v20.py": "a6a557094293a1c4ea9141dba2eb9a5bc0b0829e41414b69e1340e90bed7789e"
+  },
+  "model_selection": "minimum_operator_validation_unseen_direction_positive_stack_relative_L2",
+  "models": [
+    "response_svd",
+    "reduced_rank_regression",
+    "tucker_factorization",
+    "bilinear_latent_operator",
+    "small_nonlinear_latent_operator"
+  ],
+  "oracle_coordinate": "train_base_state_positive_train_action_response_fingerprint_centered_SVD_only",
+  "protocol_version": "compact_causal_response_operator_v20_operator_analysis",
+  "ridge_lambda": 1.0,
+  "schema_version": 29,
+  "sealed_final_action_responses_observed": 0,
+  "small_nonlinear_model": {
+    "batch_size": 512,
+    "epochs": 30,
+    "hidden": 128,
+    "layers": 2,
+    "learning_rate": 0.001,
+    "seed": 2021,
+    "weight_decay": 0.0001
+  },
+  "validation_response_rows_already_observed": 0
+}

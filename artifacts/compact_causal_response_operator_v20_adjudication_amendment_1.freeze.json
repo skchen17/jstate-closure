@@ -1,0 +1,19 @@
+{
+  "base_freeze_digest": "8726bddd18d48665856ed35caefe4a32b25216ffddd578732b7f34565644069c",
+  "created_utc": "2026-09-20T17:33:05.303938+00:00",
+  "freeze_digest": "ed58a8a8314daa9bd6b2358b0a7565f48305a4a3440b66a8268a8d30d512dffc",
+  "frozen_seen_relative_L2_limit": 0.3,
+  "input_hashes": {
+    "results/v20/processed/oracle_operator_search_v20.json": "5e5356a6575a8f767548653811e591092c3908d312a76e2c3a54f80bb0033340",
+    "results/v20/processed/v20_adjudication.json": "4fc8826c909fac6c85c3547be3eee25b80c6b9a40053244949321a99cca14dcc",
+    "scripts/amend_v20_adjudication.py": "ee310db0dae55c0d3fc7851ba3eec222b84e07544fbb610ffcb9986a9204f189"
+  },
+  "oracle_search_sha256": "5e5356a6575a8f767548653811e591092c3908d312a76e2c3a54f80bb0033340",
+  "original_adjudication_sha256": "4fc8826c909fac6c85c3547be3eee25b80c6b9a40053244949321a99cca14dcc",
+  "primary_formal_outcome_unchanged": "V20-D_NO_COMPACT_OPERATOR_DIMENSION_IDENTIFIED",
+  "protocol_version": "compact_causal_response_operator_v20_adjudication_amendment_1",
+  "reason": "Original adjudication checked seen-action fit only in the model selected for unseen-direction diagnostics, overlooking a different frozen nonlinear model that fit seen actions but failed unseen directions.",
+  "responses_added_after_original_adjudication": 0,
+  "schema_version": 29,
+  "thresholds_or_models_changed": false
+}

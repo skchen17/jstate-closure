@@ -1,0 +1,24 @@
+{
+  "base_freeze_digest": "8726bddd18d48665856ed35caefe4a32b25216ffddd578732b7f34565644069c",
+  "created_utc": "2026-09-20T16:34:46.616486+00:00",
+  "freeze_digest": "8dc292ea1ac49b2f6bd842881914a98f44e1d9cb428b6f35883ab85e208e529e",
+  "input_hashes": {
+    "artifacts/compact_causal_response_operator_v20_splits.freeze.json": "fc51d5ad87f92bf85d1ac92832f9f7a4a30788fea60a024073011e8f43f8697c",
+    "results/v20/processed/teacher_tokens_v20.parquet": "f0f4c86669f4695847d8990014cb4710f7670539186d87b347c19fd0212c449a",
+    "src/jclosure/experiments/teacher_v20.py": "63f0192f38278ccd0b873e44d8ff00d9579bf1b39e0f57cd9728eabbcf6791c6"
+  },
+  "protocol_version": "compact_causal_response_operator_v20_teacher",
+  "reserved_independent_V20_final_opened": false,
+  "responses_already_observed": 0,
+  "role_counts": {
+    "independent_v19_confirmation": 250,
+    "operator_train": 150,
+    "operator_validation": 50,
+    "q_calibration": 20
+  },
+  "schema_version": 29,
+  "state_count": 470,
+  "teacher_path": "results/v20/processed/teacher_tokens_v20.parquet",
+  "teacher_policy": "one_new_V20_clean_greedy_token_per_base_frozen_before_any_q_or_a_response",
+  "teacher_sha256": "f0f4c86669f4695847d8990014cb4710f7670539186d87b347c19fd0212c449a"
+}

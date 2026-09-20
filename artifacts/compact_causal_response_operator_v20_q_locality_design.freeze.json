@@ -1,0 +1,156 @@
+{
+  "action": {
+    "coordinate_index": 5,
+    "direction_index": 9,
+    "proposal_family": "architecture_balanced",
+    "v16_train_median_j_effect_norm": 0.18282173573970795,
+    "v16_train_reliable_fraction": 1.0
+  },
+  "action_alpha": 0.5,
+  "action_matching": {
+    "alpha": 0.5,
+    "coordinate_indices": [
+      5,
+      1,
+      7,
+      20,
+      11,
+      19,
+      17,
+      2
+    ],
+    "development_coordinates": [
+      5,
+      1,
+      7,
+      20
+    ],
+    "heldout_coordinates": [
+      11,
+      19,
+      17,
+      2
+    ],
+    "matched_norm_ratio_max": 1.1,
+    "matched_norm_ratio_min": 0.9,
+    "matched_realized_cosine_min": 0.98,
+    "reliability_gain_max": 1.2,
+    "reliability_gain_min": 0.8,
+    "reliability_min_cosine": 0.95,
+    "signs": [
+      -1,
+      1
+    ]
+  },
+  "alpha_candidates": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "base_freeze_digest": "8726bddd18d48665856ed35caefe4a32b25216ffddd578732b7f34565644069c",
+  "before_operator_response_rows": 0,
+  "before_validation_response_rows": 0,
+  "created_utc": "2026-09-20T16:52:31.769758+00:00",
+  "freeze_digest": "ee262cfc1fd4f85bb9c01cfd125c0faca6f87c4bfd5f52d6792d9507d40b619a",
+  "input_hashes": {
+    "artifacts/compact_causal_response_operator_v20_splits.freeze.json": "fc51d5ad87f92bf85d1ac92832f9f7a4a30788fea60a024073011e8f43f8697c",
+    "artifacts/compact_causal_response_operator_v20_teacher.freeze.json": "7b2a5790e5d49f8c4cbcd134ea624bf6a795fc036f4810b4d2b8cfb8b9c072ad",
+    "artifacts/counterfactual_workspace_v19_q_amendment_2.freeze.json": "054ea5578630d60ed3c75e3f972e6f5caa42ac198383a1a19f7d71b630f08a63",
+    "src/jclosure/experiments/q_locality_v20.py": "f8f1be0439b3dead275adf5cbfeff92300c6c045e42cf0246c37110a893b82b7"
+  },
+  "protocol_version": "compact_causal_response_operator_v20_q_locality_design",
+  "q_names": [
+    "conv_causal1",
+    "conv_arch24_corrected",
+    "joint_causal11",
+    "rec_arch4_amended",
+    "rec_conv_causal1_amended"
+  ],
+  "q_reliability": {
+    "alpha_candidates": [
+      0.5,
+      1.0,
+      0.25
+    ],
+    "candidates": [
+      {
+        "channel": "recurrent",
+        "direction_index": 9,
+        "name": "rec_arch9"
+      },
+      {
+        "channel": "conv",
+        "direction_index": 1,
+        "name": "conv_causal1"
+      },
+      {
+        "channel": "kv",
+        "direction_index": 39,
+        "name": "kv_finite39"
+      },
+      {
+        "channel": "rec_conv",
+        "direction_index": 24,
+        "name": "rec_conv_arch24"
+      },
+      {
+        "channel": "joint",
+        "direction_index": 11,
+        "name": "joint_causal11"
+      },
+      {
+        "channel": "joint",
+        "direction_index": 4,
+        "name": "joint_arch4"
+      },
+      {
+        "channel": "joint",
+        "direction_index": 2,
+        "name": "joint_random2"
+      },
+      {
+        "channel": "recurrent",
+        "direction_index": 7,
+        "name": "rec_random7_weak_control"
+      }
+    ],
+    "min_raw_state_delta_norm": 1e-06,
+    "min_survival_fraction": 0.01,
+    "natural_active_min_fraction": 0.5,
+    "natural_active_ratio_min": 0.1,
+    "reliability_gain_max": 1.2,
+    "reliability_gain_min": 0.8,
+    "reliability_min_cosine": 0.95
+  },
+  "schema_version": 29,
+  "teacher_sha256": "f0f4c86669f4695847d8990014cb4710f7670539186d87b347c19fd0212c449a",
+  "train_calibration_states": 20,
+  "validation_id_sha256": "68cc490350edcaeb5bcc42c108dc7e24581ddd58015f4d55c53787f9002146e9",
+  "validation_ids": [
+    "v13-validation-boolean_logic-4dc8b5b7e915de0b3b49",
+    "v13-validation-boolean_logic-80037509bf4ae5e53984",
+    "v13-validation-boolean_logic-d36c2b752faa3f0dc465",
+    "v13-validation-boolean_logic-acfb885884320bdd53a3",
+    "v13-validation-boolean_logic-1c37507df05a1e326c5c",
+    "v13-validation-modular_arithmetic-4a3ba98192d85bfe95fe",
+    "v13-validation-modular_arithmetic-72f8c0e461b189b46f35",
+    "v13-validation-modular_arithmetic-1e43c5c59aa0b3740cd6",
+    "v13-validation-modular_arithmetic-ecd0a2fd49b9c5bed517",
+    "v13-validation-modular_arithmetic-84b2113610d2a33a85b3",
+    "v13-validation-short_graph_traversal-81db9c9db9e888bb7d3c",
+    "v13-validation-short_graph_traversal-4293e49d81115f8540a4",
+    "v13-validation-short_graph_traversal-2bc42f0ccd2ecb6c9fe5",
+    "v13-validation-short_graph_traversal-7c24a9f305e9e2a5e1f6",
+    "v13-validation-short_graph_traversal-0ffb0b93db7fa39624bb",
+    "v13-validation-simple_state_transition-af8d4c68996410a24234",
+    "v13-validation-simple_state_transition-8e3cc7c9e3335aea6950",
+    "v13-validation-simple_state_transition-1c588d89eb989aa6553d",
+    "v13-validation-simple_state_transition-fb5ffd665117db451714",
+    "v13-validation-simple_state_transition-269eb8dcc353969b4975",
+    "v13-validation-variable_binding-86799fb58cae14c1c6a6",
+    "v13-validation-variable_binding-bb9447dc7a5006604ddd",
+    "v13-validation-variable_binding-92e9ebe1d473eaa8863b",
+    "v13-validation-variable_binding-3b3e870d5c5b35d06865",
+    "v13-validation-variable_binding-8f2205dc578229413700"
+  ]
+}

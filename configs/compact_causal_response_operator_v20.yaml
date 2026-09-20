@@ -1,0 +1,88 @@
+name: Compact Causal Response Operator State
+protocol_version: compact_causal_response_operator_v20
+parent_commit: 3cefc7c61429770eeef7fd6544adf4b9b17a1de5
+source:
+  prompt_bank: data/v13/causal_bank_selected.json
+  V19_four_way: results/v19/processed/factorial_summary_validation_v19.json
+  persistent_directions: artifacts/causal/v13/probe_directions_v13.pt
+roles:
+  families: [boolean_logic, modular_arithmetic, short_graph_traversal, simple_state_transition, variable_binding]
+  seed: 20260921
+  independent_V19_confirmation_per_family: 50
+  q_calibration_per_family: 4
+  operator_train_per_family: 30
+  operator_validation_per_family: 10
+  independent_V20_final_status: unopened_until_frozen_eligible_encoder
+V19_confirmation:
+  q_names: [conv_causal1, conv_arch24_corrected, joint_causal11, joint_random2, rec_random7_weak_control, rec_arch4_amended, kv_arch14_amended, rec_conv_causal1_amended]
+  active_q_names: [conv_causal1, conv_arch24_corrected, joint_causal11, rec_arch4_amended, rec_conv_causal1_amended]
+  action_coordinates: [5, 1, 7, 20]
+  action_signs: [-1, 1]
+  action_alpha: 0.5
+  horizon: 1
+  bootstrap_replicates: 1000
+  bootstrap_seed: 2020
+  dependence_median_min: 0.10
+  dependence_ci_lower_min: 0.02
+  natural_to_action_ratio_min: 0.10
+  matched_action_rate_min: 0.80
+q_locality:
+  names: [conv_causal1, conv_arch24_corrected, joint_causal11, rec_arch4_amended, rec_conv_causal1_amended]
+  candidate_alpha: [0.25, 0.5, 1.0]
+  reliable_fraction_min: 0.80
+  state_cosine_min: 0.95
+  state_gain_min: 0.8
+  state_gain_max: 1.2
+  action_coordinate: 5
+  validation_states_per_family: 5
+action_bank:
+  source: artifacts/nonlinear_finite_causal_action_v16_splits.freeze.json
+  selected_coordinates: [0, 1, 2, 5, 6, 7, 8, 11, 12, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 26, 27, 28, 30, 31]
+  train_coordinates: [0, 5, 15, 1, 6, 11, 2, 7, 12, 27, 8, 14]
+  validation_coordinates: [20, 16, 21, 17, 18, 19]
+  final_heldout_coordinates: [30, 26, 31, 22, 28, 24]
+  random_alpha_one_coordinates: [8, 18, 28]
+  default_alpha: 0.5
+  random_alpha: 1.0
+  signs_measured: [-1, 1]
+  decoder_train_sign: 1
+  decoder_train_scale: 1.0
+  diagnostic_scale_multiplier: 2.0
+  reliability_min_cosine: 0.95
+  reliability_gain_min: 0.8
+  reliability_gain_max: 1.2
+  min_train_reliable_fraction: 1.0
+  direction_count_target: 32
+  direction_count_minimum: 16
+operator_bank:
+  q_names: [conv_causal1, rec_arch4_amended, joint_causal11]
+  states_per_base: 4
+  horizon: 1
+  target: v16_normalized_stack_288
+  normalization: v16_frozen_target_scales
+  inference_actions: train_coordinates_positive_base_scale_only
+  action_descriptor: full_raw_direction_cosines_to_frozen_train_anchors_plus_channel_norms
+  final_action_response_policy: unobserved_until_operator_model_freeze
+  source_state_bank: v13_train_validation_disjoint_from_v18_v19_roles
+operator_analysis:
+  dimensions: [2, 4, 8, 16, 32, 64, 128]
+  models: [response_svd, reduced_rank_regression, tucker_factorization, bilinear_latent_operator, small_nonlinear_latent_operator]
+  ridge_lambda: 1.0
+  target_epsilon: 0.00000001
+  bootstrap_unit: base_state
+  bootstrap_replicates: 1000
+  bootstrap_seed: 2021
+  heldout_cosine_min: 0.90
+  heldout_relative_l2_max: 0.30
+  heldout_norm_ratio_min: 0.8
+  heldout_norm_ratio_max: 1.2
+  family_relative_l2_max: 0.35
+  raw_incremental_gain_margin: 0.02
+  require_direction_sign_scale_family: true
+  composition_pairs: [[20, 16], [21, 17]]
+  geometry_spectrum_rank_threshold: 0.95
+independent_final:
+  open_only_after_frozen_encoder_and_conditional_sufficiency: true
+  do_not_reuse_V19_validation: true
+V21_DYNAMIC_STATE_SEARCH_AUTHORIZED: false
+AUTONOMOUS_STATE_MODEL_AUTHORIZED: false

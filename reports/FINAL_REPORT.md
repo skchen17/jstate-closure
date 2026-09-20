@@ -636,3 +636,21 @@ H2 remains. H3 candidate state and autonomous state-model training are not autho
 
 Formal development outcome: **V19-B — CURRENT_J_IS_NOT_SUFFICIENT_FOR_TESTED_FINITE_ACTION_RESPONSE_CONTEXT (development)**. Active boundary-held-J q states and matched finite probe actions were crossed on 400 train/100 validation base states (five families); primary h1 M/R 0.7899, state-bootstrap CI [0.7577, 0.8097], natural N/R0 1.3284. Matched actuator rate 1.0000. h1 raw-context gain natural/action -0.0018/0.0133. C_response/C_dynamics search authorized: True/False; restricted C_response search ran with selected k=128. Independent final: UNOPENED_NO_ELIGIBLE_FINALIST_AFTER_RESTRICTED_COMPACT_SEARCH. H2 remains; H3 and autonomous state-model training are not authorized. No complete state or absolute replacement claim. See `reports/V19_COMPLETE_REPORT.md` for all standalone reports and integrity index.
 <!-- V19_END -->
+
+<!-- V20_START -->
+## V20 — Compact Causal Response Operator State
+
+Independent V19-B confirmation passed on **250** disjoint base states: same J, distinct P, matched finite action, M/R **0.7862** (95% state-bootstrap CI **[0.7782, 0.7931]**). At smaller reliable αq=0.25, all five selected active q retained nonzero descriptive modulation.
+
+The crossed V20 response bank contains **150 training** and **50 validation** base states, each with natural P0 plus three same-J Pq states, crossed with **18** shared measured directions and both signs; **6** final directions remain sealed. The train-action oracle fingerprint is `Φ_train(P)=[R_P(a1),…,R_P(a12)]`, with 288-D normalized response per action. Five models × k=2–128 were tested; best validation diagnostic model `bilinear_latent_operator` at k=128 had unseen-direction stack relative L2 **0.9273**, unseen-sign **1.0056**. The full frozen direction/sign/scale/composition gate did **not** pass; `k_operator_min` is **not identified**.
+
+Finite operator pair geometry: median principal angle **37.4441°**, gain Pq/P0 **1.0399**, r95 change **0.0000**. Operational same-J workspace-state aliasing observed: **True**. Historical V13 JVP rank is not a paired V20 subspace test.
+
+Formal result: **V20-D_NO_COMPACT_OPERATOR_DIMENSION_IDENTIFIED**. Raw P→C encoder, conditional raw-gain equivalence, channel encoder audit and independent V20 final were **not eligible / unopened**, not passed or failed empirical tests. `V21_DYNAMIC_STATE_SEARCH_AUTHORIZED = FALSE`; H2 remains; H3 and autonomous training remain unauthorized. No physical cache replacement is licensed.
+
+Protocol digest `8726bddd18d48665856ed35caefe4a32b25216ffddd578732b7f34565644069c`; action hashes `{"final_heldout": "cbfa6ce7c46aa4c400260c5a6fede1ea47999046e51d940f30db20e92b310aa2", "train": "af8cc82763286b93496d38a2401283e4fa9a5cb0e2c8524afb879d3f03bbb6c2", "validation": "9495edef649915c5bd58930f58f8d3960929661c1abcff20580d7af7686b8192"}`; V20 processed integrity index `results/v20/processed/v20_integrity_index.json`. See `reports/V20_COMPLETE_REPORT.md` for every standalone report in one file.
+
+Append-only adjudication clarification: a separate frozen nonlinear k=128 model reached seen-direction/new-state relative L2 **0.2337** but failed unseen directions at **1.3318**. Thus **V20-C_ACTION_SPECIFIC_OPERATOR_ENCODING_ONLY** is a secondary descriptive finding, while the primary formal outcome remains V20-D. This correction is recorded in `results/v20/processed/v20_adjudication_amendment_1.json` with freeze digest `ed58a8a8314daa9bd6b2358b0a7565f48305a4a3440b66a8268a8d30d512dffc`; no data, model, threshold or gate was changed.
+
+Test audit: 228 passed, 2 legacy cumulative-report hash tests failed (V14/V16); all six V20 tests passed. These old expectations already differed from the V19 parent commit, and the frozen old manifests were not modified. See `results/v20/processed/v20_test_audit.json`.
+<!-- V20_END -->

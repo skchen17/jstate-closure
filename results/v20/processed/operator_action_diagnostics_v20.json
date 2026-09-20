@@ -1,0 +1,192 @@
+{
+  "by_spec": {
+    "unseen_dense_0_1_2_20_21": {
+      "action_reliable_rate": 1.0,
+      "components": [
+        [
+          0,
+          0.5
+        ],
+        [
+          1,
+          0.5
+        ],
+        [
+          2,
+          0.5
+        ],
+        [
+          20,
+          0.5
+        ],
+        [
+          21,
+          0.5
+        ]
+      ],
+      "kind": "unseen_dense",
+      "matched_vs_P0_rate": 1.0,
+      "metrics": {
+        "base_states": 10,
+        "family_stack_relative_l2": {
+          "boolean_logic": 0.8219933148205956,
+          "modular_arithmetic": 0.8602220468537765,
+          "short_graph_traversal": 0.7951292660155967,
+          "simple_state_transition": 0.8240081642211123,
+          "variable_binding": 0.8316175184310894
+        },
+        "j_cosine_median": 0.30335009077438313,
+        "j_norm_ratio_median": 0.21241873853086052,
+        "j_relative_l2": 0.9303406573411036,
+        "rows": 40,
+        "stack_cosine_median": 0.712731553049587,
+        "stack_norm_ratio_median": 0.2524717629579132,
+        "stack_relative_l2": 0.8256690889339978
+      },
+      "q_reliable_rate": 1.0
+    },
+    "unseen_pair_20_16": {
+      "action_reliable_rate": 1.0,
+      "components": [
+        [
+          20,
+          1.0
+        ],
+        [
+          16,
+          1.0
+        ]
+      ],
+      "kind": "unseen_pair",
+      "matched_vs_P0_rate": 1.0,
+      "metrics": {
+        "base_states": 10,
+        "family_stack_relative_l2": {
+          "boolean_logic": 0.8264611234308655,
+          "modular_arithmetic": 0.895705837337736,
+          "short_graph_traversal": 0.8220023442538887,
+          "simple_state_transition": 0.8539943084646641,
+          "variable_binding": 0.8592399554254975
+        },
+        "j_cosine_median": 0.5014405599472971,
+        "j_norm_ratio_median": 0.197654871874679,
+        "j_relative_l2": 0.9143086215142403,
+        "rows": 40,
+        "stack_cosine_median": 0.7137725763068524,
+        "stack_norm_ratio_median": 0.1958897554834398,
+        "stack_relative_l2": 0.8486955812636776
+      },
+      "q_reliable_rate": 1.0
+    },
+    "unseen_pair_21_17": {
+      "action_reliable_rate": 1.0,
+      "components": [
+        [
+          21,
+          1.0
+        ],
+        [
+          17,
+          1.0
+        ]
+      ],
+      "kind": "unseen_pair",
+      "matched_vs_P0_rate": 1.0,
+      "metrics": {
+        "base_states": 10,
+        "family_stack_relative_l2": {
+          "boolean_logic": 0.9188646180712621,
+          "modular_arithmetic": 1.0432064661373757,
+          "short_graph_traversal": 0.9829512055507708,
+          "simple_state_transition": 1.0095547345236866,
+          "variable_binding": 1.0903423416100524
+        },
+        "j_cosine_median": -0.3128300740734242,
+        "j_norm_ratio_median": 0.3239328460901132,
+        "j_relative_l2": 1.1256239483502697,
+        "rows": 40,
+        "stack_cosine_median": 0.11530317662675717,
+        "stack_norm_ratio_median": 0.33790406396988326,
+        "stack_relative_l2": 1.0011327297831667
+      },
+      "q_reliable_rate": 1.0
+    },
+    "unseen_scale_train_0": {
+      "action_reliable_rate": 1.0,
+      "components": [
+        [
+          0,
+          2.0
+        ]
+      ],
+      "kind": "unseen_amplitude_train",
+      "matched_vs_P0_rate": 1.0,
+      "metrics": {
+        "base_states": 10,
+        "family_stack_relative_l2": {
+          "boolean_logic": 0.8318519658793878,
+          "modular_arithmetic": 0.8545555843548304,
+          "short_graph_traversal": 0.8222512136856347,
+          "simple_state_transition": 0.827915924124553,
+          "variable_binding": 0.8389394012907118
+        },
+        "j_cosine_median": 0.858881565849686,
+        "j_norm_ratio_median": 0.21193717812396068,
+        "j_relative_l2": 0.8074524706884464,
+        "rows": 40,
+        "stack_cosine_median": 0.9578447748433248,
+        "stack_norm_ratio_median": 0.17555296891234007,
+        "stack_relative_l2": 0.8354054215636928
+      },
+      "q_reliable_rate": 1.0
+    },
+    "unseen_scale_validation_20": {
+      "action_reliable_rate": 1.0,
+      "components": [
+        [
+          20,
+          2.0
+        ]
+      ],
+      "kind": "unseen_amplitude_validation",
+      "matched_vs_P0_rate": 1.0,
+      "metrics": {
+        "base_states": 10,
+        "family_stack_relative_l2": {
+          "boolean_logic": 0.8628891341855177,
+          "modular_arithmetic": 0.9275288340007096,
+          "short_graph_traversal": 0.8650767198313797,
+          "simple_state_transition": 0.8867113694772819,
+          "variable_binding": 0.9156219408785388
+        },
+        "j_cosine_median": 0.5241064803154312,
+        "j_norm_ratio_median": 0.19085680696314344,
+        "j_relative_l2": 0.9248156012117736,
+        "rows": 40,
+        "stack_cosine_median": 0.6671350532337887,
+        "stack_norm_ratio_median": 0.13911921042111489,
+        "stack_relative_l2": 0.8901005315381246
+      },
+      "q_reliable_rate": 1.0
+    }
+  },
+  "composition_interaction": {
+    "unseen_pair_20_16": {
+      "relative_additivity_residual_median": 0.28480471670627594
+    },
+    "unseen_pair_21_17": {
+      "relative_additivity_residual_median": 0.18583906441926956
+    }
+  },
+  "design_digest": "5543340e77d3b1cd2588d75eb93f6b42bff7e08cd1f6df12762b228225724261",
+  "diagnostic_base_states": 10,
+  "diagnostic_operator_states": 40,
+  "final_heldout_action_directions_opened": false,
+  "final_operator_gate": false,
+  "independent_V20_final_opened": false,
+  "k_operator_min": null,
+  "preliminary_cross_action_gate": false,
+  "selected_k": 128,
+  "selected_model": "bilinear_latent_operator",
+  "unseen_scale_composition_gate": false
+}

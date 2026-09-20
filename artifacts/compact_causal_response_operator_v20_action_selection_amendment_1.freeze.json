@@ -1,0 +1,24 @@
+{
+  "action_directions_changed": false,
+  "base_freeze_digest": "8726bddd18d48665856ed35caefe4a32b25216ffddd578732b7f34565644069c",
+  "coordinate_28_V16_reliable": 198,
+  "coordinate_28_V16_total": 200,
+  "created_utc": "2026-09-20T16:51:31.671934+00:00",
+  "freeze_digest": "a30a757bf7c2bc3528ef9a81824625ec319a3d7feee636c463844c63def2952b",
+  "input_hashes": {
+    "artifacts/compact_causal_response_operator_v20_splits.freeze.json": "fc51d5ad87f92bf85d1ac92832f9f7a4a30788fea60a024073011e8f43f8697c",
+    "results/v16/processed/finite_action_bank_v16.parquet": "680c01ed70c44a96bb46e8429eebee1e2ec3f6ebe5cecb6676ea114fd3025eef",
+    "src/jclosure/experiments/actions_v20.py": "34c6ae3a853222e9b67275222a7cbe04ebdc4c35936139a22798478047d34ee9"
+  },
+  "new_train_reliable_fraction_min": 0.99,
+  "old_train_reliable_fraction_min": 1.0,
+  "protocol_version": "compact_causal_response_operator_v20_action_selection_amendment_1",
+  "responses_already_observed": {
+    "V20_operator_action_rows": 0,
+    "V20_operator_states": 0,
+    "independent_V19_confirmation_states": 250
+  },
+  "schema_version": 29,
+  "state_splits_changed": false,
+  "why": "The intended third random control (coordinate 28) was 198/200 reliable, not 200/200, in frozen V16 train calibration; use a pre-operator 0.99 minimum and retain row-level actuator failures in denominators."
+}

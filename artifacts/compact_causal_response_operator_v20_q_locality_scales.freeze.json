@@ -1,0 +1,197 @@
+{
+  "allowed_scales": {
+    "conv_arch24_corrected": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "conv_causal1": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "joint_causal11": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "rec_arch4_amended": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "rec_conv_causal1_amended": [
+      0.25,
+      0.5,
+      1.0
+    ]
+  },
+  "base_freeze_digest": "8726bddd18d48665856ed35caefe4a32b25216ffddd578732b7f34565644069c",
+  "by_q_scale": [
+    {
+      "alpha": 0.25,
+      "median_M_R": 0.3975793548025591,
+      "median_M_per_q_norm": 0.010320810968261679,
+      "median_N_R": 0.23963647953425554,
+      "median_operator_angle_degrees": 23.171367125347576,
+      "q_name": "conv_causal1",
+      "reliable_matched_fraction": 1.0,
+      "states": 20
+    },
+    {
+      "alpha": 0.5,
+      "median_M_R": 0.7149534004064659,
+      "median_M_per_q_norm": 0.009731409962412146,
+      "median_N_R": 0.4406219829438242,
+      "median_operator_angle_degrees": 45.31208500557947,
+      "q_name": "conv_causal1",
+      "reliable_matched_fraction": 1.0,
+      "states": 20
+    },
+    {
+      "alpha": 1.0,
+      "median_M_R": 1.3220430624400308,
+      "median_M_per_q_norm": 0.009167909494109528,
+      "median_N_R": 0.855294806818848,
+      "median_operator_angle_degrees": 101.7644743794979,
+      "q_name": "conv_causal1",
+      "reliable_matched_fraction": 1.0,
+      "states": 20
+    },
+    {
+      "alpha": 0.25,
+      "median_M_R": 0.46046881508108173,
+      "median_M_per_q_norm": 0.010436105187497225,
+      "median_N_R": 0.49003003264087247,
+      "median_operator_angle_degrees": 27.410285756656627,
+      "q_name": "conv_arch24_corrected",
+      "reliable_matched_fraction": 1.0,
+      "states": 20
+    },
+    {
+      "alpha": 0.5,
+      "median_M_R": 0.6608888326868405,
+      "median_M_per_q_norm": 0.00795528584205772,
+      "median_N_R": 0.7618311830643438,
+      "median_operator_angle_degrees": 39.33814841714453,
+      "q_name": "conv_arch24_corrected",
+      "reliable_matched_fraction": 1.0,
+      "states": 20
+    },
+    {
+      "alpha": 1.0,
+      "median_M_R": 0.9226447530805661,
+      "median_M_per_q_norm": 0.006028046061502956,
+      "median_N_R": 1.602692376707324,
+      "median_operator_angle_degrees": 58.09039911529257,
+      "q_name": "conv_arch24_corrected",
+      "reliable_matched_fraction": 1.0,
+      "states": 20
+    },
+    {
+      "alpha": 0.25,
+      "median_M_R": 0.21329647420748643,
+      "median_M_per_q_norm": 0.012524845680220102,
+      "median_N_R": 0.19189522469074882,
+      "median_operator_angle_degrees": 11.655296040793335,
+      "q_name": "joint_causal11",
+      "reliable_matched_fraction": 1.0,
+      "states": 20
+    },
+    {
+      "alpha": 0.5,
+      "median_M_R": 0.3507989973535351,
+      "median_M_per_q_norm": 0.010783648844489476,
+      "median_N_R": 0.32424847182558403,
+      "median_operator_angle_degrees": 19.934526305952105,
+      "q_name": "joint_causal11",
+      "reliable_matched_fraction": 1.0,
+      "states": 20
+    },
+    {
+      "alpha": 1.0,
+      "median_M_R": 0.5533442256945853,
+      "median_M_per_q_norm": 0.008312910186848085,
+      "median_N_R": 0.6409073768321357,
+      "median_operator_angle_degrees": 32.7832402469202,
+      "q_name": "joint_causal11",
+      "reliable_matched_fraction": 1.0,
+      "states": 20
+    },
+    {
+      "alpha": 0.25,
+      "median_M_R": 0.3016819144430948,
+      "median_M_per_q_norm": 0.10674271462083758,
+      "median_N_R": 0.25515477228497063,
+      "median_operator_angle_degrees": 17.496346036066885,
+      "q_name": "rec_arch4_amended",
+      "reliable_matched_fraction": 1.0,
+      "states": 20
+    },
+    {
+      "alpha": 0.5,
+      "median_M_R": 0.45039912262197446,
+      "median_M_per_q_norm": 0.09052333928655534,
+      "median_N_R": 0.47788113591284853,
+      "median_operator_angle_degrees": 25.337851479593088,
+      "q_name": "rec_arch4_amended",
+      "reliable_matched_fraction": 1.0,
+      "states": 20
+    },
+    {
+      "alpha": 1.0,
+      "median_M_R": 0.6740221519875316,
+      "median_M_per_q_norm": 0.06610200429049716,
+      "median_N_R": 0.8790864626640159,
+      "median_operator_angle_degrees": 40.85842671056378,
+      "q_name": "rec_arch4_amended",
+      "reliable_matched_fraction": 1.0,
+      "states": 20
+    },
+    {
+      "alpha": 0.25,
+      "median_M_R": 0.41018176562590986,
+      "median_M_per_q_norm": 0.011545849401848374,
+      "median_N_R": 0.28205818437336155,
+      "median_operator_angle_degrees": 24.187889431290664,
+      "q_name": "rec_conv_causal1_amended",
+      "reliable_matched_fraction": 1.0,
+      "states": 20
+    },
+    {
+      "alpha": 0.5,
+      "median_M_R": 0.7678226848605373,
+      "median_M_per_q_norm": 0.010095881088055963,
+      "median_N_R": 0.6298129382522946,
+      "median_operator_angle_degrees": 48.36523140689311,
+      "q_name": "rec_conv_causal1_amended",
+      "reliable_matched_fraction": 1.0,
+      "states": 20
+    },
+    {
+      "alpha": 1.0,
+      "median_M_R": 1.4224362455541733,
+      "median_M_per_q_norm": 0.010243127397070534,
+      "median_N_R": 1.362903903528438,
+      "median_operator_angle_degrees": 97.35308959012215,
+      "q_name": "rec_conv_causal1_amended",
+      "reliable_matched_fraction": 1.0,
+      "states": 20
+    }
+  ],
+  "calibration_path": "results/v20/processed/q_locality_calibration_v20.parquet",
+  "calibration_rows": 300,
+  "calibration_sha256": "893ead617c0d93ee0036e7b547f0b21a391b29ed34597a9231789f55de18647b",
+  "calibration_states": 20,
+  "created_utc": "2026-09-20T16:55:05.724811+00:00",
+  "freeze_digest": "b80e50e7f8c2bdccb47173203e4c086dd911d3b325e0b61c73982bf271f0f37f",
+  "independent_V20_final_opened": false,
+  "input_hashes": {
+    "artifacts/compact_causal_response_operator_v20_q_locality_design.freeze.json": "156fc8bd6369b806c143ff8a17fbe2b7d4f11314ee8d7e01088792176f8bb047",
+    "results/v20/processed/q_locality_calibration_v20.parquet": "893ead617c0d93ee0036e7b547f0b21a391b29ed34597a9231789f55de18647b",
+    "src/jclosure/experiments/q_locality_v20.py": "f8f1be0439b3dead275adf5cbfeff92300c6c045e42cf0246c37110a893b82b7"
+  },
+  "operator_validation_responses_already_observed": 0,
+  "protocol_version": "compact_causal_response_operator_v20_q_locality_scales",
+  "schema_version": 29
+}

@@ -1,0 +1,26 @@
+{
+  "append_only_amendments": {
+    "rank_dimension_clamp": "b60f2ece5619ace24da1297b246ce2eb73c193cbff58fe13ccbc2f7569ebba93",
+    "strict_four_branch_estimand": "0236f6e4735091c1cb35c799b30d1e3ae218c76c0924167f1a2605aa039d0f72",
+    "zero_response_rank": "8be5b300f21c4c6aedc9fd814f349198e796a8d14ef236015af96e97bf5f47a2"
+  },
+  "commands": [
+    "PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.protocol_v25 freeze",
+    "PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.design_v25",
+    "CUDA_VISIBLE_DEVICES=1 PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.component_basis_v25",
+    "CUDA_VISIBLE_DEVICES=0 PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.rank_convergence_v25",
+    "PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.rank_convergence_amendment_v25",
+    "CUDA_VISIBLE_DEVICES=1 PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.interaction_v25",
+    "CUDA_VISIBLE_DEVICES=1 PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.interaction_estimand_amendment_v25",
+    "PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.analyze_v25",
+    "PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.zero_rank_amendment_v25",
+    "PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.adjudicate_v25",
+    "PYTHONPATH=src /home/user/anaconda3/bin/python -m pytest tests/test_v25_distributed_interaction.py -q",
+    "PYTHONPATH=src /home/user/anaconda3/bin/python -m pytest -q",
+    "PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.reporting_v25 --v25-tests '6 passed' --full-tests '256 passed, 2 inherited failures'",
+    "git commit -m 'Complete V25 distributed causal interaction study'",
+    "git push origin main"
+  ],
+  "full_suite": "256 passed, 2 failed, 3 warnings in 77.35s (inherited V14/V16 FINAL_REPORT hash checks)",
+  "v25_tests": "6 passed in 5.89s"
+}

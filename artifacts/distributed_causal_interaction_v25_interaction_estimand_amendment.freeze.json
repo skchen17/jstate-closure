@@ -1,0 +1,58 @@
+{
+  "CAUSAL_CANCELLATION_SUPPORTED": true,
+  "STRONG_DISTRIBUTED_NONLINEAR_INTERACTION": false,
+  "Y11_vs_persistent_cosine_median": 0.9778714261019021,
+  "Y11_vs_persistent_relative_l2_median": 0.20920677061230508,
+  "additive_relative_l2_median": 0.34098546916286077,
+  "base_freeze_digest": "1889c4d8b1534302a241b2082fec2b243483b454ee9bc01b9749acfacfd8b8ad",
+  "bootstrap_2_5_lower": 0.31960197860196526,
+  "broad_interaction_ratio_median": 0.34098546916286077,
+  "cancellation_index_median": 0.2579738237072555,
+  "component_cosine_median": 0.07550741551994328,
+  "corrected_audit_sha256": "42020aba04d23750692bb32d6f6eaa5012cda12b79b3703cd39d699bfe9ca195",
+  "corrected_branch_sha256": "13082242c1f0056b35e7e872a60a3a8af6b89a01ca16c8320223093ff0aafa85",
+  "corrected_vectors_sha256": "d975dbb7d9de750e645d0de98f961426d007be064b009eb9c423555d36c6f837",
+  "created_utc": "2026-09-21T14:46:54.183313+00:00",
+  "estimand": "Y00=clean; Y10=clean+B; Y01=clean+C; Y11=clean+(B+C)",
+  "family_medians": {
+    "boolean_logic": 0.28033146568661627,
+    "modular_arithmetic": 0.3604488932007479,
+    "short_graph_traversal": 0.3320375055769279,
+    "simple_state_transition": 0.3421027375562737,
+    "variable_binding": 0.3485448361542476
+  },
+  "freeze_digest": "0236f6e4735091c1cb35c799b30d1e3ae218c76c0924167f1a2605aa039d0f72",
+  "historical_final_opened": false,
+  "input_sha256": {
+    "artifacts/distributed_causal_interaction_v25_interaction.freeze.json": "213f20eb4ca2223dff3f55d032e01acc7d9563b400c4a57a781a91ea81ef22fc",
+    "results/v25/processed/corrected_interaction_vectors_v25.npz": "d975dbb7d9de750e645d0de98f961426d007be064b009eb9c423555d36c6f837",
+    "results/v25/processed/corrected_interaction_writeback_audit_v25.parquet": "42020aba04d23750692bb32d6f6eaa5012cda12b79b3703cd39d699bfe9ca195",
+    "results/v25/processed/distributed_interaction_corrected_v25.parquet": "13082242c1f0056b35e7e872a60a3a8af6b89a01ca16c8320223093ff0aafa85",
+    "results/v25/processed/interaction_estimand_amendment_v25.json": "2d2b0363d801711feec640ed2ea15cdaf3d888963d8cebfda79cd24d9a83a2b4",
+    "src/jclosure/experiments/interaction_estimand_amendment_v25.py": "92b8f72b39819b3544fea5ca093a553d4c5a1a878928de9ac4df09431e506241"
+  },
+  "interaction_cosine_median": -0.01322177040451555,
+  "original_interaction_records_overwritten": false,
+  "protocol_version": "distributed_causal_interaction_v25_interaction_estimand_amendment",
+  "rows": 160,
+  "schema_version": 34,
+  "v25_independent_final_opened": false,
+  "writeback": {
+    "branch_median_cosine": {
+      "Y01_C": 0.9897080948470243,
+      "Y10_B": 0.9282920368569547,
+      "Y11_BC": 0.999999991055281
+    },
+    "branch_median_gain": {
+      "Y01_C": 1.0088317476898068,
+      "Y10_B": 1.0296829686106224,
+      "Y11_BC": 1.0
+    },
+    "branch_min_cosine": {
+      "Y01_C": 0.9763511461280625,
+      "Y10_B": 0.6336383886857546,
+      "Y11_BC": 0.9999998297255239
+    },
+    "numerical_gate_pass": false
+  }
+}

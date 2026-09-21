@@ -1,0 +1,28 @@
+{
+  "ambient_dimension": 256,
+  "base_freeze_digest": "1889c4d8b1534302a241b2082fec2b243483b454ee9bc01b9749acfacfd8b8ad",
+  "corrected_convergence_sha256": "24369723d2f53175a4351821fc480e7f5a8d07bae47d225b21e26480fe72ee0a",
+  "corrected_mapping_sha256": "4c50011e1757203ad8e1b8aeb67904370cacf422b5062cd88b247617152d5df2",
+  "corrections": {
+    "centered_r90": 24,
+    "centered_r95": 24,
+    "centered_r99": 24
+  },
+  "created_utc": "2026-09-21T14:45:54.125490+00:00",
+  "early_r95": 256,
+  "freeze_digest": "b60f2ece5619ace24da1297b246ce2eb73c193cbff58fe13ccbc2f7569ebba93",
+  "historical_final_opened": false,
+  "input_sha256": {
+    "artifacts/distributed_causal_interaction_v25_rank_convergence.freeze.json": "c86725e41388032cc71279347e8e89f4ce97edd6deb26b0d1b11b6f0a617cd65",
+    "results/v25/processed/layerwise_causal_convergence_corrected_v25.parquet": "24369723d2f53175a4351821fc480e7f5a8d07bae47d225b21e26480fe72ee0a",
+    "results/v25/processed/many_to_one_mapping_corrected_v25.json": "4c50011e1757203ad8e1b8aeb67904370cacf422b5062cd88b247617152d5df2",
+    "results/v25/processed/rank_convergence_amendment_v25.json": "81698119722f766a4e644758c811a54729decf97017b28e38cc07e00a3a14354",
+    "src/jclosure/experiments/rank_convergence_amendment_v25.py": "4dff2c5637ffb1c9f1e0ed107db13eb17cfa7c934a8e412f8e6df7f4fc192215"
+  },
+  "late_r95": 99,
+  "original_records_overwritten": false,
+  "protocol_version": "distributed_causal_interaction_v25_rank_convergence_amendment",
+  "reason": "floating cumulative energy ended infinitesimally below one; searchsorted returned dimension+1",
+  "schema_version": 34,
+  "v25_independent_final_opened": false
+}

@@ -1,0 +1,27 @@
+{
+  "base_freeze_digest": "1889c4d8b1534302a241b2082fec2b243483b454ee9bc01b9749acfacfd8b8ad",
+  "basis_actions": 32,
+  "basis_rows": 640,
+  "basis_sha256": "563e6514efce0c86b6b5dc7615323453d6d0ab15f0a00c471e04f4fb156133d3",
+  "basis_states": 20,
+  "candidate_layer": 31,
+  "causal_basis_dimension": 256,
+  "component_split": {
+    "B1": "causal modes 1..24",
+    "B2": "causal modes 25..48",
+    "B3": "orthogonal remainder of each realized effect"
+  },
+  "created_utc": "2026-09-21T14:33:45.195232+00:00",
+  "freeze_digest": "204b6e88d6b90d2aa75af953f656d0861d3d33202e2072548bb1aa8dd0fb3144",
+  "historical_final_opened": false,
+  "input_sha256": {
+    "artifacts/distributed_causal_interaction_v25_design.freeze.json": "e084ada2fffff8f07b6d18726f9c070ff5a968dc7e3b6fe37446d7cd32de0ab6",
+    "results/v25/processed/component_basis_v25.json": "bc5bac14e0117142e1879576aec91a365125fa81fe1322d136aae67dd783237d",
+    "results/v25/processed/distributed_component_bases_v25.npz": "563e6514efce0c86b6b5dc7615323453d6d0ab15f0a00c471e04f4fb156133d3",
+    "src/jclosure/experiments/component_basis_v25.py": "c333a5c8405d31dbe3d3b6de414ae49a4b3e06924d70e44c4078874d832b2524"
+  },
+  "protocol_version": "distributed_causal_interaction_v25_component_basis",
+  "schema_version": 34,
+  "v25_independent_final_opened": false,
+  "variance_observed_dimension": 19
+}

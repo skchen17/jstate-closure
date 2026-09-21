@@ -1,0 +1,83 @@
+{
+  "background": {
+    "BACKGROUND_CONDITIONED_CAUSAL_EFFECT": false,
+    "conditional_norm_ratio_std_median": 0.1195727410220604,
+    "fidelity_drop_median": 0.26568373683723345,
+    "non_native_cosine_median": 0.7343162631627665
+  },
+  "background_sha256": "fe6992f9a67e3213a86b85ec067487a22b8211938972aef50cd4a6217275087c",
+  "branch_sha256": "4b0690e739718d78bdd610918af534dc1bcc461fb10252233d94153f7e950906",
+  "cancellation": {
+    "CAUSAL_CANCELLATION_SUPPORTED": true,
+    "component_cosine_median": 0.07550741551994328,
+    "index_median": 0.2300756673788353
+  },
+  "candidate_k": 24,
+  "candidate_layer": 31,
+  "channel_sha256": "48bfbf6e1b0c3165fbce531b44f1cc73f1a770bb1dd5e501ec4185513e4a3f55",
+  "clean_replay_max_abs": 0.0,
+  "clean_replay_relative_l2_max": 0.0,
+  "component_basis_digest": "204b6e88d6b90d2aa75af953f656d0861d3d33202e2072548bb1aa8dd0fb3144",
+  "expected_branch_rows": 160,
+  "failed_branch_rows": 0,
+  "historical_final_opened": false,
+  "interaction": {
+    "STRONG_DISTRIBUTED_NONLINEAR_INTERACTION": true,
+    "additive_relative_l2_median": 0.4134726462386566,
+    "bootstrap_2_5_lower": 0.3895522883156657,
+    "broad_median_ratio": 0.4134726462386566,
+    "family_medians": {
+      "boolean_logic": 0.3763020664043201,
+      "modular_arithmetic": 0.42301842722780847,
+      "short_graph_traversal": 0.41605546114437175,
+      "simple_state_transition": 0.4362187920598407,
+      "variable_binding": 0.4559474354063886
+    },
+    "interaction_cosine_median": 0.12157194601225724
+  },
+  "nonlinear_sha256": "58afb0b0cced18ac16f602f310b882e2f0d5b235c838c89989f4367842b9b786",
+  "observed_branch_rows": 160,
+  "reconstruction": {
+    "causal_by_dimension": {
+      "128": {
+        "cosine": 0.8001641091379089,
+        "norm_ratio": 0.7756401986501029,
+        "relative_l2": 0.6003133243518213
+      },
+      "16": {
+        "cosine": 0.6300776454589752,
+        "norm_ratio": 0.6188328107574956,
+        "relative_l2": 0.7786857380809316
+      },
+      "256": {
+        "cosine": 0.8229286187449228,
+        "norm_ratio": 0.7952518668655808,
+        "relative_l2": 0.5689660180740355
+      },
+      "32": {
+        "cosine": 0.7342095778595139,
+        "norm_ratio": 0.7136153297722485,
+        "relative_l2": 0.6792862774907533
+      },
+      "4": {
+        "cosine": 0.12295305958376423,
+        "norm_ratio": 0.14618784522199932,
+        "relative_l2": 0.9920888642576591
+      },
+      "64": {
+        "cosine": 0.7660966647698069,
+        "norm_ratio": 0.7265582366472967,
+        "relative_l2": 0.6427661467000643
+      },
+      "8": {
+        "cosine": 0.2828688535576028,
+        "norm_ratio": 0.27656075395890367,
+        "relative_l2": 0.9644362934503214
+      }
+    }
+  },
+  "reconstruction_sha256": "82bef8e8bf38ac194a9beaac78c73668c676306e6bb82f31e9fe3e1d5ba17af0",
+  "v25_independent_final_opened": false,
+  "vectors_sha256": "1445fa6bbb1d33ce6665c945d7b659451302ff05a157b5785663c9e14f103648",
+  "writeback_min_cosine": 0.5404911122732844
+}

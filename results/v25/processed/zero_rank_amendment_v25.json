@@ -1,0 +1,78 @@
+{
+  "INTERNAL_CAUSAL_CONVERGENCE_SUPPORTED": false,
+  "MANY_TO_ONE_CAUSAL_CONVERGENCE": false,
+  "absolute_cosine_change": -0.12390264827469802,
+  "all_family_converged": false,
+  "contraction_status": "layers 0-23 are zero-response; 23-to-24 is response emergence, not contraction; finite/JVP ratios reported only descriptively from layer 24 onward",
+  "corrected_profile_sha256": "4f2938a7fef7e6ce1b7e71f62a414de14b4b6389b30c0100c35b95dedac49442",
+  "family_profile": {
+    "boolean_logic": {
+      "late_layer": 31,
+      "late_r95": 56,
+      "reference_layer": 24,
+      "reference_r95": 32
+    },
+    "modular_arithmetic": {
+      "late_layer": 31,
+      "late_r95": 31,
+      "reference_layer": 24,
+      "reference_r95": 19
+    },
+    "short_graph_traversal": {
+      "late_layer": 31,
+      "late_r95": 62,
+      "reference_layer": 24,
+      "reference_r95": 21
+    },
+    "simple_state_transition": {
+      "late_layer": 31,
+      "late_r95": 59,
+      "reference_layer": 24,
+      "reference_r95": 18
+    },
+    "variable_binding": {
+      "late_layer": 31,
+      "late_r95": 50,
+      "reference_layer": 24,
+      "reference_r95": 35
+    }
+  },
+  "first_nonzero_layer": 24,
+  "historical_final_opened": false,
+  "late_absolute_cosine": 0.15961761734244376,
+  "late_layer": 31,
+  "late_r95": 99,
+  "many_to_one_mapping_status": "INCONCLUSIVE: frozen mapping source layers 0/7/15/23 have exact-zero observed responses",
+  "original_records_overwritten": false,
+  "r95_reduction_fraction": -0.7678571428571428,
+  "reason": "exact-zero matrices have rank zero; cumulative-energy search on a zero spectrum previously returned ambient dimension",
+  "reference_absolute_cosine": 0.2835202656171418,
+  "reference_r95": 56,
+  "v25_independent_final_opened": false,
+  "zero_response_layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ]
+}

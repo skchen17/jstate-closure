@@ -1,0 +1,976 @@
+{
+  "LOW_RANK_OUTPUT_BOTTLENECK_REPRESENTATIONAL_PASS": false,
+  "candidate_k": 24,
+  "candidate_layer": 31,
+  "compression_profile": {
+    "V23_input_JVP_r95_at_256": 28.0,
+    "V23_input_finite_r95_at_256": 33.5,
+    "candidate_hidden_broad_r95": 1.0,
+    "early_hidden_broad_r95": 1.0,
+    "late_T0_r95": 1.0,
+    "late_hidden_broad_r95": 1.0,
+    "late_vocab_r95": 1.0
+  },
+  "coverage": {
+    "B_FAMILY": {
+      "explained_norm_fraction_median": 0.8473536908741802,
+      "family_relative_residual": {
+        "boolean_logic": 0.24942769154138633,
+        "modular_arithmetic": 0.45367970363547416,
+        "short_graph_traversal": 0.4384604814329246,
+        "simple_state_transition": 0.4100219767397223,
+        "variable_binding": 0.36453957545484206
+      },
+      "median_cosine": 0.9207240894391062,
+      "relative_residual_median": 0.39069971246683755
+    },
+    "B_GLOBAL": {
+      "explained_norm_fraction_median": 0.8326316153623323,
+      "family_relative_residual": {
+        "boolean_logic": 0.31454210328752785,
+        "modular_arithmetic": 0.5132323220004132,
+        "short_graph_traversal": 0.4297638653794128,
+        "simple_state_transition": 0.40521044364795267,
+        "variable_binding": 0.40478103411385735
+      },
+      "median_cosine": 0.9126321368376229,
+      "relative_residual_median": 0.4091020207019531
+    },
+    "B_LOCAL_J": {
+      "explained_norm_fraction_median": 0.6048332577671318,
+      "family_relative_residual": {
+        "boolean_logic": 0.4730133727265199,
+        "modular_arithmetic": 0.6047145826841289,
+        "short_graph_traversal": 0.7050417450121094,
+        "simple_state_transition": 0.43190280304981954,
+        "variable_binding": 0.5473041407401097
+      },
+      "median_cosine": 0.7778344312689095,
+      "relative_residual_median": 0.6286179857759493
+    },
+    "B_LOCAL_P": {
+      "explained_norm_fraction_median": 0.7276863617006925,
+      "family_relative_residual": {
+        "boolean_logic": 0.3379602616351429,
+        "modular_arithmetic": 0.5741625617859807,
+        "short_graph_traversal": 0.5906710120797618,
+        "simple_state_transition": 0.5570153907843324,
+        "variable_binding": 0.49559007480462924
+      },
+      "median_cosine": 0.8530638797190355,
+      "relative_residual_median": 0.5218346250510637
+    },
+    "B_STATE_ORACLE": {
+      "explained_norm_fraction_median": 0.9994574266623253,
+      "family_relative_residual": {
+        "boolean_logic": 0.02313719758499984,
+        "modular_arithmetic": 0.04112977210936335,
+        "short_graph_traversal": 0.015275718242165282,
+        "simple_state_transition": 0.020369794348204753,
+        "variable_binding": 0.02863290102469865
+      },
+      "median_cosine": 0.9999492090515966,
+      "relative_residual_median": 0.023293019712144383
+    },
+    "CONTROL_RANDOM": {
+      "explained_norm_fraction_median": 0.09976995382894155,
+      "family_relative_residual": {
+        "boolean_logic": 0.9559086181606182,
+        "modular_arithmetic": 0.928940371648951,
+        "short_graph_traversal": 0.9472005414042561,
+        "simple_state_transition": 0.9562988508581256,
+        "variable_binding": 0.9534539135843613
+      },
+      "median_cosine": 0.31581963906903726,
+      "relative_residual_median": 0.9488043995248578
+    },
+    "CONTROL_RANDOM_CAUSAL": {
+      "explained_norm_fraction_median": 0.73774087807887,
+      "family_relative_residual": {
+        "boolean_logic": 0.41380845055579396,
+        "modular_arithmetic": 0.5604008397556852,
+        "short_graph_traversal": 0.508789767478334,
+        "simple_state_transition": 0.5153043446865185,
+        "variable_binding": 0.4631432634432453
+      },
+      "median_cosine": 0.859572971324511,
+      "relative_residual_median": 0.5121108331898154
+    },
+    "CONTROL_SHUFFLED_FAMILY": {
+      "explained_norm_fraction_median": 0.47812584138015934,
+      "family_relative_residual": {
+        "boolean_logic": 0.7224032494415484,
+        "modular_arithmetic": 0.9136800866689163,
+        "short_graph_traversal": 0.4923809862910538,
+        "simple_state_transition": 0.8625200131892183,
+        "variable_binding": 0.6444292213248377
+      },
+      "median_cosine": 0.6918946055248951,
+      "relative_residual_median": 0.7224032494415484
+    },
+    "CONTROL_VARIANCE": {
+      "explained_norm_fraction_median": 0.2352238283434538,
+      "family_relative_residual": {
+        "boolean_logic": 0.8442167572257273,
+        "modular_arithmetic": 0.9185989544547257,
+        "short_graph_traversal": 0.8474852551158297,
+        "simple_state_transition": 0.8810596013497495,
+        "variable_binding": 0.8832473319900873
+      },
+      "median_cosine": 0.4850210335806656,
+      "relative_residual_median": 0.874506369332743
+    }
+  },
+  "cross_target_action_mode": {
+    "T0_vocab_overlap_median": 0.9999742631026034,
+    "residual_T0_overlap_median": 0.9999868451975977,
+    "residual_vocab_overlap_median": 0.9999851670753834
+  },
+  "formal_rank_collapse_layer": null,
+  "global_vs_local_oracle_residual_gain": 0.38580900098980875,
+  "heldout_global_pass": false,
+  "heldout_state_oracle_pass": true,
+  "historical_final_opened": false,
+  "jvp_candidate_r95_median": 2.0,
+  "jvp_rows_sha256": "6e91f4cf18bed444179c54ded7b423aa52638ec47c412897cc6acb717e9c1f7c",
+  "natural_transition_candidate_coverage": {
+    "explained_norm_fraction": 0.35759591701642,
+    "median_cosine": 0.5784112668104867,
+    "relative_residual": 0.8015011434699142,
+    "sample_count": 2
+  },
+  "natural_transition_eligible_count": 2,
+  "natural_transition_excluded_count": 8,
+  "natural_transition_layer_ranks": [
+    {
+      "layer": 0,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 1,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 2,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 3,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 4,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 5,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 6,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 7,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 8,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 9,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 10,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 11,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 12,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 13,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 14,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 15,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 16,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 17,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 18,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 19,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 20,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 21,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 22,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 23,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 24,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 25,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 26,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 27,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 28,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 29,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 30,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "layer": 31,
+      "ranks": [
+        2,
+        2,
+        2
+      ]
+    }
+  ],
+  "orientation_dynamics": {
+    "across_family_angle_median": 58.695408016995884,
+    "nearest_J_angle_median": 25.016119524157038,
+    "same_family_angle_median": 40.18022692109239,
+    "transport_fidelity_median": 0.4777638367714857
+  },
+  "output_T0_rank_saturated": true,
+  "rank_collapse_shape": {
+    "candidate_is_stable_minimum": true,
+    "largest_adjacent_drop_layer": 1,
+    "largest_adjacent_r95_drop": 0.0
+  },
+  "rank_curves": {
+    "T0": {
+      "128": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "256": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "32": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "64": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "broad_T4": {
+      "128": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "256": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "32": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "64": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "residual": {
+      "128": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "256": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "32": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "64": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "vocab_random": {
+      "128": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "256": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "32": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "64": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "rank_validation_sha256": "9d11686e7de4296cef54949a24ff74e08307cb7ef6d76047eebf05fa6ce93b3a",
+  "same_J_orientation": {
+    "median_angle_degrees": 25.016119524157038,
+    "median_overlap": 0.7272693898163606,
+    "pair_count": 25
+  },
+  "selection_digest": "f462f811eccf8cc0a18b59d9b9906452d7083a6607d6b6a0dadaccf832e7c761",
+  "v24_independent_final_opened": false
+}

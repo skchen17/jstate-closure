@@ -1,0 +1,36 @@
+{
+  "amendments": {
+    "mediation_regeneration": {
+      "branch_records_reused": 160,
+      "status": "NOT_APPLICABLE_CANDIDATE_IS_FINAL_LAYER"
+    },
+    "natural_transition": {
+      "design_count": 10,
+      "eligible": 2,
+      "excluded_h1_only": 8
+    }
+  },
+  "commands": [
+    "PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.protocol_v24 freeze",
+    "PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.bottleneck_design_v24",
+    "PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.layer_response_v24 prepare",
+    "CUDA_VISIBLE_DEVICES=1 HF_HOME=/data/CSK/.cache/huggingface PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.layer_response_v24 finite --role development",
+    "CUDA_VISIBLE_DEVICES=0 HF_HOME=/data/CSK/.cache/huggingface PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.layer_response_v24 finite --role validation",
+    "CUDA_VISIBLE_DEVICES=0 HF_HOME=/data/CSK/.cache/huggingface PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.layer_response_v24 jvp",
+    "CUDA_VISIBLE_DEVICES=0 HF_HOME=/data/CSK/.cache/huggingface PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.layer_response_v24 natural  # audited failure: 8/10 rows expose h1 only",
+    "CUDA_VISIBLE_DEVICES=0 HF_HOME=/data/CSK/.cache/huggingface PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.natural_response_v24_amendment",
+    "PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.layer_response_summary_v24_amendment",
+    "CUDA_VISIBLE_DEVICES=0 PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.analyze_bottleneck_v24 select",
+    "CUDA_VISIBLE_DEVICES=0 PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.analyze_bottleneck_v24 validate",
+    "CUDA_VISIBLE_DEVICES=1 HF_HOME=/data/CSK/.cache/huggingface PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.mediation_v24 basis",
+    "CUDA_VISIBLE_DEVICES=1 HF_HOME=/data/CSK/.cache/huggingface PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.mediation_v24 run  # branches persisted; empty final-layer regeneration summary amended below",
+    "CUDA_VISIBLE_DEVICES=1 HF_HOME=/data/CSK/.cache/huggingface PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.mediation_results_v24_amendment",
+    "CUDA_VISIBLE_DEVICES=1 PYTHONPATH=src /home/user/anaconda3/bin/python -m jclosure.experiments.adjudicate_v24",
+    "PYTHONPATH=src /home/user/anaconda3/bin/python -m pytest tests/test_v24_output_bottleneck.py -q",
+    "PYTHONPATH=src /home/user/anaconda3/bin/python -m pytest -q",
+    "git commit -m 'Complete V24 causal output bottleneck validation'",
+    "git push origin main"
+  ],
+  "full_tests": "2 failed, 250 passed, 3 warnings in 42.17s (inherited V14/V16 FINAL_REPORT hash assertions)",
+  "v24_tests": "6 passed in 28.72s"
+}

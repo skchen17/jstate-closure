@@ -1,0 +1,63 @@
+{
+  "B_ONLY": {
+    "cosine": 0.9361930191516876,
+    "norm_ratio": 1.298021912574768,
+    "relative_l2": 0.5010059177875519
+  },
+  "CAUSAL_MEDIATION_GATE_PASS": false,
+  "FULL_MINUS_B": {
+    "retained_ratio": 0.7977277338504791
+  },
+  "PERP_ONLY": {
+    "bootstrap_97_5_upper": 1.3891403675079346,
+    "retained_ratio": 1.3751699328422546
+  },
+  "append_only_amendment": "empty regeneration table at final-layer diagnostic candidate",
+  "branch_parquet_sha256": "3e61479fdd73fb506c7648d5d6fba4691698accb9c5a346d911fa71e32c029fe",
+  "branch_rows": 160,
+  "candidate_k": 24,
+  "candidate_layer": 31,
+  "controls": {
+    "random_basis": {
+      "cosine": 0.9913199245929718,
+      "relative_l2": 0.13299035280942917
+    },
+    "random_causal_basis": {
+      "cosine": 0.9270170629024506,
+      "relative_l2": 0.5192538201808929
+    },
+    "shuffled": {
+      "cosine": 0.9290378093719482,
+      "relative_l2": 0.44917671382427216
+    },
+    "variance_basis": {
+      "cosine": 0.9534026980400085,
+      "relative_l2": 0.3637126237154007
+    }
+  },
+  "historical_final_opened": false,
+  "horizon_status": "H1_FAILED_NO_H2_H4_H8_OPENING",
+  "regeneration": {
+    "by_layer": {},
+    "later_projected_ratio_median": null,
+    "status": "NOT_APPLICABLE_CANDIDATE_IS_FINAL_LAYER"
+  },
+  "regeneration_parquet_sha256": "168b58b490c95f9ac2c316292a77b327ed9bb264aae9ab5475272a4ef02bd9cd",
+  "restoration": {
+    "intervention_mediated_fraction_median": -1.382951021194458,
+    "relative_to_P0_median": 2.382951021194458
+  },
+  "restoration_parquet_sha256": "7c477c5c9c327f222ca9dc5fb38f58ec1a022200e9b224bb2a292f92aea93652",
+  "transplant": {
+    "cosine_median": 0.2099025472998619,
+    "norm_ratio_median": 2.3485474586486816,
+    "relative_l2_median": 2.2906941175460815
+  },
+  "v24_independent_final_opened": false,
+  "writeback_audit": {
+    "count": 1140,
+    "median_gain": 1.0000243492438892,
+    "min_cosine": 0.9994214773178101,
+    "parquet_sha256": "80a627ac8eb9c3f9b77a9a620b771619f25bb364014030b2f8b650f80070e212"
+  }
+}

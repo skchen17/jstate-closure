@@ -1,0 +1,107 @@
+{
+  "base_freeze_digest": "36ecce8f74a00071b4cae5293ba13a9db7aabc53274cd7d6d8531ab42af3c904",
+  "basis_response_rows": 640,
+  "basis_sha256": "62a33f75df7612c485c5009e4a33ce83b8bed091b3d40794c114cd0c7621a2c5",
+  "basis_train_actions": 32,
+  "basis_train_states": 20,
+  "branch_protocol": {
+    "B_ONLY": "clean cache plus projected full-minus-clean hidden delta",
+    "CLEAN": "clean persistent cache",
+    "FULL": "finite heldout action cache",
+    "FULL_MINUS_B": "full cache minus projected hidden delta",
+    "PERP_ONLY": "clean cache plus orthogonal residual",
+    "RESTORE_Q_TO_0": "Pq cache minus projected Pq-minus-P0 delta",
+    "TRANSPLANT_0_TO_Q": "P0 cache plus projected Pq-minus-P0 delta"
+  },
+  "candidate_k": 24,
+  "candidate_layer": 31,
+  "candidate_selection_digest": "f462f811eccf8cc0a18b59d9b9906452d7083a6607d6b6a0dadaccf832e7c761",
+  "created_utc": "2026-09-21T13:09:35.682622+00:00",
+  "freeze_digest": "029b32788b0e22e14d7a62a813532d25f360e7c8aeabf0a05e0ab7780484cfa5",
+  "heldout_actions": [
+    "d061",
+    "d407",
+    "d064",
+    "d455",
+    "d005",
+    "d097",
+    "c003",
+    "d110"
+  ],
+  "historical_final_opened": false,
+  "input_sha256": {
+    "/data/CSK/J-space-project/jstate-closure/results/v24/processed/mediation_protocol_v24.json": "48df631823f84e47179f0fc0958f3fc4bef5f0748e6f360f7b927fcc74028fae",
+    "/data/CSK/J-space-project/jstate-closure/results/v24/processed/raw_hidden_bottleneck_basis_v24.npz": "62a33f75df7612c485c5009e4a33ce83b8bed091b3d40794c114cd0c7621a2c5",
+    "artifacts/causal_output_bottleneck_v24_candidate_selection.freeze.json": "1245dcb4f138ed7e6085b34c2b27bdc5027902d231ac4cca35e4373e455e4e86",
+    "src/jclosure/experiments/mediation_v24.py": "330f4a1632901b0c1f2272be981d65616a7355f5c348bcd6fb6ec5e35b209cca"
+  },
+  "protocol_version": "causal_output_bottleneck_v24_mediation_protocol",
+  "schema_version": 33,
+  "thresholds": {
+    "bootstrap_upper_margin": 0.25,
+    "cosine_min": 0.9,
+    "magnitude_ratio_max": 1.2,
+    "magnitude_ratio_min": 0.8,
+    "mediation_fraction_min": 0.8,
+    "perp_retained_ratio_max": 0.2,
+    "relative_l2_max": 0.3
+  },
+  "v24_independent_final_opened": false,
+  "validation_states": [
+    {
+      "base_trial_id": "v13-validation-boolean_logic-acfb885884320bdd53a3",
+      "family": "boolean_logic",
+      "q_name": "conv_causal1"
+    },
+    {
+      "base_trial_id": "v13-validation-boolean_logic-42ff7946501e6f893dd2",
+      "family": "boolean_logic",
+      "q_name": "rec_arch4_amended"
+    },
+    {
+      "base_trial_id": "v13-validation-modular_arithmetic-8b15be2602b3692b5348",
+      "family": "modular_arithmetic",
+      "q_name": "joint_causal11"
+    },
+    {
+      "base_trial_id": "v13-validation-modular_arithmetic-a97c35617feccc42b6cd",
+      "family": "modular_arithmetic",
+      "q_name": "conv_causal1"
+    },
+    {
+      "base_trial_id": "v13-validation-short_graph_traversal-7aafa5f333b4ff77280c",
+      "family": "short_graph_traversal",
+      "q_name": "rec_arch4_amended"
+    },
+    {
+      "base_trial_id": "v13-validation-short_graph_traversal-7c24a9f305e9e2a5e1f6",
+      "family": "short_graph_traversal",
+      "q_name": "joint_causal11"
+    },
+    {
+      "base_trial_id": "v13-validation-simple_state_transition-1c588d89eb989aa6553d",
+      "family": "simple_state_transition",
+      "q_name": "conv_causal1"
+    },
+    {
+      "base_trial_id": "v13-validation-simple_state_transition-c61d68ba38e5fef23dc1",
+      "family": "simple_state_transition",
+      "q_name": "rec_arch4_amended"
+    },
+    {
+      "base_trial_id": "v13-validation-variable_binding-8f2205dc578229413700",
+      "family": "variable_binding",
+      "q_name": "joint_causal11"
+    },
+    {
+      "base_trial_id": "v13-validation-variable_binding-92e9ebe1d473eaa8863b",
+      "family": "variable_binding",
+      "q_name": "conv_causal1"
+    }
+  ],
+  "workspace_relation_train": {
+    "B_dimension": 24,
+    "J_dimension": 128,
+    "J_from_B_train_relative_l2": 0.023827258207710197
+  }
+}

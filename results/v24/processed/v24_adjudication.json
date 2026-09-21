@@ -1,0 +1,49 @@
+{
+  "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+  "H2_REMAINS": true,
+  "H3_AUTHORIZED": false,
+  "V24_A": false,
+  "V24_B": false,
+  "V24_C": false,
+  "V24_D": false,
+  "V24_E": false,
+  "V24_F": true,
+  "V24_G": false,
+  "architecture_localization": {
+    "channel_effect_norm_median": {
+      "arch_attn:Conv": 2.4053474820451646,
+      "arch_attn:KV": 2.408014293165406,
+      "arch_attn:REC": 2.407993055748351,
+      "arch_attn:joint": 2.405245658804223,
+      "arch_mlp:Conv": 5.342532094354209,
+      "arch_mlp:KV": 5.332529754687343,
+      "arch_mlp:REC": 5.340268356549576,
+      "arch_mlp:joint": 5.333228399423114
+    },
+    "component_r95_median": {
+      "arch_attn": 1.0,
+      "arch_mlp": 1.0
+    },
+    "nearest_architecture_layer": 31,
+    "rows_sha256": "5ff88a275065e8d4d901d5978c4ad7be3a679110b9a76cf4a065140d277bfc50",
+    "wording": "Architecture-resolved descriptive localization; no global channel ranking is inferred from one perturbation family."
+  },
+  "formal_outcomes": [
+    "V24-F_DISTRIBUTED_CAUSAL_MEDIATION"
+  ],
+  "historical_final_opened": false,
+  "independent_final_status": "FROZEN_AND_UNOPENED_NO_SINGLE_DEVELOPMENT_VALIDATION_MEDIATOR",
+  "primary_outcome": "V24-F_DISTRIBUTED_CAUSAL_MEDIATION",
+  "v24_independent_final_opened": false,
+  "wording": "Causal mediator is not equated with complete Markov state. Representational low rank and causal mediation are adjudicated separately.",
+  "workspace_relationship": {
+    "J_from_B_train_relative_l2": 0.023827258207710197,
+    "WORKSPACE_ALIASING_IS_MEDIATED_BY_DOWNSTREAM_CAUSAL_BOTTLENECK": false,
+    "same_J_q_effect_bottleneck_coverage": {
+      "explained_norm_fraction": 0.3796146907961342,
+      "median_cosine": 0.6269541438748304,
+      "relative_residual": 0.7876454209883187,
+      "sample_count": 100
+    }
+  }
+}

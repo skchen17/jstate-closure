@@ -1,0 +1,75 @@
+{
+  "design_count": 10,
+  "eligible_transition_count": 2,
+  "estimand": "clean teacher-forced h2-minus-h1 only where two frozen historical tokens exist",
+  "excluded": [
+    {
+      "available_teacher_tokens": 1,
+      "base_trial_id": "v13-train-03df95ff41366dda3180",
+      "family": "boolean_logic",
+      "reason": "h2-minus-h1 undefined: historical row exposes only h1"
+    },
+    {
+      "available_teacher_tokens": 1,
+      "base_trial_id": "v13-train-73395947324f7a799f37",
+      "family": "boolean_logic",
+      "reason": "h2-minus-h1 undefined: historical row exposes only h1"
+    },
+    {
+      "available_teacher_tokens": 1,
+      "base_trial_id": "v13-train-8653b4ca8a3cf0d258ec",
+      "family": "modular_arithmetic",
+      "reason": "h2-minus-h1 undefined: historical row exposes only h1"
+    },
+    {
+      "available_teacher_tokens": 1,
+      "base_trial_id": "v13-train-0d81f0ded78d59e8e243",
+      "family": "modular_arithmetic",
+      "reason": "h2-minus-h1 undefined: historical row exposes only h1"
+    },
+    {
+      "available_teacher_tokens": 1,
+      "base_trial_id": "v13-train-15dc2d5c88dd58582149",
+      "family": "short_graph_traversal",
+      "reason": "h2-minus-h1 undefined: historical row exposes only h1"
+    },
+    {
+      "available_teacher_tokens": 1,
+      "base_trial_id": "v13-train-c2a2442eb9bb6d97999f",
+      "family": "simple_state_transition",
+      "reason": "h2-minus-h1 undefined: historical row exposes only h1"
+    },
+    {
+      "available_teacher_tokens": 1,
+      "base_trial_id": "v13-train-93f3f1a55c4ac133dd8c",
+      "family": "simple_state_transition",
+      "reason": "h2-minus-h1 undefined: historical row exposes only h1"
+    },
+    {
+      "available_teacher_tokens": 1,
+      "base_trial_id": "v13-train-646fa6f29393f173582f",
+      "family": "variable_binding",
+      "reason": "h2-minus-h1 undefined: historical row exposes only h1"
+    }
+  ],
+  "excluded_count": 8,
+  "frozen_layer_response_source_unchanged": true,
+  "historical_final_opened": false,
+  "included": [
+    {
+      "available_teacher_tokens": 8,
+      "base_trial_id": "v13-train-f57119f090f5d0cc41cc",
+      "family": "short_graph_traversal",
+      "path": "/data/CSK/J-space-project/v24-output-bottleneck-work/natural/natural_v13-train-f57119f090f5d0cc41cc.npz",
+      "sha256": "b7107f4bf0ab5863268214f0fccef27b39312eb5983f1066e3514fb23cc617ed"
+    },
+    {
+      "available_teacher_tokens": 8,
+      "base_trial_id": "v13-train-4bed947889a3fa277bbc",
+      "family": "variable_binding",
+      "path": "/data/CSK/J-space-project/v24-output-bottleneck-work/natural/natural_v13-train-4bed947889a3fa277bbc.npz",
+      "sha256": "7da6efdc8524f83f16734d7bf2f0a273ba08664351b37565cc8de10edede99b8"
+    }
+  ],
+  "v24_independent_final_opened": false
+}

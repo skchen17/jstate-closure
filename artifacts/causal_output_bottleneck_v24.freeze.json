@@ -1,0 +1,150 @@
+{
+  "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+  "H3_AUTHORIZED": false,
+  "V1_V23_records_mutated": false,
+  "config": {
+    "architecture_layers": [
+      0,
+      3,
+      7,
+      11,
+      15,
+      19,
+      23,
+      27,
+      30,
+      31
+    ],
+    "authorization": {
+      "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+      "H3_AUTHORIZED": false,
+      "historical_final_opening_prohibited": true
+    },
+    "bottleneck_dimensions": [
+      2,
+      4,
+      6,
+      8,
+      12,
+      16,
+      24,
+      32
+    ],
+    "causal_gate": {
+      "bootstrap_upper_margin": 0.25,
+      "cosine_min": 0.9,
+      "magnitude_ratio_max": 1.2,
+      "magnitude_ratio_min": 0.8,
+      "mediation_fraction_min": 0.8,
+      "perp_retained_ratio_max": 0.2,
+      "relative_l2_max": 0.3
+    },
+    "coverage_gate": {
+      "cosine_min": 0.9,
+      "explained_norm_min": 0.9,
+      "relative_residual_max": 0.3
+    },
+    "horizons": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "name": "Causal Output Bottleneck Validation and Layer Localization",
+    "panels": {
+      "development_base_states": 50,
+      "heldout_actions": 32,
+      "independent_final_base_states": 50,
+      "jvp_actions": 32,
+      "jvp_base_states": 10,
+      "mediation_actions": 8,
+      "mediation_basis_base_states": 10,
+      "mediation_validation_base_states": 10,
+      "persistent_states": [
+        "P0",
+        "Pq"
+      ],
+      "train_actions": 256,
+      "validation_base_states": 25
+    },
+    "parent_commit": "4dcc412d85fb2995237c48ec755beb34fd662941",
+    "probe_counts": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "protocol_version": "causal_output_bottleneck_v24",
+    "rank_collapse": {
+      "broad_target_required": true,
+      "downstream_plateau_absolute_r95": 2,
+      "family_max_r95_spread": 4,
+      "minimum_reduction_fraction": 0.5
+    },
+    "seed": 240024,
+    "targets": {
+      "architecture_random_coordinate_dimension": 128,
+      "historical_stack_dimension": 288,
+      "projection_seed": 240025,
+      "residual_random_coordinate_dimension": 256,
+      "vocabulary_random_coordinate_dimension": 512
+    }
+  },
+  "config_sha256": "908c1b287cdd793ee9bcbdb05526140abd7406277e970193cc8a510365e77c6a",
+  "created_utc": "2026-09-21T12:17:06.088368+00:00",
+  "freeze_digest": "36ecce8f74a00071b4cae5293ba13a9db7aabc53274cd7d6d8531ab42af3c904",
+  "frozen_input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_roles.freeze.json": "1f549a3b88fca4845ead3ea2b9b9d2fb6c558cd0d63a0fea6d8d4c994c1455e5",
+    "artifacts/causal/v13/probe_directions_v13.pt": "77aeccb5dccaef52c444d94b65797a18ce2984c76b6655e8a90714976cf51891",
+    "artifacts/compact_causal_response_operator_v20_operator_design.freeze.json": "02d460be88a61cb8fca0aa020aa8e89298279a6c688ebd6abf0bfabd3f2300cc",
+    "artifacts/compact_causal_response_operator_v20_splits.freeze.json": "fc51d5ad87f92bf85d1ac92832f9f7a4a30788fea60a024073011e8f43f8697c",
+    "artifacts/oracle_local_action_charts_v23_final.freeze.json": "fd18818c2cda2b435c520b732bfeacca953c8ea14d82408e623ee9929c161fc1",
+    "reports/FINAL_REPORT.md": "f0df3a37863c85001de4c680ebaec0b62eb3291444dd54e055b0e60a17a836a4",
+    "reports/V23_COMPLETE_REPORT.md": "ff8683d10727903b0b118764725ed076601dc2878da078e281df06fe05b5de6f",
+    "results/v22/processed/action_pool_calibration_v22.json": "d146b1d30031fd85c19df450ccd01e5dbee7c633400d4bbbac589a6d55448723",
+    "results/v22/processed/action_selection_v22.json": "1914e912280740639f431f0915190583887e494a01e18b3a3d577391149df334",
+    "results/v23/processed/input_rank_scaling_v23.json": "023d41ef3a66ab9d0fcb08a4dcd56ced76962c4d39a8630f72516d2801a135ff",
+    "results/v23/processed/oracle_local_action_charts_v23.json": "c8c1b68b1e8a1482e0226edd3c12250b33080e79ab2b8cc6a1aca5b963835b30",
+    "results/v23/processed/probe_candidate_design_v23.json": "0c1bccd5f671c811c0431cab41941dd0f39c44be091ad28b45cbaf99b565852a",
+    "results/v23/processed/probe_selection_v23.json": "58d9babb4ac07be6f2ffafb497d283775f2e0b772d640b751e06d0fe17dbb7df"
+  },
+  "historical_final_opened": false,
+  "parent_commit": "4dcc412d85fb2995237c48ec755beb34fd662941",
+  "protocol_code_sha256": "866c1588d76b4982c7caac20ea8a6712044b19243f8a149c4bcfcad0f8d7cf8f",
+  "protocol_version": "causal_output_bottleneck_v24",
+  "schema_version": 33
+}

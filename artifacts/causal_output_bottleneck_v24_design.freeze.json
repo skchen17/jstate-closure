@@ -1,0 +1,34 @@
+{
+  "action_hashes": {
+    "heldout": "793cab02928568a7201c863993943c76da566809bb51fb6ce7f573e91fa14d5f",
+    "mediation": "789d44b22902b45a7d811b9f2df8354ff279b20039f6a7f194a07539e8f3a5fc",
+    "train": "764b2fa64b26b1ad9fb1831c6bb32315b44e0f08674f729ce5e0c7e765dc7467"
+  },
+  "base_freeze_digest": "36ecce8f74a00071b4cae5293ba13a9db7aabc53274cd7d6d8531ab42af3c904",
+  "created_utc": "2026-09-21T12:17:21.663346+00:00",
+  "freeze_digest": "977d5e441d39b963c5c1999d33f8634bf4b5bf42be3d14308bac758e5f05c132",
+  "historical_final_opened": false,
+  "input_sha256": {
+    "/data/CSK/J-space-project/jstate-closure/results/v24/processed/bottleneck_design_v24.json": "a9518e5b150be6c770c4672b8a57193f3b8d8e4e00daeef1528ca8d5eddbd9d4",
+    "/data/CSK/J-space-project/jstate-closure/results/v24/processed/target_projections_v24.npz": "99e08cd12c9b3751e251c36c6352a16fc6c98951021cbb1abca7b7b2b50d26f9",
+    "artifacts/action_coordinate_geometry_v21_roles.freeze.json": "1f549a3b88fca4845ead3ea2b9b9d2fb6c558cd0d63a0fea6d8d4c994c1455e5",
+    "artifacts/compact_causal_response_operator_v20_splits.freeze.json": "fc51d5ad87f92bf85d1ac92832f9f7a4a30788fea60a024073011e8f43f8697c",
+    "artifacts/counterfactual_workspace_v19_splits.freeze.json": "72e68df5b97c920b403c0e1a743b690e1696a268b461e4259472a9388ad8665d",
+    "results/v22/processed/action_selection_v22.json": "1914e912280740639f431f0915190583887e494a01e18b3a3d577391149df334",
+    "results/v23/processed/probe_selection_v23.json": "58d9babb4ac07be6f2ffafb497d283775f2e0b772d640b751e06d0fe17dbb7df",
+    "src/jclosure/experiments/bottleneck_design_v24.py": "d4651ea089d9821cddb1831bd92c553b9e8f248b11a603d865d6f2fc6c7f9c06"
+  },
+  "protocol_version": "causal_output_bottleneck_v24_design",
+  "schema_version": 33,
+  "state_hashes": {
+    "development": "ffdd34027b9881b637b85f1cca2dab58891770711a3c80cc6ce3e03893949950",
+    "independent_final": "545c291dcae7b69bb6265cacc31b1c153fe36e03f0932568bfb881b75864726f",
+    "mediation_basis": "cdde0503b5d03fef89ea9482292fd9fb960e6153370a6df965e6ec6c0db79279",
+    "mediation_validation": "3608bd70eb2b3b2d51fc08a3fd883318dc1961c55332e593ca9620c5ac7727cc",
+    "natural_transition": "65ee72641565a91f68ad6a9f3a41fbb4469bb7bfd8d9f6a13df9e9e136a79fec",
+    "validation": "03546c5f088c31e094e56dc9683706dadc800cdc8ac9b7361917efa1e196bcbb"
+  },
+  "target_projection_rule": "train-frozen seeded signed random coordinate projections; rows are orthonormal coordinate selectors and are response-label independent",
+  "target_projection_sha256": "99e08cd12c9b3751e251c36c6352a16fc6c98951021cbb1abca7b7b2b50d26f9",
+  "v24_independent_final_opened": false
+}

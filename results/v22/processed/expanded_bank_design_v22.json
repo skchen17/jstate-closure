@@ -1,0 +1,148 @@
+{
+  "action_selection_digest": "da489609553aedb084e8efae5fa13a3e8c5a3a08e41601e6fcac579e5e984f0d",
+  "development_base_count": 15,
+  "development_states": [
+    {
+      "base_trial_id": "v13-train-boolean_logic-aa0fa9990fd4fd8de2bc",
+      "family": "boolean_logic",
+      "q_name": "conv_causal1"
+    },
+    {
+      "base_trial_id": "v13-train-boolean_logic-67e665f1bba318f8ba14",
+      "family": "boolean_logic",
+      "q_name": "rec_arch4_amended"
+    },
+    {
+      "base_trial_id": "v13-train-boolean_logic-212fbda52cd0e74dcdb9",
+      "family": "boolean_logic",
+      "q_name": "joint_causal11"
+    },
+    {
+      "base_trial_id": "v13-train-modular_arithmetic-9a6134e24e8b54476f4c",
+      "family": "modular_arithmetic",
+      "q_name": "rec_arch4_amended"
+    },
+    {
+      "base_trial_id": "v13-train-modular_arithmetic-0f5333e73d51784b8f40",
+      "family": "modular_arithmetic",
+      "q_name": "joint_causal11"
+    },
+    {
+      "base_trial_id": "v13-train-modular_arithmetic-ccccad8c437b792c6726",
+      "family": "modular_arithmetic",
+      "q_name": "conv_causal1"
+    },
+    {
+      "base_trial_id": "v13-train-short_graph_traversal-2e5fb5eaaf2503042cf2",
+      "family": "short_graph_traversal",
+      "q_name": "joint_causal11"
+    },
+    {
+      "base_trial_id": "v13-train-short_graph_traversal-eb6b8b65eab4f45bbbd9",
+      "family": "short_graph_traversal",
+      "q_name": "conv_causal1"
+    },
+    {
+      "base_trial_id": "v13-train-short_graph_traversal-c8f6ad63071f775de86b",
+      "family": "short_graph_traversal",
+      "q_name": "rec_arch4_amended"
+    },
+    {
+      "base_trial_id": "v13-train-simple_state_transition-c0b1f3bb403c41192b0d",
+      "family": "simple_state_transition",
+      "q_name": "conv_causal1"
+    },
+    {
+      "base_trial_id": "v13-train-simple_state_transition-8d0892a65623f36aeeea",
+      "family": "simple_state_transition",
+      "q_name": "rec_arch4_amended"
+    },
+    {
+      "base_trial_id": "v13-train-simple_state_transition-6cebc9dbb201e5f52480",
+      "family": "simple_state_transition",
+      "q_name": "joint_causal11"
+    },
+    {
+      "base_trial_id": "v13-train-variable_binding-10b224bc569851486953",
+      "family": "variable_binding",
+      "q_name": "rec_arch4_amended"
+    },
+    {
+      "base_trial_id": "v13-train-variable_binding-2ba5df85234de0ac77c3",
+      "family": "variable_binding",
+      "q_name": "joint_causal11"
+    },
+    {
+      "base_trial_id": "v13-train-variable_binding-6c00af1dfc5e7964f93f",
+      "family": "variable_binding",
+      "q_name": "conv_causal1"
+    }
+  ],
+  "expanded_responses_observed_before_freeze": 0,
+  "heldout_validation_action_count": 32,
+  "historical_final_responses_opened": false,
+  "new_independent_final_responses_opened": false,
+  "persistent_states_per_base": [
+    "P0",
+    "Pq"
+  ],
+  "signs": [
+    -1,
+    1
+  ],
+  "target": "V20_normalized_stack_288_h1",
+  "train_action_count": 128,
+  "validation_base_count": 10,
+  "validation_states": [
+    {
+      "base_trial_id": "v13-validation-boolean_logic-acfb885884320bdd53a3",
+      "family": "boolean_logic",
+      "q_name": "conv_causal1"
+    },
+    {
+      "base_trial_id": "v13-validation-boolean_logic-42ff7946501e6f893dd2",
+      "family": "boolean_logic",
+      "q_name": "rec_arch4_amended"
+    },
+    {
+      "base_trial_id": "v13-validation-modular_arithmetic-8b15be2602b3692b5348",
+      "family": "modular_arithmetic",
+      "q_name": "joint_causal11"
+    },
+    {
+      "base_trial_id": "v13-validation-modular_arithmetic-a97c35617feccc42b6cd",
+      "family": "modular_arithmetic",
+      "q_name": "conv_causal1"
+    },
+    {
+      "base_trial_id": "v13-validation-short_graph_traversal-7aafa5f333b4ff77280c",
+      "family": "short_graph_traversal",
+      "q_name": "rec_arch4_amended"
+    },
+    {
+      "base_trial_id": "v13-validation-short_graph_traversal-7c24a9f305e9e2a5e1f6",
+      "family": "short_graph_traversal",
+      "q_name": "joint_causal11"
+    },
+    {
+      "base_trial_id": "v13-validation-simple_state_transition-1c588d89eb989aa6553d",
+      "family": "simple_state_transition",
+      "q_name": "conv_causal1"
+    },
+    {
+      "base_trial_id": "v13-validation-simple_state_transition-c61d68ba38e5fef23dc1",
+      "family": "simple_state_transition",
+      "q_name": "rec_arch4_amended"
+    },
+    {
+      "base_trial_id": "v13-validation-variable_binding-8f2205dc578229413700",
+      "family": "variable_binding",
+      "q_name": "joint_causal11"
+    },
+    {
+      "base_trial_id": "v13-validation-variable_binding-92e9ebe1d473eaa8863b",
+      "family": "variable_binding",
+      "q_name": "conv_causal1"
+    }
+  ]
+}

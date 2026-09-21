@@ -1,0 +1,442 @@
+{
+  "associations": {
+    "Z1": {
+      "leverage": {
+        "pearson": 0.01065242023469637,
+        "spearman": -0.14516129032258063
+      },
+      "nearest_abs_cosine": {
+        "pearson": -0.08537777532889648,
+        "spearman": -0.22580645161290322
+      },
+      "span_residual": {
+        "pearson": -0.04510972048562502,
+        "spearman": 0.14516129032258063
+      }
+    },
+    "Z2": {
+      "leverage": {
+        "pearson": 0.005575430471155482,
+        "spearman": -0.2456011730205278
+      },
+      "nearest_abs_cosine": {
+        "pearson": -0.06388924847211624,
+        "spearman": -0.281891495601173
+      },
+      "span_residual": {
+        "pearson": -0.06427341134493077,
+        "spearman": 0.24349103213952636
+      }
+    },
+    "Z6": {
+      "leverage": {
+        "pearson": -0.020511377331947817,
+        "spearman": -0.06964809384164222
+      },
+      "nearest_abs_cosine": {
+        "pearson": 0.06008994883388432,
+        "spearman": 0.04838709677419354
+      },
+      "span_residual": {
+        "pearson": -0.20902763719392364,
+        "spearman": -0.13086510263929618
+      }
+    }
+  },
+  "coverage_rows": [
+    {
+      "action_count": 12,
+      "leverage_median": 0.296361125955412,
+      "metric": "Z1",
+      "nearest_abs_cosine_median": 0.38041893169251817,
+      "span_residual_median": 0.8387932264340119,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 12,
+      "leverage_median": 0.3734396436879721,
+      "metric": "Z2",
+      "nearest_abs_cosine_median": 0.4348149876551338,
+      "span_residual_median": 0.791554581256287,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 12,
+      "leverage_median": 0.8984804040965588,
+      "metric": "Z6",
+      "nearest_abs_cosine_median": 0.6903364695436711,
+      "span_residual_median": 0.3185528167238173,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 24,
+      "leverage_median": 0.5690297777728572,
+      "metric": "Z1",
+      "nearest_abs_cosine_median": 0.41310618695130275,
+      "span_residual_median": 0.6563158560402769,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 24,
+      "leverage_median": 0.6197526767468664,
+      "metric": "Z2",
+      "nearest_abs_cosine_median": 0.45998422311520837,
+      "span_residual_median": 0.6166370835005973,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 24,
+      "leverage_median": 0.9715827083022103,
+      "metric": "Z6",
+      "nearest_abs_cosine_median": 0.7016986060063546,
+      "span_residual_median": 0.16848170506805088,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 48,
+      "leverage_median": 0.7665060851572307,
+      "metric": "Z1",
+      "nearest_abs_cosine_median": 0.43930025241759857,
+      "span_residual_median": 0.4831556515621188,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 48,
+      "leverage_median": 0.7948410832504244,
+      "metric": "Z2",
+      "nearest_abs_cosine_median": 0.46709066741962724,
+      "span_residual_median": 0.4529330890833603,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 48,
+      "leverage_median": 0.9967370693097244,
+      "metric": "Z6",
+      "nearest_abs_cosine_median": 0.7429259205896717,
+      "span_residual_median": 0.05699871943335556,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 96,
+      "leverage_median": 0.8621325192195561,
+      "metric": "Z1",
+      "nearest_abs_cosine_median": 0.4550867865133797,
+      "span_residual_median": 0.3712538185621457,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 96,
+      "leverage_median": 0.8860004679033959,
+      "metric": "Z2",
+      "nearest_abs_cosine_median": 0.48882657393540707,
+      "span_residual_median": 0.3373743296913282,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 96,
+      "leverage_median": 0.9999693112211907,
+      "metric": "Z6",
+      "nearest_abs_cosine_median": 0.8042332037066426,
+      "span_residual_median": 1.1970345601723533e-15,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 128,
+      "leverage_median": 0.86216443288864,
+      "metric": "Z1",
+      "nearest_abs_cosine_median": 0.4550867865133797,
+      "span_residual_median": 0.3712178550756968,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 128,
+      "leverage_median": 0.8860213185929753,
+      "metric": "Z2",
+      "nearest_abs_cosine_median": 0.48882657393540707,
+      "span_residual_median": 0.337362644536064,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 128,
+      "leverage_median": 0.9999757558413637,
+      "metric": "Z6",
+      "nearest_abs_cosine_median": 0.8042332037066426,
+      "span_residual_median": 1.3345062175867048e-15,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 12,
+      "leverage_median": 0.2655417481319011,
+      "metric": "Z1",
+      "nearest_abs_cosine_median": 0.34957891902470983,
+      "span_residual_median": 0.857003400320105,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 12,
+      "leverage_median": 0.31650388787298683,
+      "metric": "Z2",
+      "nearest_abs_cosine_median": 0.35252219356772035,
+      "span_residual_median": 0.826734780636526,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 12,
+      "leverage_median": 0.833453842984061,
+      "metric": "Z6",
+      "nearest_abs_cosine_median": 0.6864279641251827,
+      "span_residual_median": 0.4018376674202999,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 24,
+      "leverage_median": 0.42115071933253334,
+      "metric": "Z1",
+      "nearest_abs_cosine_median": 0.3504792325729032,
+      "span_residual_median": 0.7607217849668388,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 24,
+      "leverage_median": 0.5272600604498394,
+      "metric": "Z2",
+      "nearest_abs_cosine_median": 0.37112394008318095,
+      "span_residual_median": 0.6875395755688851,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 24,
+      "leverage_median": 0.9552659165282097,
+      "metric": "Z6",
+      "nearest_abs_cosine_median": 0.7422068988047648,
+      "span_residual_median": 0.2004591833277577,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 48,
+      "leverage_median": 0.6079967741026271,
+      "metric": "Z1",
+      "nearest_abs_cosine_median": 0.40122127170405797,
+      "span_residual_median": 0.6260274336356574,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 48,
+      "leverage_median": 0.6788940547591673,
+      "metric": "Z2",
+      "nearest_abs_cosine_median": 0.431668579973424,
+      "span_residual_median": 0.566632563926836,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 48,
+      "leverage_median": 0.9904058642308504,
+      "metric": "Z6",
+      "nearest_abs_cosine_median": 0.7507894555818848,
+      "span_residual_median": 0.06410612376755637,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 96,
+      "leverage_median": 0.800512150962515,
+      "metric": "Z1",
+      "nearest_abs_cosine_median": 0.45094502102399336,
+      "span_residual_median": 0.4465235934457138,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 96,
+      "leverage_median": 0.8262714880178824,
+      "metric": "Z2",
+      "nearest_abs_cosine_median": 0.4567726336780089,
+      "span_residual_median": 0.41673383022133537,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 96,
+      "leverage_median": 0.9993742109719681,
+      "metric": "Z6",
+      "nearest_abs_cosine_median": 0.8002461003731,
+      "span_residual_median": 1.1320620853663958e-15,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 128,
+      "leverage_median": 0.8621644328886464,
+      "metric": "Z1",
+      "nearest_abs_cosine_median": 0.4550867865133797,
+      "span_residual_median": 0.37121785507569677,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 128,
+      "leverage_median": 0.8860213185930095,
+      "metric": "Z2",
+      "nearest_abs_cosine_median": 0.48882657393540707,
+      "span_residual_median": 0.33736264453606396,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 128,
+      "leverage_median": 0.9999757558682572,
+      "metric": "Z6",
+      "nearest_abs_cosine_median": 0.8042332037066426,
+      "span_residual_median": 1.2340897693572168e-15,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 12,
+      "leverage_median": 0.023814862523911753,
+      "metric": "Z1",
+      "nearest_abs_cosine_median": 0.15423883857930415,
+      "span_residual_median": 0.988020702263315,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 12,
+      "leverage_median": 0.03204501920075982,
+      "metric": "Z2",
+      "nearest_abs_cosine_median": 0.17898466073248626,
+      "span_residual_median": 0.9838469093487512,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 12,
+      "leverage_median": 0.8444020783958914,
+      "metric": "Z6",
+      "nearest_abs_cosine_median": 0.671191594078808,
+      "span_residual_median": 0.38334167186028945,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 24,
+      "leverage_median": 0.02382670067459733,
+      "metric": "Z1",
+      "nearest_abs_cosine_median": 0.15423883857930415,
+      "span_residual_median": 0.9880147109817319,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 24,
+      "leverage_median": 0.03204771365763695,
+      "metric": "Z2",
+      "nearest_abs_cosine_median": 0.17898466073248626,
+      "span_residual_median": 0.9838455402558987,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 24,
+      "leverage_median": 0.9246911890536544,
+      "metric": "Z6",
+      "nearest_abs_cosine_median": 0.7515864731515467,
+      "span_residual_median": 0.24200462954672913,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 48,
+      "leverage_median": 0.03209263010085704,
+      "metric": "Z1",
+      "nearest_abs_cosine_median": 0.15733365767515267,
+      "span_residual_median": 0.9838159557307631,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 48,
+      "leverage_median": 0.038077733729633315,
+      "metric": "Z2",
+      "nearest_abs_cosine_median": 0.18962519461214544,
+      "span_residual_median": 0.9807734737795815,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 48,
+      "leverage_median": 0.9535705092872128,
+      "metric": "Z6",
+      "nearest_abs_cosine_median": 0.7678021732127212,
+      "span_residual_median": 0.15694034481469432,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 96,
+      "leverage_median": 0.5261527105341761,
+      "metric": "Z1",
+      "nearest_abs_cosine_median": 0.31618425656259985,
+      "span_residual_median": 0.688325676419181,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 96,
+      "leverage_median": 0.5207860659575616,
+      "metric": "Z2",
+      "nearest_abs_cosine_median": 0.3445922797866843,
+      "span_residual_median": 0.6921978735098873,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 96,
+      "leverage_median": 0.9942793935629921,
+      "metric": "Z6",
+      "nearest_abs_cosine_median": 0.7835001108395387,
+      "span_residual_median": 0.03449177181245509,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 128,
+      "leverage_median": 0.8621644328886464,
+      "metric": "Z1",
+      "nearest_abs_cosine_median": 0.4550867865133797,
+      "span_residual_median": 0.3712178550756968,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 128,
+      "leverage_median": 0.8860213185930284,
+      "metric": "Z2",
+      "nearest_abs_cosine_median": 0.48882657393540707,
+      "span_residual_median": 0.337362644536064,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 128,
+      "leverage_median": 0.9999757558518179,
+      "metric": "Z6",
+      "nearest_abs_cosine_median": 0.8042332037066426,
+      "span_residual_median": 1.2005657254223274e-15,
+      "strategy": "raw_geometry_maximin"
+    }
+  ],
+  "per_validation_action_error": [
+    1.0025701856213676,
+    1.0037220464201468,
+    0.9922772037162056,
+    1.04452581126397,
+    1.0056154525641823,
+    1.013069068598242,
+    0.9203657909276228,
+    0.9960477150953818,
+    0.9986143617415001,
+    0.9937281830921422,
+    0.9822123214904256,
+    0.9635469558438724,
+    0.9885982582237137,
+    1.384942335530156,
+    0.9541011398512882,
+    1.0011711957883445,
+    1.0130694018752746,
+    0.9572831816619465,
+    0.9967573367584995,
+    0.9523000209522011,
+    0.9850054129679939,
+    0.9850025538867347,
+    0.991274718180987,
+    0.8864083211168973,
+    1.0022553868782162,
+    0.9828461853196027,
+    0.9973273588668611,
+    0.9332931469350109,
+    0.934925031510206,
+    0.9689119632509877,
+    0.9936055040224602,
+    0.9902404243270747
+  ]
+}

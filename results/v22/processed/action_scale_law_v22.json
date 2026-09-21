@@ -1,0 +1,72 @@
+{
+  "amplitudes": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "interpretation": "Scale-only law holds the measured unit response fixed; it does not use a new-action response at deployment.",
+  "results": {
+    "minus": {
+      "alpha_plus_alpha2": {
+        "coefficients": [
+          0.3709126587971594,
+          0.7896604162173094
+        ],
+        "validation_nonunit_relative_l2": 0.5337500079554115
+      },
+      "alpha_plus_alpha2_plus_alpha3": {
+        "coefficients": [
+          0.4141507450344298,
+          0.5302317695850344,
+          0.34590496296497625
+        ],
+        "validation_nonunit_relative_l2": 0.5337500079559873
+      },
+      "linear_alpha": {
+        "coefficients": [
+          0.7262598451317873
+        ],
+        "validation_nonunit_relative_l2": 0.5401997312410354
+      },
+      "monotone_gain_network": {
+        "fitted_gains": [
+          0.14208193252445422,
+          0.382871438175461,
+          1.0
+        ],
+        "validation_relative_l2": 0.25344643943250866
+      }
+    },
+    "plus": {
+      "alpha_plus_alpha2": {
+        "coefficients": [
+          1.0594280562300684,
+          -0.01954929823547649
+        ],
+        "validation_nonunit_relative_l2": 0.37781484177831265
+      },
+      "alpha_plus_alpha2_plus_alpha3": {
+        "coefficients": [
+          1.047777336987839,
+          0.05035505627704585,
+          -0.09320583648460115
+        ],
+        "validation_nonunit_relative_l2": 0.37781484183423925
+      },
+      "linear_alpha": {
+        "coefficients": [
+          1.050630872050853
+        ],
+        "validation_nonunit_relative_l2": 0.3777732919848424
+      },
+      "monotone_gain_network": {
+        "fitted_gains": [
+          0.2636351912688609,
+          0.5248267013940918,
+          1.0
+        ],
+        "validation_relative_l2": 0.19786575041870827
+      }
+    }
+  }
+}

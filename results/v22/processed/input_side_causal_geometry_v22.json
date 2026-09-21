@@ -1,0 +1,123 @@
+{
+  "classification": {
+    "V22_G1_STABLE_INPUT_CAUSAL_SUBSPACE": false,
+    "V22_G2_STATE_DEPENDENT_INPUT_CAUSAL_SUBSPACE": true,
+    "V22_G3_DIFFERENTIAL_FINITE_INPUT_DIVERGENCE": false,
+    "input_and_output_rank_wording": "Input-sensitive rank is computed after raw-action Gram whitening; output r95 alone is not an action-space dimension claim.",
+    "state_conditioned_chart_eligible": true
+  },
+  "historical_final_six_opened": false,
+  "input_metric": {
+    "discarded_near_null_modes": 0,
+    "gram_condition_number_retained": 598529.5052730367,
+    "gram_rank": 63,
+    "raw_action_dimension": 14397,
+    "regularization": {
+      "method": "rank_truncated_eigendecomposition",
+      "relative_eigenvalue_floor": 1e-08
+    }
+  },
+  "roles": {
+    "development": {
+      "JVP": {
+        "input_P0_Pq_angle_median_degrees": 19.736500849632694,
+        "input_grassmann_median": 2.038799856317194,
+        "input_overlap_median": 0.7802810825412385,
+        "input_r90_r95_r99_median": [
+          11.0,
+          15.0,
+          29.0
+        ],
+        "output_P0_Pq_angle_median_degrees": 18.248095683296512,
+        "output_grassmann_median": 1.8139402655621497,
+        "output_overlap_median": 0.8172219313194328,
+        "output_r90_r95_r99_median": [
+          11.0,
+          15.0,
+          29.0
+        ],
+        "stable_rank_median": 2.09120484010703
+      },
+      "JVP_finite_P0": {
+        "input_angle_median_degrees": 40.7548833250102,
+        "input_subspace_overlap_median": 0.5412380658820046,
+        "output_subspace_overlap_median": 0.7055670644136518
+      },
+      "JVP_finite_Pq": {
+        "input_angle_median_degrees": 48.70644552983043,
+        "input_subspace_overlap_median": 0.45464295059934157,
+        "output_subspace_overlap_median": 0.6418342355980715
+      },
+      "finite": {
+        "input_P0_Pq_angle_median_degrees": 31.432936489608487,
+        "input_grassmann_median": 3.0579225011968756,
+        "input_overlap_median": 0.638980172563941,
+        "input_r90_r95_r99_median": [
+          15.0,
+          20.0,
+          33.0
+        ],
+        "output_P0_Pq_angle_median_degrees": 37.05156194516776,
+        "output_grassmann_median": 3.359194992172375,
+        "output_overlap_median": 0.5707972408013218,
+        "output_r90_r95_r99_median": [
+          15.0,
+          20.0,
+          33.0
+        ],
+        "stable_rank_median": 3.225996242242145
+      }
+    },
+    "validation": {
+      "JVP": {
+        "input_P0_Pq_angle_median_degrees": 18.534038343113878,
+        "input_grassmann_median": 2.118753826559529,
+        "input_overlap_median": 0.7752741494300451,
+        "input_r90_r95_r99_median": [
+          11.0,
+          15.0,
+          29.0
+        ],
+        "output_P0_Pq_angle_median_degrees": 18.292334325598972,
+        "output_grassmann_median": 1.794863985492176,
+        "output_overlap_median": 0.8088075634845215,
+        "output_r90_r95_r99_median": [
+          11.0,
+          15.0,
+          29.0
+        ],
+        "stable_rank_median": 2.251503530236295
+      },
+      "JVP_finite_P0": {
+        "input_angle_median_degrees": 42.026542649280344,
+        "input_subspace_overlap_median": 0.5334274735737804,
+        "output_subspace_overlap_median": 0.6956628154522233
+      },
+      "JVP_finite_Pq": {
+        "input_angle_median_degrees": 47.13686461684393,
+        "input_subspace_overlap_median": 0.45756340456229,
+        "output_subspace_overlap_median": 0.6201772235360664
+      },
+      "finite": {
+        "input_P0_Pq_angle_median_degrees": 31.40673662698852,
+        "input_grassmann_median": 3.060855914536918,
+        "input_overlap_median": 0.6371100038845959,
+        "input_r90_r95_r99_median": [
+          14.0,
+          20.0,
+          34.0
+        ],
+        "output_P0_Pq_angle_median_degrees": 35.3715706393474,
+        "output_grassmann_median": 3.361614031560692,
+        "output_overlap_median": 0.5826828133295425,
+        "output_r90_r95_r99_median": [
+          14.0,
+          20.0,
+          34.0
+        ],
+        "stable_rank_median": 3.1299107892728903
+      }
+    }
+  },
+  "rows_sha256": "e7893c90e4251d3e6553f4bac67d338b3b20cf798f1a781de866574f2b5e6050"
+}

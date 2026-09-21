@@ -1,0 +1,20 @@
+{
+  "V22_code_or_machine_record_failure": false,
+  "failures": [
+    {
+      "classification": "inherited cumulative FINAL_REPORT hash mismatch",
+      "test": "tests/test_v14.py::test_v14_integrity_manifest"
+    },
+    {
+      "classification": "inherited cumulative FINAL_REPORT hash mismatch",
+      "test": "tests/test_v16.py::test_v16_historical_bytes_unchanged_and_manifest"
+    }
+  ],
+  "full_command": "PYTHONPATH=src python -m pytest -q",
+  "full_failed": 2,
+  "full_passed": 238,
+  "historical_manifests_modified_to_hide_failure": false,
+  "v22_command": "PYTHONPATH=src python -m pytest -q tests/test_v22.py",
+  "v22_failed": 0,
+  "v22_passed": 5
+}

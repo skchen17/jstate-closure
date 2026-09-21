@@ -664,3 +664,8 @@ On 50 development + 25 disjoint validation P0/Pq bases, matched 64-probe exact-J
 
 `COMPACT_OPERATOR_SEARCH_REOPENED=False`; `RAW_TO_OPERATOR_ENCODER_AUTHORIZED=False`; `DYNAMIC_STATE_SEARCH_AUTHORIZED=False`. Final six action responses remain sealed. H2 remains; H3, complete replacement and autonomous control are not authorized. Historical V1–V20 frozen inputs are unchanged. See `reports/V21_COMPLETE_REPORT.md` for every standalone report, amendment, machine-record hash, and limitation.
 <!-- V21_END -->
+
+
+## V22 — Causal Action Manifold Expansion and Input-Side Operator Geometry
+
+Formal outcome: `V22-D_ACTION_DATA_LIMITED`. Metric-corrected input subspaces rotate with persistent state, but no practical action coordinate passes; action scaling remains unsaturated, compact-operator reopening is false, both final sets remain sealed, H2 remains, and H3/dynamic-state search remain unauthorized. See `reports/V22_COMPLETE_REPORT.md`.

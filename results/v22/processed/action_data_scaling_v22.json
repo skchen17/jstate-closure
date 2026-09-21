@@ -1,0 +1,877 @@
+{
+  "best": {
+    "action_count": 12,
+    "direction_cosine_median": -0.04864436548688496,
+    "family_relative_l2": {
+      "boolean_logic": 1.006395220879647,
+      "modular_arithmetic": 1.0108567917046307,
+      "short_graph_traversal": 1.014062823675679,
+      "simple_state_transition": 0.9899796312877186,
+      "variable_binding": 0.9854448646403923
+    },
+    "internal_ridge_curve": [
+      {
+        "internal_action_holdout_relative_l2": 0.9221008263649517,
+        "ridge": 0.001
+      },
+      {
+        "internal_action_holdout_relative_l2": 0.922100773081786,
+        "ridge": 0.01
+      },
+      {
+        "internal_action_holdout_relative_l2": 0.922100240599671,
+        "ridge": 0.1
+      },
+      {
+        "internal_action_holdout_relative_l2": 0.9220949505001406,
+        "ridge": 1.0
+      },
+      {
+        "internal_action_holdout_relative_l2": 0.9220453038518905,
+        "ridge": 10.0
+      },
+      {
+        "internal_action_holdout_relative_l2": 0.9217438730696847,
+        "ridge": 100.0
+      }
+    ],
+    "local_S2_action_ceiling": {
+      "direction_cosine_median": 0.055771009130345106,
+      "family_relative_l2": {
+        "boolean_logic": 1.024401377173846,
+        "modular_arithmetic": 1.0067306043593738,
+        "short_graph_traversal": 1.003335626487348,
+        "simple_state_transition": 0.9601762066617813,
+        "variable_binding": 0.9711607004029738
+      },
+      "norm_ratio_median": 0.027731774260454582,
+      "relative_l2": 0.9950909996180739
+    },
+    "norm_ratio_median": 0.040763752878261915,
+    "relative_l2": 1.0015672209142756,
+    "selected_ridge": 100.0,
+    "strategy": "causal_d_optimal"
+  },
+  "rows": [
+    {
+      "action_count": 12,
+      "direction_cosine_median": -0.04864436548688496,
+      "family_relative_l2": {
+        "boolean_logic": 1.006395220879647,
+        "modular_arithmetic": 1.0108567917046307,
+        "short_graph_traversal": 1.014062823675679,
+        "simple_state_transition": 0.9899796312877186,
+        "variable_binding": 0.9854448646403923
+      },
+      "internal_ridge_curve": [
+        {
+          "internal_action_holdout_relative_l2": 0.9221008263649517,
+          "ridge": 0.001
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.922100773081786,
+          "ridge": 0.01
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.922100240599671,
+          "ridge": 0.1
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9220949505001406,
+          "ridge": 1.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9220453038518905,
+          "ridge": 10.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9217438730696847,
+          "ridge": 100.0
+        }
+      ],
+      "local_S2_action_ceiling": {
+        "direction_cosine_median": 0.055771009130345106,
+        "family_relative_l2": {
+          "boolean_logic": 1.024401377173846,
+          "modular_arithmetic": 1.0067306043593738,
+          "short_graph_traversal": 1.003335626487348,
+          "simple_state_transition": 0.9601762066617813,
+          "variable_binding": 0.9711607004029738
+        },
+        "norm_ratio_median": 0.027731774260454582,
+        "relative_l2": 0.9950909996180739
+      },
+      "norm_ratio_median": 0.040763752878261915,
+      "relative_l2": 1.0015672209142756,
+      "selected_ridge": 100.0,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 24,
+      "direction_cosine_median": 0.07781664097294541,
+      "family_relative_l2": {
+        "boolean_logic": 1.011728990612127,
+        "modular_arithmetic": 1.0312389637449553,
+        "short_graph_traversal": 0.9981283671213287,
+        "simple_state_transition": 1.0027611401636087,
+        "variable_binding": 1.0210914773797388
+      },
+      "internal_ridge_curve": [
+        {
+          "internal_action_holdout_relative_l2": 1.026095539007828,
+          "ridge": 0.001
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.0260961883135082,
+          "ridge": 0.01
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.0261026646803943,
+          "ridge": 0.1
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.0261657943472726,
+          "ridge": 1.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.0266627464399003,
+          "ridge": 10.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.0275630378254266,
+          "ridge": 100.0
+        }
+      ],
+      "local_S2_action_ceiling": {
+        "direction_cosine_median": 0.27471905979707656,
+        "family_relative_l2": {
+          "boolean_logic": 1.0280683796826982,
+          "modular_arithmetic": 1.01073610972888,
+          "short_graph_traversal": 0.9769128869926429,
+          "simple_state_transition": 0.9613557803005429,
+          "variable_binding": 0.9915331317801459
+        },
+        "norm_ratio_median": 0.1943917292418435,
+        "relative_l2": 0.9953829061402593
+      },
+      "norm_ratio_median": 0.17327626655148626,
+      "relative_l2": 1.0123469842036712,
+      "selected_ridge": 0.001,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 48,
+      "direction_cosine_median": 0.09401479110608235,
+      "family_relative_l2": {
+        "boolean_logic": 1.023128507662007,
+        "modular_arithmetic": 1.0558416576574525,
+        "short_graph_traversal": 0.9964848552193687,
+        "simple_state_transition": 1.0231911975508055,
+        "variable_binding": 1.0617535354495875
+      },
+      "internal_ridge_curve": [
+        {
+          "internal_action_holdout_relative_l2": 0.9852485275022145,
+          "ridge": 0.001
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9852057152337675,
+          "ridge": 0.01
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9847876830096233,
+          "ridge": 0.1
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9814544169867235,
+          "ridge": 1.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9760336454721497,
+          "ridge": 10.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9910413309925148,
+          "ridge": 100.0
+        }
+      ],
+      "local_S2_action_ceiling": {
+        "direction_cosine_median": 0.457578235819193,
+        "family_relative_l2": {
+          "boolean_logic": 1.0107437932173229,
+          "modular_arithmetic": 1.0084198522194796,
+          "short_graph_traversal": 0.9594559821044768,
+          "simple_state_transition": 0.9893342590956147,
+          "variable_binding": 1.0111199204629595
+        },
+        "norm_ratio_median": 0.27804383153320195,
+        "relative_l2": 0.9958119554301094
+      },
+      "norm_ratio_median": 0.2942985126804294,
+      "relative_l2": 1.0309784080008557,
+      "selected_ridge": 10.0,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 96,
+      "direction_cosine_median": 0.17708560337134044,
+      "family_relative_l2": {
+        "boolean_logic": 1.2789957734103048,
+        "modular_arithmetic": 1.3465581090535066,
+        "short_graph_traversal": 1.6078979811042349,
+        "simple_state_transition": 1.3243052994167213,
+        "variable_binding": 1.5583460442467696
+      },
+      "internal_ridge_curve": [
+        {
+          "internal_action_holdout_relative_l2": 0.8564482887673024,
+          "ridge": 0.001
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.8529382049138017,
+          "ridge": 0.01
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.8357040965109824,
+          "ridge": 0.1
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.8090065513344026,
+          "ridge": 1.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.8215738771997259,
+          "ridge": 10.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9217722825471145,
+          "ridge": 100.0
+        }
+      ],
+      "local_S2_action_ceiling": {
+        "direction_cosine_median": 0.6195013991083871,
+        "family_relative_l2": {
+          "boolean_logic": 1.3368499724799086,
+          "modular_arithmetic": 1.3893281471870638,
+          "short_graph_traversal": 1.7393874035129235,
+          "simple_state_transition": 1.365145826818873,
+          "variable_binding": 1.3844151352445013
+        },
+        "norm_ratio_median": 0.6956578326681555,
+        "relative_l2": 1.4571196497487973
+      },
+      "norm_ratio_median": 0.3489703581145659,
+      "relative_l2": 1.4367624210088135,
+      "selected_ridge": 1.0,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 128,
+      "direction_cosine_median": 0.17770511127868038,
+      "family_relative_l2": {
+        "boolean_logic": 1.1602309060365268,
+        "modular_arithmetic": 1.2384750093736827,
+        "short_graph_traversal": 1.531692173411663,
+        "simple_state_transition": 1.2128831355905776,
+        "variable_binding": 1.3991941241105739
+      },
+      "internal_ridge_curve": [
+        {
+          "internal_action_holdout_relative_l2": 0.7922269788501586,
+          "ridge": 0.001
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.7882461507022638,
+          "ridge": 0.01
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.7743268552735522,
+          "ridge": 0.1
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.7671220160425245,
+          "ridge": 1.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.7750239769728845,
+          "ridge": 10.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.8685388328110418,
+          "ridge": 100.0
+        }
+      ],
+      "local_S2_action_ceiling": {
+        "direction_cosine_median": 0.6205659663807497,
+        "family_relative_l2": {
+          "boolean_logic": 1.477538112406949,
+          "modular_arithmetic": 1.4547453257021745,
+          "short_graph_traversal": 1.8366569451405637,
+          "simple_state_transition": 1.4298699393692953,
+          "variable_binding": 1.4493061990794776
+        },
+        "norm_ratio_median": 0.6973011037498076,
+        "relative_l2": 1.5473846229405257
+      },
+      "norm_ratio_median": 0.3478423458106963,
+      "relative_l2": 1.3225663964455094,
+      "selected_ridge": 1.0,
+      "strategy": "causal_d_optimal"
+    },
+    {
+      "action_count": 12,
+      "direction_cosine_median": 0.09968270348021893,
+      "family_relative_l2": {
+        "boolean_logic": 1.0649002188491286,
+        "modular_arithmetic": 1.131089200926099,
+        "short_graph_traversal": 1.0981682212981891,
+        "simple_state_transition": 1.135243507093372,
+        "variable_binding": 1.1265460961139924
+      },
+      "internal_ridge_curve": [
+        {
+          "internal_action_holdout_relative_l2": 1.0124862991892163,
+          "ridge": 0.001
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.0100690513759314,
+          "ridge": 0.01
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9911345811192558,
+          "ridge": 0.1
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9405037014807978,
+          "ridge": 1.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9307966365615875,
+          "ridge": 10.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9793008235049747,
+          "ridge": 100.0
+        }
+      ],
+      "local_S2_action_ceiling": {
+        "direction_cosine_median": 0.5871148982422949,
+        "family_relative_l2": {
+          "boolean_logic": 1.0454578162267383,
+          "modular_arithmetic": 1.0019918121054132,
+          "short_graph_traversal": 1.0491964378320484,
+          "simple_state_transition": 0.9998654751711743,
+          "variable_binding": 0.9811728951985774
+        },
+        "norm_ratio_median": 0.3074264406323747,
+        "relative_l2": 1.0184354238559625
+      },
+      "norm_ratio_median": 0.18366230477196827,
+      "relative_l2": 1.1078551642020238,
+      "selected_ridge": 10.0,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 24,
+      "direction_cosine_median": 0.14977851380729593,
+      "family_relative_l2": {
+        "boolean_logic": 1.0700014609655328,
+        "modular_arithmetic": 1.166852988245187,
+        "short_graph_traversal": 1.1463792207053434,
+        "simple_state_transition": 1.1820161148072403,
+        "variable_binding": 1.1724392745785306
+      },
+      "internal_ridge_curve": [
+        {
+          "internal_action_holdout_relative_l2": 1.4478458823144484,
+          "ridge": 0.001
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.4356187489232024,
+          "ridge": 0.01
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.3591101432120094,
+          "ridge": 0.1
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.1302941242441873,
+          "ridge": 1.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9210409409176816,
+          "ridge": 10.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9528111402690072,
+          "ridge": 100.0
+        }
+      ],
+      "local_S2_action_ceiling": {
+        "direction_cosine_median": 0.6077090793316302,
+        "family_relative_l2": {
+          "boolean_logic": 1.0298870416548127,
+          "modular_arithmetic": 0.9856585727671522,
+          "short_graph_traversal": 1.0535457216105537,
+          "simple_state_transition": 0.9872544613093224,
+          "variable_binding": 0.9708183823023296
+        },
+        "norm_ratio_median": 0.4062443141510136,
+        "relative_l2": 1.0088858288579219
+      },
+      "norm_ratio_median": 0.22233408185976974,
+      "relative_l2": 1.1434303366585807,
+      "selected_ridge": 10.0,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 48,
+      "direction_cosine_median": 0.16436044048358767,
+      "family_relative_l2": {
+        "boolean_logic": 1.091488855269423,
+        "modular_arithmetic": 1.1760630186628076,
+        "short_graph_traversal": 1.1509123512193893,
+        "simple_state_transition": 1.1727429068894826,
+        "variable_binding": 1.1810160013625235
+      },
+      "internal_ridge_curve": [
+        {
+          "internal_action_holdout_relative_l2": 1.1948654919885782,
+          "ridge": 0.001
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.1833036122110232,
+          "ridge": 0.01
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.1162926823220303,
+          "ridge": 0.1
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9950631554339461,
+          "ridge": 1.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9571452421646984,
+          "ridge": 10.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.974204328064005,
+          "ridge": 100.0
+        }
+      ],
+      "local_S2_action_ceiling": {
+        "direction_cosine_median": 0.6190771385797273,
+        "family_relative_l2": {
+          "boolean_logic": 1.0589861396066587,
+          "modular_arithmetic": 1.008951980195203,
+          "short_graph_traversal": 0.9868465046672531,
+          "simple_state_transition": 0.9534863150472201,
+          "variable_binding": 0.9871788437178476
+        },
+        "norm_ratio_median": 0.47900000248478547,
+        "relative_l2": 1.0028828046730904
+      },
+      "norm_ratio_median": 0.2670766770098424,
+      "relative_l2": 1.1511089084367043,
+      "selected_ridge": 10.0,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 96,
+      "direction_cosine_median": 0.163734331951158,
+      "family_relative_l2": {
+        "boolean_logic": 1.0170659727343907,
+        "modular_arithmetic": 1.0711423171309309,
+        "short_graph_traversal": 1.0209084616824542,
+        "simple_state_transition": 1.051836331769963,
+        "variable_binding": 1.049771460446223
+      },
+      "internal_ridge_curve": [
+        {
+          "internal_action_holdout_relative_l2": 11.107295372801484,
+          "ridge": 0.001
+        },
+        {
+          "internal_action_holdout_relative_l2": 11.018144035051272,
+          "ridge": 0.01
+        },
+        {
+          "internal_action_holdout_relative_l2": 10.406300565346287,
+          "ridge": 0.1
+        },
+        {
+          "internal_action_holdout_relative_l2": 7.449763520141895,
+          "ridge": 1.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 2.6868128415868253,
+          "ridge": 10.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.2468593574890432,
+          "ridge": 100.0
+        }
+      ],
+      "local_S2_action_ceiling": {
+        "direction_cosine_median": 0.5951073676015506,
+        "family_relative_l2": {
+          "boolean_logic": 1.0365312600881795,
+          "modular_arithmetic": 1.0458070108862076,
+          "short_graph_traversal": 0.9741980913589876,
+          "simple_state_transition": 1.0194461614430954,
+          "variable_binding": 1.014950839785926
+        },
+        "norm_ratio_median": 0.24609986903671321,
+        "relative_l2": 1.0169984884753307
+      },
+      "norm_ratio_median": 0.17835947185663698,
+      "relative_l2": 1.0393246344985874,
+      "selected_ridge": 100.0,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 128,
+      "direction_cosine_median": 0.17074863132997115,
+      "family_relative_l2": {
+        "boolean_logic": 1.0217777813463522,
+        "modular_arithmetic": 1.0651199343444002,
+        "short_graph_traversal": 1.0142571261438198,
+        "simple_state_transition": 1.0450765055382751,
+        "variable_binding": 1.0484496559388725
+      },
+      "internal_ridge_curve": [
+        {
+          "internal_action_holdout_relative_l2": 7.301966361845417,
+          "ridge": 0.001
+        },
+        {
+          "internal_action_holdout_relative_l2": 7.157154088833866,
+          "ridge": 0.01
+        },
+        {
+          "internal_action_holdout_relative_l2": 6.151301467194452,
+          "ridge": 0.1
+        },
+        {
+          "internal_action_holdout_relative_l2": 3.0816153043824195,
+          "ridge": 1.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.021220974540574,
+          "ridge": 10.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.7531738723855623,
+          "ridge": 100.0
+        }
+      ],
+      "local_S2_action_ceiling": {
+        "direction_cosine_median": 0.5944577527564411,
+        "family_relative_l2": {
+          "boolean_logic": 1.0329140279071005,
+          "modular_arithmetic": 1.0369258227142928,
+          "short_graph_traversal": 0.9567398540317935,
+          "simple_state_transition": 1.012106814707841,
+          "variable_binding": 1.0038752195874108
+        },
+        "norm_ratio_median": 0.276736302318492,
+        "relative_l2": 1.0073998231022387
+      },
+      "norm_ratio_median": 0.18165242881968774,
+      "relative_l2": 1.036625507975645,
+      "selected_ridge": 100.0,
+      "strategy": "random_architecture_balanced"
+    },
+    {
+      "action_count": 12,
+      "direction_cosine_median": 0.059154655482096,
+      "family_relative_l2": {
+        "boolean_logic": 1.0128278358441796,
+        "modular_arithmetic": 1.0202040896719893,
+        "short_graph_traversal": 0.9954181640616693,
+        "simple_state_transition": 0.9930269599249825,
+        "variable_binding": 1.0218028728009056
+      },
+      "internal_ridge_curve": [
+        {
+          "internal_action_holdout_relative_l2": 0.8297012186421882,
+          "ridge": 0.001
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.8283747558453355,
+          "ridge": 0.01
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.8211573756522762,
+          "ridge": 0.1
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.8069019944013063,
+          "ridge": 1.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.8411044082818768,
+          "ridge": 10.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.964477266753222,
+          "ridge": 100.0
+        }
+      ],
+      "local_S2_action_ceiling": {
+        "direction_cosine_median": 0.5605983083522452,
+        "family_relative_l2": {
+          "boolean_logic": 0.9830521859584642,
+          "modular_arithmetic": 0.9613212395163843,
+          "short_graph_traversal": 0.8639814558402332,
+          "simple_state_transition": 0.9047604549255384,
+          "variable_binding": 0.9172639135553038
+        },
+        "norm_ratio_median": 0.5448027355418221,
+        "relative_l2": 0.9271855356580966
+      },
+      "norm_ratio_median": 0.22624562253316144,
+      "relative_l2": 1.0088549920013423,
+      "selected_ridge": 1.0,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 24,
+      "direction_cosine_median": 0.07327166860988274,
+      "family_relative_l2": {
+        "boolean_logic": 1.0138236529375582,
+        "modular_arithmetic": 1.019573471218212,
+        "short_graph_traversal": 0.9901502207423534,
+        "simple_state_transition": 0.9921589123086815,
+        "variable_binding": 1.0210400417948053
+      },
+      "internal_ridge_curve": [
+        {
+          "internal_action_holdout_relative_l2": 0.7707876899678889,
+          "ridge": 0.001
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.769077559153289,
+          "ridge": 0.01
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.764839012762268,
+          "ridge": 0.1
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.7624672123237209,
+          "ridge": 1.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.7901257790314772,
+          "ridge": 10.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9354061588334415,
+          "ridge": 100.0
+        }
+      ],
+      "local_S2_action_ceiling": {
+        "direction_cosine_median": 0.5718856720979573,
+        "family_relative_l2": {
+          "boolean_logic": 0.9743244609546605,
+          "modular_arithmetic": 0.958213140724112,
+          "short_graph_traversal": 0.8597295414732742,
+          "simple_state_transition": 0.9068699624599262,
+          "variable_binding": 0.9156069964157806
+        },
+        "norm_ratio_median": 0.5611541073482263,
+        "relative_l2": 0.9235679906567684
+      },
+      "norm_ratio_median": 0.23582073501747208,
+      "relative_l2": 1.0075447281305967,
+      "selected_ridge": 1.0,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 48,
+      "direction_cosine_median": 0.06684253893397023,
+      "family_relative_l2": {
+        "boolean_logic": 1.0132850626637153,
+        "modular_arithmetic": 1.0210638895223223,
+        "short_graph_traversal": 0.9911696791563404,
+        "simple_state_transition": 0.9912901703544476,
+        "variable_binding": 1.0221222225184259
+      },
+      "internal_ridge_curve": [
+        {
+          "internal_action_holdout_relative_l2": 0.7789655506164237,
+          "ridge": 0.001
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.7778830145883825,
+          "ridge": 0.01
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.774580457072344,
+          "ridge": 0.1
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.7720859163869107,
+          "ridge": 1.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.7787754161184627,
+          "ridge": 10.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.8963681417894351,
+          "ridge": 100.0
+        }
+      ],
+      "local_S2_action_ceiling": {
+        "direction_cosine_median": 0.5738102525279993,
+        "family_relative_l2": {
+          "boolean_logic": 0.9703880497174178,
+          "modular_arithmetic": 0.9553218671670666,
+          "short_graph_traversal": 0.8551632569731522,
+          "simple_state_transition": 0.9044732803967642,
+          "variable_binding": 0.9162662187782852
+        },
+        "norm_ratio_median": 0.5664646521230103,
+        "relative_l2": 0.9209156235842726
+      },
+      "norm_ratio_median": 0.23672577564502356,
+      "relative_l2": 1.0079637004179218,
+      "selected_ridge": 1.0,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 96,
+      "direction_cosine_median": 0.10166681319771823,
+      "family_relative_l2": {
+        "boolean_logic": 1.008014632715921,
+        "modular_arithmetic": 1.0283615461889648,
+        "short_graph_traversal": 0.9838318107028964,
+        "simple_state_transition": 1.0100536335514179,
+        "variable_binding": 1.0284388237269992
+      },
+      "internal_ridge_curve": [
+        {
+          "internal_action_holdout_relative_l2": 1.0000441427043518,
+          "ridge": 0.001
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9999721581294437,
+          "ridge": 0.01
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9994364057158447,
+          "ridge": 0.1
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9959732201297008,
+          "ridge": 1.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9895661591954737,
+          "ridge": 10.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9937964113667077,
+          "ridge": 100.0
+        }
+      ],
+      "local_S2_action_ceiling": {
+        "direction_cosine_median": 0.585098857839677,
+        "family_relative_l2": {
+          "boolean_logic": 0.954198654054405,
+          "modular_arithmetic": 0.931466719752252,
+          "short_graph_traversal": 0.8344483226434671,
+          "simple_state_transition": 0.870551237965949,
+          "variable_binding": 0.8644417914375552
+        },
+        "norm_ratio_median": 0.48652942108536723,
+        "relative_l2": 0.8921038846513266
+      },
+      "norm_ratio_median": 0.22074574254388885,
+      "relative_l2": 1.0107288092779187,
+      "selected_ridge": 10.0,
+      "strategy": "raw_geometry_maximin"
+    },
+    {
+      "action_count": 128,
+      "direction_cosine_median": 0.17074863132962265,
+      "family_relative_l2": {
+        "boolean_logic": 1.0217777813446407,
+        "modular_arithmetic": 1.065119934342942,
+        "short_graph_traversal": 1.014257126142528,
+        "simple_state_transition": 1.0450765055344131,
+        "variable_binding": 1.0484496559367207
+      },
+      "internal_ridge_curve": [
+        {
+          "internal_action_holdout_relative_l2": 1.9669648695691722,
+          "ridge": 0.001
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.9552960807369337,
+          "ridge": 0.01
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.8725978740283513,
+          "ridge": 0.1
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.5334219177843407,
+          "ridge": 1.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 1.077941205029288,
+          "ridge": 10.0
+        },
+        {
+          "internal_action_holdout_relative_l2": 0.9738867207536419,
+          "ridge": 100.0
+        }
+      ],
+      "local_S2_action_ceiling": {
+        "direction_cosine_median": 0.594457752756441,
+        "family_relative_l2": {
+          "boolean_logic": 1.0329140279071003,
+          "modular_arithmetic": 1.0369258227142928,
+          "short_graph_traversal": 0.9567398540317934,
+          "simple_state_transition": 1.0121068147078407,
+          "variable_binding": 1.0038752195874108
+        },
+        "norm_ratio_median": 0.276736302318492,
+        "relative_l2": 1.0073998231022387
+      },
+      "norm_ratio_median": 0.18165242882195562,
+      "relative_l2": 1.0366255079736075,
+      "selected_ridge": 100.0,
+      "strategy": "raw_geometry_maximin"
+    }
+  ],
+  "saturation_by_strategy": {
+    "causal_d_optimal": false,
+    "random_architecture_balanced": true,
+    "raw_geometry_maximin": false
+  },
+  "step_improvements": {
+    "causal_d_optimal": [
+      -0.00029190652218535895,
+      -0.00042904928985010304,
+      -0.4613076943186879,
+      -0.09026497319172844
+    ],
+    "random_architecture_balanced": [
+      0.009549594998040645,
+      0.006003024184831451,
+      -0.014115683802240264,
+      0.009598665373091952
+    ],
+    "raw_geometry_maximin": [
+      0.0036175450013281596,
+      0.0026523670724958315,
+      0.028811738932945974,
+      -0.11529593845091213
+    ]
+  }
+}

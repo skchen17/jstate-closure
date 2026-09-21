@@ -1,0 +1,118 @@
+{
+  "V1_V21_records_mutated": false,
+  "config": {
+    "action_partitions": {
+      "independent_final_directions": 32,
+      "nested_counts": [
+        12,
+        24,
+        48,
+        96,
+        128
+      ],
+      "selection_strategies": [
+        "random_architecture_balanced",
+        "raw_geometry_maximin",
+        "causal_d_optimal"
+      ],
+      "validation_directions": 32
+    },
+    "authorization": {
+      "COMPACT_OPERATOR_SEARCH_REOPENED": "false_until_practical_action_coordinate_pass",
+      "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+      "H3_AUTHORIZED": false,
+      "RAW_TO_OPERATOR_ENCODER_AUTHORIZED": "false_until_compact_operator_and_independent_final_pass"
+    },
+    "candidate_pool": {
+      "alpha_candidates": [
+        0.25,
+        0.5,
+        1.0
+      ],
+      "calibration_states_per_family": 1,
+      "count": 512,
+      "derived_balanced_combinations": 6,
+      "historical_final_excluded": 6,
+      "symmetric_reliability_fraction_min": 0.8
+    },
+    "gates": {
+      "cosine_min": 0.9,
+      "family_relative_l2_max": 0.35,
+      "material_improvement": 0.02,
+      "norm_ratio_max": 1.2,
+      "norm_ratio_min": 0.8,
+      "relative_l2_max": 0.3,
+      "saturation_consecutive_steps": 2
+    },
+    "geometry": {
+      "energy_thresholds": [
+        0.9,
+        0.95,
+        0.99
+      ],
+      "gram_relative_eigenvalue_floor": 1e-08,
+      "material_rotation_degrees": 15.0,
+      "stable_input_rotation_degrees": 10.0
+    },
+    "models": {
+      "action_coordinates": [
+        "Z1",
+        "Z2",
+        "Z6",
+        "Z7",
+        "Z8_poly2",
+        "Z8_poly3",
+        "Z8_rff"
+      ],
+      "action_dimensions": [
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "operator_ranks": [
+        4,
+        8,
+        16,
+        32
+      ],
+      "ridge_grid": [
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        1.0
+      ],
+      "state_ceiling": "S2",
+      "state_primary": "S1"
+    },
+    "name": "Causal Action Manifold Expansion and Input-Side Operator Geometry",
+    "parent_commit": "351da6f061c3ed13e90324f50afc30f53a8796de",
+    "protocol_version": "causal_action_manifold_v22",
+    "seed": 20260923
+  },
+  "config_sha256": "6a24e56bed47a96cf13878d28bb0b8ffecce469acfd7b1bb669094ebe27e84c7",
+  "created_utc": "2026-09-21T06:49:12.703002+00:00",
+  "dynamic_state_search_authorized": false,
+  "freeze_digest": "fc2efccc8fa1f6072a0dbcc3a810c107bb09e6eedd68813b4fca6e800d1d85f5",
+  "frozen_input_sha256": {
+    "artifacts/action_coordinate_geometry_v21.freeze.json": "a19523776459e77656c57b160332ca2c71ee2b729f0e619fee6ceb7278663a53",
+    "artifacts/action_coordinate_geometry_v21_probe_scales.freeze.json": "2c296fc190388c651a20e98bcc745d1b860e7692cce7934cee903f3332e87e06",
+    "artifacts/action_coordinate_geometry_v21_roles.freeze.json": "1f549a3b88fca4845ead3ea2b9b9d2fb6c558cd0d63a0fea6d8d4c994c1455e5",
+    "artifacts/action_coordinate_geometry_v21_state_representations.freeze.json": "631c9ab6de5596ea9f733ff67c8b172201d7b3913b3ec81d397f676990c77da9",
+    "artifacts/causal/v13/probe_directions_v13.pt": "77aeccb5dccaef52c444d94b65797a18ce2984c76b6655e8a90714976cf51891",
+    "artifacts/compact_causal_response_operator_v20_actions.freeze.json": "9ab92bf2d6feeff8fa2e78b2c9c21e4a679b1c76b18d6544f21d08ecce91c030",
+    "reports/FINAL_REPORT.md": "3cc477d710be98dd2ebad327b482abe95da6eb7c4d1bd453ddbb40679e00def6",
+    "reports/V21_COMPLETE_REPORT.md": "98b4553559dd4ba874fb18847d5c31c1d8a2406d9f6806b63677c9642d1aebec",
+    "results/v21/processed/paired_geometry_analysis_v21.json": "d5697e27cc303477e0cc9ebf867841c487af7ed380d943c46558dfabc1dda342",
+    "results/v21/processed/paired_jvp_finite_operator_v21.parquet": "5d70a86f1449602835df5d302c149ed303b12df07cdd2e7daea3df22c3b86bf7",
+    "results/v21/processed/v21_adjudication.json": "4596b383115cb96ab73793456aaa86869a092a7014d15d2707115e3e72f53407"
+  },
+  "historical_final_six_opened": false,
+  "parent_commit": "351da6f061c3ed13e90324f50afc30f53a8796de",
+  "protocol_code_sha256": "2066d628cf354fe913edd948dddb0d73e4c0915f4f862281efd8061d16321664",
+  "protocol_version": "causal_action_manifold_v22",
+  "schema_version": 31
+}

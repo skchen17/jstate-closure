@@ -1,0 +1,48 @@
+{
+  "base_freeze_digest": "fc2efccc8fa1f6072a0dbcc3a810c107bb09e6eedd68813b4fca6e800d1d85f5",
+  "common_train_hash": "a5377e3897dd295c0267814c35f76844de4ca8331b25f56dd0d93cdd73dd1590",
+  "coordinate_scratch_sha256": "d031f04984145a1ba80195062c303a62a28289db1259a98c52d0e52b267f956d",
+  "created_utc": "2026-09-21T07:05:46.454230+00:00",
+  "freeze_digest": "da489609553aedb084e8efae5fa13a3e8c5a3a08e41601e6fcac579e5e984f0d",
+  "historical_final_responses_opened": false,
+  "independent_final_hash": "dc340edd9a827d4c4f433a2cd0102d64fe0c96aceb875895d3bc47c2b7f46eb4",
+  "input_sha256": {
+    "/data/CSK/J-space-project/jstate-closure/results/v22/processed/action_selection_v22.json": "1914e912280740639f431f0915190583887e494a01e18b3a3d577391149df334",
+    "results/v21/processed/paired_jvp_finite_operator_v21.parquet": "5d70a86f1449602835df5d302c149ed303b12df07cdd2e7daea3df22c3b86bf7",
+    "results/v22/processed/action_pool_calibration_v22.json": "d146b1d30031fd85c19df450ccd01e5dbee7c633400d4bbbac589a6d55448723",
+    "results/v22/processed/action_pool_v22.json": "ffa50028dd73855f679acdfb9d6beb8cc89b1b13188bc44482573d15b506dc64",
+    "src/jclosure/experiments/action_selection_v22.py": "7ec6aaf65ffb7f65e024452643989e4d4427f2a56eeb37a9e957c66e76680365"
+  },
+  "nested_counts": [
+    12,
+    24,
+    48,
+    96,
+    128
+  ],
+  "new_independent_final_responses_opened": false,
+  "protocol_version": "causal_action_manifold_v22_action_selection",
+  "schema_version": 31,
+  "selection_hashes": {
+    "causal_d_optimal": "44a4da39a4d950e0018dd6e95a3339f9c1afe6f5b2bfd9e96d08045f4fa706fd",
+    "random_architecture_balanced": "b2742ecbbff548c434870392af11fb6aad7d10c6efa042af3259282521f83762",
+    "raw_geometry_maximin": "9c27e515e95cf1d48fd07c2c1e27e13eaae23411a2c24b195f3546beae806df3"
+  },
+  "selection_strategies": [
+    "random_architecture_balanced",
+    "raw_geometry_maximin",
+    "causal_d_optimal"
+  ],
+  "validation_hash": "793cab02928568a7201c863993943c76da566809bb51fb6ce7f573e91fa14d5f",
+  "validation_reliability_amendment": {
+    "frozen_validation_reliable_count": 28,
+    "reason": "four pre-response validation candidates failed frozen symmetric BF16 reliability",
+    "reserve_action_ids": [
+      "d156",
+      "d146",
+      "d423",
+      "d131"
+    ],
+    "timing": "before expanded development or validation responses"
+  }
+}

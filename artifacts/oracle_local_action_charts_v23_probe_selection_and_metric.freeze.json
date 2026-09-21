@@ -1,0 +1,42 @@
+{
+  "base_freeze_digest": "378297e7c0413b1bcdddc05894dbcaff23835cdb349567dceb73ebb8bd387c66",
+  "created_utc": "2026-09-21T08:43:56.129562+00:00",
+  "freeze_digest": "6cef62c0c036bd0436acf01dd8887d7e34b41609af41dbd2fa020fce3cd09d7e",
+  "heldout_action_hash": "793cab02928568a7201c863993943c76da566809bb51fb6ce7f573e91fa14d5f",
+  "historical_final_action_overlap": [],
+  "historical_final_responses_opened": false,
+  "input_sha256": {
+    "/data/CSK/J-space-project/jstate-closure/results/v23/processed/probe_selection_v23.json": "58d9babb4ac07be6f2ffafb497d283775f2e0b772d640b751e06d0fe17dbb7df",
+    "artifacts/oracle_local_action_charts_v23_combo_calibration.freeze.json": "0fab0d699863e91ceb68f2e72b0bb42b3f0aa3b31bc77aec37fc512dca2c42d7",
+    "results/v22/processed/action_pool_calibration_v22.json": "d146b1d30031fd85c19df450ccd01e5dbee7c633400d4bbbac589a6d55448723",
+    "results/v22/processed/action_pool_v22.json": "ffa50028dd73855f679acdfb9d6beb8cc89b1b13188bc44482573d15b506dc64",
+    "src/jclosure/experiments/probe_design_v23.py": "5cc73f42564b4b5c573aa5d45eff58e2362ece049b8bc115d928489b583f3707"
+  },
+  "metric_rule": {
+    "absolute_eigenvalue_floor": 1e-12,
+    "gram_relative_eigenvalue_floor": 1e-08,
+    "rank_energy_thresholds": [
+      0.9,
+      0.95,
+      0.99
+    ],
+    "ridge_relative_trace": 1e-06
+  },
+  "metric_scratch_sha256": "9a1c9864c64b9179bf0c2ae392836a33a6f87fa59badb9c5928c7fd2e1e8e6f3",
+  "nested_probe_counts": [
+    64,
+    128,
+    256,
+    512
+  ],
+  "probe_hashes": {
+    "128": "e1daff6b0e3ac35c47e3c4d4780a55211f4250aca98b14a530fd6ab08083c450",
+    "256": "24d3d90c2dc3fe7cac33f625789b1d855d89eeb5a5fbf1a76861288a83dbce03",
+    "512": "9a1dd253da8e52b3163942f1a22bd2a65573e34522f7654782f7a34b05f48804",
+    "64": "1dbe804f7b4c3e0c7cd12449c7ce760c3381a0d7a9689c05a9077275052e722b"
+  },
+  "protocol_version": "oracle_local_action_charts_v23_probe_selection_and_metric",
+  "schema_version": 32,
+  "training_action_hash": "9a1dd253da8e52b3163942f1a22bd2a65573e34522f7654782f7a34b05f48804",
+  "v23_independent_final_responses_opened": false
+}

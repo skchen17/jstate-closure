@@ -1,0 +1,41 @@
+protocol_version: oracle_local_action_charts_v23
+parent_commit: c755b4d7b0baf3aa0291456fcf49169087b8c863
+name: Oracle Local Action Charts and Input-Rank Scaling
+seed: 230023
+probe_counts: [64, 128, 256, 512]
+chart_dimensions: [4, 8, 12, 16, 24, 32, 48, 64]
+local_probe_counts: [4, 8, 16, 32, 64, 128]
+geometry:
+  gram_relative_eigenvalue_floor: 1.0e-8
+  absolute_eigenvalue_floor: 1.0e-12
+  ridge_relative_trace: 1.0e-6
+  rank_energy_thresholds: [0.90, 0.95, 0.99]
+rank_saturation:
+  absolute_r95_change_max: 2
+  relative_r95_change_max: 0.15
+  require_last_two_doublings: true
+oracle_gate:
+  stack_cosine_min: 0.90
+  j_cosine_min: 0.90
+  relative_l2_max: 0.30
+  norm_ratio_min: 0.80
+  norm_ratio_max: 1.20
+  required_categories: [unseen_direction, unseen_sign, unseen_amplitude, unseen_pair, unseen_dense]
+models:
+  names: [M0_nearest, M1_local_linear, M2_ridge, M3_quadratic, M4_cubic_nonlinear]
+  ridge_grid: [1.0e-6, 1.0e-4, 1.0e-2, 1.0]
+panels:
+  jvp_base_states: 10
+  finite_base_states: 5
+  finite_oracle_development_bases: 15
+  finite_oracle_validation_bases: 10
+  persistent_states_per_base: [P0, Pq]
+  training_actions: 512
+  heldout_validation_actions: 32
+  generated_combo_candidates: 128
+  independent_final_actions: 32
+authorization:
+  DYNAMIC_STATE_SEARCH_AUTHORIZED: false
+  H3_AUTHORIZED: false
+  historical_final_opening_prohibited: true
+

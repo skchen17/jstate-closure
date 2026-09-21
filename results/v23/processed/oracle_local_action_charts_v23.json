@@ -1,0 +1,332 @@
+{
+  "LOCAL_CAUSAL_SYSTEM_IDENTIFICATION_IS_SAMPLE_EFFICIENT": false,
+  "ORACLE_FINITE_LOCAL_CHART_PASS": false,
+  "ORACLE_JVP_LOCAL_CHART_PASS": false,
+  "ORACLE_LOCAL_CHART_PASS": false,
+  "best": {
+    "JVP": {
+      "categories": {
+        "unseen_amplitude": {
+          "family_relative_l2": {
+            "boolean_logic": 0.8999230010553176,
+            "modular_arithmetic": 0.905766122073488,
+            "short_graph_traversal": 0.8363239033076374,
+            "simple_state_transition": 0.8658150278780484,
+            "variable_binding": 0.8790870449233275
+          },
+          "median_cosine": 0.6465335664941382,
+          "median_j_cosine": 0.6267987061145316,
+          "median_norm_ratio": 0.20746872441219016,
+          "relative_l2": 0.8784015679991355,
+          "sample_count": 480
+        },
+        "unseen_dense": {
+          "family_relative_l2": {
+            "boolean_logic": 0.40626866246676707,
+            "modular_arithmetic": 0.5049045213085466,
+            "short_graph_traversal": 0.4738768048163778,
+            "simple_state_transition": 0.4020458364550673,
+            "variable_binding": 0.43277835004712384
+          },
+          "median_cosine": 0.8666661578836452,
+          "median_j_cosine": 0.8430870605082471,
+          "median_norm_ratio": 0.836195118376239,
+          "relative_l2": 0.45208620322197235,
+          "sample_count": 160
+        },
+        "unseen_direction": {
+          "family_relative_l2": {
+            "boolean_logic": 0.8081447499022967,
+            "modular_arithmetic": 0.8890879962870889,
+            "short_graph_traversal": 0.9172348479243075,
+            "simple_state_transition": 0.7766381063844219,
+            "variable_binding": 0.8405837131929998
+          },
+          "median_cosine": 0.6622724370879383,
+          "median_j_cosine": 0.6833799751209203,
+          "median_norm_ratio": 0.6805714361619708,
+          "relative_l2": 0.8436995949093331,
+          "sample_count": 640
+        },
+        "unseen_pair": {
+          "family_relative_l2": {
+            "boolean_logic": 0.10692420604043416,
+            "modular_arithmetic": 0.1297311914682831,
+            "short_graph_traversal": 0.12183078233855985,
+            "simple_state_transition": 0.09236143991846112,
+            "variable_binding": 0.10225000113600462
+          },
+          "median_cosine": 0.8118715154289091,
+          "median_j_cosine": 0.8569771261292523,
+          "median_norm_ratio": 0.8767033389210933,
+          "relative_l2": 0.11303465341362866,
+          "sample_count": 160
+        },
+        "unseen_sign": {
+          "family_relative_l2": {
+            "boolean_logic": 0.8496729267807563,
+            "modular_arithmetic": 0.8781788925628798,
+            "short_graph_traversal": 0.8404334660556954,
+            "simple_state_transition": 0.7673030712024785,
+            "variable_binding": 0.7983093568911294
+          },
+          "median_cosine": 0.6536292283120879,
+          "median_j_cosine": 0.6726294255607294,
+          "median_norm_ratio": 0.6902023344261401,
+          "relative_l2": 0.8275478830778368,
+          "sample_count": 640
+        }
+      },
+      "gate_pass": false,
+      "passing_tokens": [],
+      "token": "k24:M4_cubic_nonlinear"
+    },
+    "finite": {
+      "categories": {
+        "unseen_amplitude": {
+          "family_relative_l2": {
+            "boolean_logic": 0.9618880009958176,
+            "modular_arithmetic": 0.9571506772311091,
+            "short_graph_traversal": 0.957403943880807,
+            "simple_state_transition": 0.9423672657005773,
+            "variable_binding": 0.9811288210989236
+          },
+          "median_cosine": 0.31699997593105245,
+          "median_j_cosine": 0.31098385641809523,
+          "median_norm_ratio": 0.20107189748572887,
+          "relative_l2": 0.960953566332138,
+          "sample_count": 960
+        },
+        "unseen_dense": {
+          "family_relative_l2": {
+            "boolean_logic": 0.7847246256873927,
+            "modular_arithmetic": 0.7745315592548274,
+            "short_graph_traversal": 0.7472373502468769,
+            "simple_state_transition": 0.7740461000191566,
+            "variable_binding": 0.7723375254429772
+          },
+          "median_cosine": 0.5972643694182658,
+          "median_j_cosine": 0.5706961362186544,
+          "median_norm_ratio": 0.7150995850895188,
+          "relative_l2": 0.7691775735297596,
+          "sample_count": 320
+        },
+        "unseen_direction": {
+          "family_relative_l2": {
+            "boolean_logic": 1.029332430894815,
+            "modular_arithmetic": 1.0427938504720204,
+            "short_graph_traversal": 1.0168029043312912,
+            "simple_state_transition": 1.0318989552650448,
+            "variable_binding": 1.0109058645890674
+          },
+          "median_cosine": 0.37775064806189373,
+          "median_j_cosine": 0.3389530291702938,
+          "median_norm_ratio": 0.7270231306914366,
+          "relative_l2": 1.0258207784543418,
+          "sample_count": 1600
+        },
+        "unseen_pair": {
+          "family_relative_l2": {
+            "boolean_logic": 0.14430537173742786,
+            "modular_arithmetic": 0.10831275361244833,
+            "short_graph_traversal": 0.10597883882203527,
+            "simple_state_transition": 0.11541073151623592,
+            "variable_binding": 0.12795258739869264
+          },
+          "median_cosine": 0.8066648825996053,
+          "median_j_cosine": 0.8807956498182967,
+          "median_norm_ratio": 0.9963323475110348,
+          "relative_l2": 0.11878274396699628,
+          "sample_count": 320
+        },
+        "unseen_sign": {
+          "family_relative_l2": {
+            "boolean_logic": 1.0320587092596178,
+            "modular_arithmetic": 1.0161788362628787,
+            "short_graph_traversal": 1.0248334744524032,
+            "simple_state_transition": 1.0509901898509093,
+            "variable_binding": 0.9880907389182594
+          },
+          "median_cosine": 0.3933947549152428,
+          "median_j_cosine": 0.344084787184768,
+          "median_norm_ratio": 0.7246460898623,
+          "relative_l2": 1.019545943910348,
+          "sample_count": 1600
+        }
+      },
+      "gate_pass": false,
+      "passing_tokens": [],
+      "token": "k24:M0_nearest"
+    }
+  },
+  "chart_dimensions": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64
+  ],
+  "chart_predictability": {
+    "S0": null,
+    "S1": null,
+    "S2": null,
+    "S4": null,
+    "rule": "Gauge-invariant chart predictors are downstream of oracle sufficiency; raw-P predictor additionally requires oracle pass.",
+    "status": "NOT_RUN_ORACLE_GATE_FAILED"
+  },
+  "chart_summary_npz_sha256": "529053b3716d8b77a5687d4c06fe4e6740e10a099d59067c188365806f970fae",
+  "historical_final_responses_opened": false,
+  "jvp_finite_comparison": {
+    "finite_minus_jvp_best_direction_l2": 0.18212118354500872,
+    "identical_operator_state_count": 20,
+    "median_input_angle_degrees": 55.258445266408145,
+    "median_input_overlap": 0.35968745144933256
+  },
+  "k_chart_min": null,
+  "local_probe_curve": {
+    "128": {
+      "best_token": "k32:M0_nearest",
+      "median_cosine": 0.38607414960140807,
+      "median_j_cosine": 0.348008725962357,
+      "median_norm_ratio": 0.7142199043858382,
+      "relative_l2": 1.019415099502293,
+      "sample_count": 3200
+    },
+    "16": {
+      "best_token": "k12:M0_nearest",
+      "median_cosine": 0.35119735147429276,
+      "median_j_cosine": 0.3351858789811696,
+      "median_norm_ratio": 0.7528161745833588,
+      "relative_l2": 1.013987146551028,
+      "sample_count": 3200
+    },
+    "32": {
+      "best_token": "k32:M0_nearest",
+      "median_cosine": 0.363111439163039,
+      "median_j_cosine": 0.3862278914622397,
+      "median_norm_ratio": 0.8187013260238863,
+      "relative_l2": 1.0223800648995869,
+      "sample_count": 3200
+    },
+    "4": {
+      "best_token": "k4:M2_ridge",
+      "median_cosine": 0.4979512772478455,
+      "median_j_cosine": 0.41367253496208634,
+      "median_norm_ratio": 0.6790563808784552,
+      "relative_l2": 0.9264408380315695,
+      "sample_count": 3200
+    },
+    "64": {
+      "best_token": "k64:M0_nearest",
+      "median_cosine": 0.37766823683066963,
+      "median_j_cosine": 0.39511790983697914,
+      "median_norm_ratio": 0.8210619182045444,
+      "relative_l2": 1.0152519252826655,
+      "sample_count": 3200
+    },
+    "8": {
+      "best_token": "k8:M2_ridge",
+      "median_cosine": 0.5194881231497745,
+      "median_j_cosine": 0.4695532470665056,
+      "median_norm_ratio": 0.6793416466948523,
+      "relative_l2": 0.9312359388926131,
+      "sample_count": 3200
+    }
+  },
+  "metrics_parquet_sha256": "9e9d59707a0d26fb9df49ab141d9c1880629bc297e8ed7b4d33cd81d5464ea1c",
+  "models": [
+    "M0_nearest",
+    "M1_local_linear",
+    "M2_ridge",
+    "M3_quadratic",
+    "M4_cubic_nonlinear"
+  ],
+  "oracle_vs_learned": {
+    "V22_learned_chart_l2": 1.0016228034671468,
+    "oracle_best_direction_l2": 0.8436995949093331,
+    "oracle_minus_learned_l2": -0.15792320855781372
+  },
+  "same_J": {
+    "finite_input_chart_angle_median_degrees": 51.72642019105876,
+    "finite_output_chart_angle_median_degrees": 32.42275956970159,
+    "pair_count": 25,
+    "spectrum_relative_change_median": 0.2172212177604846
+  },
+  "smoothness": {
+    "across_family_median_angle_degrees": 52.30951725710685,
+    "adjacent_tokens_same_prompt": "NOT_MEASURED_NO_FROZEN_ADJACENT_TOKEN_ORACLE_PANEL",
+    "claim": "Nearest-J clean prompt states only; no adjacent-token smoothness claim is made.",
+    "natural_state_count": 25,
+    "nearby_J_median_angle_degrees": 51.3134197225542,
+    "nearby_J_median_grassmann": 4.794638607491937,
+    "same_family_median_angle_degrees": 50.697974691395075
+  },
+  "transport": {
+    "pair_count": 25,
+    "procrustes_residual_median": 0.9370222970594894,
+    "projector_overlap_median": 0.40170969809076285,
+    "transport_fidelity_median": 0.3374251796262395
+  },
+  "v23_independent_final_responses_opened": false,
+  "within_chart": {
+    "M1_local_linear": {
+      "family_relative_l2": {
+        "boolean_logic": 1.1452996013120227,
+        "modular_arithmetic": 1.1796981862304847,
+        "short_graph_traversal": 1.2982391576923924,
+        "simple_state_transition": 1.2227112419156019,
+        "variable_binding": 1.3106637806042924
+      },
+      "median_cosine": 0.2773379100688238,
+      "median_j_cosine": 0.32846943085720015,
+      "median_norm_ratio": 0.4320316960395186,
+      "relative_l2": 1.229354539546473,
+      "sample_count": 1600
+    },
+    "M2_ridge": {
+      "family_relative_l2": {
+        "boolean_logic": 1.1689784876225287,
+        "modular_arithmetic": 1.202269874182807,
+        "short_graph_traversal": 1.2612796774694344,
+        "simple_state_transition": 1.2220454988583869,
+        "variable_binding": 1.2886368257132756
+      },
+      "median_cosine": 0.5682603008557254,
+      "median_j_cosine": 0.5643724779018711,
+      "median_norm_ratio": 0.8727627403754521,
+      "relative_l2": 1.226426608354589,
+      "sample_count": 1600
+    },
+    "M3_quadratic": {
+      "family_relative_l2": {
+        "boolean_logic": 1.3161274333755446,
+        "modular_arithmetic": 1.295100683170991,
+        "short_graph_traversal": 1.4842082312617086,
+        "simple_state_transition": 1.376317347607782,
+        "variable_binding": 1.5007225639487751
+      },
+      "median_cosine": 0.6065169752509881,
+      "median_j_cosine": 0.630821499601594,
+      "median_norm_ratio": 0.7900609460748216,
+      "relative_l2": 1.3958950038338107,
+      "sample_count": 1600
+    },
+    "M4_cubic_nonlinear": {
+      "family_relative_l2": {
+        "boolean_logic": 1.3339607197389427,
+        "modular_arithmetic": 1.2944635250145977,
+        "short_graph_traversal": 1.497531663232642,
+        "simple_state_transition": 1.3787142822487695,
+        "variable_binding": 1.5469319150925986
+      },
+      "median_cosine": 0.6093480091230601,
+      "median_j_cosine": 0.6186848769219602,
+      "median_norm_ratio": 0.7773081898604021,
+      "relative_l2": 1.4135213069905581,
+      "sample_count": 1600
+    }
+  }
+}

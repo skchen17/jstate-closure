@@ -1,0 +1,15 @@
+{
+  "finite_base_count": 5,
+  "finite_operator_state_count": 10,
+  "finite_primary": "actual signed response at each action's smallest symmetrically reliable calibrated alpha",
+  "finite_secondary": "2x calibrated alpha on frozen first-64 panel",
+  "historical_final_responses_opened": false,
+  "jvp_base_count": 10,
+  "jvp_method": "torch.func.jvp exact forward AD on BF16-writeback action path",
+  "jvp_operator_state_count": 20,
+  "probe_count": 512,
+  "probe_selection_digest": "6cef62c0c036bd0436acf01dd8887d7e34b41609af41dbd2fa020fce3cd09d7e",
+  "target_dimension": 288,
+  "v22_common_128_finite_reused_without_remeasurement": true,
+  "v23_independent_final_responses_opened": false
+}

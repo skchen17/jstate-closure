@@ -1,0 +1,356 @@
+{
+  "INPUT_RANK_SATURATED": false,
+  "JVP_INPUT_RANK_SATURATED": false,
+  "JVP_saturation_checks": [
+    {
+      "from": 128,
+      "pass": false,
+      "to": 256,
+      "values": [
+        [
+          23.0,
+          28.0
+        ],
+        [
+          21.5,
+          25.5
+        ],
+        [
+          25.0,
+          31.5
+        ],
+        [
+          21.5,
+          26.5
+        ],
+        [
+          22.0,
+          27.5
+        ],
+        [
+          24.5,
+          30.0
+        ]
+      ]
+    },
+    {
+      "from": 256,
+      "pass": false,
+      "to": 512,
+      "values": [
+        [
+          28.0,
+          31.0
+        ],
+        [
+          25.5,
+          28.5
+        ],
+        [
+          31.5,
+          35.0
+        ],
+        [
+          26.5,
+          29.0
+        ],
+        [
+          27.5,
+          30.5
+        ],
+        [
+          30.0,
+          33.0
+        ]
+      ]
+    }
+  ],
+  "curves": {
+    "JVP": {
+      "128": {
+        "entropy_effective_rank_median": 11.58451556451012,
+        "family_input_r95_median": {
+          "boolean_logic": 21.5,
+          "modular_arithmetic": 25.0,
+          "short_graph_traversal": 21.5,
+          "simple_state_transition": 22.0,
+          "variable_binding": 24.5
+        },
+        "input_r90_r95_r99_median": [
+          15.0,
+          23.0,
+          48.0
+        ],
+        "operator_state_count": 20,
+        "output_r90_r95_r99_median": [
+          15.0,
+          23.0,
+          48.0
+        ],
+        "stable_rank_median": 2.3500568804534847
+      },
+      "256": {
+        "entropy_effective_rank_median": 13.595898268421411,
+        "family_input_r95_median": {
+          "boolean_logic": 25.5,
+          "modular_arithmetic": 31.5,
+          "short_graph_traversal": 26.5,
+          "simple_state_transition": 27.5,
+          "variable_binding": 30.0
+        },
+        "input_r90_r95_r99_median": [
+          17.5,
+          28.0,
+          65.0
+        ],
+        "operator_state_count": 20,
+        "output_r90_r95_r99_median": [
+          17.5,
+          28.0,
+          65.0
+        ],
+        "stable_rank_median": 2.595914412847721
+      },
+      "512": {
+        "entropy_effective_rank_median": 14.121761629400133,
+        "family_input_r95_median": {
+          "boolean_logic": 28.5,
+          "modular_arithmetic": 35.0,
+          "short_graph_traversal": 29.0,
+          "simple_state_transition": 30.5,
+          "variable_binding": 33.0
+        },
+        "input_r90_r95_r99_median": [
+          19.0,
+          31.0,
+          75.0
+        ],
+        "operator_state_count": 20,
+        "output_r90_r95_r99_median": [
+          19.0,
+          31.0,
+          75.0
+        ],
+        "stable_rank_median": 2.6070879620726752
+      },
+      "64": {
+        "entropy_effective_rank_median": 7.904717437752731,
+        "family_input_r95_median": {
+          "boolean_logic": 17.0,
+          "modular_arithmetic": 18.0,
+          "short_graph_traversal": 16.0,
+          "simple_state_transition": 16.0,
+          "variable_binding": 17.0
+        },
+        "input_r90_r95_r99_median": [
+          11.0,
+          17.0,
+          31.5
+        ],
+        "operator_state_count": 20,
+        "output_r90_r95_r99_median": [
+          11.0,
+          17.0,
+          31.5
+        ],
+        "stable_rank_median": 1.9686515998141187
+      }
+    },
+    "finite": {
+      "128": {
+        "entropy_effective_rank_median": 14.559170452503427,
+        "family_input_r95_median": {
+          "boolean_logic": 27.0,
+          "modular_arithmetic": 28.5,
+          "short_graph_traversal": 25.0,
+          "simple_state_transition": 28.0,
+          "variable_binding": 25.5
+        },
+        "input_r90_r95_r99_median": [
+          18.5,
+          27.0,
+          46.5
+        ],
+        "operator_state_count": 10,
+        "output_r90_r95_r99_median": [
+          18.5,
+          27.0,
+          46.5
+        ],
+        "stable_rank_median": 3.432738515534224
+      },
+      "256": {
+        "entropy_effective_rank_median": 18.105686054496694,
+        "family_input_r95_median": {
+          "boolean_logic": 33.5,
+          "modular_arithmetic": 34.5,
+          "short_graph_traversal": 30.0,
+          "simple_state_transition": 35.5,
+          "variable_binding": 33.0
+        },
+        "input_r90_r95_r99_median": [
+          23.0,
+          33.5,
+          60.5
+        ],
+        "operator_state_count": 10,
+        "output_r90_r95_r99_median": [
+          23.0,
+          33.5,
+          60.5
+        ],
+        "stable_rank_median": 4.343360522077351
+      },
+      "512": {
+        "entropy_effective_rank_median": 20.375324676965292,
+        "family_input_r95_median": {
+          "boolean_logic": 36.5,
+          "modular_arithmetic": 34.5,
+          "short_graph_traversal": 34.5,
+          "simple_state_transition": 39.0,
+          "variable_binding": 35.5
+        },
+        "input_r90_r95_r99_median": [
+          25.0,
+          36.5,
+          67.5
+        ],
+        "operator_state_count": 10,
+        "output_r90_r95_r99_median": [
+          25.0,
+          36.5,
+          67.5
+        ],
+        "stable_rank_median": 4.2210618402447775
+      },
+      "64": {
+        "entropy_effective_rank_median": 14.007229516687214,
+        "family_input_r95_median": {
+          "boolean_logic": 19.5,
+          "modular_arithmetic": 22.5,
+          "short_graph_traversal": 18.5,
+          "simple_state_transition": 22.5,
+          "variable_binding": 20.0
+        },
+        "input_r90_r95_r99_median": [
+          15.5,
+          21.0,
+          33.0
+        ],
+        "operator_state_count": 10,
+        "output_r90_r95_r99_median": [
+          15.5,
+          21.0,
+          33.0
+        ],
+        "stable_rank_median": 3.7483695761349187
+      }
+    }
+  },
+  "finite_INPUT_RANK_SATURATED": false,
+  "finite_saturation_checks": [
+    {
+      "from": 128,
+      "pass": false,
+      "to": 256,
+      "values": [
+        [
+          27.0,
+          33.5
+        ],
+        [
+          27.0,
+          33.5
+        ],
+        [
+          28.5,
+          34.5
+        ],
+        [
+          25.0,
+          30.0
+        ],
+        [
+          28.0,
+          35.5
+        ],
+        [
+          25.5,
+          33.0
+        ]
+      ]
+    },
+    {
+      "from": 256,
+      "pass": false,
+      "to": 512,
+      "values": [
+        [
+          33.5,
+          36.5
+        ],
+        [
+          33.5,
+          36.5
+        ],
+        [
+          34.5,
+          34.5
+        ],
+        [
+          30.0,
+          34.5
+        ],
+        [
+          35.5,
+          39.0
+        ],
+        [
+          33.0,
+          35.5
+        ]
+      ]
+    }
+  ],
+  "gram": {
+    "128": {
+      "discarded_modes": 0,
+      "effective_gram_rank": 128,
+      "raw_gram_rank": 128,
+      "retained_condition_number": 768950.9827110466,
+      "retained_eigenvalue_max": 527.675606417741,
+      "retained_eigenvalue_min": 0.0006862278848481932
+    },
+    "256": {
+      "discarded_modes": 2,
+      "effective_gram_rank": 254,
+      "raw_gram_rank": 254,
+      "retained_condition_number": 2979042.300233575,
+      "retained_eigenvalue_max": 531.6787686977912,
+      "retained_eigenvalue_min": 0.00017847305110642582
+    },
+    "512": {
+      "discarded_modes": 95,
+      "effective_gram_rank": 417,
+      "raw_gram_rank": 417,
+      "retained_condition_number": 5413166.128653811,
+      "retained_eigenvalue_max": 1052.572917638778,
+      "retained_eigenvalue_min": 0.00019444681589710238
+    },
+    "64": {
+      "discarded_modes": 0,
+      "effective_gram_rank": 64,
+      "raw_gram_rank": 64,
+      "retained_condition_number": 90459.79432038446,
+      "retained_eigenvalue_max": 477.7043882196607,
+      "retained_eigenvalue_min": 0.005280847605376585
+    }
+  },
+  "input_output_rank_note": "Input and output energy ranks are the shared nonzero singular-spectrum ranks of the metric-corrected operator; input vectors and output vectors live in different spaces.",
+  "rows_sha256": "d473cca94554c307946efe07081bb54988fbaa0e08eadd73a27622ab752301e0",
+  "saturation_rule": {
+    "absolute_r95_change_max": 2,
+    "relative_r95_change_max": 0.15,
+    "require_last_two_doublings": true
+  }
+}

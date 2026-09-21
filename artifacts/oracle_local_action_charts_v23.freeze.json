@@ -1,0 +1,123 @@
+{
+  "H3_authorized": false,
+  "V1_V22_records_mutated": false,
+  "config": {
+    "authorization": {
+      "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+      "H3_AUTHORIZED": false,
+      "historical_final_opening_prohibited": true
+    },
+    "chart_dimensions": [
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      48,
+      64
+    ],
+    "geometry": {
+      "absolute_eigenvalue_floor": 1e-12,
+      "gram_relative_eigenvalue_floor": 1e-08,
+      "rank_energy_thresholds": [
+        0.9,
+        0.95,
+        0.99
+      ],
+      "ridge_relative_trace": 1e-06
+    },
+    "local_probe_counts": [
+      4,
+      8,
+      16,
+      32,
+      64,
+      128
+    ],
+    "models": {
+      "names": [
+        "M0_nearest",
+        "M1_local_linear",
+        "M2_ridge",
+        "M3_quadratic",
+        "M4_cubic_nonlinear"
+      ],
+      "ridge_grid": [
+        1e-06,
+        0.0001,
+        0.01,
+        1.0
+      ]
+    },
+    "name": "Oracle Local Action Charts and Input-Rank Scaling",
+    "oracle_gate": {
+      "j_cosine_min": 0.9,
+      "norm_ratio_max": 1.2,
+      "norm_ratio_min": 0.8,
+      "relative_l2_max": 0.3,
+      "required_categories": [
+        "unseen_direction",
+        "unseen_sign",
+        "unseen_amplitude",
+        "unseen_pair",
+        "unseen_dense"
+      ],
+      "stack_cosine_min": 0.9
+    },
+    "panels": {
+      "finite_base_states": 5,
+      "finite_oracle_development_bases": 15,
+      "finite_oracle_validation_bases": 10,
+      "generated_combo_candidates": 128,
+      "heldout_validation_actions": 32,
+      "independent_final_actions": 32,
+      "jvp_base_states": 10,
+      "persistent_states_per_base": [
+        "P0",
+        "Pq"
+      ],
+      "training_actions": 512
+    },
+    "parent_commit": "c755b4d7b0baf3aa0291456fcf49169087b8c863",
+    "probe_counts": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "protocol_version": "oracle_local_action_charts_v23",
+    "rank_saturation": {
+      "absolute_r95_change_max": 2,
+      "relative_r95_change_max": 0.15,
+      "require_last_two_doublings": true
+    },
+    "seed": 230023
+  },
+  "config_sha256": "96156cb7e0e32b26a960681333a85292332fcd0acbc9f562eb52ef765abb5d75",
+  "created_utc": "2026-09-21T08:40:44.464421+00:00",
+  "dynamic_state_search_authorized": false,
+  "freeze_digest": "378297e7c0413b1bcdddc05894dbcaff23835cdb349567dceb73ebb8bd387c66",
+  "frozen_input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_roles.freeze.json": "1f549a3b88fca4845ead3ea2b9b9d2fb6c558cd0d63a0fea6d8d4c994c1455e5",
+    "artifacts/action_coordinate_geometry_v21_state_representations.freeze.json": "631c9ab6de5596ea9f733ff67c8b172201d7b3913b3ec81d397f676990c77da9",
+    "artifacts/causal/v13/probe_directions_v13.pt": "77aeccb5dccaef52c444d94b65797a18ce2984c76b6655e8a90714976cf51891",
+    "artifacts/causal_action_manifold_v22_action_selection.freeze.json": "2e137b1ea2742a07e486683efca29d0decf59a6bf1ec9926eaccc12bbc53b18f",
+    "artifacts/causal_action_manifold_v22_expanded_bank_design.freeze.json": "b8150317f342fbf775f2efe1a8fa9bb1df10e5aafffb62afb4172cc8bf08785b",
+    "artifacts/causal_action_manifold_v22_final.freeze.json": "5077b17c23409f45eb29ee19398772396349417041ac26436be0d7c88b88ee2b",
+    "reports/FINAL_REPORT.md": "7c818df5a7896421725a8bae3cefe38614ce176f0534114fff3c5662cc9f0e90",
+    "reports/V22_COMPLETE_REPORT.md": "ec2bdbac80f9015b2a9c69e792952c030a56166e217955c8ed569dd87fc86f2b",
+    "results/v22/processed/action_pool_calibration_v22.json": "d146b1d30031fd85c19df450ccd01e5dbee7c633400d4bbbac589a6d55448723",
+    "results/v22/processed/action_pool_v22.json": "ffa50028dd73855f679acdfb9d6beb8cc89b1b13188bc44482573d15b506dc64",
+    "results/v22/processed/action_scale_law_v22.json": "2dec68dd22946a48a3c51878939de572a7dccc678876da47fd89a9b0440b6afc",
+    "results/v22/processed/action_selection_v22.json": "1914e912280740639f431f0915190583887e494a01e18b3a3d577391149df334",
+    "results/v22/processed/expanded_bank_design_v22.json": "44bc075482cb196724eceba48b17b1bb9060ce489146c4511d16a542cb671a69",
+    "results/v22/processed/expanded_response_bank_index_v22.parquet": "eeee5b63e8e2293a88ccd20a132cc6b84466e9d58e78c46f493ee6d442088311",
+    "results/v22/processed/scale_composition_design_v22.json": "82184ddd9cbcc91e99bd572593a659e0d590822ad1261ebdc824d5a520688ede"
+  },
+  "historical_final_actions_opened": false,
+  "parent_commit": "c755b4d7b0baf3aa0291456fcf49169087b8c863",
+  "protocol_code_sha256": "c8f4ce4a0a4306877bfd69ca14a22c5076e6531fd76d13462f9b6381c4c3b91e",
+  "protocol_version": "oracle_local_action_charts_v23",
+  "schema_version": 32
+}

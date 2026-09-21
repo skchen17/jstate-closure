@@ -1,0 +1,22 @@
+{
+  "CHART_PREDICTION_BOTTLENECK": false,
+  "COMPACT_OPERATOR_SEARCH_REOPENED": false,
+  "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+  "FINITE_CHART_DIFFERS_FROM_JVP_CHART": false,
+  "H2_REMAINS": true,
+  "H3_AUTHORIZED": false,
+  "INPUT_RANK_SATURATED": false,
+  "LEARNED_LOCAL_CHART_PASS": false,
+  "LOCAL_CHART_SUFFICIENCY": false,
+  "ORACLE_LOCAL_CHART_PASS": false,
+  "RAW_TO_OPERATOR_ENCODER_AUTHORIZED": false,
+  "formal_outcomes": [
+    "V23-E_INPUT_RANK_NOT_SATURATED",
+    "V23-F_ORACLE_CHART_INSUFFICIENT"
+  ],
+  "historical_final_responses_opened": false,
+  "independent_final_status": "FROZEN_AND_UNOPENED_NO_DEVELOPMENT_VALIDATION_FINALIST",
+  "negative_result_wording": "The tested low-rank subspace chart is insufficient for held-out finite-action prediction; this does not imply that local charts do not exist. Input-sensitive causal rank remains probe-limited if saturation fails.",
+  "primary_outcome": "V23-E_INPUT_RANK_NOT_SATURATED+V23-F_ORACLE_CHART_INSUFFICIENT",
+  "v23_independent_final_responses_opened": false
+}

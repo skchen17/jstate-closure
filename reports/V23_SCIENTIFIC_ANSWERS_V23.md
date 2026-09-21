@@ -1,0 +1,31 @@
+# V23 Scientific Answers
+
+1. JVP input r95 saturation: False.
+2. Finite input r95 saturation: False.
+3. Best tested 512-probe JVP/finite r95: 31.0 / 36.5.
+4. Finite systematically exceeds JVP only if the full paired curve supports it; no inference is made from one point.
+5. Oracle JVP chart pass: False.
+6. Oracle finite chart pass: False.
+7. Best chart comparison is recorded by direction L2 and overlap; finite-minus-JVP direction L2=0.182121.
+8. k_chart_min=None.
+9. Oracle sign L2=1.019546.
+10. Oracle amplitude L2=0.960954.
+11. Oracle pair L2=0.118783.
+12. Oracle dense L2=0.769178.
+13. Local probe curve={'128': {'best_token': 'k32:M0_nearest', 'median_cosine': 0.38607414960140807, 'median_j_cosine': 0.348008725962357, 'median_norm_ratio': 0.7142199043858382, 'relative_l2': 1.019415099502293, 'sample_count': 3200}, '16': {'best_token': 'k12:M0_nearest', 'median_cosine': 0.35119735147429276, 'median_j_cosine': 0.3351858789811696, 'median_norm_ratio': 0.7528161745833588, 'relative_l2': 1.013987146551028, 'sample_count': 3200}, '32': {'best_token': 'k32:M0_nearest', 'median_cosine': 0.363111439163039, 'median_j_cosine': 0.3862278914622397, 'median_norm_ratio': 0.8187013260238863, 'relative_l2': 1.0223800648995869, 'sample_count': 3200}, '4': {'best_token': 'k4:M2_ridge', 'median_cosine': 0.4979512772478455, 'median_j_cosine': 0.41367253496208634, 'median_norm_ratio': 0.6790563808784552, 'relative_l2': 0.9264408380315695, 'sample_count': 3200}, '64': {'best_token': 'k64:M0_nearest', 'median_cosine': 0.37766823683066963, 'median_j_cosine': 0.39511790983697914, 'median_norm_ratio': 0.8210619182045444, 'relative_l2': 1.0152519252826655, 'sample_count': 3200}, '8': {'best_token': 'k8:M2_ridge', 'median_cosine': 0.5194881231497745, 'median_j_cosine': 0.4695532470665056, 'median_norm_ratio': 0.6793416466948523, 'relative_l2': 0.9312359388926131, 'sample_count': 3200}}.
+14. Sample-efficient identification=False.
+15. Natural adjacent-token smoothness was not measured; nearest-J angle=51.313420 degrees.
+16. Same-J P0/Pq finite chart angle=51.726420 degrees.
+17. S0 chart prediction=None (NOT_RUN_ORACLE_GATE_FAILED).
+18. S1 chart prediction=None (NOT_RUN_ORACLE_GATE_FAILED).
+19. S2 chart prediction=None (NOT_RUN_ORACLE_GATE_FAILED).
+20. Raw-P chart prediction=None (NOT_RUN_ORACLE_GATE_FAILED).
+21. Chart prediction is separated from sufficiency; oracle pass=False.
+22. Within-chart models=['M1_local_linear', 'M2_ridge', 'M3_quadratic', 'M4_cubic_nonlinear'].
+23. Quadratic/cubic necessity is judged only against the common gate; no passing law means no necessity claim.
+24. JVP/finite overlap=0.359687.
+25. Compact operator search reopened=False.
+26. Raw P→C authorized=False.
+27. H2 remains=True.
+28. H3 authorized=False.
+29. Dynamic-state search authorized=False.

@@ -1,0 +1,46 @@
+{
+  "PRE_READOUT_SILENT_BANK_HASH": "09fa769987745722f535d0382096eca99b3d8903f794eced2f191ce78b35a130",
+  "base_freeze_digest": "1de32375db20b199876b0ce5077056393b95cf392c216b757eb6600d1973a59e",
+  "by_role": {
+    "development": {
+      "distal": 0,
+      "rows": 650,
+      "silent": 0
+    },
+    "validation": {
+      "distal": 0,
+      "rows": 325,
+      "silent": 0
+    }
+  },
+  "created_utc": "2026-09-21T17:31:18.604846+00:00",
+  "distal_rows": 0,
+  "freeze_digest": "aab50f799ba000d139fbe560bda4c75dda7e64699d5685e4a2588e663297c0d6",
+  "future_responses_observed_before_freeze": 0,
+  "historical_final_opened": false,
+  "input_sha256": {
+    "artifacts/pre_readout_reentry_v27_boundary_audit.freeze.json": "2ff9d3c3de102cde6cd3954be22fa19988faa914d033b7bc50e28717fa1892c0",
+    "results/v27/processed/pre_readout_silent_bank_v27.json": "fc4f6a04fffff4d30b0aa6627dcab609f5fa1476bac8731d06b03e7f348fa646",
+    "results/v27/processed/pre_readout_silent_bank_v27.parquet": "09fa769987745722f535d0382096eca99b3d8903f794eced2f191ce78b35a130",
+    "src/jclosure/experiments/pre_readout_v27.py": "26b565f3b11e0785beb7d0ac8d3770c2f6998688719ee6c974aa56799018dc8d"
+  },
+  "protocol_version": "pre_readout_reentry_v27_silent_bank",
+  "reliable_rows": 860,
+  "rows": 975,
+  "schema_version": 36,
+  "selection_information": "h0_only",
+  "silent_rows": 0,
+  "states": 75,
+  "thresholds": {
+    "aggregate_max": 0.05,
+    "distal_aggregate_max": 0.1,
+    "individual_max": 0.05,
+    "primary_targets": [
+      "j",
+      "logits",
+      "semantic",
+      "workspace",
+      "late_residual"
+    ]
+  }
+}

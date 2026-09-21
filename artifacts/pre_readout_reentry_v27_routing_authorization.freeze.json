@@ -1,0 +1,20 @@
+{
+  "DETAILED_ROUTING_AUTHORIZED": false,
+  "ROUTING_AUTHORIZATION_HASH": "05904090f312d9106738662cef5041e334237cfebf22213fa521b9eb3a072b16",
+  "base_freeze_digest": "1de32375db20b199876b0ce5077056393b95cf392c216b757eb6600d1973a59e",
+  "created_utc": "2026-09-21T17:42:19.378157+00:00",
+  "distal_rows": 0,
+  "freeze_digest": "37e259444ab736b4c97104276622173c05a55eef118ab3af3814af00dbf1d509",
+  "future_effects_used_for_authorization": false,
+  "input_sha256": {
+    "artifacts/pre_readout_reentry_v27_timing_diagnostic.freeze.json": "b24293294a3265edfbd6e0e60e2d0641772c4195367e9746a11dacee712e2c02",
+    "results/v27/processed/pre_readout_silent_bank_expanded_v27.parquet": "d657c1c23622dfbffc87a7a0db9c6beec11739c06e1b7389c16483f44b87939d",
+    "results/v27/processed/pre_readout_silent_bank_v27.parquet": "09fa769987745722f535d0382096eca99b3d8903f794eced2f191ce78b35a130",
+    "results/v27/processed/routing_authorization_v27.json": "ba25101a913f29bf83bdc7da554afb1b57844c8947f0ac650f55210bdbea81c2",
+    "src/jclosure/experiments/adjudicate_failure_v27.py": "7139aad65eb932e95cd2d5d505300721f7c51b80f8722d1e7b410be291d739e9"
+  },
+  "protocol_version": "pre_readout_reentry_v27_routing_authorization",
+  "reason": "no PRE_READOUT_SILENT or PRE_READOUT_DISTAL rows after both prospectively frozen h0-only banks",
+  "schema_version": 36,
+  "silent_rows": 0
+}

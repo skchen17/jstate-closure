@@ -1,0 +1,70 @@
+{
+  "J_downstream": true,
+  "audit_sha256": "549e7ba0820ca6c7eeb408becf3d891c73364b18e38dc738d1ad3a38af54fb1e",
+  "base_freeze_digest": "1de32375db20b199876b0ce5077056393b95cf392c216b757eb6600d1973a59e",
+  "boundary": {
+    "name": "prefix_cache_before_final_prompt_token",
+    "prefix_excludes_tokens": 1,
+    "replay_safety_factor": 5.0
+  },
+  "boundary_hash": "7d26129b794dcbd9ff44dba94dff55b8b7a7430745cd3e24ebed7f368e65bc60",
+  "created_utc": "2026-09-21T17:29:10.386213+00:00",
+  "current_output_can_change_in_principle": true,
+  "fields_writable": true,
+  "freeze_digest": "35ebc7bc46dd67bfab0679d10cff82e32e2d907a95faf2f6b4b7a76237f9c79f",
+  "input_sha256": {
+    "artifacts/pre_readout_reentry_v27_design.freeze.json": "227970eea38a1ee0ce3abab32c52eec334c54ced977ef63f68d10c564e55eb37",
+    "results/v27/processed/pre_readout_boundary_audit_v27.json": "5a117b54272901a7307cb9061a7edc3ad5037f115e1aac13321d4bd66096fb00",
+    "results/v27/processed/pre_readout_boundary_audit_v27.parquet": "549e7ba0820ca6c7eeb408becf3d891c73364b18e38dc738d1ad3a38af54fb1e",
+    "src/jclosure/experiments/pre_readout_v27.py": "26b565f3b11e0785beb7d0ac8d3770c2f6998688719ee6c974aa56799018dc8d"
+  },
+  "logits_downstream": true,
+  "persistent_fields": {
+    "Conv": "conv_states",
+    "KV": [
+      "keys",
+      "values"
+    ],
+    "REC": "recurrent_states"
+  },
+  "persistent_update_already_happened_for_prefix": true,
+  "protocol_version": "pre_readout_reentry_v27_boundary_audit",
+  "reference_current_effect_medians": {
+    "broad_vocabulary": 1.0854840470299323,
+    "j": 0.0,
+    "late_residual": 1.0599786802904405,
+    "logits": 0.8916974063182536,
+    "semantic": 0.9000080751433239,
+    "workspace": 0.8649998421990377
+  },
+  "remaining_computation": "entire final prompt-token forward, all 32 blocks, state/workspace J, final norm, unembedding and logits",
+  "replay_floor": {
+    "broad_vocabulary": {
+      "normalized_safety_threshold": 1e-12,
+      "p99": 0.0
+    },
+    "j": {
+      "normalized_safety_threshold": 1e-12,
+      "p99": 0.0
+    },
+    "late_residual": {
+      "normalized_safety_threshold": 1e-12,
+      "p99": 0.0
+    },
+    "logits": {
+      "normalized_safety_threshold": 1e-12,
+      "p99": 0.0
+    },
+    "semantic": {
+      "normalized_safety_threshold": 1e-12,
+      "p99": 0.0
+    },
+    "workspace": {
+      "normalized_safety_threshold": 1e-12,
+      "p99": 0.0
+    }
+  },
+  "schema_version": 36,
+  "states": 25,
+  "structurally_guaranteed_invariance": false
+}

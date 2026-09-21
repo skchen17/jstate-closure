@@ -1,0 +1,57 @@
+{
+  "J_downstream": true,
+  "boundary": {
+    "name": "prefix_cache_before_final_prompt_token",
+    "prefix_excludes_tokens": 1,
+    "replay_safety_factor": 5.0
+  },
+  "current_output_can_change_in_principle": true,
+  "fields_writable": true,
+  "logits_downstream": true,
+  "persistent_fields": {
+    "Conv": "conv_states",
+    "KV": [
+      "keys",
+      "values"
+    ],
+    "REC": "recurrent_states"
+  },
+  "persistent_update_already_happened_for_prefix": true,
+  "reference_current_effect_medians": {
+    "broad_vocabulary": 1.0854840470299323,
+    "j": 0.0,
+    "late_residual": 1.0599786802904405,
+    "logits": 0.8916974063182536,
+    "semantic": 0.9000080751433239,
+    "workspace": 0.8649998421990377
+  },
+  "remaining_computation": "entire final prompt-token forward, all 32 blocks, state/workspace J, final norm, unembedding and logits",
+  "replay_floor": {
+    "broad_vocabulary": {
+      "normalized_safety_threshold": 1e-12,
+      "p99": 0.0
+    },
+    "j": {
+      "normalized_safety_threshold": 1e-12,
+      "p99": 0.0
+    },
+    "late_residual": {
+      "normalized_safety_threshold": 1e-12,
+      "p99": 0.0
+    },
+    "logits": {
+      "normalized_safety_threshold": 1e-12,
+      "p99": 0.0
+    },
+    "semantic": {
+      "normalized_safety_threshold": 1e-12,
+      "p99": 0.0
+    },
+    "workspace": {
+      "normalized_safety_threshold": 1e-12,
+      "p99": 0.0
+    }
+  },
+  "states": 25,
+  "structurally_guaranteed_invariance": false
+}

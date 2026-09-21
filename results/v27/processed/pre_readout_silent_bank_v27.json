@@ -1,0 +1,35 @@
+{
+  "PRE_READOUT_SILENT_BANK_HASH": "09fa769987745722f535d0382096eca99b3d8903f794eced2f191ce78b35a130",
+  "by_role": {
+    "development": {
+      "distal": 0,
+      "rows": 650,
+      "silent": 0
+    },
+    "validation": {
+      "distal": 0,
+      "rows": 325,
+      "silent": 0
+    }
+  },
+  "distal_rows": 0,
+  "future_responses_observed_before_freeze": 0,
+  "historical_final_opened": false,
+  "reliable_rows": 860,
+  "rows": 975,
+  "selection_information": "h0_only",
+  "silent_rows": 0,
+  "states": 75,
+  "thresholds": {
+    "aggregate_max": 0.05,
+    "distal_aggregate_max": 0.1,
+    "individual_max": 0.05,
+    "primary_targets": [
+      "j",
+      "logits",
+      "semantic",
+      "workspace",
+      "late_residual"
+    ]
+  }
+}

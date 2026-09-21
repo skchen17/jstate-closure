@@ -1,0 +1,176 @@
+{
+  "AUTONOMOUS_CONTROLLER_AUTHORIZED": false,
+  "DETAILED_ROUTING_AUTHORIZED": false,
+  "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+  "H3_AUTHORIZED": false,
+  "V1_V26_records_mutated": false,
+  "config": {
+    "actuation": {
+      "channels": [
+        "REC",
+        "Conv",
+        "KV",
+        "REC+Conv",
+        "REC+KV",
+        "Conv+KV",
+        "joint"
+      ],
+      "component_action_ids": {
+        "Conv": "d198",
+        "KV": "d404",
+        "REC": "d508"
+      },
+      "reference_action_id": "d000",
+      "reliability_cosine_min": 0.9,
+      "reliability_gain_max": 1.5,
+      "reliability_gain_min": 0.5,
+      "scale_sign_grid": [
+        [
+          -1,
+          0.25
+        ],
+        [
+          1,
+          0.25
+        ],
+        [
+          -1,
+          0.5
+        ],
+        [
+          1,
+          0.5
+        ],
+        [
+          -1,
+          1.0
+        ],
+        [
+          1,
+          1.0
+        ]
+      ]
+    },
+    "authorization": {
+      "AUTONOMOUS_CONTROLLER_AUTHORIZED": false,
+      "DETAILED_ROUTING_AUTHORIZED_default": false,
+      "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+      "H2_REMAINS": true,
+      "H3_AUTHORIZED": false
+    },
+    "boundary": {
+      "name": "prefix_cache_before_final_prompt_token",
+      "prefix_excludes_tokens": 1,
+      "replay_safety_factor": 5.0
+    },
+    "future_gate": {
+      "bootstrap_lower_min": 0.15,
+      "bootstrap_samples": 1000,
+      "families_required": 4,
+      "median_q_min": 0.25,
+      "potency_threshold": 0.25,
+      "potent_fraction_min": 0.25
+    },
+    "name": "Pre-Readout Counterfactuals and Next-Token Causal Re-Entry",
+    "parent_commit": "0657f731e8a165425baa231d4880bab36bf01169",
+    "protocol_version": "pre_readout_reentry_v27",
+    "routing": {
+      "components": [
+        "REC",
+        "Conv",
+        "KV",
+        "REC+Conv",
+        "REC+KV",
+        "Conv+KV",
+        "REC+Conv+KV",
+        "FULL"
+      ],
+      "families_required": 4,
+      "layer_scan": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "retained_fraction_max": 0.5,
+      "transplant_cosine_min": 0.8,
+      "transplant_magnitude_min": 0.5,
+      "writeback_cosine_min": 0.98
+    },
+    "seed": 270027,
+    "silence": {
+      "aggregate_max": 0.05,
+      "distal_aggregate_max": 0.1,
+      "individual_max": 0.05,
+      "primary_targets": [
+        "j",
+        "logits",
+        "semantic",
+        "workspace",
+        "late_residual"
+      ]
+    },
+    "states": {
+      "calibration_per_family": 5,
+      "development_per_family": 10,
+      "independent_final_per_family": 5,
+      "routing_per_family": 2,
+      "validation_per_family": 5
+    },
+    "targets": {
+      "workspace_layers": [
+        23,
+        26,
+        30
+      ],
+      "workspace_per_layer": 32
+    }
+  },
+  "config_sha256": "d3979a8155a78421ccb4e51478e449d1eefe68c9bdfa44ae6fcf2af3dfb58bac",
+  "created_utc": "2026-09-21T17:19:13.076350+00:00",
+  "freeze_digest": "1de32375db20b199876b0ce5077056393b95cf392c216b757eb6600d1973a59e",
+  "frozen_input_sha256": {
+    "artifacts/counterfactual_workspace_v19_splits.freeze.json": "72e68df5b97c920b403c0e1a743b690e1696a268b461e4259472a9388ad8665d",
+    "artifacts/temporal_readout_potency_v26_final.freeze.json": "dbf3baf5ed5dedca9eb5d43db905abb3de2980af1e3725a26a409a9b14bfdc29",
+    "reports/FINAL_REPORT.md": "ac4314e3d69b79bd2f45d836b67283a89d7d2813fd0836083b8c0f4864444b59",
+    "reports/V26_COMPLETE_REPORT.md": "f492d9597b181bc6ac485e8a17e203e219e95818405eaa825bec609f0d569920",
+    "results/v24/processed/target_projections_v24.npz": "99e08cd12c9b3751e251c36c6352a16fc6c98951021cbb1abca7b7b2b50d26f9",
+    "results/v25/processed/readout_compression_v25.json": "304cfb97f50bf923c205bab8601f91bbd519abd96bbd151d23c8d7868258e03b",
+    "results/v26/processed/current_distal_bank_v26.parquet": "237a978f9d048e07f824655b9813ea254ac7651b05b23d04c8c957cd00edae8c",
+    "results/v26/processed/v26_adjudication.json": "a9c40ef99c092a4ab86b9de6bd4e9b7009912d91eec8b01db4367a49635f16ce",
+    "results/v26/processed/v26_devval_analysis.json": "ee7aebc340c41fd1f91ddb9ef74dfaab56ca0da3e44e2dbeb1e29a7b314b3508"
+  },
+  "historical_final_opened": false,
+  "parent_commit": "0657f731e8a165425baa231d4880bab36bf01169",
+  "protocol_code_sha256": "e21be54ee35a7c22ae3a8866cbfd33985a7b92980ff9da28d528891ad9557176",
+  "protocol_version": "pre_readout_reentry_v27",
+  "schema_version": 36
+}

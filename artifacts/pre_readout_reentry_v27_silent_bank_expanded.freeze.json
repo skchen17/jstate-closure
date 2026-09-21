@@ -1,0 +1,35 @@
+{
+  "PRE_READOUT_SILENT_BANK_HASH": "d657c1c23622dfbffc87a7a0db9c6beec11739c06e1b7389c16483f44b87939d",
+  "base_freeze_digest": "1de32375db20b199876b0ce5077056393b95cf392c216b757eb6600d1973a59e",
+  "by_role": {
+    "development": {
+      "distal": 0,
+      "rows": 2400,
+      "silent": 0
+    },
+    "validation": {
+      "distal": 0,
+      "rows": 1200,
+      "silent": 0
+    }
+  },
+  "candidate_count": 48,
+  "created_utc": "2026-09-21T17:39:04.933210+00:00",
+  "distal_rows": 0,
+  "freeze_digest": "6586ece287558f70c6f06bacb86c29a09fcf7051913665e2ea4592d6319d40a1",
+  "future_responses_observed_before_freeze": 0,
+  "historical_final_opened": false,
+  "input_sha256": {
+    "artifacts/pre_readout_reentry_v27_candidate_expansion.freeze.json": "a43a86fabe35cce7b4b18b833e4e63d3f63684aad3df7c5feb8daee5ed24e9ce",
+    "results/v27/processed/pre_readout_silent_bank_expanded_v27.json": "83f6b56b32bd2f8b929fdc8db4967b6ab308c1a38fd0adb95bb900bd8f03d96c",
+    "results/v27/processed/pre_readout_silent_bank_expanded_v27.parquet": "d657c1c23622dfbffc87a7a0db9c6beec11739c06e1b7389c16483f44b87939d",
+    "src/jclosure/experiments/pre_readout_expansion_v27.py": "5a7d157826770300c9d5255dd6dc7ab201693c556ba982b871a73655e475b594"
+  },
+  "protocol_version": "pre_readout_reentry_v27_silent_bank_expanded",
+  "reliable_rows": 3600,
+  "rows": 3600,
+  "schema_version": 36,
+  "selection_information": "h0_only",
+  "silent_rows": 0,
+  "states": 75
+}

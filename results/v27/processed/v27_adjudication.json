@@ -1,0 +1,74 @@
+{
+  "ADJUDICATION_HASH": "4e885a2cb4fd83e0a6c6e3f27a8ed53e378fbd388a7a5ffdef8c940928db6342",
+  "AUTONOMOUS_CONTROLLER_AUTHORIZED": false,
+  "DETAILED_ROUTING_AUTHORIZED": false,
+  "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+  "H2_REMAINS": true,
+  "H3_AUTHORIZED": false,
+  "V27_A": false,
+  "V27_B": false,
+  "V27_C": false,
+  "V27_D": false,
+  "V27_E": false,
+  "V27_F": true,
+  "V27_G": false,
+  "V27_H": false,
+  "distal_rows": 0,
+  "family_audit": {
+    "boolean_logic": {
+      "distal": 0,
+      "min_aggregate_h0_q": 0.3477658169154979,
+      "rows": 885,
+      "silent": 0
+    },
+    "modular_arithmetic": {
+      "distal": 0,
+      "min_aggregate_h0_q": 0.4345215228874423,
+      "rows": 915,
+      "silent": 0
+    },
+    "short_graph_traversal": {
+      "distal": 0,
+      "min_aggregate_h0_q": 0.36825740268926915,
+      "rows": 893,
+      "silent": 0
+    },
+    "simple_state_transition": {
+      "distal": 0,
+      "min_aggregate_h0_q": 0.4268801138455324,
+      "rows": 897,
+      "silent": 0
+    },
+    "variable_binding": {
+      "distal": 0,
+      "min_aggregate_h0_q": 0.46310271320688806,
+      "rows": 870,
+      "silent": 0
+    }
+  },
+  "formal_outcomes": [
+    "V27-F_V26_BOUNDARY_SPECIFIC_ONLY"
+  ],
+  "historical_final_opened": false,
+  "primary_outcome": "V27-F_V26_BOUNDARY_SPECIFIC_ONLY",
+  "reliable_candidate_rows": 4460,
+  "routing_status": "NOT_RUN_NOT_AUTHORIZED",
+  "silent_rows": 0,
+  "timing_diagnostic": {
+    "candidate_id": "joint",
+    "diagnostic_only": true,
+    "families": 5,
+    "median_post_h0_q": 0.0,
+    "median_post_h1_q": 1.0632595581424615,
+    "median_pre_h0_q": 1.1531131597987194,
+    "median_pre_h1_q": 0.9290256281858549,
+    "median_pre_post_h1_cosine": 0.6080377597826649,
+    "median_pre_post_h1_magnitude_ratio": 0.9597110152244568,
+    "not_used_to_rescue_V27A": true,
+    "selection": "predeclared design candidate; not selected using h1",
+    "states": 10
+  },
+  "total_candidate_rows": 4575,
+  "v27_independent_final_opened": false,
+  "wording": "V26 remains valid for post-readout persistent distinctions; genuine pre-readout current-invisible future potency was not found in the tested panel"
+}

@@ -1,0 +1,57 @@
+protocol_version: pre_readout_reentry_v27
+parent_commit: 0657f731e8a165425baa231d4880bab36bf01169
+name: Pre-Readout Counterfactuals and Next-Token Causal Re-Entry
+seed: 270027
+states:
+  calibration_per_family: 5
+  development_per_family: 10
+  validation_per_family: 5
+  independent_final_per_family: 5
+  routing_per_family: 2
+targets:
+  workspace_layers: [23, 26, 30]
+  workspace_per_layer: 32
+boundary:
+  name: prefix_cache_before_final_prompt_token
+  prefix_excludes_tokens: 1
+  replay_safety_factor: 5.0
+silence:
+  primary_targets: [j, logits, semantic, workspace, late_residual]
+  individual_max: 0.05
+  aggregate_max: 0.05
+  distal_aggregate_max: 0.10
+actuation:
+  component_action_ids: {REC: d508, Conv: d198, KV: d404}
+  reference_action_id: d000
+  channels: [REC, Conv, KV, REC+Conv, REC+KV, Conv+KV, joint]
+  scale_sign_grid:
+    - [-1, 0.25]
+    - [1, 0.25]
+    - [-1, 0.5]
+    - [1, 0.5]
+    - [-1, 1.0]
+    - [1, 1.0]
+  reliability_cosine_min: 0.90
+  reliability_gain_min: 0.50
+  reliability_gain_max: 1.50
+future_gate:
+  potency_threshold: 0.25
+  median_q_min: 0.25
+  potent_fraction_min: 0.25
+  bootstrap_lower_min: 0.15
+  families_required: 4
+  bootstrap_samples: 1000
+routing:
+  components: [REC, Conv, KV, REC+Conv, REC+KV, Conv+KV, REC+Conv+KV, FULL]
+  layer_scan: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+  writeback_cosine_min: 0.98
+  retained_fraction_max: 0.50
+  transplant_magnitude_min: 0.50
+  transplant_cosine_min: 0.80
+  families_required: 4
+authorization:
+  DETAILED_ROUTING_AUTHORIZED_default: false
+  H2_REMAINS: true
+  H3_AUTHORIZED: false
+  DYNAMIC_STATE_SEARCH_AUTHORIZED: false
+  AUTONOMOUS_CONTROLLER_AUTHORIZED: false

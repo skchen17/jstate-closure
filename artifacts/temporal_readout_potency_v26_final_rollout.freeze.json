@@ -1,0 +1,29 @@
+{
+  "base_freeze_digest": "6f3471d17dd87cf5dcd61d123c07fc8ec172e207dad1a59412c1f21c45125870",
+  "created_utc": "2026-09-21T16:09:40.311842+00:00",
+  "freeze_digest": "c1ec1d85a026d86ffda7d728abf1a89ab017ca9e0a38142e784174dad028b198",
+  "future_based_bank_selection": false,
+  "historical_final_opened": false,
+  "horizons": [
+    2
+  ],
+  "input_sha256": {
+    "artifacts/temporal_readout_potency_v26_final_opening.freeze.json": "0d14d745c5d0c9e9e20303e6f86e1fdb03f549b87ec56ccf34ea3ff882fa1f96",
+    "results/v26/processed/temporal_rollout_final_v26.json": "419db66356c10fb332f9d5c5f5177cf2d5e7fea596ee6b214fe90e2d4c5fe37f",
+    "results/v26/processed/temporal_rollout_final_v26.parquet": "ecb411f094ff9f7dffc74da2a6d86b93799248f3db1767e2f2a74997b5313834",
+    "results/v26/processed/temporal_vectors_final_v26.npz": "ae5d0d794cc0cdd75e80da1016d63fcbd7663c32ae4b2d52097e37d2ccaa0ea8",
+    "src/jclosure/experiments/temporal_v26.py": "af029a13e1af1abc6c29e5b617af53abd1443e8c7fe917dd88ebe74d3166fcf8"
+  },
+  "phase": "final",
+  "protocol_version": "temporal_readout_potency_v26_final_rollout",
+  "roles": [
+    "independent_final"
+  ],
+  "rollout_sha256": "ecb411f094ff9f7dffc74da2a6d86b93799248f3db1767e2f2a74997b5313834",
+  "rows": 155,
+  "schema_version": 35,
+  "states": 50,
+  "teacher_forcing": "identical frozen clean-greedy continuation tokens",
+  "v26_independent_final_opened": true,
+  "vectors_sha256": "ae5d0d794cc0cdd75e80da1016d63fcbd7663c32ae4b2d52097e37d2ccaa0ea8"
+}

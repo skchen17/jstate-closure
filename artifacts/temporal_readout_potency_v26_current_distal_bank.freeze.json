@@ -1,0 +1,35 @@
+{
+  "CURRENT_DISTAL_BANK_HASH": "237a978f9d048e07f824655b9813ea254ac7651b05b23d04c8c957cd00edae8c",
+  "base_freeze_digest": "6f3471d17dd87cf5dcd61d123c07fc8ec172e207dad1a59412c1f21c45125870",
+  "by_channel": {
+    "Conv": 150,
+    "Conv+KV": 150,
+    "KV": 150,
+    "REC": 150,
+    "REC+Conv": 150,
+    "REC+KV": 150,
+    "joint": 270
+  },
+  "by_role": {
+    "development": 760,
+    "validation": 410
+  },
+  "created_utc": "2026-09-21T15:40:01.980906+00:00",
+  "freeze_digest": "0ff2ab034bdbcd049accb152fbfa7283e423eb71d19f1ce035be2545aff5a421",
+  "future_responses_observed_before_freeze": 0,
+  "historical_final_opened": false,
+  "input_sha256": {
+    "artifacts/temporal_readout_potency_v26_numerical_floor.freeze.json": "ecbfa9181661322556214558faa4b3b997b5f1326f162adacb18dbfbe74fd38a",
+    "results/v26/processed/current_distal_bank_v26.json": "0072f4444b317507faa536868866fef12ac14a20618e8bea92c5e1862e0755a2",
+    "results/v26/processed/current_distal_bank_v26.parquet": "237a978f9d048e07f824655b9813ea254ac7651b05b23d04c8c957cd00edae8c",
+    "src/jclosure/experiments/temporal_v26.py": "af029a13e1af1abc6c29e5b617af53abd1443e8c7fe917dd88ebe74d3166fcf8"
+  },
+  "protocol_version": "temporal_readout_potency_v26_current_distal_bank",
+  "reliable_rows": 1152,
+  "rows": 1170,
+  "schema_version": 35,
+  "selection_information": "h0_only",
+  "states": 150,
+  "strict_current_silent_rows": 1152,
+  "v26_independent_final_opened": false
+}

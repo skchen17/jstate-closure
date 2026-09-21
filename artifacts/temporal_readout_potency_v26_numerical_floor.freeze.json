@@ -1,0 +1,56 @@
+{
+  "all_targets_classifiable": true,
+  "base_freeze_digest": "6f3471d17dd87cf5dcd61d123c07fc8ec172e207dad1a59412c1f21c45125870",
+  "created_utc": "2026-09-21T15:37:50.898294+00:00",
+  "floor_sha256": "2d50bf817a8ce5b21371e09342e7a1f938e05043566d32303ed1f93063f535ae",
+  "freeze_digest": "bf38e9e79a3834e95e6d8d0f0b7799e10e6ca9ae277cd836972819099b215c39",
+  "historical_final_opened": false,
+  "input_sha256": {
+    "artifacts/temporal_readout_potency_v26_design.freeze.json": "f91700d83868f191bdc8dc9490e7f2a85b2d88b0df38392d9cbcf3ac99d1ffab",
+    "results/v26/processed/current_readout_numerical_floor_v26.json": "3a908a053b5e4848a3f2e89462ef76861cfc8a5721e19f6e94d5cba13a422f7d",
+    "results/v26/processed/current_readout_numerical_floor_v26.parquet": "2d50bf817a8ce5b21371e09342e7a1f938e05043566d32303ed1f93063f535ae",
+    "src/jclosure/experiments/temporal_v26.py": "af029a13e1af1abc6c29e5b617af53abd1443e8c7fe917dd88ebe74d3166fcf8"
+  },
+  "protocol_version": "temporal_readout_potency_v26_numerical_floor",
+  "schema_version": 35,
+  "state_count": 20,
+  "targets": {
+    "broad_vocabulary": {
+      "median": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "safety_threshold": 1e-12
+    },
+    "j": {
+      "median": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "safety_threshold": 1e-12
+    },
+    "late_residual": {
+      "median": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "safety_threshold": 1e-12
+    },
+    "logits": {
+      "median": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "safety_threshold": 1e-12
+    },
+    "semantic": {
+      "median": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "safety_threshold": 1e-12
+    },
+    "workspace": {
+      "median": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "safety_threshold": 1e-12
+    }
+  },
+  "v26_independent_final_opened": false
+}

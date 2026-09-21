@@ -1,0 +1,26 @@
+{
+  "base_freeze_digest": "6f3471d17dd87cf5dcd61d123c07fc8ec172e207dad1a59412c1f21c45125870",
+  "created_utc": "2026-09-21T16:08:22.288775+00:00",
+  "final_opened": true,
+  "final_opening_hash": "6d908e75220d0d2bdfd324fafc97bb9c324a254495e18b339a264bdd4e9b5816",
+  "freeze_digest": "cdf70591f7a6616846eede885e1e9b44aa1f3d7df7c7e86bc151a6a2b5beb95c",
+  "historical_final_opened": false,
+  "input_sha256": {
+    "artifacts/temporal_readout_potency_v26_devval_analysis.freeze.json": "d91c337e2dfe0e66b4a7d0f7fbca0a20bb3b1b8171b5c8dfd4b91952fe1ad525",
+    "results/v26/processed/v26_devval_analysis.json": "ee7aebc340c41fd1f91ddb9ef74dfaab56ca0da3e44e2dbeb1e29a7b314b3508"
+  },
+  "protocol_version": "temporal_readout_potency_v26_final_opening",
+  "schema_version": 35,
+  "single_finalist": {
+    "candidate_id": "joint",
+    "channel": "joint",
+    "horizon": 2,
+    "opening_requires": "V26_A_or_V26_B_development_and_validation",
+    "scale": 1.0,
+    "sign": 1,
+    "target": "aggregate_balanced_normalized_readout",
+    "tier": "STRICT_CURRENT_SILENT"
+  },
+  "threshold_tuning_on_final": false,
+  "v26_independent_final_opened": false
+}

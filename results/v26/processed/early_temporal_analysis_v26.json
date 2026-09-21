@@ -1,0 +1,87 @@
+{
+  "extension_opened": true,
+  "future_based_bank_selection": false,
+  "gates": {
+    "development": {
+      "1": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.0127906093612138,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      },
+      "2": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.082125563922776,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      }
+    },
+    "validation": {
+      "1": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.0092521268611387,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      },
+      "2": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.0293559013092377,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      }
+    }
+  },
+  "historical_final_opened": false,
+  "opening_rule": "same pre-registered h1 or h2 future-potency gate passes development and validation",
+  "reference_scales": {
+    "1": {
+      "broad_vocabulary": 0.42290589213371277,
+      "j": 0.001649348414503038,
+      "late_residual": 0.11364037543535233,
+      "logits": 0.21762817353010178,
+      "semantic": 0.22540489584207535,
+      "workspace": 0.10127628594636917
+    },
+    "2": {
+      "broad_vocabulary": 0.345530241727829,
+      "j": 0.0012481103767640889,
+      "late_residual": 0.10474488511681557,
+      "logits": 0.1913570910692215,
+      "semantic": 0.20154843479394913,
+      "workspace": 0.09837094694375992
+    }
+  },
+  "v26_independent_final_opened": false
+}

@@ -1,0 +1,294 @@
+{
+  "V26_A_DEVVAL": true,
+  "V26_B_DEVVAL": true,
+  "V26_C_DEVVAL": true,
+  "V26_D_ROTATING": true,
+  "V26_E_FIXED": false,
+  "V26_F_CHANNEL_SPECIFIC": false,
+  "V26_G_STATE_DEPENDENT": false,
+  "channel_interaction_medians": {
+    "conv_kv": {
+      "1": 1.0224069356918335,
+      "2": 1.1376330256462097,
+      "4": 1.0778128504753113,
+      "8": 1.1346388459205627
+    },
+    "rec_conv": {
+      "1": 1.260698676109314,
+      "2": 1.3046168684959412,
+      "4": 1.3557815551757812,
+      "8": 1.4428091049194336
+    },
+    "rec_kv": {
+      "1": 1.0493155121803284,
+      "2": 1.1640578508377075,
+      "4": 1.034299612045288,
+      "8": 1.1081505417823792
+    }
+  },
+  "channel_profile_ranges": {
+    "development": {
+      "boolean_logic": 0.32851225086761116,
+      "modular_arithmetic": 0.1995149832281895,
+      "short_graph_traversal": 0.295540527529937,
+      "simple_state_transition": 0.3078935786754975,
+      "variable_binding": 0.21078306180278905
+    },
+    "validation": {
+      "boolean_logic": 0.3477555621974677,
+      "modular_arithmetic": 0.2636471760700201,
+      "short_graph_traversal": 0.4682745912255962,
+      "simple_state_transition": 0.3067399510404678,
+      "variable_binding": 0.30142198593150904
+    }
+  },
+  "controls": {
+    "numerical_scale": {
+      "1": 0.0,
+      "2": 0.0,
+      "4": 0.0,
+      "8": 0.0
+    },
+    "ordinary_reference": {
+      "1": 0.571346789598465,
+      "2": 0.48168741166591644,
+      "4": 0.8883067667484283,
+      "8": 0.6682019829750061
+    },
+    "same_norm_random": {
+      "1": 0.5864223837852478,
+      "2": 0.5037911534309387,
+      "4": 0.9173738658428192,
+      "8": 0.6449505686759949
+    }
+  },
+  "current_readout_conditional_test": "controlled h0-equal persistent interventions compared under identical teacher forcing",
+  "final_opened": true,
+  "finalist": {
+    "candidate_id": "joint",
+    "channel": "joint",
+    "horizon": 2,
+    "opening_requires": "V26_A_or_V26_B_development_and_validation",
+    "scale": 1.0,
+    "sign": 1,
+    "target": "aggregate_balanced_normalized_readout",
+    "tier": "STRICT_CURRENT_SILENT"
+  },
+  "finite_jvp_status": "FINITE_PRIMARY; exact temporal cache-state JVP unavailable in current runtime and not used for gates",
+  "future_based_bank_selection": false,
+  "gates": {
+    "development": {
+      "1": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.0127906093612138,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      },
+      "2": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.082125563922776,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      },
+      "4": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.060365350881047,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      },
+      "8": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.0593714387976094,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      }
+    },
+    "validation": {
+      "1": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.0092521268611387,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      },
+      "2": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.0293559013092377,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      },
+      "4": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.0624809007068308,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      },
+      "8": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.0345893224754406,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      }
+    }
+  },
+  "historical_final_opened": false,
+  "natural_transition_status": "OBSERVATIONAL_ONLY_NOT_USED_IN_CAUSAL_GATES",
+  "reference_scales": {
+    "1": {
+      "broad_vocabulary": 0.42290589213371277,
+      "j": 0.001649348414503038,
+      "late_residual": 0.11364037543535233,
+      "logits": 0.21762817353010178,
+      "semantic": 0.22540489584207535,
+      "workspace": 0.10127628594636917
+    },
+    "2": {
+      "broad_vocabulary": 0.345530241727829,
+      "j": 0.0012481103767640889,
+      "late_residual": 0.10474488511681557,
+      "logits": 0.1913570910692215,
+      "semantic": 0.20154843479394913,
+      "workspace": 0.09837094694375992
+    },
+    "4": {
+      "broad_vocabulary": 0.7320825159549713,
+      "j": 0.002669087494723499,
+      "late_residual": 0.16641626507043839,
+      "logits": 0.30267752707004547,
+      "semantic": 0.3080931454896927,
+      "workspace": 0.06850829720497131
+    },
+    "8": {
+      "broad_vocabulary": 0.5145295560359955,
+      "j": 0.0012636072933673859,
+      "late_residual": 0.10098514333367348,
+      "logits": 0.22084441781044006,
+      "semantic": 0.2317921221256256,
+      "workspace": 0.08682863786816597
+    }
+  },
+  "same_j": {
+    "development": {
+      "1": {
+        "divergent_fraction": 1.0,
+        "median_j_q": 0.9479973065674652
+      },
+      "2": {
+        "divergent_fraction": 1.0,
+        "median_j_q": 1.0084234613398433
+      },
+      "4": {
+        "divergent_fraction": 0.9957142857142857,
+        "median_j_q": 0.9752213159803862
+      },
+      "8": {
+        "divergent_fraction": 1.0,
+        "median_j_q": 0.9831159142032506
+      }
+    },
+    "validation": {
+      "1": {
+        "divergent_fraction": 1.0,
+        "median_j_q": 0.9154663446217284
+      },
+      "2": {
+        "divergent_fraction": 1.0,
+        "median_j_q": 1.0300070332700584
+      },
+      "4": {
+        "divergent_fraction": 1.0,
+        "median_j_q": 0.9685087904207768
+      },
+      "8": {
+        "divergent_fraction": 1.0,
+        "median_j_q": 1.0117162279589738
+      }
+    }
+  },
+  "state_dependence": {
+    "development": {
+      "family_medians": {
+        "boolean_logic": 0.2212484194641343,
+        "modular_arithmetic": 0.19508139650666353,
+        "short_graph_traversal": 0.27755722603816596,
+        "simple_state_transition": 0.23801843887394122,
+        "variable_binding": 0.23971359271750392
+      },
+      "median_within_action_across_state_cv": 0.22520662305319242
+    },
+    "validation": {
+      "family_medians": {
+        "boolean_logic": 0.18851660022956096,
+        "modular_arithmetic": 0.1971377474546696,
+        "short_graph_traversal": 0.3586011258074274,
+        "simple_state_transition": 0.23551127480028322,
+        "variable_binding": 0.23533511931252182
+      },
+      "median_within_action_across_state_cv": 0.21387416879247295
+    }
+  },
+  "v26_independent_final_opened": false
+}

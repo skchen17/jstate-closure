@@ -1,0 +1,99 @@
+{
+  "base_freeze_digest": "6f3471d17dd87cf5dcd61d123c07fc8ec172e207dad1a59412c1f21c45125870",
+  "created_utc": "2026-09-21T15:46:57.796601+00:00",
+  "early_metrics_sha256": "b5f95274dc370583f7211d9142441cd93b04678effe8e9638e5dd8a7962d5851",
+  "extension_opened": true,
+  "freeze_digest": "e6f222cae8147f07a33b01c79a5378514c551c8da0b0aa5c339ff2119ae99090",
+  "future_based_bank_selection": false,
+  "gates": {
+    "development": {
+      "1": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.0127906093612138,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      },
+      "2": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.082125563922776,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      }
+    },
+    "validation": {
+      "1": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.0092521268611387,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      },
+      "2": {
+        "bootstrap_2_5_lower": 1.0,
+        "family_fractions": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 1.0,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_q": 1.0293559013092377,
+        "pass": true,
+        "potent_fraction": 1.0,
+        "replicated_families": 5
+      }
+    }
+  },
+  "historical_final_opened": false,
+  "input_sha256": {
+    "artifacts/temporal_readout_potency_v26_early_rollout.freeze.json": "4450c75d310a614a7acb98090af4db873f49611d9140def2a10c021ec5328e34",
+    "results/v26/processed/early_temporal_analysis_v26.json": "5ee50bba5bcd9d3281e0fda0156c4bb20dff264da5585f12162112ee7485d576",
+    "results/v26/processed/temporal_metrics_early_v26.parquet": "b5f95274dc370583f7211d9142441cd93b04678effe8e9638e5dd8a7962d5851",
+    "src/jclosure/experiments/analyze_v26.py": "3dc23684406e768050accf01bc95f7cf2697c22ffe18d0ed8d8139b13f2688bc"
+  },
+  "opening_rule": "same pre-registered h1 or h2 future-potency gate passes development and validation",
+  "protocol_version": "temporal_readout_potency_v26_extension_opening",
+  "reference_scales": {
+    "1": {
+      "broad_vocabulary": 0.42290589213371277,
+      "j": 0.001649348414503038,
+      "late_residual": 0.11364037543535233,
+      "logits": 0.21762817353010178,
+      "semantic": 0.22540489584207535,
+      "workspace": 0.10127628594636917
+    },
+    "2": {
+      "broad_vocabulary": 0.345530241727829,
+      "j": 0.0012481103767640889,
+      "late_residual": 0.10474488511681557,
+      "logits": 0.1913570910692215,
+      "semantic": 0.20154843479394913,
+      "workspace": 0.09837094694375992
+    }
+  },
+  "schema_version": 35,
+  "v26_independent_final_opened": false
+}

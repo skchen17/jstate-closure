@@ -1,0 +1,69 @@
+{
+  "JVP_finite": "finite interventions are primary; exact temporal cache-state JVP was technically unavailable and is not used as evidence",
+  "U0_explains_future": "NO: the h0 response matrix is exactly rank zero, while all future matrices are nonzero",
+  "formal_outcomes_changed": false,
+  "future_directions_outside_U0": true,
+  "natural_transition_comparison": "NOT_ESTABLISHED: historical observational transitions were kept separate and were not used in V26 causal gates",
+  "nearest_J": {
+    "development": {
+      "median_j_distance": 0.048560261726379395,
+      "median_profile_distance": 0.4545708159037384,
+      "pearson": 0.3189199170334925,
+      "spearman": 0.39942744311941475
+    },
+    "validation": {
+      "median_j_distance": 0.08316066861152649,
+      "median_profile_distance": 0.443600415754044,
+      "pearson": 0.12314961780888595,
+      "spearman": 0.1655934646804421
+    }
+  },
+  "predictive_sufficiency": {
+    "M0_current_J_plus_action": {
+      "r2": -1.926439630193388,
+      "rmse": 0.5488805256045732
+    },
+    "M1_current_J_action_plus_realized_persistent": {
+      "r2": -1.7120683545418829,
+      "rmse": 0.5283945786517278
+    },
+    "M1_rmse_gain_over_M0": 0.020485946952845446,
+    "M2_action_plus_realized_persistent": {
+      "r2": 0.15019659792575357,
+      "rmse": 0.2957789549644118
+    },
+    "interpretation": "diagnostic prediction only; controlled h0-equal intervention test is primary"
+  },
+  "readout_only_control": "NOT_TECHNICALLY_COMPARABLE because the V26 intervention boundary follows the current readout; no persistent cache change would remain",
+  "shuffled_persistent_control": "NOT_IDENTIFIABLE for the shared global-coordinate action bank without a new state-specific transplant estimand",
+  "sign_and_scale": {
+    "magnitude_ratio_median": 0.8802067339420319,
+    "odd_symmetry_cosine_median": -0.3677394390106201,
+    "reason": "median potency is not monotone in amplitude across both signs, roles, and horizons; BF16 writeback quantization and nonlinear dynamics remain visible",
+    "smooth_scaling_supported": false
+  },
+  "temporal_ordering": "persistent, residual, J/workspace, and logits differences are all measurable at h1; sub-token/layer ordering is unresolved",
+  "workspace_aliasing_curve": {
+    "1": {
+      "absolute_J_norm_median": 0.001538710668683052,
+      "absolute_aggregate_norm_median": 0.5597829520702362,
+      "normalized_J_q_median": 0.932920330933642
+    },
+    "2": {
+      "absolute_J_norm_median": 0.0012672338634729385,
+      "absolute_aggregate_norm_median": 0.4974251240491867,
+      "normalized_J_q_median": 1.0153219515395988
+    },
+    "4": {
+      "absolute_J_norm_median": 0.002600780571810901,
+      "absolute_aggregate_norm_median": 0.9271023273468018,
+      "normalized_J_q_median": 0.9744081364707478
+    },
+    "8": {
+      "absolute_J_norm_median": 0.00125244096852839,
+      "absolute_aggregate_norm_median": 0.6615229845046997,
+      "normalized_J_q_median": 0.9911631367612332
+    }
+  },
+  "workspace_reentry_time": "h1 for all 1050 primary development/validation perturbations"
+}

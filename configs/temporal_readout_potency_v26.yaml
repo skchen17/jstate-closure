@@ -1,0 +1,79 @@
+protocol_version: temporal_readout_potency_v26
+parent_commit: 04f70cebcb66a9bc2431052b44c488b1ce608d07
+name: Temporal Readout Potency of Persistent State
+seed: 260026
+state_panels:
+  development_per_family: 20
+  validation_per_family: 10
+  independent_final_per_family: 10
+  numerical_floor_per_family: 4
+targets:
+  j: 128
+  logits: 32
+  semantic: 32
+  workspace: 96
+  broad_vocabulary: 512
+  late_residual: 256
+  source: frozen_v18_and_v24_projections
+current_tiers:
+  same_j_absolute_tolerance: 0.0
+  distal_aggregate_max: 0.10
+  strict_individual_max: 0.05
+  strict_aggregate_max: 0.05
+  numerical_floor_safety_factor: 5.0
+actuation:
+  component_action_ids: {REC: d508, Conv: d198, KV: d404}
+  reference_action_id: d000
+  random_control_action_id: d002
+  channels: [REC, Conv, KV, REC+Conv, REC+KV, Conv+KV, joint]
+  primary_scale: 1.0
+  primary_sign: 1
+  scaling_subset_per_family: 2
+  scale_sign_grid:
+    - [-1, 0.25]
+    - [1, 0.25]
+    - [-1, 0.5]
+    - [1, 0.5]
+    - [-1, 1.0]
+    - [1, 1.0]
+  reliability_cosine_min: 0.90
+  reliability_gain_min: 0.50
+  reliability_gain_max: 1.50
+horizons:
+  early: [1, 2]
+  extension: [4, 8]
+  all: [1, 2, 4, 8]
+future_gate:
+  potency_threshold: 0.25
+  median_q_min: 0.25
+  potent_fraction_min: 0.25
+  bootstrap_lower_min: 0.15
+  families_required: 4
+  bootstrap_samples: 1000
+  floor_safety_factor: 5.0
+  extension_requires_development_and_validation: true
+geometry:
+  fixed_dimensions: [4, 8, 16, 32, 64]
+  variance_thresholds: [0.90, 0.95, 0.99]
+  rotation_projector_distance_min: 0.25
+  fixed_cross_horizon_coverage_min: 0.80
+secondary_gates:
+  same_j_reentry_median_q_min: 0.25
+  channel_profile_range_min: 0.25
+  state_dependence_cv_min: 0.25
+  replicated_families_required: 4
+finalist:
+  candidate_id: joint
+  channel: joint
+  sign: 1
+  scale: 1.0
+  horizon: 2
+  target: aggregate_balanced_normalized_readout
+  tier: STRICT_CURRENT_SILENT
+  opening_requires: V26_A_or_V26_B_development_and_validation
+authorization:
+  H2_REMAINS: true
+  H3_AUTHORIZED: false
+  DYNAMIC_STATE_SEARCH_AUTHORIZED: false
+  CAUSAL_ROUTING_V27_AUTHORIZED_default: false
+  autonomous_controller_authorized: false

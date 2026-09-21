@@ -1,0 +1,23 @@
+{
+  "CAUSAL_ROUTING_V27_AUTHORIZED": true,
+  "adjudication_sha256": "a9c40ef99c092a4ab86b9de6bd4e9b7009912d91eec8b01db4367a49635f16ce",
+  "base_freeze_digest": "6f3471d17dd87cf5dcd61d123c07fc8ec172e207dad1a59412c1f21c45125870",
+  "created_utc": "2026-09-21T16:09:51.752602+00:00",
+  "formal_outcomes": [
+    "V26-A_TEMPORAL_READOUT_POTENCY_CONFIRMED",
+    "V26-B_STRICT_CURRENT_SILENT_FUTURE_POTENCY",
+    "V26-C_SAME_WORKSPACE_FUTURE_DIVERGENCE_CONFIRMED",
+    "V26-D_ROTATING_FUTURE_POTENT_GEOMETRY"
+  ],
+  "freeze_digest": "92dc7851dd2731575b17cdde956281eb92d61c47b5487c15bf22f508c30b0771",
+  "historical_final_opened": false,
+  "input_sha256": {
+    "artifacts/temporal_readout_potency_v26_final_rollout.freeze.json": "5cc0f46ee3c7db9ad533b757147cc208eb45930dd0eb2da94a3b4987e4ee6c3d",
+    "results/v26/processed/temporal_metrics_final_v26.parquet": "4866f4527637fa3ef422107bd228b56abc035e82896f07f666fed2cc61070518",
+    "results/v26/processed/v26_adjudication.json": "a9c40ef99c092a4ab86b9de6bd4e9b7009912d91eec8b01db4367a49635f16ce",
+    "src/jclosure/experiments/analyze_v26.py": "3dc23684406e768050accf01bc95f7cf2697c22ffe18d0ed8d8139b13f2688bc"
+  },
+  "protocol_version": "temporal_readout_potency_v26_adjudication",
+  "schema_version": 35,
+  "v26_independent_final_opened": true
+}

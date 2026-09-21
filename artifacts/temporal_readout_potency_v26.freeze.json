@@ -1,0 +1,176 @@
+{
+  "CAUSAL_ROUTING_V27_AUTHORIZED": false,
+  "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+  "H3_AUTHORIZED": false,
+  "V1_V25_records_mutated": false,
+  "config": {
+    "actuation": {
+      "channels": [
+        "REC",
+        "Conv",
+        "KV",
+        "REC+Conv",
+        "REC+KV",
+        "Conv+KV",
+        "joint"
+      ],
+      "component_action_ids": {
+        "Conv": "d198",
+        "KV": "d404",
+        "REC": "d508"
+      },
+      "primary_scale": 1.0,
+      "primary_sign": 1,
+      "random_control_action_id": "d002",
+      "reference_action_id": "d000",
+      "reliability_cosine_min": 0.9,
+      "reliability_gain_max": 1.5,
+      "reliability_gain_min": 0.5,
+      "scale_sign_grid": [
+        [
+          -1,
+          0.25
+        ],
+        [
+          1,
+          0.25
+        ],
+        [
+          -1,
+          0.5
+        ],
+        [
+          1,
+          0.5
+        ],
+        [
+          -1,
+          1.0
+        ],
+        [
+          1,
+          1.0
+        ]
+      ],
+      "scaling_subset_per_family": 2
+    },
+    "authorization": {
+      "CAUSAL_ROUTING_V27_AUTHORIZED_default": false,
+      "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+      "H2_REMAINS": true,
+      "H3_AUTHORIZED": false,
+      "autonomous_controller_authorized": false
+    },
+    "current_tiers": {
+      "distal_aggregate_max": 0.1,
+      "numerical_floor_safety_factor": 5.0,
+      "same_j_absolute_tolerance": 0.0,
+      "strict_aggregate_max": 0.05,
+      "strict_individual_max": 0.05
+    },
+    "finalist": {
+      "candidate_id": "joint",
+      "channel": "joint",
+      "horizon": 2,
+      "opening_requires": "V26_A_or_V26_B_development_and_validation",
+      "scale": 1.0,
+      "sign": 1,
+      "target": "aggregate_balanced_normalized_readout",
+      "tier": "STRICT_CURRENT_SILENT"
+    },
+    "future_gate": {
+      "bootstrap_lower_min": 0.15,
+      "bootstrap_samples": 1000,
+      "extension_requires_development_and_validation": true,
+      "families_required": 4,
+      "floor_safety_factor": 5.0,
+      "median_q_min": 0.25,
+      "potency_threshold": 0.25,
+      "potent_fraction_min": 0.25
+    },
+    "geometry": {
+      "fixed_cross_horizon_coverage_min": 0.8,
+      "fixed_dimensions": [
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "rotation_projector_distance_min": 0.25,
+      "variance_thresholds": [
+        0.9,
+        0.95,
+        0.99
+      ]
+    },
+    "horizons": {
+      "all": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "early": [
+        1,
+        2
+      ],
+      "extension": [
+        4,
+        8
+      ]
+    },
+    "name": "Temporal Readout Potency of Persistent State",
+    "parent_commit": "04f70cebcb66a9bc2431052b44c488b1ce608d07",
+    "protocol_version": "temporal_readout_potency_v26",
+    "secondary_gates": {
+      "channel_profile_range_min": 0.25,
+      "replicated_families_required": 4,
+      "same_j_reentry_median_q_min": 0.25,
+      "state_dependence_cv_min": 0.25
+    },
+    "seed": 260026,
+    "state_panels": {
+      "development_per_family": 20,
+      "independent_final_per_family": 10,
+      "numerical_floor_per_family": 4,
+      "validation_per_family": 10
+    },
+    "targets": {
+      "broad_vocabulary": 512,
+      "j": 128,
+      "late_residual": 256,
+      "logits": 32,
+      "semantic": 32,
+      "source": "frozen_v18_and_v24_projections",
+      "workspace": 96
+    }
+  },
+  "config_sha256": "5ba57c5fc8e6b3079b054aec16e4fac96243052abde3fd2bb294c1d0137293da",
+  "created_utc": "2026-09-21T15:37:09.438286+00:00",
+  "freeze_digest": "6f3471d17dd87cf5dcd61d123c07fc8ec172e207dad1a59412c1f21c45125870",
+  "frozen_input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_roles.freeze.json": "1f549a3b88fca4845ead3ea2b9b9d2fb6c558cd0d63a0fea6d8d4c994c1455e5",
+    "artifacts/causal_action_manifold_v22_final.freeze.json": "5077b17c23409f45eb29ee19398772396349417041ac26436be0d7c88b88ee2b",
+    "artifacts/compact_causal_response_operator_v20_splits.freeze.json": "fc51d5ad87f92bf85d1ac92832f9f7a4a30788fea60a024073011e8f43f8697c",
+    "artifacts/counterfactual_workspace_v19_splits.freeze.json": "72e68df5b97c920b403c0e1a743b690e1696a268b461e4259472a9388ad8665d",
+    "artifacts/distributed_causal_interaction_v25_final.freeze.json": "5322b872f76d40a13cb43aa8ee433be1fa7936c30f263a378107253bbeba85a8",
+    "reports/FINAL_REPORT.md": "8f385ad6bf10a91d85b8b7603030439a3481f09242d1390345b2206df93cb8cf",
+    "reports/V25_COMPLETE_REPORT.md": "cb000d3a39e34a07563f918a318e05343b29b79c112c22974f3d7476b963b6a7",
+    "results/v18/processed/crossed_state_train_boolean_logic_v18.parquet": "d0920401fff256a3f965b92d54a96dd7996a30a4e8f4f0299198b6a55b032450",
+    "results/v18/processed/crossed_state_validation_boolean_logic_v18.parquet": "2152b68f36dbd21babd76abc9303c45155d4260e36c57987627835a805d83686",
+    "results/v23/processed/input_rank_scaling_v23.json": "023d41ef3a66ab9d0fcb08a4dcd56ced76962c4d39a8630f72516d2801a135ff",
+    "results/v24/processed/bottleneck_design_v24.json": "a9518e5b150be6c770c4672b8a57193f3b8d8e4e00daeef1528ca8d5eddbd9d4",
+    "results/v24/processed/causal_bottleneck_mediation_v24.json": "4b4e0c74459eb667423ee262e79b98f74b8688d6606ac4da3990122c0c0e5395",
+    "results/v24/processed/target_projections_v24.npz": "99e08cd12c9b3751e251c36c6352a16fc6c98951021cbb1abca7b7b2b50d26f9",
+    "results/v25/processed/interaction_estimand_amendment_v25.json": "2d2b0363d801711feec640ed2ea15cdaf3d888963d8cebfda79cd24d9a83a2b4",
+    "results/v25/processed/readout_compression_v25.json": "304cfb97f50bf923c205bab8601f91bbd519abd96bbd151d23c8d7868258e03b",
+    "results/v25/processed/same_j_reconstruction_v25.parquet": "82bef8e8bf38ac194a9beaac78c73668c676306e6bb82f31e9fe3e1d5ba17af0",
+    "results/v25/processed/v24_rank_audit_v25.json": "515dac27c8da79d9d546cd251994564cf563e296fe639b45ead184f3738742f7"
+  },
+  "historical_final_opened": false,
+  "parent_commit": "04f70cebcb66a9bc2431052b44c488b1ce608d07",
+  "protocol_code_sha256": "9c1c608d7d8f4b3c739e9e7cc67efd7711b7bb202824b78633e1ec26a130a3db",
+  "protocol_version": "temporal_readout_potency_v26",
+  "schema_version": 35
+}

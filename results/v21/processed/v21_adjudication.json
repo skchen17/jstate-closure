@@ -1,0 +1,61 @@
+{
+  "H3_or_autonomous_controller_claimed": false,
+  "comparisons": {
+    "S1_Z1_G2_unseen_L2": 0.6409095927748488,
+    "S2_Z0_G2_unseen_L2": 1.313699369602735,
+    "S2_Z1_G2_unseen_L2": 0.6386018338237394,
+    "S2_Z2_corrected_G2_unseen_L2": 0.6328612444363708,
+    "S4_Z1_G2_unseen_L2": 0.684699046301654,
+    "Z1_validation_span_residual_median": 0.7436786066631402,
+    "Z4_best_state_conditioned_unseen_L2": 0.6955064429657615,
+    "Z4_direct_JVP_unseen_L2": 0.8061605707449633,
+    "Z5_direct_Taylor_unseen_L2": 0.7921791025371546,
+    "action_coordinate_gain_absolute_L2": 0.6750975357789957,
+    "action_count_4_to_12_L2_drop": 0.35784172138663195,
+    "best_G4_G5_S2_rich_Z_unseen_L2": 0.7746606259201212,
+    "best_Z3_unseen_L2": 0.698345518271755,
+    "state_compression_gain_absolute_L2": 0.002307758951109462,
+    "stronger_model_gain_absolute_L2": -0.13605879209638183
+  },
+  "design_digest": "7c6daa3a7781999f7b025cdb6e1d0820cbe0114536205a0c22f5b2890366e479",
+  "final_opening_reason": "No practical candidate passed development direction/sign gates; sealed final six remain unopened.",
+  "flags": {
+    "ACTION_COORDINATE_CEILING_PASS": false,
+    "ACTION_DATA_LIMITED": true,
+    "ACTION_REPRESENTATION_MATERIAL_IMPROVEMENT": true,
+    "COMPACT_OPERATOR_SEARCH_REOPENED": false,
+    "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+    "FINAL_SIX_ACTION_RESPONSES_OPENED": false,
+    "H2_REMAINS": true,
+    "H3_AUTHORIZED": false,
+    "HIGHER_ORDER_TAYLOR_IMPROVES_OVER_JVP": false,
+    "RAW_TO_OPERATOR_ENCODER_AUTHORIZED": false,
+    "SHARED_MODEL_BOTTLENECK_IDENTIFIED": false,
+    "SHARED_STATE_DEPENDENT_CAUSAL_GEOMETRY_STRONG_SUPPORT": true,
+    "STATE_COMPRESSION_BOTTLENECK_IDENTIFIED": false
+  },
+  "formal_outcomes": [
+    "V21-F_CROSS_ACTION_OPERATOR_REMAINS_UNIDENTIFIED_UNDER_TESTED_PRACTICAL_FAMILIES",
+    "V21-G_ACTION_DATA_LIMITED",
+    "V21-E_SHARED_STATE_DEPENDENT_CAUSAL_GEOMETRY"
+  ],
+  "nonexistence_claimed": false,
+  "oracle_Z4_Z5_not_deployable": true,
+  "practical_candidate_count": 24,
+  "practical_direction_sign_gate_count": 0,
+  "scale_pair_dense_representative_candidate_pass": false,
+  "source_hashes": {
+    "action_coverage_audit_v21.json": "418a0550d97c3a1cd79e0685d099fbec792d3ca233e11acbd8dab9ad761598fe",
+    "action_data_scaling_v21.json": "0fecb5eb5bb1fd0f0c7feb37c24821ccf4b4762c6a9938639bedcc3b83aef859",
+    "bottleneck_factorial_extension_v21.json": "7e430d8e265b213028dd717bc5d22fc09f4eba2c1512c4242b7aaf93286bf49f",
+    "bottleneck_factorial_v21.json": "e7a02bbc53a11f6ce548ccf35a65c55ff52a452f815d51b1089128e1cce19cb3",
+    "differential_oracle_ceiling_v21.json": "fcdb9bad2ebf8399053ad072d8a1c23168811138b22a92f8401ad7b64cc201cf",
+    "finite_second_order_oracle_v21.json": "0a995e922bd3f4d96ea532ea63f1f5ca8d9cad0e79bd02a19baaddad29972732",
+    "neural_operator_models_v21.json": "b3350e943f62b3d0c9744574216db713e448712ce33c88811d023693ba644f5a",
+    "paired_geometry_analysis_v21.json": "d5697e27cc303477e0cc9ebf867841c487af7ed380d943c46558dfabc1dda342",
+    "realized_action_factorial_v21.json": "dc20cf7771de1624b52883aa2f26b161b14576d1962679333dd758357611c15d",
+    "scale_pair_dense_v21.json": "97494dbec1fa7bb489db1f2d52acd863bd2cf12341adf4e729133b9d6165111f",
+    "z2_channel_normalization_correction_v21.json": "141e9fed0cd83bd7144c61474debf2a8ddbfdd57f5c4fcf71c20b69fc8fec801"
+  },
+  "state_S4_Nystrom_and_action_Z3_Nystrom_are_approximations": true
+}

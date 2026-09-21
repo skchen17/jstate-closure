@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-09-21T03:25:44.789139+00:00",
+  "legacy_failures_preexisting_in_V20_report": [
+    "tests/test_v14.py::test_v14_integrity_manifest",
+    "tests/test_v16.py::test_v16_historical_bytes_unchanged_and_manifest"
+  ],
+  "old_frozen_manifests_modified": false,
+  "runs": {
+    "all": {
+      "command": [
+        "/home/user/anaconda3/bin/python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 1,
+      "failed": 0,
+      "failed_tests": [
+        "tests/test_v14.py::test_v14_integrity_manifest",
+        "tests/test_v16.py::test_v16_historical_bytes_unchanged_and_manifest"
+      ],
+      "passed": 233,
+      "raw_stdout_tail": "........................................................................ [ 30%]\n......................................F......F.......................... [ 61%]\n........................................................................ [ 91%]\n...................                                                      [100%]\n=================================== FAILURES ===================================\n_________________________ test_v14_integrity_manifest __________________________\n\n    def test_v14_integrity_manifest() -> None:\n        from scripts.build_v14_integrity import verify\n    \n>       result = verify(ROOT)\n\ntests/test_v14.py:80: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nroot = PosixPath('/data/CSK/J-space-project/jstate-closure')\n\n    def verify(root: Path) -> dict:\n        value = json.loads((root / OUTPUT).read_text(encoding=\"utf-8\"))\n        if value.get(\"manifest_digest\") != _digest(value):\n            raise RuntimeError(\"V14 integrity digest mismatch\")\n        changed = [\n            name\n            for name, expected in value[\"hashes\"].items()\n            if not (root / name).is_file() or sha256_file(root / name) != expected\n        ]\n        if changed:\n>           raise RuntimeError(f\"V14 protected files changed: {changed[:10]}\")\nE           RuntimeError: V14 protected files changed: ['reports/FINAL_REPORT.md']\n\nscripts/build_v14_integrity.py:72: RuntimeError\n_______________ test_v16_historical_bytes_unchanged_and_manifest _______________\n\n    def test_v16_historical_bytes_unchanged_and_manifest() -> None:\n        tracked=set(subprocess.check_output([\"git\",\"ls-tree\",\"-r\",\"--name-only\",PARENT],cwd=ROOT,text=True).splitlines())\n        changed=set(subprocess.check_output([\"git\",\"diff\",\"--name-only\",PARENT,\"--\",\".\"],cwd=ROOT,text=True).splitlines())\n        assert (tracked&changed)-{\"reports/FINAL_REPORT.md\"}==set()\n        value=json.loads((ROOT/\"results/v16/processed/v16_integrity.json\").read_text())\n        assert value[\"historical_modified_except_cumulative_final\"]==[]\n        for row in value[\"files\"]:\n>           assert sha256_file(ROOT/row[\"path\"])==row[\"sha256\"]\nE           AssertionError: assert '3de80ce71344...148648ac71cd4' == '8e19cf16eb22...73beb4bc38086'\nE             \nE             - 8e19cf16eb2247bca83851b693e7c42845569bcf84358b8450673beb4bc38086\nE             + 3de80ce71344e488036a9d293f1c79b4eea93866d3d0926b565148648ac71cd4\n\ntests/test_v16.py:46: AssertionError\n=============================== warnings summary ===============================\ntests/test_v5.py::test_v5_model_families_have_expected_shapes\ntests/test_v5.py::test_v5_attention_history_respects_padding_mask\n  /data/CSK/J-space-project/jstate-closure/src/jclosure/peripheral_v5.py:184: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n    self.body: nn.Module = nn.TransformerEncoder(layer, num_layers=1)\n\ntests/test_v6.py::test_v6_strong_models_and_multitask_targets_have_expected_shapes\n  /data/CSK/J-space-project/jstate-closure/src/jclosure/peripheral_v6.py:149: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n    self.body: nn.Module = nn.TransformerEncoder(layer, num_layers=2)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED tests/test_v14.py::test_v14_integrity_manifest - RuntimeError: V14 pro...\nFAILED tests/test_v16.py::test_v16_historical_bytes_unchanged_and_manifest - ...\n2 failed, 233 passed, 3 warnings in 7.30s\n"
+    },
+    "v21_only": {
+      "command": [
+        "/home/user/anaconda3/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_v21.py"
+      ],
+      "exit_code": 0,
+      "failed": 0,
+      "failed_tests": [],
+      "passed": 5,
+      "raw_stdout_tail": ".....                                                                    [100%]\n5 passed in 2.17s\n"
+    }
+  }
+}

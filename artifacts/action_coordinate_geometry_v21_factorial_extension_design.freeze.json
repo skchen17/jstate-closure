@@ -1,0 +1,47 @@
+{
+  "S4_raw_Nystrom_reference_not_compact": true,
+  "base_freeze_digest": "eb0e456e2efdd7fe5dd410719fac0044c72d29e1ce3794ac2761641a8f33e397",
+  "conditions": [
+    {
+      "S": "S0",
+      "Z": "Z0"
+    },
+    {
+      "S": "S1",
+      "Z": "Z1"
+    },
+    {
+      "S": "S4",
+      "Z": "Z0"
+    },
+    {
+      "S": "S4",
+      "Z": "Z1"
+    }
+  ],
+  "created_utc": "2026-09-21T02:50:44.756149+00:00",
+  "final_six_action_responses_opened": false,
+  "freeze_digest": "61170793407ab2a514773bffc8ed3b8bfc423ec315d54aff989dd64d014ff2e1",
+  "input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_factorial_design.freeze.json": "91d1ab9b36e7a622609184286b2ddd545aa7936a66adaaf7ee70e7cde846d4fc",
+    "artifacts/action_coordinate_geometry_v21_raw_state_reference.freeze.json": "bf3870c75e9afbfccde0c3bfc1b114b3721ce5b691e531a4da97bf12e3795565",
+    "src/jclosure/experiments/factorial_extension_v21.py": "e7c57efe8161ce037dcd7b749d8dcab82adbeec64816d32505d79eb492a750b5"
+  },
+  "models": [
+    "G0_additive",
+    "G1_bilinear",
+    "G2_quadratic_action",
+    "G3_tensor_polynomial"
+  ],
+  "protocol_version": "action_coordinate_geometry_v21_factorial_extension_design",
+  "ridge_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "same_V20_operator_validation_states_and_actions": true,
+  "same_train_only_ridge_selection": true,
+  "schema_version": 30
+}

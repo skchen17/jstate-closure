@@ -1,0 +1,40 @@
+{
+  "G0_G3_separable_kernel_ineligible_for_state_dependent_Z3": true,
+  "Z3": "39D_realized_BF16_state_dependent_REC_Conv_KV_Nystrom_features",
+  "action_coverage": "same_state_realized_Z3_train_span_and_nearest_abs_cosine",
+  "base_freeze_digest": "eb0e456e2efdd7fe5dd410719fac0044c72d29e1ce3794ac2761641a8f33e397",
+  "conditions": [
+    {
+      "S": "S2",
+      "Z": "Z3"
+    },
+    {
+      "S": "S4",
+      "Z": "Z3"
+    }
+  ],
+  "created_utc": "2026-09-21T02:53:21.265405+00:00",
+  "evaluation": "same_200_validation_states_x_18_open_actions_x_both_signs",
+  "final_six_action_responses_opened": false,
+  "freeze_digest": "c11e7a247c627796b4f0d20e7ab5d4e8bed6f1b45f9d8951b80dec2b901d3d1d",
+  "hyperparameters": {
+    "batch_size": 256,
+    "epochs": 25,
+    "learning_rate": 0.001,
+    "seed": 2021,
+    "weight_decay": 0.0001
+  },
+  "input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_neural_model_design.freeze.json": "fc9bf369fcc1542c8201c1b055fa23a5a5fe9f2fdf1db8110d72d48362494b4f",
+    "artifacts/action_coordinate_geometry_v21_raw_state_reference.freeze.json": "bf3870c75e9afbfccde0c3bfc1b114b3721ce5b691e531a4da97bf12e3795565",
+    "artifacts/action_coordinate_geometry_v21_realized_action_representations.freeze.json": "f82341ebdfa7146f69ff8249ebee3c9d81b580286f4cb3119d2e82e42912b6e2",
+    "src/jclosure/experiments/realized_factorial_v21.py": "e79f6a7ebf42acd329090d43f6b0d4aa19e6a745357b745ee60b4843b40713b5"
+  },
+  "models": [
+    "G4_joint_MLP",
+    "G5_rank8_hypernetwork"
+  ],
+  "protocol_version": "action_coordinate_geometry_v21_realized_action_factorial_design",
+  "schema_version": 30,
+  "training": "600_train_states_x_12_positive_train_actions_only"
+}

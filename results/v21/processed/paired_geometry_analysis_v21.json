@@ -1,0 +1,105 @@
+{
+  "by_role": {
+    "development": {
+      "JVP_P0_Pq_median_principal_angle": 36.90249214827918,
+      "JVP_finite_P0_median_column_cosine": 0.8133955895900726,
+      "JVP_finite_P0_median_subspace_overlap": 0.8721148493270914,
+      "JVP_finite_Pq_median_subspace_overlap": 0.8495010755939842,
+      "JVP_median_r90_r95_r99": [
+        4.0,
+        5.0,
+        8.0
+      ],
+      "JVP_rotation_family_medians": {
+        "boolean_logic": 32.79440269822672,
+        "modular_arithmetic": 31.475715383167273,
+        "short_graph_traversal": 47.26015347989302,
+        "simple_state_transition": 47.02208855586953,
+        "variable_binding": 38.24399331865419
+      },
+      "base_states": 50,
+      "family_rotation_Spearman_rho": {
+        "boolean_logic": 0.8424242424242423,
+        "modular_arithmetic": 0.6,
+        "short_graph_traversal": 0.4787878787878787,
+        "simple_state_transition": 0.6121212121212121,
+        "variable_binding": 0.8545454545454544
+      },
+      "finite_P0_Pq_median_principal_angle": 29.03072006165644,
+      "finite_median_gain_ratio": 0.9375813640815962,
+      "finite_median_post_Procrustes_error": 0.4210764224071488,
+      "finite_median_pre_alignment_error": 0.7677141428548757,
+      "finite_median_r90_r95_r99": [
+        5.0,
+        7.0,
+        12.0
+      ],
+      "finite_median_r95_difference": 0.0,
+      "finite_median_spectral_JS": 0.005820718634777421,
+      "finite_minus_scaled_JVP_P0_relative_l2_median": 0.474624034716699,
+      "finite_rotation_family_medians": {
+        "boolean_logic": 28.726646929958875,
+        "modular_arithmetic": 25.960813801382763,
+        "short_graph_traversal": 29.26691158784321,
+        "simple_state_transition": 31.522406660477916,
+        "variable_binding": 30.850090550547517
+      },
+      "rotation_Pearson_r": 0.7506314731509827,
+      "rotation_Spearman_rho": 0.781032412965186
+    },
+    "validation": {
+      "JVP_P0_Pq_median_principal_angle": 36.79756097261719,
+      "JVP_finite_P0_median_column_cosine": 0.820497453212738,
+      "JVP_finite_P0_median_subspace_overlap": 0.8549748273778613,
+      "JVP_finite_Pq_median_subspace_overlap": 0.8679210047402464,
+      "JVP_median_r90_r95_r99": [
+        4.0,
+        5.0,
+        8.0
+      ],
+      "JVP_rotation_family_medians": {
+        "boolean_logic": 32.593573313199755,
+        "modular_arithmetic": 34.63526980373909,
+        "short_graph_traversal": 44.04636952375652,
+        "simple_state_transition": 45.474989700333424,
+        "variable_binding": 31.56573761859798
+      },
+      "base_states": 25,
+      "family_rotation_Spearman_rho": {
+        "boolean_logic": 0.39999999999999997,
+        "modular_arithmetic": 0.8999999999999998,
+        "short_graph_traversal": 0.7,
+        "simple_state_transition": 0.09999999999999999,
+        "variable_binding": 0.8999999999999998
+      },
+      "finite_P0_Pq_median_principal_angle": 30.446119244443423,
+      "finite_median_gain_ratio": 0.9582568023691971,
+      "finite_median_post_Procrustes_error": 0.4032559447208641,
+      "finite_median_pre_alignment_error": 0.7696599065606494,
+      "finite_median_r90_r95_r99": [
+        5.0,
+        7.0,
+        12.0
+      ],
+      "finite_median_r95_difference": 0.0,
+      "finite_median_spectral_JS": 0.006928527799794642,
+      "finite_minus_scaled_JVP_P0_relative_l2_median": 0.5064954013963585,
+      "finite_rotation_family_medians": {
+        "boolean_logic": 28.303002924868487,
+        "modular_arithmetic": 31.26693529454556,
+        "short_graph_traversal": 30.695738369295206,
+        "simple_state_transition": 33.04660406104245,
+        "variable_binding": 28.373214562918683
+      },
+      "rotation_Pearson_r": 0.5632434086315671,
+      "rotation_Spearman_rho": 0.5669230769230769
+    }
+  },
+  "design_digest": "a409e9120d679f5c198b4022fca529688434d8e307c8f432651b880446e41775",
+  "exact_autograd_method": "torch.func.jvp_forward_AD",
+  "final_six_action_responses_opened": false,
+  "matrix_index_sha256": "04883c6e0d6cac4520e04984e6d97e6a8d8fed5a94cde3350fc7c37028f8392f",
+  "old_reverse_over_reverse_matrices_excluded": true,
+  "records": 75,
+  "shared_geometry_strong_support": true
+}

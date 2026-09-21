@@ -1,0 +1,137 @@
+{
+  "design_digest": "331b662adf941fab685bec542a7e9c3cbf3592cb0de54a04d2b435cdb6624264",
+  "final_six_action_responses_opened": false,
+  "largest_supported_frozen_train_action_count": 12,
+  "rows": [
+    {
+      "internal_curve": [
+        {
+          "internal_l2": 4.587650188429602,
+          "ridge": 0.0001
+        },
+        {
+          "internal_l2": 4.5841477474416585,
+          "ridge": 0.001
+        },
+        {
+          "internal_l2": 4.573571922457744,
+          "ridge": 0.01
+        },
+        {
+          "internal_l2": 4.54513413647544,
+          "ridge": 0.1
+        },
+        {
+          "internal_l2": 4.47588143216996,
+          "ridge": 1.0
+        }
+      ],
+      "selected_ridge": 1.0,
+      "train_action_count": 4,
+      "validation_unseen_direction": {
+        "base_states": 50,
+        "family_stack_relative_l2": {
+          "boolean_logic": 1.0024688839640037,
+          "modular_arithmetic": 1.0157992151397552,
+          "short_graph_traversal": 0.976527564760636,
+          "simple_state_transition": 0.9766969825173422,
+          "variable_binding": 1.0028470792298532
+        },
+        "j_cosine_median": -0.11730439168919322,
+        "j_norm_ratio_median": 0.351399415485948,
+        "j_relative_l2": 1.1479111066369885,
+        "rows": 1200,
+        "stack_cosine_median": 0.09588786581846201,
+        "stack_norm_ratio_median": 0.2587275833606625,
+        "stack_relative_l2": 0.9964435552103641
+      }
+    },
+    {
+      "internal_curve": [
+        {
+          "internal_l2": 1.0103022986544763,
+          "ridge": 0.0001
+        },
+        {
+          "internal_l2": 1.009993732758165,
+          "ridge": 0.001
+        },
+        {
+          "internal_l2": 1.008921465517142,
+          "ridge": 0.01
+        },
+        {
+          "internal_l2": 1.006106714232036,
+          "ridge": 0.1
+        },
+        {
+          "internal_l2": 1.0009134060713016,
+          "ridge": 1.0
+        }
+      ],
+      "selected_ridge": 1.0,
+      "train_action_count": 8,
+      "validation_unseen_direction": {
+        "base_states": 50,
+        "family_stack_relative_l2": {
+          "boolean_logic": 0.684373101583575,
+          "modular_arithmetic": 0.7507108064772697,
+          "short_graph_traversal": 0.6740053637106521,
+          "simple_state_transition": 0.7288852857673507,
+          "variable_binding": 0.6815848468522168
+        },
+        "j_cosine_median": 0.14170610658175953,
+        "j_norm_ratio_median": 0.42077480521346,
+        "j_relative_l2": 1.0508797614750396,
+        "rows": 1200,
+        "stack_cosine_median": 0.35959756260014764,
+        "stack_norm_ratio_median": 0.444593167516965,
+        "stack_relative_l2": 0.6979857897912446
+      }
+    },
+    {
+      "internal_curve": [
+        {
+          "internal_l2": 0.9983430165611911,
+          "ridge": 0.0001
+        },
+        {
+          "internal_l2": 0.9983956886136374,
+          "ridge": 0.001
+        },
+        {
+          "internal_l2": 0.9987750043589623,
+          "ridge": 0.01
+        },
+        {
+          "internal_l2": 1.0009391448511213,
+          "ridge": 0.1
+        },
+        {
+          "internal_l2": 1.0125150976712691,
+          "ridge": 1.0
+        }
+      ],
+      "selected_ridge": 0.0001,
+      "train_action_count": 12,
+      "validation_unseen_direction": {
+        "base_states": 50,
+        "family_stack_relative_l2": {
+          "boolean_logic": 0.5900025039271121,
+          "modular_arithmetic": 0.6906153898324416,
+          "short_graph_traversal": 0.6553960292698874,
+          "simple_state_transition": 0.6987513406074913,
+          "variable_binding": 0.6149615747418781
+        },
+        "j_cosine_median": 0.38582448930549296,
+        "j_norm_ratio_median": 0.49971860404382806,
+        "j_relative_l2": 0.880158571830481,
+        "rows": 1200,
+        "stack_cosine_median": 0.44030095394081104,
+        "stack_norm_ratio_median": 0.5295495201189359,
+        "stack_relative_l2": 0.6386018338237321
+      }
+    }
+  ],
+  "state_context_fixed_full_S2_with_all_12_action_fingerprints": true
+}

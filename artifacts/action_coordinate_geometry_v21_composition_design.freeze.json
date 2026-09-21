@@ -1,0 +1,225 @@
+{
+  "action_reliability_gate": "V20_operator_design_action_reliability",
+  "base_freeze_digest": "eb0e456e2efdd7fe5dd410719fac0044c72d29e1ce3794ac2761641a8f33e397",
+  "calibrated_action_alpha_source": "frozen_V20_train_and_validation_base_alpha",
+  "combinations": [
+    {
+      "category": "unseen_amplitude_seen_direction",
+      "name": "seen_scale_0",
+      "terms": [
+        [
+          0,
+          0.5
+        ]
+      ]
+    },
+    {
+      "category": "unseen_amplitude_seen_direction",
+      "name": "seen_scale_1",
+      "terms": [
+        [
+          1,
+          0.5
+        ]
+      ]
+    },
+    {
+      "category": "unseen_amplitude_seen_direction",
+      "name": "seen_scale_2",
+      "terms": [
+        [
+          2,
+          0.5
+        ]
+      ]
+    },
+    {
+      "category": "unseen_amplitude_seen_direction",
+      "name": "seen_scale_8",
+      "terms": [
+        [
+          8,
+          0.5
+        ]
+      ]
+    },
+    {
+      "category": "unseen_amplitude_unseen_direction",
+      "name": "unseen_scale_12",
+      "terms": [
+        [
+          12,
+          0.5
+        ]
+      ]
+    },
+    {
+      "category": "unseen_amplitude_unseen_direction",
+      "name": "unseen_scale_13",
+      "terms": [
+        [
+          13,
+          0.5
+        ]
+      ]
+    },
+    {
+      "category": "unseen_amplitude_unseen_direction",
+      "name": "unseen_scale_14",
+      "terms": [
+        [
+          14,
+          0.5
+        ]
+      ]
+    },
+    {
+      "category": "unseen_amplitude_unseen_direction",
+      "name": "unseen_scale_15",
+      "terms": [
+        [
+          15,
+          0.5
+        ]
+      ]
+    },
+    {
+      "category": "unseen_amplitude_unseen_direction",
+      "name": "unseen_scale_16",
+      "terms": [
+        [
+          16,
+          0.5
+        ]
+      ]
+    },
+    {
+      "category": "unseen_amplitude_unseen_direction",
+      "name": "unseen_scale_17",
+      "terms": [
+        [
+          17,
+          0.5
+        ]
+      ]
+    },
+    {
+      "category": "unseen_pair",
+      "name": "unseen_pair_12_13",
+      "terms": [
+        [
+          12,
+          0.5
+        ],
+        [
+          13,
+          0.5
+        ]
+      ]
+    },
+    {
+      "category": "unseen_pair",
+      "name": "unseen_pair_14_15",
+      "terms": [
+        [
+          14,
+          0.5
+        ],
+        [
+          15,
+          0.5
+        ]
+      ]
+    },
+    {
+      "category": "unseen_pair",
+      "name": "unseen_pair_16_17",
+      "terms": [
+        [
+          16,
+          0.5
+        ],
+        [
+          17,
+          0.5
+        ]
+      ]
+    },
+    {
+      "category": "unseen_dense_combination",
+      "name": "unseen_dense_6",
+      "terms": [
+        [
+          12,
+          0.25
+        ],
+        [
+          13,
+          0.25
+        ],
+        [
+          14,
+          0.25
+        ],
+        [
+          15,
+          0.25
+        ],
+        [
+          16,
+          0.25
+        ],
+        [
+          17,
+          0.25
+        ]
+      ]
+    }
+  ],
+  "created_utc": "2026-09-21T02:58:39.518178+00:00",
+  "final_six_action_responses_opened": false,
+  "freeze_digest": "29dffc01de53bb7d22e2b8a91c2ceb07f0e0f100b3b6557f0c5b786b395a1f72",
+  "input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_factorial_design.freeze.json": "91d1ab9b36e7a622609184286b2ddd545aa7936a66adaaf7ee70e7cde846d4fc",
+    "artifacts/action_coordinate_geometry_v21_roles.freeze.json": "1f549a3b88fca4845ead3ea2b9b9d2fb6c558cd0d63a0fea6d8d4c994c1455e5",
+    "results/v21/processed/bottleneck_factorial_v21.json": "e7a02bbc53a11f6ce548ccf35a65c55ff52a452f815d51b1089128e1cce19cb3",
+    "src/jclosure/experiments/composition_v21.py": "d6b1cdf8a1d78fe93bff54095a2e08fe86d6f314f188e4ff622de87c6018989d"
+  },
+  "paired_states_per_base": [
+    "P0",
+    "one_frozen_V20_Pq"
+  ],
+  "protocol_version": "action_coordinate_geometry_v21_composition_design",
+  "response_target": "V20_h1_normalized_stack288_with_frozen_teacher",
+  "schema_version": 30,
+  "selected_candidate": "S2\u00d7Z1\u00d7G2_quadratic_action",
+  "selected_ridge": 0.0001,
+  "selection_basis": "representative_near_best_full_requested_Z1_candidate_with_exact_linear_combination_rule; corrected_Z2_G2_development_L2_is_slightly_lower; no_new_composition_response_seen",
+  "validation_base_ids": [
+    "v13-validation-boolean_logic-acfb885884320bdd53a3",
+    "v13-validation-boolean_logic-42ff7946501e6f893dd2",
+    "v13-validation-boolean_logic-1c37507df05a1e326c5c",
+    "v13-validation-boolean_logic-18d3a9ccbee559d155a5",
+    "v13-validation-boolean_logic-80037509bf4ae5e53984",
+    "v13-validation-modular_arithmetic-8b15be2602b3692b5348",
+    "v13-validation-modular_arithmetic-a97c35617feccc42b6cd",
+    "v13-validation-modular_arithmetic-1e43c5c59aa0b3740cd6",
+    "v13-validation-modular_arithmetic-4a3ba98192d85bfe95fe",
+    "v13-validation-modular_arithmetic-ecd0a2fd49b9c5bed517",
+    "v13-validation-short_graph_traversal-7aafa5f333b4ff77280c",
+    "v13-validation-short_graph_traversal-7c24a9f305e9e2a5e1f6",
+    "v13-validation-short_graph_traversal-0ffb0b93db7fa39624bb",
+    "v13-validation-short_graph_traversal-dc16241c2dcab52309ce",
+    "v13-validation-short_graph_traversal-4293e49d81115f8540a4",
+    "v13-validation-simple_state_transition-1c588d89eb989aa6553d",
+    "v13-validation-simple_state_transition-c61d68ba38e5fef23dc1",
+    "v13-validation-simple_state_transition-269eb8dcc353969b4975",
+    "v13-validation-simple_state_transition-4878dbab9d28f4466cd7",
+    "v13-validation-simple_state_transition-e422a784163edb8f3768",
+    "v13-validation-variable_binding-8f2205dc578229413700",
+    "v13-validation-variable_binding-92e9ebe1d473eaa8863b",
+    "v13-validation-variable_binding-86799fb58cae14c1c6a6",
+    "v13-validation-variable_binding-bb9447dc7a5006604ddd",
+    "v13-validation-variable_binding-a0692b1657d7be7b97d9"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "G4_G5_pending_separate_neural_design": true,
+  "S4_Z3_pending_separate_raw_feature_design": true,
+  "base_freeze_digest": "eb0e456e2efdd7fe5dd410719fac0044c72d29e1ce3794ac2761641a8f33e397",
+  "conditions": [
+    {
+      "S": "S1",
+      "Z": "Z0"
+    },
+    {
+      "S": "S2",
+      "Z": "Z0"
+    },
+    {
+      "S": "S2",
+      "Z": "Z1"
+    },
+    {
+      "S": "S2",
+      "Z": "Z2"
+    },
+    {
+      "S": "S3",
+      "Z": "Z0"
+    },
+    {
+      "S": "S3",
+      "Z": "Z1"
+    },
+    {
+      "S": "S0",
+      "Z": "Z1"
+    }
+  ],
+  "created_utc": "2026-09-21T02:28:11.812215+00:00",
+  "evaluation_state_role": "V20 operator_validation",
+  "final_fit_state_role": "V20 operator_train only",
+  "final_six_action_responses_opened": false,
+  "freeze_digest": "55e014b7c5cbf89591f4bc7b42b3d1140029c46db32cfc5a60d2ccf47dbfc20a",
+  "heldout_action_response_in_fit_or_selection": false,
+  "input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_action_representations.freeze.json": "e63195c47fbdf56b28bf9a619e7468da9a2c215c443c203bc11353de73e1fac1",
+    "artifacts/action_coordinate_geometry_v21_roles.freeze.json": "1f549a3b88fca4845ead3ea2b9b9d2fb6c558cd0d63a0fea6d8d4c994c1455e5",
+    "artifacts/action_coordinate_geometry_v21_s0_dimension_amendment_1.freeze.json": "22000160d94c0d8a3b480a1aa1385740ded91ce5994253f633f7a0d9f8039477",
+    "artifacts/action_coordinate_geometry_v21_state_representations.freeze.json": "631c9ab6de5596ea9f733ff67c8b172201d7b3913b3ec81d397f676990c77da9",
+    "src/jclosure/experiments/factorial_v21.py": "2f8292b1a2f369d6b357fbcae036250ce8b5646cbf2f0eb91696f5db1922105b"
+  },
+  "internal_heldout_action_coordinates": [
+    15,
+    11,
+    12,
+    27
+  ],
+  "internal_state_holdout_rule": "sha256(base_trial_id) modulo 5 equals 0; all q siblings remain together",
+  "internal_train_action_coordinates": [
+    0,
+    1,
+    2,
+    8,
+    5,
+    6,
+    7,
+    14
+  ],
+  "model_selection_metric": "internal_heldout_state_and_direction_stack_relative_L2_only",
+  "models": [
+    "G0_additive",
+    "G1_bilinear",
+    "G2_quadratic_action",
+    "G3_tensor_polynomial"
+  ],
+  "protocol_version": "action_coordinate_geometry_v21_factorial_design",
+  "ridge_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "schema_version": 30
+}

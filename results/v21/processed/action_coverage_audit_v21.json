@@ -1,0 +1,210 @@
+{
+  "design_digest": "d32a1e0db9eb9a4de472331d44fcca14e4ce1ddb7f1982bc5f9ba41b4e2da230",
+  "final_six_action_raw_geometry_opened": false,
+  "final_six_action_responses_opened": false,
+  "interpretation_rule": "High_validation_to_train_span_residual_flags_action_coverage_limitation_not_state_nonexistence",
+  "representations": {
+    "Z0": {
+      "by_validation_action": [
+        {
+          "nearest_train_abs_cosine": 0.6385915413205429,
+          "norm_over_train_median": 0.9741174365608218,
+          "train_span_relative_residual": 0.09540111806330795,
+          "validation_action_index_in_open_18": 12
+        },
+        {
+          "nearest_train_abs_cosine": 0.5538416581514227,
+          "norm_over_train_median": 0.984760538696488,
+          "train_span_relative_residual": 0.09246305653399141,
+          "validation_action_index_in_open_18": 13
+        },
+        {
+          "nearest_train_abs_cosine": 0.6291674539706259,
+          "norm_over_train_median": 1.0175719824093683,
+          "train_span_relative_residual": 0.10298617706797766,
+          "validation_action_index_in_open_18": 14
+        },
+        {
+          "nearest_train_abs_cosine": 0.6298933144029516,
+          "norm_over_train_median": 0.15888296868211363,
+          "train_span_relative_residual": 0.1670878302477367,
+          "validation_action_index_in_open_18": 15
+        },
+        {
+          "nearest_train_abs_cosine": 0.7199133199944882,
+          "norm_over_train_median": 2.0323968565159944,
+          "train_span_relative_residual": 0.06623925905325984,
+          "validation_action_index_in_open_18": 16
+        },
+        {
+          "nearest_train_abs_cosine": 0.7052613266115132,
+          "norm_over_train_median": 0.19504416383189643,
+          "train_span_relative_residual": 0.21318678233936234,
+          "validation_action_index_in_open_18": 17
+        }
+      ],
+      "median_nearest_train_abs_cosine": 0.6342424278617472,
+      "median_train_span_relative_residual": 0.0991936475656428
+    },
+    "Z1": {
+      "by_validation_action": [
+        {
+          "nearest_train_abs_cosine": 0.668002057402978,
+          "norm_over_train_median": 1.6272792430524536,
+          "train_span_relative_residual": 0.4020293871023365,
+          "validation_action_index_in_open_18": 12
+        },
+        {
+          "nearest_train_abs_cosine": 0.5323785163817584,
+          "norm_over_train_median": 0.6908773392393938,
+          "train_span_relative_residual": 0.6327842044163347,
+          "validation_action_index_in_open_18": 13
+        },
+        {
+          "nearest_train_abs_cosine": 0.3038924717128114,
+          "norm_over_train_median": 0.6170623592740786,
+          "train_span_relative_residual": 0.8545730089099457,
+          "validation_action_index_in_open_18": 14
+        },
+        {
+          "nearest_train_abs_cosine": 0.035540171569073284,
+          "norm_over_train_median": 0.341116022534031,
+          "train_span_relative_residual": 0.9960488308223503,
+          "validation_action_index_in_open_18": 15
+        },
+        {
+          "nearest_train_abs_cosine": 0.6410835906073811,
+          "norm_over_train_median": 0.1268783889766267,
+          "train_span_relative_residual": 0.4207219736582243,
+          "validation_action_index_in_open_18": 16
+        },
+        {
+          "nearest_train_abs_cosine": 0.14693178862558773,
+          "norm_over_train_median": 0.6183631204858393,
+          "train_span_relative_residual": 0.9339344610903246,
+          "validation_action_index_in_open_18": 17
+        }
+      ],
+      "median_nearest_train_abs_cosine": 0.4181354940472849,
+      "median_train_span_relative_residual": 0.7436786066631402
+    },
+    "Z2_corrected": {
+      "by_validation_action": [
+        {
+          "channel_energy_mismatch_ratio": {
+            "Conv": 7.498362954504253,
+            "KV": 1.0,
+            "REC": 2.158781145002536e-13
+          },
+          "nearest_train_abs_cosine": 0.6771822117489237,
+          "norm_over_train_median": 1.6535836377567634,
+          "train_span_relative_residual": 0.4008697949793524,
+          "validation_action_index_in_open_18": 12
+        },
+        {
+          "channel_energy_mismatch_ratio": {
+            "Conv": 1.930255691762735,
+            "KV": 7050899108595.972,
+            "REC": 1.4496001607167266
+          },
+          "nearest_train_abs_cosine": 0.5328434472169904,
+          "norm_over_train_median": 0.692999722042724,
+          "train_span_relative_residual": 0.6319226831179765,
+          "validation_action_index_in_open_18": 13
+        },
+        {
+          "channel_energy_mismatch_ratio": {
+            "Conv": 1.266683082704249,
+            "KV": 6522396277362.049,
+            "REC": 1.5763618939476058
+          },
+          "nearest_train_abs_cosine": 0.3098287975159939,
+          "norm_over_train_median": 0.6150229142744572,
+          "train_span_relative_residual": 0.8496885776339972,
+          "validation_action_index_in_open_18": 14
+        },
+        {
+          "channel_energy_mismatch_ratio": {
+            "Conv": 1.5718333269949833,
+            "KV": 1.0,
+            "REC": 2.158781145002536e-13
+          },
+          "nearest_train_abs_cosine": 0.03602858961639773,
+          "norm_over_train_median": 0.34663004265996106,
+          "train_span_relative_residual": 0.9959469624888779,
+          "validation_action_index_in_open_18": 15
+        },
+        {
+          "channel_energy_mismatch_ratio": {
+            "Conv": 0.30999798493162595,
+            "KV": 853962323203.659,
+            "REC": 0.36797758917240286
+          },
+          "nearest_train_abs_cosine": 0.6287610359746822,
+          "norm_over_train_median": 0.12573638413713797,
+          "train_span_relative_residual": 0.42676160037135485,
+          "validation_action_index_in_open_18": 16
+        },
+        {
+          "channel_energy_mismatch_ratio": {
+            "Conv": 2.599996770385939e-13,
+            "KV": 1.0,
+            "REC": 2.365831236021639
+          },
+          "nearest_train_abs_cosine": 0.1431970885242035,
+          "norm_over_train_median": 0.6010185157651426,
+          "train_span_relative_residual": 0.9378261147130421,
+          "validation_action_index_in_open_18": 17
+        }
+      ],
+      "median_nearest_train_abs_cosine": 0.42133612236649215,
+      "median_train_span_relative_residual": 0.7408056303759869
+    },
+    "Z3_actual_BF16": {
+      "Z3_action_features_are_state_dependent": true,
+      "by_validation_action": [
+        {
+          "median_nearest_train_abs_cosine": 0.7395501547521611,
+          "median_norm_over_train_median": 8.042221014944985,
+          "median_train_span_relative_residual": 0.06044132698173685,
+          "validation_action_index_in_open_18": 12
+        },
+        {
+          "median_nearest_train_abs_cosine": 0.8432773421397299,
+          "median_norm_over_train_median": 2.62556528969201,
+          "median_train_span_relative_residual": 0.04084533616157893,
+          "validation_action_index_in_open_18": 13
+        },
+        {
+          "median_nearest_train_abs_cosine": 0.9801622100262947,
+          "median_norm_over_train_median": 3.2309062341956336,
+          "median_train_span_relative_residual": 0.056303604710233796,
+          "validation_action_index_in_open_18": 14
+        },
+        {
+          "median_nearest_train_abs_cosine": 0.8030641227104158,
+          "median_norm_over_train_median": 0.4215891748090472,
+          "median_train_span_relative_residual": 0.20622756722354468,
+          "validation_action_index_in_open_18": 15
+        },
+        {
+          "median_nearest_train_abs_cosine": 0.9779118405037529,
+          "median_norm_over_train_median": 1.0328976550966316,
+          "median_train_span_relative_residual": 0.014098814314605567,
+          "validation_action_index_in_open_18": 16
+        },
+        {
+          "median_nearest_train_abs_cosine": 0.9169124323263353,
+          "median_norm_over_train_median": 0.13107098527543437,
+          "median_train_span_relative_residual": 0.37028262916281657,
+          "validation_action_index_in_open_18": 17
+        }
+      ],
+      "design_digest": "c11e7a247c627796b4f0d20e7ab5d4e8bed6f1b45f9d8951b80dec2b901d3d1d",
+      "final_six_action_responses_opened": false,
+      "median_nearest_train_abs_cosine": 0.8800948872330326,
+      "median_train_span_relative_residual": 0.05837246584598532,
+      "validation_response_labels_used": false
+    }
+  }
+}

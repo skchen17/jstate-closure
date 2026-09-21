@@ -1,0 +1,45 @@
+{
+  "base_freeze_digest": "eb0e456e2efdd7fe5dd410719fac0044c72d29e1ce3794ac2761641a8f33e397",
+  "created_utc": "2026-09-21T02:35:36.191703+00:00",
+  "evaluation": "same_six_V20_validation_actions_and_200_operator_validation_states",
+  "final_six_action_responses_opened": false,
+  "fixed_action_representation": "Z1_full_requested_exact_linear_kernel",
+  "fixed_model": "G2_quadratic_action",
+  "fixed_state_representation": "S2_full_12_train_action_fingerprint",
+  "freeze_digest": "331b662adf941fab685bec542a7e9c3cbf3592cb0de54a04d2b435cdb6624264",
+  "input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_factorial_design.freeze.json": "91d1ab9b36e7a622609184286b2ddd545aa7936a66adaaf7ee70e7cde846d4fc",
+    "artifacts/action_coordinate_geometry_v21_roles.freeze.json": "1f549a3b88fca4845ead3ea2b9b9d2fb6c558cd0d63a0fea6d8d4c994c1455e5",
+    "src/jclosure/experiments/action_scaling_v21.py": "8720587894d52d31d4de098c87b9d1da7be5a5d7f5baecbc269412e165ecac9b"
+  },
+  "internal_selection": "heldout_development_states_and_last_action_quarter; no_validation_action_response_in_selection",
+  "nested_train_action_coordinate_order": [
+    0,
+    1,
+    2,
+    8,
+    5,
+    6,
+    7,
+    14,
+    15,
+    11,
+    12,
+    27
+  ],
+  "protocol_version": "action_coordinate_geometry_v21_action_scaling_design",
+  "ridge_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "schema_version": 30,
+  "sizes": [
+    4,
+    8,
+    12
+  ],
+  "state_context_kept_fixed_across_action_counts": true
+}

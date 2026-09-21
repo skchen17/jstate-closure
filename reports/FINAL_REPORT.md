@@ -654,3 +654,13 @@ Append-only adjudication clarification: a separate frozen nonlinear k=128 model 
 
 Test audit: 228 passed, 2 legacy cumulative-report hash tests failed (V14/V16); all six V20 tests passed. These old expectations already differed from the V19 parent commit, and the frozen old manifests were not modified. See `results/v20/processed/v20_test_audit.json`.
 <!-- V20_END -->
+
+<!-- V21_START -->
+## V21 — Action Coordinate Ceiling and Paired Causal Operator Geometry
+
+Formal outcome: **V21-F_CROSS_ACTION_OPERATOR_REMAINS_UNIDENTIFIED_UNDER_TESTED_PRACTICAL_FAMILIES + V21-G_ACTION_DATA_LIMITED + V21-E_SHARED_STATE_DEPENDENT_CAUSAL_GEOMETRY**. Holding S2/G2 fixed, V20 Z0→full requested Z1 reduces unseen-direction relative L2 from **1.3137** to **0.6386**, but unseen sign is **0.9371** and no practical candidate passes the frozen cross-action gate. S1 k128→full S2 gains only **0.0023** L2 under fixed Z1/G2. The Z1 validation train-span residual is **0.7437**, and 4→12 training actions improve L2 **0.3578**. Thus current action coverage remains a material limit; this does not establish compact-state nonexistence.
+
+On 50 development + 25 disjoint validation P0/Pq bases, matched 64-probe exact-JVP and central finite operators have validation median r95 **5.0/7.0**, P0/Pq median rotations **36.7976°/30.4461°**, rotation Spearman **0.5669**, and P0 JVP–finite subspace overlap **0.8550**. Strong shared-geometry gate: **True**. Z4/Z5 are same-action diagnostic oracles, not deployable coordinates.
+
+`COMPACT_OPERATOR_SEARCH_REOPENED=False`; `RAW_TO_OPERATOR_ENCODER_AUTHORIZED=False`; `DYNAMIC_STATE_SEARCH_AUTHORIZED=False`. Final six action responses remain sealed. H2 remains; H3, complete replacement and autonomous control are not authorized. Historical V1–V20 frozen inputs are unchanged. See `reports/V21_COMPLETE_REPORT.md` for every standalone report, amendment, machine-record hash, and limitation.
+<!-- V21_END -->

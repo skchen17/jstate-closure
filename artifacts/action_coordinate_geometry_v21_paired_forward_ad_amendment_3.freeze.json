@@ -1,0 +1,21 @@
+{
+  "base_freeze_digest": "eb0e456e2efdd7fe5dd410719fac0044c72d29e1ce3794ac2761641a8f33e397",
+  "created_utc": "2026-09-21T03:19:27.245406+00:00",
+  "final_six_action_responses_opened": false,
+  "freeze_digest": "723a42bbd079277b065e10b66450ebb551d49f20a4dc690bcfd511d2d85af36d",
+  "input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_paired_geometry_design.freeze.json": "c6ff56c6d95e9b893bdc500e0294f596109a5ad28d1cb8eb290a8f9f420204ea",
+    "artifacts/action_coordinate_geometry_v21_paired_geometry_unreliable_probe_amendment_1.freeze.json": "56c5eab3eaf13e0c80db9b51cde1b316e818706e158007b1e890b75f5cd6a5c9",
+    "results/v21/processed/forward_ad_comparison_v21.json": "db0511bf981e39d2cafe3a9c406635e8c55717280f0b5811ef9773084ae58603",
+    "scripts/benchmark_v21_forward_jvp.py": "0b48d7516a2ec42ff3b77d7b8cf1faa6c3f5d1c9eee1825c4f7b90d30250a7b8",
+    "src/jclosure/experiments/paired_forward_v21.py": "28d9c1c42e5a0a1db41a5f758c7f1b83fd94384d40e8e5491d9391dd29f34e1a"
+  },
+  "method": "torch.func.jvp_exact_forward_AD",
+  "numerical_comparison_max_relative_l2": 0.009731720201671124,
+  "numerical_comparison_min_cosine": 0.9999530911445618,
+  "old_completed_matrices_retained": 17,
+  "old_new_mixing_prohibited": true,
+  "protocol_version": "action_coordinate_geometry_v21_paired_forward_ad_amendment_3",
+  "reason": "Exact forward-mode JVP is 5\u20137\u00d7 faster on five frozen train probes and agrees with the original exact reverse-over-reverse JVP within 1% relative L2, cosine above 0.99995; rerun all 75 bases with one consistent method in a new append-only scratch directory.",
+  "schema_version": 30
+}

@@ -1,0 +1,23 @@
+{
+  "S4_status": "PENDING_RAW_P_ARCHITECTURE_KERNEL_EXTRACTION",
+  "V20_final_six_action_responses_opened": false,
+  "definitions": {
+    "S0": "frozen 128 selected current boundary J values; same for P0/Pq within a base",
+    "S1": "V20 centered positive 12-train-action fingerprint SVD coordinates k128; train-only basis and scaling",
+    "S2": "complete 12x288 positive train-action response fingerprint, no compression",
+    "S3": "complete positive+negative 24x288 train-action response fingerprint, no compression"
+  },
+  "dimensions": {
+    "S0": 4096,
+    "S1": 128,
+    "S2": 3456,
+    "S3": 6912
+  },
+  "scratch_not_for_git": "/data/CSK/J-space-project/v21-action-geometry-work/state_representations_v21.npz",
+  "scratch_sha256": "33ceb530809ed31b4858d5a8a230f322f3a2de9b26d2b02c24ebad50d16142a7",
+  "train_operator_states": 600,
+  "train_positive_fingerprint_energy_k128": 0.9860478910198605,
+  "training_states_used_to_fit_S1_basis": 600,
+  "validation_operator_states": 200,
+  "validation_unseen_action_responses_used_for_S0_S3": false
+}

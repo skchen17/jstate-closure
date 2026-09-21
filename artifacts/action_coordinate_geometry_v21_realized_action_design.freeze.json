@@ -1,0 +1,50 @@
+{
+  "Z3": "actual_BF16_P_after_minus_P_before_architecture_resolved_Nystrom_coordinate",
+  "anchor_action_coordinates": [
+    0,
+    5,
+    15,
+    1,
+    6,
+    11,
+    2,
+    7,
+    12,
+    27,
+    8,
+    14
+  ],
+  "anchor_alpha": [
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    1.0,
+    0.5
+  ],
+  "anchor_base_id": "v13-train-boolean_logic-21f9c20bd3cc0e3334cd",
+  "anchor_support": "12_train_actions_on_one_train_P0_state_only",
+  "base_freeze_digest": "eb0e456e2efdd7fe5dd410719fac0044c72d29e1ce3794ac2761641a8f33e397",
+  "created_utc": "2026-09-21T02:49:18.556872+00:00",
+  "feature_dimension": 39,
+  "feature_rule": "per_channel_exact_raw_realized_delta_inner_products_against_12_train_anchor_deltas_plus_raw_delta_norm",
+  "final_six_action_responses_opened": false,
+  "freeze_digest": "7035e4543ef8ce9c4ccd525c5347e27fbc76c2545a96aa8f8eb3b03330e02fbf",
+  "input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_roles.freeze.json": "1f549a3b88fca4845ead3ea2b9b9d2fb6c558cd0d63a0fea6d8d4c994c1455e5",
+    "artifacts/compact_causal_response_operator_v20_operator_design.freeze.json": "02d460be88a61cb8fca0aa020aa8e89298279a6c688ebd6abf0bfabd3f2300cc",
+    "src/jclosure/experiments/realized_action_v21.py": "551a779379fe64cd5d6e3342594b9a5e3fec33aea3485eac283c353f23161c58"
+  },
+  "no_validation_response_labels_used": true,
+  "not_full_raw_action_embedding": "39D train-anchor Nystr\u00f6m representation of realized delta; kernel approximation caveat",
+  "protocol_version": "action_coordinate_geometry_v21_realized_action_design",
+  "schema_version": 30,
+  "train": "600_train_P0/Pq_states_x_12_positive_train_actions",
+  "validation": "200_validation_P0/Pq_states_x_18_open_train_or_validation_actions_x_both_signs"
+}

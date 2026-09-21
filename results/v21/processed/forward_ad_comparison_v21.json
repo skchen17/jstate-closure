@@ -1,0 +1,45 @@
+{
+  "benchmarked_same_P0_state_probe_count": 5,
+  "final_panel_method": "torch.func.jvp_exact_forward_AD_on_all_50_development_plus_25_validation_bases",
+  "final_six_action_responses_opened": false,
+  "old_and_new_matrices_never_mixed": true,
+  "old_autograd_functional_JVP_completed_development_bases": 17,
+  "old_matrices_retained_in_separate_scratch_directory": true,
+  "rows": [
+    {
+      "backward_seconds": 1.2485178131610155,
+      "cosine": 0.9999530911445618,
+      "direction_index": 4,
+      "forward_seconds": 0.2459486648440361,
+      "relative_l2_difference": 0.009731720201671124
+    },
+    {
+      "backward_seconds": 1.0287090856581926,
+      "cosine": 0.9999738335609436,
+      "direction_index": 9,
+      "forward_seconds": 0.14581991359591484,
+      "relative_l2_difference": 0.007447290234267712
+    },
+    {
+      "backward_seconds": 1.0256303437054157,
+      "cosine": 0.9999774694442749,
+      "direction_index": 19,
+      "forward_seconds": 0.14621706306934357,
+      "relative_l2_difference": 0.0067903767339885235
+    },
+    {
+      "backward_seconds": 1.040654230862856,
+      "cosine": 0.9999811053276062,
+      "direction_index": 1,
+      "forward_seconds": 0.14810736104846,
+      "relative_l2_difference": 0.006244627293199301
+    },
+    {
+      "backward_seconds": 1.0309810154139996,
+      "cosine": 0.999966561794281,
+      "direction_index": 6,
+      "forward_seconds": 0.14918864332139492,
+      "relative_l2_difference": 0.008300036191940308
+    }
+  ]
+}

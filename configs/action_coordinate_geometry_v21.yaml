@@ -1,0 +1,80 @@
+name: Action Coordinate Ceiling and Paired Causal Operator Geometry
+protocol_version: action_coordinate_geometry_v21
+parent_commit: 5d8ec3cf291856ab708f9f04cb73fe4a7aa56a58
+seed: 20260922
+sources:
+  v20_actions: artifacts/compact_causal_response_operator_v20_actions.freeze.json
+  v20_splits: artifacts/compact_causal_response_operator_v20_splits.freeze.json
+  v20_operator_design: artifacts/compact_causal_response_operator_v20_operator_design.freeze.json
+  v20_descriptors: results/v20/processed/action_descriptors_v20.json
+  v20_oracle: results/v20/processed/oracle_operator_search_v20.json
+  v20_train_response: results/v20/processed/response_operator_operator_train_v20.json
+  v20_validation_response: results/v20/processed/response_operator_operator_validation_v20.json
+  v13_directions: artifacts/causal/v13/probe_directions_v13.pt
+state_representations:
+  S0: current_boundary_J_128
+  S1: V20_train_positive_fingerprint_SVD_k128
+  S2: full_12_positive_train_action_fingerprint_3456
+  S3: full_12_positive_and_negative_train_action_fingerprint_6912
+  S4: architecture_resolved_train_only_raw_P_Nystrom_reference
+action_representations:
+  Z0: exact_V20_descriptor_16
+  Z1: full_V13_score_direction_exact_linear_kernel_14397
+  Z2: channel_resolved_score_direction_kernel_REC_Conv_KV
+  Z3: realized_BF16_channel_resolved_raw_delta_kernel
+  Z4: same_action_exact_JVP_oracle_only
+  Z5: train_epsilon_finite_central_second_difference_oracle_only
+actions:
+  train_count: 12
+  validation_count: 6
+  sealed_final_count: 6
+  signs: [-1, 1]
+  train_decoder_sign: 1
+  action_data_sizes: [4, 8, 12]
+  final_response_status: SEALED_UNOPENED_UNTIL_FROZEN_ELIGIBLE_FINALIST
+  action_coverage_threshold_cosine: 0.9
+  action_coverage_threshold_span_residual: 0.25
+state_panels:
+  factorial_train_bases: 150
+  factorial_validation_bases: 50
+  jvp_development_per_family: 10
+  jvp_validation_per_family: 5
+  jvp_q_cycle: [conv_causal1, rec_arch4_amended, joint_causal11]
+  jvp_probes: 64
+  jvp_alpha_candidates: [0.25, 0.5, 1.0]
+  jvp_target: V20_normalized_stack_288_h1
+  jvp_probe_mix: [V20_train, V20_validation, causal_weighted, architecture_balanced, random_raw, high_variance_pca, low_variance]
+models:
+  G0: additive_ridge
+  G1: bilinear_separable_kernel_ridge
+  G2: quadratic_action_kernel_ridge
+  G3: tensor_product_state_action_kernel
+  G4: small_state_conditioned_MLP
+  G5: low_rank_hypernetwork
+  ridge_grid: [0.0001, 0.001, 0.01, 0.1, 1.0]
+  kernel_normalization: train_only_centered_unit_trace
+  selection: internal_train_action_and_state_holdout_only
+  mlp_hidden: 128
+  mlp_epochs: 60
+  mlp_seed: 2121
+gates:
+  stack_median_cosine_min: 0.9
+  J_median_cosine_min: 0.9
+  relative_l2_max: 0.3
+  norm_ratio_min: 0.8
+  norm_ratio_max: 1.2
+  family_relative_l2_max: 0.35
+  action_coordinate_material_l2_gain_min: 0.1
+  state_compression_material_l2_gain_min: 0.1
+  model_class_material_l2_gain_min: 0.1
+  geometry_min_rotation_correlation: 0.3
+  geometry_min_subspace_overlap: 0.5
+  geometry_min_family_positive_fraction: 1.0
+  bootstrap_replicates: 1000
+  bootstrap_seed: 2121
+authorization:
+  COMPACT_OPERATOR_SEARCH_REOPENED: false_until_practical_action_ceiling_passes
+  RAW_TO_OPERATOR_ENCODER_AUTHORIZED: false_until_compact_cross_action_operator_passes
+  DYNAMIC_STATE_SEARCH_AUTHORIZED: false
+  H3_AUTHORIZED: false
+  AUTONOMOUS_STATE_MODEL_AUTHORIZED: false

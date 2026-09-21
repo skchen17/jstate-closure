@@ -1,0 +1,166 @@
+{
+  "action_embedding_dimension": 12,
+  "design_digest": "1ef2517403d6523ddcabac3aa6d04d301897847434a374da64feb9445660d3f7",
+  "final_six_action_responses_opened": false,
+  "models": [
+    {
+      "S": "S3",
+      "Z": "Z1",
+      "direction_and_sign_preliminary_gate": false,
+      "metrics": {
+        "seen_direction_new_state": {
+          "base_states": 50,
+          "family_stack_relative_l2": {
+            "boolean_logic": 0.3134450124603711,
+            "modular_arithmetic": 0.38431460556144215,
+            "short_graph_traversal": 0.3734936524088969,
+            "simple_state_transition": 0.37640529528776717,
+            "variable_binding": 0.4370553634186354
+          },
+          "j_cosine_median": 0.8316711453263684,
+          "j_norm_ratio_median": 0.948844222221499,
+          "j_relative_l2": 0.43527183168511707,
+          "rows": 2400,
+          "stack_cosine_median": 0.9027966922781913,
+          "stack_norm_ratio_median": 0.9252586125285125,
+          "stack_relative_l2": 0.3765573560380631
+        },
+        "unseen_direction": {
+          "base_states": 50,
+          "family_stack_relative_l2": {
+            "boolean_logic": 0.6838368777697365,
+            "modular_arithmetic": 0.7824381142314581,
+            "short_graph_traversal": 0.8092821342905192,
+            "simple_state_transition": 0.8728216470916618,
+            "variable_binding": 0.7602775403905575
+          },
+          "j_cosine_median": 0.18594529733164092,
+          "j_norm_ratio_median": 0.9024665415915514,
+          "j_relative_l2": 1.0326597405862505,
+          "rows": 1200,
+          "stack_cosine_median": 0.371069257104891,
+          "stack_norm_ratio_median": 0.8418324635413764,
+          "stack_relative_l2": 0.7681987297418306
+        },
+        "unseen_direction_and_sign": {
+          "base_states": 50,
+          "family_stack_relative_l2": {
+            "boolean_logic": 0.8863270756807298,
+            "modular_arithmetic": 0.8898463146229478,
+            "short_graph_traversal": 1.0218153774188559,
+            "simple_state_transition": 1.0459037461031655,
+            "variable_binding": 0.912484650820887
+          },
+          "j_cosine_median": 0.4107085665752851,
+          "j_norm_ratio_median": 0.8824821925318116,
+          "j_relative_l2": 1.0060861986662242,
+          "rows": 1200,
+          "stack_cosine_median": 0.38092029623286494,
+          "stack_norm_ratio_median": 0.8271316596000458,
+          "stack_relative_l2": 0.9469087037255267
+        },
+        "unseen_sign": {
+          "base_states": 50,
+          "family_stack_relative_l2": {
+            "boolean_logic": 0.6628594108847176,
+            "modular_arithmetic": 0.7921846120820257,
+            "short_graph_traversal": 0.8689104428153415,
+            "simple_state_transition": 0.8826117282886186,
+            "variable_binding": 0.7969333237753858
+          },
+          "j_cosine_median": 0.6297681141217779,
+          "j_norm_ratio_median": 1.054720451830768,
+          "j_relative_l2": 0.659104141536635,
+          "rows": 2400,
+          "stack_cosine_median": 0.6244660246040383,
+          "stack_norm_ratio_median": 0.9048393669377459,
+          "stack_relative_l2": 0.7947902277937645
+        }
+      },
+      "model": "G4_joint_MLP",
+      "parameter_count": 466080,
+      "weights_scratch_path": "/data/CSK/J-space-project/v21-action-geometry-work/neural_weights/S3_Z1_G4_joint_MLP.pt",
+      "weights_sha256": "4306a2449a8b36fa3c05b9d1701752447571fade34282a2b26e9da6546299887"
+    },
+    {
+      "S": "S3",
+      "Z": "Z1",
+      "direction_and_sign_preliminary_gate": false,
+      "metrics": {
+        "seen_direction_new_state": {
+          "base_states": 50,
+          "family_stack_relative_l2": {
+            "boolean_logic": 0.26084212957018704,
+            "modular_arithmetic": 0.3379652122727957,
+            "short_graph_traversal": 0.34046926487168805,
+            "simple_state_transition": 0.344742460366715,
+            "variable_binding": 0.39372117363277076
+          },
+          "j_cosine_median": 0.8986159562856485,
+          "j_norm_ratio_median": 0.9539205263291816,
+          "j_relative_l2": 0.37814710381246874,
+          "rows": 2400,
+          "stack_cosine_median": 0.927607991851958,
+          "stack_norm_ratio_median": 0.9182784021329812,
+          "stack_relative_l2": 0.33474841958226076
+        },
+        "unseen_direction": {
+          "base_states": 50,
+          "family_stack_relative_l2": {
+            "boolean_logic": 0.7440690941731591,
+            "modular_arithmetic": 0.7524592089235064,
+            "short_graph_traversal": 0.954269496644855,
+            "simple_state_transition": 1.0012677937954915,
+            "variable_binding": 0.7809318037395141
+          },
+          "j_cosine_median": 0.43113542390415016,
+          "j_norm_ratio_median": 0.8584083048941956,
+          "j_relative_l2": 1.0508295991429295,
+          "rows": 1200,
+          "stack_cosine_median": 0.528781963537849,
+          "stack_norm_ratio_median": 1.1000506516158377,
+          "stack_relative_l2": 0.8334371136927016
+        },
+        "unseen_direction_and_sign": {
+          "base_states": 50,
+          "family_stack_relative_l2": {
+            "boolean_logic": 1.469722933374207,
+            "modular_arithmetic": 1.108109422421745,
+            "short_graph_traversal": 1.5360823176454612,
+            "simple_state_transition": 1.5863114062342214,
+            "variable_binding": 1.2840427018742264
+          },
+          "j_cosine_median": 0.15955212365643762,
+          "j_norm_ratio_median": 0.8757467806800139,
+          "j_relative_l2": 1.3375514134035316,
+          "rows": 1200,
+          "stack_cosine_median": 0.17055430783620462,
+          "stack_norm_ratio_median": 1.045672136985195,
+          "stack_relative_l2": 1.3999625348943996
+        },
+        "unseen_sign": {
+          "base_states": 50,
+          "family_stack_relative_l2": {
+            "boolean_logic": 1.1239370491990224,
+            "modular_arithmetic": 0.9745826711987249,
+            "short_graph_traversal": 1.2553529289579712,
+            "simple_state_transition": 1.2282640978670352,
+            "variable_binding": 1.1488790803880924
+          },
+          "j_cosine_median": 0.7408099852187005,
+          "j_norm_ratio_median": 0.9503780240824793,
+          "j_relative_l2": 0.8220482731868576,
+          "rows": 2400,
+          "stack_cosine_median": 0.6275868477835804,
+          "stack_norm_ratio_median": 0.8853594048784384,
+          "stack_relative_l2": 1.1565122238332344
+        }
+      },
+      "model": "G5_rank8_hypernetwork",
+      "parameter_count": 592288,
+      "weights_scratch_path": "/data/CSK/J-space-project/v21-action-geometry-work/neural_weights/S3_Z1_G5_rank8_hypernetwork.pt",
+      "weights_sha256": "4639f26c1f991908274d1d19de18fa4d835dc5bd9f38f9b769eedb69724a7436"
+    }
+  ],
+  "state_dimension": 6912
+}

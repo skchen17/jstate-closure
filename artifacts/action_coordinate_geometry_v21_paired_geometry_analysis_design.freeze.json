@@ -1,0 +1,35 @@
+{
+  "base_freeze_digest": "eb0e456e2efdd7fe5dd410719fac0044c72d29e1ce3794ac2761641a8f33e397",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2021,
+  "bootstrap_unit": "base_trial_id",
+  "created_utc": "2026-09-21T02:42:53.993142+00:00",
+  "excluded_finite_probe_direction_indices": [
+    254
+  ],
+  "final_six_action_responses_opened": false,
+  "freeze_digest": "a409e9120d679f5c198b4022fca529688434d8e307c8f432651b880446e41775",
+  "input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_paired_geometry_design.freeze.json": "c6ff56c6d95e9b893bdc500e0294f596109a5ad28d1cb8eb290a8f9f420204ea",
+    "artifacts/action_coordinate_geometry_v21_paired_geometry_unreliable_probe_amendment_1.freeze.json": "56c5eab3eaf13e0c80db9b51cde1b316e818706e158007b1e890b75f5cd6a5c9",
+    "src/jclosure/experiments/geometry_analysis_v21.py": "b5a692219b4b93890a5c79aedfbd87aa74df7d307661d5c5ad70e9e65dc09b26"
+  },
+  "probe_sha256": "4490e1121059bba0cf1f816b65cd2354aa45143b6d14aa900723a188d15ec918",
+  "protocol_version": "action_coordinate_geometry_v21_paired_geometry_analysis_design",
+  "reliability_qualified_probe_count": 63,
+  "rotation_magnitude": "median_principal_angle_degrees_of_dominant_left_response_subspaces",
+  "schema_version": 30,
+  "shared_geometry_support_thresholds": {
+    "Spearman_rotation_correlation_min": 0.3,
+    "median_JVP_finite_overlap_min": 0.5,
+    "median_P0_Pq_angle_min_degrees": 15,
+    "median_r95_max": 16,
+    "minimum_positive_family_correlation_count": 4
+  },
+  "spectral_energy_rank_thresholds": [
+    0.9,
+    0.95,
+    0.99
+  ],
+  "subspace_rank": "minimum_P0_Pq_or_JVP_finite_r95; dimension_adapted"
+}

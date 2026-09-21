@@ -1,0 +1,28 @@
+{
+  "base_freeze_digest": "eb0e456e2efdd7fe5dd410719fac0044c72d29e1ce3794ac2761641a8f33e397",
+  "created_utc": "2026-09-21T02:56:20.758737+00:00",
+  "final_six_action_raw_geometry_opened": false,
+  "final_six_action_responses_opened": false,
+  "freeze_digest": "d32a1e0db9eb9a4de472331d44fcca14e4ce1ddb7f1982bc5f9ba41b4e2da230",
+  "heldout_actions": "six_V20_validation_only",
+  "input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_action_representations.freeze.json": "e63195c47fbdf56b28bf9a619e7468da9a2c215c443c203bc11353de73e1fac1",
+    "artifacts/action_coordinate_geometry_v21_realized_action_representations.freeze.json": "f82341ebdfa7146f69ff8249ebee3c9d81b580286f4cb3119d2e82e42912b6e2",
+    "artifacts/action_coordinate_geometry_v21_z2_channel_normalization_amendment_1.freeze.json": "ec3ce15657821ab8f02053f47fecaebb3ed21f70b4c162cc9a9941613748f7ac",
+    "src/jclosure/experiments/coverage_audit_v21.py": "2e65b88a792f5bdadcde4c34131cec82c00d08416fb475aae1a5bb049a27b1dd"
+  },
+  "metrics": [
+    "nearest_train_abs_cosine",
+    "train_span_relative_residual",
+    "norm_ratio",
+    "channel_energy_mismatch"
+  ],
+  "protocol_version": "action_coordinate_geometry_v21_coverage_audit_design",
+  "representations": [
+    "Z0",
+    "Z1",
+    "Z2_corrected",
+    "Z3_actual_BF16"
+  ],
+  "schema_version": 30
+}

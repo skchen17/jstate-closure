@@ -1,0 +1,18 @@
+{
+  "V21_paired_JVP_or_finite_responses_observed_before_amendment": 0,
+  "base_freeze_digest": "eb0e456e2efdd7fe5dd410719fac0044c72d29e1ce3794ac2761641a8f33e397",
+  "created_utc": "2026-09-21T02:32:23.971440+00:00",
+  "fallback_alpha": 0.25,
+  "final_six_action_responses_opened": false,
+  "freeze_digest": "8c6659ed8e6d1be33ed8f946980f3bc5938e0625228f77caeca0eef57d74fb2b",
+  "input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_paired_geometry_design.freeze.json": "c6ff56c6d95e9b893bdc500e0294f596109a5ad28d1cb8eb290a8f9f420204ea",
+    "results/v21/processed/probe_calibration_v21.json": "e69291426c5b1c56ad103a039d58bbbcd51d8cb85607ca53d060496346945b73",
+    "src/jclosure/experiments/paired_geometry_amend_v21.py": "c80ed2ea8e087fe459eb5b9aded938f46789da3ba75563cefe8dcccc93c14c99"
+  },
+  "protocol_version": "action_coordinate_geometry_v21_paired_geometry_unreliable_probe_amendment_1",
+  "reason": "One frozen probe (254) failed train-only reliability at all alpha candidates; retain its exact JVP at fallback alpha 0.25, measure finite response for audit, but exclude its finite column from reliability-qualified rank/alignment.",
+  "reliable_probe_count": 63,
+  "schema_version": 30,
+  "unreliable_direction_index": 254
+}

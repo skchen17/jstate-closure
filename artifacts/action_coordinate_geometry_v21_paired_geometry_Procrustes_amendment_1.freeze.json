@@ -1,0 +1,16 @@
+{
+  "base_freeze_digest": "eb0e456e2efdd7fe5dd410719fac0044c72d29e1ce3794ac2761641a8f33e397",
+  "created_utc": "2026-09-21T03:01:44.671356+00:00",
+  "final_six_action_responses_opened": false,
+  "freeze_digest": "10d557dfc6baf3772b7857ecb3336b592daf3773509fb2169df951fef30b6828",
+  "input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_paired_geometry_analysis_design.freeze.json": "f30053f6d674698a997f40f6fd45d42d37607957b9aa5f48ae2efe8561347ccb",
+    "src/jclosure/experiments/geometry_analysis_amend_v21.py": "37ae0d38550f5abce214426724f2152751ebacd497e5ed88163c5cd2cd334280",
+    "tests/test_v21.py": "15e3c69e3524476dee655e1ba5c371a289055dd98bb203cc6ce86aa70012dce5"
+  },
+  "original_analysis_rows_observed": 0,
+  "protocol_version": "action_coordinate_geometry_v21_paired_geometry_Procrustes_amendment_1",
+  "raw_JVP_finite_matrices_unchanged": true,
+  "reason": "CPU exact-rotation invariant caught incorrect use of nuclear_norm(A^T B); correct output-space orthogonal Procrustes uses nuclear_norm(B A^T) via compact SVD core.",
+  "schema_version": 30
+}

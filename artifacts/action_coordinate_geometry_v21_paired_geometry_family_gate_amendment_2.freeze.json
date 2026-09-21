@@ -1,0 +1,18 @@
+{
+  "base_freeze_digest": "eb0e456e2efdd7fe5dd410719fac0044c72d29e1ce3794ac2761641a8f33e397",
+  "created_utc": "2026-09-21T03:09:30.092568+00:00",
+  "final_six_action_responses_opened": false,
+  "freeze_digest": "a9fd0fe02f334c992c2b0e5a8712dacd16afaa49e47fa79f8d44b81d33c2c2a9",
+  "geometry_analysis_rows_observed_before_amendment": 0,
+  "input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_paired_geometry_Procrustes_amendment_1.freeze.json": "b817c1315e9e724c03886820cea5e453488ad54c45da5ae8217535694fb6eac7",
+    "configs/action_coordinate_geometry_v21.yaml": "364b52456f4f7bab6bdd55c6bc144d74ffa941719856201fd659467942e8b79d",
+    "src/jclosure/experiments/geometry_gate_amend_v21.py": "62ead7a8bb2984a82bb89a274ca51b06d47f323e16098861c1458435a792f26f"
+  },
+  "prior_derived_count": 4,
+  "protocol_version": "action_coordinate_geometry_v21_paired_geometry_family_gate_amendment_2",
+  "raw_JVP_finite_matrices_unchanged": true,
+  "reason": "Derived analysis design accidentally used four of five positive family correlations, weaker than base protocol's 1.0 positive-family fraction; restore all five before any geometry spectrum analysis.",
+  "required_positive_family_correlation_count": 5,
+  "schema_version": 30
+}

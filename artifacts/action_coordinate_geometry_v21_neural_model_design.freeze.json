@@ -1,0 +1,57 @@
+{
+  "action_embedding": "exact_train_action_Gram_eigenspace_and_validation_Nystrom_projection",
+  "base_freeze_digest": "eb0e456e2efdd7fe5dd410719fac0044c72d29e1ce3794ac2761641a8f33e397",
+  "batch_size": 256,
+  "conditions": [
+    {
+      "S": "S1",
+      "Z": "Z0"
+    },
+    {
+      "S": "S2",
+      "Z": "Z0"
+    },
+    {
+      "S": "S2",
+      "Z": "Z1"
+    },
+    {
+      "S": "S2",
+      "Z": "Z2"
+    },
+    {
+      "S": "S3",
+      "Z": "Z1"
+    },
+    {
+      "S": "S0",
+      "Z": "Z1"
+    }
+  ],
+  "created_utc": "2026-09-21T02:40:38.724591+00:00",
+  "epochs": 25,
+  "evaluation": "200_V20_operator_validation_states_x_seen_unseen_direction_and_sign",
+  "final_six_action_responses_opened": false,
+  "freeze_digest": "1ef2517403d6523ddcabac3aa6d04d301897847434a374da64feb9445660d3f7",
+  "hidden_layers": 2,
+  "hidden_width": 64,
+  "hypernetwork_rank": 8,
+  "input_sha256": {
+    "artifacts/action_coordinate_geometry_v21_factorial_design.freeze.json": "91d1ab9b36e7a622609184286b2ddd545aa7936a66adaaf7ee70e7cde846d4fc",
+    "artifacts/action_coordinate_geometry_v21_z2_channel_normalization_amendment_1.freeze.json": "ec3ce15657821ab8f02053f47fecaebb3ed21f70b4c162cc9a9941613748f7ac",
+    "src/jclosure/experiments/neural_models_v21.py": "7ccef891ce91dc45fd89268449f81e51488a632afc55a43d67e3f7f0dfe2e73e"
+  },
+  "input_state": "complete_frozen_state_feature_without_dimension_reduction",
+  "learning_rate": 0.001,
+  "models": [
+    "G4_joint_MLP",
+    "G5_rank8_hypernetwork"
+  ],
+  "protocol_version": "action_coordinate_geometry_v21_neural_model_design",
+  "schema_version": 30,
+  "seed": 2021,
+  "selection": "hyperparameters_and_epochs_fixed_before_V21_validation_response_access; no_validation_response_in_training_or_selection",
+  "training": "600_V20_operator_train_states_x_12_positive_train_actions_only",
+  "weight_decay": 0.0001,
+  "weight_storage": "scratch_outside_git_repository"
+}

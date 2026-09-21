@@ -1,0 +1,147 @@
+{
+  "V20_final_six_action_responses_opened": false,
+  "V21_dynamic_state_search_authorized": false,
+  "config": {
+    "action_representations": {
+      "Z0": "exact_V20_descriptor_16",
+      "Z1": "full_V13_score_direction_exact_linear_kernel_14397",
+      "Z2": "channel_resolved_score_direction_kernel_REC_Conv_KV",
+      "Z3": "realized_BF16_channel_resolved_raw_delta_kernel",
+      "Z4": "same_action_exact_JVP_oracle_only",
+      "Z5": "train_epsilon_finite_central_second_difference_oracle_only"
+    },
+    "actions": {
+      "action_coverage_threshold_cosine": 0.9,
+      "action_coverage_threshold_span_residual": 0.25,
+      "action_data_sizes": [
+        4,
+        8,
+        12
+      ],
+      "final_response_status": "SEALED_UNOPENED_UNTIL_FROZEN_ELIGIBLE_FINALIST",
+      "sealed_final_count": 6,
+      "signs": [
+        -1,
+        1
+      ],
+      "train_count": 12,
+      "train_decoder_sign": 1,
+      "validation_count": 6
+    },
+    "authorization": {
+      "AUTONOMOUS_STATE_MODEL_AUTHORIZED": false,
+      "COMPACT_OPERATOR_SEARCH_REOPENED": "false_until_practical_action_ceiling_passes",
+      "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+      "H3_AUTHORIZED": false,
+      "RAW_TO_OPERATOR_ENCODER_AUTHORIZED": "false_until_compact_cross_action_operator_passes"
+    },
+    "gates": {
+      "J_median_cosine_min": 0.9,
+      "action_coordinate_material_l2_gain_min": 0.1,
+      "bootstrap_replicates": 1000,
+      "bootstrap_seed": 2121,
+      "family_relative_l2_max": 0.35,
+      "geometry_min_family_positive_fraction": 1.0,
+      "geometry_min_rotation_correlation": 0.3,
+      "geometry_min_subspace_overlap": 0.5,
+      "model_class_material_l2_gain_min": 0.1,
+      "norm_ratio_max": 1.2,
+      "norm_ratio_min": 0.8,
+      "relative_l2_max": 0.3,
+      "stack_median_cosine_min": 0.9,
+      "state_compression_material_l2_gain_min": 0.1
+    },
+    "models": {
+      "G0": "additive_ridge",
+      "G1": "bilinear_separable_kernel_ridge",
+      "G2": "quadratic_action_kernel_ridge",
+      "G3": "tensor_product_state_action_kernel",
+      "G4": "small_state_conditioned_MLP",
+      "G5": "low_rank_hypernetwork",
+      "kernel_normalization": "train_only_centered_unit_trace",
+      "mlp_epochs": 60,
+      "mlp_hidden": 128,
+      "mlp_seed": 2121,
+      "ridge_grid": [
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        1.0
+      ],
+      "selection": "internal_train_action_and_state_holdout_only"
+    },
+    "name": "Action Coordinate Ceiling and Paired Causal Operator Geometry",
+    "parent_commit": "5d8ec3cf291856ab708f9f04cb73fe4a7aa56a58",
+    "protocol_version": "action_coordinate_geometry_v21",
+    "seed": 20260922,
+    "sources": {
+      "v13_directions": "artifacts/causal/v13/probe_directions_v13.pt",
+      "v20_actions": "artifacts/compact_causal_response_operator_v20_actions.freeze.json",
+      "v20_descriptors": "results/v20/processed/action_descriptors_v20.json",
+      "v20_operator_design": "artifacts/compact_causal_response_operator_v20_operator_design.freeze.json",
+      "v20_oracle": "results/v20/processed/oracle_operator_search_v20.json",
+      "v20_splits": "artifacts/compact_causal_response_operator_v20_splits.freeze.json",
+      "v20_train_response": "results/v20/processed/response_operator_operator_train_v20.json",
+      "v20_validation_response": "results/v20/processed/response_operator_operator_validation_v20.json"
+    },
+    "state_panels": {
+      "factorial_train_bases": 150,
+      "factorial_validation_bases": 50,
+      "jvp_alpha_candidates": [
+        0.25,
+        0.5,
+        1.0
+      ],
+      "jvp_development_per_family": 10,
+      "jvp_probe_mix": [
+        "V20_train",
+        "V20_validation",
+        "causal_weighted",
+        "architecture_balanced",
+        "random_raw",
+        "high_variance_pca",
+        "low_variance"
+      ],
+      "jvp_probes": 64,
+      "jvp_q_cycle": [
+        "conv_causal1",
+        "rec_arch4_amended",
+        "joint_causal11"
+      ],
+      "jvp_target": "V20_normalized_stack_288_h1",
+      "jvp_validation_per_family": 5
+    },
+    "state_representations": {
+      "S0": "current_boundary_J_128",
+      "S1": "V20_train_positive_fingerprint_SVD_k128",
+      "S2": "full_12_positive_train_action_fingerprint_3456",
+      "S3": "full_12_positive_and_negative_train_action_fingerprint_6912",
+      "S4": "architecture_resolved_train_only_raw_P_Nystrom_reference"
+    }
+  },
+  "config_sha256": "364b52456f4f7bab6bdd55c6bc144d74ffa941719856201fd659467942e8b79d",
+  "created_utc": "2026-09-21T02:14:03.343749+00:00",
+  "freeze_digest": "eb0e456e2efdd7fe5dd410719fac0044c72d29e1ce3794ac2761641a8f33e397",
+  "frozen_input_sha256": {
+    "artifacts/causal/v13/probe_directions_v13.pt": "77aeccb5dccaef52c444d94b65797a18ce2984c76b6655e8a90714976cf51891",
+    "artifacts/compact_causal_response_operator_v20.freeze.json": "9ba5cbec830ce5a15fb75513b809aad10fc49552431cc9b9de12fb7626be7c23",
+    "artifacts/compact_causal_response_operator_v20_actions.freeze.json": "9ab92bf2d6feeff8fa2e78b2c9c21e4a679b1c76b18d6544f21d08ecce91c030",
+    "artifacts/compact_causal_response_operator_v20_operator_analysis.freeze.json": "d38b5f1a9431f7a6814090401b899cb48939b5d4f518588eb4d3990bbeab12f2",
+    "artifacts/compact_causal_response_operator_v20_operator_design.freeze.json": "02d460be88a61cb8fca0aa020aa8e89298279a6c688ebd6abf0bfabd3f2300cc",
+    "artifacts/compact_causal_response_operator_v20_q_locality_scales.freeze.json": "2bf9b40d5d12db3e0e7bd731c91dcd7f8e3df99597bcd7572fec2c68c8e80cc8",
+    "artifacts/compact_causal_response_operator_v20_splits.freeze.json": "fc51d5ad87f92bf85d1ac92832f9f7a4a30788fea60a024073011e8f43f8697c",
+    "reports/FINAL_REPORT.md": "3de80ce71344e488036a9d293f1c79b4eea93866d3d0926b565148648ac71cd4",
+    "reports/V20_COMPLETE_REPORT.md": "407c80f9750066822208d7c3c3a05ba5cc55d2a2668346b802db1efa464da00b",
+    "results/v20/processed/action_descriptors_v20.json": "00311120a471c335335daac6d7ea5d23d491c187321a602d4a6bf2a51f453c97",
+    "results/v20/processed/operator_geometry_v20.json": "15e973e6466357b989f18ccd07373bf556a76b7684d6861e91102d753f49afe8",
+    "results/v20/processed/oracle_operator_search_v20.json": "5e5356a6575a8f767548653811e591092c3908d312a76e2c3a54f80bb0033340",
+    "results/v20/processed/response_operator_operator_train_v20.json": "b27764e1af50ffc1d371e1ea8e5a9817bef116f24a6f8c92b5ae225d187bf5ba",
+    "results/v20/processed/response_operator_operator_validation_v20.json": "c9e58a0e44327350652f951edf93973597e8a02a226bbac66a2163ed63a9d516",
+    "results/v20/processed/v20_adjudication_amendment_1.json": "639937b52c7cff3215bbc521b753c976a4063593ba3076fb796dd1650eb1bc15"
+  },
+  "parent_commit": "5d8ec3cf291856ab708f9f04cb73fe4a7aa56a58",
+  "protocol_code_sha256": "9257deb488d23365bd0cbeefc9214f134a9135dd6f402c3f57278a828c7ad79d",
+  "protocol_version": "action_coordinate_geometry_v21",
+  "schema_version": 30
+}

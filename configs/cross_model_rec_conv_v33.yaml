@@ -1,0 +1,58 @@
+protocol_version: cross_model_rec_conv_v33
+name: Cross-Model Replication of REC–Conv Conditional Correction
+parent_commit: 09a00a67e5a286a05e47730c43586bce94b8095a
+model2:
+  id: tiiuae/Falcon-H1-1.5B-Base
+  revision: 06d7330266253c20784f58b0a846dc09a9d12cee
+  local_path: /data/CSK/J-space-project/models/Falcon-H1-1.5B-Base-06d7330
+  architecture: FalconH1ForCausalLM
+  checkpoint_sha256: 9acd2ef3e946e88a6e8cb14d38942f2ffbf6f52a5bc37312c1e0cc64574f1aeb
+  tokenizer_sha256: eb7825ecac026cc37e37c03d7e8d06d1f85c7ab8bdefabe81fc1b40f0ed7929a
+  config_sha256: 7ae20392a453be5f1a59b39b1e1f4fc09522901eacd64492e649672594ea4c77
+  dtype: bfloat16
+  device: cuda:0
+  attention_implementation: eager
+  trust_remote_code: false
+  context_limit_for_experiment: 512
+model1:
+  id: Qwen/Qwen3.5-4B
+  revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+  frozen_result: results/v32/processed/v32_adjudication.json
+panel_source: V32 response-blind state IDs and V18 five-family prompt-generating code; model-2 token/probe selection independent
+roles: {calibration: 25, development: 100, validation: 50, independent_final: 50}
+families: [boolean_logic, modular_arithmetic, short_graph_traversal, simple_state_transition, variable_binding]
+token_rule:
+  anchor_surface: ':'
+  common_rank_max: 8192
+  rank_max_per_state: 8192
+  candidate_count: 40
+  primary_pairs_per_state: 1
+  token_classes: [PUNCTUATION_OR_STRUCTURE, LEXICAL_SURFACE, NUMERIC, FUNCTION_WORD]
+  choice: deterministic hash of seed,state_id,token_id among rank-eligible response-blind candidates
+future_probe_rule:
+  count: 6
+  choice: first six usable tokens in descending pre-write prefix-logit rank
+target_bundle:
+  j_analogue: absent
+  selected_logit_count: 64
+  semantic_logprob_count: 64
+  broad_logit_count: 64
+  late_hidden_count: 64
+  workspace_layers: [5, 11, 17, 23]
+  workspace_per_layer: 32
+  index_rule: deterministic seeded without-replacement uniform indices, independent of V33 causal responses
+  block_normalization: calibration-clean empirical RMS change scale, frozen before causal write observations
+factorial: [Y00, Y10, Y01, Y11, Ydonor]
+primary_KV: recipient-native
+bootstrap: {unit: state, iterations: 2000, seed: 330133, lower_tail: 0.025}
+replication_gate: {row_improvement_min: 0.80, median_l2_reduction_min: 0.20, bootstrap_lower_bound_gt: 0.0, families_required: 4, family_row_improvement_min: 0.80}
+alignment_gate: {median_cosine_min: 0.50, bootstrap_lower_bound_min: 0.25, families_required: 4, family_median_cosine_min: 0.50}
+conv_dominance_gate: {median_conv_relative_l2_max: 0.75, conv_to_rec_error_ratio_max: 0.75, families_required: 4}
+structural_gate: {joint_beats_scalar_fraction_min: 0.80, interaction_ratio_median_min: 0.05, context_matched_better_fraction_min: 0.80, context_families_required: 4}
+context_controls: [MATCHED_REC2, RECIPIENT_REC2, WRONG_TOKEN_REC2, SAME_FAMILY_WRONG_STATE_REC2, CROSS_FAMILY_WRONG_STATE_REC2, SHUFFLED_REC2, RANDOM_SAME_NORM_REC2]
+context_states_per_family_per_role: 2
+phase_b_rule: open only after model-2 development and validation pass locked correction and alignment gates
+phase_b_site_gate: {benefit_removed_min: 0.50, benefit_restored_min: 0.50, correction_direction_cosine_min: 0.80, families_required: 4}
+final_rule: open 50 model-2 independent-final states only after development and validation pass, one estimand definition frozen and no threshold/model adaptation
+model1_final_rule: remains sealed; no automatic V32 final opening
+authorization: {H2_REMAINS: true, H3_AUTHORIZED: false, DYNAMIC_STATE_SEARCH_AUTHORIZED: false, AUTONOMOUS_CONTROLLER_AUTHORIZED: false}

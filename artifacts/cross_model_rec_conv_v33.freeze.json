@@ -1,0 +1,160 @@
+{
+  "V1_V32_records_mutated": false,
+  "config": {
+    "alignment_gate": {
+      "bootstrap_lower_bound_min": 0.25,
+      "families_required": 4,
+      "family_median_cosine_min": 0.5,
+      "median_cosine_min": 0.5
+    },
+    "authorization": {
+      "AUTONOMOUS_CONTROLLER_AUTHORIZED": false,
+      "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+      "H2_REMAINS": true,
+      "H3_AUTHORIZED": false
+    },
+    "bootstrap": {
+      "iterations": 2000,
+      "lower_tail": 0.025,
+      "seed": 330133,
+      "unit": "state"
+    },
+    "context_controls": [
+      "MATCHED_REC2",
+      "RECIPIENT_REC2",
+      "WRONG_TOKEN_REC2",
+      "SAME_FAMILY_WRONG_STATE_REC2",
+      "CROSS_FAMILY_WRONG_STATE_REC2",
+      "SHUFFLED_REC2",
+      "RANDOM_SAME_NORM_REC2"
+    ],
+    "context_states_per_family_per_role": 2,
+    "conv_dominance_gate": {
+      "conv_to_rec_error_ratio_max": 0.75,
+      "families_required": 4,
+      "median_conv_relative_l2_max": 0.75
+    },
+    "factorial": [
+      "Y00",
+      "Y10",
+      "Y01",
+      "Y11",
+      "Ydonor"
+    ],
+    "families": [
+      "boolean_logic",
+      "modular_arithmetic",
+      "short_graph_traversal",
+      "simple_state_transition",
+      "variable_binding"
+    ],
+    "final_rule": "open 50 model-2 independent-final states only after development and validation pass, one estimand definition frozen and no threshold/model adaptation",
+    "future_probe_rule": {
+      "choice": "first six usable tokens in descending pre-write prefix-logit rank",
+      "count": 6
+    },
+    "model1": {
+      "frozen_result": "results/v32/processed/v32_adjudication.json",
+      "id": "Qwen/Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+    },
+    "model1_final_rule": "remains sealed; no automatic V32 final opening",
+    "model2": {
+      "architecture": "FalconH1ForCausalLM",
+      "attention_implementation": "eager",
+      "checkpoint_sha256": "9acd2ef3e946e88a6e8cb14d38942f2ffbf6f52a5bc37312c1e0cc64574f1aeb",
+      "config_sha256": "7ae20392a453be5f1a59b39b1e1f4fc09522901eacd64492e649672594ea4c77",
+      "context_limit_for_experiment": 512,
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "id": "tiiuae/Falcon-H1-1.5B-Base",
+      "local_path": "/data/CSK/J-space-project/models/Falcon-H1-1.5B-Base-06d7330",
+      "revision": "06d7330266253c20784f58b0a846dc09a9d12cee",
+      "tokenizer_sha256": "eb7825ecac026cc37e37c03d7e8d06d1f85c7ab8bdefabe81fc1b40f0ed7929a",
+      "trust_remote_code": false
+    },
+    "name": "Cross-Model Replication of REC\u2013Conv Conditional Correction",
+    "panel_source": "V32 response-blind state IDs and V18 five-family prompt-generating code; model-2 token/probe selection independent",
+    "parent_commit": "09a00a67e5a286a05e47730c43586bce94b8095a",
+    "phase_b_rule": "open only after model-2 development and validation pass locked correction and alignment gates",
+    "phase_b_site_gate": {
+      "benefit_removed_min": 0.5,
+      "benefit_restored_min": 0.5,
+      "correction_direction_cosine_min": 0.8,
+      "families_required": 4
+    },
+    "primary_KV": "recipient-native",
+    "protocol_version": "cross_model_rec_conv_v33",
+    "replication_gate": {
+      "bootstrap_lower_bound_gt": 0.0,
+      "families_required": 4,
+      "family_row_improvement_min": 0.8,
+      "median_l2_reduction_min": 0.2,
+      "row_improvement_min": 0.8
+    },
+    "roles": {
+      "calibration": 25,
+      "development": 100,
+      "independent_final": 50,
+      "validation": 50
+    },
+    "structural_gate": {
+      "context_families_required": 4,
+      "context_matched_better_fraction_min": 0.8,
+      "interaction_ratio_median_min": 0.05,
+      "joint_beats_scalar_fraction_min": 0.8
+    },
+    "target_bundle": {
+      "block_normalization": "calibration-clean empirical RMS change scale, frozen before causal write observations",
+      "broad_logit_count": 64,
+      "index_rule": "deterministic seeded without-replacement uniform indices, independent of V33 causal responses",
+      "j_analogue": "absent",
+      "late_hidden_count": 64,
+      "selected_logit_count": 64,
+      "semantic_logprob_count": 64,
+      "workspace_layers": [
+        5,
+        11,
+        17,
+        23
+      ],
+      "workspace_per_layer": 32
+    },
+    "token_rule": {
+      "anchor_surface": ":",
+      "candidate_count": 40,
+      "choice": "deterministic hash of seed,state_id,token_id among rank-eligible response-blind candidates",
+      "common_rank_max": 8192,
+      "primary_pairs_per_state": 1,
+      "rank_max_per_state": 8192,
+      "token_classes": [
+        "PUNCTUATION_OR_STRUCTURE",
+        "LEXICAL_SURFACE",
+        "NUMERIC",
+        "FUNCTION_WORD"
+      ]
+    }
+  },
+  "config_sha256": "6024c2b93905680bc837b4942435741405c0f3711c8664e52ac6e3241d46443a",
+  "created_utc": "2026-09-22T12:48:43.149726+00:00",
+  "cumulative_report_at_start_sha256": "e6d0d8c2977a33775c8586f078280de7de6ffb1b8214a9900443af1e0bed3585",
+  "freeze_digest": "aa843d414c7ad5866a47beebc665db9d0379d2a622215b1465cdc4d6ae41b600",
+  "frozen_history_sha256": {
+    "artifacts/rec_conv_mechanism_v32_final_opening.freeze.json": "124afee49cf0c81d02216883f4a496ba697d64c9a36ebb5194341211893d97a0",
+    "reports/V31_COMPLETE_REPORT.md": "c362da34525a284afca319357b4ae6c33da5128e0d7c4067b4817131a2b6a1eb",
+    "reports/V32_ALL_REPORTS.md": "cc69b92210327f867985e52f208d9fd79f400da6ac2a5c449af9f68642e8d2b3",
+    "reports/V32_COMPLETE_REPORT.md": "ae15ea02c844980ba8a0271401aa5062a29a741df852db38684cfba4c238af37",
+    "results/v32/processed/v32_adjudication.json": "da8b6860c3f7159856a641b975e6bb376777913ee9d61b3448350abfe07e7bbf",
+    "results/v32/processed/v32_integrity_index.json": "ba5b7124c9f29eab4866e464bf31fda41d542edc4c988a63dee5f33bd67f34df"
+  },
+  "historical_final_opened": false,
+  "model_file_sha256": {
+    "config.json": "7ae20392a453be5f1a59b39b1e1f4fc09522901eacd64492e649672594ea4c77",
+    "model.safetensors": "9acd2ef3e946e88a6e8cb14d38942f2ffbf6f52a5bc37312c1e0cc64574f1aeb",
+    "tokenizer.json": "eb7825ecac026cc37e37c03d7e8d06d1f85c7ab8bdefabe81fc1b40f0ed7929a"
+  },
+  "parent_commit": "09a00a67e5a286a05e47730c43586bce94b8095a",
+  "protocol_sha256": "285f38c970d4f760bf9de389fd191854183919cf086bcb31e73a615ab850e55c",
+  "protocol_version": "cross_model_rec_conv_v33",
+  "schema_version": 42
+}

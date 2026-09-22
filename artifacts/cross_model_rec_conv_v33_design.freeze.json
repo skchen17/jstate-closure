@@ -1,0 +1,23 @@
+{
+  "base_freeze_digest": "aa843d414c7ad5866a47beebc665db9d0379d2a622215b1465cdc4d6ae41b600",
+  "causal_write_observed_before_freeze": false,
+  "created_utc": "2026-09-22T12:56:17.350568+00:00",
+  "design_hash": "bb6251cec261f28caa00cc1a727791b0542ae2a3da6b81c845bc93b5cff77358",
+  "execution_plan_hash": "9b28e769a43866d0aa49f01e3229294cc18b087dbe8d731bfc24dff95e9cbd3b",
+  "freeze_digest": "62ff37b529c343238597d9705adbf6ee92487966ed0f37995cb70e95541f2ad0",
+  "future_causal_response_observed_before_freeze": false,
+  "input_sha256": {
+    "artifacts/cross_model_rec_conv_v33_architecture.freeze.json": "e0fc076f36b802f614a5f5fa4f54d61d2c38624072f7700a73973eaee79d03d8",
+    "results/v33/processed/design_v33.json": "49e6e1754dbf9bd1f072bdbe3945dbfed215336b9d41c43186b7ef65333dee90",
+    "results/v33/processed/execution_plan_v33.json": "549e17d04d909d1442891ba355c12d7bbd6ccad2dba2824fc948bcc885a854a6",
+    "src/jclosure/experiments/design_v33.py": "411c4e43e65e03b06faf5e56ef8fe25241c87d471b6288f6621ffbd9eb9e5678"
+  },
+  "protocol_version": "cross_model_rec_conv_v33_design",
+  "roles": {
+    "calibration": "b809acbec5a2a7beab9cbf994d4352c505d84ca2ad5915860a9027862b713c82",
+    "development": "c65916dcc23fc29c352eb7d6e0ca37e3c8c9046ebb2e4ecbfe111d34858c6f5d",
+    "independent_final": "13296900f3b9cbe7b4eb4142cf311117fc9b9a64df3d4533f30c1aaa34ed5b80",
+    "validation": "bc1d46f9c9152f407f75589c92a14537480a07f4b6100c1ec1a67976b25a8912"
+  },
+  "schema_version": 42
+}

@@ -1,0 +1,28 @@
+{
+  "adjudication_hash": "ae40bbd90c4870c09998890f81ae456762a38e8d6d2f2911da8c8c4f113cd0bd",
+  "adjudication_sha256": "6e04121cf7f1aa9f5894e5cadd1e229ccc0993cd0ea1c988e5011775abfb1d6b",
+  "base_freeze_digest": "aa843d414c7ad5866a47beebc665db9d0379d2a622215b1465cdc4d6ae41b600",
+  "created_utc": "2026-09-22T13:13:54.818405+00:00",
+  "formal_outcomes": {
+    "V33-A_CROSS_MODEL_REC_CORRECTION_REPLICATED": true,
+    "V33-B_CONV_DOMINANT_HANDOFF_REPLICATED": true,
+    "V33-C_CONDITIONAL_NOT_ADDITIVE_OR_GAIN_ONLY": true,
+    "V33-D_MATCHED_CONTEXT_CORRECTION_REPLICATED": true,
+    "V33-E_CROSS_MODEL_CHANNEL_ORGANIZATION_PARTIAL": false,
+    "V33-F_ARCHITECTURE_SEMANTICS_NOT_COMPARABLE": false,
+    "V33-G_MODEL_SPECIFIC_REC_CORRECTION": false,
+    "V33-H_SHARED_MICRO_MEDIATOR_IDENTIFIED": false,
+    "V33-I_SHARED_EFFECT_WITH_DIFFERENT_MICRO_MEDIATORS": false
+  },
+  "freeze_digest": "7d9dd78515dca769d3af7c4542537ee3e8077ea802d91e6670e53ef0d5343869",
+  "input_sha256": {
+    "artifacts/cross_model_rec_conv_v33_controls.freeze.json": "de2c903fc047f18591b5886a7225e2a5e9b1f420b0b80e6e253c039eb6b48902",
+    "artifacts/cross_model_rec_conv_v33_factorial_independent_final.freeze.json": "3eaba267ed680a4ccbfe1a7c3910ce362d806fbf85d0c6068cd4ca12b7dc9a12",
+    "artifacts/cross_model_rec_conv_v33_phase_b_instrumentation.freeze.json": "2e210b375162f7ec104f9b1b355a2c609f20e011be00b066a2582d02376ed026",
+    "results/v33/processed/v33_adjudication.json": "6e04121cf7f1aa9f5894e5cadd1e229ccc0993cd0ea1c988e5011775abfb1d6b",
+    "src/jclosure/experiments/adjudicate_v33.py": "2958fe89f37f278c8cdeb2a24a5b9b3780fc7ea5a445b53177ce5c1eacc42b32"
+  },
+  "phase_B_bidirectional_mediation_completed": false,
+  "protocol_version": "cross_model_rec_conv_v33_adjudication",
+  "schema_version": 42
+}

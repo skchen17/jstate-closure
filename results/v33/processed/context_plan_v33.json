@@ -1,0 +1,221 @@
+{
+  "KV_conditions": [
+    "KV_ONLY",
+    "CONV2_PLUS_KV",
+    "REC2_CONV2_RECIPIENT_KV"
+  ],
+  "conditions": [
+    "MATCHED_REC2",
+    "RECIPIENT_REC2",
+    "WRONG_TOKEN_REC2",
+    "SAME_FAMILY_WRONG_STATE_REC2",
+    "CROSS_FAMILY_WRONG_STATE_REC2",
+    "SHUFFLED_REC2",
+    "RANDOM_SAME_NORM_REC2"
+  ],
+  "control_responses_observed_before_freeze": false,
+  "cross_state_off_manifold_caveat": true,
+  "mapping_rule": "deterministic hash of frozen state/token IDs only; no response-ranked selection",
+  "rows": [
+    {
+      "cross_family_wrong_state_id": "v13-train-bfea750fa1524e9eea0c",
+      "family": "boolean_logic",
+      "random_seed": 913923925,
+      "role": "development",
+      "same_family_wrong_state_id": "v13-train-0f04f9bf8c521db52f6c",
+      "shuffle_state_id": "v13-train-3a96b54eaed24a077c8a",
+      "state_id": "v13-train-ca46c2604f463df517d3",
+      "wrong_token_id": 4569
+    },
+    {
+      "cross_family_wrong_state_id": "v13-train-4daea7886ba0bfbcd379",
+      "family": "boolean_logic",
+      "random_seed": 821774992,
+      "role": "development",
+      "same_family_wrong_state_id": "v13-train-3c82d6a28ae7640394f1",
+      "shuffle_state_id": "v13-train-b1cd95c5441590829fb3",
+      "state_id": "v13-train-265acb3ab50fadec9e99",
+      "wrong_token_id": 12478
+    },
+    {
+      "cross_family_wrong_state_id": "v13-train-49204f7925947601e039",
+      "family": "modular_arithmetic",
+      "random_seed": 2569302110,
+      "role": "development",
+      "same_family_wrong_state_id": "v13-train-911835ca79c09ca20c4d",
+      "shuffle_state_id": "v13-train-ec2df131392f6beb2e4b",
+      "state_id": "v13-train-8653b4ca8a3cf0d258ec",
+      "wrong_token_id": 2891
+    },
+    {
+      "cross_family_wrong_state_id": "v13-train-e7d016342c46ad8d9c7b",
+      "family": "modular_arithmetic",
+      "random_seed": 948109303,
+      "role": "development",
+      "same_family_wrong_state_id": "v13-train-9eef7e151fe505704bd2",
+      "shuffle_state_id": "v13-train-8419445957f6a3f662b0",
+      "state_id": "v13-train-72acfd9131e0ef03d801",
+      "wrong_token_id": 1235
+    },
+    {
+      "cross_family_wrong_state_id": "v13-train-524d8c6126c2bb7b87d7",
+      "family": "short_graph_traversal",
+      "random_seed": 3806490869,
+      "role": "development",
+      "same_family_wrong_state_id": "v13-train-8a31297fa0a64adaba81",
+      "shuffle_state_id": "v13-train-e8a7dfffc5f6c0b22d18",
+      "state_id": "v13-train-fec1b23fee84948bf8db",
+      "wrong_token_id": 547
+    },
+    {
+      "cross_family_wrong_state_id": "v13-train-524d8c6126c2bb7b87d7",
+      "family": "short_graph_traversal",
+      "random_seed": 107189148,
+      "role": "development",
+      "same_family_wrong_state_id": "v13-train-fec1b23fee84948bf8db",
+      "shuffle_state_id": "v13-train-8fd2f0ad51ee09d7fdd0",
+      "state_id": "v13-train-a3f30ef2ed5e6a115650",
+      "wrong_token_id": 545
+    },
+    {
+      "cross_family_wrong_state_id": "v13-train-e2e46b35fa808047e571",
+      "family": "simple_state_transition",
+      "random_seed": 3073969201,
+      "role": "development",
+      "same_family_wrong_state_id": "v13-train-9e8baf80bc138db1dd99",
+      "shuffle_state_id": "v13-train-8653b4ca8a3cf0d258ec",
+      "state_id": "v13-train-ed2ac67721d463c6b348",
+      "wrong_token_id": 548
+    },
+    {
+      "cross_family_wrong_state_id": "v13-train-cf841ace27aae7ba829b",
+      "family": "simple_state_transition",
+      "random_seed": 551681550,
+      "role": "development",
+      "same_family_wrong_state_id": "v13-train-116e2deb2ed6b2c59102",
+      "shuffle_state_id": "v13-train-23340b61b2170e0926e8",
+      "state_id": "v13-train-72e40b80e38eff48fae6",
+      "wrong_token_id": 1002
+    },
+    {
+      "cross_family_wrong_state_id": "v13-train-310fc3b981185fd02e7d",
+      "family": "variable_binding",
+      "random_seed": 1773527828,
+      "role": "development",
+      "same_family_wrong_state_id": "v13-train-8cb271803059c714ec64",
+      "shuffle_state_id": "v13-train-d320d5d1dfe4dd78accd",
+      "state_id": "v13-train-f4d493e84afaf947d915",
+      "wrong_token_id": 542
+    },
+    {
+      "cross_family_wrong_state_id": "v13-train-b7e2f2632c35fb16fb9d",
+      "family": "variable_binding",
+      "random_seed": 1881165713,
+      "role": "development",
+      "same_family_wrong_state_id": "v13-train-15083892830600c50c2b",
+      "shuffle_state_id": "v13-train-9eef7e151fe505704bd2",
+      "state_id": "v13-train-249505ce6e7b6ec108f6",
+      "wrong_token_id": 545
+    },
+    {
+      "cross_family_wrong_state_id": "v13-validation-df9a2a9451246a96d28d",
+      "family": "boolean_logic",
+      "random_seed": 3701729371,
+      "role": "validation",
+      "same_family_wrong_state_id": "v13-validation-9dcd52bdd025141be316",
+      "shuffle_state_id": "v13-validation-1607e252b4b7e859618b",
+      "state_id": "v13-validation-d33d3c558a7d4e92bd99",
+      "wrong_token_id": 5532
+    },
+    {
+      "cross_family_wrong_state_id": "v13-validation-87efd1a896a90a9e8d9f",
+      "family": "boolean_logic",
+      "random_seed": 2962062955,
+      "role": "validation",
+      "same_family_wrong_state_id": "v13-validation-9028000a6aaa5a3233f2",
+      "shuffle_state_id": "v13-validation-e5a8aafcd733bc6df2aa",
+      "state_id": "v13-validation-9dcd52bdd025141be316",
+      "wrong_token_id": 821
+    },
+    {
+      "cross_family_wrong_state_id": "v13-validation-60a1c68642e7267561a6",
+      "family": "modular_arithmetic",
+      "random_seed": 4037899736,
+      "role": "validation",
+      "same_family_wrong_state_id": "v13-validation-e1b01ebc6f9d71937800",
+      "shuffle_state_id": "v13-validation-f70cd03c35ae52256bec",
+      "state_id": "v13-validation-4ec2d93c56ac6de09223",
+      "wrong_token_id": 821
+    },
+    {
+      "cross_family_wrong_state_id": "v13-validation-503473530e09fac83d5f",
+      "family": "modular_arithmetic",
+      "random_seed": 3766838206,
+      "role": "validation",
+      "same_family_wrong_state_id": "v13-validation-40d4731a28c9d26002aa",
+      "shuffle_state_id": "v13-validation-d9ed9887a6e4df845206",
+      "state_id": "v13-validation-211d5b4edf99cb14faf1",
+      "wrong_token_id": 540
+    },
+    {
+      "cross_family_wrong_state_id": "v13-validation-597e7f6b4aab7d92d1a4",
+      "family": "short_graph_traversal",
+      "random_seed": 63328024,
+      "role": "validation",
+      "same_family_wrong_state_id": "v13-validation-6f4a0b848729d39d2dc7",
+      "shuffle_state_id": "v13-validation-8346793920a4e3555aaf",
+      "state_id": "v13-validation-23d4782e40a3eef6d1aa",
+      "wrong_token_id": 546
+    },
+    {
+      "cross_family_wrong_state_id": "v13-validation-e7e9afc55ab61abcff4f",
+      "family": "short_graph_traversal",
+      "random_seed": 4242075749,
+      "role": "validation",
+      "same_family_wrong_state_id": "v13-validation-0b3256edcc9bbed9e1a1",
+      "shuffle_state_id": "v13-validation-bb2313576a1812a75160",
+      "state_id": "v13-validation-2310f15d3ab0f2305510",
+      "wrong_token_id": 547
+    },
+    {
+      "cross_family_wrong_state_id": "v13-validation-2842679b565469090752",
+      "family": "simple_state_transition",
+      "random_seed": 3764390907,
+      "role": "validation",
+      "same_family_wrong_state_id": "v13-validation-004558750b625a6dacbf",
+      "shuffle_state_id": "v13-validation-8346793920a4e3555aaf",
+      "state_id": "v13-validation-385b9b3352db351e2fbe",
+      "wrong_token_id": 8699
+    },
+    {
+      "cross_family_wrong_state_id": "v13-validation-40d4731a28c9d26002aa",
+      "family": "simple_state_transition",
+      "random_seed": 875131477,
+      "role": "validation",
+      "same_family_wrong_state_id": "v13-validation-ecb101834d6748194874",
+      "shuffle_state_id": "v13-validation-b3250568651fcfdfb984",
+      "state_id": "v13-validation-597e7f6b4aab7d92d1a4",
+      "wrong_token_id": 548
+    },
+    {
+      "cross_family_wrong_state_id": "v13-validation-23d4782e40a3eef6d1aa",
+      "family": "variable_binding",
+      "random_seed": 950296370,
+      "role": "validation",
+      "same_family_wrong_state_id": "v13-validation-d20629e61ce6e9b2b9c8",
+      "shuffle_state_id": "v13-validation-bb2313576a1812a75160",
+      "state_id": "v13-validation-ccee6887337d8297825c",
+      "wrong_token_id": 2757
+    },
+    {
+      "cross_family_wrong_state_id": "v13-validation-f70cd03c35ae52256bec",
+      "family": "variable_binding",
+      "random_seed": 631759622,
+      "role": "validation",
+      "same_family_wrong_state_id": "v13-validation-0f4f2eb06fb38ca9873c",
+      "shuffle_state_id": "v13-validation-503473530e09fac83d5f",
+      "state_id": "v13-validation-b3250568651fcfdfb984",
+      "wrong_token_id": 5005
+    }
+  ]
+}

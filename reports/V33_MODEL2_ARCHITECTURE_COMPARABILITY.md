@@ -1,0 +1,7 @@
+# V33 Model-2 Architecture Comparability
+
+All 24 Falcon hybrid blocks expose four persistent tensors per layer (96 schema rows). `recurrent_states` is a Mamba-2 SSM matrix updated across tokens; `conv_states` is the depthwise short-convolution input ring; `keys` and `values` store positional attention history. The first inspected REC2/CONV2/KV shapes are `[1, 48, 64, 256]` / `[1, 3584, 4]` / `[1, 2, 51, 128]`. Mapping hash `fb4367c09e67ebf4999ce353b740c11498902c361b10d0d1b4175f48a426adaa`.
+
+Incoming cache is captured after the shared prompt prefix. Two distinct ordinary current tokens run naturally, producing same-length outgoing caches. Current-token logits are already computed at the transplant boundary; six subsequent frozen probes measure the future. REC2 and CONV2 are exact persistent-field functional/structural analogues, not asserted to share Qwen's microscopic recurrence algebra. KV is a separate attention contrast. RoPE/position semantics are preserved by replacing only the newly appended KV slot, retaining the shared prefix.
+
+Verdict: **comparable for the high-level V32 REC×Conv causal estimand**, not necessarily for individual q/k/v, gate, or update-term homology. `J_NOT_COMPARABLE`: Falcon has no Qwen-specific J-space target, so the architecture-independent response blocks are used. Machine evidence: `results/v33/processed/`, immutable stage freezes in `artifacts/cross_model_rec_conv_v33*.freeze.json`.

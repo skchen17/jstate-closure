@@ -1,0 +1,1578 @@
+{
+  "anchor_id": 549,
+  "cache_lengths_valid": true,
+  "context_limit": 512,
+  "donor_hashes": {
+    "CONV2": "a8704409faa671355b737b3a63b49253b5a24fa7396f4f8fd8fc69d1e7e5ee38",
+    "KV": "d56d6a0674dcb327b5eb8927c024c697fce3dfc52735e1e976802cfefbb7e8e0",
+    "REC2": "c521802d1f6d525d0d8be6fed9214fb1ed2746ec89d3a7dd608d51dc4dc9a05c"
+  },
+  "exact_native_field_transplant": true,
+  "fork_total_length": 51,
+  "functional_structural_comparable": true,
+  "future_causal_response_observed": false,
+  "identical_micro_mechanism_claimed": false,
+  "layers_block_type": [
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid",
+    "hybrid"
+  ],
+  "mapping": {
+    "CONV2": {
+      "field": "conv_states",
+      "incoming_outgoing": "pre-token kernel history to post-token kernel history",
+      "persists_across_tokens": true,
+      "semantic": "Mamba2 depthwise short-convolution rolling input history",
+      "shape_example": [
+        1,
+        3584,
+        4
+      ]
+    },
+    "KV": {
+      "fields": [
+        "keys",
+        "values"
+      ],
+      "incoming_outgoing": "shared prefix plus current-token slot",
+      "persists_across_tokens": true,
+      "semantic": "attention K/V cache with RoPE-positioned appended current slot",
+      "shape_example": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    "REC2": {
+      "field": "recurrent_states",
+      "incoming_outgoing": "pre-token state to post-token state",
+      "persists_across_tokens": true,
+      "semantic": "Mamba2 SSM matrix state after current-token recurrence",
+      "shape_example": [
+        1,
+        48,
+        64,
+        256
+      ]
+    }
+  },
+  "mapping_hash": "fb4367c09e67ebf4999ce353b740c11498902c361b10d0d1b4175f48a426adaa",
+  "model": {
+    "architecture": "FalconH1ForCausalLM",
+    "attention_implementation": "eager",
+    "checkpoint_sha256": "9acd2ef3e946e88a6e8cb14d38942f2ffbf6f52a5bc37312c1e0cc64574f1aeb",
+    "config_sha256": "7ae20392a453be5f1a59b39b1e1f4fc09522901eacd64492e649672594ea4c77",
+    "context_limit_for_experiment": 512,
+    "device": "cuda:0",
+    "dtype": "bfloat16",
+    "id": "tiiuae/Falcon-H1-1.5B-Base",
+    "local_path": "/data/CSK/J-space-project/models/Falcon-H1-1.5B-Base-06d7330",
+    "revision": "06d7330266253c20784f58b0a846dc09a9d12cee",
+    "tokenizer_sha256": "eb7825ecac026cc37e37c03d7e8d06d1f85c7ab8bdefabe81fc1b40f0ed7929a",
+    "trust_remote_code": false
+  },
+  "model_layers": 24,
+  "other_id": 537,
+  "prefix_token_hash": "7ba80c8360db1afb347e408d9ec805f355369fb13cef06bab9e4d9174b151451",
+  "prompt_sha256": "52cfe3f021fd7ac173bdd15d2b34240f5a75f16748d56d7df9703bf18b875a55",
+  "readout_boundary": "after current-token forward/logits; next-token probes only",
+  "recipient_hashes": {
+    "CONV2": "b7eb14c7dc426cc3a9faa48b4ac9b54fa33854fa13f22c2b23075c16668f0892",
+    "KV": "ce0e29fad53cd0d3cc8e096b563912b545aa41ec496f4aea3b80a5d0d7a70105",
+    "REC2": "f87aba7d5c7faca7be1beb66543632d35b1144a5871e9327c98e8a1c8b214543"
+  },
+  "schema": [
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 0,
+      "sha256": "931569bf8f200d3419d0045eaf6822727f458c2e706a9b9a332a145a2e9b42a3",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 0,
+      "sha256": "69740991cf9d5918fadc2ee11312c550128372d19b69686c5bd14b41cd177e54",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 0,
+      "sha256": "24f5d94453872a082cab43fc17c9d5b7c98b929e6368e44c29c81db0d68a5524",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 0,
+      "sha256": "3c6e1ade1b44dc095dffcb7a3cf60738e40fcd51da27b0b5f6259ea3b4e9ee0e",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 1,
+      "sha256": "9766385a45ba3d91b79efa4b11d2eeb8e487495fc12b25a9b39d9be3f1bb8c34",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 1,
+      "sha256": "1182e6877fe34ec2421d7005d9fad2b6abdad7da2232351a3cacff39e6d0426d",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 1,
+      "sha256": "938e62ecfb093ee17f2253dc0f8bebdfbdf6511e7eabbdadacad0004c4e2ba69",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 1,
+      "sha256": "88ef6ef064015acf82cae6643d89cc7fbdc3d4b675d7fb507e1f4ff54c75dada",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 2,
+      "sha256": "0cad639c05f6b2537d1f8939208f9f0a5883b1c352ee1db059d35d38e738e048",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 2,
+      "sha256": "7668cd7f90ff9bff48f5eb5e92b02d91a711f80581f50672bcd9a8d8d29a8bf0",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 2,
+      "sha256": "e6d2f154f4672cfd76994902791a9768d00cb59f8b79284b4c394b667dbd8fcd",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 2,
+      "sha256": "60fe4f217b6b80b5587a89e0abf346d94c587e1206ed3590123d291a00692ff1",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 3,
+      "sha256": "6af3ddde7937126c0e380f7c4b55c1e91f563c49bd1d1bdb99358b9f60aa2dc0",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 3,
+      "sha256": "9f0a6c360d439e0583f12f8f6de58fffa37c6ec2a03459479a774f651fbe1738",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 3,
+      "sha256": "03966734d6d01d761cd3e020e8c41de7b88b0a6248f654cf76f67d9425e53cf6",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 3,
+      "sha256": "4d1f8836f045c91d31acbf2ed89b8776b1a1545d42d7b1a8e930be5b318df70a",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 4,
+      "sha256": "970ba4a959731ed94ca98ee406e1428f6d88afda3a24b3ed7c94ec43a48fa3dc",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 4,
+      "sha256": "bc0e79e6d96c6541019cca204d35dfe9c01ccaa37943312cbf4686a87b63acdb",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 4,
+      "sha256": "844a8487f906e0ce5b2f89edbe2c4d857bacf272512b105f41f8cc49d235529f",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 4,
+      "sha256": "007ebadbbe859f09f3308c543f65890f43666392046ebb3c9d683d3d21a4b957",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 5,
+      "sha256": "a1167301ddd3fc0c5d0aa9d005d93fe36cdfc71dec627360a1513c7df81f7ac7",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 5,
+      "sha256": "47f73d4747b5da419da62f373c3255cd041286555c752f43ec5b6da3fbda46b4",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 5,
+      "sha256": "54c9ec080b7634ac7f3fd29bd4c1946491c84fa456e1feb21b1f4fd3e77d5c95",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 5,
+      "sha256": "18935390a9dbf8cdb07eb1c1b16b21562f3d313def51f871107d25c3670c4abc",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 6,
+      "sha256": "64c09ca2cd67c96b1bba79a094715c926bcbe8c6388810a1fa47836fe15892e6",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 6,
+      "sha256": "5a6411254f5dd82c221fdfd9ad630f26962fdab90a784e064d1c9e4f30f0c416",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 6,
+      "sha256": "25c52ae110452effeabf8c28411c5af1a3d4696caecb386b1ef30376bc67f505",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 6,
+      "sha256": "666b230f365a1cc62dc16b32f759a7e637cd5dc0a9f6e5df803368e1cce56032",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 7,
+      "sha256": "122922585eadc79cab1c6df7f5a5a51e00b6c2660967511d3cb54716d6520af0",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 7,
+      "sha256": "7405720f8903435a40fc62baa3679fc5b3419b03bcd213693bd89408759d85f7",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 7,
+      "sha256": "29e8a0d240c557f87935ed89cf6dce42a15567dd8963493c7ccaa9ac5ec9deb7",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 7,
+      "sha256": "0338445574d30844d014a7fb40a2a9725055b2e6ea3ecc260053611f16fcdb82",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 8,
+      "sha256": "d26acf7f11e057234d5d8d94525e3c83d06d681f1b4a62b9a8fb432dd226d3d0",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 8,
+      "sha256": "bf1b2bc3ddcaffdcf2f680c13043004853b65045baa8d6d2a1ab42d730e87ab9",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 8,
+      "sha256": "e2ffc9b06a88d7902587aa1c6d98165497ecc1b2c18a54aabb9f4573f395881a",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 8,
+      "sha256": "ee1b0acf288d50ad6a1765207d756306667976234b9e251c0d83b7d884727161",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 9,
+      "sha256": "0450bbb4c1884e1a4725bddbbc306ee7ccd5096768c8e12339c27c11a1ff8b21",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 9,
+      "sha256": "4065dd9969f6df58ae3551117d7de2b6d2340bbe32419f34e1b4a6b5a95ade26",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 9,
+      "sha256": "413acfd8129786cb2dcf0a3c1cb60ff640855976382c730766b5db9a08f0b9bb",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 9,
+      "sha256": "451429fd0b94f3d9c9385def60e3c04a540afdfe7e894fa6f2ee9879df2adf28",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 10,
+      "sha256": "6247e5539d07abd23c3db534967aaafbb4ec741dfc86589a95c25101ab6f5a99",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 10,
+      "sha256": "e008efe2b26cf4ddc0c6148ae0b42522e0a1b15bd27794e602f2e2bd801c5bcd",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 10,
+      "sha256": "dd6c54923db167415123a5e1f01420c2bfee1c6dd10835cd1c7d196527c3be28",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 10,
+      "sha256": "c01198275d863c4e758a75996feecd06973f245a72a9ea8268228f5d66ee6eda",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 11,
+      "sha256": "8927a1b9e52b005032c80d899ae8ce0af323e62401bc133f6eccd8cfbb137e7b",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 11,
+      "sha256": "ff99c33b8ece1096e359e723521448a6d5e7301d0edbad48a2656d992048a011",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 11,
+      "sha256": "e4dee1d73dc7014fd20db795becba1246b063afd508e3c4cda2dfa47db2c5f5f",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 11,
+      "sha256": "b46b98cebc9f7d6bb1c0bca64b1fc5373e8dbf71ac0586213b1142fd702e9b78",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 12,
+      "sha256": "b97b17f572482312c0cd63f64dd0d7ea77007881e550830801a70d54f8e1e714",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 12,
+      "sha256": "cfd4bb126480abf107a1f4dd50c6fceba0d09216d88ba889f393a3637f189288",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 12,
+      "sha256": "0180b053194d020db5789e4aa2569115693afcff9445e4ae97d4f9178dfa6ae8",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 12,
+      "sha256": "624197ac3f894e8298f037a19a1b4c6b5cca94af92f33f10f5b6e3d3b79e8bba",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 13,
+      "sha256": "5563b066a0c26494fb9f85db81e74b5d29c8409829338479540b43b208459b7a",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 13,
+      "sha256": "95c21296f0c2b910e749265925920b215583e25d26326328b76521554161e846",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 13,
+      "sha256": "104836810c0c48080e8a8fe22c52c7754a0b26fb4040f6ca209e639fc3eaebbd",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 13,
+      "sha256": "e12e65196145ba22c62ee57eae0f1e6bd225f9dcaddbfa012a1ebe81b4099b72",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 14,
+      "sha256": "0f03afaa7512aa9c4f1be050bfa354051892a077dd9af90d99e2aa2c351862ea",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 14,
+      "sha256": "9f6752df0e979364cc066a182365ed6dd39a44a4e5bcca4745200876b9a3a556",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 14,
+      "sha256": "2c8a3458f83def89743e85e9da6dc2fd4341223c0d3214649b7631a5638d2542",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 14,
+      "sha256": "6a5c77fac30e94bf4e9076efae06bc43f4cc6d2b7e69e009e132f1532c22f53d",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 15,
+      "sha256": "5f336f07250d31d8032d00c01d713e86c58c442d6f02b56842d74510eba8a749",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 15,
+      "sha256": "f75eba368f3029ecc2720a52f7b8567aa05268ad070ac532fa97b471b6bf476a",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 15,
+      "sha256": "92cda84e54530fd480995b89d6e5edddbf8d3cd70ecd78e0e29542d47bd37fe8",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 15,
+      "sha256": "ba703f80f0a2a629395891c397c50181d2e15bb0386e7404ffe0328a4edcbea3",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 16,
+      "sha256": "08722d0f10508a5edf9545f7929a210d369d7d79aaa335fd2eab8ff1a32d8393",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 16,
+      "sha256": "8e138877d0ec2aa5974c631608c7367466ea6e479e6cdcc48abbc263e667702f",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 16,
+      "sha256": "88363051e3eecf53b4bafab612df5bece516e1c4d7cec8a8af43a8903bedd51d",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 16,
+      "sha256": "6bff61cdfe5b1691fc213b29439617b233a6b47c70fa8fa1d003e9a02b18f070",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 17,
+      "sha256": "3dbebec48d1d17c564bc498860a89e556d431c4512f726ba2b8e885ba838a4e9",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 17,
+      "sha256": "5160cc605fecca58cee7ca421b0f2174d2fe4c64c89c138f886232351b4e7f9f",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 17,
+      "sha256": "8b04b3d26a9a98cc9c540af6d61eb269a42c0a3d29dd3b69b2086e7ab9a564ae",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 17,
+      "sha256": "d707a75c64980febe1fe6b31dd5adfecc88580ce0e915078c8ef7ea439a6fb8c",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 18,
+      "sha256": "3dcb22a1f41282270ff48f2ccf1b16100aa9a8994eaf7ad776ebaf9cfe4cb964",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 18,
+      "sha256": "0145954b67f1efd335c4e878891478230e24456f661ae245d43f8ba56965230d",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 18,
+      "sha256": "e32917be3a0e23c51de5a3071a35255e898ddf2da747add2c9cdf999d745647a",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 18,
+      "sha256": "a61a120e7562f7a6e311fb262e92b0052c914b6f027eca04e75dcc0dfa33d1d5",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 19,
+      "sha256": "961107458396a9c9d4074ad58d8df964cf803a62d8430d9e10816070a87ecf92",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 19,
+      "sha256": "005a4110d4c84eb8f3184cfcb269c67a115867e50dc8dbb1f631a66afe0b92e7",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 19,
+      "sha256": "d205a53c47abbf614e69f760d7ec7f1842237c7907bfc00ca7b21a793a352f70",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 19,
+      "sha256": "85458bac13f959d9fa3f9beb798efba4c717f7624b51a4ce2bd2acb7198367e3",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 20,
+      "sha256": "d44b284933d168295d72d52ac705db88e3d2df0bb4bbb4b7650f2cf6db4548d3",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 20,
+      "sha256": "2584b1d04b718e206980cc5080f7c9232fadc0819bffa3537b0dd9b1256e7d33",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 20,
+      "sha256": "83527e412396f49e0622703fe8f86c3c8af9c599a6bccad17db4ed03c6001a39",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 20,
+      "sha256": "a9554d1a18c38849885b1fdd1eb30b2d540a3a34bcd1a926bfd74a36d014f523",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 21,
+      "sha256": "16ca2241d356b3f81cc1fa5792702b5df829d4eca4350573ca9ad4c4218dcf63",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 21,
+      "sha256": "0bf1d046ade92d9176478480bb5c65581b84729bccec77d4863323c6d0f59b8a",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 21,
+      "sha256": "2f3183645e083edb695876830f56835775bf7e319a7eccc227ddd0be54e39538",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 21,
+      "sha256": "1f3ccb979ce21856a622e493e95c5147a177d8783cc6de42c500bce91237a4cf",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 22,
+      "sha256": "5b492c94a13f5abc67436a2f3e85df3c755e7a9bac4711b798e601a2fc3d04f3",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 22,
+      "sha256": "db4f0b719f2736bbde1f86eb37fc8e3745a973a8f6e94abe191c567ebb2a5687",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 22,
+      "sha256": "5ce0255f4b167648635729b459233d099a5421b88cd6972c5db3e1c8c1444149",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 22,
+      "sha256": "b1c097294f97842b6332e45d98a649fffaac38bb8846fd255239d372bae06f94",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "recurrent_states",
+      "layer": 23,
+      "sha256": "78d14e7cc451e781938f0db6cf824e9fcdc39762c3762a9218ce79a18b250bb6",
+      "shape": [
+        1,
+        48,
+        64,
+        256
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "conv_states",
+      "layer": 23,
+      "sha256": "ecddb2f78daca945c72eda850d7b4852df669c038b16b98ddeb8c84cc3313568",
+      "shape": [
+        1,
+        3584,
+        4
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "keys",
+      "layer": 23,
+      "sha256": "124b552a11458aa2f96d6b5608e05a77f3457fd0a595cd08078ab0fb9a539d53",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    },
+    {
+      "cache_layer_class": "LinearAttentionAndFullAttentionLayer",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "field": "values",
+      "layer": 23,
+      "sha256": "77b33ff017e92fe26906c61f4bc80284a8759bac862de9fcb01c138bf6d3ed75",
+      "shape": [
+        1,
+        2,
+        51,
+        128
+      ]
+    }
+  ],
+  "torch_version": "2.10.0+cu128",
+  "transformers_version": "5.12.1",
+  "untouched_recipient_fields_exact": true,
+  "write_proofs": {
+    "CONV2": {
+      "channels": [
+        "CONV2"
+      ],
+      "donor_hashes": {
+        "CONV2": "a8704409faa671355b737b3a63b49253b5a24fa7396f4f8fd8fc69d1e7e5ee38",
+        "KV": "d56d6a0674dcb327b5eb8927c024c697fce3dfc52735e1e976802cfefbb7e8e0",
+        "REC2": "c521802d1f6d525d0d8be6fed9214fb1ed2746ec89d3a7dd608d51dc4dc9a05c"
+      },
+      "field_count": 24,
+      "realized_hashes": {
+        "CONV2": "a8704409faa671355b737b3a63b49253b5a24fa7396f4f8fd8fc69d1e7e5ee38",
+        "KV": "ce0e29fad53cd0d3cc8e096b563912b545aa41ec496f4aea3b80a5d0d7a70105",
+        "REC2": "f87aba7d5c7faca7be1beb66543632d35b1144a5871e9327c98e8a1c8b214543"
+      },
+      "recipient_hashes": {
+        "CONV2": "b7eb14c7dc426cc3a9faa48b4ac9b54fa33854fa13f22c2b23075c16668f0892",
+        "KV": "ce0e29fad53cd0d3cc8e096b563912b545aa41ec496f4aea3b80a5d0d7a70105",
+        "REC2": "f87aba7d5c7faca7be1beb66543632d35b1144a5871e9327c98e8a1c8b214543"
+      },
+      "requested_exact": true,
+      "seq_length": 51,
+      "untouched_exact": true
+    },
+    "KV": {
+      "channels": [
+        "KV"
+      ],
+      "donor_hashes": {
+        "CONV2": "a8704409faa671355b737b3a63b49253b5a24fa7396f4f8fd8fc69d1e7e5ee38",
+        "KV": "d56d6a0674dcb327b5eb8927c024c697fce3dfc52735e1e976802cfefbb7e8e0",
+        "REC2": "c521802d1f6d525d0d8be6fed9214fb1ed2746ec89d3a7dd608d51dc4dc9a05c"
+      },
+      "field_count": 48,
+      "realized_hashes": {
+        "CONV2": "b7eb14c7dc426cc3a9faa48b4ac9b54fa33854fa13f22c2b23075c16668f0892",
+        "KV": "d56d6a0674dcb327b5eb8927c024c697fce3dfc52735e1e976802cfefbb7e8e0",
+        "REC2": "f87aba7d5c7faca7be1beb66543632d35b1144a5871e9327c98e8a1c8b214543"
+      },
+      "recipient_hashes": {
+        "CONV2": "b7eb14c7dc426cc3a9faa48b4ac9b54fa33854fa13f22c2b23075c16668f0892",
+        "KV": "ce0e29fad53cd0d3cc8e096b563912b545aa41ec496f4aea3b80a5d0d7a70105",
+        "REC2": "f87aba7d5c7faca7be1beb66543632d35b1144a5871e9327c98e8a1c8b214543"
+      },
+      "requested_exact": true,
+      "seq_length": 51,
+      "untouched_exact": true
+    },
+    "REC2": {
+      "channels": [
+        "REC2"
+      ],
+      "donor_hashes": {
+        "CONV2": "a8704409faa671355b737b3a63b49253b5a24fa7396f4f8fd8fc69d1e7e5ee38",
+        "KV": "d56d6a0674dcb327b5eb8927c024c697fce3dfc52735e1e976802cfefbb7e8e0",
+        "REC2": "c521802d1f6d525d0d8be6fed9214fb1ed2746ec89d3a7dd608d51dc4dc9a05c"
+      },
+      "field_count": 24,
+      "realized_hashes": {
+        "CONV2": "b7eb14c7dc426cc3a9faa48b4ac9b54fa33854fa13f22c2b23075c16668f0892",
+        "KV": "ce0e29fad53cd0d3cc8e096b563912b545aa41ec496f4aea3b80a5d0d7a70105",
+        "REC2": "c521802d1f6d525d0d8be6fed9214fb1ed2746ec89d3a7dd608d51dc4dc9a05c"
+      },
+      "recipient_hashes": {
+        "CONV2": "b7eb14c7dc426cc3a9faa48b4ac9b54fa33854fa13f22c2b23075c16668f0892",
+        "KV": "ce0e29fad53cd0d3cc8e096b563912b545aa41ec496f4aea3b80a5d0d7a70105",
+        "REC2": "f87aba7d5c7faca7be1beb66543632d35b1144a5871e9327c98e8a1c8b214543"
+      },
+      "requested_exact": true,
+      "seq_length": 51,
+      "untouched_exact": true
+    },
+    "REC2+CONV2": {
+      "channels": [
+        "CONV2",
+        "REC2"
+      ],
+      "donor_hashes": {
+        "CONV2": "a8704409faa671355b737b3a63b49253b5a24fa7396f4f8fd8fc69d1e7e5ee38",
+        "KV": "d56d6a0674dcb327b5eb8927c024c697fce3dfc52735e1e976802cfefbb7e8e0",
+        "REC2": "c521802d1f6d525d0d8be6fed9214fb1ed2746ec89d3a7dd608d51dc4dc9a05c"
+      },
+      "field_count": 48,
+      "realized_hashes": {
+        "CONV2": "a8704409faa671355b737b3a63b49253b5a24fa7396f4f8fd8fc69d1e7e5ee38",
+        "KV": "ce0e29fad53cd0d3cc8e096b563912b545aa41ec496f4aea3b80a5d0d7a70105",
+        "REC2": "c521802d1f6d525d0d8be6fed9214fb1ed2746ec89d3a7dd608d51dc4dc9a05c"
+      },
+      "recipient_hashes": {
+        "CONV2": "b7eb14c7dc426cc3a9faa48b4ac9b54fa33854fa13f22c2b23075c16668f0892",
+        "KV": "ce0e29fad53cd0d3cc8e096b563912b545aa41ec496f4aea3b80a5d0d7a70105",
+        "REC2": "f87aba7d5c7faca7be1beb66543632d35b1144a5871e9327c98e8a1c8b214543"
+      },
+      "requested_exact": true,
+      "seq_length": 51,
+      "untouched_exact": true
+    },
+    "REC2+CONV2+KV": {
+      "channels": [
+        "CONV2",
+        "KV",
+        "REC2"
+      ],
+      "donor_hashes": {
+        "CONV2": "a8704409faa671355b737b3a63b49253b5a24fa7396f4f8fd8fc69d1e7e5ee38",
+        "KV": "d56d6a0674dcb327b5eb8927c024c697fce3dfc52735e1e976802cfefbb7e8e0",
+        "REC2": "c521802d1f6d525d0d8be6fed9214fb1ed2746ec89d3a7dd608d51dc4dc9a05c"
+      },
+      "field_count": 96,
+      "realized_hashes": {
+        "CONV2": "a8704409faa671355b737b3a63b49253b5a24fa7396f4f8fd8fc69d1e7e5ee38",
+        "KV": "d56d6a0674dcb327b5eb8927c024c697fce3dfc52735e1e976802cfefbb7e8e0",
+        "REC2": "c521802d1f6d525d0d8be6fed9214fb1ed2746ec89d3a7dd608d51dc4dc9a05c"
+      },
+      "recipient_hashes": {
+        "CONV2": "b7eb14c7dc426cc3a9faa48b4ac9b54fa33854fa13f22c2b23075c16668f0892",
+        "KV": "ce0e29fad53cd0d3cc8e096b563912b545aa41ec496f4aea3b80a5d0d7a70105",
+        "REC2": "f87aba7d5c7faca7be1beb66543632d35b1144a5871e9327c98e8a1c8b214543"
+      },
+      "requested_exact": true,
+      "seq_length": 51,
+      "untouched_exact": true
+    },
+    "RECIPIENT": {
+      "channels": [],
+      "donor_hashes": {
+        "CONV2": "a8704409faa671355b737b3a63b49253b5a24fa7396f4f8fd8fc69d1e7e5ee38",
+        "KV": "d56d6a0674dcb327b5eb8927c024c697fce3dfc52735e1e976802cfefbb7e8e0",
+        "REC2": "c521802d1f6d525d0d8be6fed9214fb1ed2746ec89d3a7dd608d51dc4dc9a05c"
+      },
+      "field_count": 0,
+      "realized_hashes": {
+        "CONV2": "b7eb14c7dc426cc3a9faa48b4ac9b54fa33854fa13f22c2b23075c16668f0892",
+        "KV": "ce0e29fad53cd0d3cc8e096b563912b545aa41ec496f4aea3b80a5d0d7a70105",
+        "REC2": "f87aba7d5c7faca7be1beb66543632d35b1144a5871e9327c98e8a1c8b214543"
+      },
+      "recipient_hashes": {
+        "CONV2": "b7eb14c7dc426cc3a9faa48b4ac9b54fa33854fa13f22c2b23075c16668f0892",
+        "KV": "ce0e29fad53cd0d3cc8e096b563912b545aa41ec496f4aea3b80a5d0d7a70105",
+        "REC2": "f87aba7d5c7faca7be1beb66543632d35b1144a5871e9327c98e8a1c8b214543"
+      },
+      "requested_exact": true,
+      "seq_length": 51,
+      "untouched_exact": true
+    }
+  }
+}

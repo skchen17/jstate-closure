@@ -1,0 +1,26 @@
+protocol_version: natural_write_content_v29
+name: Causal Content of Natural Persistent-State Writes
+subtitle: What Does a Token Commit to the Future?
+parent_commit: 8d3954ef05957ab22f27261ea7eaa217497b2b62
+seed: 290029
+roles: {calibration_per_family: 5, development_per_family: 15, validation_per_family: 10, independent_final_per_family: 10}
+families: [boolean_logic, modular_arithmetic, short_graph_traversal, simple_state_transition, variable_binding]
+fork_token_rule: top1_vs_first_distinct_surface_in_top16_from_prefix_next_token_distribution
+candidate_topk: 16
+next_token_rule: frozen_v18_first_teacher_continuation
+multi_probe_rule: top4_prefix_next_token_candidates
+primary_readout_layer: 30
+channels: [REC, Conv, KV, REC+Conv, REC+KV, Conv+KV, REC+Conv+KV]
+partial_cosine_min: 0.8
+partial_magnitude_min: 0.5
+partial_success_fraction_min: 0.5
+families_required: 4
+branch_future_q_min: 0.25
+writeback_cosine_min: 0.98
+realization_k: [4, 8, 16, 32, 64, 128, 256]
+realization_cosine_min: 0.9
+realization_magnitude_min: 0.8
+realization_magnitude_max: 1.2
+realization_relative_l2_max: 0.3
+final_rule: single_predeclared_REC+Conv_candidate_only_if_dev_and_validation_reciprocal_pass
+authorization: {H2_REMAINS: true, H3_AUTHORIZED: false, DYNAMIC_STATE_SEARCH_AUTHORIZED: false, AUTONOMOUS_CONTROLLER_AUTHORIZED: false}

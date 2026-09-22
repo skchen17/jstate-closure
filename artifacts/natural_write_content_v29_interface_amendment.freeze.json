@@ -1,0 +1,55 @@
+{
+  "H3_AUTHORIZED": false,
+  "amendment_kind": "architecture_interface_coverage_not_hypothesis_or_threshold_change",
+  "base_freeze_digest": "86389aa651802da41d09c0217c9f588586eab45a7274aee4d5d1ae42c2114913",
+  "corrected_channel_semantics": "all initialized native cache layers; REC/Conv full tensor, KV newly appended slot with identical prior slots",
+  "corrected_full_ceiling_required": "bitwise donor equality of every native cache field and future relative L2 <= 1e-6",
+  "corrected_implementation": "src/jclosure/experiments/forks_formal_v29.py",
+  "created_utc": "2026-09-22T02:31:58.248359+00:00",
+  "diagnostic_REC_Conv_KV_layer_sets": {
+    "Conv": [
+      24,
+      25,
+      26,
+      28,
+      29,
+      30
+    ],
+    "KV": [
+      27,
+      31
+    ],
+    "REC": [
+      24,
+      25,
+      26,
+      28,
+      29,
+      30
+    ]
+  },
+  "diagnostic_calibration_states": 25,
+  "diagnostic_named_full_median_relative_l2": 0.8227959715474236,
+  "diagnostic_named_full_was_not_full_native_cache": true,
+  "fixed_finalist_unchanged": "REC+Conv",
+  "fork_tokens_unchanged": true,
+  "formal_development_saved_before_amendment": false,
+  "freeze_digest": "40851cd00d278191045604417c0f7edb4df0417f0eea1bd0e81d3c90d49b91d0",
+  "historical_final_opened": false,
+  "input_sha256": {
+    "artifacts/natural_write_content_v29_execution_plan.freeze.json": "9b2cfb317f5bb5ba0c50709e83e59691024f1cb7bd62d52b6e3b5fcc2d33ad72",
+    "artifacts/natural_write_content_v29_forks_calibration.freeze.json": "82c70bd81d60f16c79558ac10c9f0031aa899dcf3a68b867cef49748dd928483",
+    "results/v29/processed/interface_amendment_v29.json": "8c7a51eafe08f54dc60338379f5a7a9b477697ff7901d5f891bf5d9dd32648d6",
+    "src/jclosure/experiments/amend_v29.py": "c05f6c22ed7735e5af2f567132e7d5f76e71fb1422d3e952bb4a2bf3a8f47a1d",
+    "src/jclosure/experiments/forks_formal_v29.py": "85f3beb1d26ca025565c3030ac0a468851fe8f268ee4de3554fdc7a58a43fd25"
+  },
+  "protocol_version": "natural_write_content_v29_interface_amendment",
+  "reason": "V28 selected posterior layers sufficed for perturbations confined to those layers; token forks change earlier native REC/Conv/KV fields too.",
+  "role_assignments_unchanged": true,
+  "schema_version": 38,
+  "thresholds_unchanged": true,
+  "transient_development_metrics_saved": false,
+  "transient_development_states_processed_before_interrupt": 53,
+  "transient_run_status": "interrupted_invalid_interface_diagnostic; no formal inference",
+  "validation_responses_observed_before_amendment": false
+}

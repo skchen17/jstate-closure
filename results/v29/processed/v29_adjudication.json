@@ -1,0 +1,1851 @@
+{
+  "ADJUDICATION_HASH": "f404213f48100effb31d7aa99dfc5141faacb7dfdb3eca83f47c67f0802b858a",
+  "AUTONOMOUS_CONTROLLER_AUTHORIZED": false,
+  "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+  "H2_REMAINS": true,
+  "H3_AUTHORIZED": false,
+  "V29_formal_interface_all_32_layers": true,
+  "V29_independent_final_opened": true,
+  "calibration_selected_layer_diagnostic_invalid_as_full_cache": true,
+  "development": {
+    "median_future_q": 90.52930681285966,
+    "profiles": {
+      "Conv": {
+        "directions": {
+          "A_from_B": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.98849449749835,
+                "median_magnitude": 1.0330056624324926,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.9905212605537334,
+                "median_magnitude": 0.9851772342406317,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.9832554229182354,
+                "median_magnitude": 0.8692078417275771,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.9879318728111833,
+                "median_magnitude": 0.913466874078038,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.9887294888272133,
+                "median_magnitude": 0.9823948812931563,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 0.9882338581672392,
+            "median_magnitude": 0.9708914407350392,
+            "median_relative_l2": 0.16310484602402972,
+            "pass": true,
+            "rows": 75,
+            "success_fraction": 1.0
+          },
+          "B_from_A": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.9930605576200512,
+                "median_magnitude": 0.9982174408251333,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.9969240666750306,
+                "median_magnitude": 1.0021137292229514,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.9858252123153588,
+                "median_magnitude": 0.9197630460482477,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.9890000964637328,
+                "median_magnitude": 0.9381704331468816,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.9920046755444162,
+                "median_magnitude": 1.011740330293546,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 0.9921203596059224,
+            "median_magnitude": 0.9890152214507041,
+            "median_relative_l2": 0.12678089434804862,
+            "pass": true,
+            "rows": 75,
+            "success_fraction": 1.0
+          }
+        },
+        "reciprocal_pass": true
+      },
+      "Conv+KV": {
+        "directions": {
+          "A_from_B": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.992226826593244,
+                "median_magnitude": 1.0190074258437254,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.9965173247999898,
+                "median_magnitude": 1.001942870136127,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.9832966452176594,
+                "median_magnitude": 0.8827999440976239,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.9859823341394376,
+                "median_magnitude": 0.9258567336089851,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.9936290551121844,
+                "median_magnitude": 0.9795172032047126,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 0.9920617720792876,
+            "median_magnitude": 0.9795172032047126,
+            "median_relative_l2": 0.13181196146385638,
+            "pass": true,
+            "rows": 75,
+            "success_fraction": 1.0
+          },
+          "B_from_A": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.996477794061574,
+                "median_magnitude": 1.0056436578004933,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.9984681165132071,
+                "median_magnitude": 1.005477187348297,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.9834726172963996,
+                "median_magnitude": 0.9197596772539305,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.9886581825500849,
+                "median_magnitude": 0.9495019411261468,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.9962238374027259,
+                "median_magnitude": 1.0131925526555188,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 0.9956236973278222,
+            "median_magnitude": 0.9985843192592877,
+            "median_relative_l2": 0.09488170016900951,
+            "pass": true,
+            "rows": 75,
+            "success_fraction": 1.0
+          }
+        },
+        "reciprocal_pass": true
+      },
+      "KV": {
+        "directions": {
+          "A_from_B": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.07344929880180176,
+                "median_magnitude": 0.0788336081483637,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.12963447774439932,
+                "median_magnitude": 0.05820936775044147,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.03192822316806592,
+                "median_magnitude": 0.06480076949831298,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.19186737238750645,
+                "median_magnitude": 0.05614569730056355,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.06284681445572107,
+                "median_magnitude": 0.07573597431767509,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              }
+            },
+            "median_cosine": 0.08227798362557107,
+            "median_magnitude": 0.06692739435709219,
+            "median_relative_l2": 0.997159898767372,
+            "pass": false,
+            "rows": 75,
+            "success_fraction": 0.0
+          },
+          "B_from_A": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": -0.030311893718171664,
+                "median_magnitude": 0.06488522581790089,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.3718206472354398,
+                "median_magnitude": 0.07692230149051042,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.09716995678849365,
+                "median_magnitude": 0.06514641025494226,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.13108899400761145,
+                "median_magnitude": 0.059217405651915335,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "variable_binding": {
+                "median_cosine": -0.014240199839709523,
+                "median_magnitude": 0.07046642805947231,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              }
+            },
+            "median_cosine": 0.10790790495553289,
+            "median_magnitude": 0.06678508971005888,
+            "median_relative_l2": 0.9953715254706714,
+            "pass": false,
+            "rows": 75,
+            "success_fraction": 0.0
+          }
+        },
+        "reciprocal_pass": false
+      },
+      "REC": {
+        "directions": {
+          "A_from_B": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": -0.028827646432487333,
+                "median_magnitude": 0.08604434817579582,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": -0.06209914477186744,
+                "median_magnitude": 0.05665346811268484,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.5052771452035891,
+                "median_magnitude": 0.19183060307301514,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.38149435836611856,
+                "median_magnitude": 0.159289294567498,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "variable_binding": {
+                "median_cosine": -0.13796129004494248,
+                "median_magnitude": 0.08909840703954044,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              }
+            },
+            "median_cosine": 0.061815429361611975,
+            "median_magnitude": 0.09488170069245912,
+            "median_relative_l2": 0.9985843181672167,
+            "pass": false,
+            "rows": 75,
+            "success_fraction": 0.0
+          },
+          "B_from_A": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": -0.13920964639412323,
+                "median_magnitude": 0.1268682771595691,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.019443189132339632,
+                "median_magnitude": 0.08356229961170726,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.6426700221031654,
+                "median_magnitude": 0.21081233323789472,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.5412200442952321,
+                "median_magnitude": 0.17971305662247142,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.2418902898432671,
+                "median_magnitude": 0.11356550463924191,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              }
+            },
+            "median_cosine": 0.259294727307867,
+            "median_magnitude": 0.13181196103133516,
+            "median_relative_l2": 0.9795172062157462,
+            "pass": false,
+            "rows": 75,
+            "success_fraction": 0.0
+          }
+        },
+        "reciprocal_pass": false
+      },
+      "REC+Conv": {
+        "directions": {
+          "A_from_B": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.9979728046004579,
+                "median_magnitude": 1.0069454717218114,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.997309055467729,
+                "median_magnitude": 0.9746593894373067,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.9980443814521582,
+                "median_magnitude": 0.9953715230646301,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.998307314214693,
+                "median_magnitude": 0.9940040427327265,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.9975318865034066,
+                "median_magnitude": 1.0034801570000655,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 0.997907245717945,
+            "median_magnitude": 0.9953715230646301,
+            "median_relative_l2": 0.06678509016534662,
+            "pass": true,
+            "rows": 75,
+            "success_fraction": 1.0
+          },
+          "B_from_A": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.996987172007578,
+                "median_magnitude": 0.9973711563945813,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.9983300283813655,
+                "median_magnitude": 0.9947430565564384,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.997943736006607,
+                "median_magnitude": 0.9996910132354688,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.9984602204169168,
+                "median_magnitude": 0.9918682949846124,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.9971610187485479,
+                "median_magnitude": 0.9988975560503841,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 0.9978969346620119,
+            "median_magnitude": 0.9971598994201892,
+            "median_relative_l2": 0.06692739364229171,
+            "pass": true,
+            "rows": 75,
+            "success_fraction": 1.0
+          }
+        },
+        "reciprocal_pass": true
+      },
+      "REC+Conv+KV": {
+        "directions": {
+          "A_from_B": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 1.0,
+            "median_magnitude": 1.0,
+            "median_relative_l2": 0.0,
+            "pass": true,
+            "rows": 75,
+            "success_fraction": 1.0
+          },
+          "B_from_A": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 15,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 1.0,
+            "median_magnitude": 1.0,
+            "median_relative_l2": 0.0,
+            "pass": true,
+            "rows": 75,
+            "success_fraction": 1.0
+          }
+        },
+        "reciprocal_pass": true
+      },
+      "REC+KV": {
+        "directions": {
+          "A_from_B": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.07398780408331466,
+                "median_magnitude": 0.11771712767118273,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.01496083979417001,
+                "median_magnitude": 0.07837352842707085,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.5264358152022031,
+                "median_magnitude": 0.18306490007690288,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.44458856011857,
+                "median_magnitude": 0.15518376972633233,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "variable_binding": {
+                "median_cosine": -0.03247146765083679,
+                "median_magnitude": 0.12664453027054398,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              }
+            },
+            "median_cosine": 0.15450250131128607,
+            "median_magnitude": 0.1267808944366716,
+            "median_relative_l2": 0.9890152209234331,
+            "pass": false,
+            "rows": 75,
+            "success_fraction": 0.0
+          },
+          "B_from_A": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": -0.12063248742510954,
+                "median_magnitude": 0.15275059360321702,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.1887120223686761,
+                "median_magnitude": 0.13990528071142563,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.6740875621870385,
+                "median_magnitude": 0.21705198905021938,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.5925007778055188,
+                "median_magnitude": 0.17079510538938908,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.1959497717114913,
+                "median_magnitude": 0.15055604361043398,
+                "pass": false,
+                "rows": 15,
+                "success_fraction": 0.0
+              }
+            },
+            "median_cosine": 0.2856556694458666,
+            "median_magnitude": 0.16310484532506156,
+            "median_relative_l2": 0.9708914453476796,
+            "pass": false,
+            "rows": 75,
+            "success_fraction": 0.0
+          }
+        },
+        "reciprocal_pass": false
+      }
+    },
+    "states": 75
+  },
+  "formal_outcomes": {
+    "V29_A_TOKEN_CONDITIONED_STATE_WRITE_CONFIRMED": true,
+    "V29_B_SAME_BACKGROUND_WRITE_TRANSFER_CONFIRMED": true,
+    "V29_C_RECURRENT_WRITE_CARRIES_NONTRIVIAL_CONTENT": true,
+    "V29_D_KV_DOMINATED_TOKEN_CARRYOVER": false,
+    "V29_E_DISTRIBUTED_WRITE_CONTENT": false,
+    "V29_F_STATE_DEPENDENT_WRITE_CODE": false,
+    "V29_G_GLOBAL_WRITE_CODE": false,
+    "V29_H_CURRENT_WORKSPACE_INCOMPLETE_FOR_WRITE": false,
+    "V29_I_COMPACT_WRITE_EFFECT_DIMENSION_IDENTIFIED": true,
+    "V29_J_NO_COMPACT_WRITE_EFFECT_DIMENSION_IDENTIFIED": false,
+    "V29_K_WRITE_CONTENT_REMAINS_UNIDENTIFIED": false
+  },
+  "full_cache_is_identity_ceiling_not_selective_carrier": true,
+  "historical_final_opened": false,
+  "horizons": {
+    "development": {
+      "1": {
+        "median_cosine": 0.9979787209155528,
+        "median_magnitude": 0.9971936236065375,
+        "median_relative_l2": 0.06363777266911844
+      },
+      "2": {
+        "median_cosine": 0.9958229424900334,
+        "median_magnitude": 0.9889980269741334,
+        "median_relative_l2": 0.09001750733389449
+      },
+      "4": {
+        "median_cosine": 0.9682504252788547,
+        "median_magnitude": 0.9777294530323777,
+        "median_relative_l2": 0.2583051809723787
+      }
+    },
+    "validation": {
+      "1": {
+        "median_cosine": 0.9975129695955757,
+        "median_magnitude": 0.995249692141814,
+        "median_relative_l2": 0.07097628193596059
+      },
+      "2": {
+        "median_cosine": 0.9961870668320344,
+        "median_magnitude": 0.990399505858123,
+        "median_relative_l2": 0.08830815169306658
+      },
+      "4": {
+        "median_cosine": 0.9653627575441345,
+        "median_magnitude": 0.9697106393263905,
+        "median_relative_l2": 0.26155711271972726
+      }
+    }
+  },
+  "independent_final": {
+    "REC_Conv": {
+      "directions": {
+        "A_from_B": {
+          "eligible_fraction": 1.0,
+          "families": {
+            "boolean_logic": {
+              "median_cosine": 0.9977156776101177,
+              "median_magnitude": 1.0057570283588406,
+              "pass": true,
+              "rows": 10,
+              "success_fraction": 1.0
+            },
+            "modular_arithmetic": {
+              "median_cosine": 0.997030959527489,
+              "median_magnitude": 0.9781122864331503,
+              "pass": true,
+              "rows": 10,
+              "success_fraction": 1.0
+            },
+            "short_graph_traversal": {
+              "median_cosine": 0.9975193812112405,
+              "median_magnitude": 0.9894215830239903,
+              "pass": true,
+              "rows": 10,
+              "success_fraction": 1.0
+            },
+            "simple_state_transition": {
+              "median_cosine": 0.998088728477252,
+              "median_magnitude": 0.9930483263088464,
+              "pass": true,
+              "rows": 10,
+              "success_fraction": 1.0
+            },
+            "variable_binding": {
+              "median_cosine": 0.9965952722514189,
+              "median_magnitude": 1.0054645974424863,
+              "pass": true,
+              "rows": 10,
+              "success_fraction": 1.0
+            }
+          },
+          "median_cosine": 0.9975347790398845,
+          "median_magnitude": 0.997347900943479,
+          "median_relative_l2": 0.07287269970508056,
+          "pass": true,
+          "rows": 50,
+          "success_fraction": 1.0
+        },
+        "B_from_A": {
+          "eligible_fraction": 1.0,
+          "families": {
+            "boolean_logic": {
+              "median_cosine": 0.9968199781408836,
+              "median_magnitude": 1.0038280296648716,
+              "pass": true,
+              "rows": 10,
+              "success_fraction": 1.0
+            },
+            "modular_arithmetic": {
+              "median_cosine": 0.9982702051526826,
+              "median_magnitude": 0.9895348911576123,
+              "pass": true,
+              "rows": 10,
+              "success_fraction": 1.0
+            },
+            "short_graph_traversal": {
+              "median_cosine": 0.9971503316262886,
+              "median_magnitude": 0.9936953347896764,
+              "pass": true,
+              "rows": 10,
+              "success_fraction": 1.0
+            },
+            "simple_state_transition": {
+              "median_cosine": 0.9984932094670425,
+              "median_magnitude": 0.9962962294500103,
+              "pass": true,
+              "rows": 10,
+              "success_fraction": 1.0
+            },
+            "variable_binding": {
+              "median_cosine": 0.9967560456370972,
+              "median_magnitude": 0.9966607529708744,
+              "pass": true,
+              "rows": 10,
+              "success_fraction": 1.0
+            }
+          },
+          "median_cosine": 0.9974833925720166,
+          "median_magnitude": 0.9962962294500103,
+          "median_relative_l2": 0.07198875742915628,
+          "pass": true,
+          "rows": 50,
+          "success_fraction": 1.0
+        }
+      },
+      "reciprocal_pass": true
+    },
+    "current_preserved_all": true,
+    "future_eligible_fraction": 1.0,
+    "median_future_q": 92.74502769232271,
+    "reciprocal_pass": true,
+    "same_next_token_all": true,
+    "states": 50,
+    "writeback_all": true
+  },
+  "multi_probe": {
+    "development": {
+      "Conv": {
+        "A_from_B": {
+          "median_cosine": 0.9662195838023941,
+          "median_relative_l2": 0.2580520513387806
+        },
+        "B_from_A": {
+          "median_cosine": 0.9401683568582555,
+          "median_relative_l2": 0.3454997193915505
+        }
+      },
+      "KV": {
+        "A_from_B": {
+          "median_cosine": 0.22693867397320344,
+          "median_relative_l2": 0.9746225636941888
+        },
+        "B_from_A": {
+          "median_cosine": 0.21039235835528225,
+          "median_relative_l2": 0.9796400902927764
+        }
+      },
+      "REC": {
+        "A_from_B": {
+          "median_cosine": 0.2767122666953541,
+          "median_relative_l2": 0.9691632205595483
+        },
+        "B_from_A": {
+          "median_cosine": 0.23624032207076678,
+          "median_relative_l2": 0.981551868257065
+        }
+      },
+      "REC+Conv": {
+        "A_from_B": {
+          "median_cosine": 0.9884417099483728,
+          "median_relative_l2": 0.15156541764267317
+        },
+        "B_from_A": {
+          "median_cosine": 0.9894042166325133,
+          "median_relative_l2": 0.14713177301653707
+        }
+      },
+      "REC+Conv+KV": {
+        "A_from_B": {
+          "median_cosine": 1.0000000186320745,
+          "median_relative_l2": 0.0
+        },
+        "B_from_A": {
+          "median_cosine": 1.0000000186320745,
+          "median_relative_l2": 0.0
+        }
+      }
+    },
+    "validation": {
+      "Conv": {
+        "A_from_B": {
+          "median_cosine": 0.9510099267183754,
+          "median_relative_l2": 0.30748333682850837
+        },
+        "B_from_A": {
+          "median_cosine": 0.9320533497153405,
+          "median_relative_l2": 0.3626866655369073
+        }
+      },
+      "KV": {
+        "A_from_B": {
+          "median_cosine": 0.2385102430397018,
+          "median_relative_l2": 0.9756699649079255
+        },
+        "B_from_A": {
+          "median_cosine": 0.21358285947337313,
+          "median_relative_l2": 0.9779312634646392
+        }
+      },
+      "REC": {
+        "A_from_B": {
+          "median_cosine": 0.2765030720327189,
+          "median_relative_l2": 0.9746958793950549
+        },
+        "B_from_A": {
+          "median_cosine": 0.26793997095105276,
+          "median_relative_l2": 0.9744260315613475
+        }
+      },
+      "REC+Conv": {
+        "A_from_B": {
+          "median_cosine": 0.9861086504514786,
+          "median_relative_l2": 0.16667108651299248
+        },
+        "B_from_A": {
+          "median_cosine": 0.9889849923581524,
+          "median_relative_l2": 0.1494403720966819
+        }
+      },
+      "REC+Conv+KV": {
+        "A_from_B": {
+          "median_cosine": 1.0000000047771092,
+          "median_relative_l2": 0.0
+        },
+        "B_from_A": {
+          "median_cosine": 1.0000000047771092,
+          "median_relative_l2": 0.0
+        }
+      }
+    }
+  },
+  "natural_vs_random": {
+    "development": {
+      "natural_REC+Conv": {
+        "median_cosine": 0.9979787209155528,
+        "median_realized_to_requested": 1.0,
+        "median_relative_l2": 0.06363777266911844
+      },
+      "random_same_norm": {
+        "median_cosine": 0.3405218459850666,
+        "median_realized_to_requested": 1.0000083365277899,
+        "median_relative_l2": 1.3892539500117511
+      },
+      "shuffled_natural": {
+        "median_cosine": 0.4262268027732091,
+        "median_realized_to_requested": 0.9999743487512481,
+        "median_relative_l2": 1.0215814874041782
+      },
+      "sign_flipped": {
+        "median_cosine": -0.17166966969243014,
+        "median_realized_to_requested": 0.9999626334841565,
+        "median_relative_l2": 1.1816055954141986
+      },
+      "wrong_state": {
+        "median_cosine": 0.8749137503855124,
+        "median_realized_to_requested": 1.0000118917019307,
+        "median_relative_l2": 0.5072859938923634
+      }
+    },
+    "validation": {
+      "natural_REC+Conv": {
+        "median_cosine": 0.9975129695955757,
+        "median_realized_to_requested": 1.0,
+        "median_relative_l2": 0.07097628193596059
+      },
+      "random_same_norm": {
+        "median_cosine": 0.4166770550028999,
+        "median_realized_to_requested": 1.0000206523449775,
+        "median_relative_l2": 1.4299305721676752
+      },
+      "shuffled_natural": {
+        "median_cosine": 0.4147023282678184,
+        "median_realized_to_requested": 1.0000016093751594,
+        "median_relative_l2": 1.2231172294536459
+      },
+      "sign_flipped": {
+        "median_cosine": -0.18562114771261007,
+        "median_realized_to_requested": 0.9999393973223742,
+        "median_relative_l2": 1.1158306982530926
+      },
+      "wrong_state": {
+        "median_cosine": 0.9717540828789064,
+        "median_realized_to_requested": 1.0000075033845375,
+        "median_relative_l2": 0.25426494591535226
+      }
+    }
+  },
+  "realization": {
+    "not_estimable_k": [
+      128,
+      256
+    ],
+    "qualified_k": {
+      "16": false,
+      "32": true,
+      "4": false,
+      "64": true,
+      "8": false
+    },
+    "tested_k": [
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "train_span_rank": 89,
+    "write_dimension": 13369344
+  },
+  "state_code_adjudication": "inconclusive: no prospectively frozen cross-state success/degradation gate; off-manifold delta injection is diagnostic",
+  "state_dependence": {
+    "development": {
+      "median_cross_state_delta_relative_l2": 0.4178675601932838,
+      "median_cross_state_delta_to_native_cosine": 0.9220368961038048,
+      "median_write_contrast_cosine": 0.937309135453319,
+      "pairs": 10
+    },
+    "validation": {
+      "median_cross_state_delta_relative_l2": 0.34674160214510313,
+      "median_cross_state_delta_to_native_cosine": 0.9475829715146347,
+      "median_write_contrast_cosine": 0.9584817990216358,
+      "pairs": 10
+    }
+  },
+  "validation": {
+    "median_future_q": 92.3023255362433,
+    "profiles": {
+      "Conv": {
+        "directions": {
+          "A_from_B": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.9873197853494882,
+                "median_magnitude": 1.043338882777032,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.9922865718570527,
+                "median_magnitude": 0.9781110264549131,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.9781310186208194,
+                "median_magnitude": 0.8637037123244529,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.9914387833995784,
+                "median_magnitude": 0.9199884066836541,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.9824579004125441,
+                "median_magnitude": 0.9574658193368137,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 0.9872490932983543,
+            "median_magnitude": 0.962351693105478,
+            "median_relative_l2": 0.175389545006919,
+            "pass": true,
+            "rows": 50,
+            "success_fraction": 1.0
+          },
+          "B_from_A": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.9924917196607714,
+                "median_magnitude": 1.0074535953479318,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.9973810062391727,
+                "median_magnitude": 0.9996455960817583,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.9790111991629034,
+                "median_magnitude": 0.9013817193564415,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.9919251595269607,
+                "median_magnitude": 0.9641098642040605,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.9924080045984867,
+                "median_magnitude": 1.014691135146212,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 0.9922400587531682,
+            "median_magnitude": 0.9930459477824181,
+            "median_relative_l2": 0.12544402553684048,
+            "pass": true,
+            "rows": 50,
+            "success_fraction": 1.0
+          }
+        },
+        "reciprocal_pass": true
+      },
+      "Conv+KV": {
+        "directions": {
+          "A_from_B": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.9940417883618404,
+                "median_magnitude": 1.0323420678036122,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.9962422394395125,
+                "median_magnitude": 1.0063812612508143,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.9784273801253842,
+                "median_magnitude": 0.8760143117766105,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.9913979141314166,
+                "median_magnitude": 0.9354015786362619,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.9920675091542372,
+                "median_magnitude": 0.9586291161787829,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 0.9913936011143794,
+            "median_magnitude": 0.9615624003974641,
+            "median_relative_l2": 0.1367350836303638,
+            "pass": true,
+            "rows": 50,
+            "success_fraction": 1.0
+          },
+          "B_from_A": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.9968608508510028,
+                "median_magnitude": 1.008685053955575,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.998582647292564,
+                "median_magnitude": 1.0064456747187085,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.9780907603241542,
+                "median_magnitude": 0.9048757741477305,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.9916174303592709,
+                "median_magnitude": 0.9616354944923523,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.9961414537758158,
+                "median_magnitude": 1.0142857473443856,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 0.9959742054166087,
+            "median_magnitude": 1.002829009816218,
+            "median_relative_l2": 0.09530899278994802,
+            "pass": true,
+            "rows": 50,
+            "success_fraction": 1.0
+          }
+        },
+        "reciprocal_pass": true
+      },
+      "KV": {
+        "directions": {
+          "A_from_B": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.0893538625499072,
+                "median_magnitude": 0.09290416721640789,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.15226771434601977,
+                "median_magnitude": 0.056878560497471226,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": -0.05571932411346542,
+                "median_magnitude": 0.06013541453619102,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "simple_state_transition": {
+                "median_cosine": -0.023935942335819402,
+                "median_magnitude": 0.059354481707893716,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.12301630270902317,
+                "median_magnitude": 0.07303601185765951,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              }
+            },
+            "median_cosine": 0.08843470765170719,
+            "median_magnitude": 0.06699966389206467,
+            "median_relative_l2": 0.9964093126402163,
+            "pass": false,
+            "rows": 50,
+            "success_fraction": 0.0
+          },
+          "B_from_A": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": -0.11244494552709088,
+                "median_magnitude": 0.07137297758018658,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.2714009860380324,
+                "median_magnitude": 0.08705191316483257,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.1750441414529162,
+                "median_magnitude": 0.06836993003868866,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.018289171264387765,
+                "median_magnitude": 0.06374082309370238,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.059845932372959786,
+                "median_magnitude": 0.08708874747646458,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              }
+            },
+            "median_cosine": 0.09289183119484547,
+            "median_magnitude": 0.06976608838110132,
+            "median_relative_l2": 0.9959444739643533,
+            "pass": false,
+            "rows": 50,
+            "success_fraction": 0.0
+          }
+        },
+        "reciprocal_pass": false
+      },
+      "REC": {
+        "directions": {
+          "A_from_B": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": -0.0671409422952248,
+                "median_magnitude": 0.08033681618633239,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": -0.08588616502029675,
+                "median_magnitude": 0.05411515215414941,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.5254582933220311,
+                "median_magnitude": 0.22062189463251525,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.35290731552542093,
+                "median_magnitude": 0.1318502092246053,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "variable_binding": {
+                "median_cosine": -0.12768445356073238,
+                "median_magnitude": 0.09151642432604329,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              }
+            },
+            "median_cosine": -0.0019868050183393165,
+            "median_magnitude": 0.09530899241894884,
+            "median_relative_l2": 1.002829010567252,
+            "pass": false,
+            "rows": 50,
+            "success_fraction": 0.0
+          },
+          "B_from_A": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": -0.19443472682700275,
+                "median_magnitude": 0.11362273109940577,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": -0.017037090144688342,
+                "median_magnitude": 0.08987150318749235,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.6798940288247611,
+                "median_magnitude": 0.2315533113042535,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.5055375602405865,
+                "median_magnitude": 0.1386512943683851,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.38642116309378394,
+                "median_magnitude": 0.1316394005514681,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              }
+            },
+            "median_cosine": 0.35833174374615484,
+            "median_magnitude": 0.13673508429973402,
+            "median_relative_l2": 0.9615624005575424,
+            "pass": false,
+            "rows": 50,
+            "success_fraction": 0.0
+          }
+        },
+        "reciprocal_pass": false
+      },
+      "REC+Conv": {
+        "directions": {
+          "A_from_B": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.9975233532101564,
+                "median_magnitude": 1.0108687189809509,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.9966996407982036,
+                "median_magnitude": 0.9802339129228774,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.9977543658095207,
+                "median_magnitude": 0.9909195828849052,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.9980483999232883,
+                "median_magnitude": 1.0011301862647584,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.9962748583523315,
+                "median_magnitude": 0.9985747774419008,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 0.9976337059152038,
+            "median_magnitude": 0.9959444736799755,
+            "median_relative_l2": 0.06976608842965537,
+            "pass": true,
+            "rows": 50,
+            "success_fraction": 1.0
+          },
+          "B_from_A": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.9957372963085332,
+                "median_magnitude": 0.996114581304272,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.9984270565922719,
+                "median_magnitude": 0.9925606474281946,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.9982329656984392,
+                "median_magnitude": 1.0053747123347114,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.9983490452027344,
+                "median_magnitude": 1.0032426293777923,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.9973515361194359,
+                "median_magnitude": 0.9944016013041832,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 0.9977892857427948,
+            "median_magnitude": 0.9964093106642916,
+            "median_relative_l2": 0.06699966451226604,
+            "pass": true,
+            "rows": 50,
+            "success_fraction": 1.0
+          }
+        },
+        "reciprocal_pass": true
+      },
+      "REC+Conv+KV": {
+        "directions": {
+          "A_from_B": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 1.0000000000000002,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 1.0,
+            "median_magnitude": 1.0,
+            "median_relative_l2": 0.0,
+            "pass": true,
+            "rows": 50,
+            "success_fraction": 1.0
+          },
+          "B_from_A": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 1.0,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              },
+              "variable_binding": {
+                "median_cosine": 1.0000000000000002,
+                "median_magnitude": 1.0,
+                "pass": true,
+                "rows": 10,
+                "success_fraction": 1.0
+              }
+            },
+            "median_cosine": 1.0,
+            "median_magnitude": 1.0,
+            "median_relative_l2": 0.0,
+            "pass": true,
+            "rows": 50,
+            "success_fraction": 1.0
+          }
+        },
+        "reciprocal_pass": true
+      },
+      "REC+KV": {
+        "directions": {
+          "A_from_B": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": 0.0011241448808429278,
+                "median_magnitude": 0.12290125867987307,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.038518121587349706,
+                "median_magnitude": 0.07291222238991779,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.5542729642430289,
+                "median_magnitude": 0.2173716739218109,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.35430670702529776,
+                "median_magnitude": 0.12777687266219662,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "variable_binding": {
+                "median_cosine": -0.06691963225975471,
+                "median_magnitude": 0.12544402547060796,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              }
+            },
+            "median_cosine": 0.1213741110081277,
+            "median_magnitude": 0.12544402547060796,
+            "median_relative_l2": 0.9930459482245394,
+            "pass": false,
+            "rows": 50,
+            "success_fraction": 0.0
+          },
+          "B_from_A": {
+            "eligible_fraction": 1.0,
+            "families": {
+              "boolean_logic": {
+                "median_cosine": -0.18417985894850608,
+                "median_magnitude": 0.17051200539315686,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "modular_arithmetic": {
+                "median_cosine": 0.22755072695691142,
+                "median_magnitude": 0.12459340170863002,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "short_graph_traversal": {
+                "median_cosine": 0.7093554466355079,
+                "median_magnitude": 0.23816998513771637,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "simple_state_transition": {
+                "median_cosine": 0.5823755264387435,
+                "median_magnitude": 0.14874211893521258,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              },
+              "variable_binding": {
+                "median_cosine": 0.33207511929993916,
+                "median_magnitude": 0.18928447346594152,
+                "pass": false,
+                "rows": 10,
+                "success_fraction": 0.0
+              }
+            },
+            "median_cosine": 0.34238542483528794,
+            "median_magnitude": 0.17538954594061568,
+            "median_relative_l2": 0.9623516924993809,
+            "pass": false,
+            "rows": 50,
+            "success_fraction": 0.0
+          }
+        },
+        "reciprocal_pass": false
+      }
+    },
+    "states": 50
+  },
+  "workspace_incomplete_formal_reason": "prediction gain is diagnostic; no J-matched causal equivalence or valid direct J transplant",
+  "workspace_write_prediction": {
+    "M0_token_identity_and_surface": {
+      "family_r2": {
+        "boolean_logic": 0.7077864773164593,
+        "modular_arithmetic": 0.037157491585520286,
+        "short_graph_traversal": 0.7628077570536933,
+        "simple_state_transition": 0.7006770273271072,
+        "variable_binding": 0.09983617844126491
+      },
+      "mse": 11.399621406515983,
+      "r2_vs_train_mean": 0.41744144908964687,
+      "relative_l2": 0.5054243046643905,
+      "train_feature_dim": 27
+    },
+    "M1_current_J": {
+      "family_r2": {
+        "boolean_logic": 0.6807345733147713,
+        "modular_arithmetic": 0.3454622395963308,
+        "short_graph_traversal": 0.5356848866890209,
+        "simple_state_transition": 0.2441101021888722,
+        "variable_binding": 0.17352772511600445
+      },
+      "mse": 11.910189070885853,
+      "r2_vs_train_mean": 0.39134974410311274,
+      "relative_l2": 0.5166188354509913,
+      "train_feature_dim": 128
+    },
+    "M2_token_plus_J": {
+      "family_r2": {
+        "boolean_logic": 0.6963793116257571,
+        "modular_arithmetic": 0.3668742936696553,
+        "short_graph_traversal": 0.5517644411457734,
+        "simple_state_transition": 0.3240938127495854,
+        "variable_binding": 0.2022122548526617
+      },
+      "mse": 11.297728634122146,
+      "r2_vs_train_mean": 0.42264850849252,
+      "relative_l2": 0.5031604277763804,
+      "train_feature_dim": 155
+    },
+    "M3_token_J_broader_current_workspace": {
+      "family_r2": {
+        "boolean_logic": 0.6696636566675905,
+        "modular_arithmetic": 0.4578371455215886,
+        "short_graph_traversal": 0.6182827700504767,
+        "simple_state_transition": 0.39722824906586496,
+        "variable_binding": 0.2969370179126336
+      },
+      "mse": 10.143043547231441,
+      "r2_vs_train_mean": 0.48165675508151173,
+      "relative_l2": 0.47675477690827517,
+      "train_feature_dim": 251
+    },
+    "M4_token_J_write_geometry": {
+      "family_r2": {
+        "boolean_logic": 0.7258656232386598,
+        "modular_arithmetic": 0.45503314975349163,
+        "short_graph_traversal": 0.5927994205225573,
+        "simple_state_transition": 0.34995756433210556,
+        "variable_binding": 0.32828635001905193
+      },
+      "mse": 10.010159970240135,
+      "r2_vs_train_mean": 0.488447547625516,
+      "relative_l2": 0.47362150896579003,
+      "train_feature_dim": 283
+    }
+  },
+  "write_geometry": {
+    "development": {
+      "Conv": {
+        "fields": 1800,
+        "median_contrast_norm": 63.90069580078125,
+        "median_write_A_B_cosine": 0.9327230751514435,
+        "positive_contrast_fraction": 1.0
+      },
+      "KV": {
+        "fields": 1200,
+        "median_contrast_norm": 26.504433631896973,
+        "median_write_A_B_cosine": 0.7343136966228485,
+        "positive_contrast_fraction": 1.0
+      },
+      "REC": {
+        "fields": 1800,
+        "median_contrast_norm": 0.8921339511871338,
+        "median_write_A_B_cosine": 0.7728333175182343,
+        "positive_contrast_fraction": 1.0
+      }
+    },
+    "validation": {
+      "Conv": {
+        "fields": 1200,
+        "median_contrast_norm": 64.19451141357422,
+        "median_write_A_B_cosine": 0.9336548149585724,
+        "positive_contrast_fraction": 1.0
+      },
+      "KV": {
+        "fields": 800,
+        "median_contrast_norm": 26.1289119720459,
+        "median_write_A_B_cosine": 0.7346118688583374,
+        "positive_contrast_fraction": 1.0
+      },
+      "REC": {
+        "fields": 1200,
+        "median_contrast_norm": 0.9007708728313446,
+        "median_write_A_B_cosine": 0.7718409299850464,
+        "positive_contrast_fraction": 1.0
+      }
+    }
+  },
+  "write_geometry_from_current_J": {
+    "mse": 1.5287126266182478,
+    "r2_vs_train_mean": 0.9259495751314267,
+    "relative_l2": 0.03672806031564012
+  }
+}

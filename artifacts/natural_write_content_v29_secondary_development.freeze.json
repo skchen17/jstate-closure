@@ -1,0 +1,34 @@
+{
+  "all_full_signatures_exact": true,
+  "base_freeze_digest": "86389aa651802da41d09c0217c9f588586eab45a7274aee4d5d1ae42c2114913",
+  "control_rows": 50,
+  "created_utc": "2026-09-22T02:40:05.417875+00:00",
+  "factorial_rows": 10,
+  "freeze_digest": "689df9d0f223da3f0be6247a23c88e9d2d107a89ed6ae28ccc35ccdcebe25539",
+  "frozen_probe_rule": "per-state top4 frozen prefix-distribution candidates, not selected from write response",
+  "historical_final_opened": false,
+  "horizon_authorized": true,
+  "horizon_rows": 30,
+  "input_sha256": {
+    "artifacts/natural_write_content_v29_execution_plan.freeze.json": "9b2cfb317f5bb5ba0c50709e83e59691024f1cb7bd62d52b6e3b5fcc2d33ad72",
+    "artifacts/natural_write_content_v29_validation_analysis.freeze.json": "bc81a70d44b7170e1fa0ff7dd2dbad1424c1e63f6c52274ffcf42fbfc7500d98",
+    "results/v29/processed/future_signature_development_v29.parquet": "ffdaea6004b5a65fcdd1af08bbe78836cdc7895d9586129b823ae35977af33a9",
+    "results/v29/processed/future_signature_vectors_development_v29.npz": "883617e014f09b23ed9f58fab2cb0f45b082bbde3676ae0e0436561bbfeb3cf9",
+    "results/v29/processed/natural_vs_random_development_v29.parquet": "9f36fc6f4d4b250ce966db6d3c55af59d1f883936ac5159fcff9b4a2e1dcbb89",
+    "results/v29/processed/secondary_development_v29.json": "3c4c3d34ce9d91929fd84ec086659166bbb9a454ac3164694ffdc97a1a7c0aa6",
+    "results/v29/processed/state_token_factorial_development_v29.parquet": "1b673fcf4561a5251e3531721f42d583eeef29f15ca975de5ba3891be7034e2d",
+    "results/v29/processed/write_horizon_development_v29.parquet": "25d710ed40d84763f777e7db7114f45e8e886d3e9efa62b031a1af3a5be73195",
+    "src/jclosure/experiments/secondary_v29.py": "07ac75d12b2dad46f963daa778333296eadc9b1a669003463659717821119b14"
+  },
+  "protocol_version": "natural_write_content_v29_secondary_development",
+  "response_hashes": {
+    "future_signature": "ffdaea6004b5a65fcdd1af08bbe78836cdc7895d9586129b823ae35977af33a9",
+    "natural_vs_random": "9f36fc6f4d4b250ce966db6d3c55af59d1f883936ac5159fcff9b4a2e1dcbb89",
+    "state_token_factorial": "1b673fcf4561a5251e3531721f42d583eeef29f15ca975de5ba3891be7034e2d",
+    "write_horizon": "25d710ed40d84763f777e7db7114f45e8e886d3e9efa62b031a1af3a5be73195"
+  },
+  "role": "development",
+  "schema_version": 38,
+  "signature_rows": 100,
+  "vector_hash": "883617e014f09b23ed9f58fab2cb0f45b082bbde3676ae0e0436561bbfeb3cf9"
+}

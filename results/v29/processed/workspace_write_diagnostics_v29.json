@@ -1,0 +1,96 @@
+{
+  "causal_interpretation": false,
+  "fixed_ridge_alpha": 1.0,
+  "full_write_vectors_not_used": true,
+  "heldout_token_pair_test": true,
+  "heldout_validation_states": 50,
+  "historical_final_opened": false,
+  "models": {
+    "M0_token_identity_and_surface": {
+      "family_r2": {
+        "boolean_logic": 0.7077864773164593,
+        "modular_arithmetic": 0.037157491585520286,
+        "short_graph_traversal": 0.7628077570536933,
+        "simple_state_transition": 0.7006770273271072,
+        "variable_binding": 0.09983617844126491
+      },
+      "mse": 11.399621406515983,
+      "r2_vs_train_mean": 0.41744144908964687,
+      "relative_l2": 0.5054243046643905,
+      "train_feature_dim": 27
+    },
+    "M1_current_J": {
+      "family_r2": {
+        "boolean_logic": 0.6807345733147713,
+        "modular_arithmetic": 0.3454622395963308,
+        "short_graph_traversal": 0.5356848866890209,
+        "simple_state_transition": 0.2441101021888722,
+        "variable_binding": 0.17352772511600445
+      },
+      "mse": 11.910189070885853,
+      "r2_vs_train_mean": 0.39134974410311274,
+      "relative_l2": 0.5166188354509913,
+      "train_feature_dim": 128
+    },
+    "M2_token_plus_J": {
+      "family_r2": {
+        "boolean_logic": 0.6963793116257571,
+        "modular_arithmetic": 0.3668742936696553,
+        "short_graph_traversal": 0.5517644411457734,
+        "simple_state_transition": 0.3240938127495854,
+        "variable_binding": 0.2022122548526617
+      },
+      "mse": 11.297728634122146,
+      "r2_vs_train_mean": 0.42264850849252,
+      "relative_l2": 0.5031604277763804,
+      "train_feature_dim": 155
+    },
+    "M3_token_J_broader_current_workspace": {
+      "family_r2": {
+        "boolean_logic": 0.6696636566675905,
+        "modular_arithmetic": 0.4578371455215886,
+        "short_graph_traversal": 0.6182827700504767,
+        "simple_state_transition": 0.39722824906586496,
+        "variable_binding": 0.2969370179126336
+      },
+      "mse": 10.143043547231441,
+      "r2_vs_train_mean": 0.48165675508151173,
+      "relative_l2": 0.47675477690827517,
+      "train_feature_dim": 251
+    },
+    "M4_token_J_write_geometry": {
+      "family_r2": {
+        "boolean_logic": 0.7258656232386598,
+        "modular_arithmetic": 0.45503314975349163,
+        "short_graph_traversal": 0.5927994205225573,
+        "simple_state_transition": 0.34995756433210556,
+        "variable_binding": 0.32828635001905193
+      },
+      "mse": 10.010159970240135,
+      "r2_vs_train_mean": 0.488447547625516,
+      "relative_l2": 0.47362150896579003,
+      "train_feature_dim": 283
+    }
+  },
+  "token_identity_OOD_limitation": "exact held-out IDs unseen in train map to zero; coarse surface features remain",
+  "token_vocab_train": 13,
+  "train_cross_cov_rank": 74,
+  "train_cross_cov_top10_singular": [
+    296406.9553010881,
+    52170.38343910498,
+    17453.553089595636,
+    8626.593049505866,
+    7434.5652426764555,
+    2863.7318525783735,
+    2808.1956408198457,
+    1870.5653129787315,
+    1638.0862084148232,
+    1124.1141077685265
+  ],
+  "train_states": 75,
+  "write_geometry_from_current_J": {
+    "mse": 1.5287126266182478,
+    "r2_vs_train_mean": 0.9259495751314267,
+    "relative_l2": 0.03672806031564012
+  }
+}

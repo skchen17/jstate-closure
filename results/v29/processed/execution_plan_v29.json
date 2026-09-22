@@ -1,0 +1,203 @@
+{
+  "control_conditions": [
+    "natural_REC+Conv",
+    "random_same_norm_REC+Conv",
+    "shuffled_natural_REC+Conv",
+    "sign_flipped_REC+Conv",
+    "wrong_state_REC+Conv"
+  ],
+  "control_state_ids": {
+    "development": [
+      "v13-train-5642afa8a3779148634f",
+      "v13-train-75248c2d7ff7ad5657e2",
+      "v13-train-4e06cf497951eb3f6519",
+      "v13-train-300217e9ca17ed6645bb",
+      "v13-train-064bdfc7e4ad5b4082bd",
+      "v13-train-169f96d1fe312aca0ae4",
+      "v13-train-cc3de1c7fd2dc37d1c9d",
+      "v13-train-8d4ce977d974ca0d2d95",
+      "v13-train-9f9da31eb90776a789a3",
+      "v13-train-9edac4208febffeef40f"
+    ],
+    "validation": [
+      "v13-validation-3d9e1ae1eee26590be9d",
+      "v13-validation-1a84012f5f4055a00e7c",
+      "v13-validation-6e0ce629fff303f72082",
+      "v13-validation-dc6b5b7eea54b8508a85",
+      "v13-validation-23f918c842c062500a83",
+      "v13-validation-f4b6cd4574b62d8d173b",
+      "v13-validation-1a3a677803c367a578e6",
+      "v13-validation-4a82e5de3e3915349b03",
+      "v13-validation-474b78d9029d5ae7ef04",
+      "v13-validation-49e7e6eff76c21179b53"
+    ]
+  },
+  "development_responses_observed_before_plan": false,
+  "factorial_pairs": {
+    "development": [
+      [
+        "v13-train-5642afa8a3779148634f",
+        "v13-train-75248c2d7ff7ad5657e2"
+      ],
+      [
+        "v13-train-b28f937583878fbc4888",
+        "v13-train-55888a0f70c72ea70525"
+      ],
+      [
+        "v13-train-4e06cf497951eb3f6519",
+        "v13-train-300217e9ca17ed6645bb"
+      ],
+      [
+        "v13-train-aa0bc66f2efb92f2a82b",
+        "v13-train-e08ce218daf377b11586"
+      ],
+      [
+        "v13-train-064bdfc7e4ad5b4082bd",
+        "v13-train-169f96d1fe312aca0ae4"
+      ],
+      [
+        "v13-train-b91695c4c5d2d3a86e1f",
+        "v13-train-d7bddeb64db22f9a8c8c"
+      ],
+      [
+        "v13-train-cc3de1c7fd2dc37d1c9d",
+        "v13-train-8d4ce977d974ca0d2d95"
+      ],
+      [
+        "v13-train-046b9ca6cde8cef7a220",
+        "v13-train-5fc94486189f12cfddd9"
+      ],
+      [
+        "v13-train-9f9da31eb90776a789a3",
+        "v13-train-9edac4208febffeef40f"
+      ],
+      [
+        "v13-train-840f6b5b4fa2c86b8d94",
+        "v13-train-adb0b5a3c43d797eb2d8"
+      ]
+    ],
+    "validation": [
+      [
+        "v13-validation-3d9e1ae1eee26590be9d",
+        "v13-validation-1a84012f5f4055a00e7c"
+      ],
+      [
+        "v13-validation-9713c4038c2b352c3662",
+        "v13-validation-a1870542ff6a211e62ec"
+      ],
+      [
+        "v13-validation-6e0ce629fff303f72082",
+        "v13-validation-dc6b5b7eea54b8508a85"
+      ],
+      [
+        "v13-validation-39ac06febc03317a60f6",
+        "v13-validation-9163c02f6de86312592e"
+      ],
+      [
+        "v13-validation-23f918c842c062500a83",
+        "v13-validation-f4b6cd4574b62d8d173b"
+      ],
+      [
+        "v13-validation-3ae52485c242896cafcb",
+        "v13-validation-c76c95344d53d3e69a5d"
+      ],
+      [
+        "v13-validation-1a3a677803c367a578e6",
+        "v13-validation-4a82e5de3e3915349b03"
+      ],
+      [
+        "v13-validation-8d41544f3b6fb921b721",
+        "v13-validation-1fff680d8c79e8f6101e"
+      ],
+      [
+        "v13-validation-474b78d9029d5ae7ef04",
+        "v13-validation-49e7e6eff76c21179b53"
+      ],
+      [
+        "v13-validation-bda3809517fd2849e917",
+        "v13-validation-ac6ad067e319b99a1fbf"
+      ]
+    ]
+  },
+  "final_panel_sealed": true,
+  "final_rule": "single_predeclared_REC+Conv_candidate_only_if_dev_and_validation_reciprocal_pass",
+  "fixed_finalist": "REC+Conv",
+  "future_signature_probes": "per-state top4 frozen prefix-distribution candidates, not selected from write response",
+  "historical_final_opened": false,
+  "horizon_state_ids": {
+    "development": [
+      "v13-train-5642afa8a3779148634f",
+      "v13-train-75248c2d7ff7ad5657e2",
+      "v13-train-4e06cf497951eb3f6519",
+      "v13-train-300217e9ca17ed6645bb",
+      "v13-train-064bdfc7e4ad5b4082bd",
+      "v13-train-169f96d1fe312aca0ae4",
+      "v13-train-cc3de1c7fd2dc37d1c9d",
+      "v13-train-8d4ce977d974ca0d2d95",
+      "v13-train-9f9da31eb90776a789a3",
+      "v13-train-9edac4208febffeef40f"
+    ],
+    "validation": [
+      "v13-validation-3d9e1ae1eee26590be9d",
+      "v13-validation-1a84012f5f4055a00e7c",
+      "v13-validation-6e0ce629fff303f72082",
+      "v13-validation-dc6b5b7eea54b8508a85",
+      "v13-validation-23f918c842c062500a83",
+      "v13-validation-f4b6cd4574b62d8d173b",
+      "v13-validation-1a3a677803c367a578e6",
+      "v13-validation-4a82e5de3e3915349b03",
+      "v13-validation-474b78d9029d5ae7ef04",
+      "v13-validation-49e7e6eff76c21179b53"
+    ]
+  },
+  "horizons": [
+    1,
+    2,
+    4
+  ],
+  "multi_probe_state_ids": {
+    "development": [
+      "v13-train-5642afa8a3779148634f",
+      "v13-train-75248c2d7ff7ad5657e2",
+      "v13-train-4e06cf497951eb3f6519",
+      "v13-train-300217e9ca17ed6645bb",
+      "v13-train-064bdfc7e4ad5b4082bd",
+      "v13-train-169f96d1fe312aca0ae4",
+      "v13-train-cc3de1c7fd2dc37d1c9d",
+      "v13-train-8d4ce977d974ca0d2d95",
+      "v13-train-9f9da31eb90776a789a3",
+      "v13-train-9edac4208febffeef40f"
+    ],
+    "validation": [
+      "v13-validation-3d9e1ae1eee26590be9d",
+      "v13-validation-1a84012f5f4055a00e7c",
+      "v13-validation-6e0ce629fff303f72082",
+      "v13-validation-dc6b5b7eea54b8508a85",
+      "v13-validation-23f918c842c062500a83",
+      "v13-validation-f4b6cd4574b62d8d173b",
+      "v13-validation-1a3a677803c367a578e6",
+      "v13-validation-4a82e5de3e3915349b03",
+      "v13-validation-474b78d9029d5ae7ef04",
+      "v13-validation-49e7e6eff76c21179b53"
+    ]
+  },
+  "primary_partial_channels": [
+    "REC",
+    "Conv",
+    "KV",
+    "REC+Conv",
+    "REC+KV",
+    "Conv+KV",
+    "REC+Conv+KV"
+  ],
+  "realization_k": [
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "validation_responses_observed_before_plan": false
+}

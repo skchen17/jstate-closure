@@ -1,0 +1,43 @@
+{
+  "H3_AUTHORIZED": false,
+  "amendment_kind": "architecture_interface_coverage_not_hypothesis_or_threshold_change",
+  "corrected_channel_semantics": "all initialized native cache layers; REC/Conv full tensor, KV newly appended slot with identical prior slots",
+  "corrected_full_ceiling_required": "bitwise donor equality of every native cache field and future relative L2 <= 1e-6",
+  "corrected_implementation": "src/jclosure/experiments/forks_formal_v29.py",
+  "diagnostic_REC_Conv_KV_layer_sets": {
+    "Conv": [
+      24,
+      25,
+      26,
+      28,
+      29,
+      30
+    ],
+    "KV": [
+      27,
+      31
+    ],
+    "REC": [
+      24,
+      25,
+      26,
+      28,
+      29,
+      30
+    ]
+  },
+  "diagnostic_calibration_states": 25,
+  "diagnostic_named_full_median_relative_l2": 0.8227959715474236,
+  "diagnostic_named_full_was_not_full_native_cache": true,
+  "fixed_finalist_unchanged": "REC+Conv",
+  "fork_tokens_unchanged": true,
+  "formal_development_saved_before_amendment": false,
+  "historical_final_opened": false,
+  "reason": "V28 selected posterior layers sufficed for perturbations confined to those layers; token forks change earlier native REC/Conv/KV fields too.",
+  "role_assignments_unchanged": true,
+  "thresholds_unchanged": true,
+  "transient_development_metrics_saved": false,
+  "transient_development_states_processed_before_interrupt": 53,
+  "transient_run_status": "interrupted_invalid_interface_diagnostic; no formal inference",
+  "validation_responses_observed_before_amendment": false
+}

@@ -1,0 +1,81 @@
+{
+  "V1_V28_records_mutated": false,
+  "config": {
+    "authorization": {
+      "AUTONOMOUS_CONTROLLER_AUTHORIZED": false,
+      "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+      "H2_REMAINS": true,
+      "H3_AUTHORIZED": false
+    },
+    "branch_future_q_min": 0.25,
+    "candidate_topk": 16,
+    "channels": [
+      "REC",
+      "Conv",
+      "KV",
+      "REC+Conv",
+      "REC+KV",
+      "Conv+KV",
+      "REC+Conv+KV"
+    ],
+    "families": [
+      "boolean_logic",
+      "modular_arithmetic",
+      "short_graph_traversal",
+      "simple_state_transition",
+      "variable_binding"
+    ],
+    "families_required": 4,
+    "final_rule": "single_predeclared_REC+Conv_candidate_only_if_dev_and_validation_reciprocal_pass",
+    "fork_token_rule": "top1_vs_first_distinct_surface_in_top16_from_prefix_next_token_distribution",
+    "multi_probe_rule": "top4_prefix_next_token_candidates",
+    "name": "Causal Content of Natural Persistent-State Writes",
+    "next_token_rule": "frozen_v18_first_teacher_continuation",
+    "parent_commit": "8d3954ef05957ab22f27261ea7eaa217497b2b62",
+    "partial_cosine_min": 0.8,
+    "partial_magnitude_min": 0.5,
+    "partial_success_fraction_min": 0.5,
+    "primary_readout_layer": 30,
+    "protocol_version": "natural_write_content_v29",
+    "realization_cosine_min": 0.9,
+    "realization_k": [
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "realization_magnitude_max": 1.2,
+    "realization_magnitude_min": 0.8,
+    "realization_relative_l2_max": 0.3,
+    "roles": {
+      "calibration_per_family": 5,
+      "development_per_family": 15,
+      "independent_final_per_family": 10,
+      "validation_per_family": 10
+    },
+    "seed": 290029,
+    "subtitle": "What Does a Token Commit to the Future?",
+    "writeback_cosine_min": 0.98
+  },
+  "config_sha256": "ba166a87c802a52c83f22f1f1ffc52bc5de1ef4b9a820f9cd7160c05f22d98ee",
+  "created_utc": "2026-09-22T02:24:55.827754+00:00",
+  "cumulative_report_at_start_sha256": "eaf6ed23b202026e17e2c8b38cdb6060eb67d242af59bb4368611c1aceb88399",
+  "freeze_digest": "86389aa651802da41d09c0217c9f588586eab45a7274aee4d5d1ae42c2114913",
+  "frozen_history_sha256": {
+    "artifacts/token_state_transaction_v28_final.freeze.json": "4b742e856006ef7b574f9dce856f245c3bfc666facf68c9c9de4a8c522aff8b2",
+    "reports/V25_COMPLETE_REPORT.md": "cb000d3a39e34a07563f918a318e05343b29b79c112c22974f3d7476b963b6a7",
+    "reports/V26_COMPLETE_REPORT.md": "f492d9597b181bc6ac485e8a17e203e219e95818405eaa825bec609f0d569920",
+    "reports/V27_COMPLETE_REPORT.md": "9c3ac4f56a44525ffdbf435252aaad2a61a3b2163e1d27dbcdfd7b971c3564db",
+    "reports/V28_COMPLETE_REPORT.md": "69ded83ce65b854a38c607f0dbc32be154f5f2dca56c2a701f4ec79a380f8f48",
+    "results/v28/processed/v28_adjudication.json": "1f9a11db5b58991a1b17ca744ca31e5b85162f9e71c3f94d90d038bde3cb4486",
+    "results/v28/processed/v28_integrity_index.json": "5a98d64a33363970b5ccf0bc3ff65e9c2699f8c88ab92591abd31db49fc3695a"
+  },
+  "historical_final_opened": false,
+  "parent_commit": "8d3954ef05957ab22f27261ea7eaa217497b2b62",
+  "protocol_sha256": "f9ca8350d24877333618ed64697b9d657f26a28d5036cc003e4a571265af193b",
+  "protocol_version": "natural_write_content_v29",
+  "schema_version": 38
+}

@@ -1,0 +1,34 @@
+{
+  "all_full_signatures_exact": true,
+  "base_freeze_digest": "86389aa651802da41d09c0217c9f588586eab45a7274aee4d5d1ae42c2114913",
+  "control_rows": 50,
+  "created_utc": "2026-09-22T02:41:56.843658+00:00",
+  "factorial_rows": 10,
+  "freeze_digest": "7c52f7d3d021434e8bcf189706d3ad85e7b251a9813a136517dd1f76cbfa2820",
+  "frozen_probe_rule": "per-state top4 frozen prefix-distribution candidates, not selected from write response",
+  "historical_final_opened": false,
+  "horizon_authorized": true,
+  "horizon_rows": 30,
+  "input_sha256": {
+    "artifacts/natural_write_content_v29_execution_plan.freeze.json": "9b2cfb317f5bb5ba0c50709e83e59691024f1cb7bd62d52b6e3b5fcc2d33ad72",
+    "artifacts/natural_write_content_v29_validation_analysis.freeze.json": "bc81a70d44b7170e1fa0ff7dd2dbad1424c1e63f6c52274ffcf42fbfc7500d98",
+    "results/v29/processed/future_signature_validation_v29.parquet": "4f77fdbed24691b9339329737cb4d029385c52768e0f030814035727319f9e75",
+    "results/v29/processed/future_signature_vectors_validation_v29.npz": "ff80b171e9df5ced97abdbb6c78a84bfb31005e9528f559b610bf87c835cf5e0",
+    "results/v29/processed/natural_vs_random_validation_v29.parquet": "436e05d5a2d58352a27c3a662389f7e46e8f9c80a1e7e0fd8de0e22355d0173e",
+    "results/v29/processed/secondary_validation_v29.json": "0f1769dffd4cf43265b7d58e27a2223dd16add9633d989661dfb4d262b6d44d1",
+    "results/v29/processed/state_token_factorial_validation_v29.parquet": "723ec2043b319fcdb6230156f94d8c5a2142559c5a5b4125365924acc98eb800",
+    "results/v29/processed/write_horizon_validation_v29.parquet": "84f98f74b3970861de0a7e580571b1af7ee5dac59b49be9db59bbde3445b4a20",
+    "src/jclosure/experiments/secondary_v29.py": "07ac75d12b2dad46f963daa778333296eadc9b1a669003463659717821119b14"
+  },
+  "protocol_version": "natural_write_content_v29_secondary_validation",
+  "response_hashes": {
+    "future_signature": "4f77fdbed24691b9339329737cb4d029385c52768e0f030814035727319f9e75",
+    "natural_vs_random": "436e05d5a2d58352a27c3a662389f7e46e8f9c80a1e7e0fd8de0e22355d0173e",
+    "state_token_factorial": "723ec2043b319fcdb6230156f94d8c5a2142559c5a5b4125365924acc98eb800",
+    "write_horizon": "84f98f74b3970861de0a7e580571b1af7ee5dac59b49be9db59bbde3445b4a20"
+  },
+  "role": "validation",
+  "schema_version": 38,
+  "signature_rows": 100,
+  "vector_hash": "ff80b171e9df5ced97abdbb6c78a84bfb31005e9528f559b610bf87c835cf5e0"
+}

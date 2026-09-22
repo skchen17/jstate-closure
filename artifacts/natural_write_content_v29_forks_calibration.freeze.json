@@ -1,0 +1,33 @@
+{
+  "all_incoming_identical": true,
+  "all_replay_exact": true,
+  "all_writeback_pass": true,
+  "base_freeze_digest": "86389aa651802da41d09c0217c9f588586eab45a7274aee4d5d1ae42c2114913",
+  "created_utc": "2026-09-22T02:28:09.958163+00:00",
+  "freeze_digest": "01d635351fd620df89e9d26a92499332d481ce13c609cc9635e0c9c041db2225",
+  "future_responses_observed_after_design_freeze": true,
+  "historical_final_opened": false,
+  "independent_final_opened": false,
+  "input_sha256": {
+    "artifacts/natural_write_content_v29_design.freeze.json": "b5259282116a6915feb1d713668768cd5f7d93992b3810259d5f5868f238582c",
+    "results/v29/processed/audit_calibration_v29.parquet": "23468c466f4670048a627b35a87e3d6987f523ebaf254715ff2b09725d5ba208",
+    "results/v29/processed/forks_calibration_v29.json": "c7d20318c81f51b1cffcebe4f4705510e26038d5f4bec7c4229fe83a034eff83",
+    "results/v29/processed/forks_calibration_v29.parquet": "839a68ef165c45034be3a43dbd6a697a6a0b96070108f1ea5b98e57a5e58e662",
+    "results/v29/processed/geometry_calibration_v29.parquet": "3c8f23b38698d8512cbf6d76d0409e0d7eafe8c2ad647fe087fac26d24067b7c",
+    "results/v29/processed/transfer_calibration_v29.parquet": "bf5c0c5364b3e176b703c45d6021d9c775fe19b305be11ef87596f30106bf304",
+    "results/v29/processed/transfer_vectors_calibration_v29.npz": "f46bab20bbe6cf56c27d33484757c7f80f7d08cd3bca999e8e2fbf758269df24",
+    "src/jclosure/experiments/forks_v29.py": "f16da91772dc2278d6642785ebd0cc66adfff961e0f96fc8b5cdf84399c3fa30"
+  },
+  "protocol_version": "natural_write_content_v29_forks_calibration",
+  "role": "calibration",
+  "role_response_hashes": {
+    "audit": "23468c466f4670048a627b35a87e3d6987f523ebaf254715ff2b09725d5ba208",
+    "forks": "839a68ef165c45034be3a43dbd6a697a6a0b96070108f1ea5b98e57a5e58e662",
+    "geometry": "3c8f23b38698d8512cbf6d76d0409e0d7eafe8c2ad647fe087fac26d24067b7c",
+    "transfer": "bf5c0c5364b3e176b703c45d6021d9c775fe19b305be11ef87596f30106bf304"
+  },
+  "schema_version": 38,
+  "states": 25,
+  "transfer_rows": 350,
+  "vectors_sha256": "f46bab20bbe6cf56c27d33484757c7f80f7d08cd3bca999e8e2fbf758269df24"
+}

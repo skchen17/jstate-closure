@@ -1,0 +1,5 @@
+# Same Incoming State Forks — V29
+
+Disjoint frozen panels: 25 calibration, 75 development, 50 validation, 50 independent final (10 per family). V28 selected state IDs were excluded. For each state, the same exact prefix cache was replayed with two different current tokens chosen exclusively from the pre-write top-16 next-token distribution; the shared primary next token came from the frozen V18 teacher continuation. Prefix, token, incoming/outgoing state, and probe hashes are in `design_v29.json` and per-role fork Parquet records. This is a top-plausible/distinct-surface rule, **not** a verified semantic-pair or same-class control.
+
+All 25 calibration same-token replays were exact. The formal all-layer analysis found distinct outgoing states and median shared-next-token future Q `90.529` development and `92.302` validation; the independent final had median Q `92.745`. The sole current-token difference is causal for the naturally committed cache; future comparison holds the next token fixed.

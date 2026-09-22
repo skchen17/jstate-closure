@@ -1,0 +1,26 @@
+protocol_version: token_state_transaction_v28
+parent_commit: 83235995faa5aefb0f9fd9dab6f865a3506df2e1
+seed: 280028
+name: Token-Level Persistent State Read/Write Transaction
+roles: {calibration_per_family: 5, development_per_family: 15, validation_per_family: 10, independent_final_per_family: 10}
+boundary: after_natural_current_token_forward_before_next_token
+primary_mechanism: REC+Conv_exact_old_state_restore
+channels: [REC, Conv, REC+Conv, KV_last_slot_previous_copy, REC+Conv+KV_last_slot_previous_copy]
+scaling_alphas: [0.0, 0.25, 0.5, 0.75, 1.0]
+transplant_pair: same_prompt_controlled_incoming_perturbation
+incoming_action: d000
+incoming_action_scale: 0.5
+primary_targets: [j, logits, semantic, workspace, late_residual]
+current_individual_max: 0.05
+current_aggregate_max: 0.05
+future_potency_threshold: 0.25
+future_median_min: 0.25
+future_fraction_min: 0.25
+bootstrap_lower_min: 0.15
+bootstrap_samples: 1000
+families_required: 4
+transplant_cosine_min: 0.8
+transplant_magnitude_min: 0.5
+writeback_cosine_min: 0.98
+final_rule: single_development_selected_mechanism_requires_dev_and_validation_primary_gate
+authorization: {H2_REMAINS: true, H3_AUTHORIZED: false, DYNAMIC_STATE_SEARCH_AUTHORIZED: false, AUTONOMOUS_CONTROLLER_AUTHORIZED: false}

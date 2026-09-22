@@ -1,0 +1,36 @@
+{
+  "base_freeze_digest": "b4a0b8cc34e3caf98bacb885157c24f23db88cf54c497c8cc5f0da1629d4363f",
+  "created_utc": "2026-09-22T01:41:01.371505+00:00",
+  "dose_alphas": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "dose_states_per_family": 2,
+  "finalist_rule": "fixed REC+Conv, require development+validation primary gates; final sealed otherwise",
+  "freeze_digest": "bd0e07fb16c91344e330fc548c8572e5ad972f4c27023ef160020230c983103d",
+  "future_responses_observed": 0,
+  "horizon_states_per_family": 2,
+  "independent_final_opened": false,
+  "input_sha256": {
+    "artifacts/token_state_transaction_v28_design.freeze.json": "e3bfde30bac52de786429b4d965d7701c59387dc29c6504921cdae9cea5242bc",
+    "results/v28/processed/execution_plan_v28.json": "a30917fb94db807880caa7f421dfe7a31c94a66e098de0cbfb339383bf17bd1f",
+    "src/jclosure/experiments/transaction_v28.py": "2d49f07cf0da7c380b61528b787163051fd55fbac03aa7df8cfd2f3823cd8e80"
+  },
+  "layer_scan_states_per_family": 1,
+  "main_conditions": [
+    "REC",
+    "Conv",
+    "REC+Conv",
+    "KV_last_slot_previous_copy",
+    "REC+Conv+KV_last_slot_previous_copy"
+  ],
+  "primary_mechanism": "REC+Conv",
+  "protocol_version": "token_state_transaction_v28_execution_plan",
+  "random_write_control": "not architecture-valid at fixed native update; report unavailable",
+  "schema_version": 37,
+  "token_choice": "frozen V18 first teacher token",
+  "transplant_states_per_family": 2
+}

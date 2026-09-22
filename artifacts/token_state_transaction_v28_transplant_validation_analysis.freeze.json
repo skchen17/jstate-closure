@@ -1,0 +1,214 @@
+{
+  "V28_C_DEVVAL": true,
+  "base_freeze_digest": "b4a0b8cc34e3caf98bacb885157c24f23db88cf54c497c8cc5f0da1629d4363f",
+  "created_utc": "2026-09-22T01:52:17.795482+00:00",
+  "freeze_digest": "e56c2f951c6a3d1e0d1af31bac474836770679989250c2c076681f6ef8895a86",
+  "historical_final_opened": false,
+  "input_sha256": {
+    "artifacts/token_state_transaction_v28_transplant_validation.freeze.json": "2559a343fc25416e5818f8cb45c11cc08f99feaa1b2e015016a196a7d064ed8a",
+    "results/v28/processed/natural_write_transplant_validation_v28.parquet": "4ddb363c96016637259a178f93661ed9efe8fdfdd140b9fd733d97f08bdad67f",
+    "results/v28/processed/transplant_validation_analysis_v28.json": "c2de679c49dd199bae39afcb3faebcd1866c440bb5c3bdc2e72011bb46425d23",
+    "src/jclosure/experiments/analyze_transplant_v28.py": "3c4a94eb1b6608fcab156ccd83681ed257e8ffe91728ec73e43209ce688ceaae"
+  },
+  "primary_transplant_condition": "REC+Conv+KV_last_slot_previous_copy",
+  "primary_validation_pass": true,
+  "profiles": {
+    "Conv": {
+      "directions": {
+        "A_from_B": {
+          "all_writeback": true,
+          "family_fractions": {
+            "boolean_logic": 0.0,
+            "modular_arithmetic": 0.0,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.5
+          },
+          "median_cosine": 0.36681237252326443,
+          "median_magnitude_ratio": 1.0694024177703774,
+          "median_relative_l2": 1.0612717350557812,
+          "pass": false,
+          "replicated_families": 1,
+          "rows": 10,
+          "success_fraction": 0.1
+        },
+        "B_from_A": {
+          "all_writeback": true,
+          "family_fractions": {
+            "boolean_logic": 0.0,
+            "modular_arithmetic": 0.0,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.5
+          },
+          "median_cosine": 0.529550031862108,
+          "median_magnitude_ratio": 1.007343299870643,
+          "median_relative_l2": 0.9861917521440938,
+          "pass": false,
+          "replicated_families": 1,
+          "rows": 10,
+          "success_fraction": 0.1
+        }
+      },
+      "reciprocal_pass": false
+    },
+    "KV_last_slot_previous_copy": {
+      "directions": {
+        "A_from_B": {
+          "all_writeback": true,
+          "family_fractions": {
+            "boolean_logic": 0.0,
+            "modular_arithmetic": 0.0,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.32533440341511344,
+          "median_magnitude_ratio": 1.0494400682803773,
+          "median_relative_l2": 1.1551169764072042,
+          "pass": false,
+          "replicated_families": 0,
+          "rows": 10,
+          "success_fraction": 0.0
+        },
+        "B_from_A": {
+          "all_writeback": true,
+          "family_fractions": {
+            "boolean_logic": 0.5,
+            "modular_arithmetic": 0.0,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.42069913197488173,
+          "median_magnitude_ratio": 0.9715033830155655,
+          "median_relative_l2": 1.0160601379114493,
+          "pass": false,
+          "replicated_families": 1,
+          "rows": 10,
+          "success_fraction": 0.1
+        }
+      },
+      "reciprocal_pass": false
+    },
+    "REC": {
+      "directions": {
+        "A_from_B": {
+          "all_writeback": true,
+          "family_fractions": {
+            "boolean_logic": 0.5,
+            "modular_arithmetic": 0.0,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.47571799935227743,
+          "median_magnitude_ratio": 1.0398994092459293,
+          "median_relative_l2": 1.0041712815333086,
+          "pass": false,
+          "replicated_families": 1,
+          "rows": 10,
+          "success_fraction": 0.1
+        },
+        "B_from_A": {
+          "all_writeback": true,
+          "family_fractions": {
+            "boolean_logic": 0.0,
+            "modular_arithmetic": 0.0,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.5
+          },
+          "median_cosine": 0.41473995945302033,
+          "median_magnitude_ratio": 1.0852527733501907,
+          "median_relative_l2": 1.1345037466270569,
+          "pass": false,
+          "replicated_families": 1,
+          "rows": 10,
+          "success_fraction": 0.1
+        }
+      },
+      "reciprocal_pass": false
+    },
+    "REC+Conv": {
+      "directions": {
+        "A_from_B": {
+          "all_writeback": true,
+          "family_fractions": {
+            "boolean_logic": 0.0,
+            "modular_arithmetic": 0.0,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.500508479246614,
+          "median_magnitude_ratio": 1.0160601379114493,
+          "median_relative_l2": 0.9715033830155655,
+          "pass": false,
+          "replicated_families": 0,
+          "rows": 10,
+          "success_fraction": 0.0
+        },
+        "B_from_A": {
+          "all_writeback": true,
+          "family_fractions": {
+            "boolean_logic": 0.0,
+            "modular_arithmetic": 0.0,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.5663829601981567,
+          "median_magnitude_ratio": 1.1551169764072042,
+          "median_relative_l2": 1.0494400682803773,
+          "pass": false,
+          "replicated_families": 0,
+          "rows": 10,
+          "success_fraction": 0.0
+        }
+      },
+      "reciprocal_pass": false
+    },
+    "REC+Conv+KV_last_slot_previous_copy": {
+      "directions": {
+        "A_from_B": {
+          "all_writeback": true,
+          "family_fractions": {
+            "boolean_logic": 1.0,
+            "modular_arithmetic": 1.0,
+            "short_graph_traversal": 1.0,
+            "simple_state_transition": 1.0,
+            "variable_binding": 1.0
+          },
+          "median_cosine": 0.9999999991653283,
+          "median_magnitude_ratio": 1.0,
+          "median_relative_l2": 0.0,
+          "pass": true,
+          "replicated_families": 5,
+          "rows": 10,
+          "success_fraction": 1.0
+        },
+        "B_from_A": {
+          "all_writeback": true,
+          "family_fractions": {
+            "boolean_logic": 1.0,
+            "modular_arithmetic": 1.0,
+            "short_graph_traversal": 1.0,
+            "simple_state_transition": 1.0,
+            "variable_binding": 1.0
+          },
+          "median_cosine": 0.9999999991653283,
+          "median_magnitude_ratio": 1.0,
+          "median_relative_l2": 0.0,
+          "pass": true,
+          "replicated_families": 5,
+          "rows": 10,
+          "success_fraction": 1.0
+        }
+      },
+      "reciprocal_pass": true
+    }
+  },
+  "protocol_version": "token_state_transaction_v28_transplant_validation_analysis",
+  "schema_version": 37
+}

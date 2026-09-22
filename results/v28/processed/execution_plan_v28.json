@@ -1,0 +1,26 @@
+{
+  "dose_alphas": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "dose_states_per_family": 2,
+  "finalist_rule": "fixed REC+Conv, require development+validation primary gates; final sealed otherwise",
+  "future_responses_observed": 0,
+  "horizon_states_per_family": 2,
+  "independent_final_opened": false,
+  "layer_scan_states_per_family": 1,
+  "main_conditions": [
+    "REC",
+    "Conv",
+    "REC+Conv",
+    "KV_last_slot_previous_copy",
+    "REC+Conv+KV_last_slot_previous_copy"
+  ],
+  "primary_mechanism": "REC+Conv",
+  "random_write_control": "not architecture-valid at fixed native update; report unavailable",
+  "token_choice": "frozen V18 first teacher token",
+  "transplant_states_per_family": 2
+}

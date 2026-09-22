@@ -1,0 +1,102 @@
+{
+  "chosen_mechanism": "REC+Conv",
+  "dose_medians": {
+    "0.0": 31.46223988548411,
+    "0.25": 23.22054289806833,
+    "0.5": 14.478241885902483,
+    "0.75": 7.063916191414922,
+    "1.0": 0.0
+  },
+  "dose_monotonic_median": true,
+  "gates": {
+    "Conv": {
+      "bootstrap_2_5_lower": 1.0,
+      "family_fractions": {
+        "boolean_logic": 1.0,
+        "modular_arithmetic": 1.0,
+        "short_graph_traversal": 1.0,
+        "simple_state_transition": 1.0,
+        "variable_binding": 1.0
+      },
+      "max_current_q": 0.0,
+      "median_h1_q": 37.14643831178997,
+      "pass": true,
+      "potent_fraction": 1.0,
+      "replicated_families": 5,
+      "rows": 74,
+      "valid_rows": 74
+    },
+    "KV_last_slot_previous_copy": {
+      "bootstrap_2_5_lower": 1.0,
+      "family_fractions": {
+        "boolean_logic": 1.0,
+        "modular_arithmetic": 1.0,
+        "short_graph_traversal": 1.0,
+        "simple_state_transition": 1.0,
+        "variable_binding": 1.0
+      },
+      "max_current_q": 0.0,
+      "median_h1_q": 2.3556642582317338,
+      "pass": true,
+      "potent_fraction": 1.0,
+      "replicated_families": 5,
+      "rows": 74,
+      "valid_rows": 74
+    },
+    "REC": {
+      "bootstrap_2_5_lower": 1.0,
+      "family_fractions": {
+        "boolean_logic": 1.0,
+        "modular_arithmetic": 1.0,
+        "short_graph_traversal": 1.0,
+        "simple_state_transition": 1.0,
+        "variable_binding": 1.0
+      },
+      "max_current_q": 0.0,
+      "median_h1_q": 13.689900024549356,
+      "pass": true,
+      "potent_fraction": 1.0,
+      "replicated_families": 5,
+      "rows": 74,
+      "valid_rows": 74
+    },
+    "REC+Conv": {
+      "bootstrap_2_5_lower": 1.0,
+      "family_fractions": {
+        "boolean_logic": 1.0,
+        "modular_arithmetic": 1.0,
+        "short_graph_traversal": 1.0,
+        "simple_state_transition": 1.0,
+        "variable_binding": 1.0
+      },
+      "max_current_q": 0.0,
+      "median_h1_q": 34.55178914486682,
+      "pass": true,
+      "potent_fraction": 1.0,
+      "replicated_families": 5,
+      "rows": 74,
+      "valid_rows": 74
+    },
+    "REC+Conv+KV_last_slot_previous_copy": {
+      "bootstrap_2_5_lower": 1.0,
+      "family_fractions": {
+        "boolean_logic": 1.0,
+        "modular_arithmetic": 1.0,
+        "short_graph_traversal": 1.0,
+        "simple_state_transition": 1.0,
+        "variable_binding": 1.0
+      },
+      "max_current_q": 0.0,
+      "median_h1_q": 35.35916152741899,
+      "pass": true,
+      "potent_fraction": 1.0,
+      "replicated_families": 5,
+      "rows": 74,
+      "valid_rows": 74
+    }
+  },
+  "historical_final_opened": false,
+  "mechanism_predeclared": true,
+  "primary_development_pass": true,
+  "validation_responses_observed_before_freeze": 0
+}

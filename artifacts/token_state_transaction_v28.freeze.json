@@ -1,0 +1,77 @@
+{
+  "V1_V27_records_mutated": false,
+  "config": {
+    "authorization": {
+      "AUTONOMOUS_CONTROLLER_AUTHORIZED": false,
+      "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+      "H2_REMAINS": true,
+      "H3_AUTHORIZED": false
+    },
+    "bootstrap_lower_min": 0.15,
+    "bootstrap_samples": 1000,
+    "boundary": "after_natural_current_token_forward_before_next_token",
+    "channels": [
+      "REC",
+      "Conv",
+      "REC+Conv",
+      "KV_last_slot_previous_copy",
+      "REC+Conv+KV_last_slot_previous_copy"
+    ],
+    "current_aggregate_max": 0.05,
+    "current_individual_max": 0.05,
+    "families_required": 4,
+    "final_rule": "single_development_selected_mechanism_requires_dev_and_validation_primary_gate",
+    "future_fraction_min": 0.25,
+    "future_median_min": 0.25,
+    "future_potency_threshold": 0.25,
+    "incoming_action": "d000",
+    "incoming_action_scale": 0.5,
+    "name": "Token-Level Persistent State Read/Write Transaction",
+    "parent_commit": "83235995faa5aefb0f9fd9dab6f865a3506df2e1",
+    "primary_mechanism": "REC+Conv_exact_old_state_restore",
+    "primary_targets": [
+      "j",
+      "logits",
+      "semantic",
+      "workspace",
+      "late_residual"
+    ],
+    "protocol_version": "token_state_transaction_v28",
+    "roles": {
+      "calibration_per_family": 5,
+      "development_per_family": 15,
+      "independent_final_per_family": 10,
+      "validation_per_family": 10
+    },
+    "scaling_alphas": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "seed": 280028,
+    "transplant_cosine_min": 0.8,
+    "transplant_magnitude_min": 0.5,
+    "transplant_pair": "same_prompt_controlled_incoming_perturbation",
+    "writeback_cosine_min": 0.98
+  },
+  "config_sha256": "bc34d614cae52d3fddf747a6c846f4a7d17d76f08167bbc26e8819abe732f4d2",
+  "created_utc": "2026-09-22T01:38:51.181204+00:00",
+  "freeze_digest": "b4a0b8cc34e3caf98bacb885157c24f23db88cf54c497c8cc5f0da1629d4363f",
+  "frozen_input_sha256": {
+    "artifacts/pre_readout_reentry_v27_final.freeze.json": "4e14fd7fbc5edc192235886f2ce79cf3e8d4a55919f7d429e91f44901f51c65b",
+    "reports/FINAL_REPORT.md": "13df5336309cc6c14c581f2b08d2ac7fd8a94cecec69a96291544c77cb8e723a",
+    "reports/V27_COMPLETE_REPORT.md": "9c3ac4f56a44525ffdbf435252aaad2a61a3b2163e1d27dbcdfd7b971c3564db",
+    "results/v24/processed/target_projections_v24.npz": "99e08cd12c9b3751e251c36c6352a16fc6c98951021cbb1abca7b7b2b50d26f9",
+    "results/v25/processed/readout_compression_v25.json": "304cfb97f50bf923c205bab8601f91bbd519abd96bbd151d23c8d7868258e03b",
+    "results/v26/processed/v26_devval_analysis.json": "ee7aebc340c41fd1f91ddb9ef74dfaab56ca0da3e44e2dbeb1e29a7b314b3508",
+    "results/v27/processed/pre_vs_post_timing_v27.parquet": "511032c73d14f9f691e1b4783b915e1f61f579da4877365bdc48c270a91279df",
+    "results/v27/processed/v27_adjudication.json": "3c0c7fe85b37b6994a2c85be03febaeee0b0cf1c63a8860b5bd9dcd1376a722a"
+  },
+  "historical_final_opened": false,
+  "parent_commit": "83235995faa5aefb0f9fd9dab6f865a3506df2e1",
+  "protocol_sha256": "9a78aacafe559dc606278bcbeb7f07779990980aae4941556325963ec62eba35",
+  "protocol_version": "token_state_transaction_v28",
+  "schema_version": 37
+}

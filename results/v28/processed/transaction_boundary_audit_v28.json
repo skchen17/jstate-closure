@@ -1,0 +1,33 @@
+{
+  "KV_length_preserving_last_slot_rewrite_valid": true,
+  "KV_old_state_restore_valid": false,
+  "REC_Conv_old_state_restore_valid": true,
+  "all_fields_future_consumed": true,
+  "all_same_rewrite_exact": true,
+  "attention_layers": [
+    27,
+    31
+  ],
+  "current_readout_fixed_before_interception": true,
+  "field_counts": {
+    "Conv": 150,
+    "KV": 100,
+    "REC": 150
+  },
+  "layers": 8,
+  "max_replay_current_q": 0.0,
+  "max_same_rewrite_h1_q": 0.0,
+  "min_read_current_q": 0.5069169997446583,
+  "model_source": "transformers/models/qwen3_5/modeling_qwen3_5.py Qwen3_5GatedDeltaNet.forward, Qwen3_5Attention.forward, Qwen3_5DecoderLayer.forward",
+  "outgoing_fields_naturally_computed": true,
+  "recurrent_layers": [
+    24,
+    25,
+    26,
+    28,
+    29,
+    30
+  ],
+  "states": 25,
+  "token_identity_frozen": true
+}

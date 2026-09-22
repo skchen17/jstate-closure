@@ -1,0 +1,29 @@
+{
+  "all_writeback_pass": true,
+  "base_freeze_digest": "b4a0b8cc34e3caf98bacb885157c24f23db88cf54c497c8cc5f0da1629d4363f",
+  "created_utc": "2026-09-22T01:47:51.452615+00:00",
+  "dose_rows": 50,
+  "freeze_digest": "5e7802bb37f47537dbbe338352ffed5a0a896563402f08283ed726805e570f71",
+  "historical_final_opened": false,
+  "independent_final_opened": false,
+  "input_sha256": {
+    "artifacts/token_state_transaction_v28_development_analysis.freeze.json": "2bc0ce82367e2caa5266dd1d14484eb8ea595462f0ebc0b94373f09cfdfa82f6",
+    "results/v28/processed/clean_replay_validation_v28.parquet": "beb85bfcd8e3ad0ac77db4c9ae889d29a50ddef84194f58d49ac40123c478afe",
+    "results/v28/processed/read_write_vectors_validation_v28.npz": "49991a10ce42b5f118005dddb24f688fa43d2b3a01c6fc3443e86e6740089082",
+    "results/v28/processed/write_dose_validation_v28.parquet": "eff350d698d556c89b75db52ff21fc3cf3e1b83fc442dbe2386ed30ae7893f46",
+    "results/v28/processed/write_interception_validation_v28.json": "53eb66867b0c327f05ff77b441873eef035d6b78cac3720ffc9038fc283e9405",
+    "results/v28/processed/write_interception_validation_v28.parquet": "eacd2d2071f585733143d6336be90d9d7d8b1536e4b5b5a5354883759ef085b1",
+    "src/jclosure/experiments/interventions_v28.py": "ca10fee1cac118bf9aab1530146d572d382694a72c6731adf5c116a79c49bede"
+  },
+  "max_clean_replay_h1_q": 0.0,
+  "max_write_current_q": 0.0,
+  "primary_REC_Conv_median_h1_q": 36.818478175154326,
+  "protocol_version": "token_state_transaction_v28_validation_interception",
+  "read_REC_Conv_median_current_q": 0.8777404592789295,
+  "response_sha256": "eacd2d2071f585733143d6336be90d9d7d8b1536e4b5b5a5354883759ef085b1",
+  "role": "validation",
+  "rows": 250,
+  "schema_version": 37,
+  "states": 50,
+  "vector_sha256": "49991a10ce42b5f118005dddb24f688fa43d2b3a01c6fc3443e86e6740089082"
+}

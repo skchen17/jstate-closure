@@ -1,0 +1,24 @@
+{
+  "all_writeback_pass": true,
+  "base_freeze_digest": "b4a0b8cc34e3caf98bacb885157c24f23db88cf54c497c8cc5f0da1629d4363f",
+  "created_utc": "2026-09-22T01:54:53.670901+00:00",
+  "freeze_digest": "4d176cb3ea7a4db55b6b865f19d73b6826349ddba5eb64c2b873d3ed0645dd5e",
+  "input_sha256": {
+    "artifacts/token_state_transaction_v28_validation_analysis.freeze.json": "c9095bd26c5287cdba6f9df83d4ebaafef942acae4478b56ab525db32e963777",
+    "results/v28/processed/state_commit_horizons_validation_v28.json": "8329ac7fbeca4795222e419a5a71218826711fd5315a1eb310e2a7fbc93dfb62",
+    "results/v28/processed/state_commit_horizons_validation_v28.parquet": "048aff3eefa3c9dd2644711d07586fd5d32fdc23415169da5fc2cf2df84f3108",
+    "src/jclosure/experiments/secondary_v28.py": "faeb54ee7496bfe3bda9a43015fd23f94f0fc11ed18f440f06623f2d314e0989"
+  },
+  "median_q_by_horizon": {
+    "1": 36.671151132177556,
+    "2": 8.853799276812214,
+    "4": 3.6705330169412127
+  },
+  "protocol_version": "token_state_transaction_v28_horizons_validation",
+  "response_sha256": "048aff3eefa3c9dd2644711d07586fd5d32fdc23415169da5fc2cf2df84f3108",
+  "role": "validation",
+  "rows": 30,
+  "same_clean_greedy_continuation": true,
+  "schema_version": 37,
+  "states": 10
+}

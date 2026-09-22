@@ -1,0 +1,21 @@
+{
+  "base_freeze_digest": "b4a0b8cc34e3caf98bacb885157c24f23db88cf54c497c8cc5f0da1629d4363f",
+  "created_utc": "2026-09-22T01:43:53.703321+00:00",
+  "formal_development_states": 74,
+  "freeze_digest": "feadd8ea84fbc5baaabc89ed72945f048509b7d37a9c8b1a615dfb89404465b7",
+  "independent_final_opened": false,
+  "input_sha256": {
+    "artifacts/token_state_transaction_v28_boundary_audit.freeze.json": "d1971334fded0166ad4e1395c6c27525577a94177dff703085f2663aeb2f9c88",
+    "results/v28/processed/endpoint_amendment_v28.json": "b6e4d190dcc1fbb8cf59c137adb0fee3732549cac5d6c8cb4f0204abb0731e45",
+    "src/jclosure/experiments/interventions_v28.py": "ca10fee1cac118bf9aab1530146d572d382694a72c6731adf5c116a79c49bede"
+  },
+  "pilot_excluded_base_trial_id": "v13-train-4e521fb8e01b9354357f",
+  "pilot_future_response_observed_before_amendment": true,
+  "primary_readout_j_layer": 30,
+  "protocol_version": "token_state_transaction_v28_endpoint_amendment",
+  "reason": "pilot showed next-token layer-23 state proxy is upstream of REC/Conv writes; V26 h1 readout-J uses layer 30",
+  "schema_version": 37,
+  "state_proxy_j_layer": 23,
+  "thresholds_unchanged": true,
+  "validation_responses_observed": false
+}

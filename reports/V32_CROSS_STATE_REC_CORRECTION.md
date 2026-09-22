@@ -1,0 +1,3 @@
+# Cross-State REC Correction — V32
+
+Same-family and cross-family wrong-state source IDs are in frozen `context_mapping_*_v32.json`. Development matched/same-family/cross-family median relative donor errors are 0.161/0.351/0.547; validation values are 0.202/0.367/0.522. This is target-probe cross-state correction fidelity. Direct effect-space cosine between states is **not comparable** because the six frozen probe IDs differ by state; it is not reported as though measured. Different incoming states can place REC off the natural target manifold. Therefore this is a bounded transfer-failure observation, not proof that REC stores a specific missing content or that a gate is state-specific.

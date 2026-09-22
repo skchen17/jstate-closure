@@ -1,0 +1,36 @@
+{
+  "conditions": [
+    "MATCHED_REC",
+    "RECIPIENT_REC",
+    "WRONG_TOKEN_REC",
+    "SAME_FAMILY_WRONG_STATE_REC",
+    "CROSS_FAMILY_WRONG_STATE_REC",
+    "SHUFFLED_REC",
+    "SIGN_FLIPPED_REC",
+    "RANDOM_SAME_NORM_REC"
+  ],
+  "context_mapping_frozen_before_context_responses": true,
+  "independent_final_opened": false,
+  "matched_better_fraction": {
+    "CROSS_FAMILY_WRONG_STATE_REC": 1.0,
+    "RANDOM_SAME_NORM_REC": 1.0,
+    "RECIPIENT_REC": 1.0,
+    "SAME_FAMILY_WRONG_STATE_REC": 1.0,
+    "SHUFFLED_REC": 1.0,
+    "SIGN_FLIPPED_REC": 1.0,
+    "WRONG_TOKEN_REC": 1.0
+  },
+  "median_relative_l2": {
+    "CROSS_FAMILY_WRONG_STATE_REC": 0.5471671461938753,
+    "MATCHED_REC": 0.16084494368046953,
+    "RANDOM_SAME_NORM_REC": 1.2924408734284247,
+    "RECIPIENT_REC": 0.3211146103593304,
+    "SAME_FAMILY_WRONG_STATE_REC": 0.35129055430361944,
+    "SHUFFLED_REC": 2.4191653905903547,
+    "SIGN_FLIPPED_REC": 0.521999532216922,
+    "WRONG_TOKEN_REC": 0.3178553897803129
+  },
+  "response_sha256": "a80f8974b96656934e1bcea8d9b7d9ca1002ae0b310198f96685f3212eb5ff21",
+  "role": "development",
+  "states": 10
+}

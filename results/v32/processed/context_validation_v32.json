@@ -1,0 +1,36 @@
+{
+  "conditions": [
+    "MATCHED_REC",
+    "RECIPIENT_REC",
+    "WRONG_TOKEN_REC",
+    "SAME_FAMILY_WRONG_STATE_REC",
+    "CROSS_FAMILY_WRONG_STATE_REC",
+    "SHUFFLED_REC",
+    "SIGN_FLIPPED_REC",
+    "RANDOM_SAME_NORM_REC"
+  ],
+  "context_mapping_frozen_before_context_responses": true,
+  "independent_final_opened": false,
+  "matched_better_fraction": {
+    "CROSS_FAMILY_WRONG_STATE_REC": 1.0,
+    "RANDOM_SAME_NORM_REC": 1.0,
+    "RECIPIENT_REC": 1.0,
+    "SAME_FAMILY_WRONG_STATE_REC": 1.0,
+    "SHUFFLED_REC": 1.0,
+    "SIGN_FLIPPED_REC": 1.0,
+    "WRONG_TOKEN_REC": 1.0
+  },
+  "median_relative_l2": {
+    "CROSS_FAMILY_WRONG_STATE_REC": 0.5217479014205075,
+    "MATCHED_REC": 0.20212546860487274,
+    "RANDOM_SAME_NORM_REC": 1.4875052042755428,
+    "RECIPIENT_REC": 0.28652308067728327,
+    "SAME_FAMILY_WRONG_STATE_REC": 0.36697161832793745,
+    "SHUFFLED_REC": 2.328775889519926,
+    "SIGN_FLIPPED_REC": 0.4459806882206754,
+    "WRONG_TOKEN_REC": 0.3062184186551148
+  },
+  "response_sha256": "f743a9c5c65135d161ed3547ecb9835554957f523e5df34891553e0bba08ffea",
+  "role": "validation",
+  "states": 10
+}

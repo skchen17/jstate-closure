@@ -1,0 +1,12 @@
+{
+  "correct_total_across_three_conditions": 96,
+  "correct_touched_fields_by_condition": {
+    "Y01_Conv": 24,
+    "Y10_REC": 24,
+    "Y11_REC_Conv": 48
+  },
+  "outcome_vectors_or_writeback_hashes_changed": false,
+  "reason": "The original metadata expression 24*(2+2+1) counted 120 rather than 24+24+48=96; per-condition exact tensor equality checks were executed separately and are unaffected.",
+  "recorded_value": 120,
+  "scope": "factorial_audit_*_v32.parquet:field_count"
+}

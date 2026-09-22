@@ -1,0 +1,48 @@
+{
+  "components": [
+    "gate_a",
+    "gate_b",
+    "qkv_projection",
+    "normalized_recurrent_read",
+    "post_residual_mlp_normalized_input"
+  ],
+  "diagnostic_only": true,
+  "medians": {
+    "gate_a": {
+      "remove_direction_cosine": -0.011039983085035895,
+      "removed_benefit_fraction": -0.0009291359714578111,
+      "restore_direction_cosine": 0.03326830090420278,
+      "restored_benefit_fraction": 0.0008397095690864466
+    },
+    "gate_b": {
+      "remove_direction_cosine": -0.030619908896449152,
+      "removed_benefit_fraction": -0.0013726991769739347,
+      "restore_direction_cosine": 0.009880977506143519,
+      "restored_benefit_fraction": -0.0011626465815691852
+    },
+    "normalized_recurrent_read": {
+      "remove_direction_cosine": 0.3143510171841964,
+      "removed_benefit_fraction": 0.24867424436196978,
+      "restore_direction_cosine": 0.3281170931814923,
+      "restored_benefit_fraction": 0.1613318303156801
+    },
+    "post_residual_mlp_normalized_input": {
+      "remove_direction_cosine": 0.39794376863097725,
+      "removed_benefit_fraction": 0.15564345735203441,
+      "restore_direction_cosine": 0.40747676111964093,
+      "restored_benefit_fraction": 0.1255423336731951
+    },
+    "qkv_projection": {
+      "remove_direction_cosine": -0.018573441371369133,
+      "removed_benefit_fraction": 0.025622546130492765,
+      "restore_direction_cosine": -0.013557737493813294,
+      "restored_benefit_fraction": -0.010429929244681304
+    }
+  },
+  "response_sha256": {
+    "audit": "6b054fc9a2d4cd7a852b347da3c1cd24b0d2e377ba063a3b84f0ea3ec0edd71f",
+    "subsite": "72b88d2543fd6661299a1cf17704b66e0e7ce443b7e9f3ab84ffdfa0660e1afa"
+  },
+  "role": "development",
+  "states": 10
+}

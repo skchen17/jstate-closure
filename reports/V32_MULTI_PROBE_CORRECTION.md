@@ -1,0 +1,3 @@
+# Multi-Probe Correction — V32
+
+Every primary factorial, context comparison, 4×4 layer-map row and causal interception/reverse transplant used the concatenated six-probe normalized response containing J, selected logits, semantic log-probabilities, workspace, broad vocabulary and late residual. One-probe sublayer traces were only used for candidate nomination, never as the decisive causal endpoint. Frozen probe IDs and hashes are per state in `design_v32.json`; `factorial_*_v32.parquet` stores the hash on each row. The V32-A/B results therefore survive this frozen multi-probe signature; no generalization to arbitrary future-token distributions is claimed.

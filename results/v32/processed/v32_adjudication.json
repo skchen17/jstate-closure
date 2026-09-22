@@ -1,0 +1,254 @@
+{
+  "AUTONOMOUS_CONTROLLER_AUTHORIZED": false,
+  "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+  "H2_REMAINS": true,
+  "H3_AUTHORIZED": false,
+  "audit_metadata_amendment_sha256": "65a9596d31cdec4592dbfe387d3f3fab73063279405ba72ba7e938bceecee61e",
+  "context": {
+    "development": {
+      "condition_median_error": {
+        "CROSS_FAMILY_WRONG_STATE_REC": 0.5471671461938753,
+        "MATCHED_REC": 0.16084494368046953,
+        "RANDOM_SAME_NORM_REC": 1.2924408734284247,
+        "RECIPIENT_REC": 0.3211146103593304,
+        "SAME_FAMILY_WRONG_STATE_REC": 0.35129055430361944,
+        "SHUFFLED_REC": 2.4191653905903547,
+        "SIGN_FLIPPED_REC": 0.521999532216922,
+        "WRONG_TOKEN_REC": 0.3178553897803129
+      },
+      "families_passing": 5,
+      "family_success_fraction": {
+        "boolean_logic": 1.0,
+        "modular_arithmetic": 1.0,
+        "short_graph_traversal": 1.0,
+        "simple_state_transition": 1.0,
+        "variable_binding": 1.0
+      },
+      "matched_better_than_all_four_fraction": 1.0,
+      "pass": true,
+      "states": 10
+    },
+    "validation": {
+      "condition_median_error": {
+        "CROSS_FAMILY_WRONG_STATE_REC": 0.5217479014205075,
+        "MATCHED_REC": 0.20212546860487274,
+        "RANDOM_SAME_NORM_REC": 1.4875052042755428,
+        "RECIPIENT_REC": 0.28652308067728327,
+        "SAME_FAMILY_WRONG_STATE_REC": 0.36697161832793745,
+        "SHUFFLED_REC": 2.328775889519926,
+        "SIGN_FLIPPED_REC": 0.4459806882206754,
+        "WRONG_TOKEN_REC": 0.3062184186551148
+      },
+      "families_passing": 5,
+      "family_success_fraction": {
+        "boolean_logic": 1.0,
+        "modular_arithmetic": 1.0,
+        "short_graph_traversal": 1.0,
+        "simple_state_transition": 1.0,
+        "variable_binding": 1.0
+      },
+      "matched_better_than_all_four_fraction": 1.0,
+      "pass": true,
+      "states": 10
+    }
+  },
+  "correction_dimensionality": {
+    "effective_rank": 59.388095925130685,
+    "r90": 61,
+    "r95": 75,
+    "r99": 92
+  },
+  "cross_model_replication_authorized": true,
+  "factorial": {
+    "development": {
+      "alignment_bootstrap_lower": 0.7587883391396893,
+      "alignment_families_passing": 5,
+      "alignment_pass": true,
+      "family": {
+        "boolean_logic": {
+          "median_alignment": 0.7798813517971273,
+          "median_l2_reduction": 0.3720644872566765,
+          "positive_fraction": 1.0,
+          "rows": 20
+        },
+        "modular_arithmetic": {
+          "median_alignment": 0.8796229800136129,
+          "median_l2_reduction": 0.5201127224807389,
+          "positive_fraction": 1.0,
+          "rows": 20
+        },
+        "short_graph_traversal": {
+          "median_alignment": 0.7765578006030965,
+          "median_l2_reduction": 0.36524876297890435,
+          "positive_fraction": 1.0,
+          "rows": 20
+        },
+        "simple_state_transition": {
+          "median_alignment": 0.8241455118639338,
+          "median_l2_reduction": 0.43071345694773566,
+          "positive_fraction": 1.0,
+          "rows": 20
+        },
+        "variable_binding": {
+          "median_alignment": 0.7388922357805261,
+          "median_l2_reduction": 0.3243882733945247,
+          "positive_fraction": 1.0,
+          "rows": 20
+        }
+      },
+      "median_alignment": 0.8088989647301619,
+      "median_l2_reduction": 0.4097487187646268,
+      "positive_fraction": 1.0,
+      "reduction_bootstrap_lower": 0.3462001783048249,
+      "replication_families_passing": 5,
+      "replication_pass": true,
+      "rows": 100
+    },
+    "validation": {
+      "alignment_bootstrap_lower": 0.7234696694034912,
+      "alignment_families_passing": 5,
+      "alignment_pass": true,
+      "family": {
+        "boolean_logic": {
+          "median_alignment": 0.7588448924144415,
+          "median_l2_reduction": 0.35538946596514387,
+          "positive_fraction": 1.0,
+          "rows": 10
+        },
+        "modular_arithmetic": {
+          "median_alignment": 0.8240222433718092,
+          "median_l2_reduction": 0.4334867683207715,
+          "positive_fraction": 1.0,
+          "rows": 10
+        },
+        "short_graph_traversal": {
+          "median_alignment": 0.7517311852144146,
+          "median_l2_reduction": 0.3414268115839918,
+          "positive_fraction": 1.0,
+          "rows": 10
+        },
+        "simple_state_transition": {
+          "median_alignment": 0.8070161929859713,
+          "median_l2_reduction": 0.4092688053315756,
+          "positive_fraction": 1.0,
+          "rows": 10
+        },
+        "variable_binding": {
+          "median_alignment": 0.7702885541806621,
+          "median_l2_reduction": 0.3623257872243063,
+          "positive_fraction": 1.0,
+          "rows": 10
+        }
+      },
+      "median_alignment": 0.7786159259863273,
+      "median_l2_reduction": 0.37229308476172396,
+      "positive_fraction": 1.0,
+      "reduction_bootstrap_lower": 0.30888221103988545,
+      "replication_families_passing": 5,
+      "replication_pass": true,
+      "rows": 50
+    }
+  },
+  "formal_outcomes": {
+    "V32-A_REC_CORRECTION_REPLICATED": true,
+    "V32-B_REC_RESIDUAL_CORRECTION_CONFIRMED": true,
+    "V32-C_REC_CONTEXTUALIZES_CONV": false,
+    "V32-D_LOCALIZED_CORRECTION_SITE": false,
+    "V32-E_REC_GATE_MEDIATES_CONV_CORRECTION": false,
+    "V32-F_REC_QKV_OR_UPDATE_MEDIATION": false,
+    "V32-G_RESIDUAL_INTEGRATION_MEDIATION": false,
+    "V32-H_LAYER_PAIRED_REC_CONV_ROUTING": false,
+    "V32-I_DISTRIBUTED_REC_CONV_CORRECTION": false,
+    "V32-J_REC_CORRECTION_NOT_GENERAL": false
+  },
+  "independent_final_opened": false,
+  "limits": [
+    "Only one development-nominated recurrent-output site was formally tested; failure does not prove no other local site exists.",
+    "Gate/qkv/normalized-read and residual-MLP probes are diagnostic because component candidates were specified after the frozen primary plan.",
+    "Context matching list was frozen after factorial data but before context-specific responses; contextual claim has a narrower preregistration status.",
+    "Global rotation falsification is restricted to a rank-32 train-only subspace with identity outside it.",
+    "Factorial audit field_count metadata was corrected by append-only amendment; exact equality checks and outcome vectors were not changed."
+  ],
+  "localization": {
+    "development": {
+      "families_passing": 0,
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_remove_cosine": 0.3143510171841964,
+      "median_removed_fraction": 0.24867424436196978,
+      "median_restore_cosine": 0.3281170931814923,
+      "median_restored_fraction": 0.1613318303156801,
+      "pass": false,
+      "rows": 10,
+      "success_rows": 0
+    },
+    "validation": {
+      "families_passing": 0,
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_remove_cosine": 0.2838279642522473,
+      "median_removed_fraction": 0.18763716008825784,
+      "median_restore_cosine": 0.2965043869427463,
+      "median_restored_fraction": 0.08344694001744919,
+      "pass": false,
+      "rows": 10,
+      "success_rows": 0
+    }
+  },
+  "protocol_version": "rec_conv_mechanism_v32",
+  "rotation": {
+    "fit_role": "development_only",
+    "fraction_true_joint_beats_rotation": 1.0,
+    "global_transform_only": true,
+    "identity_outside_train_subspace": true,
+    "median_rotation_relative_error": 0.2801520380834752,
+    "median_true_joint_relative_error": 0.17994963304175043,
+    "subspace_rank": 32,
+    "test_role": "validation_only"
+  },
+  "schema_version": 41,
+  "selected_site": {
+    "all_development_candidate_medians": {
+      "0": -0.013982184632208076,
+      "1": 0.016826243532927675,
+      "10": -0.004709425622409648,
+      "12": -0.0069217943482267775,
+      "13": -0.007990563127837413,
+      "14": 0.03151211869568199,
+      "16": 0.008917486475254175,
+      "17": 0.027050809799120556,
+      "18": 0.02816234494828293,
+      "2": -0.00012123604591390271,
+      "20": 0.056160018321744096,
+      "21": 0.05002402732618261,
+      "22": 0.04472950724386898,
+      "24": 0.029213626173718178,
+      "25": 0.04511327980580185,
+      "26": 0.06573544320469704,
+      "28": 0.15464579113404558,
+      "29": 0.11634665335922914,
+      "30": 0.22567521874196103,
+      "4": -0.015444508192764057,
+      "5": 0.008849155701926587,
+      "6": 0.0011065132709690783,
+      "8": -0.0024740095079889756,
+      "9": -0.017787773599913986
+    },
+    "candidate_boundary": "recurrent_output",
+    "candidate_layer": 30,
+    "development_median_final_residual_alignment": 0.22567521874196103,
+    "independent_final_not_inspected": true,
+    "selection_rule": "development-only highest median REC-conditional recurrent-output alignment to final Conv residual among 24 recurrent layers; ties choose earliest layer",
+    "validation_not_inspected": true
+  }
+}

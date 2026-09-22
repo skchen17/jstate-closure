@@ -1,0 +1,980 @@
+{
+  "depth_conditions": 43,
+  "depth_profiles": {
+    "FULL_CONV": {
+      "family_success_fraction": {
+        "boolean_logic": 0.5,
+        "modular_arithmetic": 0.25,
+        "short_graph_traversal": 0.25,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.9389855202431412,
+      "median_magnitude": 0.9779999685460097,
+      "median_relative_l2": 0.3448176041581394,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.2,
+      "valid_rows": 20
+    },
+    "HALF_00": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.6784334106122565,
+      "median_magnitude": 0.6327654655798527,
+      "median_relative_l2": 0.7386847034284422,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "HALF_01": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.6576491862831282,
+      "median_magnitude": 0.556147759039133,
+      "median_relative_l2": 0.7587030007839479,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "LEAVE_QUARTILE_OUT_00": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.7057235260677495,
+      "median_magnitude": 0.6978477212580032,
+      "median_relative_l2": 0.7099684391715884,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "LEAVE_QUARTILE_OUT_01": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.8579662564608389,
+      "median_magnitude": 0.8102694891933674,
+      "median_relative_l2": 0.5273459322021591,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "LEAVE_QUARTILE_OUT_02": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.8227148381324954,
+      "median_magnitude": 0.7648003648291994,
+      "median_relative_l2": 0.5779403538426215,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "LEAVE_QUARTILE_OUT_03": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.8614655266116438,
+      "median_magnitude": 0.8523225906953522,
+      "median_relative_l2": 0.508306040238415,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "PREFIX_00": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.49711137057365007,
+      "median_magnitude": 0.47043127172341925,
+      "median_relative_l2": 0.8747815454103656,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "PREFIX_01": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.6784334106122565,
+      "median_magnitude": 0.6327654655798527,
+      "median_relative_l2": 0.7386847034284422,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "PREFIX_02": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.8614655266116438,
+      "median_magnitude": 0.8523225906953522,
+      "median_relative_l2": 0.508306040238415,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "PREFIX_03": {
+      "family_success_fraction": {
+        "boolean_logic": 0.5,
+        "modular_arithmetic": 0.25,
+        "short_graph_traversal": 0.25,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.9389855202431412,
+      "median_magnitude": 0.9779999685460097,
+      "median_relative_l2": 0.3448176041581394,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.2,
+      "valid_rows": 20
+    },
+    "QUARTILE_00": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.49711137057365007,
+      "median_magnitude": 0.47043127172341925,
+      "median_relative_l2": 0.8747815454103656,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "QUARTILE_01": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.2913244217232445,
+      "median_magnitude": 0.2738777844291845,
+      "median_relative_l2": 0.9581645989712984,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "QUARTILE_02": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.496852384104736,
+      "median_magnitude": 0.35916925599912536,
+      "median_relative_l2": 0.8865536331151596,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "QUARTILE_03": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.48745803650854347,
+      "median_magnitude": 0.3456042010524659,
+      "median_relative_l2": 0.8845341796591275,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_00": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.24066015170903177,
+      "median_magnitude": 0.2924261886434645,
+      "median_relative_l2": 0.9730471450407043,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_01": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.16339334272029735,
+      "median_magnitude": 0.22688976567084884,
+      "median_relative_l2": 0.9898298952040049,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_02": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.060164631683845726,
+      "median_magnitude": 0.10766979302457666,
+      "median_relative_l2": 1.0013685010323805,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_03": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.11608105375962319,
+      "median_magnitude": 0.14798905934422318,
+      "median_relative_l2": 0.9945569927903247,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_04": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.11981959318369315,
+      "median_magnitude": 0.146634474483268,
+      "median_relative_l2": 0.9930664193263159,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_05": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.093703510930078,
+      "median_magnitude": 0.09625999912466887,
+      "median_relative_l2": 0.9956005259782892,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_06": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.10413428824437784,
+      "median_magnitude": 0.09343509297145583,
+      "median_relative_l2": 0.9955347531099993,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_07": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": -0.008715718014396797,
+      "median_magnitude": 0.059237580002405685,
+      "median_relative_l2": 1.002468164633996,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_08": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.02686291944094727,
+      "median_magnitude": 0.06174364680968439,
+      "median_relative_l2": 1.0001260059047659,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_09": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.012584108714410363,
+      "median_magnitude": 0.06851562110829408,
+      "median_relative_l2": 1.0013791337720106,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_10": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.12319759090885526,
+      "median_magnitude": 0.0731600317215802,
+      "median_relative_l2": 0.9935728878057459,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_11": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.13946724600539795,
+      "median_magnitude": 0.08811229519863209,
+      "median_relative_l2": 0.9912840151535882,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_12": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.1522625923056603,
+      "median_magnitude": 0.09334676492644631,
+      "median_relative_l2": 0.9900706465874948,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_13": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.24248248148273027,
+      "median_magnitude": 0.09538053465488044,
+      "median_relative_l2": 0.9811195225199955,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_14": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.2796023626169344,
+      "median_magnitude": 0.16110915855389166,
+      "median_relative_l2": 0.970484927565928,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_15": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.3241133770473352,
+      "median_magnitude": 0.08531059811039354,
+      "median_relative_l2": 0.9776799505169473,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_16": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.14213555469097788,
+      "median_magnitude": 0.061080653319753604,
+      "median_relative_l2": 0.9938015015196926,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_17": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.2057990638051126,
+      "median_magnitude": 0.05926778221187451,
+      "median_relative_l2": 0.9884875218223992,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_18": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.10614669783425973,
+      "median_magnitude": 0.051099376183527986,
+      "median_relative_l2": 0.9961821934270578,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_19": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.19354856782353314,
+      "median_magnitude": 0.07081023783181781,
+      "median_relative_l2": 0.9895764522887237,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_20": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.05524235589029667,
+      "median_magnitude": 0.06313732618693674,
+      "median_relative_l2": 0.9989690303166535,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_21": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.27043981877559087,
+      "median_magnitude": 0.11741578056908306,
+      "median_relative_l2": 0.9732135544382804,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_22": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.13274593088784103,
+      "median_magnitude": 0.08698944214846667,
+      "median_relative_l2": 0.9933313881917434,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SINGLE_23": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.4188783351792035,
+      "median_magnitude": 0.19775600765646414,
+      "median_relative_l2": 0.9323981579683442,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SUFFIX_00": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.48745803650854347,
+      "median_magnitude": 0.3456042010524659,
+      "median_relative_l2": 0.8845341796591275,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SUFFIX_01": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.6576491862831282,
+      "median_magnitude": 0.556147759039133,
+      "median_relative_l2": 0.7587030007839479,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SUFFIX_02": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.7057235260677495,
+      "median_magnitude": 0.6978477212580032,
+      "median_relative_l2": 0.7099684391715884,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.0,
+      "valid_rows": 20
+    },
+    "SUFFIX_03": {
+      "family_success_fraction": {
+        "boolean_logic": 0.5,
+        "modular_arithmetic": 0.25,
+        "short_graph_traversal": 0.25,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.9389855202431412,
+      "median_magnitude": 0.9779999685460097,
+      "median_relative_l2": 0.3448176041581394,
+      "pass": false,
+      "rows": 20,
+      "success_fraction": 0.2,
+      "valid_rows": 20
+    }
+  },
+  "independent_final_opened": false,
+  "median_interaction_ratio": 0.24372709400391235,
+  "median_rec_projection_fraction": 0.36027562630223403,
+  "median_residual_alignment_cosine": 0.5950594623946717,
+  "rec_improves_count": 20,
+  "response_sha256": {
+    "depth": "9d75172a9e26ef48011dfbd0f70572fd7252421f11f997015eb7a8a29209d1b0",
+    "factorial": "a66dfb4b0239f38234dfdab01e85efe00bfe33d09c669afba6f516146549dbde",
+    "tensor": "b0c9d4457f0e729fd48d7f0ad28864fdbfa030c1f800fb61c5d577e81a3572c3"
+  },
+  "role": "development",
+  "route_selection": {
+    "candidate_profiles": {
+      "FULL_CONV": {
+        "family_success_fraction": {
+          "boolean_logic": 0.5,
+          "modular_arithmetic": 0.25,
+          "short_graph_traversal": 0.25,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.9389855202431412,
+        "median_magnitude": 0.9779999685460097,
+        "median_relative_l2": 0.3448176041581394,
+        "pass": false,
+        "rows": 20,
+        "success_fraction": 0.2,
+        "valid_rows": 20
+      },
+      "HALF_00": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.6784334106122565,
+        "median_magnitude": 0.6327654655798527,
+        "median_relative_l2": 0.7386847034284422,
+        "pass": false,
+        "rows": 20,
+        "success_fraction": 0.0,
+        "valid_rows": 20
+      },
+      "HALF_01": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.6576491862831282,
+        "median_magnitude": 0.556147759039133,
+        "median_relative_l2": 0.7587030007839479,
+        "pass": false,
+        "rows": 20,
+        "success_fraction": 0.0,
+        "valid_rows": 20
+      },
+      "PREFIX_00": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.49711137057365007,
+        "median_magnitude": 0.47043127172341925,
+        "median_relative_l2": 0.8747815454103656,
+        "pass": false,
+        "rows": 20,
+        "success_fraction": 0.0,
+        "valid_rows": 20
+      },
+      "PREFIX_01": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.6784334106122565,
+        "median_magnitude": 0.6327654655798527,
+        "median_relative_l2": 0.7386847034284422,
+        "pass": false,
+        "rows": 20,
+        "success_fraction": 0.0,
+        "valid_rows": 20
+      },
+      "PREFIX_02": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.8614655266116438,
+        "median_magnitude": 0.8523225906953522,
+        "median_relative_l2": 0.508306040238415,
+        "pass": false,
+        "rows": 20,
+        "success_fraction": 0.0,
+        "valid_rows": 20
+      },
+      "PREFIX_03": {
+        "family_success_fraction": {
+          "boolean_logic": 0.5,
+          "modular_arithmetic": 0.25,
+          "short_graph_traversal": 0.25,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.9389855202431412,
+        "median_magnitude": 0.9779999685460097,
+        "median_relative_l2": 0.3448176041581394,
+        "pass": false,
+        "rows": 20,
+        "success_fraction": 0.2,
+        "valid_rows": 20
+      },
+      "QUARTILE_00": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.49711137057365007,
+        "median_magnitude": 0.47043127172341925,
+        "median_relative_l2": 0.8747815454103656,
+        "pass": false,
+        "rows": 20,
+        "success_fraction": 0.0,
+        "valid_rows": 20
+      },
+      "QUARTILE_01": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.2913244217232445,
+        "median_magnitude": 0.2738777844291845,
+        "median_relative_l2": 0.9581645989712984,
+        "pass": false,
+        "rows": 20,
+        "success_fraction": 0.0,
+        "valid_rows": 20
+      },
+      "QUARTILE_02": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.496852384104736,
+        "median_magnitude": 0.35916925599912536,
+        "median_relative_l2": 0.8865536331151596,
+        "pass": false,
+        "rows": 20,
+        "success_fraction": 0.0,
+        "valid_rows": 20
+      },
+      "QUARTILE_03": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.48745803650854347,
+        "median_magnitude": 0.3456042010524659,
+        "median_relative_l2": 0.8845341796591275,
+        "pass": false,
+        "rows": 20,
+        "success_fraction": 0.0,
+        "valid_rows": 20
+      },
+      "SUFFIX_00": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.48745803650854347,
+        "median_magnitude": 0.3456042010524659,
+        "median_relative_l2": 0.8845341796591275,
+        "pass": false,
+        "rows": 20,
+        "success_fraction": 0.0,
+        "valid_rows": 20
+      },
+      "SUFFIX_01": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.6576491862831282,
+        "median_magnitude": 0.556147759039133,
+        "median_relative_l2": 0.7587030007839479,
+        "pass": false,
+        "rows": 20,
+        "success_fraction": 0.0,
+        "valid_rows": 20
+      },
+      "SUFFIX_02": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.7057235260677495,
+        "median_magnitude": 0.6978477212580032,
+        "median_relative_l2": 0.7099684391715884,
+        "pass": false,
+        "rows": 20,
+        "success_fraction": 0.0,
+        "valid_rows": 20
+      },
+      "SUFFIX_03": {
+        "family_success_fraction": {
+          "boolean_logic": 0.5,
+          "modular_arithmetic": 0.25,
+          "short_graph_traversal": 0.25,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.9389855202431412,
+        "median_magnitude": 0.9779999685460097,
+        "median_relative_l2": 0.3448176041581394,
+        "pass": false,
+        "rows": 20,
+        "success_fraction": 0.2,
+        "valid_rows": 20
+      }
+    },
+    "development_selected": true,
+    "fallback_full24": true,
+    "layer_hash": "e3e5cfd2c0df818db77d9198d8fae8251fd7c15dcca213b62ce1a4bc3748725c",
+    "layers": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      20,
+      21,
+      22,
+      24,
+      25,
+      26,
+      28,
+      29,
+      30
+    ],
+    "name": "FULL_CONV"
+  },
+  "states": 10,
+  "token_pairs": 20
+}

@@ -1,0 +1,48 @@
+{
+  "CLUSTERED_PROTOTYPES": {
+    "basis_path": "/data/CSK/J-space-project/v31-write-work/basis_PROTOTYPE128_v31.f32",
+    "basis_sha256": "1ba6eb3cc9a0a0eb0332398ee0b1de2a09b636930dc60ae8ca7fb1e6aa38e907",
+    "method": "KMeans on 256-dimensional TRAIN PCA scores",
+    "n_init": 5,
+    "random_seed": 310031,
+    "rank_order": "decreasing TRAIN cluster count"
+  },
+  "PCA": {
+    "basis_path": "/data/CSK/J-space-project/v31-write-work/basis_PCA256_v31.f32",
+    "basis_sha256": "39c31ff06265fe014fd4ce9a093c799b319587b5ba28bc282cd2f413cb3f7eb1"
+  },
+  "PCA_is_geometry_baseline_not_confirmed_primitive": true,
+  "SPARSE_DICTIONARY": {
+    "alpha": 0.1,
+    "basis_path": "/data/CSK/J-space-project/v31-write-work/basis_SPARSE128_v31.f32",
+    "basis_sha256": "02dcb023e7fc90c4df5be16c6f556cd84c5f56e7009079f6eca67add24cf6b74",
+    "max_iter": 200,
+    "method": "MiniBatchDictionaryLearning",
+    "random_seed": 310031,
+    "rank_order": "decreasing TRAIN OMP four-active usage"
+  },
+  "TRAIN_rows": 1000,
+  "basis_count": 128,
+  "coordinate_npz_sha256": "a3e2b9e947e445f1a0212323e6a98531c1db17d7cad139c3da5194615c6e3734",
+  "future_response_used_in_fit": false,
+  "heldout_write_used_in_fit": false,
+  "latent_fit_span": 256,
+  "mean_path": "/data/CSK/J-space-project/v31-write-work/primitive_mean_v31.f32",
+  "mean_sha256": "9aab65df8502ab8259c3bd466557dbcaff393f1cebb7d95117930ff753ecde57",
+  "scratch_not_committed": true,
+  "tested_M_grid": [
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "tested_active_count_grid": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "write_dimension": 13369344
+}

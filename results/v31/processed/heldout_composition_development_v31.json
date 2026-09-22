@@ -1,0 +1,140 @@
+{
+  "causal_primary": true,
+  "composition_tests": 40,
+  "independent_final_opened": false,
+  "profiles": {
+    "A_ONLY": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.5353640291961372,
+      "median_magnitude": 0.7886988459413155,
+      "median_relative_l2": 0.9077167096495029,
+      "pass": false,
+      "rows": 40,
+      "success_fraction": 0.0,
+      "valid_rows": 40
+    },
+    "B_ONLY": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.7721602233394664,
+      "median_magnitude": 0.8885051266174139,
+      "median_relative_l2": 0.6499135075751901,
+      "pass": false,
+      "rows": 40,
+      "success_fraction": 0.0,
+      "valid_rows": 40
+    },
+    "EXACT_REC_CONV": {
+      "family_success_fraction": {
+        "boolean_logic": 1.0,
+        "modular_arithmetic": 0.75,
+        "short_graph_traversal": 0.375,
+        "simple_state_transition": 0.375,
+        "variable_binding": 0.75
+      },
+      "median_cosine": 0.9670081825157955,
+      "median_magnitude": 0.9745687240804008,
+      "median_relative_l2": 0.2547743345735233,
+      "pass": false,
+      "rows": 40,
+      "success_fraction": 0.65,
+      "valid_rows": 40
+    },
+    "GLOBAL_SCALAR_GATED": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.7513657521323271,
+      "median_magnitude": 0.775956223311083,
+      "median_relative_l2": 0.6619421265523415,
+      "pass": false,
+      "rows": 40,
+      "success_fraction": 0.0,
+      "valid_rows": 40
+    },
+    "LOW_ORDER_INTERACTION": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.7516203224426281,
+      "median_magnitude": 0.7773048928826973,
+      "median_relative_l2": 0.66185640811134,
+      "pass": false,
+      "rows": 40,
+      "success_fraction": 0.0,
+      "valid_rows": 40
+    },
+    "SIGN_FLIPPED_B": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": -0.015023755941435374,
+      "median_magnitude": 0.4749520617261028,
+      "median_relative_l2": 1.1228862821925076,
+      "pass": false,
+      "rows": 40,
+      "success_fraction": 0.0,
+      "valid_rows": 40
+    },
+    "STATE_CONDITIONED_SCALAR_GATED": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.7463038351888508,
+      "median_magnitude": 0.7599074842817923,
+      "median_relative_l2": 0.6674314364931762,
+      "pass": false,
+      "rows": 40,
+      "success_fraction": 0.0,
+      "valid_rows": 40
+    },
+    "UNIT_ADDITIVE": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.7665601795637303,
+      "median_magnitude": 1.0929383389742902,
+      "median_relative_l2": 0.731374630473778,
+      "pass": false,
+      "rows": 40,
+      "success_fraction": 0.0,
+      "valid_rows": 40
+    }
+  },
+  "response_sha256": "d2eb298c06d166f1537dcaeb0d7cfaa3b791547145da43ab4851ab4350a14ca6",
+  "role": "development",
+  "rows": 320,
+  "states": 20,
+  "surface_composition_not_semantic_proof": true
+}

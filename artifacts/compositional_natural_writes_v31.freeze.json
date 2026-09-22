@@ -1,0 +1,136 @@
+{
+  "V1_V30_records_mutated": false,
+  "config": {
+    "active_count_grid": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "authorization": {
+      "AUTONOMOUS_CONTROLLER_AUTHORIZED": false,
+      "CROSS_MODEL_REPLICATION_AUTHORIZED": false,
+      "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+      "H2_REMAINS": true,
+      "H3_AUTHORIZED": false
+    },
+    "causal_gate": {
+      "cosine_min": 0.9,
+      "families_required": 4,
+      "magnitude_max": 1.2,
+      "magnitude_min": 0.8,
+      "relative_l2_max": 0.3,
+      "success_fraction_min": 0.5
+    },
+    "composition_rules": [
+      "UNIT_ADDITIVE",
+      "GLOBAL_SCALAR_GATED",
+      "LOW_ORDER_INTERACTION",
+      "STATE_CONDITIONED_SCALAR_GATED"
+    ],
+    "depth_groups": {
+      "halves": 2,
+      "quartiles": 4,
+      "single_conv_layers": 24
+    },
+    "families": [
+      "boolean_logic",
+      "modular_arithmetic",
+      "short_graph_traversal",
+      "simple_state_transition",
+      "variable_binding"
+    ],
+    "finalist_priority": [
+      "HELDOUT_COMPOSITION",
+      "PRIMITIVE_DICTIONARY",
+      "REC_CORRECTION",
+      "TOKEN_CONDITIONED_DEPTH_ROUTE"
+    ],
+    "fit_contrasts_per_state": 10,
+    "fit_rule": "All parameters fit on TRAIN tokens in development fit states only. Development holdout, validation and final are never fit sources.",
+    "fit_states_per_family": 20,
+    "future_probe_count": 6,
+    "horizon_rule": "h2/h4 only for h1-qualified mechanism, with identical predeclared probes",
+    "independent_final_rule": "Open only one frozen finalist passing development and validation causal gates on >=4/5 families; no final-based selection.",
+    "name": "Compositional Structure of Natural State Writes",
+    "parent_commit": "5113e800cd4f287648cd52edc3577eb77cd60776",
+    "primitive_count_grid": [
+      8,
+      16,
+      32,
+      64,
+      128
+    ],
+    "primitive_models": [
+      "PCA",
+      "SPARSE_DICTIONARY",
+      "CLUSTERED_PROTOTYPES",
+      "FUNCTION_CONDITIONED",
+      "RESPONSE_FACTOR",
+      "CONV_DEPTH",
+      "REC_CONDITIONAL_CONV"
+    ],
+    "primitive_saturation": {
+      "doubling_new_required_primitives_fraction_lt": 0.2,
+      "library_sizes": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ]
+    },
+    "protocol_version": "compositional_natural_writes_v31",
+    "readout_layer": 30,
+    "reuse_gate": {
+      "min_distinct_families": 2,
+      "min_distinct_states": 2,
+      "min_distinct_tokens": 2
+    },
+    "roles": {
+      "calibration_per_family": 5,
+      "development_per_family": 24,
+      "independent_final_per_family": 10,
+      "validation_per_family": 12
+    },
+    "seed": 310031,
+    "subtitle": "Are High-Dimensional Future-Facing Writes Built from Reusable Causal Primitives?",
+    "token_library": {
+      "anchor_token_id": 25,
+      "common_rank_max": 8192,
+      "eligibility_rank_max": 8192,
+      "final_pairs": 16,
+      "surface_composition_definition": "Single-token surface_AB == surface_A + surface_B; all three token IDs distinct; components individually in TOKEN_TRAIN; held-out AB IDs absent from fitting. This is a surface proxy, not guaranteed semantic composition.",
+      "surface_composition_final": 16,
+      "surface_composition_train": 14,
+      "surface_composition_validation": 16,
+      "train_pairs": 160,
+      "validation_pairs": 16
+    },
+    "write_channels": [
+      "REC",
+      "Conv",
+      "KV",
+      "REC+Conv"
+    ]
+  },
+  "config_sha256": "68106d1eae4f12c9c9392645786c63e9dbb0b7e801b9126de6203259ae254067",
+  "created_utc": "2026-09-22T09:12:15.733481+00:00",
+  "cumulative_report_at_start_sha256": "6fbb7eb2d965073b7b770e2b0508ba53ec17ca2f0ccbcdc413bdca6d905d641d",
+  "freeze_digest": "3f81577cb083ffac1d19b2e312fc7652417dd7f031186ef58b38763fe2f9a2e6",
+  "frozen_history_sha256": {
+    "artifacts/transferable_natural_writes_v30_final_opening.freeze.json": "d26cf91699c4b7c69405921d29054067b68823ca384a5776a820451b85cb6078",
+    "reports/V28_COMPLETE_REPORT.md": "69ded83ce65b854a38c607f0dbc32be154f5f2dca56c2a701f4ec79a380f8f48",
+    "reports/V29_COMPLETE_REPORT.md": "795bd2da28bae2586895886d492c4c810d392aecd4f3511f74be5c50abb71aaf",
+    "reports/V30_ALL_REPORTS.md": "fd4af3daa2315a791fef079a047b2fa16f323c04364528e5c9592d100939f228",
+    "reports/V30_COMPLETE_REPORT.md": "0b3b800932d3335bceaa25ce13cb4ee968fc637be61895e7cde935ee6e8b4d63",
+    "results/v30/processed/v30_adjudication.json": "60178a47687c4d6c0f00f2af3b9494874e7a9e98a7ea4e0dc6662f27a2684508",
+    "results/v30/processed/v30_integrity_index.json": "54f11f589ececc1f4ab473b8dd2d3696969e079bf198cffd38a77663664b47f3"
+  },
+  "historical_final_opened": false,
+  "parent_commit": "5113e800cd4f287648cd52edc3577eb77cd60776",
+  "protocol_sha256": "151d47c42a9f1cfacea9878bc3d5cca05d0d7bff8c534e6fbed606946ccf6a46",
+  "protocol_version": "compositional_natural_writes_v31",
+  "schema_version": 40
+}

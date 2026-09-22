@@ -1,0 +1,46 @@
+{
+  "base_freeze_digest": "3f81577cb083ffac1d19b2e312fc7652417dd7f031186ef58b38763fe2f9a2e6",
+  "composition_hash": "9fc109684dc43ab488b750c4f4e6c742fa851f42a4ce12c5533ef5dee61be746",
+  "coverage": {
+    "calibration": {
+      "minimum_composition_final": 16,
+      "minimum_composition_validation": 16,
+      "minimum_pairs": 192
+    },
+    "development": {
+      "minimum_composition_final": 15,
+      "minimum_composition_validation": 14,
+      "minimum_pairs": 189
+    },
+    "independent_final": {
+      "minimum_composition_final": 15,
+      "minimum_composition_validation": 14,
+      "minimum_pairs": 189
+    },
+    "validation": {
+      "minimum_composition_final": 14,
+      "minimum_composition_validation": 14,
+      "minimum_pairs": 189
+    }
+  },
+  "created_utc": "2026-09-22T09:15:37.241552+00:00",
+  "current_token_write_observed_before_freeze": false,
+  "design_hash": "1976d83caa62855191755f42db415a3ef355a6e6fec98d60212a8f7ad6314a26",
+  "freeze_digest": "8893b8b041256e18087499f4dba4456de3f9494551f90e92b2777912b1353577",
+  "future_response_observed_before_freeze": 0,
+  "input_sha256": {
+    "artifacts/compositional_natural_writes_v31.freeze.json": "159d2731367e5bda3aba77c85738c9f3430da5a407dbd957050589082123449d",
+    "results/v31/processed/design_v31.json": "6d0f1a7eb8d2d4e78942868fd0007b5bb31e0026401071cbf5861eef0a6537fb",
+    "results/v31/processed/prewrite_calibration_v31.json": "5df80d40aea86c4c16a7cb44e4d6f58b5a1f28d87c7d1768e3b7bccff96cad2c",
+    "src/jclosure/experiments/design_v31.py": "2fefb52cd9c2f293ff769615cb5f85b7046f06c672cd79d50887f9c671cff5e8"
+  },
+  "protocol_version": "compositional_natural_writes_v31_design",
+  "role_hashes": {
+    "calibration": "80fd508e6f990eea14ed2317e643b7f6d0e05eacaf30aa63665cf8856a884374",
+    "development": "36c2e901767b7aceaa2c6da4abd3b63039bfbc2670e5db6e5d80e9109e4262fb",
+    "independent_final": "0488bec4339fbfe82d069ea2c809daaa96f7091842966d1de4cc1658d6d2d292",
+    "validation": "5871d615dc0aa6a19c3dbb32365895ae098ae311f935cee0fbe94962ba3e6818"
+  },
+  "schema_version": 40,
+  "token_library_hash": "2edd84b679a44578603125971abe78f5c85643be013ee2a174085f1982ba3ac1"
+}

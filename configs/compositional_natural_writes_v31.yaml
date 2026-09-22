@@ -1,0 +1,36 @@
+protocol_version: compositional_natural_writes_v31
+name: Compositional Structure of Natural State Writes
+subtitle: Are High-Dimensional Future-Facing Writes Built from Reusable Causal Primitives?
+parent_commit: 5113e800cd4f287648cd52edc3577eb77cd60776
+seed: 310031
+families: [boolean_logic, modular_arithmetic, short_graph_traversal, simple_state_transition, variable_binding]
+roles: {calibration_per_family: 5, development_per_family: 24, validation_per_family: 12, independent_final_per_family: 10}
+token_library:
+  common_rank_max: 8192
+  eligibility_rank_max: 8192
+  anchor_token_id: 25
+  train_pairs: 160
+  validation_pairs: 16
+  final_pairs: 16
+  surface_composition_train: 14
+  surface_composition_validation: 16
+  surface_composition_final: 16
+  surface_composition_definition: "Single-token surface_AB == surface_A + surface_B; all three token IDs distinct; components individually in TOKEN_TRAIN; held-out AB IDs absent from fitting. This is a surface proxy, not guaranteed semantic composition."
+future_probe_count: 6
+readout_layer: 30
+write_channels: [REC, Conv, KV, REC+Conv]
+primitive_models: [PCA, SPARSE_DICTIONARY, CLUSTERED_PROTOTYPES, FUNCTION_CONDITIONED, RESPONSE_FACTOR, CONV_DEPTH, REC_CONDITIONAL_CONV]
+primitive_count_grid: [8, 16, 32, 64, 128]
+active_count_grid: [1, 2, 4, 8, 16]
+fit_states_per_family: 20
+fit_contrasts_per_state: 10
+composition_rules: [UNIT_ADDITIVE, GLOBAL_SCALAR_GATED, LOW_ORDER_INTERACTION, STATE_CONDITIONED_SCALAR_GATED]
+fit_rule: "All parameters fit on TRAIN tokens in development fit states only. Development holdout, validation and final are never fit sources."
+depth_groups: {quartiles: 4, halves: 2, single_conv_layers: 24}
+causal_gate: {cosine_min: 0.90, relative_l2_max: 0.30, magnitude_min: 0.80, magnitude_max: 1.20, success_fraction_min: 0.50, families_required: 4}
+reuse_gate: {min_distinct_tokens: 2, min_distinct_states: 2, min_distinct_families: 2}
+primitive_saturation: {doubling_new_required_primitives_fraction_lt: 0.20, library_sizes: [16, 32, 64, 128, 256]}
+horizon_rule: "h2/h4 only for h1-qualified mechanism, with identical predeclared probes"
+finalist_priority: [HELDOUT_COMPOSITION, PRIMITIVE_DICTIONARY, REC_CORRECTION, TOKEN_CONDITIONED_DEPTH_ROUTE]
+independent_final_rule: "Open only one frozen finalist passing development and validation causal gates on >=4/5 families; no final-based selection."
+authorization: {H2_REMAINS: true, H3_AUTHORIZED: false, DYNAMIC_STATE_SEARCH_AUTHORIZED: false, AUTONOMOUS_CONTROLLER_AUTHORIZED: false, CROSS_MODEL_REPLICATION_AUTHORIZED: false}

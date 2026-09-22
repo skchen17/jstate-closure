@@ -1,0 +1,93 @@
+{
+  "both_pass": true,
+  "formal_mediation_authorized": true,
+  "models": {
+    "F": {
+      "alignment_bootstrap_lower": 0.7730334798820537,
+      "families_passing": 5,
+      "family": {
+        "boolean_logic": {
+          "median_alignment": 0.7895907908903922,
+          "median_reduction": 0.3843909450108248,
+          "positive_fraction": 0.9375,
+          "rows": 16
+        },
+        "modular_arithmetic": {
+          "median_alignment": 0.7710329003543694,
+          "median_reduction": 0.36250367695380337,
+          "positive_fraction": 1.0,
+          "rows": 16
+        },
+        "short_graph_traversal": {
+          "median_alignment": 0.7761392447186457,
+          "median_reduction": 0.36521004527418915,
+          "positive_fraction": 1.0,
+          "rows": 16
+        },
+        "simple_state_transition": {
+          "median_alignment": 0.8503442923119604,
+          "median_reduction": 0.470935690694844,
+          "positive_fraction": 0.9375,
+          "rows": 16
+        },
+        "variable_binding": {
+          "median_alignment": 0.8027602287479527,
+          "median_reduction": 0.40235209040925846,
+          "positive_fraction": 1.0,
+          "rows": 16
+        }
+      },
+      "median_alignment": 0.80146460297124,
+      "median_reduction": 0.3982990814658192,
+      "pass": true,
+      "positive_fraction": 0.975,
+      "reduction_bootstrap_lower": 0.35816647573855137,
+      "rows": 80
+    },
+    "Q": {
+      "alignment_bootstrap_lower": 0.7598878147344774,
+      "families_passing": 5,
+      "family": {
+        "boolean_logic": {
+          "median_alignment": 0.790352243439816,
+          "median_reduction": 0.3686304659722285,
+          "positive_fraction": 1.0,
+          "rows": 16
+        },
+        "modular_arithmetic": {
+          "median_alignment": 0.8073634890711664,
+          "median_reduction": 0.4093998723755566,
+          "positive_fraction": 1.0,
+          "rows": 16
+        },
+        "short_graph_traversal": {
+          "median_alignment": 0.7766410778000721,
+          "median_reduction": 0.3505155314426013,
+          "positive_fraction": 1.0,
+          "rows": 16
+        },
+        "simple_state_transition": {
+          "median_alignment": 0.7998759719061377,
+          "median_reduction": 0.3965030675381456,
+          "positive_fraction": 1.0,
+          "rows": 16
+        },
+        "variable_binding": {
+          "median_alignment": 0.803499226296033,
+          "median_reduction": 0.3872366365029945,
+          "positive_fraction": 1.0,
+          "rows": 16
+        }
+      },
+      "median_alignment": 0.8042437439304033,
+      "median_reduction": 0.3946627045784973,
+      "pass": true,
+      "positive_fraction": 1.0,
+      "reduction_bootstrap_lower": 0.3303418980111993,
+      "rows": 80
+    }
+  },
+  "role": "development",
+  "same_semantic_state_ids": true,
+  "thresholds_retuned": false
+}

@@ -1,0 +1,152 @@
+{
+  "KV_subset": {
+    "development": {
+      "boolean_logic": [
+        "v13-train-e310dbedb75af64df500"
+      ],
+      "modular_arithmetic": [
+        "v13-train-1c91ffc20835c641fbd5"
+      ],
+      "short_graph_traversal": [
+        "v13-train-ea18c2d37861c2080fce"
+      ],
+      "simple_state_transition": [
+        "v13-train-ea51a095b85ae4a3b56a"
+      ],
+      "variable_binding": [
+        "v13-train-d41f5ea20414f194cd1e"
+      ]
+    },
+    "validation": {
+      "boolean_logic": [
+        "v13-validation-d82fa88165a297470bfc"
+      ],
+      "modular_arithmetic": [
+        "v13-validation-d68c6571e500dbee4f8d"
+      ],
+      "short_graph_traversal": [
+        "v13-validation-60be2a92164366c1583e"
+      ],
+      "simple_state_transition": [
+        "v13-validation-d4353b12928c06c62de7"
+      ],
+      "variable_binding": [
+        "v13-validation-fbcce5769e9c73c965ce"
+      ]
+    }
+  },
+  "all_states_in_each_role": true,
+  "baseline_replay": "bitwise calibration replay required; formal branch signatures must match frozen factorial within 1e-5",
+  "context_subset": {
+    "development": {
+      "boolean_logic": [
+        "v13-train-e310dbedb75af64df500",
+        "v13-train-2b7d77a1085d2f9bf85f"
+      ],
+      "modular_arithmetic": [
+        "v13-train-1c91ffc20835c641fbd5",
+        "v13-train-160b6852fea86a5be7d6"
+      ],
+      "short_graph_traversal": [
+        "v13-train-ea18c2d37861c2080fce",
+        "v13-train-238fbe86dbefad2f61fe"
+      ],
+      "simple_state_transition": [
+        "v13-train-ea51a095b85ae4a3b56a",
+        "v13-train-c88a1eaca4e8cf82ff65"
+      ],
+      "variable_binding": [
+        "v13-train-d41f5ea20414f194cd1e",
+        "v13-train-eb0b41061e9735316289"
+      ]
+    },
+    "validation": {
+      "boolean_logic": [
+        "v13-validation-d82fa88165a297470bfc",
+        "v13-validation-ee24579033f8d3fe5492"
+      ],
+      "modular_arithmetic": [
+        "v13-validation-d68c6571e500dbee4f8d",
+        "v13-validation-8a7bfe2e05bb7d7e22d0"
+      ],
+      "short_graph_traversal": [
+        "v13-validation-60be2a92164366c1583e",
+        "v13-validation-fadcd773f02555aca77b"
+      ],
+      "simple_state_transition": [
+        "v13-validation-d4353b12928c06c62de7",
+        "v13-validation-c6e14ab772552a53abf2"
+      ],
+      "variable_binding": [
+        "v13-validation-fbcce5769e9c73c965ce",
+        "v13-validation-5c3e806e96ae1d2d474f"
+      ]
+    }
+  },
+  "depth_groups": "relative quarters of recurrent layers; only after stage qualification",
+  "family_gate": "family median REM, REST and reverse correction cosine each exceed threshold in at least 4/5 families per role and model",
+  "formal_mediation_responses_observed_before_freeze": false,
+  "formal_roles": [
+    "development",
+    "validation"
+  ],
+  "gate": {
+    "development_and_validation_required": true,
+    "exact_writeback_required": true,
+    "families_required": 4,
+    "family_median_removed_min": 0.5,
+    "family_median_restored_min": 0.5,
+    "family_median_reverse_cosine_min": 0.8,
+    "median_removed_min": 0.5,
+    "median_restored_min": 0.5,
+    "median_reverse_correction_cosine_min": 0.8
+  },
+  "interventions": [
+    "JOINT_MINUS_REC_EFFECT_AT_S",
+    "CONV_PLUS_REC_EFFECT_AT_S"
+  ],
+  "mediation_denominator": "error_conv-error_joint; never full donor effect",
+  "models": [
+    "Q",
+    "F"
+  ],
+  "no_historical_final_reopening": true,
+  "no_validation_site_selection": true,
+  "nonpositive_benefit": "retain row with explicit NONPOSITIVE_BENEFIT; undefined REM/REST does not count as stage success",
+  "pipeline_sets_if_no_single_stage": {
+    "FULL_RECURRENCE_TO_RESIDUAL": [
+      "POSTCONV_INPUT",
+      "TRANSFORMED_CONTROL",
+      "TRUE_UPDATE",
+      "RECURRENT_READ",
+      "RESIDUAL_INTEGRATION"
+    ],
+    "RECURRENT_PIPELINE": [
+      "TRUE_UPDATE",
+      "RECURRENT_READ"
+    ],
+    "WRITE_PIPELINE": [
+      "POSTCONV_INPUT",
+      "TRANSFORMED_CONTROL",
+      "TRUE_UPDATE"
+    ]
+  },
+  "recipient_native_KV": true,
+  "residual_integration": "same exact mixer contribution enters residual without intervening operation in both tested implementations; run calibration equivalence then report ALIASED_NOT_SEPARATELY_IDENTIFIABLE, never count as an independent site",
+  "same_probe_token_and_position": true,
+  "stage5_calibration_alias_verified": true,
+  "stage_order": [
+    "TRUE_UPDATE",
+    "TRANSFORMED_CONTROL",
+    "POSTCONV_INPUT",
+    "RECURRENT_READ",
+    "RESIDUAL_INTEGRATION"
+  ],
+  "stage_scope": "all 24 recurrent mixers simultaneously in each model",
+  "stages_to_execute_formally": [
+    "TRUE_UPDATE",
+    "TRANSFORMED_CONTROL",
+    "POSTCONV_INPUT",
+    "RECURRENT_READ"
+  ]
+}

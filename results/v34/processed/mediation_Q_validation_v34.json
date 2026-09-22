@@ -1,0 +1,37 @@
+{
+  "files_sha256": {
+    "audit": "15485ef20a5da69635310959e1187be01943d857aef764891c8036fa4a5d3776",
+    "rows": "221b3dfa09661f7c1d304f6dfb53ca614cf40a1b8e7e1379ec8b16ac5e6a6450",
+    "vectors": "1862c4f7539a2879f905405cd9d8b6ed84c0815e8a91b976a5d18be53bb74a32"
+  },
+  "median_removed": {
+    "POSTCONV_INPUT": 0.21829456251398474,
+    "RECURRENT_READ": 1.0,
+    "TRANSFORMED_CONTROL": 0.027542203696154753,
+    "TRUE_UPDATE": 0.4512041346295091
+  },
+  "median_restored": {
+    "POSTCONV_INPUT": 0.02984831929067733,
+    "RECURRENT_READ": 1.0,
+    "TRANSFORMED_CONTROL": 0.02081821599237689,
+    "TRUE_UPDATE": -0.8443569103924002
+  },
+  "median_reverse_cosine": {
+    "POSTCONV_INPUT": 0.3042385267071097,
+    "RECURRENT_READ": 1.0,
+    "TRANSFORMED_CONTROL": 0.1846911585154551,
+    "TRUE_UPDATE": -0.3434663482440051
+  },
+  "model_key": "Q",
+  "probe_audit_rows": 1920,
+  "role": "validation",
+  "rows": 160,
+  "stage5_status": "ALIASED_NOT_SEPARATELY_IDENTIFIABLE",
+  "stages": [
+    "TRUE_UPDATE",
+    "TRANSFORMED_CONTROL",
+    "POSTCONV_INPUT",
+    "RECURRENT_READ"
+  ],
+  "states": 40
+}

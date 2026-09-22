@@ -1190,3 +1190,7 @@ Formal V33 A/B/C/D **pass**. E/F/G do not apply to the observed result. Developm
 Phase B was authorized. One-state-per-model kernel instrumentation audited exact transformed Qwen gates and true delta, and Falcon post-Conv factors and true dBx in 24/24 layers each. Bidirectional multi-state mediation was not executed; V33-H/I remain **not established**, not falsified. Applications remain unbenchmarked. H2 remains; H3, dynamic-state search, and autonomous controller remain unauthorized.
 
 Parent `09a00a67e5a286a05e47730c43586bce94b8095a`; V33 base freeze `aa843d414c7ad5866a47beebc665db9d0379d2a622215b1465cdc4d6ae41b600`; final adjudication freeze `7d9dd78515dca769d3af7c4542537ee3e8077ea802d91e6670e53ef0d5343869`. See per-topic V33 reports and the machine integrity index. Machine evidence: `results/v33/processed/`, immutable stage freezes in `artifacts/cross_model_rec_conv_v33*.freeze.json`.
+
+## V34 — Cross-Model Functional Mediation
+
+**V34-A 与 V34-E 成立**：两模型同一读出功能阶段在开发、验证和独立最终集上通过双向因果中介门槛。 这是对全 24 个循环层读出贡献的宽因果截面，不证明两模型采用相同的更新代数，也不能把与其别名的残差整合点另算一个独立中介。 独立最终集每模型 40 状态确认；详见 `reports/V34_COMPLETE_REPORT.md` 和 `reports/V34_ALL_REPORTS.md`。

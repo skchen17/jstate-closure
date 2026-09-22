@@ -1,0 +1,37 @@
+{
+  "files_sha256": {
+    "audit": "e251a7e53d57e17f6585f2bdefb6628381dfd554fd5a107d8287b8ffba6e776c",
+    "rows": "d15edba005b2b393cf6b84b5b6f1eb77aceda9ca5e48af79be09559c853e54cf",
+    "vectors": "8780751860c164544fc8b7a5be3462fd992c8eae58df56307fb487b720813cb6"
+  },
+  "median_removed": {
+    "POSTCONV_INPUT": 0.29272309646420097,
+    "RECURRENT_READ": 1.0,
+    "TRANSFORMED_CONTROL": 0.02057469109415403,
+    "TRUE_UPDATE": 0.06165463362610221
+  },
+  "median_restored": {
+    "POSTCONV_INPUT": 0.27218534146209084,
+    "RECURRENT_READ": 1.0,
+    "TRANSFORMED_CONTROL": 0.008113424632862213,
+    "TRUE_UPDATE": 0.041315855787966344
+  },
+  "median_reverse_cosine": {
+    "POSTCONV_INPUT": 0.5448807885233661,
+    "RECURRENT_READ": 1.0,
+    "TRANSFORMED_CONTROL": 0.15617172342204821,
+    "TRUE_UPDATE": 0.23094679585832992
+  },
+  "model_key": "F",
+  "probe_audit_rows": 1920,
+  "role": "independent_final",
+  "rows": 160,
+  "stage5_status": "ALIASED_NOT_SEPARATELY_IDENTIFIABLE",
+  "stages": [
+    "TRUE_UPDATE",
+    "TRANSFORMED_CONTROL",
+    "POSTCONV_INPUT",
+    "RECURRENT_READ"
+  ],
+  "states": 40
+}

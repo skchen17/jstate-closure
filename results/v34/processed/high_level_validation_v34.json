@@ -1,0 +1,93 @@
+{
+  "both_pass": true,
+  "formal_mediation_authorized": true,
+  "models": {
+    "F": {
+      "alignment_bootstrap_lower": 0.743008347071678,
+      "families_passing": 5,
+      "family": {
+        "boolean_logic": {
+          "median_alignment": 0.7673044330546243,
+          "median_reduction": 0.350760379365048,
+          "positive_fraction": 1.0,
+          "rows": 8
+        },
+        "modular_arithmetic": {
+          "median_alignment": 0.7283856465569236,
+          "median_reduction": 0.3135136459934671,
+          "positive_fraction": 1.0,
+          "rows": 8
+        },
+        "short_graph_traversal": {
+          "median_alignment": 0.7769499659383253,
+          "median_reduction": 0.36714820424820493,
+          "positive_fraction": 1.0,
+          "rows": 8
+        },
+        "simple_state_transition": {
+          "median_alignment": 0.8144699785658422,
+          "median_reduction": 0.41890639290948267,
+          "positive_fraction": 1.0,
+          "rows": 8
+        },
+        "variable_binding": {
+          "median_alignment": 0.7159173590476055,
+          "median_reduction": 0.2980452086199602,
+          "positive_fraction": 1.0,
+          "rows": 8
+        }
+      },
+      "median_alignment": 0.762486961440554,
+      "median_reduction": 0.3480667935187637,
+      "pass": true,
+      "positive_fraction": 1.0,
+      "reduction_bootstrap_lower": 0.3029089784120945,
+      "rows": 40
+    },
+    "Q": {
+      "alignment_bootstrap_lower": 0.7234647930377412,
+      "families_passing": 5,
+      "family": {
+        "boolean_logic": {
+          "median_alignment": 0.6862825725250002,
+          "median_reduction": 0.2559533738517057,
+          "positive_fraction": 1.0,
+          "rows": 8
+        },
+        "modular_arithmetic": {
+          "median_alignment": 0.841736051086844,
+          "median_reduction": 0.44563911814369994,
+          "positive_fraction": 1.0,
+          "rows": 8
+        },
+        "short_graph_traversal": {
+          "median_alignment": 0.8379555963308809,
+          "median_reduction": 0.4407519139240243,
+          "positive_fraction": 1.0,
+          "rows": 8
+        },
+        "simple_state_transition": {
+          "median_alignment": 0.7275409980790745,
+          "median_reduction": 0.3120321652445388,
+          "positive_fraction": 1.0,
+          "rows": 8
+        },
+        "variable_binding": {
+          "median_alignment": 0.8552219144524273,
+          "median_reduction": 0.4910856807976964,
+          "positive_fraction": 1.0,
+          "rows": 8
+        }
+      },
+      "median_alignment": 0.7976783175305298,
+      "median_reduction": 0.3858276158368295,
+      "pass": true,
+      "positive_fraction": 1.0,
+      "reduction_bootstrap_lower": 0.2974290514154788,
+      "rows": 40
+    }
+  },
+  "role": "validation",
+  "same_semantic_state_ids": true,
+  "thresholds_retuned": false
+}

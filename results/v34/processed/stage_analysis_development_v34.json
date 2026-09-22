@@ -1,0 +1,458 @@
+{
+  "high_level_reconfirmed": true,
+  "model_stage_passes_this_role": {
+    "F": [
+      "RECURRENT_READ"
+    ],
+    "Q": [
+      "RECURRENT_READ"
+    ]
+  },
+  "models": {
+    "F": {
+      "POSTCONV_INPUT": {
+        "families_passing": 0,
+        "family": {
+          "boolean_logic": {
+            "pass": false,
+            "removed_fraction": 0.318574324445461,
+            "restored_fraction": 0.2423368819646377,
+            "reverse_correction_cosine": 0.4969421058222096,
+            "rows": 16,
+            "valid_rows": 15
+          },
+          "modular_arithmetic": {
+            "pass": false,
+            "removed_fraction": 0.29722850223257735,
+            "restored_fraction": 0.19101076951292972,
+            "reverse_correction_cosine": 0.5274682732809473,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "short_graph_traversal": {
+            "pass": false,
+            "removed_fraction": 0.30912720842578867,
+            "restored_fraction": 0.25657807066850835,
+            "reverse_correction_cosine": 0.5439303967231004,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "simple_state_transition": {
+            "pass": false,
+            "removed_fraction": 0.35585011811744705,
+            "restored_fraction": 0.17808445831401473,
+            "reverse_correction_cosine": 0.49260484938886956,
+            "rows": 16,
+            "valid_rows": 15
+          },
+          "variable_binding": {
+            "pass": false,
+            "removed_fraction": 0.4018240201208324,
+            "restored_fraction": 0.20467175068444934,
+            "reverse_correction_cosine": 0.4032494877561207,
+            "rows": 16,
+            "valid_rows": 16
+          }
+        },
+        "pass": false,
+        "removed_fraction": 0.3234948030403778,
+        "restored_fraction": 0.24131074261649144,
+        "reverse_correction_cosine": 0.4955784524155781,
+        "rows": 80,
+        "status": "TESTED",
+        "valid_rows": 78
+      },
+      "RECURRENT_READ": {
+        "families_passing": 5,
+        "family": {
+          "boolean_logic": {
+            "pass": true,
+            "removed_fraction": 1.0,
+            "restored_fraction": 1.0,
+            "reverse_correction_cosine": 1.0,
+            "rows": 16,
+            "valid_rows": 15
+          },
+          "modular_arithmetic": {
+            "pass": true,
+            "removed_fraction": 1.0,
+            "restored_fraction": 1.0,
+            "reverse_correction_cosine": 1.0,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "short_graph_traversal": {
+            "pass": true,
+            "removed_fraction": 1.0,
+            "restored_fraction": 1.0,
+            "reverse_correction_cosine": 1.0,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "simple_state_transition": {
+            "pass": true,
+            "removed_fraction": 1.0,
+            "restored_fraction": 1.0,
+            "reverse_correction_cosine": 1.0,
+            "rows": 16,
+            "valid_rows": 15
+          },
+          "variable_binding": {
+            "pass": true,
+            "removed_fraction": 1.0,
+            "restored_fraction": 1.0,
+            "reverse_correction_cosine": 1.0,
+            "rows": 16,
+            "valid_rows": 16
+          }
+        },
+        "pass": true,
+        "removed_fraction": 1.0,
+        "restored_fraction": 1.0,
+        "reverse_correction_cosine": 1.0,
+        "rows": 80,
+        "status": "TESTED",
+        "valid_rows": 78
+      },
+      "RESIDUAL_INTEGRATION": {
+        "pass": false,
+        "source_stage": "RECURRENT_READ",
+        "status": "ALIASED_NOT_SEPARATELY_IDENTIFIABLE"
+      },
+      "TRANSFORMED_CONTROL": {
+        "families_passing": 0,
+        "family": {
+          "boolean_logic": {
+            "pass": false,
+            "removed_fraction": 0.02308600801737652,
+            "restored_fraction": 0.016046105394128048,
+            "reverse_correction_cosine": 0.1957369165552905,
+            "rows": 16,
+            "valid_rows": 15
+          },
+          "modular_arithmetic": {
+            "pass": false,
+            "removed_fraction": 0.03828450223843395,
+            "restored_fraction": 0.023115627150787715,
+            "reverse_correction_cosine": 0.202548199122714,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "short_graph_traversal": {
+            "pass": false,
+            "removed_fraction": 0.06288819964714756,
+            "restored_fraction": 0.04408513808005427,
+            "reverse_correction_cosine": 0.21608004805928194,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "simple_state_transition": {
+            "pass": false,
+            "removed_fraction": 0.03250986181551062,
+            "restored_fraction": 0.04431148501104456,
+            "reverse_correction_cosine": 0.22120475119978517,
+            "rows": 16,
+            "valid_rows": 15
+          },
+          "variable_binding": {
+            "pass": false,
+            "removed_fraction": 0.026969187370811557,
+            "restored_fraction": -0.038370522240540175,
+            "reverse_correction_cosine": 0.11041219246506472,
+            "rows": 16,
+            "valid_rows": 16
+          }
+        },
+        "pass": false,
+        "removed_fraction": 0.02741873720467441,
+        "restored_fraction": 0.03214716203687055,
+        "reverse_correction_cosine": 0.20007650728095933,
+        "rows": 80,
+        "status": "TESTED",
+        "valid_rows": 78
+      },
+      "TRUE_UPDATE": {
+        "families_passing": 0,
+        "family": {
+          "boolean_logic": {
+            "pass": false,
+            "removed_fraction": 0.03467939505924435,
+            "restored_fraction": 0.0404264375991086,
+            "reverse_correction_cosine": 0.16940327728927063,
+            "rows": 16,
+            "valid_rows": 15
+          },
+          "modular_arithmetic": {
+            "pass": false,
+            "removed_fraction": 0.09413440626204762,
+            "restored_fraction": 0.042710730974439615,
+            "reverse_correction_cosine": 0.23522868486359927,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "short_graph_traversal": {
+            "pass": false,
+            "removed_fraction": 0.09320985731218631,
+            "restored_fraction": 0.07392941580234716,
+            "reverse_correction_cosine": 0.35863200596058487,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "simple_state_transition": {
+            "pass": false,
+            "removed_fraction": 0.08554455645559902,
+            "restored_fraction": 0.02571983016767711,
+            "reverse_correction_cosine": 0.19151376294517436,
+            "rows": 16,
+            "valid_rows": 15
+          },
+          "variable_binding": {
+            "pass": false,
+            "removed_fraction": 0.06398104601761842,
+            "restored_fraction": -0.033268192044684695,
+            "reverse_correction_cosine": 0.17176807760137455,
+            "rows": 16,
+            "valid_rows": 16
+          }
+        },
+        "pass": false,
+        "removed_fraction": 0.07723214663845937,
+        "restored_fraction": 0.03643896869723183,
+        "reverse_correction_cosine": 0.22976679409047068,
+        "rows": 80,
+        "status": "TESTED",
+        "valid_rows": 78
+      }
+    },
+    "Q": {
+      "POSTCONV_INPUT": {
+        "families_passing": 0,
+        "family": {
+          "boolean_logic": {
+            "pass": false,
+            "removed_fraction": 0.2877107923474589,
+            "restored_fraction": 0.05612243878924913,
+            "reverse_correction_cosine": 0.3047210130134087,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "modular_arithmetic": {
+            "pass": false,
+            "removed_fraction": 0.3265574905027778,
+            "restored_fraction": -0.04270983799544435,
+            "reverse_correction_cosine": 0.22362785797455872,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "short_graph_traversal": {
+            "pass": false,
+            "removed_fraction": 0.20284719157880976,
+            "restored_fraction": 0.04382652848908085,
+            "reverse_correction_cosine": 0.2683297118330257,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "simple_state_transition": {
+            "pass": false,
+            "removed_fraction": 0.18102632459337162,
+            "restored_fraction": 0.008079618769332098,
+            "reverse_correction_cosine": 0.2331067206018894,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "variable_binding": {
+            "pass": false,
+            "removed_fraction": 0.22686339906780317,
+            "restored_fraction": 0.0551884944559856,
+            "reverse_correction_cosine": 0.2140718560753302,
+            "rows": 16,
+            "valid_rows": 16
+          }
+        },
+        "pass": false,
+        "removed_fraction": 0.2514102970693964,
+        "restored_fraction": 0.030532082116717388,
+        "reverse_correction_cosine": 0.2470886787010409,
+        "rows": 80,
+        "status": "TESTED",
+        "valid_rows": 80
+      },
+      "RECURRENT_READ": {
+        "families_passing": 5,
+        "family": {
+          "boolean_logic": {
+            "pass": true,
+            "removed_fraction": 1.0,
+            "restored_fraction": 1.0,
+            "reverse_correction_cosine": 1.0,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "modular_arithmetic": {
+            "pass": true,
+            "removed_fraction": 1.0,
+            "restored_fraction": 1.0,
+            "reverse_correction_cosine": 1.0,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "short_graph_traversal": {
+            "pass": true,
+            "removed_fraction": 1.0,
+            "restored_fraction": 1.0,
+            "reverse_correction_cosine": 1.0,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "simple_state_transition": {
+            "pass": true,
+            "removed_fraction": 1.0,
+            "restored_fraction": 1.0,
+            "reverse_correction_cosine": 1.0,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "variable_binding": {
+            "pass": true,
+            "removed_fraction": 1.0,
+            "restored_fraction": 1.0,
+            "reverse_correction_cosine": 1.0000000000000002,
+            "rows": 16,
+            "valid_rows": 16
+          }
+        },
+        "pass": true,
+        "removed_fraction": 1.0,
+        "restored_fraction": 1.0,
+        "reverse_correction_cosine": 1.0,
+        "rows": 80,
+        "status": "TESTED",
+        "valid_rows": 80
+      },
+      "RESIDUAL_INTEGRATION": {
+        "pass": false,
+        "source_stage": "RECURRENT_READ",
+        "status": "ALIASED_NOT_SEPARATELY_IDENTIFIABLE"
+      },
+      "TRANSFORMED_CONTROL": {
+        "families_passing": 0,
+        "family": {
+          "boolean_logic": {
+            "pass": false,
+            "removed_fraction": 0.01672660805031656,
+            "restored_fraction": -0.00011506482926450581,
+            "reverse_correction_cosine": -0.00621368777544941,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "modular_arithmetic": {
+            "pass": false,
+            "removed_fraction": 0.027427691672942525,
+            "restored_fraction": 0.014661846887020819,
+            "reverse_correction_cosine": 0.17708718875238036,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "short_graph_traversal": {
+            "pass": false,
+            "removed_fraction": 0.029717546545589738,
+            "restored_fraction": 0.00709510606749852,
+            "reverse_correction_cosine": 0.14652640072470402,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "simple_state_transition": {
+            "pass": false,
+            "removed_fraction": 0.02188866551414122,
+            "restored_fraction": 0.0058323256064144735,
+            "reverse_correction_cosine": 0.19786887613405552,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "variable_binding": {
+            "pass": false,
+            "removed_fraction": 0.01144249301753799,
+            "restored_fraction": 0.011113435108713907,
+            "reverse_correction_cosine": 0.13384597850346908,
+            "rows": 16,
+            "valid_rows": 16
+          }
+        },
+        "pass": false,
+        "removed_fraction": 0.022593549445154192,
+        "restored_fraction": 0.00709510606749852,
+        "reverse_correction_cosine": 0.14383459142622154,
+        "rows": 80,
+        "status": "TESTED",
+        "valid_rows": 80
+      },
+      "TRUE_UPDATE": {
+        "families_passing": 0,
+        "family": {
+          "boolean_logic": {
+            "pass": false,
+            "removed_fraction": 0.4115976799767871,
+            "restored_fraction": -0.8436428365149441,
+            "reverse_correction_cosine": -0.28571369137716673,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "modular_arithmetic": {
+            "pass": false,
+            "removed_fraction": 0.7012683845743772,
+            "restored_fraction": -0.7684443167733277,
+            "reverse_correction_cosine": -0.2694784279182426,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "short_graph_traversal": {
+            "pass": false,
+            "removed_fraction": 0.6051177908097836,
+            "restored_fraction": -1.0141579155959601,
+            "reverse_correction_cosine": -0.4156532735193792,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "simple_state_transition": {
+            "pass": false,
+            "removed_fraction": 0.5488114318500911,
+            "restored_fraction": -0.929995253782529,
+            "reverse_correction_cosine": -0.35940446415681315,
+            "rows": 16,
+            "valid_rows": 16
+          },
+          "variable_binding": {
+            "pass": false,
+            "removed_fraction": 0.38837258828301524,
+            "restored_fraction": -0.7997730229157047,
+            "reverse_correction_cosine": -0.4146088197037385,
+            "rows": 16,
+            "valid_rows": 16
+          }
+        },
+        "pass": false,
+        "removed_fraction": 0.49004460920889464,
+        "restored_fraction": -0.863851800510101,
+        "reverse_correction_cosine": -0.32687060690346725,
+        "rows": 80,
+        "status": "TESTED",
+        "valid_rows": 80
+      }
+    }
+  },
+  "pipeline_testing_authorized": false,
+  "role": "development",
+  "same_semantic_states": true,
+  "shared_stage_passes_this_role": [
+    "RECURRENT_READ"
+  ],
+  "stage5_alias_not_independently_identifiable": true,
+  "stage_order": [
+    "TRUE_UPDATE",
+    "TRANSFORMED_CONTROL",
+    "POSTCONV_INPUT",
+    "RECURRENT_READ",
+    "RESIDUAL_INTEGRATION"
+  ],
+  "thresholds_retuned": false
+}

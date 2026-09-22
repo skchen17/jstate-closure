@@ -1,0 +1,99 @@
+protocol_version: functional_mediation_v34
+name: Cross-Model Functional Mediation of REC–Conv Correction
+parent_commit: b8ee1284e72ec4a79d64b624a189de2ca57d2278
+models:
+  Q:
+    id: Qwen/Qwen3.5-4B
+    revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+    local_path: /home/user/.cache/huggingface/hub/models--Qwen--Qwen3.5-4B/snapshots/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+    weight_sha256:
+      model.safetensors-00001-of-00002.safetensors: 26a93f066e1916adb13453dae5a0c707c0fbc71299ed98779571a907b8e74c61
+      model.safetensors-00002-of-00002.safetensors: cb544bd9bfae93dc59b0f22b292f5933573854a7f9b97835c67060d7d910e188
+    tokenizer_sha256: 5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42
+    config_sha256: ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670
+    dtype: bfloat16
+    device: cuda:0
+    recurrent_layers: [0, 1, 2, 4, 5, 6, 8, 9, 10, 12, 13, 14, 16, 17, 18, 20, 21, 22, 24, 25, 26, 28, 29, 30]
+    anchor_token_id: 25
+    candidate_library_source: results/v32/processed/design_v32.json
+    workspace_layers: [7, 15, 23, 31]
+    late_layer: 31
+  F:
+    id: tiiuae/Falcon-H1-1.5B-Base
+    revision: 06d7330266253c20784f58b0a846dc09a9d12cee
+    local_path: /data/CSK/J-space-project/models/Falcon-H1-1.5B-Base-06d7330
+    weight_sha256:
+      model.safetensors: 9acd2ef3e946e88a6e8cb14d38942f2ffbf6f52a5bc37312c1e0cc64574f1aeb
+    tokenizer_sha256: eb7825ecac026cc37e37c03d7e8d06d1f85c7ab8bdefabe81fc1b40f0ed7929a
+    config_sha256: 7ae20392a453be5f1a59b39b1e1f4fc09522901eacd64492e649672594ea4c77
+    dtype: bfloat16
+    device: cuda:0
+    recurrent_layers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+    anchor_token_id: 549
+    candidate_library_source: results/v33/processed/design_v33.json
+    workspace_layers: [5, 11, 17, 23]
+    late_layer: 23
+precision: bfloat16
+attention_implementation: eager
+context_limit: 512
+seed: 340134
+source_exclusions: [28, 29, 30, 31, 32, 33]
+families: [boolean_logic, modular_arithmetic, short_graph_traversal, simple_state_transition, variable_binding]
+roles_per_family: {calibration: 4, development: 16, validation: 8, independent_final: 8}
+panel_source: results/v18/processed/crossed_state_{source}_{family}_v18.parquet
+prompt_semantic_pairing: same base_trial_id and prompt in Q and F
+token_selection:
+  rank_max: 8192
+  choice: deterministic hash of seed/model/state/token among frozen predecessor candidate library and prefix-rank eligibility
+  future_probes: first six usable top-ranked prefix tokens
+  current_token_write_or_future_response_used_for_selection: false
+factorial: [Y00, Y10, Y01, Y11, Ydonor]
+primary_KV: recipient-native
+endpoint:
+  formal_shared_categories: [selected_logits, semantic_logprob, broad_vocabulary, late_hidden, workspace]
+  selected_logits: 64
+  broad_logits: 64
+  late_hidden: 64
+  workspace_layers_per_model: 4
+  workspace_dimensions_per_layer: 32
+  indices: deterministic seeded without-replacement, model-local and outcome-blind
+  scale: model-local calibration-clean empirical RMS variation, frozen before intervention outcomes
+  J_secondary_only: true
+  future_probes: 6
+high_level_gate:
+  positive_fraction_min: 0.80
+  median_reduction_min: 0.20
+  median_alignment_min: 0.50
+  families_required: 4
+  family_positive_fraction_min: 0.80
+  family_median_reduction_min: 0.20
+  family_median_alignment_min: 0.50
+  bootstrap_lower_reduction_gt: 0.0
+  bootstrap_lower_alignment_min: 0.25
+bootstrap: {iterations: 2000, seed: 340134, lower_tail: 0.025, unit: state}
+functional_stages:
+  order: [TRUE_UPDATE, TRANSFORMED_CONTROL, POSTCONV_INPUT, RECURRENT_READ, RESIDUAL_INTEGRATION]
+  layer_scope: all recurrent layers simultaneously, no layer search before stage qualification
+  source_branch: joint versus Conv-only with same recipient KV and same future probe
+  direction: joint-to-Conv-only removal and Conv-only-to-joint reverse insertion
+  missing_exact_interface: STAGE_NOT_WRITABLE, no proxy replacement
+  residual_integration_rule: patch only recurrent contribution at earliest residual add; if algebraically identical to RECURRENT_READ, report non-separability
+stage_gate:
+  median_removed_min: 0.50
+  median_restored_min: 0.50
+  median_reverse_correction_cosine_min: 0.80
+  families_required: 4
+  family_median_removed_min: 0.50
+  family_median_restored_min: 0.50
+  family_median_reverse_cosine_min: 0.80
+  development_and_validation_required: true
+  exact_writeback_required: true
+pipeline_sets:
+  WRITE_PIPELINE: [POSTCONV_INPUT, TRANSFORMED_CONTROL, TRUE_UPDATE]
+  RECURRENT_PIPELINE: [TRUE_UPDATE, RECURRENT_READ]
+  FULL_RECURRENCE_TO_RESIDUAL: [POSTCONV_INPUT, TRANSFORMED_CONTROL, TRUE_UPDATE, RECURRENT_READ, RESIDUAL_INTEGRATION]
+final_rule: open both 40-state V34 independent finals only after same frozen functional stage or pipeline passes development and validation in both models
+later_horizon_rule: h2/h4 only if shared h1 mediator passes
+application_rule: authorize only if V34-A or V34-G passes
+third_model_rule: authorize only if V34-A or V34-G or V34-H passes
+historical_model1_final_reopen: false

@@ -1,0 +1,37 @@
+{
+  "files_sha256": {
+    "audit": "4141367999fc831a50d7ff6b59f8fe7895f379358cce82ffc44d0830d86b6fb0",
+    "rows": "6f139717957014a91c1b81812fa05eb3a0096ce4aa6f19740429b774797bde88",
+    "vectors": "6c9478466a106519cedd9e9cc7853234930ab28b298dfd4776992cdacbc05b77"
+  },
+  "median_removed": {
+    "POSTCONV_INPUT": 0.3234948030403778,
+    "RECURRENT_READ": 1.0,
+    "TRANSFORMED_CONTROL": 0.02741873720467441,
+    "TRUE_UPDATE": 0.07723214663845937
+  },
+  "median_restored": {
+    "POSTCONV_INPUT": 0.24131074261649144,
+    "RECURRENT_READ": 1.0,
+    "TRANSFORMED_CONTROL": 0.03214716203687055,
+    "TRUE_UPDATE": 0.03643896869723183
+  },
+  "median_reverse_cosine": {
+    "POSTCONV_INPUT": 0.5014184799445774,
+    "RECURRENT_READ": 1.0,
+    "TRANSFORMED_CONTROL": 0.19719904195111243,
+    "TRUE_UPDATE": 0.22217819668344088
+  },
+  "model_key": "F",
+  "probe_audit_rows": 3840,
+  "role": "development",
+  "rows": 320,
+  "stage5_status": "ALIASED_NOT_SEPARATELY_IDENTIFIABLE",
+  "stages": [
+    "TRUE_UPDATE",
+    "TRANSFORMED_CONTROL",
+    "POSTCONV_INPUT",
+    "RECURRENT_READ"
+  ],
+  "states": 80
+}

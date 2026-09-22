@@ -1,0 +1,113 @@
+{
+  "both_models_simultaneously": true,
+  "development_candidates": [
+    "COMPLEMENTARY_Q3_Q4",
+    "LOCALIZED_Q3_Q4",
+    "FULL_DEPTH_ONLY"
+  ],
+  "development_frozen_priority": [
+    "LATE_Q3_Q4",
+    "PROGRESSIVE_CUMULATIVE",
+    "SERIAL_Q3_TO_Q4",
+    "SERIAL_Q2_TO_Q3",
+    "SERIAL_Q2_TO_Q4",
+    "COMPLEMENTARY_Q3_Q4",
+    "COMPLEMENTARY_Q2_Q3",
+    "COMPLEMENTARY_Q2_Q4",
+    "COMPLEMENTARY_Q1_Q4",
+    "COMPLEMENTARY_Q1_Q3",
+    "COMPLEMENTARY_Q1_Q2",
+    "REDUNDANT_Q3_Q4",
+    "REDUNDANT_Q2_Q3",
+    "REDUNDANT_Q2_Q4",
+    "REDUNDANT_Q1_Q4",
+    "REDUNDANT_Q1_Q3",
+    "REDUNDANT_Q1_Q2",
+    "LOCALIZED_Q4",
+    "LOCALIZED_Q3",
+    "LOCALIZED_Q2",
+    "LOCALIZED_Q1",
+    "LOCALIZED_Q3_Q4",
+    "LOCALIZED_Q2_Q3",
+    "LOCALIZED_Q1_Q2",
+    "LOCALIZED_Q2_Q4",
+    "LOCALIZED_Q1_Q4",
+    "LOCALIZED_Q1_Q3",
+    "LOCALIZED_Q1_Q2_Q3",
+    "LOCALIZED_Q2_Q3_Q4",
+    "FULL_DEPTH_ONLY"
+  ],
+  "endpoints": "five V34 blocks, six model-local frozen probes, calibration-clean scaling",
+  "family_rule": 4,
+  "final_responses_seen": false,
+  "h2_h4_authorized": false,
+  "historical_independent_finals_reopened": false,
+  "independent_final_states_per_model": 40,
+  "model_specific_relative_depth_layers": {
+    "F": {
+      "FULL": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    "Q": {
+      "FULL": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ]
+    }
+  },
+  "opened": true,
+  "selected_conditions": [
+    "FULL"
+  ],
+  "selected_mechanism": "FULL_DEPTH_ONLY",
+  "thresholds_retuned": false,
+  "validated_candidates": [
+    "FULL_DEPTH_ONLY"
+  ]
+}

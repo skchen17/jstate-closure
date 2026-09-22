@@ -1,0 +1,3227 @@
+{
+  "cross_model_profile": {
+    "REM": {
+      "F": [
+        0.21338487432636646,
+        0.19831508673516213,
+        0.5507851919672035,
+        0.4584014779834801
+      ],
+      "Q": [
+        0.2273364485610687,
+        0.21596462023242935,
+        0.4585375695498165,
+        0.6111839036729498
+      ],
+      "cosine": 0.9768220729669086,
+      "early_curve_l2": 0.23566506090583803,
+      "late_curve_l2": 0.19123008209956768,
+      "pearson": 0.8540872814160949,
+      "spearman": 0.7999999999999999
+    },
+    "REST": {
+      "F": [
+        0.28642624677535206,
+        0.1346768834071636,
+        0.5556042664449752,
+        0.3089412037082836
+      ],
+      "Q": [
+        0.12682497902039977,
+        0.053314767875047506,
+        0.34982745503607565,
+        0.3879178841934233
+      ],
+      "cosine": 0.9325086370296332,
+      "early_curve_l2": 0.34351060165702363,
+      "late_curve_l2": 0.13259717581457914,
+      "pearson": 0.7291666500189258,
+      "spearman": 0.7999999999999999
+    },
+    "descriptive_profile_similarity_pass": true
+  },
+  "historical_V34_exploratory_quartiles_used_as_formal": false,
+  "models": {
+    "F": {
+      "complementary_pair_passes": [
+        "Q1_Q3",
+        "Q1_Q4",
+        "Q2_Q4",
+        "Q3_Q4"
+      ],
+      "conditions": {
+        "FULL": {
+          "families_passing": 5,
+          "family": {
+            "boolean_logic": {
+              "pass": true,
+              "removed_fraction": 1.0000000140882945,
+              "restored_fraction": 1.0000000091208714,
+              "reverse_correction_cosine": 0.9999999999992759
+            },
+            "modular_arithmetic": {
+              "pass": true,
+              "removed_fraction": 0.9999999902420544,
+              "restored_fraction": 1.0000000087129797,
+              "reverse_correction_cosine": 0.9999999999994054
+            },
+            "short_graph_traversal": {
+              "pass": true,
+              "removed_fraction": 0.9999999901879453,
+              "restored_fraction": 1.000000006979389,
+              "reverse_correction_cosine": 0.9999999999994602
+            },
+            "simple_state_transition": {
+              "pass": true,
+              "removed_fraction": 0.9999999916386397,
+              "restored_fraction": 1.0000000118324395,
+              "reverse_correction_cosine": 0.999999999999553
+            },
+            "variable_binding": {
+              "pass": true,
+              "removed_fraction": 0.9999999755961857,
+              "restored_fraction": 1.0000000058245924,
+              "reverse_correction_cosine": 0.999999999999372
+            }
+          },
+          "pass": true,
+          "removed_fraction": 0.9999999914082691,
+          "restored_fraction": 1.0000000076262001,
+          "reverse_correction_cosine": 0.9999999999994367
+        },
+        "Q1": {
+          "families_passing": 0,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.10347312209917497,
+              "restored_fraction": 0.13555335681647634,
+              "reverse_correction_cosine": 0.4630253369116326
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.322306767870586,
+              "restored_fraction": 0.2903472595886067,
+              "reverse_correction_cosine": 0.583454182811921
+            },
+            "short_graph_traversal": {
+              "pass": false,
+              "removed_fraction": 0.2281657751598915,
+              "restored_fraction": 0.37816270533430185,
+              "reverse_correction_cosine": 0.6260727047730561
+            },
+            "simple_state_transition": {
+              "pass": false,
+              "removed_fraction": 0.19001557612126832,
+              "restored_fraction": 0.2922298045042693,
+              "reverse_correction_cosine": 0.584968228818685
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.1788789809761827,
+              "restored_fraction": 0.21994529312647382,
+              "reverse_correction_cosine": 0.48672754103637594
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.21338487432636646,
+          "restored_fraction": 0.28642624677535206,
+          "reverse_correction_cosine": 0.552171650562546
+        },
+        "Q1_Q2": {
+          "families_passing": 0,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.2566157819162256,
+              "restored_fraction": 0.2645596192966226,
+              "reverse_correction_cosine": 0.5808655300724144
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.377784650378735,
+              "restored_fraction": 0.3027997737448843,
+              "reverse_correction_cosine": 0.6258521095043769
+            },
+            "short_graph_traversal": {
+              "pass": false,
+              "removed_fraction": 0.545374293104008,
+              "restored_fraction": 0.5285555810622341,
+              "reverse_correction_cosine": 0.7531545014740015
+            },
+            "simple_state_transition": {
+              "pass": false,
+              "removed_fraction": 0.2806284461125523,
+              "restored_fraction": 0.29783111647574734,
+              "reverse_correction_cosine": 0.6406758764713724
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.45940383314092975,
+              "restored_fraction": 0.3570801700717512,
+              "reverse_correction_cosine": 0.5842942415216441
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.38640872207646393,
+          "restored_fraction": 0.3342380892168627,
+          "reverse_correction_cosine": 0.6402580851987048
+        },
+        "Q1_Q2_Q3": {
+          "families_passing": 5,
+          "family": {
+            "boolean_logic": {
+              "pass": true,
+              "removed_fraction": 0.8542040446998178,
+              "restored_fraction": 0.8760274770245149,
+              "reverse_correction_cosine": 0.9198903433863279
+            },
+            "modular_arithmetic": {
+              "pass": true,
+              "removed_fraction": 0.8619007135124908,
+              "restored_fraction": 0.83237967155592,
+              "reverse_correction_cosine": 0.9227862544854775
+            },
+            "short_graph_traversal": {
+              "pass": true,
+              "removed_fraction": 0.9280219138739552,
+              "restored_fraction": 0.8570460906382789,
+              "reverse_correction_cosine": 0.9202049656814183
+            },
+            "simple_state_transition": {
+              "pass": true,
+              "removed_fraction": 0.8812047210577543,
+              "restored_fraction": 0.8470675047458966,
+              "reverse_correction_cosine": 0.9209996746202407
+            },
+            "variable_binding": {
+              "pass": true,
+              "removed_fraction": 0.8220034382519528,
+              "restored_fraction": 0.7873918863880369,
+              "reverse_correction_cosine": 0.9313351944445654
+            }
+          },
+          "pass": true,
+          "removed_fraction": 0.8686421540226987,
+          "restored_fraction": 0.8389580220754533,
+          "reverse_correction_cosine": 0.9227862544854775
+        },
+        "Q1_Q2_Q4": {
+          "families_passing": 2,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.6357663080716265,
+              "restored_fraction": 0.5396227584760395,
+              "reverse_correction_cosine": 0.695009081900905
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.7032463006041031,
+              "restored_fraction": 0.5412338471337731,
+              "reverse_correction_cosine": 0.7953891181688095
+            },
+            "short_graph_traversal": {
+              "pass": true,
+              "removed_fraction": 0.8403074434117528,
+              "restored_fraction": 0.7655365579564103,
+              "reverse_correction_cosine": 0.8660350203516596
+            },
+            "simple_state_transition": {
+              "pass": true,
+              "removed_fraction": 0.7124142778885942,
+              "restored_fraction": 0.5651291630309546,
+              "reverse_correction_cosine": 0.8025790652022335
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.8122922708000201,
+              "restored_fraction": 0.6702128491119923,
+              "reverse_correction_cosine": 0.774181494525632
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.7441947701836913,
+          "restored_fraction": 0.604368127751573,
+          "reverse_correction_cosine": 0.8108832835850064
+        },
+        "Q1_Q3": {
+          "families_passing": 5,
+          "family": {
+            "boolean_logic": {
+              "pass": true,
+              "removed_fraction": 0.8063183740420412,
+              "restored_fraction": 0.7463533927985878,
+              "reverse_correction_cosine": 0.8638052804300798
+            },
+            "modular_arithmetic": {
+              "pass": true,
+              "removed_fraction": 0.8012995653269757,
+              "restored_fraction": 0.7822668630051701,
+              "reverse_correction_cosine": 0.8662877764502297
+            },
+            "short_graph_traversal": {
+              "pass": true,
+              "removed_fraction": 0.7816542470844774,
+              "restored_fraction": 0.7501457182201942,
+              "reverse_correction_cosine": 0.8292248696281745
+            },
+            "simple_state_transition": {
+              "pass": true,
+              "removed_fraction": 0.7519602121838871,
+              "restored_fraction": 0.7674423403160596,
+              "reverse_correction_cosine": 0.8720648561668397
+            },
+            "variable_binding": {
+              "pass": true,
+              "removed_fraction": 0.7802242143023834,
+              "restored_fraction": 0.7033261848460478,
+              "reverse_correction_cosine": 0.8765107055061779
+            }
+          },
+          "pass": true,
+          "removed_fraction": 0.7962103876539848,
+          "restored_fraction": 0.7525957655387481,
+          "reverse_correction_cosine": 0.8622824132809057
+        },
+        "Q1_Q3_Q4": {
+          "families_passing": 5,
+          "family": {
+            "boolean_logic": {
+              "pass": true,
+              "removed_fraction": 0.9508776286165972,
+              "restored_fraction": 0.9196928833027536,
+              "reverse_correction_cosine": 0.9351926936068395
+            },
+            "modular_arithmetic": {
+              "pass": true,
+              "removed_fraction": 0.9735141615683383,
+              "restored_fraction": 0.9386865101873618,
+              "reverse_correction_cosine": 0.948189200991523
+            },
+            "short_graph_traversal": {
+              "pass": true,
+              "removed_fraction": 0.897692378924227,
+              "restored_fraction": 0.9090033138622944,
+              "reverse_correction_cosine": 0.938265125768008
+            },
+            "simple_state_transition": {
+              "pass": true,
+              "removed_fraction": 0.938476913716261,
+              "restored_fraction": 0.9066358178907787,
+              "reverse_correction_cosine": 0.9480207770800924
+            },
+            "variable_binding": {
+              "pass": true,
+              "removed_fraction": 0.9416626878077983,
+              "restored_fraction": 0.8768576810203663,
+              "reverse_correction_cosine": 0.9378680463589834
+            }
+          },
+          "pass": true,
+          "removed_fraction": 0.9414538426888446,
+          "restored_fraction": 0.9166360191645586,
+          "reverse_correction_cosine": 0.942766482515311
+        },
+        "Q1_Q4": {
+          "families_passing": 1,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.5077172251093041,
+              "restored_fraction": 0.3817567605468891,
+              "reverse_correction_cosine": 0.6455327694510783
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.6557850042093629,
+              "restored_fraction": 0.5709240816893174,
+              "reverse_correction_cosine": 0.7659279926443903
+            },
+            "short_graph_traversal": {
+              "pass": true,
+              "removed_fraction": 0.6804788707591218,
+              "restored_fraction": 0.6449477501660427,
+              "reverse_correction_cosine": 0.8020598587030614
+            },
+            "simple_state_transition": {
+              "pass": false,
+              "removed_fraction": 0.6619857055503751,
+              "restored_fraction": 0.5323236135442939,
+              "reverse_correction_cosine": 0.7588904846785118
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.7034584678979026,
+              "restored_fraction": 0.5916977697773949,
+              "reverse_correction_cosine": 0.7309096235074104
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.6397706598111612,
+          "restored_fraction": 0.5400455026100613,
+          "reverse_correction_cosine": 0.7571972220710335
+        },
+        "Q2": {
+          "families_passing": 0,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.19895507950231042,
+              "restored_fraction": 0.14754638992079572,
+              "reverse_correction_cosine": 0.46541589991832255
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.17444194215606845,
+              "restored_fraction": 0.11906168526026781,
+              "reverse_correction_cosine": 0.4449596901394145
+            },
+            "short_graph_traversal": {
+              "pass": false,
+              "removed_fraction": 0.3506867395219215,
+              "restored_fraction": 0.3001784633886817,
+              "reverse_correction_cosine": 0.5782420228703687
+            },
+            "simple_state_transition": {
+              "pass": false,
+              "removed_fraction": 0.19346771737602647,
+              "restored_fraction": 0.16468112904820426,
+              "reverse_correction_cosine": 0.4382094908869001
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.18152327946907099,
+              "restored_fraction": 0.11256116071366071,
+              "reverse_correction_cosine": 0.36787937097414847
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.19831508673516213,
+          "restored_fraction": 0.1346768834071636,
+          "reverse_correction_cosine": 0.4651757844070461
+        },
+        "Q2_Q3": {
+          "families_passing": 5,
+          "family": {
+            "boolean_logic": {
+              "pass": true,
+              "removed_fraction": 0.7479143789919127,
+              "restored_fraction": 0.8049302424634077,
+              "reverse_correction_cosine": 0.8758312787905869
+            },
+            "modular_arithmetic": {
+              "pass": true,
+              "removed_fraction": 0.6974696266251393,
+              "restored_fraction": 0.7271997558634697,
+              "reverse_correction_cosine": 0.8775261367500842
+            },
+            "short_graph_traversal": {
+              "pass": true,
+              "removed_fraction": 0.7885772572642983,
+              "restored_fraction": 0.7195518157263443,
+              "reverse_correction_cosine": 0.8423390132996724
+            },
+            "simple_state_transition": {
+              "pass": true,
+              "removed_fraction": 0.7297454565419345,
+              "restored_fraction": 0.7651647591979174,
+              "reverse_correction_cosine": 0.8850533231763618
+            },
+            "variable_binding": {
+              "pass": true,
+              "removed_fraction": 0.6913047347152194,
+              "restored_fraction": 0.6399182929570504,
+              "reverse_correction_cosine": 0.8314771154138567
+            }
+          },
+          "pass": true,
+          "removed_fraction": 0.7316431421974752,
+          "restored_fraction": 0.7270531898131147,
+          "reverse_correction_cosine": 0.8735747665857247
+        },
+        "Q2_Q3_Q4": {
+          "families_passing": 5,
+          "family": {
+            "boolean_logic": {
+              "pass": true,
+              "removed_fraction": 0.9367712960919636,
+              "restored_fraction": 0.9481177414758926,
+              "reverse_correction_cosine": 0.9458018823606918
+            },
+            "modular_arithmetic": {
+              "pass": true,
+              "removed_fraction": 0.9104036902418886,
+              "restored_fraction": 0.8857474799846932,
+              "reverse_correction_cosine": 0.9445838414160351
+            },
+            "short_graph_traversal": {
+              "pass": true,
+              "removed_fraction": 0.8871987965757423,
+              "restored_fraction": 0.9208804289833163,
+              "reverse_correction_cosine": 0.9508317249385406
+            },
+            "simple_state_transition": {
+              "pass": true,
+              "removed_fraction": 0.9142137465166515,
+              "restored_fraction": 0.9385018068146485,
+              "reverse_correction_cosine": 0.9520552316311501
+            },
+            "variable_binding": {
+              "pass": true,
+              "removed_fraction": 0.9414396430117646,
+              "restored_fraction": 0.8810421483914392,
+              "reverse_correction_cosine": 0.9422857300390426
+            }
+          },
+          "pass": true,
+          "removed_fraction": 0.9200398369377507,
+          "restored_fraction": 0.9178518732995372,
+          "reverse_correction_cosine": 0.9453408694679701
+        },
+        "Q2_Q4": {
+          "families_passing": 0,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.5530427473384241,
+              "restored_fraction": 0.4039439373221534,
+              "reverse_correction_cosine": 0.6284710680420889
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.5825478856800705,
+              "restored_fraction": 0.4102516048167518,
+              "reverse_correction_cosine": 0.6771193479181766
+            },
+            "short_graph_traversal": {
+              "pass": false,
+              "removed_fraction": 0.6632596248549125,
+              "restored_fraction": 0.5785058107739741,
+              "reverse_correction_cosine": 0.786007350251418
+            },
+            "simple_state_transition": {
+              "pass": false,
+              "removed_fraction": 0.5915091487848481,
+              "restored_fraction": 0.4381434407070741,
+              "reverse_correction_cosine": 0.7007754538252585
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.5898238227543056,
+              "restored_fraction": 0.4920699833393563,
+              "reverse_correction_cosine": 0.7142456987102923
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.5914239589265694,
+          "restored_fraction": 0.45910405787883035,
+          "reverse_correction_cosine": 0.7071891336606622
+        },
+        "Q3": {
+          "families_passing": 2,
+          "family": {
+            "boolean_logic": {
+              "pass": true,
+              "removed_fraction": 0.65504015381328,
+              "restored_fraction": 0.6514440514527507,
+              "reverse_correction_cosine": 0.8229689547339629
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.5474461581076401,
+              "restored_fraction": 0.6016470734371284,
+              "reverse_correction_cosine": 0.7903728954213147
+            },
+            "short_graph_traversal": {
+              "pass": false,
+              "removed_fraction": 0.5116945014970891,
+              "restored_fraction": 0.48879832662135125,
+              "reverse_correction_cosine": 0.724926802291568
+            },
+            "simple_state_transition": {
+              "pass": true,
+              "removed_fraction": 0.6503198814735108,
+              "restored_fraction": 0.6093405216488361,
+              "reverse_correction_cosine": 0.8282847522180286
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.44946476946276637,
+              "restored_fraction": 0.45141585202689927,
+              "reverse_correction_cosine": 0.7454534447565406
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.5507851919672035,
+          "restored_fraction": 0.5556042664449752,
+          "reverse_correction_cosine": 0.7879428017883952
+        },
+        "Q3_Q4": {
+          "families_passing": 5,
+          "family": {
+            "boolean_logic": {
+              "pass": true,
+              "removed_fraction": 0.875058537833426,
+              "restored_fraction": 0.8421160745456986,
+              "reverse_correction_cosine": 0.8730636430554835
+            },
+            "modular_arithmetic": {
+              "pass": true,
+              "removed_fraction": 0.8085559857806728,
+              "restored_fraction": 0.7794378559514293,
+              "reverse_correction_cosine": 0.8801012270358227
+            },
+            "short_graph_traversal": {
+              "pass": true,
+              "removed_fraction": 0.7474086478053417,
+              "restored_fraction": 0.7250821110861243,
+              "reverse_correction_cosine": 0.8805757393125933
+            },
+            "simple_state_transition": {
+              "pass": true,
+              "removed_fraction": 0.9289161440276377,
+              "restored_fraction": 0.8293186047198373,
+              "reverse_correction_cosine": 0.9022214607102965
+            },
+            "variable_binding": {
+              "pass": true,
+              "removed_fraction": 0.7911093270557614,
+              "restored_fraction": 0.7046264079241629,
+              "reverse_correction_cosine": 0.8636674447231161
+            }
+          },
+          "pass": true,
+          "removed_fraction": 0.826719978324012,
+          "restored_fraction": 0.7839098436821511,
+          "reverse_correction_cosine": 0.8805757393125933
+        },
+        "Q4": {
+          "families_passing": 0,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.44534405856291753,
+              "restored_fraction": 0.28208260221421666,
+              "reverse_correction_cosine": 0.5174088191933861
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.46190945166636654,
+              "restored_fraction": 0.2949098679800276,
+              "reverse_correction_cosine": 0.5646974971615328
+            },
+            "short_graph_traversal": {
+              "pass": false,
+              "removed_fraction": 0.4262007825742688,
+              "restored_fraction": 0.3112994493195437,
+              "reverse_correction_cosine": 0.5826961745337327
+            },
+            "simple_state_transition": {
+              "pass": false,
+              "removed_fraction": 0.4821088419040027,
+              "restored_fraction": 0.3445330790231482,
+              "reverse_correction_cosine": 0.6089438616764256
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.4558908001991927,
+              "restored_fraction": 0.38446075114034467,
+              "reverse_correction_cosine": 0.6141483301323405
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.4584014779834801,
+          "restored_fraction": 0.3089412037082836,
+          "reverse_correction_cosine": 0.589641085811439
+        }
+      },
+      "family_depth_profile": {
+        "boolean_logic": {
+          "FULL": {
+            "removed_fraction": 1.0000000140882945,
+            "restored_fraction": 1.0000000091208714,
+            "reverse_correction_cosine": 0.9999999999992759
+          },
+          "Q1": {
+            "removed_fraction": 0.10347312209917497,
+            "restored_fraction": 0.13555335681647634,
+            "reverse_correction_cosine": 0.4630253369116326
+          },
+          "Q1_Q2": {
+            "removed_fraction": 0.2566157819162256,
+            "restored_fraction": 0.2645596192966226,
+            "reverse_correction_cosine": 0.5808655300724144
+          },
+          "Q1_Q2_Q3": {
+            "removed_fraction": 0.8542040446998178,
+            "restored_fraction": 0.8760274770245149,
+            "reverse_correction_cosine": 0.9198903433863279
+          },
+          "Q1_Q2_Q4": {
+            "removed_fraction": 0.6357663080716265,
+            "restored_fraction": 0.5396227584760395,
+            "reverse_correction_cosine": 0.695009081900905
+          },
+          "Q1_Q3": {
+            "removed_fraction": 0.8063183740420412,
+            "restored_fraction": 0.7463533927985878,
+            "reverse_correction_cosine": 0.8638052804300798
+          },
+          "Q1_Q3_Q4": {
+            "removed_fraction": 0.9508776286165972,
+            "restored_fraction": 0.9196928833027536,
+            "reverse_correction_cosine": 0.9351926936068395
+          },
+          "Q1_Q4": {
+            "removed_fraction": 0.5077172251093041,
+            "restored_fraction": 0.3817567605468891,
+            "reverse_correction_cosine": 0.6455327694510783
+          },
+          "Q2": {
+            "removed_fraction": 0.19895507950231042,
+            "restored_fraction": 0.14754638992079572,
+            "reverse_correction_cosine": 0.46541589991832255
+          },
+          "Q2_Q3": {
+            "removed_fraction": 0.7479143789919127,
+            "restored_fraction": 0.8049302424634077,
+            "reverse_correction_cosine": 0.8758312787905869
+          },
+          "Q2_Q3_Q4": {
+            "removed_fraction": 0.9367712960919636,
+            "restored_fraction": 0.9481177414758926,
+            "reverse_correction_cosine": 0.9458018823606918
+          },
+          "Q2_Q4": {
+            "removed_fraction": 0.5530427473384241,
+            "restored_fraction": 0.4039439373221534,
+            "reverse_correction_cosine": 0.6284710680420889
+          },
+          "Q3": {
+            "removed_fraction": 0.65504015381328,
+            "restored_fraction": 0.6514440514527507,
+            "reverse_correction_cosine": 0.8229689547339629
+          },
+          "Q3_Q4": {
+            "removed_fraction": 0.875058537833426,
+            "restored_fraction": 0.8421160745456986,
+            "reverse_correction_cosine": 0.8730636430554835
+          },
+          "Q4": {
+            "removed_fraction": 0.44534405856291753,
+            "restored_fraction": 0.28208260221421666,
+            "reverse_correction_cosine": 0.5174088191933861
+          }
+        },
+        "modular_arithmetic": {
+          "FULL": {
+            "removed_fraction": 0.9999999902420544,
+            "restored_fraction": 1.0000000087129797,
+            "reverse_correction_cosine": 0.9999999999994054
+          },
+          "Q1": {
+            "removed_fraction": 0.322306767870586,
+            "restored_fraction": 0.2903472595886067,
+            "reverse_correction_cosine": 0.583454182811921
+          },
+          "Q1_Q2": {
+            "removed_fraction": 0.377784650378735,
+            "restored_fraction": 0.3027997737448843,
+            "reverse_correction_cosine": 0.6258521095043769
+          },
+          "Q1_Q2_Q3": {
+            "removed_fraction": 0.8619007135124908,
+            "restored_fraction": 0.83237967155592,
+            "reverse_correction_cosine": 0.9227862544854775
+          },
+          "Q1_Q2_Q4": {
+            "removed_fraction": 0.7032463006041031,
+            "restored_fraction": 0.5412338471337731,
+            "reverse_correction_cosine": 0.7953891181688095
+          },
+          "Q1_Q3": {
+            "removed_fraction": 0.8012995653269757,
+            "restored_fraction": 0.7822668630051701,
+            "reverse_correction_cosine": 0.8662877764502297
+          },
+          "Q1_Q3_Q4": {
+            "removed_fraction": 0.9735141615683383,
+            "restored_fraction": 0.9386865101873618,
+            "reverse_correction_cosine": 0.948189200991523
+          },
+          "Q1_Q4": {
+            "removed_fraction": 0.6557850042093629,
+            "restored_fraction": 0.5709240816893174,
+            "reverse_correction_cosine": 0.7659279926443903
+          },
+          "Q2": {
+            "removed_fraction": 0.17444194215606845,
+            "restored_fraction": 0.11906168526026781,
+            "reverse_correction_cosine": 0.4449596901394145
+          },
+          "Q2_Q3": {
+            "removed_fraction": 0.6974696266251393,
+            "restored_fraction": 0.7271997558634697,
+            "reverse_correction_cosine": 0.8775261367500842
+          },
+          "Q2_Q3_Q4": {
+            "removed_fraction": 0.9104036902418886,
+            "restored_fraction": 0.8857474799846932,
+            "reverse_correction_cosine": 0.9445838414160351
+          },
+          "Q2_Q4": {
+            "removed_fraction": 0.5825478856800705,
+            "restored_fraction": 0.4102516048167518,
+            "reverse_correction_cosine": 0.6771193479181766
+          },
+          "Q3": {
+            "removed_fraction": 0.5474461581076401,
+            "restored_fraction": 0.6016470734371284,
+            "reverse_correction_cosine": 0.7903728954213147
+          },
+          "Q3_Q4": {
+            "removed_fraction": 0.8085559857806728,
+            "restored_fraction": 0.7794378559514293,
+            "reverse_correction_cosine": 0.8801012270358227
+          },
+          "Q4": {
+            "removed_fraction": 0.46190945166636654,
+            "restored_fraction": 0.2949098679800276,
+            "reverse_correction_cosine": 0.5646974971615328
+          }
+        },
+        "short_graph_traversal": {
+          "FULL": {
+            "removed_fraction": 0.9999999901879453,
+            "restored_fraction": 1.000000006979389,
+            "reverse_correction_cosine": 0.9999999999994602
+          },
+          "Q1": {
+            "removed_fraction": 0.2281657751598915,
+            "restored_fraction": 0.37816270533430185,
+            "reverse_correction_cosine": 0.6260727047730561
+          },
+          "Q1_Q2": {
+            "removed_fraction": 0.545374293104008,
+            "restored_fraction": 0.5285555810622341,
+            "reverse_correction_cosine": 0.7531545014740015
+          },
+          "Q1_Q2_Q3": {
+            "removed_fraction": 0.9280219138739552,
+            "restored_fraction": 0.8570460906382789,
+            "reverse_correction_cosine": 0.9202049656814183
+          },
+          "Q1_Q2_Q4": {
+            "removed_fraction": 0.8403074434117528,
+            "restored_fraction": 0.7655365579564103,
+            "reverse_correction_cosine": 0.8660350203516596
+          },
+          "Q1_Q3": {
+            "removed_fraction": 0.7816542470844774,
+            "restored_fraction": 0.7501457182201942,
+            "reverse_correction_cosine": 0.8292248696281745
+          },
+          "Q1_Q3_Q4": {
+            "removed_fraction": 0.897692378924227,
+            "restored_fraction": 0.9090033138622944,
+            "reverse_correction_cosine": 0.938265125768008
+          },
+          "Q1_Q4": {
+            "removed_fraction": 0.6804788707591218,
+            "restored_fraction": 0.6449477501660427,
+            "reverse_correction_cosine": 0.8020598587030614
+          },
+          "Q2": {
+            "removed_fraction": 0.3506867395219215,
+            "restored_fraction": 0.3001784633886817,
+            "reverse_correction_cosine": 0.5782420228703687
+          },
+          "Q2_Q3": {
+            "removed_fraction": 0.7885772572642983,
+            "restored_fraction": 0.7195518157263443,
+            "reverse_correction_cosine": 0.8423390132996724
+          },
+          "Q2_Q3_Q4": {
+            "removed_fraction": 0.8871987965757423,
+            "restored_fraction": 0.9208804289833163,
+            "reverse_correction_cosine": 0.9508317249385406
+          },
+          "Q2_Q4": {
+            "removed_fraction": 0.6632596248549125,
+            "restored_fraction": 0.5785058107739741,
+            "reverse_correction_cosine": 0.786007350251418
+          },
+          "Q3": {
+            "removed_fraction": 0.5116945014970891,
+            "restored_fraction": 0.48879832662135125,
+            "reverse_correction_cosine": 0.724926802291568
+          },
+          "Q3_Q4": {
+            "removed_fraction": 0.7474086478053417,
+            "restored_fraction": 0.7250821110861243,
+            "reverse_correction_cosine": 0.8805757393125933
+          },
+          "Q4": {
+            "removed_fraction": 0.4262007825742688,
+            "restored_fraction": 0.3112994493195437,
+            "reverse_correction_cosine": 0.5826961745337327
+          }
+        },
+        "simple_state_transition": {
+          "FULL": {
+            "removed_fraction": 0.9999999916386397,
+            "restored_fraction": 1.0000000118324395,
+            "reverse_correction_cosine": 0.999999999999553
+          },
+          "Q1": {
+            "removed_fraction": 0.19001557612126832,
+            "restored_fraction": 0.2922298045042693,
+            "reverse_correction_cosine": 0.584968228818685
+          },
+          "Q1_Q2": {
+            "removed_fraction": 0.2806284461125523,
+            "restored_fraction": 0.29783111647574734,
+            "reverse_correction_cosine": 0.6406758764713724
+          },
+          "Q1_Q2_Q3": {
+            "removed_fraction": 0.8812047210577543,
+            "restored_fraction": 0.8470675047458966,
+            "reverse_correction_cosine": 0.9209996746202407
+          },
+          "Q1_Q2_Q4": {
+            "removed_fraction": 0.7124142778885942,
+            "restored_fraction": 0.5651291630309546,
+            "reverse_correction_cosine": 0.8025790652022335
+          },
+          "Q1_Q3": {
+            "removed_fraction": 0.7519602121838871,
+            "restored_fraction": 0.7674423403160596,
+            "reverse_correction_cosine": 0.8720648561668397
+          },
+          "Q1_Q3_Q4": {
+            "removed_fraction": 0.938476913716261,
+            "restored_fraction": 0.9066358178907787,
+            "reverse_correction_cosine": 0.9480207770800924
+          },
+          "Q1_Q4": {
+            "removed_fraction": 0.6619857055503751,
+            "restored_fraction": 0.5323236135442939,
+            "reverse_correction_cosine": 0.7588904846785118
+          },
+          "Q2": {
+            "removed_fraction": 0.19346771737602647,
+            "restored_fraction": 0.16468112904820426,
+            "reverse_correction_cosine": 0.4382094908869001
+          },
+          "Q2_Q3": {
+            "removed_fraction": 0.7297454565419345,
+            "restored_fraction": 0.7651647591979174,
+            "reverse_correction_cosine": 0.8850533231763618
+          },
+          "Q2_Q3_Q4": {
+            "removed_fraction": 0.9142137465166515,
+            "restored_fraction": 0.9385018068146485,
+            "reverse_correction_cosine": 0.9520552316311501
+          },
+          "Q2_Q4": {
+            "removed_fraction": 0.5915091487848481,
+            "restored_fraction": 0.4381434407070741,
+            "reverse_correction_cosine": 0.7007754538252585
+          },
+          "Q3": {
+            "removed_fraction": 0.6503198814735108,
+            "restored_fraction": 0.6093405216488361,
+            "reverse_correction_cosine": 0.8282847522180286
+          },
+          "Q3_Q4": {
+            "removed_fraction": 0.9289161440276377,
+            "restored_fraction": 0.8293186047198373,
+            "reverse_correction_cosine": 0.9022214607102965
+          },
+          "Q4": {
+            "removed_fraction": 0.4821088419040027,
+            "restored_fraction": 0.3445330790231482,
+            "reverse_correction_cosine": 0.6089438616764256
+          }
+        },
+        "variable_binding": {
+          "FULL": {
+            "removed_fraction": 0.9999999755961857,
+            "restored_fraction": 1.0000000058245924,
+            "reverse_correction_cosine": 0.999999999999372
+          },
+          "Q1": {
+            "removed_fraction": 0.1788789809761827,
+            "restored_fraction": 0.21994529312647382,
+            "reverse_correction_cosine": 0.48672754103637594
+          },
+          "Q1_Q2": {
+            "removed_fraction": 0.45940383314092975,
+            "restored_fraction": 0.3570801700717512,
+            "reverse_correction_cosine": 0.5842942415216441
+          },
+          "Q1_Q2_Q3": {
+            "removed_fraction": 0.8220034382519528,
+            "restored_fraction": 0.7873918863880369,
+            "reverse_correction_cosine": 0.9313351944445654
+          },
+          "Q1_Q2_Q4": {
+            "removed_fraction": 0.8122922708000201,
+            "restored_fraction": 0.6702128491119923,
+            "reverse_correction_cosine": 0.774181494525632
+          },
+          "Q1_Q3": {
+            "removed_fraction": 0.7802242143023834,
+            "restored_fraction": 0.7033261848460478,
+            "reverse_correction_cosine": 0.8765107055061779
+          },
+          "Q1_Q3_Q4": {
+            "removed_fraction": 0.9416626878077983,
+            "restored_fraction": 0.8768576810203663,
+            "reverse_correction_cosine": 0.9378680463589834
+          },
+          "Q1_Q4": {
+            "removed_fraction": 0.7034584678979026,
+            "restored_fraction": 0.5916977697773949,
+            "reverse_correction_cosine": 0.7309096235074104
+          },
+          "Q2": {
+            "removed_fraction": 0.18152327946907099,
+            "restored_fraction": 0.11256116071366071,
+            "reverse_correction_cosine": 0.36787937097414847
+          },
+          "Q2_Q3": {
+            "removed_fraction": 0.6913047347152194,
+            "restored_fraction": 0.6399182929570504,
+            "reverse_correction_cosine": 0.8314771154138567
+          },
+          "Q2_Q3_Q4": {
+            "removed_fraction": 0.9414396430117646,
+            "restored_fraction": 0.8810421483914392,
+            "reverse_correction_cosine": 0.9422857300390426
+          },
+          "Q2_Q4": {
+            "removed_fraction": 0.5898238227543056,
+            "restored_fraction": 0.4920699833393563,
+            "reverse_correction_cosine": 0.7142456987102923
+          },
+          "Q3": {
+            "removed_fraction": 0.44946476946276637,
+            "restored_fraction": 0.45141585202689927,
+            "reverse_correction_cosine": 0.7454534447565406
+          },
+          "Q3_Q4": {
+            "removed_fraction": 0.7911093270557614,
+            "restored_fraction": 0.7046264079241629,
+            "reverse_correction_cosine": 0.8636674447231161
+          },
+          "Q4": {
+            "removed_fraction": 0.4558908001991927,
+            "restored_fraction": 0.38446075114034467,
+            "reverse_correction_cosine": 0.6141483301323405
+          }
+        }
+      },
+      "late_consolidation": {
+        "family_pass": {
+          "boolean_logic": true,
+          "modular_arithmetic": true,
+          "short_graph_traversal": false,
+          "simple_state_transition": true,
+          "variable_binding": false
+        },
+        "pass": false,
+        "values": {
+          "Q1_Q2": {
+            "REM": 0.38640872207646393,
+            "REST": 0.3342380892168627
+          },
+          "Q3_Q4": {
+            "REM": 0.826719978324012,
+            "REST": 0.7839098436821511
+          }
+        }
+      },
+      "leaveout": {
+        "FULL_MINUS_Q1": {
+          "family": {
+            "boolean_logic": 0.05188240653005347,
+            "modular_arithmetic": 0.11425248396395705,
+            "short_graph_traversal": 0.07911956244308446,
+            "simple_state_transition": 0.061498168662976416,
+            "variable_binding": 0.11895787954884832
+          },
+          "median_loss_fraction": 0.0821482420981342
+        },
+        "FULL_MINUS_Q2": {
+          "family": {
+            "boolean_logic": 0.1191833235366073,
+            "modular_arithmetic": 0.1303247175139284,
+            "short_graph_traversal": 0.1437105641292794,
+            "simple_state_transition": 0.11114008017898055,
+            "variable_binding": 0.13340142483436596
+          },
+          "median_loss_fraction": 0.12430932204742925
+        },
+        "FULL_MINUS_Q3": {
+          "family": {
+            "boolean_logic": 0.5716238787644228,
+            "modular_arithmetic": 0.5057955653460995,
+            "short_graph_traversal": 0.4029235978474628,
+            "simple_state_transition": 0.5102193169150688,
+            "variable_binding": 0.40201442094939166
+          },
+          "median_loss_fraction": 0.48260629455502746
+        },
+        "FULL_MINUS_Q4": {
+          "family": {
+            "boolean_logic": 0.445344008070406,
+            "modular_arithmetic": 0.4619094169424225,
+            "short_graph_traversal": 0.42620085499173316,
+            "simple_state_transition": 0.48210887400018204,
+            "variable_binding": 0.4558909028782393
+          },
+          "median_loss_fraction": 0.458401445854168
+        }
+      },
+      "pair_interactions": {
+        "Q1_Q2": {
+          "family_projection": {
+            "boolean_logic": -0.09974796064446009,
+            "modular_arithmetic": -0.0835612698461088,
+            "short_graph_traversal": -0.10245456003402365,
+            "simple_state_transition": -0.06085111410199874,
+            "variable_binding": -0.07586216057668389
+          },
+          "interaction_definition": "Y_pair - Y_i - Y_j + Y_conv",
+          "median_projection_to_full_correction": -0.08646466056699034,
+          "median_relative_norm": 0.40192358811320755
+        },
+        "Q1_Q3": {
+          "family_projection": {
+            "boolean_logic": -0.0846669370493314,
+            "modular_arithmetic": -0.10222518348371926,
+            "short_graph_traversal": -0.12929397541204837,
+            "simple_state_transition": -0.12439532400367218,
+            "variable_binding": -0.10482796046307598
+          },
+          "interaction_definition": "Y_pair - Y_i - Y_j + Y_conv",
+          "median_projection_to_full_correction": -0.10918780033933165,
+          "median_relative_norm": 0.40861485601458686
+        },
+        "Q1_Q4": {
+          "family_projection": {
+            "boolean_logic": -0.09127201455394149,
+            "modular_arithmetic": -0.08858422273165792,
+            "short_graph_traversal": -0.0967247047968641,
+            "simple_state_transition": -0.10436442155259942,
+            "variable_binding": -0.10585819119868052
+          },
+          "interaction_definition": "Y_pair - Y_i - Y_j + Y_conv",
+          "median_projection_to_full_correction": -0.09927759886509653,
+          "median_relative_norm": 0.38830775481774016
+        },
+        "Q2_Q3": {
+          "family_projection": {
+            "boolean_logic": -0.06880711398595121,
+            "modular_arithmetic": -0.07159472443171044,
+            "short_graph_traversal": -0.113365753021094,
+            "simple_state_transition": -0.07714940401877014,
+            "variable_binding": -0.09660011494167992
+          },
+          "interaction_definition": "Y_pair - Y_i - Y_j + Y_conv",
+          "median_projection_to_full_correction": -0.08399848700759896,
+          "median_relative_norm": 0.42119033906013437
+        },
+        "Q2_Q4": {
+          "family_projection": {
+            "boolean_logic": -0.06722037577540094,
+            "modular_arithmetic": -0.07975747065255463,
+            "short_graph_traversal": -0.1097510325781681,
+            "simple_state_transition": -0.0846249520821657,
+            "variable_binding": -0.07806068032267824
+          },
+          "interaction_definition": "Y_pair - Y_i - Y_j + Y_conv",
+          "median_projection_to_full_correction": -0.07917903664699513,
+          "median_relative_norm": 0.4022463329122164
+        },
+        "Q3_Q4": {
+          "family_projection": {
+            "boolean_logic": -0.13786477262515606,
+            "modular_arithmetic": -0.15659022297974645,
+            "short_graph_traversal": -0.16296758262659886,
+            "simple_state_transition": -0.19640431610573045,
+            "variable_binding": -0.1642917648672637
+          },
+          "interaction_definition": "Y_pair - Y_i - Y_j + Y_conv",
+          "median_projection_to_full_correction": -0.16217707720040217,
+          "median_relative_norm": 0.5254418838833744
+        }
+      },
+      "pairs": {
+        "Q1_Q2": {
+          "complementary": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": false,
+              "short_graph_traversal": true,
+              "simple_state_transition": false,
+              "variable_binding": true
+            },
+            "pass": false,
+            "values": {
+              "Q1": {
+                "REM": 0.21338487432636646,
+                "REST": 0.28642624677535206
+              },
+              "Q1_Q2": {
+                "REM": 0.38640872207646393,
+                "REST": 0.3342380892168627
+              },
+              "Q2": {
+                "REM": 0.19831508673516213,
+                "REST": 0.1346768834071636
+              }
+            }
+          },
+          "redundancy": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": false,
+              "variable_binding": false
+            },
+            "pass": false,
+            "values": {
+              "Q1": {
+                "REM": 0.21338487432636646,
+                "REST": 0.28642624677535206
+              },
+              "Q1_Q2": {
+                "REM": 0.38640872207646393,
+                "REST": 0.3342380892168627
+              },
+              "Q2": {
+                "REM": 0.19831508673516213,
+                "REST": 0.1346768834071636
+              }
+            }
+          }
+        },
+        "Q1_Q3": {
+          "complementary": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": true,
+              "short_graph_traversal": true,
+              "simple_state_transition": true,
+              "variable_binding": true
+            },
+            "pass": true,
+            "values": {
+              "Q1": {
+                "REM": 0.21338487432636646,
+                "REST": 0.28642624677535206
+              },
+              "Q1_Q3": {
+                "REM": 0.7962103876539848,
+                "REST": 0.7525957655387481
+              },
+              "Q3": {
+                "REM": 0.5507851919672035,
+                "REST": 0.5556042664449752
+              }
+            }
+          },
+          "redundancy": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": false,
+              "variable_binding": false
+            },
+            "pass": false,
+            "values": {
+              "Q1": {
+                "REM": 0.21338487432636646,
+                "REST": 0.28642624677535206
+              },
+              "Q1_Q3": {
+                "REM": 0.7962103876539848,
+                "REST": 0.7525957655387481
+              },
+              "Q3": {
+                "REM": 0.5507851919672035,
+                "REST": 0.5556042664449752
+              }
+            }
+          }
+        },
+        "Q1_Q4": {
+          "complementary": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": true,
+              "short_graph_traversal": true,
+              "simple_state_transition": true,
+              "variable_binding": true
+            },
+            "pass": true,
+            "values": {
+              "Q1": {
+                "REM": 0.21338487432636646,
+                "REST": 0.28642624677535206
+              },
+              "Q1_Q4": {
+                "REM": 0.6397706598111612,
+                "REST": 0.5400455026100613
+              },
+              "Q4": {
+                "REM": 0.4584014779834801,
+                "REST": 0.3089412037082836
+              }
+            }
+          },
+          "redundancy": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": false,
+              "variable_binding": false
+            },
+            "pass": false,
+            "values": {
+              "Q1": {
+                "REM": 0.21338487432636646,
+                "REST": 0.28642624677535206
+              },
+              "Q1_Q4": {
+                "REM": 0.6397706598111612,
+                "REST": 0.5400455026100613
+              },
+              "Q4": {
+                "REM": 0.4584014779834801,
+                "REST": 0.3089412037082836
+              }
+            }
+          }
+        },
+        "Q2_Q3": {
+          "complementary": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": true,
+              "short_graph_traversal": true,
+              "simple_state_transition": false,
+              "variable_binding": true
+            },
+            "pass": false,
+            "values": {
+              "Q2": {
+                "REM": 0.19831508673516213,
+                "REST": 0.1346768834071636
+              },
+              "Q2_Q3": {
+                "REM": 0.7316431421974752,
+                "REST": 0.7270531898131147
+              },
+              "Q3": {
+                "REM": 0.5507851919672035,
+                "REST": 0.5556042664449752
+              }
+            }
+          },
+          "redundancy": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": false,
+              "variable_binding": false
+            },
+            "pass": false,
+            "values": {
+              "Q2": {
+                "REM": 0.19831508673516213,
+                "REST": 0.1346768834071636
+              },
+              "Q2_Q3": {
+                "REM": 0.7316431421974752,
+                "REST": 0.7270531898131147
+              },
+              "Q3": {
+                "REM": 0.5507851919672035,
+                "REST": 0.5556042664449752
+              }
+            }
+          }
+        },
+        "Q2_Q4": {
+          "complementary": {
+            "family_pass": {
+              "boolean_logic": true,
+              "modular_arithmetic": true,
+              "short_graph_traversal": true,
+              "simple_state_transition": false,
+              "variable_binding": true
+            },
+            "pass": true,
+            "values": {
+              "Q2": {
+                "REM": 0.19831508673516213,
+                "REST": 0.1346768834071636
+              },
+              "Q2_Q4": {
+                "REM": 0.5914239589265694,
+                "REST": 0.45910405787883035
+              },
+              "Q4": {
+                "REM": 0.4584014779834801,
+                "REST": 0.3089412037082836
+              }
+            }
+          },
+          "redundancy": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": false,
+              "variable_binding": false
+            },
+            "pass": false,
+            "values": {
+              "Q2": {
+                "REM": 0.19831508673516213,
+                "REST": 0.1346768834071636
+              },
+              "Q2_Q4": {
+                "REM": 0.5914239589265694,
+                "REST": 0.45910405787883035
+              },
+              "Q4": {
+                "REM": 0.4584014779834801,
+                "REST": 0.3089412037082836
+              }
+            }
+          }
+        },
+        "Q3_Q4": {
+          "complementary": {
+            "family_pass": {
+              "boolean_logic": true,
+              "modular_arithmetic": true,
+              "short_graph_traversal": true,
+              "simple_state_transition": true,
+              "variable_binding": true
+            },
+            "pass": true,
+            "values": {
+              "Q3": {
+                "REM": 0.5507851919672035,
+                "REST": 0.5556042664449752
+              },
+              "Q3_Q4": {
+                "REM": 0.826719978324012,
+                "REST": 0.7839098436821511
+              },
+              "Q4": {
+                "REM": 0.4584014779834801,
+                "REST": 0.3089412037082836
+              }
+            }
+          },
+          "redundancy": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": false,
+              "variable_binding": false
+            },
+            "pass": false,
+            "values": {
+              "Q3": {
+                "REM": 0.5507851919672035,
+                "REST": 0.5556042664449752
+              },
+              "Q3_Q4": {
+                "REM": 0.826719978324012,
+                "REST": 0.7839098436821511
+              },
+              "Q4": {
+                "REM": 0.4584014779834801,
+                "REST": 0.3089412037082836
+              }
+            }
+          }
+        }
+      },
+      "progressive_accumulation": {
+        "early_curve": {
+          "REM": [
+            0.21338487432636646,
+            0.38640872207646393,
+            0.8686421540226987,
+            0.9999999914082691
+          ],
+          "REST": [
+            0.28642624677535206,
+            0.3342380892168627,
+            0.8389580220754533,
+            1.0000000076262001
+          ]
+        },
+        "family_pass": {
+          "boolean_logic": true,
+          "modular_arithmetic": false,
+          "short_graph_traversal": true,
+          "simple_state_transition": false,
+          "variable_binding": true
+        },
+        "pass": false
+      },
+      "redundant_pair_passes": [],
+      "refinement_candidates": [
+        "Q2_Q3",
+        "Q3_Q4"
+      ],
+      "serial_pair_passes": [],
+      "serial_pairs": {
+        "Q2_Q3": {
+          "family_pass": {
+            "boolean_logic": false,
+            "modular_arithmetic": false,
+            "short_graph_traversal": false,
+            "simple_state_transition": false,
+            "variable_binding": false
+          },
+          "pass": false,
+          "values": {
+            "conditional_late_gain": 0.002295467262562201,
+            "interaction_projection": -0.0332054608449289,
+            "removal_interaction": -0.017457136504890558
+          }
+        },
+        "Q2_Q4": {
+          "family_pass": {
+            "boolean_logic": false,
+            "modular_arithmetic": false,
+            "short_graph_traversal": false,
+            "simple_state_transition": false,
+            "variable_binding": false
+          },
+          "pass": false,
+          "values": {
+            "conditional_late_gain": 0.02103448723977245,
+            "interaction_projection": -0.024813736497345744,
+            "removal_interaction": -0.0652926057920728
+          }
+        },
+        "Q3_Q4": {
+          "family_pass": {
+            "boolean_logic": false,
+            "modular_arithmetic": false,
+            "short_graph_traversal": false,
+            "simple_state_transition": false,
+            "variable_binding": false
+          },
+          "pass": false,
+          "values": {
+            "conditional_late_gain": 0.07911477006730559,
+            "interaction_projection": -0.029516132111431115,
+            "removal_interaction": -0.18246669162667162
+          }
+        }
+      },
+      "single_quartile_passes": [],
+      "strong_pair_passes": [
+        "Q1_Q3",
+        "Q2_Q3",
+        "Q3_Q4"
+      ],
+      "token_category_depth_profile": {
+        "FUNCTION_WORD": {
+          "Q1": {
+            "removed_fraction": 0.08253830078471151,
+            "restored_fraction": 0.0803657456623762
+          },
+          "Q2": {
+            "removed_fraction": 0.16451718513713498,
+            "restored_fraction": 0.11170219752714419
+          },
+          "Q3": {
+            "removed_fraction": 0.6722827932114472,
+            "restored_fraction": 0.6605453716466578
+          },
+          "Q4": {
+            "removed_fraction": 0.5240526911516886,
+            "restored_fraction": 0.3202819926642242
+          }
+        },
+        "LEXICAL_SURFACE": {
+          "Q1": {
+            "removed_fraction": 0.15085639473130097,
+            "restored_fraction": 0.2070099369814365
+          },
+          "Q2": {
+            "removed_fraction": 0.2654701932318923,
+            "restored_fraction": 0.1319650278747552
+          },
+          "Q3": {
+            "removed_fraction": 0.6490224821337418,
+            "restored_fraction": 0.6461240657522093
+          },
+          "Q4": {
+            "removed_fraction": 0.4790296910286494,
+            "restored_fraction": 0.3033767213297026
+          }
+        },
+        "NUMERIC": {
+          "Q1": {
+            "removed_fraction": 0.6724857480345889,
+            "restored_fraction": 0.5717287478817541
+          },
+          "Q2": {
+            "removed_fraction": 0.4132427428065159,
+            "restored_fraction": 0.38979643545527987
+          },
+          "Q3": {
+            "removed_fraction": 0.4508282466246858,
+            "restored_fraction": 0.4916299688460799
+          },
+          "Q4": {
+            "removed_fraction": 0.35401630248808313,
+            "restored_fraction": 0.3232707743435799
+          }
+        },
+        "PUNCTUATION_OR_STRUCTURE": {
+          "Q1": {
+            "removed_fraction": 0.4540691629829919,
+            "restored_fraction": 0.4206283143348636
+          },
+          "Q2": {
+            "removed_fraction": 0.18338528442727398,
+            "restored_fraction": 0.07597131677626162
+          },
+          "Q3": {
+            "removed_fraction": 0.19917091852771246,
+            "restored_fraction": 0.28608748349768853
+          },
+          "Q4": {
+            "removed_fraction": 0.4883856701915864,
+            "restored_fraction": 0.35539011656877467
+          }
+        }
+      }
+    },
+    "Q": {
+      "complementary_pair_passes": [
+        "Q3_Q4"
+      ],
+      "conditions": {
+        "FULL": {
+          "families_passing": 5,
+          "family": {
+            "boolean_logic": {
+              "pass": true,
+              "removed_fraction": 0.9999999882804127,
+              "restored_fraction": 0.9999999951615385,
+              "reverse_correction_cosine": 0.9999999999999317
+            },
+            "modular_arithmetic": {
+              "pass": true,
+              "removed_fraction": 0.9999999983919752,
+              "restored_fraction": 0.999999992652049,
+              "reverse_correction_cosine": 0.9999999999999049
+            },
+            "short_graph_traversal": {
+              "pass": true,
+              "removed_fraction": 0.9999999806906172,
+              "restored_fraction": 0.9999999961378753,
+              "reverse_correction_cosine": 0.9999999999998241
+            },
+            "simple_state_transition": {
+              "pass": true,
+              "removed_fraction": 1.0000000050770987,
+              "restored_fraction": 0.9999999921380214,
+              "reverse_correction_cosine": 0.9999999999998207
+            },
+            "variable_binding": {
+              "pass": true,
+              "removed_fraction": 1.0000000007190746,
+              "restored_fraction": 0.9999999970767954,
+              "reverse_correction_cosine": 0.9999999999998614
+            }
+          },
+          "pass": true,
+          "removed_fraction": 0.9999999949527622,
+          "restored_fraction": 0.9999999940597715,
+          "reverse_correction_cosine": 0.9999999999998871
+        },
+        "Q1": {
+          "families_passing": 0,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.22593263376644204,
+              "restored_fraction": 0.13037283898574384,
+              "reverse_correction_cosine": 0.48762207810011143
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.28148894174908257,
+              "restored_fraction": 0.3106014113119212,
+              "reverse_correction_cosine": 0.6380324557024927
+            },
+            "short_graph_traversal": {
+              "pass": false,
+              "removed_fraction": 0.05283946039665568,
+              "restored_fraction": 0.06298580777557611,
+              "reverse_correction_cosine": 0.34908338040159853
+            },
+            "simple_state_transition": {
+              "pass": false,
+              "removed_fraction": 0.2868998244718632,
+              "restored_fraction": 0.12682497902039977,
+              "reverse_correction_cosine": 0.437536916987241
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.2114324206328459,
+              "restored_fraction": 0.06586261994065878,
+              "reverse_correction_cosine": 0.33788772649845766
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.2273364485610687,
+          "restored_fraction": 0.12682497902039977,
+          "reverse_correction_cosine": 0.437536916987241
+        },
+        "Q1_Q2": {
+          "families_passing": 0,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.40201842244083286,
+              "restored_fraction": 0.25583042436195813,
+              "reverse_correction_cosine": 0.6609721707233461
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.46697237813916304,
+              "restored_fraction": 0.3955741332823879,
+              "reverse_correction_cosine": 0.7232830683121962
+            },
+            "short_graph_traversal": {
+              "pass": false,
+              "removed_fraction": 0.13751568124731253,
+              "restored_fraction": 0.09668818649418101,
+              "reverse_correction_cosine": 0.5503115886737869
+            },
+            "simple_state_transition": {
+              "pass": false,
+              "removed_fraction": 0.2990901682364676,
+              "restored_fraction": 0.1953517134427432,
+              "reverse_correction_cosine": 0.5972644881611441
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.2511701718726762,
+              "restored_fraction": 0.12058980341570065,
+              "reverse_correction_cosine": 0.5108961694022164
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.2912176054638181,
+          "restored_fraction": 0.19277854150947216,
+          "reverse_correction_cosine": 0.5974637027861354
+        },
+        "Q1_Q2_Q3": {
+          "families_passing": 4,
+          "family": {
+            "boolean_logic": {
+              "pass": true,
+              "removed_fraction": 0.6670694211429201,
+              "restored_fraction": 0.5533337023605698,
+              "reverse_correction_cosine": 0.8785527635038084
+            },
+            "modular_arithmetic": {
+              "pass": true,
+              "removed_fraction": 0.7828828760865751,
+              "restored_fraction": 0.683198845147188,
+              "reverse_correction_cosine": 0.8807879081919325
+            },
+            "short_graph_traversal": {
+              "pass": false,
+              "removed_fraction": 0.48039327501498796,
+              "restored_fraction": 0.4698493131808583,
+              "reverse_correction_cosine": 0.8443697407254083
+            },
+            "simple_state_transition": {
+              "pass": true,
+              "removed_fraction": 0.7077003140922521,
+              "restored_fraction": 0.5954660316341386,
+              "reverse_correction_cosine": 0.8468608543357223
+            },
+            "variable_binding": {
+              "pass": true,
+              "removed_fraction": 0.6535095766984739,
+              "restored_fraction": 0.5640425488797933,
+              "reverse_correction_cosine": 0.8154099433383912
+            }
+          },
+          "pass": true,
+          "removed_fraction": 0.6535095766984739,
+          "restored_fraction": 0.5696697654726027,
+          "reverse_correction_cosine": 0.8507600824202548
+        },
+        "Q1_Q2_Q4": {
+          "families_passing": 5,
+          "family": {
+            "boolean_logic": {
+              "pass": true,
+              "removed_fraction": 0.7498889742412848,
+              "restored_fraction": 0.7578509513562357,
+              "reverse_correction_cosine": 0.8797685358708738
+            },
+            "modular_arithmetic": {
+              "pass": true,
+              "removed_fraction": 0.7844178391947922,
+              "restored_fraction": 0.7328245822629775,
+              "reverse_correction_cosine": 0.9130480636541769
+            },
+            "short_graph_traversal": {
+              "pass": true,
+              "removed_fraction": 0.6553604417165754,
+              "restored_fraction": 0.638969966991942,
+              "reverse_correction_cosine": 0.8809561936238679
+            },
+            "simple_state_transition": {
+              "pass": true,
+              "removed_fraction": 0.7562836985092288,
+              "restored_fraction": 0.72295817643939,
+              "reverse_correction_cosine": 0.8639736179719012
+            },
+            "variable_binding": {
+              "pass": true,
+              "removed_fraction": 0.7593223123481218,
+              "restored_fraction": 0.6983959908800748,
+              "reverse_correction_cosine": 0.8745876532115452
+            }
+          },
+          "pass": true,
+          "removed_fraction": 0.7458711672286547,
+          "restored_fraction": 0.7122844891989233,
+          "reverse_correction_cosine": 0.8809561936238679
+        },
+        "Q1_Q3": {
+          "families_passing": 1,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.5327216045338304,
+              "restored_fraction": 0.38160939475389877,
+              "reverse_correction_cosine": 0.7957633859361035
+            },
+            "modular_arithmetic": {
+              "pass": true,
+              "removed_fraction": 0.6546102847327284,
+              "restored_fraction": 0.5979072283422169,
+              "reverse_correction_cosine": 0.8242081779513217
+            },
+            "short_graph_traversal": {
+              "pass": false,
+              "removed_fraction": 0.5888230492141538,
+              "restored_fraction": 0.47340963501466476,
+              "reverse_correction_cosine": 0.7933908844665999
+            },
+            "simple_state_transition": {
+              "pass": false,
+              "removed_fraction": 0.6870703447260871,
+              "restored_fraction": 0.518125207817337,
+              "reverse_correction_cosine": 0.7789628978699604
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.5931763629243508,
+              "restored_fraction": 0.5871381883914294,
+              "reverse_correction_cosine": 0.7505424724536293
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.63906783630614,
+          "restored_fraction": 0.5037661293197357,
+          "reverse_correction_cosine": 0.7933908844665999
+        },
+        "Q1_Q3_Q4": {
+          "families_passing": 5,
+          "family": {
+            "boolean_logic": {
+              "pass": true,
+              "removed_fraction": 0.9964398928429539,
+              "restored_fraction": 0.890862604287564,
+              "reverse_correction_cosine": 0.9315514556998965
+            },
+            "modular_arithmetic": {
+              "pass": true,
+              "removed_fraction": 0.9598819050590625,
+              "restored_fraction": 0.9075939077846511,
+              "reverse_correction_cosine": 0.9456698221329864
+            },
+            "short_graph_traversal": {
+              "pass": true,
+              "removed_fraction": 0.9876427023179647,
+              "restored_fraction": 0.9475837651520871,
+              "reverse_correction_cosine": 0.9559156374225111
+            },
+            "simple_state_transition": {
+              "pass": true,
+              "removed_fraction": 1.0161716148611666,
+              "restored_fraction": 0.9164545025333146,
+              "reverse_correction_cosine": 0.919136311932799
+            },
+            "variable_binding": {
+              "pass": true,
+              "removed_fraction": 0.9844697788146867,
+              "restored_fraction": 0.8839559215007063,
+              "reverse_correction_cosine": 0.9218303913806148
+            }
+          },
+          "pass": true,
+          "removed_fraction": 0.9963494601373618,
+          "restored_fraction": 0.9004470390079602,
+          "reverse_correction_cosine": 0.9374871174404377
+        },
+        "Q1_Q4": {
+          "families_passing": 1,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.7327895398977979,
+              "restored_fraction": 0.5872181915668484,
+              "reverse_correction_cosine": 0.7774834685758851
+            },
+            "modular_arithmetic": {
+              "pass": true,
+              "removed_fraction": 0.6703380473989065,
+              "restored_fraction": 0.6196950727795336,
+              "reverse_correction_cosine": 0.8015863385399251
+            },
+            "short_graph_traversal": {
+              "pass": false,
+              "removed_fraction": 0.5894448156167331,
+              "restored_fraction": 0.6038512440459696,
+              "reverse_correction_cosine": 0.7931859940326962
+            },
+            "simple_state_transition": {
+              "pass": false,
+              "removed_fraction": 0.6983062490003935,
+              "restored_fraction": 0.6272622423267088,
+              "reverse_correction_cosine": 0.7527128373219322
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.8142521233170023,
+              "restored_fraction": 0.6309899129253617,
+              "reverse_correction_cosine": 0.7424261685744917
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.6935451136905081,
+          "restored_fraction": 0.6196494998641059,
+          "reverse_correction_cosine": 0.7882504800536191
+        },
+        "Q2": {
+          "families_passing": 0,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.24921297882607885,
+              "restored_fraction": 0.1396889972451945,
+              "reverse_correction_cosine": 0.4003204528866693
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.21301739624434995,
+              "restored_fraction": 0.07212959758778026,
+              "reverse_correction_cosine": 0.4033516699982742
+            },
+            "short_graph_traversal": {
+              "pass": false,
+              "removed_fraction": 0.11275831685908125,
+              "restored_fraction": 0.040970264842045565,
+              "reverse_correction_cosine": 0.3248257628613162
+            },
+            "simple_state_transition": {
+              "pass": false,
+              "removed_fraction": 0.31308223343191743,
+              "restored_fraction": 0.014145226076340793,
+              "reverse_correction_cosine": 0.4374334484123433
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.17691140269845088,
+              "restored_fraction": -0.004672355868918089,
+              "reverse_correction_cosine": 0.3608958625708807
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.21596462023242935,
+          "restored_fraction": 0.053314767875047506,
+          "reverse_correction_cosine": 0.3950561905785425
+        },
+        "Q2_Q3": {
+          "families_passing": 0,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.606066925269025,
+              "restored_fraction": 0.3882939597563291,
+              "reverse_correction_cosine": 0.7557459489057043
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.6141736910173619,
+              "restored_fraction": 0.3394491308905676,
+              "reverse_correction_cosine": 0.693462349336601
+            },
+            "short_graph_traversal": {
+              "pass": false,
+              "removed_fraction": 0.5249810426981529,
+              "restored_fraction": 0.4123264635681318,
+              "reverse_correction_cosine": 0.7527252520344404
+            },
+            "simple_state_transition": {
+              "pass": false,
+              "removed_fraction": 0.6680671277122077,
+              "restored_fraction": 0.4126893182620077,
+              "reverse_correction_cosine": 0.7302983248497195
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.6238085410941238,
+              "restored_fraction": 0.22718040651037932,
+              "reverse_correction_cosine": 0.6071949973233585
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.6131829543928715,
+          "restored_fraction": 0.3369608542821939,
+          "reverse_correction_cosine": 0.718249808709604
+        },
+        "Q2_Q3_Q4": {
+          "families_passing": 5,
+          "family": {
+            "boolean_logic": {
+              "pass": true,
+              "removed_fraction": 1.0259669546826777,
+              "restored_fraction": 0.8802106664744123,
+              "reverse_correction_cosine": 0.91942930725936
+            },
+            "modular_arithmetic": {
+              "pass": true,
+              "removed_fraction": 0.9053934888209044,
+              "restored_fraction": 0.634792175135955,
+              "reverse_correction_cosine": 0.8590048723411103
+            },
+            "short_graph_traversal": {
+              "pass": true,
+              "removed_fraction": 1.0385298456336765,
+              "restored_fraction": 0.9245946526963987,
+              "reverse_correction_cosine": 0.9424998481286274
+            },
+            "simple_state_transition": {
+              "pass": true,
+              "removed_fraction": 0.974490302255909,
+              "restored_fraction": 0.8296346714342662,
+              "reverse_correction_cosine": 0.9204649067544206
+            },
+            "variable_binding": {
+              "pass": true,
+              "removed_fraction": 1.0092392093364182,
+              "restored_fraction": 0.7926610230348944,
+              "reverse_correction_cosine": 0.8982068532055358
+            }
+          },
+          "pass": true,
+          "removed_fraction": 0.9897633169808743,
+          "restored_fraction": 0.8236776077677407,
+          "reverse_correction_cosine": 0.9142898859349309
+        },
+        "Q2_Q4": {
+          "families_passing": 1,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.7489652866832959,
+              "restored_fraction": 0.6436312161543185,
+              "reverse_correction_cosine": 0.7188841312004797
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.6340723447077999,
+              "restored_fraction": 0.41735970768868313,
+              "reverse_correction_cosine": 0.7160925649955645
+            },
+            "short_graph_traversal": {
+              "pass": true,
+              "removed_fraction": 0.6225088215418901,
+              "restored_fraction": 0.5694066073422025,
+              "reverse_correction_cosine": 0.8172393493995406
+            },
+            "simple_state_transition": {
+              "pass": false,
+              "removed_fraction": 0.7061072969219072,
+              "restored_fraction": 0.5336124536594168,
+              "reverse_correction_cosine": 0.7523863284544746
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.6731743785097907,
+              "restored_fraction": 0.5608591066512447,
+              "reverse_correction_cosine": 0.7593899255154241
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.6829915020088531,
+          "restored_fraction": 0.5449787756247139,
+          "reverse_correction_cosine": 0.7546161398702275
+        },
+        "Q3": {
+          "families_passing": 0,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.3729287831947661,
+              "restored_fraction": 0.31686127847612655,
+              "reverse_correction_cosine": 0.6860053252526503
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.44172055044342873,
+              "restored_fraction": 0.3298431386267171,
+              "reverse_correction_cosine": 0.6255158255242081
+            },
+            "short_graph_traversal": {
+              "pass": false,
+              "removed_fraction": 0.5074236946676911,
+              "restored_fraction": 0.4309223873651155,
+              "reverse_correction_cosine": 0.6966809690506326
+            },
+            "simple_state_transition": {
+              "pass": false,
+              "removed_fraction": 0.5515528870376951,
+              "restored_fraction": 0.401454710436892,
+              "reverse_correction_cosine": 0.6651660050077253
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.4475795355593396,
+              "restored_fraction": 0.2203762760149504,
+              "reverse_correction_cosine": 0.5815133646869081
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.4585375695498165,
+          "restored_fraction": 0.34982745503607565,
+          "reverse_correction_cosine": 0.6534695801688676
+        },
+        "Q3_Q4": {
+          "families_passing": 4,
+          "family": {
+            "boolean_logic": {
+              "pass": true,
+              "removed_fraction": 0.9084203943908032,
+              "restored_fraction": 0.7037756722754501,
+              "reverse_correction_cosine": 0.8479686679619416
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.8720078012693881,
+              "restored_fraction": 0.6055571908993922,
+              "reverse_correction_cosine": 0.766607669990337
+            },
+            "short_graph_traversal": {
+              "pass": true,
+              "removed_fraction": 0.964391782961807,
+              "restored_fraction": 0.9230144345325887,
+              "reverse_correction_cosine": 0.8969850153448095
+            },
+            "simple_state_transition": {
+              "pass": true,
+              "removed_fraction": 0.9504916916122059,
+              "restored_fraction": 0.7101412239303505,
+              "reverse_correction_cosine": 0.8407718773756193
+            },
+            "variable_binding": {
+              "pass": true,
+              "removed_fraction": 0.9105371043448985,
+              "restored_fraction": 0.6104571985760701,
+              "reverse_correction_cosine": 0.8219467947670054
+            }
+          },
+          "pass": true,
+          "removed_fraction": 0.9181809592444307,
+          "restored_fraction": 0.7341514003273087,
+          "reverse_correction_cosine": 0.8407718773756193
+        },
+        "Q4": {
+          "families_passing": 0,
+          "family": {
+            "boolean_logic": {
+              "pass": false,
+              "removed_fraction": 0.58026637691485,
+              "restored_fraction": 0.3670587122236175,
+              "reverse_correction_cosine": 0.591367780929148
+            },
+            "modular_arithmetic": {
+              "pass": false,
+              "removed_fraction": 0.5863324356163522,
+              "restored_fraction": 0.25610252048323423,
+              "reverse_correction_cosine": 0.5112453272229394
+            },
+            "short_graph_traversal": {
+              "pass": false,
+              "removed_fraction": 0.6111839036729498,
+              "restored_fraction": 0.5340977699272607,
+              "reverse_correction_cosine": 0.696788520988046
+            },
+            "simple_state_transition": {
+              "pass": false,
+              "removed_fraction": 0.533594149544422,
+              "restored_fraction": 0.4072578697256478,
+              "reverse_correction_cosine": 0.572031144627043
+            },
+            "variable_binding": {
+              "pass": false,
+              "removed_fraction": 0.6933163868161368,
+              "restored_fraction": 0.4391957546105476,
+              "reverse_correction_cosine": 0.6675249429438881
+            }
+          },
+          "pass": false,
+          "removed_fraction": 0.6111839036729498,
+          "restored_fraction": 0.3879178841934233,
+          "reverse_correction_cosine": 0.5952818912759302
+        }
+      },
+      "family_depth_profile": {
+        "boolean_logic": {
+          "FULL": {
+            "removed_fraction": 0.9999999882804127,
+            "restored_fraction": 0.9999999951615385,
+            "reverse_correction_cosine": 0.9999999999999317
+          },
+          "Q1": {
+            "removed_fraction": 0.22593263376644204,
+            "restored_fraction": 0.13037283898574384,
+            "reverse_correction_cosine": 0.48762207810011143
+          },
+          "Q1_Q2": {
+            "removed_fraction": 0.40201842244083286,
+            "restored_fraction": 0.25583042436195813,
+            "reverse_correction_cosine": 0.6609721707233461
+          },
+          "Q1_Q2_Q3": {
+            "removed_fraction": 0.6670694211429201,
+            "restored_fraction": 0.5533337023605698,
+            "reverse_correction_cosine": 0.8785527635038084
+          },
+          "Q1_Q2_Q4": {
+            "removed_fraction": 0.7498889742412848,
+            "restored_fraction": 0.7578509513562357,
+            "reverse_correction_cosine": 0.8797685358708738
+          },
+          "Q1_Q3": {
+            "removed_fraction": 0.5327216045338304,
+            "restored_fraction": 0.38160939475389877,
+            "reverse_correction_cosine": 0.7957633859361035
+          },
+          "Q1_Q3_Q4": {
+            "removed_fraction": 0.9964398928429539,
+            "restored_fraction": 0.890862604287564,
+            "reverse_correction_cosine": 0.9315514556998965
+          },
+          "Q1_Q4": {
+            "removed_fraction": 0.7327895398977979,
+            "restored_fraction": 0.5872181915668484,
+            "reverse_correction_cosine": 0.7774834685758851
+          },
+          "Q2": {
+            "removed_fraction": 0.24921297882607885,
+            "restored_fraction": 0.1396889972451945,
+            "reverse_correction_cosine": 0.4003204528866693
+          },
+          "Q2_Q3": {
+            "removed_fraction": 0.606066925269025,
+            "restored_fraction": 0.3882939597563291,
+            "reverse_correction_cosine": 0.7557459489057043
+          },
+          "Q2_Q3_Q4": {
+            "removed_fraction": 1.0259669546826777,
+            "restored_fraction": 0.8802106664744123,
+            "reverse_correction_cosine": 0.91942930725936
+          },
+          "Q2_Q4": {
+            "removed_fraction": 0.7489652866832959,
+            "restored_fraction": 0.6436312161543185,
+            "reverse_correction_cosine": 0.7188841312004797
+          },
+          "Q3": {
+            "removed_fraction": 0.3729287831947661,
+            "restored_fraction": 0.31686127847612655,
+            "reverse_correction_cosine": 0.6860053252526503
+          },
+          "Q3_Q4": {
+            "removed_fraction": 0.9084203943908032,
+            "restored_fraction": 0.7037756722754501,
+            "reverse_correction_cosine": 0.8479686679619416
+          },
+          "Q4": {
+            "removed_fraction": 0.58026637691485,
+            "restored_fraction": 0.3670587122236175,
+            "reverse_correction_cosine": 0.591367780929148
+          }
+        },
+        "modular_arithmetic": {
+          "FULL": {
+            "removed_fraction": 0.9999999983919752,
+            "restored_fraction": 0.999999992652049,
+            "reverse_correction_cosine": 0.9999999999999049
+          },
+          "Q1": {
+            "removed_fraction": 0.28148894174908257,
+            "restored_fraction": 0.3106014113119212,
+            "reverse_correction_cosine": 0.6380324557024927
+          },
+          "Q1_Q2": {
+            "removed_fraction": 0.46697237813916304,
+            "restored_fraction": 0.3955741332823879,
+            "reverse_correction_cosine": 0.7232830683121962
+          },
+          "Q1_Q2_Q3": {
+            "removed_fraction": 0.7828828760865751,
+            "restored_fraction": 0.683198845147188,
+            "reverse_correction_cosine": 0.8807879081919325
+          },
+          "Q1_Q2_Q4": {
+            "removed_fraction": 0.7844178391947922,
+            "restored_fraction": 0.7328245822629775,
+            "reverse_correction_cosine": 0.9130480636541769
+          },
+          "Q1_Q3": {
+            "removed_fraction": 0.6546102847327284,
+            "restored_fraction": 0.5979072283422169,
+            "reverse_correction_cosine": 0.8242081779513217
+          },
+          "Q1_Q3_Q4": {
+            "removed_fraction": 0.9598819050590625,
+            "restored_fraction": 0.9075939077846511,
+            "reverse_correction_cosine": 0.9456698221329864
+          },
+          "Q1_Q4": {
+            "removed_fraction": 0.6703380473989065,
+            "restored_fraction": 0.6196950727795336,
+            "reverse_correction_cosine": 0.8015863385399251
+          },
+          "Q2": {
+            "removed_fraction": 0.21301739624434995,
+            "restored_fraction": 0.07212959758778026,
+            "reverse_correction_cosine": 0.4033516699982742
+          },
+          "Q2_Q3": {
+            "removed_fraction": 0.6141736910173619,
+            "restored_fraction": 0.3394491308905676,
+            "reverse_correction_cosine": 0.693462349336601
+          },
+          "Q2_Q3_Q4": {
+            "removed_fraction": 0.9053934888209044,
+            "restored_fraction": 0.634792175135955,
+            "reverse_correction_cosine": 0.8590048723411103
+          },
+          "Q2_Q4": {
+            "removed_fraction": 0.6340723447077999,
+            "restored_fraction": 0.41735970768868313,
+            "reverse_correction_cosine": 0.7160925649955645
+          },
+          "Q3": {
+            "removed_fraction": 0.44172055044342873,
+            "restored_fraction": 0.3298431386267171,
+            "reverse_correction_cosine": 0.6255158255242081
+          },
+          "Q3_Q4": {
+            "removed_fraction": 0.8720078012693881,
+            "restored_fraction": 0.6055571908993922,
+            "reverse_correction_cosine": 0.766607669990337
+          },
+          "Q4": {
+            "removed_fraction": 0.5863324356163522,
+            "restored_fraction": 0.25610252048323423,
+            "reverse_correction_cosine": 0.5112453272229394
+          }
+        },
+        "short_graph_traversal": {
+          "FULL": {
+            "removed_fraction": 0.9999999806906172,
+            "restored_fraction": 0.9999999961378753,
+            "reverse_correction_cosine": 0.9999999999998241
+          },
+          "Q1": {
+            "removed_fraction": 0.05283946039665568,
+            "restored_fraction": 0.06298580777557611,
+            "reverse_correction_cosine": 0.34908338040159853
+          },
+          "Q1_Q2": {
+            "removed_fraction": 0.13751568124731253,
+            "restored_fraction": 0.09668818649418101,
+            "reverse_correction_cosine": 0.5503115886737869
+          },
+          "Q1_Q2_Q3": {
+            "removed_fraction": 0.48039327501498796,
+            "restored_fraction": 0.4698493131808583,
+            "reverse_correction_cosine": 0.8443697407254083
+          },
+          "Q1_Q2_Q4": {
+            "removed_fraction": 0.6553604417165754,
+            "restored_fraction": 0.638969966991942,
+            "reverse_correction_cosine": 0.8809561936238679
+          },
+          "Q1_Q3": {
+            "removed_fraction": 0.5888230492141538,
+            "restored_fraction": 0.47340963501466476,
+            "reverse_correction_cosine": 0.7933908844665999
+          },
+          "Q1_Q3_Q4": {
+            "removed_fraction": 0.9876427023179647,
+            "restored_fraction": 0.9475837651520871,
+            "reverse_correction_cosine": 0.9559156374225111
+          },
+          "Q1_Q4": {
+            "removed_fraction": 0.5894448156167331,
+            "restored_fraction": 0.6038512440459696,
+            "reverse_correction_cosine": 0.7931859940326962
+          },
+          "Q2": {
+            "removed_fraction": 0.11275831685908125,
+            "restored_fraction": 0.040970264842045565,
+            "reverse_correction_cosine": 0.3248257628613162
+          },
+          "Q2_Q3": {
+            "removed_fraction": 0.5249810426981529,
+            "restored_fraction": 0.4123264635681318,
+            "reverse_correction_cosine": 0.7527252520344404
+          },
+          "Q2_Q3_Q4": {
+            "removed_fraction": 1.0385298456336765,
+            "restored_fraction": 0.9245946526963987,
+            "reverse_correction_cosine": 0.9424998481286274
+          },
+          "Q2_Q4": {
+            "removed_fraction": 0.6225088215418901,
+            "restored_fraction": 0.5694066073422025,
+            "reverse_correction_cosine": 0.8172393493995406
+          },
+          "Q3": {
+            "removed_fraction": 0.5074236946676911,
+            "restored_fraction": 0.4309223873651155,
+            "reverse_correction_cosine": 0.6966809690506326
+          },
+          "Q3_Q4": {
+            "removed_fraction": 0.964391782961807,
+            "restored_fraction": 0.9230144345325887,
+            "reverse_correction_cosine": 0.8969850153448095
+          },
+          "Q4": {
+            "removed_fraction": 0.6111839036729498,
+            "restored_fraction": 0.5340977699272607,
+            "reverse_correction_cosine": 0.696788520988046
+          }
+        },
+        "simple_state_transition": {
+          "FULL": {
+            "removed_fraction": 1.0000000050770987,
+            "restored_fraction": 0.9999999921380214,
+            "reverse_correction_cosine": 0.9999999999998207
+          },
+          "Q1": {
+            "removed_fraction": 0.2868998244718632,
+            "restored_fraction": 0.12682497902039977,
+            "reverse_correction_cosine": 0.437536916987241
+          },
+          "Q1_Q2": {
+            "removed_fraction": 0.2990901682364676,
+            "restored_fraction": 0.1953517134427432,
+            "reverse_correction_cosine": 0.5972644881611441
+          },
+          "Q1_Q2_Q3": {
+            "removed_fraction": 0.7077003140922521,
+            "restored_fraction": 0.5954660316341386,
+            "reverse_correction_cosine": 0.8468608543357223
+          },
+          "Q1_Q2_Q4": {
+            "removed_fraction": 0.7562836985092288,
+            "restored_fraction": 0.72295817643939,
+            "reverse_correction_cosine": 0.8639736179719012
+          },
+          "Q1_Q3": {
+            "removed_fraction": 0.6870703447260871,
+            "restored_fraction": 0.518125207817337,
+            "reverse_correction_cosine": 0.7789628978699604
+          },
+          "Q1_Q3_Q4": {
+            "removed_fraction": 1.0161716148611666,
+            "restored_fraction": 0.9164545025333146,
+            "reverse_correction_cosine": 0.919136311932799
+          },
+          "Q1_Q4": {
+            "removed_fraction": 0.6983062490003935,
+            "restored_fraction": 0.6272622423267088,
+            "reverse_correction_cosine": 0.7527128373219322
+          },
+          "Q2": {
+            "removed_fraction": 0.31308223343191743,
+            "restored_fraction": 0.014145226076340793,
+            "reverse_correction_cosine": 0.4374334484123433
+          },
+          "Q2_Q3": {
+            "removed_fraction": 0.6680671277122077,
+            "restored_fraction": 0.4126893182620077,
+            "reverse_correction_cosine": 0.7302983248497195
+          },
+          "Q2_Q3_Q4": {
+            "removed_fraction": 0.974490302255909,
+            "restored_fraction": 0.8296346714342662,
+            "reverse_correction_cosine": 0.9204649067544206
+          },
+          "Q2_Q4": {
+            "removed_fraction": 0.7061072969219072,
+            "restored_fraction": 0.5336124536594168,
+            "reverse_correction_cosine": 0.7523863284544746
+          },
+          "Q3": {
+            "removed_fraction": 0.5515528870376951,
+            "restored_fraction": 0.401454710436892,
+            "reverse_correction_cosine": 0.6651660050077253
+          },
+          "Q3_Q4": {
+            "removed_fraction": 0.9504916916122059,
+            "restored_fraction": 0.7101412239303505,
+            "reverse_correction_cosine": 0.8407718773756193
+          },
+          "Q4": {
+            "removed_fraction": 0.533594149544422,
+            "restored_fraction": 0.4072578697256478,
+            "reverse_correction_cosine": 0.572031144627043
+          }
+        },
+        "variable_binding": {
+          "FULL": {
+            "removed_fraction": 1.0000000007190746,
+            "restored_fraction": 0.9999999970767954,
+            "reverse_correction_cosine": 0.9999999999998614
+          },
+          "Q1": {
+            "removed_fraction": 0.2114324206328459,
+            "restored_fraction": 0.06586261994065878,
+            "reverse_correction_cosine": 0.33788772649845766
+          },
+          "Q1_Q2": {
+            "removed_fraction": 0.2511701718726762,
+            "restored_fraction": 0.12058980341570065,
+            "reverse_correction_cosine": 0.5108961694022164
+          },
+          "Q1_Q2_Q3": {
+            "removed_fraction": 0.6535095766984739,
+            "restored_fraction": 0.5640425488797933,
+            "reverse_correction_cosine": 0.8154099433383912
+          },
+          "Q1_Q2_Q4": {
+            "removed_fraction": 0.7593223123481218,
+            "restored_fraction": 0.6983959908800748,
+            "reverse_correction_cosine": 0.8745876532115452
+          },
+          "Q1_Q3": {
+            "removed_fraction": 0.5931763629243508,
+            "restored_fraction": 0.5871381883914294,
+            "reverse_correction_cosine": 0.7505424724536293
+          },
+          "Q1_Q3_Q4": {
+            "removed_fraction": 0.9844697788146867,
+            "restored_fraction": 0.8839559215007063,
+            "reverse_correction_cosine": 0.9218303913806148
+          },
+          "Q1_Q4": {
+            "removed_fraction": 0.8142521233170023,
+            "restored_fraction": 0.6309899129253617,
+            "reverse_correction_cosine": 0.7424261685744917
+          },
+          "Q2": {
+            "removed_fraction": 0.17691140269845088,
+            "restored_fraction": -0.004672355868918089,
+            "reverse_correction_cosine": 0.3608958625708807
+          },
+          "Q2_Q3": {
+            "removed_fraction": 0.6238085410941238,
+            "restored_fraction": 0.22718040651037932,
+            "reverse_correction_cosine": 0.6071949973233585
+          },
+          "Q2_Q3_Q4": {
+            "removed_fraction": 1.0092392093364182,
+            "restored_fraction": 0.7926610230348944,
+            "reverse_correction_cosine": 0.8982068532055358
+          },
+          "Q2_Q4": {
+            "removed_fraction": 0.6731743785097907,
+            "restored_fraction": 0.5608591066512447,
+            "reverse_correction_cosine": 0.7593899255154241
+          },
+          "Q3": {
+            "removed_fraction": 0.4475795355593396,
+            "restored_fraction": 0.2203762760149504,
+            "reverse_correction_cosine": 0.5815133646869081
+          },
+          "Q3_Q4": {
+            "removed_fraction": 0.9105371043448985,
+            "restored_fraction": 0.6104571985760701,
+            "reverse_correction_cosine": 0.8219467947670054
+          },
+          "Q4": {
+            "removed_fraction": 0.6933163868161368,
+            "restored_fraction": 0.4391957546105476,
+            "reverse_correction_cosine": 0.6675249429438881
+          }
+        }
+      },
+      "late_consolidation": {
+        "family_pass": {
+          "boolean_logic": false,
+          "modular_arithmetic": false,
+          "short_graph_traversal": true,
+          "simple_state_transition": false,
+          "variable_binding": false
+        },
+        "pass": false,
+        "values": {
+          "Q1_Q2": {
+            "REM": 0.2912176054638181,
+            "REST": 0.19277854150947216
+          },
+          "Q3_Q4": {
+            "REM": 0.9181809592444307,
+            "REST": 0.7341514003273087
+          }
+        }
+      },
+      "leaveout": {
+        "FULL_MINUS_Q1": {
+          "family": {
+            "boolean_logic": 0.11978934077768767,
+            "modular_arithmetic": 0.36520780697101624,
+            "short_graph_traversal": 0.07540534069483304,
+            "simple_state_transition": 0.17036531043719869,
+            "variable_binding": 0.20733900649416
+          },
+          "median_loss_fraction": 0.1763224417045531
+        },
+        "FULL_MINUS_Q2": {
+          "family": {
+            "boolean_logic": 0.2908176656346184,
+            "modular_arithmetic": 0.24067396974628563,
+            "short_graph_traversal": 0.1032752501828338,
+            "simple_state_transition": 0.19878352155740822,
+            "variable_binding": 0.18554540923781998
+          },
+          "median_loss_fraction": 0.1876766438191807
+        },
+        "FULL_MINUS_Q3": {
+          "family": {
+            "boolean_logic": 0.3744246402195882,
+            "modular_arithmetic": 0.4300290966542474,
+            "short_graph_traversal": 0.4328724699238995,
+            "simple_state_transition": 0.45182475305356407,
+            "variable_binding": 0.3875118516420215
+          },
+          "median_loss_fraction": 0.4117148844191311
+        },
+        "FULL_MINUS_Q4": {
+          "family": {
+            "boolean_logic": 0.5802663631668595,
+            "modular_arithmetic": 0.5863324549353319,
+            "short_graph_traversal": 0.6111838998108253,
+            "simple_state_transition": 0.5335941314158867,
+            "variable_binding": 0.6933163636758873
+          },
+          "median_loss_fraction": 0.6111838998108253
+        }
+      },
+      "pair_interactions": {
+        "Q1_Q2": {
+          "family_projection": {
+            "boolean_logic": -0.06176401669191583,
+            "modular_arithmetic": -0.04096981860760518,
+            "short_graph_traversal": -0.046977990966896706,
+            "simple_state_transition": -0.07840517416997567,
+            "variable_binding": -0.05545687418550285
+          },
+          "interaction_definition": "Y_pair - Y_i - Y_j + Y_conv",
+          "median_projection_to_full_correction": -0.05587849937138876,
+          "median_relative_norm": 0.35056905706058794
+        },
+        "Q1_Q3": {
+          "family_projection": {
+            "boolean_logic": -0.06177633185557913,
+            "modular_arithmetic": -0.08482728780567259,
+            "short_graph_traversal": -0.03119662847742859,
+            "simple_state_transition": -0.06532718703230252,
+            "variable_binding": -0.04086035151922697
+          },
+          "interaction_definition": "Y_pair - Y_i - Y_j + Y_conv",
+          "median_projection_to_full_correction": -0.04815944713770652,
+          "median_relative_norm": 0.3266010868865483
+        },
+        "Q1_Q4": {
+          "family_projection": {
+            "boolean_logic": -0.03968274054797359,
+            "modular_arithmetic": -0.05380355789494333,
+            "short_graph_traversal": -0.029438896200149223,
+            "simple_state_transition": -0.033111603300200444,
+            "variable_binding": -0.03543756040337956
+          },
+          "interaction_definition": "Y_pair - Y_i - Y_j + Y_conv",
+          "median_projection_to_full_correction": -0.03609751814521808,
+          "median_relative_norm": 0.24539690909408357
+        },
+        "Q2_Q3": {
+          "family_projection": {
+            "boolean_logic": -0.04899750632216526,
+            "modular_arithmetic": -0.05992383008792463,
+            "short_graph_traversal": -0.039570778244793346,
+            "simple_state_transition": -0.0798287885021427,
+            "variable_binding": -0.026136336999163026
+          },
+          "interaction_definition": "Y_pair - Y_i - Y_j + Y_conv",
+          "median_projection_to_full_correction": -0.04759700515793831,
+          "median_relative_norm": 0.3520397929827109
+        },
+        "Q2_Q4": {
+          "family_projection": {
+            "boolean_logic": -0.021674143357406757,
+            "modular_arithmetic": -0.02264278098440499,
+            "short_graph_traversal": -0.019321820087474163,
+            "simple_state_transition": -0.011210497846774263,
+            "variable_binding": -0.03713102855485431
+          },
+          "interaction_definition": "Y_pair - Y_i - Y_j + Y_conv",
+          "median_projection_to_full_correction": -0.019321820087474163,
+          "median_relative_norm": 0.2541223231565056
+        },
+        "Q3_Q4": {
+          "family_projection": {
+            "boolean_logic": -0.05862665626943955,
+            "modular_arithmetic": -0.06346823072240623,
+            "short_graph_traversal": -0.0684310016627874,
+            "simple_state_transition": -0.06020300077487692,
+            "variable_binding": -0.03913208008633989
+          },
+          "interaction_definition": "Y_pair - Y_i - Y_j + Y_conv",
+          "median_projection_to_full_correction": -0.057516070592239635,
+          "median_relative_norm": 0.29527309048679556
+        }
+      },
+      "pairs": {
+        "Q1_Q2": {
+          "complementary": {
+            "family_pass": {
+              "boolean_logic": true,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": false,
+              "variable_binding": false
+            },
+            "pass": false,
+            "values": {
+              "Q1": {
+                "REM": 0.2273364485610687,
+                "REST": 0.12682497902039977
+              },
+              "Q1_Q2": {
+                "REM": 0.2912176054638181,
+                "REST": 0.19277854150947216
+              },
+              "Q2": {
+                "REM": 0.21596462023242935,
+                "REST": 0.053314767875047506
+              }
+            }
+          },
+          "redundancy": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": false,
+              "variable_binding": false
+            },
+            "pass": false,
+            "values": {
+              "Q1": {
+                "REM": 0.2273364485610687,
+                "REST": 0.12682497902039977
+              },
+              "Q1_Q2": {
+                "REM": 0.2912176054638181,
+                "REST": 0.19277854150947216
+              },
+              "Q2": {
+                "REM": 0.21596462023242935,
+                "REST": 0.053314767875047506
+              }
+            }
+          }
+        },
+        "Q1_Q3": {
+          "complementary": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": true,
+              "short_graph_traversal": false,
+              "simple_state_transition": true,
+              "variable_binding": true
+            },
+            "pass": false,
+            "values": {
+              "Q1": {
+                "REM": 0.2273364485610687,
+                "REST": 0.12682497902039977
+              },
+              "Q1_Q3": {
+                "REM": 0.63906783630614,
+                "REST": 0.5037661293197357
+              },
+              "Q3": {
+                "REM": 0.4585375695498165,
+                "REST": 0.34982745503607565
+              }
+            }
+          },
+          "redundancy": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": false,
+              "variable_binding": false
+            },
+            "pass": false,
+            "values": {
+              "Q1": {
+                "REM": 0.2273364485610687,
+                "REST": 0.12682497902039977
+              },
+              "Q1_Q3": {
+                "REM": 0.63906783630614,
+                "REST": 0.5037661293197357
+              },
+              "Q3": {
+                "REM": 0.4585375695498165,
+                "REST": 0.34982745503607565
+              }
+            }
+          }
+        },
+        "Q1_Q4": {
+          "complementary": {
+            "family_pass": {
+              "boolean_logic": true,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": true,
+              "variable_binding": true
+            },
+            "pass": false,
+            "values": {
+              "Q1": {
+                "REM": 0.2273364485610687,
+                "REST": 0.12682497902039977
+              },
+              "Q1_Q4": {
+                "REM": 0.6935451136905081,
+                "REST": 0.6196494998641059
+              },
+              "Q4": {
+                "REM": 0.6111839036729498,
+                "REST": 0.3879178841934233
+              }
+            }
+          },
+          "redundancy": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": false,
+              "variable_binding": false
+            },
+            "pass": false,
+            "values": {
+              "Q1": {
+                "REM": 0.2273364485610687,
+                "REST": 0.12682497902039977
+              },
+              "Q1_Q4": {
+                "REM": 0.6935451136905081,
+                "REST": 0.6196494998641059
+              },
+              "Q4": {
+                "REM": 0.6111839036729498,
+                "REST": 0.3879178841934233
+              }
+            }
+          }
+        },
+        "Q2_Q3": {
+          "complementary": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": false,
+              "variable_binding": false
+            },
+            "pass": false,
+            "values": {
+              "Q2": {
+                "REM": 0.21596462023242935,
+                "REST": 0.053314767875047506
+              },
+              "Q2_Q3": {
+                "REM": 0.6131829543928715,
+                "REST": 0.3369608542821939
+              },
+              "Q3": {
+                "REM": 0.4585375695498165,
+                "REST": 0.34982745503607565
+              }
+            }
+          },
+          "redundancy": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": false,
+              "variable_binding": false
+            },
+            "pass": false,
+            "values": {
+              "Q2": {
+                "REM": 0.21596462023242935,
+                "REST": 0.053314767875047506
+              },
+              "Q2_Q3": {
+                "REM": 0.6131829543928715,
+                "REST": 0.3369608542821939
+              },
+              "Q3": {
+                "REM": 0.4585375695498165,
+                "REST": 0.34982745503607565
+              }
+            }
+          }
+        },
+        "Q2_Q4": {
+          "complementary": {
+            "family_pass": {
+              "boolean_logic": true,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": true,
+              "variable_binding": false
+            },
+            "pass": false,
+            "values": {
+              "Q2": {
+                "REM": 0.21596462023242935,
+                "REST": 0.053314767875047506
+              },
+              "Q2_Q4": {
+                "REM": 0.6829915020088531,
+                "REST": 0.5449787756247139
+              },
+              "Q4": {
+                "REM": 0.6111839036729498,
+                "REST": 0.3879178841934233
+              }
+            }
+          },
+          "redundancy": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": false,
+              "variable_binding": false
+            },
+            "pass": false,
+            "values": {
+              "Q2": {
+                "REM": 0.21596462023242935,
+                "REST": 0.053314767875047506
+              },
+              "Q2_Q4": {
+                "REM": 0.6829915020088531,
+                "REST": 0.5449787756247139
+              },
+              "Q4": {
+                "REM": 0.6111839036729498,
+                "REST": 0.3879178841934233
+              }
+            }
+          }
+        },
+        "Q3_Q4": {
+          "complementary": {
+            "family_pass": {
+              "boolean_logic": true,
+              "modular_arithmetic": true,
+              "short_graph_traversal": true,
+              "simple_state_transition": true,
+              "variable_binding": true
+            },
+            "pass": true,
+            "values": {
+              "Q3": {
+                "REM": 0.4585375695498165,
+                "REST": 0.34982745503607565
+              },
+              "Q3_Q4": {
+                "REM": 0.9181809592444307,
+                "REST": 0.7341514003273087
+              },
+              "Q4": {
+                "REM": 0.6111839036729498,
+                "REST": 0.3879178841934233
+              }
+            }
+          },
+          "redundancy": {
+            "family_pass": {
+              "boolean_logic": false,
+              "modular_arithmetic": false,
+              "short_graph_traversal": false,
+              "simple_state_transition": false,
+              "variable_binding": false
+            },
+            "pass": false,
+            "values": {
+              "Q3": {
+                "REM": 0.4585375695498165,
+                "REST": 0.34982745503607565
+              },
+              "Q3_Q4": {
+                "REM": 0.9181809592444307,
+                "REST": 0.7341514003273087
+              },
+              "Q4": {
+                "REM": 0.6111839036729498,
+                "REST": 0.3879178841934233
+              }
+            }
+          }
+        }
+      },
+      "progressive_accumulation": {
+        "early_curve": {
+          "REM": [
+            0.2273364485610687,
+            0.2912176054638181,
+            0.6535095766984739,
+            0.9999999949527622
+          ],
+          "REST": [
+            0.12682497902039977,
+            0.19277854150947216,
+            0.5696697654726027,
+            0.9999999940597715
+          ]
+        },
+        "family_pass": {
+          "boolean_logic": true,
+          "modular_arithmetic": true,
+          "short_graph_traversal": false,
+          "simple_state_transition": false,
+          "variable_binding": false
+        },
+        "pass": false
+      },
+      "redundant_pair_passes": [],
+      "refinement_candidates": [
+        "Q3_Q4"
+      ],
+      "serial_pair_passes": [],
+      "serial_pairs": {
+        "Q2_Q3": {
+          "family_pass": {
+            "boolean_logic": false,
+            "modular_arithmetic": false,
+            "short_graph_traversal": false,
+            "simple_state_transition": false,
+            "variable_binding": false
+          },
+          "pass": false,
+          "values": {
+            "conditional_late_gain": 0.012857775624819536,
+            "interaction_projection": -0.0028414413387399533,
+            "removal_interaction": -0.06131923538937434
+          }
+        },
+        "Q2_Q4": {
+          "family_pass": {
+            "boolean_logic": false,
+            "modular_arithmetic": false,
+            "short_graph_traversal": false,
+            "simple_state_transition": false,
+            "variable_binding": false
+          },
+          "pass": false,
+          "values": {
+            "conditional_late_gain": 0.06423424341816393,
+            "interaction_projection": -0.0010288000181296307,
+            "removal_interaction": -0.14415702189652613
+          }
+        },
+        "Q3_Q4": {
+          "family_pass": {
+            "boolean_logic": false,
+            "modular_arithmetic": false,
+            "short_graph_traversal": false,
+            "simple_state_transition": false,
+            "variable_binding": false
+          },
+          "pass": false,
+          "values": {
+            "conditional_late_gain": 0.00636403314634241,
+            "interaction_projection": -0.007940095675398714,
+            "removal_interaction": -0.15154051397833568
+          }
+        }
+      },
+      "single_quartile_passes": [],
+      "strong_pair_passes": [
+        "Q3_Q4"
+      ],
+      "token_category_depth_profile": {
+        "CJK_SURFACE_UNRESOLVED": {
+          "Q1": {
+            "removed_fraction": 0.07914905213323496,
+            "restored_fraction": 0.09766735575428762
+          },
+          "Q2": {
+            "removed_fraction": 0.15000589735913078,
+            "restored_fraction": 0.02408297656424244
+          },
+          "Q3": {
+            "removed_fraction": 0.3983647563750643,
+            "restored_fraction": 0.35662084653643455
+          },
+          "Q4": {
+            "removed_fraction": 0.6274628693480407,
+            "restored_fraction": 0.5678633772099134
+          }
+        },
+        "FUNCTION_WORD": {
+          "Q1": {
+            "removed_fraction": 0.5325784741669446,
+            "restored_fraction": 0.32042041336612803
+          },
+          "Q2": {
+            "removed_fraction": 0.17965848937364384,
+            "restored_fraction": -0.08785963973707957
+          },
+          "Q3": {
+            "removed_fraction": 0.4639719605569377,
+            "restored_fraction": 0.5028414745427006
+          },
+          "Q4": {
+            "removed_fraction": 0.43901760318703104,
+            "restored_fraction": 0.24265693841449326
+          }
+        },
+        "LEXICAL_SURFACE": {
+          "Q1": {
+            "removed_fraction": 0.20562580770043443,
+            "restored_fraction": 0.040314861549307315
+          },
+          "Q2": {
+            "removed_fraction": 0.2819618962139252,
+            "restored_fraction": 0.07207552698158307
+          },
+          "Q3": {
+            "removed_fraction": 0.4519454144046646,
+            "restored_fraction": 0.2955167087239733
+          },
+          "Q4": {
+            "removed_fraction": 0.5658679598904897,
+            "restored_fraction": 0.38093047645242195
+          }
+        },
+        "NUMERIC": {
+          "Q1": {
+            "removed_fraction": 0.3027636586379509,
+            "restored_fraction": 0.3562950453772947
+          },
+          "Q2": {
+            "removed_fraction": 0.25802453804876135,
+            "restored_fraction": 0.1785055878827443
+          },
+          "Q3": {
+            "removed_fraction": 0.5959376187487981,
+            "restored_fraction": 0.3474330986706632
+          },
+          "Q4": {
+            "removed_fraction": 0.5264044480975056,
+            "restored_fraction": 0.1928275714097772
+          }
+        },
+        "PUNCTUATION_OR_STRUCTURE": {
+          "Q1": {
+            "removed_fraction": 0.2114324206328459,
+            "restored_fraction": 0.11363968478849777
+          },
+          "Q2": {
+            "removed_fraction": 0.20950860401494623,
+            "restored_fraction": 0.025314049261327166
+          },
+          "Q3": {
+            "removed_fraction": 0.4314617659225895,
+            "restored_fraction": 0.339389256786714
+          },
+          "Q4": {
+            "removed_fraction": 0.7089912636001324,
+            "restored_fraction": 0.526842682836575
+          }
+        }
+      }
+    }
+  },
+  "role": "development",
+  "shared_qualitative_this_role": {
+    "complementary_pairs": [
+      "Q3_Q4"
+    ],
+    "late": false,
+    "progressive": false,
+    "redundant_pairs": [],
+    "serial_pairs": [],
+    "strong_pairs": [
+      "Q3_Q4"
+    ],
+    "strong_quartiles": []
+  },
+  "thresholds_retuned": false
+}

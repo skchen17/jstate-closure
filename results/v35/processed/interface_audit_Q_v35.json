@@ -1,0 +1,2776 @@
+{
+  "V34_exact_recurrent_read_interface_reused": true,
+  "all_writeback_exact": true,
+  "bitwise_baseline_replay": true,
+  "branch_cache_hashes": {
+    "CONV": {
+      "Conv": "48041f06639da024f01a44e4585c9524324bc0ce7102aeb7e94a0b5e0176448f",
+      "KV": "78e1ed9e4a8eb5a025200145594b3299d5acd9dc10cc199535e765cd9796d7f6",
+      "REC": "0c80c9dca7e040f2de0562d5172e0d784951540ed2f031059f29a73eb27582ad"
+    },
+    "JOINT": {
+      "Conv": "48041f06639da024f01a44e4585c9524324bc0ce7102aeb7e94a0b5e0176448f",
+      "KV": "78e1ed9e4a8eb5a025200145594b3299d5acd9dc10cc199535e765cd9796d7f6",
+      "REC": "948b972b9ad09b2cf8415855c28e05c55b6ae3a585eb947717e370c5a0843e2f"
+    }
+  },
+  "calibration_only": true,
+  "condition_layers_hash": "c84ef4e4e7fdd7103b04791a4b12234f1f932dac126fa9c4b190c23c9e72e9a0",
+  "formal_development_or_validation_observed": false,
+  "group_hash": "78981fd2c0bdcb49924966a2f7646916c589189fc81fdb262e875c6e0a96835f",
+  "group_layers": {
+    "Q1": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "Q2": [
+      8,
+      9,
+      10,
+      12,
+      13,
+      14
+    ],
+    "Q3": [
+      16,
+      17,
+      18,
+      20,
+      21,
+      22
+    ],
+    "Q4": [
+      24,
+      25,
+      26,
+      28,
+      29,
+      30
+    ]
+  },
+  "model_key": "Q",
+  "native_swap_proofs": {
+    "CONV": {
+      "channels": [
+        "Conv"
+      ],
+      "donor_hashes": {
+        "Conv": "48041f06639da024f01a44e4585c9524324bc0ce7102aeb7e94a0b5e0176448f",
+        "KV": "d4d6f78a17cb29eb5144f84b78fd57d6a88fa9a59f09e40c0376e18effd31458",
+        "REC": "948b972b9ad09b2cf8415855c28e05c55b6ae3a585eb947717e370c5a0843e2f"
+      },
+      "realized_hashes": {
+        "Conv": "48041f06639da024f01a44e4585c9524324bc0ce7102aeb7e94a0b5e0176448f",
+        "KV": "78e1ed9e4a8eb5a025200145594b3299d5acd9dc10cc199535e765cd9796d7f6",
+        "REC": "0c80c9dca7e040f2de0562d5172e0d784951540ed2f031059f29a73eb27582ad"
+      },
+      "recipient_hashes": {
+        "Conv": "d859957118f536c3eb0e478458e9820caf501863396ff291a9f9a3965f50c682",
+        "KV": "78e1ed9e4a8eb5a025200145594b3299d5acd9dc10cc199535e765cd9796d7f6",
+        "REC": "0c80c9dca7e040f2de0562d5172e0d784951540ed2f031059f29a73eb27582ad"
+      },
+      "requested_exact": true,
+      "seq_length": 62,
+      "touched_fields": 24,
+      "untouched_exact": true
+    },
+    "JOINT": {
+      "channels": [
+        "Conv",
+        "REC"
+      ],
+      "donor_hashes": {
+        "Conv": "48041f06639da024f01a44e4585c9524324bc0ce7102aeb7e94a0b5e0176448f",
+        "KV": "d4d6f78a17cb29eb5144f84b78fd57d6a88fa9a59f09e40c0376e18effd31458",
+        "REC": "948b972b9ad09b2cf8415855c28e05c55b6ae3a585eb947717e370c5a0843e2f"
+      },
+      "realized_hashes": {
+        "Conv": "48041f06639da024f01a44e4585c9524324bc0ce7102aeb7e94a0b5e0176448f",
+        "KV": "78e1ed9e4a8eb5a025200145594b3299d5acd9dc10cc199535e765cd9796d7f6",
+        "REC": "948b972b9ad09b2cf8415855c28e05c55b6ae3a585eb947717e370c5a0843e2f"
+      },
+      "recipient_hashes": {
+        "Conv": "d859957118f536c3eb0e478458e9820caf501863396ff291a9f9a3965f50c682",
+        "KV": "78e1ed9e4a8eb5a025200145594b3299d5acd9dc10cc199535e765cd9796d7f6",
+        "REC": "0c80c9dca7e040f2de0562d5172e0d784951540ed2f031059f29a73eb27582ad"
+      },
+      "requested_exact": true,
+      "seq_length": 62,
+      "touched_fields": 48,
+      "untouched_exact": true
+    }
+  },
+  "probe_id": 15,
+  "recurrent_layers": 24,
+  "state_id": "v13-train-9682dddfb1823feb32f1",
+  "tests": [
+    {
+      "cache_hashes": {
+        "Conv": "7902efcc84702107dab5c42588669be6efc51d55b1625e8e283356742eddb334",
+        "KV": "89feab1768661235804a14c0c7d95f902e25823a495af73d6f0df54fad413584",
+        "REC": "f3960bc1bf81b950b85dded59bba6de8064155a31129d6e1904b7ec34c0126ef"
+      },
+      "condition": "Q1",
+      "direction": "REMOVE",
+      "logits_hash": "6375680c0be8070689c9dcb4f9acec9f0e8a86db7bba58bbfedbc44dd44b6fe7",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 6,
+        "native_hash": "3192371b1e33dbe195165296c0c7c1628e58cac32dc3817a852ff70e78facfe1",
+        "per_layer": {
+          "0": {
+            "exact_writeback": true,
+            "native_hash": "ee13bc75d1ebab637d42585befcb7016e65df165b6e304e4492143b32bf89f54",
+            "realized_hash": "3c1c5819711b7266d5588960d1c54556138a6f6ee2746cff07ee75133e309165",
+            "requested_hash": "3c1c5819711b7266d5588960d1c54556138a6f6ee2746cff07ee75133e309165",
+            "source": "CONV"
+          },
+          "1": {
+            "exact_writeback": true,
+            "native_hash": "6fe736b8440e1bd05fc9c63e4f709f0313715051e6e72bb14849bb5ac85d8ec4",
+            "realized_hash": "711157079073b253bb95665fa43175a82424114a0211e06aeab98609753634b7",
+            "requested_hash": "711157079073b253bb95665fa43175a82424114a0211e06aeab98609753634b7",
+            "source": "CONV"
+          },
+          "2": {
+            "exact_writeback": true,
+            "native_hash": "5e78b9a4bba188a80d7f84858d7e294bff016b45eec575d049a4db30a704e3f8",
+            "realized_hash": "e30e2631823b267e39338cfc9cc45607f65c7949f9c0d760028b943ceeefdb94",
+            "requested_hash": "e30e2631823b267e39338cfc9cc45607f65c7949f9c0d760028b943ceeefdb94",
+            "source": "CONV"
+          },
+          "4": {
+            "exact_writeback": true,
+            "native_hash": "41447599dda662ebb7d824bce3d5c94f5b1a348c7b7f37eb3bc1899892f6960e",
+            "realized_hash": "5984eb824bd4f54558021f0cde66e78453c3fe1f7d47074a494193bd66d429a3",
+            "requested_hash": "5984eb824bd4f54558021f0cde66e78453c3fe1f7d47074a494193bd66d429a3",
+            "source": "CONV"
+          },
+          "5": {
+            "exact_writeback": true,
+            "native_hash": "5fcb7ab6a5b1c3215b7aef9faab707fe4d19a152d5e907024b2786cc7aff9a82",
+            "realized_hash": "ac86d4306427cf4264894db20ed84bce949a12948be65352bed1268a1c584dad",
+            "requested_hash": "ac86d4306427cf4264894db20ed84bce949a12948be65352bed1268a1c584dad",
+            "source": "CONV"
+          },
+          "6": {
+            "exact_writeback": true,
+            "native_hash": "40254f5b18c99c4cfbdb08bda81cb433d21d1afd37b334333154d3669d44a3e4",
+            "realized_hash": "08eb1ddd6856079c62512f18c26a6f2124ee474b00503735ebe922aeeed561a9",
+            "requested_hash": "08eb1ddd6856079c62512f18c26a6f2124ee474b00503735ebe922aeeed561a9",
+            "source": "CONV"
+          }
+        },
+        "realized_hash": "ce1f12a8a118e5880ece0c57898576cf4e5cf5891f0f52b180bea9e76e315617",
+        "requested_hash": "ce1f12a8a118e5880ece0c57898576cf4e5cf5891f0f52b180bea9e76e315617",
+        "source_map_hash": "f4794770469d31d99acabd377a42aaf48c018123118693094fbace5d12883d44"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "ef195f5e135351fe30a27dfc72993c7b471d2cef8654d5f0cb483bc3327a61cf",
+        "KV": "364276af21c45db7a9c83ac047003e9549f848fb27fb013f09072dd01f120a42",
+        "REC": "cdb1f0c28192751d48f48ccd9d8b063bd51c9017143ff2265d8fa2f53acddc9b"
+      },
+      "condition": "Q1",
+      "direction": "RESTORE",
+      "logits_hash": "1e113d62332ebf117a277f75fe2ddc8f6012a422ce1486ea13459007d4c86cb7",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 6,
+        "native_hash": "3ff4724e0ced082188471568cf0dedf6ea18b5029003d364b88308710d6b9c44",
+        "per_layer": {
+          "0": {
+            "exact_writeback": true,
+            "native_hash": "3c1c5819711b7266d5588960d1c54556138a6f6ee2746cff07ee75133e309165",
+            "realized_hash": "ee13bc75d1ebab637d42585befcb7016e65df165b6e304e4492143b32bf89f54",
+            "requested_hash": "ee13bc75d1ebab637d42585befcb7016e65df165b6e304e4492143b32bf89f54",
+            "source": "JOINT"
+          },
+          "1": {
+            "exact_writeback": true,
+            "native_hash": "44861f931c9b1c8f4e6dd3e75173ca18f361e7a89fa612788bf932bf2a9240c9",
+            "realized_hash": "5c9d584bdfaf28607e1a7f9f91c76f050895e95ba095270b428af594c64ab238",
+            "requested_hash": "5c9d584bdfaf28607e1a7f9f91c76f050895e95ba095270b428af594c64ab238",
+            "source": "JOINT"
+          },
+          "2": {
+            "exact_writeback": true,
+            "native_hash": "cecbeb4b37b71d44f6302653e40472b9a228d82ca473c5168a0af3b5e627d9dc",
+            "realized_hash": "b2ea24a8f28543bcaa8e41fd40de409b35129dd812d1ea47cd009a9e97852462",
+            "requested_hash": "b2ea24a8f28543bcaa8e41fd40de409b35129dd812d1ea47cd009a9e97852462",
+            "source": "JOINT"
+          },
+          "4": {
+            "exact_writeback": true,
+            "native_hash": "4daa318f87e62f15d45d5fbe051e1a281a888b79f8769a28e5dbed7eb9e0896a",
+            "realized_hash": "4e1a241d23172e527379cb17bdcb7b0db14fb99fb465d0d9635488b09bb6a5df",
+            "requested_hash": "4e1a241d23172e527379cb17bdcb7b0db14fb99fb465d0d9635488b09bb6a5df",
+            "source": "JOINT"
+          },
+          "5": {
+            "exact_writeback": true,
+            "native_hash": "ef997b5e9fb1ed07a72c45654a4704148d0d9991318df4f9321eee52ac9f3058",
+            "realized_hash": "758e211897650179cb43eb2a1c2be6562a952bbde553c0ea8493f64f62b2ebb6",
+            "requested_hash": "758e211897650179cb43eb2a1c2be6562a952bbde553c0ea8493f64f62b2ebb6",
+            "source": "JOINT"
+          },
+          "6": {
+            "exact_writeback": true,
+            "native_hash": "bf8b887bd332e68b677dd34648ddd21b4948b25255fae948e467284efcf18a1f",
+            "realized_hash": "c01df4b3ddc833236196a2b5874cfac71e8ac3074c1b3d3398ab69bd65df8c77",
+            "requested_hash": "c01df4b3ddc833236196a2b5874cfac71e8ac3074c1b3d3398ab69bd65df8c77",
+            "source": "JOINT"
+          }
+        },
+        "realized_hash": "db27ac63a8163e49c611411555fd52fe7f2983faa8c76e20f89c104c238a15fc",
+        "requested_hash": "db27ac63a8163e49c611411555fd52fe7f2983faa8c76e20f89c104c238a15fc",
+        "source_map_hash": "d566d2f4d7bb8c18dd486081aa33878a04d8fbd18ed052e2a2f942ea78cf1019"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "2a3313f84b8a3d4e867e97e11245b598225c588e87e8cda66e3312f15502d653",
+        "KV": "d01dc31222a38b7accc6245926345a87a3fb37687503cc2ed69dce078a1a7880",
+        "REC": "f22739452b83bfdb530d54350332e9f6c9dc91fb4081eb1eb4998e0343ca70cf"
+      },
+      "condition": "Q2",
+      "direction": "REMOVE",
+      "logits_hash": "263b742e386aac90abe05a4d4bbc75189bec9eb084b7b1dd7c17a8ea10545aba",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 6,
+        "native_hash": "57561d667925a53bfed0f8d8dc99b3fc915daa7c0822c8067ff95b3448f9afee",
+        "per_layer": {
+          "10": {
+            "exact_writeback": true,
+            "native_hash": "d78e67e8d31bfd5bd334e36e6de272a8e16ad069ea459ee016b51775ac152663",
+            "realized_hash": "dab8da5a749e6a6759c611c2ad1f7b2dcf7e54a66daf6416ede43e0f0cd996ed",
+            "requested_hash": "dab8da5a749e6a6759c611c2ad1f7b2dcf7e54a66daf6416ede43e0f0cd996ed",
+            "source": "CONV"
+          },
+          "12": {
+            "exact_writeback": true,
+            "native_hash": "3bfe0e8039ad1c52a9f6c24c1cd80b5d85ada5ecf45ccb5759bcaae7a0b0fb48",
+            "realized_hash": "15b3ed949d1a9458fa22fb2a44bde181179b4999f9389e39c22d033ce5769fff",
+            "requested_hash": "15b3ed949d1a9458fa22fb2a44bde181179b4999f9389e39c22d033ce5769fff",
+            "source": "CONV"
+          },
+          "13": {
+            "exact_writeback": true,
+            "native_hash": "51df3878be84117728a711c08fb0607472858b75506337b5644b98b710f8b124",
+            "realized_hash": "4283b77511b2baf73751ac59e4e488be47a861537587846fc45e2df0cb460f4e",
+            "requested_hash": "4283b77511b2baf73751ac59e4e488be47a861537587846fc45e2df0cb460f4e",
+            "source": "CONV"
+          },
+          "14": {
+            "exact_writeback": true,
+            "native_hash": "b73c95061a3fbdc721d98d36154180c3c33b8ce26f092d9c8b86653f39121575",
+            "realized_hash": "7e61f04233e7e0b16e76c48d69aee0c3927aa17c04dcd04c94da333d53343332",
+            "requested_hash": "7e61f04233e7e0b16e76c48d69aee0c3927aa17c04dcd04c94da333d53343332",
+            "source": "CONV"
+          },
+          "8": {
+            "exact_writeback": true,
+            "native_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "realized_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "requested_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "source": "CONV"
+          },
+          "9": {
+            "exact_writeback": true,
+            "native_hash": "904f5f10a939896e4c50639c17a8e1902c08666faa02bee2cbf962bd913b80cd",
+            "realized_hash": "a6e52ee012fbac7902c4670f22a0122a0c29d89729e7232e03cfeddc2cd51fd9",
+            "requested_hash": "a6e52ee012fbac7902c4670f22a0122a0c29d89729e7232e03cfeddc2cd51fd9",
+            "source": "CONV"
+          }
+        },
+        "realized_hash": "addbab4ad8a04f379041e02b4f852add4033994e6e68f3838e27888f59293390",
+        "requested_hash": "addbab4ad8a04f379041e02b4f852add4033994e6e68f3838e27888f59293390",
+        "source_map_hash": "61df60cb2f5a9fed0d1eba867fe6ee0c07c637688d0125fda8a87bc08f4c402b"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "37e9f7907c9405dae0bf0384d4facad72b85f2bc266eac8ece289a1b3964b724",
+        "KV": "4bebd94b6f805c956e8bbe46be05c0db76e7cedefddc593d08ff23add02eb6ae",
+        "REC": "d664fcc60001430b9f88c16b37ff96b8216048948b8dea1f5e9d1800403097f9"
+      },
+      "condition": "Q2",
+      "direction": "RESTORE",
+      "logits_hash": "9af1671637b387834c9af9e07c7be1ba02773d1c19722798705e9b5568636eaf",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 6,
+        "native_hash": "f557ca8a78b72a2cbe1438fc4942c5b74f7c0e62f698e49a3a5bd843e88adef9",
+        "per_layer": {
+          "10": {
+            "exact_writeback": true,
+            "native_hash": "7e5cd8a550c2be5c1e21b5146d15a49479c643053c49e5026111595731909462",
+            "realized_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "requested_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "source": "JOINT"
+          },
+          "12": {
+            "exact_writeback": true,
+            "native_hash": "4450728344236f67d7ce0cd3ebef7f41ecb8d2c3af0f6c76b6b5ac5231d4b45b",
+            "realized_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "requested_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "source": "JOINT"
+          },
+          "13": {
+            "exact_writeback": true,
+            "native_hash": "ff935d45ef282f314d42be46f306961554ba77ceb0ba3d62b5e96ba7e8fdbdf7",
+            "realized_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "requested_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "source": "JOINT"
+          },
+          "14": {
+            "exact_writeback": true,
+            "native_hash": "9da6a29d4a4e56165ca005a5c4d7f9fecd6329a24828cd5fcb48eae57ab201a8",
+            "realized_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "requested_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "source": "JOINT"
+          },
+          "8": {
+            "exact_writeback": true,
+            "native_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "realized_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "requested_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "source": "JOINT"
+          },
+          "9": {
+            "exact_writeback": true,
+            "native_hash": "9c263ddb8212ccb15544fe1aa57eed7dbd040757a36cc5a6e0d5e5e20c3ef741",
+            "realized_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "requested_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "source": "JOINT"
+          }
+        },
+        "realized_hash": "1bdebe07e2c6b8de4471a761ea69227ce8944ed40db95cdac268740decd5bbbb",
+        "requested_hash": "1bdebe07e2c6b8de4471a761ea69227ce8944ed40db95cdac268740decd5bbbb",
+        "source_map_hash": "29f1afe79d4b43e5d7180ee8c16ff9f191fddce11705b299ab373c49af33b92f"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "2281fbda4beba1409c5e3f05e12f80dc8cc90ecdbf0c8d5c7cc2661f5f38c994",
+        "KV": "e976fc98fbd487677cd05b55159a46ecd9db8f78310770153da2ffe15666cbf2",
+        "REC": "76cd04db62a2f02ae74f7e7c7ca65ec888f98f185a3cb89d5fab87c9cdf6e115"
+      },
+      "condition": "Q3",
+      "direction": "REMOVE",
+      "logits_hash": "44c72240f23a1e3f0dda94bd3d6caa644fa0fb49d70a89197ab477273a7d7628",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 6,
+        "native_hash": "909ad9f2aaa0fe37e9be6782ae752f936eec77cbf0e31af420404a8459400dc2",
+        "per_layer": {
+          "16": {
+            "exact_writeback": true,
+            "native_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "realized_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "requested_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "source": "CONV"
+          },
+          "17": {
+            "exact_writeback": true,
+            "native_hash": "ed80c8544ec87228b0613a5ed2ac3954a447d9994fb3c405721760b118b690fc",
+            "realized_hash": "302604f2666669f684654ea12353f546b6e91c410a511c1ef284011dc6cc963e",
+            "requested_hash": "302604f2666669f684654ea12353f546b6e91c410a511c1ef284011dc6cc963e",
+            "source": "CONV"
+          },
+          "18": {
+            "exact_writeback": true,
+            "native_hash": "c327dbed6ca1eabfad88186e62cd43dec3a6fe0fed5f4bf7448bf6fc1364dfdf",
+            "realized_hash": "891558aedf65d9336aeac73e8ce9f77605a825d123e992fc73026609add0af84",
+            "requested_hash": "891558aedf65d9336aeac73e8ce9f77605a825d123e992fc73026609add0af84",
+            "source": "CONV"
+          },
+          "20": {
+            "exact_writeback": true,
+            "native_hash": "3c6d6ecb537943fee27ab4ec6078ecdfb3b9bab6c0259e96be124fe17501510a",
+            "realized_hash": "d8da5f48f8cb84a5b23aa0222caaecf5bf6ae3ef46ae39a4534b8203ce19aa94",
+            "requested_hash": "d8da5f48f8cb84a5b23aa0222caaecf5bf6ae3ef46ae39a4534b8203ce19aa94",
+            "source": "CONV"
+          },
+          "21": {
+            "exact_writeback": true,
+            "native_hash": "87f4848ecbe2d2774acbcdf8bf8f9cefdc54384a8a9d5ddfc5a201b6f3dfd31b",
+            "realized_hash": "78a9bf07a98bb1c2708d65efb9708f7868703118d58b8b33f07e0ea32ce5afdb",
+            "requested_hash": "78a9bf07a98bb1c2708d65efb9708f7868703118d58b8b33f07e0ea32ce5afdb",
+            "source": "CONV"
+          },
+          "22": {
+            "exact_writeback": true,
+            "native_hash": "9155a2f1781f4316647ccccdec1213367e3662a35911690217de635df719f603",
+            "realized_hash": "7b748c2ede83e9f9d0e7198b4d4f69baa9d10dba6d38f9512c7c8a886b8e1900",
+            "requested_hash": "7b748c2ede83e9f9d0e7198b4d4f69baa9d10dba6d38f9512c7c8a886b8e1900",
+            "source": "CONV"
+          }
+        },
+        "realized_hash": "5c4b7dd69ccbba246d2fb1e3c6b369d2a7129d5b12bfe49f5da2f0f14c3c04fe",
+        "requested_hash": "5c4b7dd69ccbba246d2fb1e3c6b369d2a7129d5b12bfe49f5da2f0f14c3c04fe",
+        "source_map_hash": "fd8ca2487ec0a09704a96433ccb9dd7e99f7d83b033df8fb11aae35a199c35c1"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "797396dbf496c7d73e3d158b8b476762c8cfd210c357374a90099b902220f526",
+        "KV": "637ab98e3ecffe470d27a41c320b6eb469f073eb08772f4664bc4050a9497756",
+        "REC": "410d31b8567d5a10a53147d8f06034ae843079fb8a3dded0216bd65f4199a745"
+      },
+      "condition": "Q3",
+      "direction": "RESTORE",
+      "logits_hash": "849d4d5e92443eb4067a1a41befda4979bf33de0ac4229211931d5c49e04a215",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 6,
+        "native_hash": "09e51a4d83d3996e8556acb8d16836dfda108d61eb4d46f096589bd40005b98c",
+        "per_layer": {
+          "16": {
+            "exact_writeback": true,
+            "native_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "realized_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "requested_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "source": "JOINT"
+          },
+          "17": {
+            "exact_writeback": true,
+            "native_hash": "8d786d362d9976cc2e73cca2a3ef2d8b44814f46f15334f36073f9348053a1fc",
+            "realized_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "requested_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "source": "JOINT"
+          },
+          "18": {
+            "exact_writeback": true,
+            "native_hash": "fb0cf749d9ba4897060b47a285fb2aa729e44c521ecdaae3d2f9841feaa5f85b",
+            "realized_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "requested_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "source": "JOINT"
+          },
+          "20": {
+            "exact_writeback": true,
+            "native_hash": "e514be7c41f360a58c6ca9cd01527e7f9396943ffc472c21c481bf8ea00180ce",
+            "realized_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "requested_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "source": "JOINT"
+          },
+          "21": {
+            "exact_writeback": true,
+            "native_hash": "851750d6ed4519c85573a5362aff103ca2b2996a1083082bcd47c9f85cf43fa7",
+            "realized_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "requested_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "source": "JOINT"
+          },
+          "22": {
+            "exact_writeback": true,
+            "native_hash": "4cff0d5f3d0b119dd5aa0db3461a1bb4da680847c3a331c67b398b2285bde3e6",
+            "realized_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "requested_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "source": "JOINT"
+          }
+        },
+        "realized_hash": "b2f826fae7e1c8679af92a7187c45412f1356f4828350188c57f33b20c2473b1",
+        "requested_hash": "b2f826fae7e1c8679af92a7187c45412f1356f4828350188c57f33b20c2473b1",
+        "source_map_hash": "0b0c22a88f8ecc15e45c07e55c543cd5de5ae824d3733eb4168211e2048de1db"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "75f83bdc4283b5291f26288c34853686027c6956f461b05ec7270566c0f6c148",
+        "KV": "87f49ea894c622fa219fe1b7cb938fbaca6efca729256dd0e097044d8bc58133",
+        "REC": "c88c1bbaaf0532b6a1dc4d0d230a9a2f3a27d5f3491d6f27a332ec77e246d44d"
+      },
+      "condition": "Q4",
+      "direction": "REMOVE",
+      "logits_hash": "a116671743d130885e4a697a3aa178e89279a7df3e0963ae1e81e57e133167f9",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 6,
+        "native_hash": "670c13722b70384dd11519b514ad4b16237b27100fa08cb063238fdb40a7b26d",
+        "per_layer": {
+          "24": {
+            "exact_writeback": true,
+            "native_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "realized_hash": "e22613977397559e1b3e3ee915a00dfb9cf7a220cb7f08bab918438de90827a7",
+            "requested_hash": "e22613977397559e1b3e3ee915a00dfb9cf7a220cb7f08bab918438de90827a7",
+            "source": "CONV"
+          },
+          "25": {
+            "exact_writeback": true,
+            "native_hash": "045601510ff771bf4d8a8a4c3c13fc23fa55a7cf7eefcf857db015093f8048fd",
+            "realized_hash": "ef4783f78e4a8eee3936fef89ea1dec415f0d9ec5355ab224c78e63f88379b2d",
+            "requested_hash": "ef4783f78e4a8eee3936fef89ea1dec415f0d9ec5355ab224c78e63f88379b2d",
+            "source": "CONV"
+          },
+          "26": {
+            "exact_writeback": true,
+            "native_hash": "c61a08eca27be38ec883c1fafbfb67642caf3fe16b1f63a7c1c52d8774f3a31f",
+            "realized_hash": "09ab9fc0925eb650c209f538fc1da112f89b922f1dd426bb2befc5d5be5d7828",
+            "requested_hash": "09ab9fc0925eb650c209f538fc1da112f89b922f1dd426bb2befc5d5be5d7828",
+            "source": "CONV"
+          },
+          "28": {
+            "exact_writeback": true,
+            "native_hash": "402faed692feaeb489788bbb52863df16a523c5af4ef5e138100a21c93b83bd3",
+            "realized_hash": "e6a5f439d6404624689b437b4fda29fba77f408f14471cfad162b47f641523bd",
+            "requested_hash": "e6a5f439d6404624689b437b4fda29fba77f408f14471cfad162b47f641523bd",
+            "source": "CONV"
+          },
+          "29": {
+            "exact_writeback": true,
+            "native_hash": "ecc561ef51250e12ed4c1e35cdd24945811fcec7ad8a0875cc5c59e8fd849b19",
+            "realized_hash": "c87231ca7d9838725fb022b2ee2d996a8c462268aa68250e22e1606a9bab6211",
+            "requested_hash": "c87231ca7d9838725fb022b2ee2d996a8c462268aa68250e22e1606a9bab6211",
+            "source": "CONV"
+          },
+          "30": {
+            "exact_writeback": true,
+            "native_hash": "5024aa1cb1b6937c878ebff6885f78ea91a33a39f289c9f3fc36bcd2b7cf8e7e",
+            "realized_hash": "74cfc86dab98bfda9b9bd6e1550e7705e38191d694d39f28461bac273fa1313c",
+            "requested_hash": "74cfc86dab98bfda9b9bd6e1550e7705e38191d694d39f28461bac273fa1313c",
+            "source": "CONV"
+          }
+        },
+        "realized_hash": "8ad465a32fdaa1074ea6ad370d2a690de6163981affdb3ffe0d4fb7210a973be",
+        "requested_hash": "8ad465a32fdaa1074ea6ad370d2a690de6163981affdb3ffe0d4fb7210a973be",
+        "source_map_hash": "5bd359be1b4ddf64c089e349ee4d568bfb937dbfc4546d0bad72aa088590518c"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "d5362ee7d6ff07c6b87aa6771abf9813a86a994e638569de32eeebe24325d9eb",
+        "KV": "5141404ede025b831de1ea74f823ac45e7e5bf5b638e5a9208d5cecd19cbe75b",
+        "REC": "62330b5610ba39087ad5cfe6c204e114bc21f9bfc9af736843c1ad2a40c32d53"
+      },
+      "condition": "Q4",
+      "direction": "RESTORE",
+      "logits_hash": "65e0f0f7cf94d8783093c0153f8d05ed25530ccf6d876c35dc7f340ddccb34ea",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 6,
+        "native_hash": "e140df1d909110e27fbd68beec25c8b4a89f1f947f3f1c1b7209cf84203001f2",
+        "per_layer": {
+          "24": {
+            "exact_writeback": true,
+            "native_hash": "e22613977397559e1b3e3ee915a00dfb9cf7a220cb7f08bab918438de90827a7",
+            "realized_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "requested_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "source": "JOINT"
+          },
+          "25": {
+            "exact_writeback": true,
+            "native_hash": "33816f980e81e13dee111bab8bd3e51daa2d05cccd0e164ffd37db75cbe4e3d0",
+            "realized_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "requested_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "source": "JOINT"
+          },
+          "26": {
+            "exact_writeback": true,
+            "native_hash": "021427b0a490252582953516b447eb20677eab8d29a2afdc6065fdaabf6fa8d1",
+            "realized_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "requested_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "source": "JOINT"
+          },
+          "28": {
+            "exact_writeback": true,
+            "native_hash": "e390c02e72ccae23959b9ae19747faec18d72f2b885decee34cc2e505b12c649",
+            "realized_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "requested_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "source": "JOINT"
+          },
+          "29": {
+            "exact_writeback": true,
+            "native_hash": "c3b29622f168f1e3072dc64006f7d3f45aee592d4907023ff82b1280c83a6e55",
+            "realized_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "requested_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "source": "JOINT"
+          },
+          "30": {
+            "exact_writeback": true,
+            "native_hash": "8dddfa8f5faccb78f81c9364a24ba1a996b4961d7f4a9d00a93fada59c701e72",
+            "realized_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "requested_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "source": "JOINT"
+          }
+        },
+        "realized_hash": "7c411824228f43fecce2814266b755567c8cc071e6e31f25bed0793596861e77",
+        "requested_hash": "7c411824228f43fecce2814266b755567c8cc071e6e31f25bed0793596861e77",
+        "source_map_hash": "6f1006334f4db5203f0b8d46e1cdb8ac6976e04dd1c8e9298afb7af793dfddeb"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "2f6cf76b6cde91444866089d0d164c69823a8a9920f09b6abcbc6e5641c78f82",
+        "KV": "941e9aa91a173145ce2f9bf4d65d0bd4b66b01ec1294f4fa4e99c2ba51243cce",
+        "REC": "395e4cb4ec03f60350492ab898784e107783fc575ad224e3b1276c148f0d44e7"
+      },
+      "condition": "Q1_Q2",
+      "direction": "REMOVE",
+      "logits_hash": "65d861963395bab0f4eb78ecf6f2469f908a1576f306ad226f6d31f34ca1ecf7",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 12,
+        "native_hash": "a6e6329bb96572857ea079dc514f3176e343ad115117b4f817d1e62322b7b8d7",
+        "per_layer": {
+          "0": {
+            "exact_writeback": true,
+            "native_hash": "ee13bc75d1ebab637d42585befcb7016e65df165b6e304e4492143b32bf89f54",
+            "realized_hash": "3c1c5819711b7266d5588960d1c54556138a6f6ee2746cff07ee75133e309165",
+            "requested_hash": "3c1c5819711b7266d5588960d1c54556138a6f6ee2746cff07ee75133e309165",
+            "source": "CONV"
+          },
+          "1": {
+            "exact_writeback": true,
+            "native_hash": "6fe736b8440e1bd05fc9c63e4f709f0313715051e6e72bb14849bb5ac85d8ec4",
+            "realized_hash": "711157079073b253bb95665fa43175a82424114a0211e06aeab98609753634b7",
+            "requested_hash": "711157079073b253bb95665fa43175a82424114a0211e06aeab98609753634b7",
+            "source": "CONV"
+          },
+          "10": {
+            "exact_writeback": true,
+            "native_hash": "7a73be1137bc9c4872220f1d54e37f9712fd4e0bf553a60b4c72fe19c18dae64",
+            "realized_hash": "dab8da5a749e6a6759c611c2ad1f7b2dcf7e54a66daf6416ede43e0f0cd996ed",
+            "requested_hash": "dab8da5a749e6a6759c611c2ad1f7b2dcf7e54a66daf6416ede43e0f0cd996ed",
+            "source": "CONV"
+          },
+          "12": {
+            "exact_writeback": true,
+            "native_hash": "97677fef56cb3571419fe57deaf9add0facbc76df18b9a39c52cf07477e0b412",
+            "realized_hash": "15b3ed949d1a9458fa22fb2a44bde181179b4999f9389e39c22d033ce5769fff",
+            "requested_hash": "15b3ed949d1a9458fa22fb2a44bde181179b4999f9389e39c22d033ce5769fff",
+            "source": "CONV"
+          },
+          "13": {
+            "exact_writeback": true,
+            "native_hash": "3406e77aa1a33fd1106d66bc0d37294fba023c1a79feeb6e2ae3768f6ff609d5",
+            "realized_hash": "4283b77511b2baf73751ac59e4e488be47a861537587846fc45e2df0cb460f4e",
+            "requested_hash": "4283b77511b2baf73751ac59e4e488be47a861537587846fc45e2df0cb460f4e",
+            "source": "CONV"
+          },
+          "14": {
+            "exact_writeback": true,
+            "native_hash": "aaa578dd5059aab9288ce1c1c8df8fb561980fbf1119e42aaaf740b80ea70a45",
+            "realized_hash": "7e61f04233e7e0b16e76c48d69aee0c3927aa17c04dcd04c94da333d53343332",
+            "requested_hash": "7e61f04233e7e0b16e76c48d69aee0c3927aa17c04dcd04c94da333d53343332",
+            "source": "CONV"
+          },
+          "2": {
+            "exact_writeback": true,
+            "native_hash": "5e78b9a4bba188a80d7f84858d7e294bff016b45eec575d049a4db30a704e3f8",
+            "realized_hash": "e30e2631823b267e39338cfc9cc45607f65c7949f9c0d760028b943ceeefdb94",
+            "requested_hash": "e30e2631823b267e39338cfc9cc45607f65c7949f9c0d760028b943ceeefdb94",
+            "source": "CONV"
+          },
+          "4": {
+            "exact_writeback": true,
+            "native_hash": "41447599dda662ebb7d824bce3d5c94f5b1a348c7b7f37eb3bc1899892f6960e",
+            "realized_hash": "5984eb824bd4f54558021f0cde66e78453c3fe1f7d47074a494193bd66d429a3",
+            "requested_hash": "5984eb824bd4f54558021f0cde66e78453c3fe1f7d47074a494193bd66d429a3",
+            "source": "CONV"
+          },
+          "5": {
+            "exact_writeback": true,
+            "native_hash": "5fcb7ab6a5b1c3215b7aef9faab707fe4d19a152d5e907024b2786cc7aff9a82",
+            "realized_hash": "ac86d4306427cf4264894db20ed84bce949a12948be65352bed1268a1c584dad",
+            "requested_hash": "ac86d4306427cf4264894db20ed84bce949a12948be65352bed1268a1c584dad",
+            "source": "CONV"
+          },
+          "6": {
+            "exact_writeback": true,
+            "native_hash": "40254f5b18c99c4cfbdb08bda81cb433d21d1afd37b334333154d3669d44a3e4",
+            "realized_hash": "08eb1ddd6856079c62512f18c26a6f2124ee474b00503735ebe922aeeed561a9",
+            "requested_hash": "08eb1ddd6856079c62512f18c26a6f2124ee474b00503735ebe922aeeed561a9",
+            "source": "CONV"
+          },
+          "8": {
+            "exact_writeback": true,
+            "native_hash": "96352c152131c1826cc4f12da60304ed06012f8bf39d24b206717f4043e0eb5f",
+            "realized_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "requested_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "source": "CONV"
+          },
+          "9": {
+            "exact_writeback": true,
+            "native_hash": "7c958976325a564559e85e5e5fe6ac78f2a16249b7c4107631fd380dd60aa504",
+            "realized_hash": "a6e52ee012fbac7902c4670f22a0122a0c29d89729e7232e03cfeddc2cd51fd9",
+            "requested_hash": "a6e52ee012fbac7902c4670f22a0122a0c29d89729e7232e03cfeddc2cd51fd9",
+            "source": "CONV"
+          }
+        },
+        "realized_hash": "c3ae69756f85a34778e5fdd102d3da3a2ab27a1432a321d26223dab8a6e0b19b",
+        "requested_hash": "c3ae69756f85a34778e5fdd102d3da3a2ab27a1432a321d26223dab8a6e0b19b",
+        "source_map_hash": "f9d1b41a18969383c508ced71abd460504447056cc9801732337ddd1a6622f53"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "a46f2b3375dfc48fef3ee8ea63aab7c042f45212fd9de806c382ff07d4e6ecde",
+        "KV": "ca0ea76e4c30fa1629a0ed952ad05d0a91f9637ec42e1938c325feafa14bf8fd",
+        "REC": "7d9b1a0bedee10e689c34e25cd2bc43a6e9c167cf6a49192467ee6e7a213ddc8"
+      },
+      "condition": "Q1_Q2",
+      "direction": "RESTORE",
+      "logits_hash": "660326a7685ebe7f001eb36ffdc3b31d7684ce5ea254de89e5b6f10c910241f6",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 12,
+        "native_hash": "072166cdf3945a901e748135fe30ad0df8bbd480d28ae1ba5b0c4f81970dc18c",
+        "per_layer": {
+          "0": {
+            "exact_writeback": true,
+            "native_hash": "3c1c5819711b7266d5588960d1c54556138a6f6ee2746cff07ee75133e309165",
+            "realized_hash": "ee13bc75d1ebab637d42585befcb7016e65df165b6e304e4492143b32bf89f54",
+            "requested_hash": "ee13bc75d1ebab637d42585befcb7016e65df165b6e304e4492143b32bf89f54",
+            "source": "JOINT"
+          },
+          "1": {
+            "exact_writeback": true,
+            "native_hash": "44861f931c9b1c8f4e6dd3e75173ca18f361e7a89fa612788bf932bf2a9240c9",
+            "realized_hash": "5c9d584bdfaf28607e1a7f9f91c76f050895e95ba095270b428af594c64ab238",
+            "requested_hash": "5c9d584bdfaf28607e1a7f9f91c76f050895e95ba095270b428af594c64ab238",
+            "source": "JOINT"
+          },
+          "10": {
+            "exact_writeback": true,
+            "native_hash": "66d222de00fc3a31ab5f41a0ce59b682298dcf216074cca87faea844e409661a",
+            "realized_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "requested_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "source": "JOINT"
+          },
+          "12": {
+            "exact_writeback": true,
+            "native_hash": "d1c8e26c5d83f6c28344e5b5689487b97b0e72f04b009bac474a1b2a7eed5041",
+            "realized_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "requested_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "source": "JOINT"
+          },
+          "13": {
+            "exact_writeback": true,
+            "native_hash": "08fcb727f5f5e9e4056102ecfd7b8982e85edd90dd8a17b9d248675fc0646611",
+            "realized_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "requested_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "source": "JOINT"
+          },
+          "14": {
+            "exact_writeback": true,
+            "native_hash": "bb1432b89145dbb8a6d8ea22c2911d1a2f40b6d49cbee2643f0198ebf19ae798",
+            "realized_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "requested_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "source": "JOINT"
+          },
+          "2": {
+            "exact_writeback": true,
+            "native_hash": "cecbeb4b37b71d44f6302653e40472b9a228d82ca473c5168a0af3b5e627d9dc",
+            "realized_hash": "b2ea24a8f28543bcaa8e41fd40de409b35129dd812d1ea47cd009a9e97852462",
+            "requested_hash": "b2ea24a8f28543bcaa8e41fd40de409b35129dd812d1ea47cd009a9e97852462",
+            "source": "JOINT"
+          },
+          "4": {
+            "exact_writeback": true,
+            "native_hash": "4daa318f87e62f15d45d5fbe051e1a281a888b79f8769a28e5dbed7eb9e0896a",
+            "realized_hash": "4e1a241d23172e527379cb17bdcb7b0db14fb99fb465d0d9635488b09bb6a5df",
+            "requested_hash": "4e1a241d23172e527379cb17bdcb7b0db14fb99fb465d0d9635488b09bb6a5df",
+            "source": "JOINT"
+          },
+          "5": {
+            "exact_writeback": true,
+            "native_hash": "ef997b5e9fb1ed07a72c45654a4704148d0d9991318df4f9321eee52ac9f3058",
+            "realized_hash": "758e211897650179cb43eb2a1c2be6562a952bbde553c0ea8493f64f62b2ebb6",
+            "requested_hash": "758e211897650179cb43eb2a1c2be6562a952bbde553c0ea8493f64f62b2ebb6",
+            "source": "JOINT"
+          },
+          "6": {
+            "exact_writeback": true,
+            "native_hash": "bf8b887bd332e68b677dd34648ddd21b4948b25255fae948e467284efcf18a1f",
+            "realized_hash": "c01df4b3ddc833236196a2b5874cfac71e8ac3074c1b3d3398ab69bd65df8c77",
+            "requested_hash": "c01df4b3ddc833236196a2b5874cfac71e8ac3074c1b3d3398ab69bd65df8c77",
+            "source": "JOINT"
+          },
+          "8": {
+            "exact_writeback": true,
+            "native_hash": "350d69e40ce578e234dc8757840ce75e365286f4e8a4c7009711ec610147ce02",
+            "realized_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "requested_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "source": "JOINT"
+          },
+          "9": {
+            "exact_writeback": true,
+            "native_hash": "1055d6946feda3a3d038de1093e0142ab1fa4725ee1f5dff795b67a83845af1e",
+            "realized_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "requested_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "source": "JOINT"
+          }
+        },
+        "realized_hash": "148b8c4d3d61ccf0bbd51e2f0dd16cdc688a87fa3cfbccfba2710ee6e9c2018d",
+        "requested_hash": "148b8c4d3d61ccf0bbd51e2f0dd16cdc688a87fa3cfbccfba2710ee6e9c2018d",
+        "source_map_hash": "537b2a5832c4a5f571ed4fecf90001151a3d33fec8844147d6b593abdd2e8e67"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "94a832811b22c485c904fe712c2563c7b318e5e086c1d24f9d9b80778726e165",
+        "KV": "584735eff190590499c0cc78d04abe808619211d58fd108b2c3f797ab6eda67e",
+        "REC": "d33d5723e7a10c94f9695010aa47c93efd0b2ffdce59275e97bc352dc8af4675"
+      },
+      "condition": "Q3_Q4",
+      "direction": "REMOVE",
+      "logits_hash": "83c940cf801c58b09c3365fad803d3ad401d90f6733710f5124c187a647cd90e",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 12,
+        "native_hash": "177b4746d49b0d2f90eaf2c6b1321fd4e0667f57e9430912f80c926b99bdfeac",
+        "per_layer": {
+          "16": {
+            "exact_writeback": true,
+            "native_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "realized_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "requested_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "source": "CONV"
+          },
+          "17": {
+            "exact_writeback": true,
+            "native_hash": "ed80c8544ec87228b0613a5ed2ac3954a447d9994fb3c405721760b118b690fc",
+            "realized_hash": "302604f2666669f684654ea12353f546b6e91c410a511c1ef284011dc6cc963e",
+            "requested_hash": "302604f2666669f684654ea12353f546b6e91c410a511c1ef284011dc6cc963e",
+            "source": "CONV"
+          },
+          "18": {
+            "exact_writeback": true,
+            "native_hash": "c327dbed6ca1eabfad88186e62cd43dec3a6fe0fed5f4bf7448bf6fc1364dfdf",
+            "realized_hash": "891558aedf65d9336aeac73e8ce9f77605a825d123e992fc73026609add0af84",
+            "requested_hash": "891558aedf65d9336aeac73e8ce9f77605a825d123e992fc73026609add0af84",
+            "source": "CONV"
+          },
+          "20": {
+            "exact_writeback": true,
+            "native_hash": "3c6d6ecb537943fee27ab4ec6078ecdfb3b9bab6c0259e96be124fe17501510a",
+            "realized_hash": "d8da5f48f8cb84a5b23aa0222caaecf5bf6ae3ef46ae39a4534b8203ce19aa94",
+            "requested_hash": "d8da5f48f8cb84a5b23aa0222caaecf5bf6ae3ef46ae39a4534b8203ce19aa94",
+            "source": "CONV"
+          },
+          "21": {
+            "exact_writeback": true,
+            "native_hash": "87f4848ecbe2d2774acbcdf8bf8f9cefdc54384a8a9d5ddfc5a201b6f3dfd31b",
+            "realized_hash": "78a9bf07a98bb1c2708d65efb9708f7868703118d58b8b33f07e0ea32ce5afdb",
+            "requested_hash": "78a9bf07a98bb1c2708d65efb9708f7868703118d58b8b33f07e0ea32ce5afdb",
+            "source": "CONV"
+          },
+          "22": {
+            "exact_writeback": true,
+            "native_hash": "9155a2f1781f4316647ccccdec1213367e3662a35911690217de635df719f603",
+            "realized_hash": "7b748c2ede83e9f9d0e7198b4d4f69baa9d10dba6d38f9512c7c8a886b8e1900",
+            "requested_hash": "7b748c2ede83e9f9d0e7198b4d4f69baa9d10dba6d38f9512c7c8a886b8e1900",
+            "source": "CONV"
+          },
+          "24": {
+            "exact_writeback": true,
+            "native_hash": "1dbdfadd7af73dcd9f7da708c82b014387a55032e4462fd222ad88293a337da3",
+            "realized_hash": "e22613977397559e1b3e3ee915a00dfb9cf7a220cb7f08bab918438de90827a7",
+            "requested_hash": "e22613977397559e1b3e3ee915a00dfb9cf7a220cb7f08bab918438de90827a7",
+            "source": "CONV"
+          },
+          "25": {
+            "exact_writeback": true,
+            "native_hash": "f65a001d167c41f6b8489edc559b00a7c599a8f7f3831cdbd22e8e301bb447e1",
+            "realized_hash": "ef4783f78e4a8eee3936fef89ea1dec415f0d9ec5355ab224c78e63f88379b2d",
+            "requested_hash": "ef4783f78e4a8eee3936fef89ea1dec415f0d9ec5355ab224c78e63f88379b2d",
+            "source": "CONV"
+          },
+          "26": {
+            "exact_writeback": true,
+            "native_hash": "66324dfcdab618ecdf04139115c9585dd6b76476af0f9de3c0684ced420736de",
+            "realized_hash": "09ab9fc0925eb650c209f538fc1da112f89b922f1dd426bb2befc5d5be5d7828",
+            "requested_hash": "09ab9fc0925eb650c209f538fc1da112f89b922f1dd426bb2befc5d5be5d7828",
+            "source": "CONV"
+          },
+          "28": {
+            "exact_writeback": true,
+            "native_hash": "7135a142fd03b980c1a98468a92b30507b42527443f1e2905f7d7e37176fbb13",
+            "realized_hash": "e6a5f439d6404624689b437b4fda29fba77f408f14471cfad162b47f641523bd",
+            "requested_hash": "e6a5f439d6404624689b437b4fda29fba77f408f14471cfad162b47f641523bd",
+            "source": "CONV"
+          },
+          "29": {
+            "exact_writeback": true,
+            "native_hash": "0b15e8acede922f406eeacd90af7e2e1b73d240f1ad8255e69fbb5e6aa4b6d28",
+            "realized_hash": "c87231ca7d9838725fb022b2ee2d996a8c462268aa68250e22e1606a9bab6211",
+            "requested_hash": "c87231ca7d9838725fb022b2ee2d996a8c462268aa68250e22e1606a9bab6211",
+            "source": "CONV"
+          },
+          "30": {
+            "exact_writeback": true,
+            "native_hash": "96d4d37913527dd6c242fdbb2497321b1a90ce6ab5facfc2ef1ae3f517138daa",
+            "realized_hash": "74cfc86dab98bfda9b9bd6e1550e7705e38191d694d39f28461bac273fa1313c",
+            "requested_hash": "74cfc86dab98bfda9b9bd6e1550e7705e38191d694d39f28461bac273fa1313c",
+            "source": "CONV"
+          }
+        },
+        "realized_hash": "171d55ed1310e62ebc671820a7a36a3676867133d8373162e351ee14d8bb3cc2",
+        "requested_hash": "171d55ed1310e62ebc671820a7a36a3676867133d8373162e351ee14d8bb3cc2",
+        "source_map_hash": "2a06bf69e0267636917ed8ffe76d8b77281d63d23847e8062acbc34f2b97a972"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "d7d513b30f47d86dd1df162c1295b4a11b53f21b0d208d53c0838ccd91f73f07",
+        "KV": "1b8672b06b73fd57093d01ca34e4ad48eb2ae6b462b935f71c352cfe479f27a3",
+        "REC": "27714dbaaaf352c751e705ecf3b86755d69be0ed760d497c7d9d9c605f9187c6"
+      },
+      "condition": "Q3_Q4",
+      "direction": "RESTORE",
+      "logits_hash": "1e9cbc0fc9f689006d0b0c186d896c4fa5278fd13335c5f909ccca687e538bf7",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 12,
+        "native_hash": "8e819d2f06e54e527657de7fba31aa4d33310d6357499dafc9b83aa00f04ff14",
+        "per_layer": {
+          "16": {
+            "exact_writeback": true,
+            "native_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "realized_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "requested_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "source": "JOINT"
+          },
+          "17": {
+            "exact_writeback": true,
+            "native_hash": "8d786d362d9976cc2e73cca2a3ef2d8b44814f46f15334f36073f9348053a1fc",
+            "realized_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "requested_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "source": "JOINT"
+          },
+          "18": {
+            "exact_writeback": true,
+            "native_hash": "fb0cf749d9ba4897060b47a285fb2aa729e44c521ecdaae3d2f9841feaa5f85b",
+            "realized_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "requested_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "source": "JOINT"
+          },
+          "20": {
+            "exact_writeback": true,
+            "native_hash": "e514be7c41f360a58c6ca9cd01527e7f9396943ffc472c21c481bf8ea00180ce",
+            "realized_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "requested_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "source": "JOINT"
+          },
+          "21": {
+            "exact_writeback": true,
+            "native_hash": "851750d6ed4519c85573a5362aff103ca2b2996a1083082bcd47c9f85cf43fa7",
+            "realized_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "requested_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "source": "JOINT"
+          },
+          "22": {
+            "exact_writeback": true,
+            "native_hash": "4cff0d5f3d0b119dd5aa0db3461a1bb4da680847c3a331c67b398b2285bde3e6",
+            "realized_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "requested_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "source": "JOINT"
+          },
+          "24": {
+            "exact_writeback": true,
+            "native_hash": "75b1eeb7a212d05b7e835c7e32d833f1e2b1b9d4d06a32ae5e503fd6eafcc07f",
+            "realized_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "requested_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "source": "JOINT"
+          },
+          "25": {
+            "exact_writeback": true,
+            "native_hash": "6358c98cf614fb189888a45ce12bb04aeda0dc088723d45ab16be6893560816c",
+            "realized_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "requested_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "source": "JOINT"
+          },
+          "26": {
+            "exact_writeback": true,
+            "native_hash": "6fcf3c61d595f70166f5d10814330078d12863ac9e4deac43a0af872bc05cab1",
+            "realized_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "requested_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "source": "JOINT"
+          },
+          "28": {
+            "exact_writeback": true,
+            "native_hash": "a6488ec4d36292b121bc7ed718effa21531ebd98f47f64bd3ca34f533550faf7",
+            "realized_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "requested_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "source": "JOINT"
+          },
+          "29": {
+            "exact_writeback": true,
+            "native_hash": "0cc87057c4d22cc62839c3a70ae20e97cb4641b22115f65c4aad15bc875e0cbe",
+            "realized_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "requested_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "source": "JOINT"
+          },
+          "30": {
+            "exact_writeback": true,
+            "native_hash": "8dc3ddea72b071853879081d7ed8d820a0a125d92f631f8c206077bbd880c252",
+            "realized_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "requested_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "source": "JOINT"
+          }
+        },
+        "realized_hash": "cc8b38d4fff27262bbe5c4d32bd99e52613ac70fca514c318bcd587355a3b8e0",
+        "requested_hash": "cc8b38d4fff27262bbe5c4d32bd99e52613ac70fca514c318bcd587355a3b8e0",
+        "source_map_hash": "698b31d2f8f38bcc21f093334ffd95aebb27042631fbf6635ba96a143533622f"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "67bbe3f46b4729fc521e5e261bc37cf3653f3ef9051c0e53b6b2553bb956d5db",
+        "KV": "a0d9795880d2bbf098ad62b0817c913ffc8d29d8e43ad67e515dfcdf4634bd6f",
+        "REC": "9b9190432992b9d3f0b3d566fd4834c5bac4fcd8b2ffa4322c511b35aff073bf"
+      },
+      "condition": "FULL",
+      "direction": "REMOVE",
+      "logits_hash": "7e8101d9297a06e6664bfa1f749ce903af891211f9852f7f53289533f5d45b98",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 24,
+        "native_hash": "31cd0a63eae99fb601d227137b255ffe30e3b2eda619c3e9eb8135d32f8b311b",
+        "per_layer": {
+          "0": {
+            "exact_writeback": true,
+            "native_hash": "ee13bc75d1ebab637d42585befcb7016e65df165b6e304e4492143b32bf89f54",
+            "realized_hash": "3c1c5819711b7266d5588960d1c54556138a6f6ee2746cff07ee75133e309165",
+            "requested_hash": "3c1c5819711b7266d5588960d1c54556138a6f6ee2746cff07ee75133e309165",
+            "source": "CONV"
+          },
+          "1": {
+            "exact_writeback": true,
+            "native_hash": "6fe736b8440e1bd05fc9c63e4f709f0313715051e6e72bb14849bb5ac85d8ec4",
+            "realized_hash": "711157079073b253bb95665fa43175a82424114a0211e06aeab98609753634b7",
+            "requested_hash": "711157079073b253bb95665fa43175a82424114a0211e06aeab98609753634b7",
+            "source": "CONV"
+          },
+          "10": {
+            "exact_writeback": true,
+            "native_hash": "7a73be1137bc9c4872220f1d54e37f9712fd4e0bf553a60b4c72fe19c18dae64",
+            "realized_hash": "dab8da5a749e6a6759c611c2ad1f7b2dcf7e54a66daf6416ede43e0f0cd996ed",
+            "requested_hash": "dab8da5a749e6a6759c611c2ad1f7b2dcf7e54a66daf6416ede43e0f0cd996ed",
+            "source": "CONV"
+          },
+          "12": {
+            "exact_writeback": true,
+            "native_hash": "97677fef56cb3571419fe57deaf9add0facbc76df18b9a39c52cf07477e0b412",
+            "realized_hash": "15b3ed949d1a9458fa22fb2a44bde181179b4999f9389e39c22d033ce5769fff",
+            "requested_hash": "15b3ed949d1a9458fa22fb2a44bde181179b4999f9389e39c22d033ce5769fff",
+            "source": "CONV"
+          },
+          "13": {
+            "exact_writeback": true,
+            "native_hash": "3406e77aa1a33fd1106d66bc0d37294fba023c1a79feeb6e2ae3768f6ff609d5",
+            "realized_hash": "4283b77511b2baf73751ac59e4e488be47a861537587846fc45e2df0cb460f4e",
+            "requested_hash": "4283b77511b2baf73751ac59e4e488be47a861537587846fc45e2df0cb460f4e",
+            "source": "CONV"
+          },
+          "14": {
+            "exact_writeback": true,
+            "native_hash": "aaa578dd5059aab9288ce1c1c8df8fb561980fbf1119e42aaaf740b80ea70a45",
+            "realized_hash": "7e61f04233e7e0b16e76c48d69aee0c3927aa17c04dcd04c94da333d53343332",
+            "requested_hash": "7e61f04233e7e0b16e76c48d69aee0c3927aa17c04dcd04c94da333d53343332",
+            "source": "CONV"
+          },
+          "16": {
+            "exact_writeback": true,
+            "native_hash": "df1a21d78730e5b345d6295839e626dcc964a0f2757d4a86c1a1af68a09cf9e0",
+            "realized_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "requested_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "source": "CONV"
+          },
+          "17": {
+            "exact_writeback": true,
+            "native_hash": "90de4471ff16cbd37bda1064fcaa69926ba156335e155a9647e5e8ba9dbb6408",
+            "realized_hash": "302604f2666669f684654ea12353f546b6e91c410a511c1ef284011dc6cc963e",
+            "requested_hash": "302604f2666669f684654ea12353f546b6e91c410a511c1ef284011dc6cc963e",
+            "source": "CONV"
+          },
+          "18": {
+            "exact_writeback": true,
+            "native_hash": "b84c528df247b8d7b34208c378ef8f0c9757855d6d17ccf13613bf94c1ebc543",
+            "realized_hash": "891558aedf65d9336aeac73e8ce9f77605a825d123e992fc73026609add0af84",
+            "requested_hash": "891558aedf65d9336aeac73e8ce9f77605a825d123e992fc73026609add0af84",
+            "source": "CONV"
+          },
+          "2": {
+            "exact_writeback": true,
+            "native_hash": "5e78b9a4bba188a80d7f84858d7e294bff016b45eec575d049a4db30a704e3f8",
+            "realized_hash": "e30e2631823b267e39338cfc9cc45607f65c7949f9c0d760028b943ceeefdb94",
+            "requested_hash": "e30e2631823b267e39338cfc9cc45607f65c7949f9c0d760028b943ceeefdb94",
+            "source": "CONV"
+          },
+          "20": {
+            "exact_writeback": true,
+            "native_hash": "467d3b4fc7e4f0316d49af216ef4e92c214801f9977457ddf462f72362aa15a9",
+            "realized_hash": "d8da5f48f8cb84a5b23aa0222caaecf5bf6ae3ef46ae39a4534b8203ce19aa94",
+            "requested_hash": "d8da5f48f8cb84a5b23aa0222caaecf5bf6ae3ef46ae39a4534b8203ce19aa94",
+            "source": "CONV"
+          },
+          "21": {
+            "exact_writeback": true,
+            "native_hash": "c039caecab78d7b07c4d54c53a15ceb56bbf6fb35906f8dc756435ed49928da3",
+            "realized_hash": "78a9bf07a98bb1c2708d65efb9708f7868703118d58b8b33f07e0ea32ce5afdb",
+            "requested_hash": "78a9bf07a98bb1c2708d65efb9708f7868703118d58b8b33f07e0ea32ce5afdb",
+            "source": "CONV"
+          },
+          "22": {
+            "exact_writeback": true,
+            "native_hash": "bd208737187ca2291b09d07c58ed580b4059efa521fc48bdce35f6fde59ab429",
+            "realized_hash": "7b748c2ede83e9f9d0e7198b4d4f69baa9d10dba6d38f9512c7c8a886b8e1900",
+            "requested_hash": "7b748c2ede83e9f9d0e7198b4d4f69baa9d10dba6d38f9512c7c8a886b8e1900",
+            "source": "CONV"
+          },
+          "24": {
+            "exact_writeback": true,
+            "native_hash": "194bded78ecd63d38b615775f7a9cdd7a956ee2c1561e9e2dd973e33bf64cce4",
+            "realized_hash": "e22613977397559e1b3e3ee915a00dfb9cf7a220cb7f08bab918438de90827a7",
+            "requested_hash": "e22613977397559e1b3e3ee915a00dfb9cf7a220cb7f08bab918438de90827a7",
+            "source": "CONV"
+          },
+          "25": {
+            "exact_writeback": true,
+            "native_hash": "1cf99e5f98e5b2bfb5e0ef2685a731e9a2355cec04ba5f172b57b27779d603e5",
+            "realized_hash": "ef4783f78e4a8eee3936fef89ea1dec415f0d9ec5355ab224c78e63f88379b2d",
+            "requested_hash": "ef4783f78e4a8eee3936fef89ea1dec415f0d9ec5355ab224c78e63f88379b2d",
+            "source": "CONV"
+          },
+          "26": {
+            "exact_writeback": true,
+            "native_hash": "dcfa33f487ab0c2196a2a4f19749a427d7e4fc9db4529e182e22fd22b11f8c0d",
+            "realized_hash": "09ab9fc0925eb650c209f538fc1da112f89b922f1dd426bb2befc5d5be5d7828",
+            "requested_hash": "09ab9fc0925eb650c209f538fc1da112f89b922f1dd426bb2befc5d5be5d7828",
+            "source": "CONV"
+          },
+          "28": {
+            "exact_writeback": true,
+            "native_hash": "c615e2e70832fdab859c32a790928cb1a192adb7748f9ba35ffdbc36ba2abec8",
+            "realized_hash": "e6a5f439d6404624689b437b4fda29fba77f408f14471cfad162b47f641523bd",
+            "requested_hash": "e6a5f439d6404624689b437b4fda29fba77f408f14471cfad162b47f641523bd",
+            "source": "CONV"
+          },
+          "29": {
+            "exact_writeback": true,
+            "native_hash": "0ac8e808665e2fe74f13fce1d218cf5df7ac82c6bde71bf5688cfe2bcc705aa5",
+            "realized_hash": "c87231ca7d9838725fb022b2ee2d996a8c462268aa68250e22e1606a9bab6211",
+            "requested_hash": "c87231ca7d9838725fb022b2ee2d996a8c462268aa68250e22e1606a9bab6211",
+            "source": "CONV"
+          },
+          "30": {
+            "exact_writeback": true,
+            "native_hash": "ec850498bd077a941e9a942d94be0bf482348f6f4c895832c2b5861ee8cc684e",
+            "realized_hash": "74cfc86dab98bfda9b9bd6e1550e7705e38191d694d39f28461bac273fa1313c",
+            "requested_hash": "74cfc86dab98bfda9b9bd6e1550e7705e38191d694d39f28461bac273fa1313c",
+            "source": "CONV"
+          },
+          "4": {
+            "exact_writeback": true,
+            "native_hash": "41447599dda662ebb7d824bce3d5c94f5b1a348c7b7f37eb3bc1899892f6960e",
+            "realized_hash": "5984eb824bd4f54558021f0cde66e78453c3fe1f7d47074a494193bd66d429a3",
+            "requested_hash": "5984eb824bd4f54558021f0cde66e78453c3fe1f7d47074a494193bd66d429a3",
+            "source": "CONV"
+          },
+          "5": {
+            "exact_writeback": true,
+            "native_hash": "5fcb7ab6a5b1c3215b7aef9faab707fe4d19a152d5e907024b2786cc7aff9a82",
+            "realized_hash": "ac86d4306427cf4264894db20ed84bce949a12948be65352bed1268a1c584dad",
+            "requested_hash": "ac86d4306427cf4264894db20ed84bce949a12948be65352bed1268a1c584dad",
+            "source": "CONV"
+          },
+          "6": {
+            "exact_writeback": true,
+            "native_hash": "40254f5b18c99c4cfbdb08bda81cb433d21d1afd37b334333154d3669d44a3e4",
+            "realized_hash": "08eb1ddd6856079c62512f18c26a6f2124ee474b00503735ebe922aeeed561a9",
+            "requested_hash": "08eb1ddd6856079c62512f18c26a6f2124ee474b00503735ebe922aeeed561a9",
+            "source": "CONV"
+          },
+          "8": {
+            "exact_writeback": true,
+            "native_hash": "96352c152131c1826cc4f12da60304ed06012f8bf39d24b206717f4043e0eb5f",
+            "realized_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "requested_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "source": "CONV"
+          },
+          "9": {
+            "exact_writeback": true,
+            "native_hash": "7c958976325a564559e85e5e5fe6ac78f2a16249b7c4107631fd380dd60aa504",
+            "realized_hash": "a6e52ee012fbac7902c4670f22a0122a0c29d89729e7232e03cfeddc2cd51fd9",
+            "requested_hash": "a6e52ee012fbac7902c4670f22a0122a0c29d89729e7232e03cfeddc2cd51fd9",
+            "source": "CONV"
+          }
+        },
+        "realized_hash": "fb89f8411d734f3e1a3bcffabb8e1fe5d7e5371f6324bd0b17ef155de9561e39",
+        "requested_hash": "fb89f8411d734f3e1a3bcffabb8e1fe5d7e5371f6324bd0b17ef155de9561e39",
+        "source_map_hash": "833e65fda34b2dafcbea4afd83fb5c18f540ed965d7f1b206713eb961b6f0b7d"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "6ae008302d6d187ae7f350218343b312c5e172131e8e3aa0ffe647a6b13ed7b5",
+        "KV": "ac2e1100c3b97390b9b710bd0c0b989fd7719028eea11d9276756ecee4a2c184",
+        "REC": "a1cc5413cebd04fd0ee545dd4d9dee673b91f170ef16ff27b964569513972d05"
+      },
+      "condition": "FULL",
+      "direction": "RESTORE",
+      "logits_hash": "54d4773bdb782f74b71b8b7c327c7f12bf13b149d795ebacc5153fde737c8a4a",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 24,
+        "native_hash": "dc17899507533a5ac8a2453a6a19ac79562aaf4579c3a4b9fbfc472cff0ce205",
+        "per_layer": {
+          "0": {
+            "exact_writeback": true,
+            "native_hash": "3c1c5819711b7266d5588960d1c54556138a6f6ee2746cff07ee75133e309165",
+            "realized_hash": "ee13bc75d1ebab637d42585befcb7016e65df165b6e304e4492143b32bf89f54",
+            "requested_hash": "ee13bc75d1ebab637d42585befcb7016e65df165b6e304e4492143b32bf89f54",
+            "source": "JOINT"
+          },
+          "1": {
+            "exact_writeback": true,
+            "native_hash": "44861f931c9b1c8f4e6dd3e75173ca18f361e7a89fa612788bf932bf2a9240c9",
+            "realized_hash": "5c9d584bdfaf28607e1a7f9f91c76f050895e95ba095270b428af594c64ab238",
+            "requested_hash": "5c9d584bdfaf28607e1a7f9f91c76f050895e95ba095270b428af594c64ab238",
+            "source": "JOINT"
+          },
+          "10": {
+            "exact_writeback": true,
+            "native_hash": "66d222de00fc3a31ab5f41a0ce59b682298dcf216074cca87faea844e409661a",
+            "realized_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "requested_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "source": "JOINT"
+          },
+          "12": {
+            "exact_writeback": true,
+            "native_hash": "d1c8e26c5d83f6c28344e5b5689487b97b0e72f04b009bac474a1b2a7eed5041",
+            "realized_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "requested_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "source": "JOINT"
+          },
+          "13": {
+            "exact_writeback": true,
+            "native_hash": "08fcb727f5f5e9e4056102ecfd7b8982e85edd90dd8a17b9d248675fc0646611",
+            "realized_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "requested_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "source": "JOINT"
+          },
+          "14": {
+            "exact_writeback": true,
+            "native_hash": "bb1432b89145dbb8a6d8ea22c2911d1a2f40b6d49cbee2643f0198ebf19ae798",
+            "realized_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "requested_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "source": "JOINT"
+          },
+          "16": {
+            "exact_writeback": true,
+            "native_hash": "c4b8d0bd8d7e379c324dd8d940beb3ca7874968f22e3b579f7f9592026d57357",
+            "realized_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "requested_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "source": "JOINT"
+          },
+          "17": {
+            "exact_writeback": true,
+            "native_hash": "fe3c3e922edf6152d7162b6ebb4279e528e4bf6c98c598c7111b4e29f2926163",
+            "realized_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "requested_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "source": "JOINT"
+          },
+          "18": {
+            "exact_writeback": true,
+            "native_hash": "c9d04436b427e1967aa824804aa2f3ab4c1e3ba5d96bb2c1e0bde2ba46401709",
+            "realized_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "requested_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "source": "JOINT"
+          },
+          "2": {
+            "exact_writeback": true,
+            "native_hash": "cecbeb4b37b71d44f6302653e40472b9a228d82ca473c5168a0af3b5e627d9dc",
+            "realized_hash": "b2ea24a8f28543bcaa8e41fd40de409b35129dd812d1ea47cd009a9e97852462",
+            "requested_hash": "b2ea24a8f28543bcaa8e41fd40de409b35129dd812d1ea47cd009a9e97852462",
+            "source": "JOINT"
+          },
+          "20": {
+            "exact_writeback": true,
+            "native_hash": "50ef63b12ee7203c9836703f349b27c7d0325bd5d2ce6c8c38292ad3301b889f",
+            "realized_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "requested_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "source": "JOINT"
+          },
+          "21": {
+            "exact_writeback": true,
+            "native_hash": "cdcad91e3b595db08e4adbfa2a375d7362fc64f522523c6e79b04989f7bde72e",
+            "realized_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "requested_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "source": "JOINT"
+          },
+          "22": {
+            "exact_writeback": true,
+            "native_hash": "dce9396bc4db25b220411f245f7aa317dba7fb36392fc46844daa4f670ee5d52",
+            "realized_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "requested_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "source": "JOINT"
+          },
+          "24": {
+            "exact_writeback": true,
+            "native_hash": "76d94fbd654cb5ac2c15089e9d1b9d9e3bdff02367072d831a908402f515a6c3",
+            "realized_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "requested_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "source": "JOINT"
+          },
+          "25": {
+            "exact_writeback": true,
+            "native_hash": "0defd632872948c388632c900a2d0e61457f37f5f90a6d4e607aea10801e4cf7",
+            "realized_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "requested_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "source": "JOINT"
+          },
+          "26": {
+            "exact_writeback": true,
+            "native_hash": "5c5adc1e5b55bf1d14fa44898ec315072a9d64a86d9eca208b0a59afea39e9d9",
+            "realized_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "requested_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "source": "JOINT"
+          },
+          "28": {
+            "exact_writeback": true,
+            "native_hash": "4b820c6360351f8924beb9a8b2a96b64483f5f99a76c216e1d2a27132a58e0ac",
+            "realized_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "requested_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "source": "JOINT"
+          },
+          "29": {
+            "exact_writeback": true,
+            "native_hash": "049d03db14aa5fd59e0a7be9e99c2805f5e95a1c7e3e866b52f09b2ac0cf62f8",
+            "realized_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "requested_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "source": "JOINT"
+          },
+          "30": {
+            "exact_writeback": true,
+            "native_hash": "6b3c81429be1f3df9ced03ce0e7a688a99ce66b001d886d78d2d0006c77a74cf",
+            "realized_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "requested_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "source": "JOINT"
+          },
+          "4": {
+            "exact_writeback": true,
+            "native_hash": "4daa318f87e62f15d45d5fbe051e1a281a888b79f8769a28e5dbed7eb9e0896a",
+            "realized_hash": "4e1a241d23172e527379cb17bdcb7b0db14fb99fb465d0d9635488b09bb6a5df",
+            "requested_hash": "4e1a241d23172e527379cb17bdcb7b0db14fb99fb465d0d9635488b09bb6a5df",
+            "source": "JOINT"
+          },
+          "5": {
+            "exact_writeback": true,
+            "native_hash": "ef997b5e9fb1ed07a72c45654a4704148d0d9991318df4f9321eee52ac9f3058",
+            "realized_hash": "758e211897650179cb43eb2a1c2be6562a952bbde553c0ea8493f64f62b2ebb6",
+            "requested_hash": "758e211897650179cb43eb2a1c2be6562a952bbde553c0ea8493f64f62b2ebb6",
+            "source": "JOINT"
+          },
+          "6": {
+            "exact_writeback": true,
+            "native_hash": "bf8b887bd332e68b677dd34648ddd21b4948b25255fae948e467284efcf18a1f",
+            "realized_hash": "c01df4b3ddc833236196a2b5874cfac71e8ac3074c1b3d3398ab69bd65df8c77",
+            "requested_hash": "c01df4b3ddc833236196a2b5874cfac71e8ac3074c1b3d3398ab69bd65df8c77",
+            "source": "JOINT"
+          },
+          "8": {
+            "exact_writeback": true,
+            "native_hash": "350d69e40ce578e234dc8757840ce75e365286f4e8a4c7009711ec610147ce02",
+            "realized_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "requested_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "source": "JOINT"
+          },
+          "9": {
+            "exact_writeback": true,
+            "native_hash": "1055d6946feda3a3d038de1093e0142ab1fa4725ee1f5dff795b67a83845af1e",
+            "realized_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "requested_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "source": "JOINT"
+          }
+        },
+        "realized_hash": "1d338ccf105627029c01d17b34824dc70b0c06d387422fc9d20e5d54f592f1aa",
+        "requested_hash": "1d338ccf105627029c01d17b34824dc70b0c06d387422fc9d20e5d54f592f1aa",
+        "source_map_hash": "5cfd5bd580812e73f54a8714873af656eec1e3e237ab92971d220d9cc259999b"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "1f4e1965e0866b11bb99769b20a64555aa0371cd848207b43de53ec34cd4babc",
+        "KV": "4d2ca8b97c883eef0c30f18895ff668487262940121d8d70cf9febcbe81cce07",
+        "REC": "e63189fab76aef8152df005abb1d3991f78c22b2cd76ed3482b40ac4534cb297"
+      },
+      "condition": "FULL_MINUS_Q1",
+      "direction": "FULL_MINUS",
+      "logits_hash": "01947697bd43ff66209765ed3e3178aaf110313368015c6611f0bd2873fcdf85",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 24,
+        "native_hash": "cc0e9986898ec64ba976effe83715038c059a09d3bcb8af2b50fa9efa3162fb8",
+        "per_layer": {
+          "0": {
+            "exact_writeback": true,
+            "native_hash": "3c1c5819711b7266d5588960d1c54556138a6f6ee2746cff07ee75133e309165",
+            "realized_hash": "3c1c5819711b7266d5588960d1c54556138a6f6ee2746cff07ee75133e309165",
+            "requested_hash": "3c1c5819711b7266d5588960d1c54556138a6f6ee2746cff07ee75133e309165",
+            "source": "CONV"
+          },
+          "1": {
+            "exact_writeback": true,
+            "native_hash": "711157079073b253bb95665fa43175a82424114a0211e06aeab98609753634b7",
+            "realized_hash": "711157079073b253bb95665fa43175a82424114a0211e06aeab98609753634b7",
+            "requested_hash": "711157079073b253bb95665fa43175a82424114a0211e06aeab98609753634b7",
+            "source": "CONV"
+          },
+          "10": {
+            "exact_writeback": true,
+            "native_hash": "7e5cd8a550c2be5c1e21b5146d15a49479c643053c49e5026111595731909462",
+            "realized_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "requested_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "source": "JOINT"
+          },
+          "12": {
+            "exact_writeback": true,
+            "native_hash": "4450728344236f67d7ce0cd3ebef7f41ecb8d2c3af0f6c76b6b5ac5231d4b45b",
+            "realized_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "requested_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "source": "JOINT"
+          },
+          "13": {
+            "exact_writeback": true,
+            "native_hash": "ff935d45ef282f314d42be46f306961554ba77ceb0ba3d62b5e96ba7e8fdbdf7",
+            "realized_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "requested_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "source": "JOINT"
+          },
+          "14": {
+            "exact_writeback": true,
+            "native_hash": "9da6a29d4a4e56165ca005a5c4d7f9fecd6329a24828cd5fcb48eae57ab201a8",
+            "realized_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "requested_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "source": "JOINT"
+          },
+          "16": {
+            "exact_writeback": true,
+            "native_hash": "8975d265e099e7e944c1dd487187196f66ffa04bb7ac614cf74a248a39010d31",
+            "realized_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "requested_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "source": "JOINT"
+          },
+          "17": {
+            "exact_writeback": true,
+            "native_hash": "5f92a250dae7040e86c86317f9d44aa97ffa80f36c10416822800a227feecafc",
+            "realized_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "requested_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "source": "JOINT"
+          },
+          "18": {
+            "exact_writeback": true,
+            "native_hash": "259bf9447ca0fe4d635c2ad2d5ff2b7034bfcee877145008c6663d0fd5510fc4",
+            "realized_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "requested_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "source": "JOINT"
+          },
+          "2": {
+            "exact_writeback": true,
+            "native_hash": "e30e2631823b267e39338cfc9cc45607f65c7949f9c0d760028b943ceeefdb94",
+            "realized_hash": "e30e2631823b267e39338cfc9cc45607f65c7949f9c0d760028b943ceeefdb94",
+            "requested_hash": "e30e2631823b267e39338cfc9cc45607f65c7949f9c0d760028b943ceeefdb94",
+            "source": "CONV"
+          },
+          "20": {
+            "exact_writeback": true,
+            "native_hash": "4f1679dd6ccf8265e98ab02888dd8f43084c0d4e907eab85be9d060ebf0e8b63",
+            "realized_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "requested_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "source": "JOINT"
+          },
+          "21": {
+            "exact_writeback": true,
+            "native_hash": "7106ca8339619a751ae1e031389ab002fd18fe70a671f13ea10e59167522f077",
+            "realized_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "requested_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "source": "JOINT"
+          },
+          "22": {
+            "exact_writeback": true,
+            "native_hash": "fe652a228829d9a66898a8e22c34b31a0a7ec8e750181a438bb92a6d6b9acd18",
+            "realized_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "requested_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "source": "JOINT"
+          },
+          "24": {
+            "exact_writeback": true,
+            "native_hash": "4938eba9eb5df24f517d29e693317ace8a976c03c4780ef1f35bd8ce5243918a",
+            "realized_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "requested_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "source": "JOINT"
+          },
+          "25": {
+            "exact_writeback": true,
+            "native_hash": "9c29a4957d026ca5b5bf9a15d6901f6a063f3ea68000642ebacd4ac532730c24",
+            "realized_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "requested_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "source": "JOINT"
+          },
+          "26": {
+            "exact_writeback": true,
+            "native_hash": "c4d546ff783367077d5ab758c35bbcacd030ad1dc13e1ccc84ef32b49ae9a1f7",
+            "realized_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "requested_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "source": "JOINT"
+          },
+          "28": {
+            "exact_writeback": true,
+            "native_hash": "de0240b4ff758bdbb8c6884a648a7a94d43de7269ebc8e9c55ce8d4be05ebbd6",
+            "realized_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "requested_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "source": "JOINT"
+          },
+          "29": {
+            "exact_writeback": true,
+            "native_hash": "749e0ffd35c99b382654b56bc9a00c32c8a47d6103747f7207407965beddb84a",
+            "realized_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "requested_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "source": "JOINT"
+          },
+          "30": {
+            "exact_writeback": true,
+            "native_hash": "d5b0449d09c06712ad7882bceed242ad0db282bf47077f0b986e8a1bef9947a6",
+            "realized_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "requested_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "source": "JOINT"
+          },
+          "4": {
+            "exact_writeback": true,
+            "native_hash": "5984eb824bd4f54558021f0cde66e78453c3fe1f7d47074a494193bd66d429a3",
+            "realized_hash": "5984eb824bd4f54558021f0cde66e78453c3fe1f7d47074a494193bd66d429a3",
+            "requested_hash": "5984eb824bd4f54558021f0cde66e78453c3fe1f7d47074a494193bd66d429a3",
+            "source": "CONV"
+          },
+          "5": {
+            "exact_writeback": true,
+            "native_hash": "ac86d4306427cf4264894db20ed84bce949a12948be65352bed1268a1c584dad",
+            "realized_hash": "ac86d4306427cf4264894db20ed84bce949a12948be65352bed1268a1c584dad",
+            "requested_hash": "ac86d4306427cf4264894db20ed84bce949a12948be65352bed1268a1c584dad",
+            "source": "CONV"
+          },
+          "6": {
+            "exact_writeback": true,
+            "native_hash": "08eb1ddd6856079c62512f18c26a6f2124ee474b00503735ebe922aeeed561a9",
+            "realized_hash": "08eb1ddd6856079c62512f18c26a6f2124ee474b00503735ebe922aeeed561a9",
+            "requested_hash": "08eb1ddd6856079c62512f18c26a6f2124ee474b00503735ebe922aeeed561a9",
+            "source": "CONV"
+          },
+          "8": {
+            "exact_writeback": true,
+            "native_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "realized_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "requested_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "source": "JOINT"
+          },
+          "9": {
+            "exact_writeback": true,
+            "native_hash": "9c263ddb8212ccb15544fe1aa57eed7dbd040757a36cc5a6e0d5e5e20c3ef741",
+            "realized_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "requested_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "source": "JOINT"
+          }
+        },
+        "realized_hash": "91612da170c1af9fb4983911095ad5e5d5c7b7e3f48839048f90accb51384926",
+        "requested_hash": "91612da170c1af9fb4983911095ad5e5d5c7b7e3f48839048f90accb51384926",
+        "source_map_hash": "a75879151192093def84bed0d4d06659ec085dfcf7ff9ac87756510b03a95504"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "307935f3d5639a70e95a48772944d745962bed20abf220ed1039ff2546c71703",
+        "KV": "6f9e92a6e2a771ae22ea6dfdaa223b6b435fa1cd71e2bd58165a805ca13b1535",
+        "REC": "f283329b6ca45a79317051c32f92a2a6f4b66418f9196268dd0d0e00a7f46666"
+      },
+      "condition": "FULL_MINUS_Q2",
+      "direction": "FULL_MINUS",
+      "logits_hash": "86c67c766e582b1a6d4fcbd2e540b41d3bdff8b4152dea99b069a99ba9410c86",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 24,
+        "native_hash": "83ec139299924d43b5e394db6dee00491ba8166376ea60cca61c12df5cfb84f1",
+        "per_layer": {
+          "0": {
+            "exact_writeback": true,
+            "native_hash": "3c1c5819711b7266d5588960d1c54556138a6f6ee2746cff07ee75133e309165",
+            "realized_hash": "ee13bc75d1ebab637d42585befcb7016e65df165b6e304e4492143b32bf89f54",
+            "requested_hash": "ee13bc75d1ebab637d42585befcb7016e65df165b6e304e4492143b32bf89f54",
+            "source": "JOINT"
+          },
+          "1": {
+            "exact_writeback": true,
+            "native_hash": "44861f931c9b1c8f4e6dd3e75173ca18f361e7a89fa612788bf932bf2a9240c9",
+            "realized_hash": "5c9d584bdfaf28607e1a7f9f91c76f050895e95ba095270b428af594c64ab238",
+            "requested_hash": "5c9d584bdfaf28607e1a7f9f91c76f050895e95ba095270b428af594c64ab238",
+            "source": "JOINT"
+          },
+          "10": {
+            "exact_writeback": true,
+            "native_hash": "2db941067b8efa78905037c9d2b043fb8a2f53b4a33668fde2172f5070144989",
+            "realized_hash": "dab8da5a749e6a6759c611c2ad1f7b2dcf7e54a66daf6416ede43e0f0cd996ed",
+            "requested_hash": "dab8da5a749e6a6759c611c2ad1f7b2dcf7e54a66daf6416ede43e0f0cd996ed",
+            "source": "CONV"
+          },
+          "12": {
+            "exact_writeback": true,
+            "native_hash": "b85c2656ab9fc823e6ef8ce5aa7632ab806427b4549a684bb6d0ea4b212aba3d",
+            "realized_hash": "15b3ed949d1a9458fa22fb2a44bde181179b4999f9389e39c22d033ce5769fff",
+            "requested_hash": "15b3ed949d1a9458fa22fb2a44bde181179b4999f9389e39c22d033ce5769fff",
+            "source": "CONV"
+          },
+          "13": {
+            "exact_writeback": true,
+            "native_hash": "8511a02bcc57090c9d2418b7a98483e9414427e91d9ee3c342fb09990697857b",
+            "realized_hash": "4283b77511b2baf73751ac59e4e488be47a861537587846fc45e2df0cb460f4e",
+            "requested_hash": "4283b77511b2baf73751ac59e4e488be47a861537587846fc45e2df0cb460f4e",
+            "source": "CONV"
+          },
+          "14": {
+            "exact_writeback": true,
+            "native_hash": "483acaea5711377f29ae8659b583a5016e36777e9cd38616608917037779fb3c",
+            "realized_hash": "7e61f04233e7e0b16e76c48d69aee0c3927aa17c04dcd04c94da333d53343332",
+            "requested_hash": "7e61f04233e7e0b16e76c48d69aee0c3927aa17c04dcd04c94da333d53343332",
+            "source": "CONV"
+          },
+          "16": {
+            "exact_writeback": true,
+            "native_hash": "10758c99c859aaefbf3f7a2f4dc76a38d8b0f2aeba4480704d53b4dcf63554eb",
+            "realized_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "requested_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "source": "JOINT"
+          },
+          "17": {
+            "exact_writeback": true,
+            "native_hash": "bf157d56fed8779093fd9cbcde44f726cc539bb3644a080cb44fb247393461d7",
+            "realized_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "requested_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "source": "JOINT"
+          },
+          "18": {
+            "exact_writeback": true,
+            "native_hash": "2bb55ad2cc41a66c1eeb3c28f96e85403491feac0ceea267499ad03b01cdd30d",
+            "realized_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "requested_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "source": "JOINT"
+          },
+          "2": {
+            "exact_writeback": true,
+            "native_hash": "cecbeb4b37b71d44f6302653e40472b9a228d82ca473c5168a0af3b5e627d9dc",
+            "realized_hash": "b2ea24a8f28543bcaa8e41fd40de409b35129dd812d1ea47cd009a9e97852462",
+            "requested_hash": "b2ea24a8f28543bcaa8e41fd40de409b35129dd812d1ea47cd009a9e97852462",
+            "source": "JOINT"
+          },
+          "20": {
+            "exact_writeback": true,
+            "native_hash": "4d9c8d417269779e922ff9ba35db10cf4c25321ed4b535a01cd1747780acd6f3",
+            "realized_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "requested_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "source": "JOINT"
+          },
+          "21": {
+            "exact_writeback": true,
+            "native_hash": "ab43aaa5138b2c01371b658073382d298c6af3f1b7147d5d5144dd98acfc751a",
+            "realized_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "requested_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "source": "JOINT"
+          },
+          "22": {
+            "exact_writeback": true,
+            "native_hash": "af12163a16ccbd29070ab58fb34ad1e3202a70fc5897894c7d222d8ab078f1e2",
+            "realized_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "requested_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "source": "JOINT"
+          },
+          "24": {
+            "exact_writeback": true,
+            "native_hash": "354655040b58a0fc745236455f3eaf147e446a2c29748229a389b048ca37da95",
+            "realized_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "requested_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "source": "JOINT"
+          },
+          "25": {
+            "exact_writeback": true,
+            "native_hash": "0bc62b660bc7ab75fdfc817993bcc88c4659dab11f37add2a8c617f040f03742",
+            "realized_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "requested_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "source": "JOINT"
+          },
+          "26": {
+            "exact_writeback": true,
+            "native_hash": "acad85e46bddb7ea647d0c4f766f51081c270dbbf64abd7bbd6eb31b4e5b6c2e",
+            "realized_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "requested_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "source": "JOINT"
+          },
+          "28": {
+            "exact_writeback": true,
+            "native_hash": "970d31568a0e1b65bda1e66b3569e010c13eb6384371e0505120aa5eeb9da1f5",
+            "realized_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "requested_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "source": "JOINT"
+          },
+          "29": {
+            "exact_writeback": true,
+            "native_hash": "59e8f1214cc3196d53fa1dc4700c191bb880ee60d60af8183e7c827f163cfbbc",
+            "realized_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "requested_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "source": "JOINT"
+          },
+          "30": {
+            "exact_writeback": true,
+            "native_hash": "c1a6c4c080e0c69fd4b229669adf8730f8d61bd81aa5c60794f9034cb8f32d08",
+            "realized_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "requested_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "source": "JOINT"
+          },
+          "4": {
+            "exact_writeback": true,
+            "native_hash": "4daa318f87e62f15d45d5fbe051e1a281a888b79f8769a28e5dbed7eb9e0896a",
+            "realized_hash": "4e1a241d23172e527379cb17bdcb7b0db14fb99fb465d0d9635488b09bb6a5df",
+            "requested_hash": "4e1a241d23172e527379cb17bdcb7b0db14fb99fb465d0d9635488b09bb6a5df",
+            "source": "JOINT"
+          },
+          "5": {
+            "exact_writeback": true,
+            "native_hash": "ef997b5e9fb1ed07a72c45654a4704148d0d9991318df4f9321eee52ac9f3058",
+            "realized_hash": "758e211897650179cb43eb2a1c2be6562a952bbde553c0ea8493f64f62b2ebb6",
+            "requested_hash": "758e211897650179cb43eb2a1c2be6562a952bbde553c0ea8493f64f62b2ebb6",
+            "source": "JOINT"
+          },
+          "6": {
+            "exact_writeback": true,
+            "native_hash": "bf8b887bd332e68b677dd34648ddd21b4948b25255fae948e467284efcf18a1f",
+            "realized_hash": "c01df4b3ddc833236196a2b5874cfac71e8ac3074c1b3d3398ab69bd65df8c77",
+            "requested_hash": "c01df4b3ddc833236196a2b5874cfac71e8ac3074c1b3d3398ab69bd65df8c77",
+            "source": "JOINT"
+          },
+          "8": {
+            "exact_writeback": true,
+            "native_hash": "350d69e40ce578e234dc8757840ce75e365286f4e8a4c7009711ec610147ce02",
+            "realized_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "requested_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "source": "CONV"
+          },
+          "9": {
+            "exact_writeback": true,
+            "native_hash": "9cfafffc53136390944e06fb2a68b22a968c9015528d1b6de3775c375d8342ad",
+            "realized_hash": "a6e52ee012fbac7902c4670f22a0122a0c29d89729e7232e03cfeddc2cd51fd9",
+            "requested_hash": "a6e52ee012fbac7902c4670f22a0122a0c29d89729e7232e03cfeddc2cd51fd9",
+            "source": "CONV"
+          }
+        },
+        "realized_hash": "1463a3a138096755347cf5746e1197035802f4c1ea5b28d55134e77df5fac38e",
+        "requested_hash": "1463a3a138096755347cf5746e1197035802f4c1ea5b28d55134e77df5fac38e",
+        "source_map_hash": "91cd1dd4488074a9c952c7f1bea57d1c5b1803741d256dda1b14d48e866ef16e"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "a39cf396798fc1a07a9f4cacf0a932be81150d5aacdcaba9146a48b7de5c2d33",
+        "KV": "03666beefed42481b98a905917ed4d2dac608130f3abaac532e54ee74c193141",
+        "REC": "ae017a74a94fe02dc6641647cdb670e534989ef7a09f64936064221556e9c337"
+      },
+      "condition": "FULL_MINUS_Q3",
+      "direction": "FULL_MINUS",
+      "logits_hash": "a83038f0ea368fc3c190f7d0bcbd2883e32f3cded1f42e2492a6b75a0afe1ae4",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 24,
+        "native_hash": "1d0b7d80df151fa7e03ffb2214bf96574e3500ac2c8e14600bbf76dddd149682",
+        "per_layer": {
+          "0": {
+            "exact_writeback": true,
+            "native_hash": "3c1c5819711b7266d5588960d1c54556138a6f6ee2746cff07ee75133e309165",
+            "realized_hash": "ee13bc75d1ebab637d42585befcb7016e65df165b6e304e4492143b32bf89f54",
+            "requested_hash": "ee13bc75d1ebab637d42585befcb7016e65df165b6e304e4492143b32bf89f54",
+            "source": "JOINT"
+          },
+          "1": {
+            "exact_writeback": true,
+            "native_hash": "44861f931c9b1c8f4e6dd3e75173ca18f361e7a89fa612788bf932bf2a9240c9",
+            "realized_hash": "5c9d584bdfaf28607e1a7f9f91c76f050895e95ba095270b428af594c64ab238",
+            "requested_hash": "5c9d584bdfaf28607e1a7f9f91c76f050895e95ba095270b428af594c64ab238",
+            "source": "JOINT"
+          },
+          "10": {
+            "exact_writeback": true,
+            "native_hash": "66d222de00fc3a31ab5f41a0ce59b682298dcf216074cca87faea844e409661a",
+            "realized_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "requested_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "source": "JOINT"
+          },
+          "12": {
+            "exact_writeback": true,
+            "native_hash": "d1c8e26c5d83f6c28344e5b5689487b97b0e72f04b009bac474a1b2a7eed5041",
+            "realized_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "requested_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "source": "JOINT"
+          },
+          "13": {
+            "exact_writeback": true,
+            "native_hash": "08fcb727f5f5e9e4056102ecfd7b8982e85edd90dd8a17b9d248675fc0646611",
+            "realized_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "requested_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "source": "JOINT"
+          },
+          "14": {
+            "exact_writeback": true,
+            "native_hash": "bb1432b89145dbb8a6d8ea22c2911d1a2f40b6d49cbee2643f0198ebf19ae798",
+            "realized_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "requested_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "source": "JOINT"
+          },
+          "16": {
+            "exact_writeback": true,
+            "native_hash": "c4b8d0bd8d7e379c324dd8d940beb3ca7874968f22e3b579f7f9592026d57357",
+            "realized_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "requested_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "source": "CONV"
+          },
+          "17": {
+            "exact_writeback": true,
+            "native_hash": "ba8ce9003ed02bc2a272df047578d1030b75b3d505c8123d52f63ef4aedfc33d",
+            "realized_hash": "302604f2666669f684654ea12353f546b6e91c410a511c1ef284011dc6cc963e",
+            "requested_hash": "302604f2666669f684654ea12353f546b6e91c410a511c1ef284011dc6cc963e",
+            "source": "CONV"
+          },
+          "18": {
+            "exact_writeback": true,
+            "native_hash": "194e780545f8a4620680f4d8643b3b937be476f0425a5e7308f7e4b820a247e1",
+            "realized_hash": "891558aedf65d9336aeac73e8ce9f77605a825d123e992fc73026609add0af84",
+            "requested_hash": "891558aedf65d9336aeac73e8ce9f77605a825d123e992fc73026609add0af84",
+            "source": "CONV"
+          },
+          "2": {
+            "exact_writeback": true,
+            "native_hash": "cecbeb4b37b71d44f6302653e40472b9a228d82ca473c5168a0af3b5e627d9dc",
+            "realized_hash": "b2ea24a8f28543bcaa8e41fd40de409b35129dd812d1ea47cd009a9e97852462",
+            "requested_hash": "b2ea24a8f28543bcaa8e41fd40de409b35129dd812d1ea47cd009a9e97852462",
+            "source": "JOINT"
+          },
+          "20": {
+            "exact_writeback": true,
+            "native_hash": "aa4a7fd52db6114b1bee08bcf90ce3bdc1916d317ffcffd03f91248c3936b773",
+            "realized_hash": "d8da5f48f8cb84a5b23aa0222caaecf5bf6ae3ef46ae39a4534b8203ce19aa94",
+            "requested_hash": "d8da5f48f8cb84a5b23aa0222caaecf5bf6ae3ef46ae39a4534b8203ce19aa94",
+            "source": "CONV"
+          },
+          "21": {
+            "exact_writeback": true,
+            "native_hash": "4077f3e6ddcc78b00e85303ecd6f675dbc37d98473a03f870fcc75d52cc4b652",
+            "realized_hash": "78a9bf07a98bb1c2708d65efb9708f7868703118d58b8b33f07e0ea32ce5afdb",
+            "requested_hash": "78a9bf07a98bb1c2708d65efb9708f7868703118d58b8b33f07e0ea32ce5afdb",
+            "source": "CONV"
+          },
+          "22": {
+            "exact_writeback": true,
+            "native_hash": "5836edd09bf94b1a5d0e6212e0bd9ac531afefdb8388cf31a081822aeb7464a7",
+            "realized_hash": "7b748c2ede83e9f9d0e7198b4d4f69baa9d10dba6d38f9512c7c8a886b8e1900",
+            "requested_hash": "7b748c2ede83e9f9d0e7198b4d4f69baa9d10dba6d38f9512c7c8a886b8e1900",
+            "source": "CONV"
+          },
+          "24": {
+            "exact_writeback": true,
+            "native_hash": "44cf84beb0ed1056a72ccd42b39d43675e073bacf22590a811440f75fbd70429",
+            "realized_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "requested_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "source": "JOINT"
+          },
+          "25": {
+            "exact_writeback": true,
+            "native_hash": "5c4f0213291759afaa744a21ae5c48321fc6fba9ceb89965d85a51a5f6fc7fff",
+            "realized_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "requested_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "source": "JOINT"
+          },
+          "26": {
+            "exact_writeback": true,
+            "native_hash": "fbc85ff49daf65137fa4905228aee19fa7afec6fdbb9995b7c675c4b540ad692",
+            "realized_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "requested_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "source": "JOINT"
+          },
+          "28": {
+            "exact_writeback": true,
+            "native_hash": "c8040bee37a2407d7789136e007b664423e3ec147ec28dde488a56cc83f7d3aa",
+            "realized_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "requested_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "source": "JOINT"
+          },
+          "29": {
+            "exact_writeback": true,
+            "native_hash": "a33d8e3c5891816746405afc60a4806d1a7b7917f91373e88ffde061b8124aa8",
+            "realized_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "requested_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "source": "JOINT"
+          },
+          "30": {
+            "exact_writeback": true,
+            "native_hash": "3202e6d513e088739427d60904299c1e89031486908ddbd5a1c228f2d335670e",
+            "realized_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "requested_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "source": "JOINT"
+          },
+          "4": {
+            "exact_writeback": true,
+            "native_hash": "4daa318f87e62f15d45d5fbe051e1a281a888b79f8769a28e5dbed7eb9e0896a",
+            "realized_hash": "4e1a241d23172e527379cb17bdcb7b0db14fb99fb465d0d9635488b09bb6a5df",
+            "requested_hash": "4e1a241d23172e527379cb17bdcb7b0db14fb99fb465d0d9635488b09bb6a5df",
+            "source": "JOINT"
+          },
+          "5": {
+            "exact_writeback": true,
+            "native_hash": "ef997b5e9fb1ed07a72c45654a4704148d0d9991318df4f9321eee52ac9f3058",
+            "realized_hash": "758e211897650179cb43eb2a1c2be6562a952bbde553c0ea8493f64f62b2ebb6",
+            "requested_hash": "758e211897650179cb43eb2a1c2be6562a952bbde553c0ea8493f64f62b2ebb6",
+            "source": "JOINT"
+          },
+          "6": {
+            "exact_writeback": true,
+            "native_hash": "bf8b887bd332e68b677dd34648ddd21b4948b25255fae948e467284efcf18a1f",
+            "realized_hash": "c01df4b3ddc833236196a2b5874cfac71e8ac3074c1b3d3398ab69bd65df8c77",
+            "requested_hash": "c01df4b3ddc833236196a2b5874cfac71e8ac3074c1b3d3398ab69bd65df8c77",
+            "source": "JOINT"
+          },
+          "8": {
+            "exact_writeback": true,
+            "native_hash": "350d69e40ce578e234dc8757840ce75e365286f4e8a4c7009711ec610147ce02",
+            "realized_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "requested_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "source": "JOINT"
+          },
+          "9": {
+            "exact_writeback": true,
+            "native_hash": "1055d6946feda3a3d038de1093e0142ab1fa4725ee1f5dff795b67a83845af1e",
+            "realized_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "requested_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "source": "JOINT"
+          }
+        },
+        "realized_hash": "a98b01ba35435f6877e24ffed065adcf2bb2e0720fbf4d9a48ae510ce0854526",
+        "requested_hash": "a98b01ba35435f6877e24ffed065adcf2bb2e0720fbf4d9a48ae510ce0854526",
+        "source_map_hash": "89e400381266027be41186b0423a6f88854404bf5f11e2466a288bdc45e5e095"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "75f83bdc4283b5291f26288c34853686027c6956f461b05ec7270566c0f6c148",
+        "KV": "87f49ea894c622fa219fe1b7cb938fbaca6efca729256dd0e097044d8bc58133",
+        "REC": "a4c46f9490e47b0da7a83989d600d9dd047c59f3abf73752ffe3e4ee96275fdb"
+      },
+      "condition": "FULL_MINUS_Q4",
+      "direction": "FULL_MINUS",
+      "logits_hash": "a116671743d130885e4a697a3aa178e89279a7df3e0963ae1e81e57e133167f9",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 24,
+        "native_hash": "c9133bf3d8a0e59242d5e466798a708ac5050241742d354971c28bf5e9a8c69d",
+        "per_layer": {
+          "0": {
+            "exact_writeback": true,
+            "native_hash": "3c1c5819711b7266d5588960d1c54556138a6f6ee2746cff07ee75133e309165",
+            "realized_hash": "ee13bc75d1ebab637d42585befcb7016e65df165b6e304e4492143b32bf89f54",
+            "requested_hash": "ee13bc75d1ebab637d42585befcb7016e65df165b6e304e4492143b32bf89f54",
+            "source": "JOINT"
+          },
+          "1": {
+            "exact_writeback": true,
+            "native_hash": "44861f931c9b1c8f4e6dd3e75173ca18f361e7a89fa612788bf932bf2a9240c9",
+            "realized_hash": "5c9d584bdfaf28607e1a7f9f91c76f050895e95ba095270b428af594c64ab238",
+            "requested_hash": "5c9d584bdfaf28607e1a7f9f91c76f050895e95ba095270b428af594c64ab238",
+            "source": "JOINT"
+          },
+          "10": {
+            "exact_writeback": true,
+            "native_hash": "66d222de00fc3a31ab5f41a0ce59b682298dcf216074cca87faea844e409661a",
+            "realized_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "requested_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "source": "JOINT"
+          },
+          "12": {
+            "exact_writeback": true,
+            "native_hash": "d1c8e26c5d83f6c28344e5b5689487b97b0e72f04b009bac474a1b2a7eed5041",
+            "realized_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "requested_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "source": "JOINT"
+          },
+          "13": {
+            "exact_writeback": true,
+            "native_hash": "08fcb727f5f5e9e4056102ecfd7b8982e85edd90dd8a17b9d248675fc0646611",
+            "realized_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "requested_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "source": "JOINT"
+          },
+          "14": {
+            "exact_writeback": true,
+            "native_hash": "bb1432b89145dbb8a6d8ea22c2911d1a2f40b6d49cbee2643f0198ebf19ae798",
+            "realized_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "requested_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "source": "JOINT"
+          },
+          "16": {
+            "exact_writeback": true,
+            "native_hash": "c4b8d0bd8d7e379c324dd8d940beb3ca7874968f22e3b579f7f9592026d57357",
+            "realized_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "requested_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "source": "JOINT"
+          },
+          "17": {
+            "exact_writeback": true,
+            "native_hash": "fe3c3e922edf6152d7162b6ebb4279e528e4bf6c98c598c7111b4e29f2926163",
+            "realized_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "requested_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "source": "JOINT"
+          },
+          "18": {
+            "exact_writeback": true,
+            "native_hash": "c9d04436b427e1967aa824804aa2f3ab4c1e3ba5d96bb2c1e0bde2ba46401709",
+            "realized_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "requested_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "source": "JOINT"
+          },
+          "2": {
+            "exact_writeback": true,
+            "native_hash": "cecbeb4b37b71d44f6302653e40472b9a228d82ca473c5168a0af3b5e627d9dc",
+            "realized_hash": "b2ea24a8f28543bcaa8e41fd40de409b35129dd812d1ea47cd009a9e97852462",
+            "requested_hash": "b2ea24a8f28543bcaa8e41fd40de409b35129dd812d1ea47cd009a9e97852462",
+            "source": "JOINT"
+          },
+          "20": {
+            "exact_writeback": true,
+            "native_hash": "50ef63b12ee7203c9836703f349b27c7d0325bd5d2ce6c8c38292ad3301b889f",
+            "realized_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "requested_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "source": "JOINT"
+          },
+          "21": {
+            "exact_writeback": true,
+            "native_hash": "cdcad91e3b595db08e4adbfa2a375d7362fc64f522523c6e79b04989f7bde72e",
+            "realized_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "requested_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "source": "JOINT"
+          },
+          "22": {
+            "exact_writeback": true,
+            "native_hash": "dce9396bc4db25b220411f245f7aa317dba7fb36392fc46844daa4f670ee5d52",
+            "realized_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "requested_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "source": "JOINT"
+          },
+          "24": {
+            "exact_writeback": true,
+            "native_hash": "76d94fbd654cb5ac2c15089e9d1b9d9e3bdff02367072d831a908402f515a6c3",
+            "realized_hash": "e22613977397559e1b3e3ee915a00dfb9cf7a220cb7f08bab918438de90827a7",
+            "requested_hash": "e22613977397559e1b3e3ee915a00dfb9cf7a220cb7f08bab918438de90827a7",
+            "source": "CONV"
+          },
+          "25": {
+            "exact_writeback": true,
+            "native_hash": "17c5bb7e7dddef23df938f32772ad64d92e4a077fdcfb4f203b7c927610e6438",
+            "realized_hash": "ef4783f78e4a8eee3936fef89ea1dec415f0d9ec5355ab224c78e63f88379b2d",
+            "requested_hash": "ef4783f78e4a8eee3936fef89ea1dec415f0d9ec5355ab224c78e63f88379b2d",
+            "source": "CONV"
+          },
+          "26": {
+            "exact_writeback": true,
+            "native_hash": "ce2a57e8347e5aec65d337e7b9b96f560a531883401cd2491e164dc7abbe77d4",
+            "realized_hash": "09ab9fc0925eb650c209f538fc1da112f89b922f1dd426bb2befc5d5be5d7828",
+            "requested_hash": "09ab9fc0925eb650c209f538fc1da112f89b922f1dd426bb2befc5d5be5d7828",
+            "source": "CONV"
+          },
+          "28": {
+            "exact_writeback": true,
+            "native_hash": "ad41838150501c08e9f9909a66de8c074e7a4ba66cb5351869d3b643299cd70c",
+            "realized_hash": "e6a5f439d6404624689b437b4fda29fba77f408f14471cfad162b47f641523bd",
+            "requested_hash": "e6a5f439d6404624689b437b4fda29fba77f408f14471cfad162b47f641523bd",
+            "source": "CONV"
+          },
+          "29": {
+            "exact_writeback": true,
+            "native_hash": "32ad4acc1098cd1bd64fb4168b9047da2832b2ad2b86a327bc5afbb7fe195e7b",
+            "realized_hash": "c87231ca7d9838725fb022b2ee2d996a8c462268aa68250e22e1606a9bab6211",
+            "requested_hash": "c87231ca7d9838725fb022b2ee2d996a8c462268aa68250e22e1606a9bab6211",
+            "source": "CONV"
+          },
+          "30": {
+            "exact_writeback": true,
+            "native_hash": "81026b6e819d2659905c616fe95650a79410b542fa63e8e9b501b7035438f656",
+            "realized_hash": "74cfc86dab98bfda9b9bd6e1550e7705e38191d694d39f28461bac273fa1313c",
+            "requested_hash": "74cfc86dab98bfda9b9bd6e1550e7705e38191d694d39f28461bac273fa1313c",
+            "source": "CONV"
+          },
+          "4": {
+            "exact_writeback": true,
+            "native_hash": "4daa318f87e62f15d45d5fbe051e1a281a888b79f8769a28e5dbed7eb9e0896a",
+            "realized_hash": "4e1a241d23172e527379cb17bdcb7b0db14fb99fb465d0d9635488b09bb6a5df",
+            "requested_hash": "4e1a241d23172e527379cb17bdcb7b0db14fb99fb465d0d9635488b09bb6a5df",
+            "source": "JOINT"
+          },
+          "5": {
+            "exact_writeback": true,
+            "native_hash": "ef997b5e9fb1ed07a72c45654a4704148d0d9991318df4f9321eee52ac9f3058",
+            "realized_hash": "758e211897650179cb43eb2a1c2be6562a952bbde553c0ea8493f64f62b2ebb6",
+            "requested_hash": "758e211897650179cb43eb2a1c2be6562a952bbde553c0ea8493f64f62b2ebb6",
+            "source": "JOINT"
+          },
+          "6": {
+            "exact_writeback": true,
+            "native_hash": "bf8b887bd332e68b677dd34648ddd21b4948b25255fae948e467284efcf18a1f",
+            "realized_hash": "c01df4b3ddc833236196a2b5874cfac71e8ac3074c1b3d3398ab69bd65df8c77",
+            "requested_hash": "c01df4b3ddc833236196a2b5874cfac71e8ac3074c1b3d3398ab69bd65df8c77",
+            "source": "JOINT"
+          },
+          "8": {
+            "exact_writeback": true,
+            "native_hash": "350d69e40ce578e234dc8757840ce75e365286f4e8a4c7009711ec610147ce02",
+            "realized_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "requested_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "source": "JOINT"
+          },
+          "9": {
+            "exact_writeback": true,
+            "native_hash": "1055d6946feda3a3d038de1093e0142ab1fa4725ee1f5dff795b67a83845af1e",
+            "realized_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "requested_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "source": "JOINT"
+          }
+        },
+        "realized_hash": "b5b9ee8b6c84673e48e17137a6baa8751e88f9cb03117274bd19021906efbdd5",
+        "requested_hash": "b5b9ee8b6c84673e48e17137a6baa8751e88f9cb03117274bd19021906efbdd5",
+        "source_map_hash": "84a0ddcab308d9704452794e63d77316866eb4322cd5c882f7ecf15d715e7d7c"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "6190cf7b912c05ac7ceee3137061ebba862dda1614771f470c9ebe4d0c50284c",
+        "KV": "d86e0ee3d0ee3dc282dc32a62c559aa1863ab8c24c5e4baaff6a1b9495892b1d",
+        "REC": "85563b560ae36f3fb93b717d7b4eb0a6087b592b6a680ecac7f8b7cc847e54c5"
+      },
+      "condition": "SERIAL_Q2_Q3_JOINT_CONV",
+      "direction": "HYBRID",
+      "logits_hash": "85a7b76e207d5a926f73ae3ae0156fd85c2acf327f61c32f060c2d4ef10a5797",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 12,
+        "native_hash": "92d54dfc82f22ce89861e531159d326ccb61b0c329c0a521638f5c3240a1a899",
+        "per_layer": {
+          "10": {
+            "exact_writeback": true,
+            "native_hash": "7e5cd8a550c2be5c1e21b5146d15a49479c643053c49e5026111595731909462",
+            "realized_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "requested_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "source": "JOINT"
+          },
+          "12": {
+            "exact_writeback": true,
+            "native_hash": "4450728344236f67d7ce0cd3ebef7f41ecb8d2c3af0f6c76b6b5ac5231d4b45b",
+            "realized_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "requested_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "source": "JOINT"
+          },
+          "13": {
+            "exact_writeback": true,
+            "native_hash": "ff935d45ef282f314d42be46f306961554ba77ceb0ba3d62b5e96ba7e8fdbdf7",
+            "realized_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "requested_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "source": "JOINT"
+          },
+          "14": {
+            "exact_writeback": true,
+            "native_hash": "9da6a29d4a4e56165ca005a5c4d7f9fecd6329a24828cd5fcb48eae57ab201a8",
+            "realized_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "requested_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "source": "JOINT"
+          },
+          "16": {
+            "exact_writeback": true,
+            "native_hash": "8975d265e099e7e944c1dd487187196f66ffa04bb7ac614cf74a248a39010d31",
+            "realized_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "requested_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "source": "CONV"
+          },
+          "17": {
+            "exact_writeback": true,
+            "native_hash": "cd1a5789aebd17aa2e30cf090433189564e4e3a1891a743142f5f0505be169c7",
+            "realized_hash": "302604f2666669f684654ea12353f546b6e91c410a511c1ef284011dc6cc963e",
+            "requested_hash": "302604f2666669f684654ea12353f546b6e91c410a511c1ef284011dc6cc963e",
+            "source": "CONV"
+          },
+          "18": {
+            "exact_writeback": true,
+            "native_hash": "2d7bcc7ac7b45d1c9afe081e8ad32f90f91b9ef5417f852a1cb4ffe806a71354",
+            "realized_hash": "891558aedf65d9336aeac73e8ce9f77605a825d123e992fc73026609add0af84",
+            "requested_hash": "891558aedf65d9336aeac73e8ce9f77605a825d123e992fc73026609add0af84",
+            "source": "CONV"
+          },
+          "20": {
+            "exact_writeback": true,
+            "native_hash": "9c82dc6410a67987a51f6d7631c9ec0824534dfa7a8bc45a0cdb8b6e3e291475",
+            "realized_hash": "d8da5f48f8cb84a5b23aa0222caaecf5bf6ae3ef46ae39a4534b8203ce19aa94",
+            "requested_hash": "d8da5f48f8cb84a5b23aa0222caaecf5bf6ae3ef46ae39a4534b8203ce19aa94",
+            "source": "CONV"
+          },
+          "21": {
+            "exact_writeback": true,
+            "native_hash": "268e3881a71baf1c4a5a11815f4670200b64513ca83a3c5ed1f28f1a7695d369",
+            "realized_hash": "78a9bf07a98bb1c2708d65efb9708f7868703118d58b8b33f07e0ea32ce5afdb",
+            "requested_hash": "78a9bf07a98bb1c2708d65efb9708f7868703118d58b8b33f07e0ea32ce5afdb",
+            "source": "CONV"
+          },
+          "22": {
+            "exact_writeback": true,
+            "native_hash": "1564a21b5ceca107b30e27e4a655967858d99f360db620803de6d67cb7c3c3b7",
+            "realized_hash": "7b748c2ede83e9f9d0e7198b4d4f69baa9d10dba6d38f9512c7c8a886b8e1900",
+            "requested_hash": "7b748c2ede83e9f9d0e7198b4d4f69baa9d10dba6d38f9512c7c8a886b8e1900",
+            "source": "CONV"
+          },
+          "8": {
+            "exact_writeback": true,
+            "native_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "realized_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "requested_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "source": "JOINT"
+          },
+          "9": {
+            "exact_writeback": true,
+            "native_hash": "9c263ddb8212ccb15544fe1aa57eed7dbd040757a36cc5a6e0d5e5e20c3ef741",
+            "realized_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "requested_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "source": "JOINT"
+          }
+        },
+        "realized_hash": "f4f8617c69c3311e01f6ae46b02cc79705d037b2fc2bb3fae0688c0a1a1e774d",
+        "requested_hash": "f4f8617c69c3311e01f6ae46b02cc79705d037b2fc2bb3fae0688c0a1a1e774d",
+        "source_map_hash": "b044db89907857aabd445e8c3b78aafe8fd3127f1edce30ff1cb7e5700cbf3c9"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "797396dbf496c7d73e3d158b8b476762c8cfd210c357374a90099b902220f526",
+        "KV": "637ab98e3ecffe470d27a41c320b6eb469f073eb08772f4664bc4050a9497756",
+        "REC": "410d31b8567d5a10a53147d8f06034ae843079fb8a3dded0216bd65f4199a745"
+      },
+      "condition": "SERIAL_Q2_Q3_CONV_JOINT",
+      "direction": "HYBRID",
+      "logits_hash": "849d4d5e92443eb4067a1a41befda4979bf33de0ac4229211931d5c49e04a215",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 12,
+        "native_hash": "4772d64e1115b0fe2b87fdcf1622d4dd5e9bc683d8d44a58028252a0ce3dde4d",
+        "per_layer": {
+          "10": {
+            "exact_writeback": true,
+            "native_hash": "dab8da5a749e6a6759c611c2ad1f7b2dcf7e54a66daf6416ede43e0f0cd996ed",
+            "realized_hash": "dab8da5a749e6a6759c611c2ad1f7b2dcf7e54a66daf6416ede43e0f0cd996ed",
+            "requested_hash": "dab8da5a749e6a6759c611c2ad1f7b2dcf7e54a66daf6416ede43e0f0cd996ed",
+            "source": "CONV"
+          },
+          "12": {
+            "exact_writeback": true,
+            "native_hash": "15b3ed949d1a9458fa22fb2a44bde181179b4999f9389e39c22d033ce5769fff",
+            "realized_hash": "15b3ed949d1a9458fa22fb2a44bde181179b4999f9389e39c22d033ce5769fff",
+            "requested_hash": "15b3ed949d1a9458fa22fb2a44bde181179b4999f9389e39c22d033ce5769fff",
+            "source": "CONV"
+          },
+          "13": {
+            "exact_writeback": true,
+            "native_hash": "4283b77511b2baf73751ac59e4e488be47a861537587846fc45e2df0cb460f4e",
+            "realized_hash": "4283b77511b2baf73751ac59e4e488be47a861537587846fc45e2df0cb460f4e",
+            "requested_hash": "4283b77511b2baf73751ac59e4e488be47a861537587846fc45e2df0cb460f4e",
+            "source": "CONV"
+          },
+          "14": {
+            "exact_writeback": true,
+            "native_hash": "7e61f04233e7e0b16e76c48d69aee0c3927aa17c04dcd04c94da333d53343332",
+            "realized_hash": "7e61f04233e7e0b16e76c48d69aee0c3927aa17c04dcd04c94da333d53343332",
+            "requested_hash": "7e61f04233e7e0b16e76c48d69aee0c3927aa17c04dcd04c94da333d53343332",
+            "source": "CONV"
+          },
+          "16": {
+            "exact_writeback": true,
+            "native_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "realized_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "requested_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "source": "JOINT"
+          },
+          "17": {
+            "exact_writeback": true,
+            "native_hash": "8d786d362d9976cc2e73cca2a3ef2d8b44814f46f15334f36073f9348053a1fc",
+            "realized_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "requested_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "source": "JOINT"
+          },
+          "18": {
+            "exact_writeback": true,
+            "native_hash": "fb0cf749d9ba4897060b47a285fb2aa729e44c521ecdaae3d2f9841feaa5f85b",
+            "realized_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "requested_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "source": "JOINT"
+          },
+          "20": {
+            "exact_writeback": true,
+            "native_hash": "e514be7c41f360a58c6ca9cd01527e7f9396943ffc472c21c481bf8ea00180ce",
+            "realized_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "requested_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "source": "JOINT"
+          },
+          "21": {
+            "exact_writeback": true,
+            "native_hash": "851750d6ed4519c85573a5362aff103ca2b2996a1083082bcd47c9f85cf43fa7",
+            "realized_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "requested_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "source": "JOINT"
+          },
+          "22": {
+            "exact_writeback": true,
+            "native_hash": "4cff0d5f3d0b119dd5aa0db3461a1bb4da680847c3a331c67b398b2285bde3e6",
+            "realized_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "requested_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "source": "JOINT"
+          },
+          "8": {
+            "exact_writeback": true,
+            "native_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "realized_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "requested_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "source": "CONV"
+          },
+          "9": {
+            "exact_writeback": true,
+            "native_hash": "a6e52ee012fbac7902c4670f22a0122a0c29d89729e7232e03cfeddc2cd51fd9",
+            "realized_hash": "a6e52ee012fbac7902c4670f22a0122a0c29d89729e7232e03cfeddc2cd51fd9",
+            "requested_hash": "a6e52ee012fbac7902c4670f22a0122a0c29d89729e7232e03cfeddc2cd51fd9",
+            "source": "CONV"
+          }
+        },
+        "realized_hash": "b49fed9ae0201c21839d3a92581ba933a8ca428cbfa425a38c93d8a3ec66ef28",
+        "requested_hash": "b49fed9ae0201c21839d3a92581ba933a8ca428cbfa425a38c93d8a3ec66ef28",
+        "source_map_hash": "c6324b0ffdbd20fdb7fa1347f85f2c54da054628f6a51485bd3250b38c1f1d4f"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "c69a1ce094461db727e3cd626fc87ef5f55672555b355db90589c1ae052eeb11",
+        "KV": "d0ee78e2d6257ccf302494524be7ec28786ee1be5dc18a5ee49473046fd6c0bd",
+        "REC": "76a354698f763256172f9da05681d00cf10369686c7541694d249670fbf57ae2"
+      },
+      "condition": "SERIAL_Q3_Q4_JOINT_CONV",
+      "direction": "HYBRID",
+      "logits_hash": "bba8d0adaafaf853d72232c71aeb3082d4b22d15ed2b16d4712e406077cc5cf2",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 12,
+        "native_hash": "6d4bc9b70657986af88ad5abe87b138df29a6291e334d4003b5196a1997f5d6c",
+        "per_layer": {
+          "16": {
+            "exact_writeback": true,
+            "native_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "realized_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "requested_hash": "e14d8de433b5db258446f5d63f91f70ad88d859b45b3755e03740709e29013c2",
+            "source": "JOINT"
+          },
+          "17": {
+            "exact_writeback": true,
+            "native_hash": "8d786d362d9976cc2e73cca2a3ef2d8b44814f46f15334f36073f9348053a1fc",
+            "realized_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "requested_hash": "bc2ebd8c409273c9bc38468d9102577f94f98e71b12383b018e9f26299fe0092",
+            "source": "JOINT"
+          },
+          "18": {
+            "exact_writeback": true,
+            "native_hash": "fb0cf749d9ba4897060b47a285fb2aa729e44c521ecdaae3d2f9841feaa5f85b",
+            "realized_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "requested_hash": "2fece85b31dc6ea5de710ef4ff2a8607b86f3c9c3656b2d95bb10beadf175da9",
+            "source": "JOINT"
+          },
+          "20": {
+            "exact_writeback": true,
+            "native_hash": "e514be7c41f360a58c6ca9cd01527e7f9396943ffc472c21c481bf8ea00180ce",
+            "realized_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "requested_hash": "7afc2dad1876b4df37271fd29ff93d3dd9ab460d670805554700a2bdc858df53",
+            "source": "JOINT"
+          },
+          "21": {
+            "exact_writeback": true,
+            "native_hash": "851750d6ed4519c85573a5362aff103ca2b2996a1083082bcd47c9f85cf43fa7",
+            "realized_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "requested_hash": "b2faee988c0eaea9f27286ee4864b79842ecac01fb437c17a78f415b72deaa4a",
+            "source": "JOINT"
+          },
+          "22": {
+            "exact_writeback": true,
+            "native_hash": "4cff0d5f3d0b119dd5aa0db3461a1bb4da680847c3a331c67b398b2285bde3e6",
+            "realized_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "requested_hash": "fea365f4a9a694df5103a9411ab8f9062798546d49ca64db29db884417cab67d",
+            "source": "JOINT"
+          },
+          "24": {
+            "exact_writeback": true,
+            "native_hash": "75b1eeb7a212d05b7e835c7e32d833f1e2b1b9d4d06a32ae5e503fd6eafcc07f",
+            "realized_hash": "e22613977397559e1b3e3ee915a00dfb9cf7a220cb7f08bab918438de90827a7",
+            "requested_hash": "e22613977397559e1b3e3ee915a00dfb9cf7a220cb7f08bab918438de90827a7",
+            "source": "CONV"
+          },
+          "25": {
+            "exact_writeback": true,
+            "native_hash": "60962c7b22553167739260169b48a9ad529c9ad0ff0d069446d9af8b2024553c",
+            "realized_hash": "ef4783f78e4a8eee3936fef89ea1dec415f0d9ec5355ab224c78e63f88379b2d",
+            "requested_hash": "ef4783f78e4a8eee3936fef89ea1dec415f0d9ec5355ab224c78e63f88379b2d",
+            "source": "CONV"
+          },
+          "26": {
+            "exact_writeback": true,
+            "native_hash": "6e6d3ead515376898da4262eff229d07ea7a1c30729f6942b2ecb7ced423d557",
+            "realized_hash": "09ab9fc0925eb650c209f538fc1da112f89b922f1dd426bb2befc5d5be5d7828",
+            "requested_hash": "09ab9fc0925eb650c209f538fc1da112f89b922f1dd426bb2befc5d5be5d7828",
+            "source": "CONV"
+          },
+          "28": {
+            "exact_writeback": true,
+            "native_hash": "bdd3da71684d7fb2186cdfec3de7951f3ec3fdf80d2dd3f5649bdd91b518cb83",
+            "realized_hash": "e6a5f439d6404624689b437b4fda29fba77f408f14471cfad162b47f641523bd",
+            "requested_hash": "e6a5f439d6404624689b437b4fda29fba77f408f14471cfad162b47f641523bd",
+            "source": "CONV"
+          },
+          "29": {
+            "exact_writeback": true,
+            "native_hash": "dee2e6b15a67e8908302bfa2a9a159b706fe443777d955d40e3b600bb0e464fe",
+            "realized_hash": "c87231ca7d9838725fb022b2ee2d996a8c462268aa68250e22e1606a9bab6211",
+            "requested_hash": "c87231ca7d9838725fb022b2ee2d996a8c462268aa68250e22e1606a9bab6211",
+            "source": "CONV"
+          },
+          "30": {
+            "exact_writeback": true,
+            "native_hash": "fb9044b1221c42a501e84ed91615ed27608db7f7284d8649d90743a6455c613f",
+            "realized_hash": "74cfc86dab98bfda9b9bd6e1550e7705e38191d694d39f28461bac273fa1313c",
+            "requested_hash": "74cfc86dab98bfda9b9bd6e1550e7705e38191d694d39f28461bac273fa1313c",
+            "source": "CONV"
+          }
+        },
+        "realized_hash": "d8a18792ef7256233e55aaca870f90e8e1dfaaccbf3bbef1ee6f0ddd58461653",
+        "requested_hash": "d8a18792ef7256233e55aaca870f90e8e1dfaaccbf3bbef1ee6f0ddd58461653",
+        "source_map_hash": "76449163f57238aa5f5116c13c369cd34333523b50685ed8a306d457add3d279"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "d5362ee7d6ff07c6b87aa6771abf9813a86a994e638569de32eeebe24325d9eb",
+        "KV": "5141404ede025b831de1ea74f823ac45e7e5bf5b638e5a9208d5cecd19cbe75b",
+        "REC": "62330b5610ba39087ad5cfe6c204e114bc21f9bfc9af736843c1ad2a40c32d53"
+      },
+      "condition": "SERIAL_Q3_Q4_CONV_JOINT",
+      "direction": "HYBRID",
+      "logits_hash": "65e0f0f7cf94d8783093c0153f8d05ed25530ccf6d876c35dc7f340ddccb34ea",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 12,
+        "native_hash": "0f00456ba67797ca42c6432d2d7f3e3278b39b07816f589a3631c0ff21dde879",
+        "per_layer": {
+          "16": {
+            "exact_writeback": true,
+            "native_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "realized_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "requested_hash": "ebd479de85f863af53d6cb17e7f7cf42762320abe4529a37af26b487d3061eb8",
+            "source": "CONV"
+          },
+          "17": {
+            "exact_writeback": true,
+            "native_hash": "302604f2666669f684654ea12353f546b6e91c410a511c1ef284011dc6cc963e",
+            "realized_hash": "302604f2666669f684654ea12353f546b6e91c410a511c1ef284011dc6cc963e",
+            "requested_hash": "302604f2666669f684654ea12353f546b6e91c410a511c1ef284011dc6cc963e",
+            "source": "CONV"
+          },
+          "18": {
+            "exact_writeback": true,
+            "native_hash": "891558aedf65d9336aeac73e8ce9f77605a825d123e992fc73026609add0af84",
+            "realized_hash": "891558aedf65d9336aeac73e8ce9f77605a825d123e992fc73026609add0af84",
+            "requested_hash": "891558aedf65d9336aeac73e8ce9f77605a825d123e992fc73026609add0af84",
+            "source": "CONV"
+          },
+          "20": {
+            "exact_writeback": true,
+            "native_hash": "d8da5f48f8cb84a5b23aa0222caaecf5bf6ae3ef46ae39a4534b8203ce19aa94",
+            "realized_hash": "d8da5f48f8cb84a5b23aa0222caaecf5bf6ae3ef46ae39a4534b8203ce19aa94",
+            "requested_hash": "d8da5f48f8cb84a5b23aa0222caaecf5bf6ae3ef46ae39a4534b8203ce19aa94",
+            "source": "CONV"
+          },
+          "21": {
+            "exact_writeback": true,
+            "native_hash": "78a9bf07a98bb1c2708d65efb9708f7868703118d58b8b33f07e0ea32ce5afdb",
+            "realized_hash": "78a9bf07a98bb1c2708d65efb9708f7868703118d58b8b33f07e0ea32ce5afdb",
+            "requested_hash": "78a9bf07a98bb1c2708d65efb9708f7868703118d58b8b33f07e0ea32ce5afdb",
+            "source": "CONV"
+          },
+          "22": {
+            "exact_writeback": true,
+            "native_hash": "7b748c2ede83e9f9d0e7198b4d4f69baa9d10dba6d38f9512c7c8a886b8e1900",
+            "realized_hash": "7b748c2ede83e9f9d0e7198b4d4f69baa9d10dba6d38f9512c7c8a886b8e1900",
+            "requested_hash": "7b748c2ede83e9f9d0e7198b4d4f69baa9d10dba6d38f9512c7c8a886b8e1900",
+            "source": "CONV"
+          },
+          "24": {
+            "exact_writeback": true,
+            "native_hash": "e22613977397559e1b3e3ee915a00dfb9cf7a220cb7f08bab918438de90827a7",
+            "realized_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "requested_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "source": "JOINT"
+          },
+          "25": {
+            "exact_writeback": true,
+            "native_hash": "33816f980e81e13dee111bab8bd3e51daa2d05cccd0e164ffd37db75cbe4e3d0",
+            "realized_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "requested_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "source": "JOINT"
+          },
+          "26": {
+            "exact_writeback": true,
+            "native_hash": "021427b0a490252582953516b447eb20677eab8d29a2afdc6065fdaabf6fa8d1",
+            "realized_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "requested_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "source": "JOINT"
+          },
+          "28": {
+            "exact_writeback": true,
+            "native_hash": "e390c02e72ccae23959b9ae19747faec18d72f2b885decee34cc2e505b12c649",
+            "realized_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "requested_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "source": "JOINT"
+          },
+          "29": {
+            "exact_writeback": true,
+            "native_hash": "c3b29622f168f1e3072dc64006f7d3f45aee592d4907023ff82b1280c83a6e55",
+            "realized_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "requested_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "source": "JOINT"
+          },
+          "30": {
+            "exact_writeback": true,
+            "native_hash": "8dddfa8f5faccb78f81c9364a24ba1a996b4961d7f4a9d00a93fada59c701e72",
+            "realized_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "requested_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "source": "JOINT"
+          }
+        },
+        "realized_hash": "833e3c3c3ea91a426b81b6da8dbb840ae6d79495531a0c1563c764a8a1e24816",
+        "requested_hash": "833e3c3c3ea91a426b81b6da8dbb840ae6d79495531a0c1563c764a8a1e24816",
+        "source_map_hash": "b861f6bee30d7b58da4e4a84208829779f413d814bb0c2ad069d4ee4284b46c3"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "041b74ec6c09d6e1b931b3c615da66b056a12b12093ee0520cf436228dab58d7",
+        "KV": "6b7576520190ecaa670e493a1b5c7d457e515b2f89e6ab3fa71bb928df65890c",
+        "REC": "26e80dd9d8e51e3cb3a75401d2801ff3b1d765d76628566b8c29e80afd82ca93"
+      },
+      "condition": "SERIAL_Q2_Q4_JOINT_CONV",
+      "direction": "HYBRID",
+      "logits_hash": "9235dcc8cf1d688df5ae611efd030a21b1cf8632f8777f26fe3b11b080cb18b0",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 12,
+        "native_hash": "15512becb69b9c7f388ca26fb093c80b2dfd19f57b60bb9accee75ed27226c7a",
+        "per_layer": {
+          "10": {
+            "exact_writeback": true,
+            "native_hash": "7e5cd8a550c2be5c1e21b5146d15a49479c643053c49e5026111595731909462",
+            "realized_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "requested_hash": "17508be9a97dd1e36aa09ea13e40e78d3efdb2ca1589bb99e2bdac40e57e941d",
+            "source": "JOINT"
+          },
+          "12": {
+            "exact_writeback": true,
+            "native_hash": "4450728344236f67d7ce0cd3ebef7f41ecb8d2c3af0f6c76b6b5ac5231d4b45b",
+            "realized_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "requested_hash": "e51bdff027ba1f6ffc6a502c6e7ec9a360522f0610cf90b161be383e60104632",
+            "source": "JOINT"
+          },
+          "13": {
+            "exact_writeback": true,
+            "native_hash": "ff935d45ef282f314d42be46f306961554ba77ceb0ba3d62b5e96ba7e8fdbdf7",
+            "realized_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "requested_hash": "af6110815d7c26d5d49e2539e46dd12c4b8d11058a8596881da59b43cfdca212",
+            "source": "JOINT"
+          },
+          "14": {
+            "exact_writeback": true,
+            "native_hash": "9da6a29d4a4e56165ca005a5c4d7f9fecd6329a24828cd5fcb48eae57ab201a8",
+            "realized_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "requested_hash": "82992c620a5eeab4a4310687be6788a70c5f80406a2d7571fb4c930323efd973",
+            "source": "JOINT"
+          },
+          "24": {
+            "exact_writeback": true,
+            "native_hash": "f0202f2ffdf9038e700ec314b3375ef2234366aa5a25108af965e767bf77fdbb",
+            "realized_hash": "e22613977397559e1b3e3ee915a00dfb9cf7a220cb7f08bab918438de90827a7",
+            "requested_hash": "e22613977397559e1b3e3ee915a00dfb9cf7a220cb7f08bab918438de90827a7",
+            "source": "CONV"
+          },
+          "25": {
+            "exact_writeback": true,
+            "native_hash": "d292794ddddd9338a399d9b7354045a33d063e3745b78610a7b02404fd1f8165",
+            "realized_hash": "ef4783f78e4a8eee3936fef89ea1dec415f0d9ec5355ab224c78e63f88379b2d",
+            "requested_hash": "ef4783f78e4a8eee3936fef89ea1dec415f0d9ec5355ab224c78e63f88379b2d",
+            "source": "CONV"
+          },
+          "26": {
+            "exact_writeback": true,
+            "native_hash": "4c4225261bed0a796fd144f5b964fc7f6b488e029bbf6c0603b2eec9f5579d62",
+            "realized_hash": "09ab9fc0925eb650c209f538fc1da112f89b922f1dd426bb2befc5d5be5d7828",
+            "requested_hash": "09ab9fc0925eb650c209f538fc1da112f89b922f1dd426bb2befc5d5be5d7828",
+            "source": "CONV"
+          },
+          "28": {
+            "exact_writeback": true,
+            "native_hash": "43e1cc742fb39afa3d9bb30bbd1be3cc3ff2ad14b5e7bfd0b404c944eb43a32e",
+            "realized_hash": "e6a5f439d6404624689b437b4fda29fba77f408f14471cfad162b47f641523bd",
+            "requested_hash": "e6a5f439d6404624689b437b4fda29fba77f408f14471cfad162b47f641523bd",
+            "source": "CONV"
+          },
+          "29": {
+            "exact_writeback": true,
+            "native_hash": "846dd300f922dc616c1c91d4f23c56b3a4e175a02def0ba03288445d0c7f6ed4",
+            "realized_hash": "c87231ca7d9838725fb022b2ee2d996a8c462268aa68250e22e1606a9bab6211",
+            "requested_hash": "c87231ca7d9838725fb022b2ee2d996a8c462268aa68250e22e1606a9bab6211",
+            "source": "CONV"
+          },
+          "30": {
+            "exact_writeback": true,
+            "native_hash": "35f785fa967727ef080dc0004a2809e0162d3c1bd5e732a94c76f2185043ecc7",
+            "realized_hash": "74cfc86dab98bfda9b9bd6e1550e7705e38191d694d39f28461bac273fa1313c",
+            "requested_hash": "74cfc86dab98bfda9b9bd6e1550e7705e38191d694d39f28461bac273fa1313c",
+            "source": "CONV"
+          },
+          "8": {
+            "exact_writeback": true,
+            "native_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "realized_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "requested_hash": "3968b38b90c6043ae77f54670cbbfcc5ba1aee50f0c2f87c351e980865cd81ab",
+            "source": "JOINT"
+          },
+          "9": {
+            "exact_writeback": true,
+            "native_hash": "9c263ddb8212ccb15544fe1aa57eed7dbd040757a36cc5a6e0d5e5e20c3ef741",
+            "realized_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "requested_hash": "76d015a561084c06554896ae2165a61a82400882b74ac9837a84961aabc1996f",
+            "source": "JOINT"
+          }
+        },
+        "realized_hash": "58f808cccb96a37fed3dde51f9ca460ae45f144614c6ca838853ab560ba13b8e",
+        "requested_hash": "58f808cccb96a37fed3dde51f9ca460ae45f144614c6ca838853ab560ba13b8e",
+        "source_map_hash": "97bb8fd083eb524e21fe683d51bc8e7acedab91503c93cfb046373c9cc04f190"
+      }
+    },
+    {
+      "cache_hashes": {
+        "Conv": "d5362ee7d6ff07c6b87aa6771abf9813a86a994e638569de32eeebe24325d9eb",
+        "KV": "5141404ede025b831de1ea74f823ac45e7e5bf5b638e5a9208d5cecd19cbe75b",
+        "REC": "62330b5610ba39087ad5cfe6c204e114bc21f9bfc9af736843c1ad2a40c32d53"
+      },
+      "condition": "SERIAL_Q2_Q4_CONV_JOINT",
+      "direction": "HYBRID",
+      "logits_hash": "65e0f0f7cf94d8783093c0153f8d05ed25530ccf6d876c35dc7f340ddccb34ea",
+      "proof": {
+        "exact_writeback": true,
+        "layers": 12,
+        "native_hash": "de40e421cd5d0ef0ee36b8ff8a5e0a34000d21fdce08aac62826b008180b8fcd",
+        "per_layer": {
+          "10": {
+            "exact_writeback": true,
+            "native_hash": "dab8da5a749e6a6759c611c2ad1f7b2dcf7e54a66daf6416ede43e0f0cd996ed",
+            "realized_hash": "dab8da5a749e6a6759c611c2ad1f7b2dcf7e54a66daf6416ede43e0f0cd996ed",
+            "requested_hash": "dab8da5a749e6a6759c611c2ad1f7b2dcf7e54a66daf6416ede43e0f0cd996ed",
+            "source": "CONV"
+          },
+          "12": {
+            "exact_writeback": true,
+            "native_hash": "15b3ed949d1a9458fa22fb2a44bde181179b4999f9389e39c22d033ce5769fff",
+            "realized_hash": "15b3ed949d1a9458fa22fb2a44bde181179b4999f9389e39c22d033ce5769fff",
+            "requested_hash": "15b3ed949d1a9458fa22fb2a44bde181179b4999f9389e39c22d033ce5769fff",
+            "source": "CONV"
+          },
+          "13": {
+            "exact_writeback": true,
+            "native_hash": "4283b77511b2baf73751ac59e4e488be47a861537587846fc45e2df0cb460f4e",
+            "realized_hash": "4283b77511b2baf73751ac59e4e488be47a861537587846fc45e2df0cb460f4e",
+            "requested_hash": "4283b77511b2baf73751ac59e4e488be47a861537587846fc45e2df0cb460f4e",
+            "source": "CONV"
+          },
+          "14": {
+            "exact_writeback": true,
+            "native_hash": "7e61f04233e7e0b16e76c48d69aee0c3927aa17c04dcd04c94da333d53343332",
+            "realized_hash": "7e61f04233e7e0b16e76c48d69aee0c3927aa17c04dcd04c94da333d53343332",
+            "requested_hash": "7e61f04233e7e0b16e76c48d69aee0c3927aa17c04dcd04c94da333d53343332",
+            "source": "CONV"
+          },
+          "24": {
+            "exact_writeback": true,
+            "native_hash": "e22613977397559e1b3e3ee915a00dfb9cf7a220cb7f08bab918438de90827a7",
+            "realized_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "requested_hash": "d5243be38c342b65b0c0af40695b8b6f391712d2fa64d08ed6cb92d7ee60bb2f",
+            "source": "JOINT"
+          },
+          "25": {
+            "exact_writeback": true,
+            "native_hash": "33816f980e81e13dee111bab8bd3e51daa2d05cccd0e164ffd37db75cbe4e3d0",
+            "realized_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "requested_hash": "5b82f9e81ad1424e950c5427aead4d879029a350b59d0799eadfa09c75fe4259",
+            "source": "JOINT"
+          },
+          "26": {
+            "exact_writeback": true,
+            "native_hash": "021427b0a490252582953516b447eb20677eab8d29a2afdc6065fdaabf6fa8d1",
+            "realized_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "requested_hash": "5ac97c36ac5b93fa46ae386391ce12695d1f4c8d0547ca1728468fa55c51c609",
+            "source": "JOINT"
+          },
+          "28": {
+            "exact_writeback": true,
+            "native_hash": "e390c02e72ccae23959b9ae19747faec18d72f2b885decee34cc2e505b12c649",
+            "realized_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "requested_hash": "69863cea53731bfd67f851ea631acaec354b65c11f46a470deba8de65f055ec0",
+            "source": "JOINT"
+          },
+          "29": {
+            "exact_writeback": true,
+            "native_hash": "c3b29622f168f1e3072dc64006f7d3f45aee592d4907023ff82b1280c83a6e55",
+            "realized_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "requested_hash": "89f97277be7c0599102b419f45af997f6ab5ed091e4fc0c07c29c255470dc54a",
+            "source": "JOINT"
+          },
+          "30": {
+            "exact_writeback": true,
+            "native_hash": "8dddfa8f5faccb78f81c9364a24ba1a996b4961d7f4a9d00a93fada59c701e72",
+            "realized_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "requested_hash": "e056bbd4ce799a17bde2aaa57ade4251631dca3f0c2048c84501079f930fca5b",
+            "source": "JOINT"
+          },
+          "8": {
+            "exact_writeback": true,
+            "native_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "realized_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "requested_hash": "cb70c7fec1101f4b3dc209992b5ce8c262bf1393bd2d675749bc1d267ae3af18",
+            "source": "CONV"
+          },
+          "9": {
+            "exact_writeback": true,
+            "native_hash": "a6e52ee012fbac7902c4670f22a0122a0c29d89729e7232e03cfeddc2cd51fd9",
+            "realized_hash": "a6e52ee012fbac7902c4670f22a0122a0c29d89729e7232e03cfeddc2cd51fd9",
+            "requested_hash": "a6e52ee012fbac7902c4670f22a0122a0c29d89729e7232e03cfeddc2cd51fd9",
+            "source": "CONV"
+          }
+        },
+        "realized_hash": "ba8701114c44553c131364bdb2fa57a3488f3e63ca254a64793d8873ebf8e4dc",
+        "requested_hash": "ba8701114c44553c131364bdb2fa57a3488f3e63ca254a64793d8873ebf8e4dc",
+        "source_map_hash": "83d27b1bf091214dbfef4d5769b450a443303700d9d10dad13c566b2d61f42ff"
+      }
+    }
+  ]
+}

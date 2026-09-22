@@ -1,0 +1,15 @@
+# V35 执行清单与哈希
+
+|模型|revision|权重 SHA-256|tokenizer SHA-256|config SHA-256|
+|---|---|---|---|---|
+|F|06d7330266253c20784f58b0a846dc09a9d12cee|9acd2ef3e946e88a6e8cb14d38942f2ffbf6f52a5bc37312c1e0cc64574f1aeb|eb7825ecac026cc37e37c03d7e8d06d1f85c7ab8bdefabe81fc1b40f0ed7929a|7ae20392a453be5f1a59b39b1e1f4fc09522901eacd64492e649672594ea4c77|
+|Q|851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a|26a93f066e1916adb13453dae5a0c707c0fbc71299ed98779571a907b8e74c61, cb544bd9bfae93dc59b0f22b292f5933573854a7f9b97835c67060d7d910e188|5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42|ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670|
+
+父提交 `b3bb37f547d719d5c210014dc48ee1a14533cbd1`；基础协议 `ec7b85e7e51807c90900482f0650df4046dc28ef6bf59305555ed33679382c93`；开发计划 `ff7d5c213de7a8eea09e72f8f8dd4611f1fe386122056ee6d47aef597e190464`；最终开放 `51d42e1b2dfe1ace35e51efe42cda8a6957f31de227e191d43d244f0e99f5fd5`。每模型 20/80/40/40 全新语义配对状态，排除 V28–V34 正式状态。机器 JSON/Parquet/NPZ、设计 token/探针/深度哈希、逐次写回哈希与完整索引在 `results/v35/processed/`。
+
+供体 KV 小子集敏感性：
+
+|模型|深度条件|REM|REST|
+|---|---|---|---|
+|Q|FULL|1.000|1.000|
+|F|FULL|1.000|1.000|

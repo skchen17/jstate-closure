@@ -1194,3 +1194,7 @@ Parent `09a00a67e5a286a05e47730c43586bce94b8095a`; V33 base freeze `aa843d414c7a
 ## V34 — Cross-Model Functional Mediation
 
 **V34-A 与 V34-E 成立**：两模型同一读出功能阶段在开发、验证和独立最终集上通过双向因果中介门槛。 这是对全 24 个循环层读出贡献的宽因果截面，不证明两模型采用相同的更新代数，也不能把与其别名的残差整合点另算一个独立中介。 独立最终集每模型 40 状态确认；详见 `reports/V34_COMPLETE_REPORT.md` 和 `reports/V34_ALL_REPORTS.md`。
+
+## V35 — Hierarchical Decomposition
+
+独立最终预先选定 `FULL_DEPTH_ONLY`；两模型确认=通过。 V35 正式结局：无确认项。 第三模型冻结对象：`BROAD_RECURRENT_READ_ONLY`。详见 `reports/V35_COMPLETE_REPORT.md` 与 `reports/V35_ALL_REPORTS.md`。

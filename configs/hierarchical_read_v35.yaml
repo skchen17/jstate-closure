@@ -1,0 +1,88 @@
+protocol_version: hierarchical_read_v35
+name: Hierarchical Decomposition of Recurrent-Read Mediation
+parent_commit: b3bb37f547d719d5c210014dc48ee1a14533cbd1
+model_spec_source: configs/functional_mediation_v34.yaml
+models: [Q, F]
+seed: 350135
+source_exclusions: [28, 29, 30, 31, 32, 33, 34]
+families: [boolean_logic, modular_arithmetic, short_graph_traversal, simple_state_transition, variable_binding]
+roles_per_family: {calibration: 4, development: 16, validation: 8, independent_final: 8}
+panel_source: results/v18/processed/crossed_state_{source}_{family}_v18.parquet
+role_source: {calibration: train, development: train, validation: validation, independent_final: train}
+prompt_semantic_pairing: same base_trial_id and prompt in Q and F
+token_selection:
+  rank_max: 8192
+  choice: deterministic hash of seed/model/state/token among frozen V32 or V33 candidate library and prefix-rank eligibility
+  future_probes: first six usable top-ranked prefix tokens
+  current_token_write_or_future_response_used_for_selection: false
+primary_KV: recipient-native
+factorial: [Y00, Y10, Y01, Y11, Ydonor]
+shared_endpoint: five V34 blocks, six model-local frozen probes, calibration-clean scaling
+recurrent_read_interface: V34 FunctionalIntervention native mixer output, no hidden/residual/update proxy
+relative_depth_groups:
+  Q1: [0, 1, 2, 3, 4, 5]
+  Q2: [6, 7, 8, 9, 10, 11]
+  Q3: [12, 13, 14, 15, 16, 17]
+  Q4: [18, 19, 20, 21, 22, 23]
+depth_group_semantics: positions in architecture-native ordered recurrent layers, not absolute layer identity
+subset_conditions:
+  Q1: [Q1]
+  Q2: [Q2]
+  Q3: [Q3]
+  Q4: [Q4]
+  Q1_Q2: [Q1, Q2]
+  Q1_Q3: [Q1, Q3]
+  Q1_Q4: [Q1, Q4]
+  Q2_Q3: [Q2, Q3]
+  Q2_Q4: [Q2, Q4]
+  Q3_Q4: [Q3, Q4]
+  Q1_Q2_Q3: [Q1, Q2, Q3]
+  Q1_Q2_Q4: [Q1, Q2, Q4]
+  Q1_Q3_Q4: [Q1, Q3, Q4]
+  Q2_Q3_Q4: [Q2, Q3, Q4]
+  FULL: [Q1, Q2, Q3, Q4]
+early_cumulative: [Q1, Q1_Q2, Q1_Q2_Q3, FULL]
+late_cumulative: [Q4, Q3_Q4, Q2_Q3_Q4, FULL]
+pair_conditions: [Q1_Q2, Q1_Q3, Q1_Q4, Q2_Q3, Q2_Q4, Q3_Q4]
+leave_out_conditions:
+  FULL_MINUS_Q1: Q1
+  FULL_MINUS_Q2: Q2
+  FULL_MINUS_Q3: Q3
+  FULL_MINUS_Q4: Q4
+serial_pairs: [[Q2, Q3], [Q3, Q4], [Q2, Q4]]
+serial_hybrid_semantics: on Conv-only base, patch earlier region to joint/Conv reference and later region to Conv/joint reference while other regions evolve natively
+high_level_gate:
+  positive_fraction_min: 0.80
+  median_reduction_min: 0.20
+  median_alignment_min: 0.50
+  families_required: 4
+  family_positive_fraction_min: 0.80
+  family_median_reduction_min: 0.20
+  family_median_alignment_min: 0.50
+  bootstrap_lower_reduction_gt: 0.0
+  bootstrap_lower_alignment_min: 0.25
+bootstrap: {iterations: 2000, seed: 350135, lower_tail: 0.025, unit: state}
+full_read_gate: {median_removed_min: 0.90, median_restored_min: 0.90, median_cosine_min: 0.90, families_required: 4}
+quartile_gate: {median_removed_min: 0.50, median_restored_min: 0.50, median_cosine_min: 0.80, families_required: 4}
+late_consolidation_gate:
+  late_half_removed_min: 0.75
+  late_half_restored_min: 0.75
+  early_half_removed_max: 0.40
+  early_half_restored_max: 0.40
+  faster_difference_min: 0.20
+  families_required: 4
+progressive_gate:
+  monotonic_tolerance: 0.10
+  each_increment_min: 0.05
+  single_quartile_max: 0.75
+  families_required: 4
+complementary_gate: {pair_excess_over_best_single_min: 0.10, each_single_max: 0.75, families_required: 4}
+redundancy_gate: {each_single_min: 0.50, pair_increment_over_best_single_max: 0.10, families_required: 4}
+serial_gate: {conditional_late_gain_min: 0.15, removal_corrob_min: 0.10, families_required: 4}
+profile_similarity_gate: {spearman_min: 0.70, pearson_min: 0.70, cosine_min: 0.90, both_models_same_qualitative_gate_required: true}
+refinement_rule: only if one quartile or adjacent pair passes development strong gate, then freeze three-layer subwindows before validation; no global 24-layer search
+final_rule: open both independent finals only after one prospectively frozen depth organization passes development and validation in both models; FULL_DEPTH_ONLY may be finalist if no smaller organization passes
+later_horizon_rule: h2/h4 only after depth organization passes both development and validation
+application_rule: targeted applications authorized only for a qualified smaller or structured depth region, no application benchmark in V35
+third_model_rule: broad read-side permission inherited from V34; hierarchical mechanism frozen only if V35-F passes
+historical_independent_finals_reopen: false

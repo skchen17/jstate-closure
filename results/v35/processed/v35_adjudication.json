@@ -1,0 +1,84 @@
+{
+  "V34_exploratory_quartiles_used_as_formal_evidence": false,
+  "application_benchmark_performed": false,
+  "application_experiments_authorized": false,
+  "architecture_specific_not_confirmed_without_frozen_material_difference_test": true,
+  "broad_only_requires_no_validated_smaller_pattern_in_either_model": true,
+  "cross_model_profile_descriptive": {
+    "REM": {
+      "F": [
+        0.2637027874145652,
+        0.263409577956226,
+        0.41682659530185623,
+        0.4373621610448203
+      ],
+      "Q": [
+        0.2621178185836741,
+        0.2825969464786706,
+        0.4316826565181566,
+        0.5412519205215386
+      ],
+      "cosine": 0.9959284545630946,
+      "early_curve_l2": 0.2245468476815091,
+      "late_curve_l2": 0.22174192121356592,
+      "pearson": 0.9647088858792521,
+      "spearman": 0.7999999999999999
+    },
+    "REST": {
+      "F": [
+        0.32389732583299946,
+        0.24955956658186118,
+        0.5220585120372137,
+        0.3285252994725583
+      ],
+      "Q": [
+        0.10241255304627629,
+        0.03906345103448029,
+        0.33363267691368775,
+        0.3520624927279992
+      ],
+      "cosine": 0.9042363822222749,
+      "early_curve_l2": 0.5268170147455745,
+      "late_curve_l2": 0.11867406549775127,
+      "pearson": 0.6872933316952117,
+      "spearman": 0.7999999999999999
+    },
+    "descriptive_profile_similarity_pass": false
+  },
+  "development_validation_qualified_by_model": {
+    "F": [
+      "COMPLEMENTARY_Q2_Q4",
+      "LOCALIZED_Q1_Q3",
+      "LOCALIZED_Q2_Q3",
+      "LOCALIZED_Q3_Q4"
+    ],
+    "Q": [
+      "COMPLEMENTARY_Q3_Q4"
+    ]
+  },
+  "divergent_gate_patterns_descriptive": true,
+  "formal_outcomes": {
+    "V35-A_LATE_READ_CONSOLIDATION_CONFIRMED": false,
+    "V35-B_PROGRESSIVE_READ_ACCUMULATION_CONFIRMED": false,
+    "V35-C_COMPLEMENTARY_MULTI_STAGE_MEDIATION": false,
+    "V35-D_REDUNDANT_READ_MEDIATION": false,
+    "V35-E_SERIAL_HIERARCHICAL_CORRECTION": false,
+    "V35-F_SHARED_HIERARCHICAL_ORGANIZATION": false,
+    "V35-G_ARCHITECTURE_SPECIFIC_HIERARCHY": false,
+    "V35-H_LOCALIZED_READ_REGION": false,
+    "V35-I_FULL_DEPTH_READ_CUT_ONLY": false
+  },
+  "full_depth_reconfirmed_all_roles": true,
+  "full_depth_role_gates": {
+    "development": true,
+    "independent_final": true,
+    "validation": true
+  },
+  "historical_independent_finals_reopened": false,
+  "independent_final_confirmed": true,
+  "no_shared_smaller_organization_passed": true,
+  "selected_finalist": "FULL_DEPTH_ONLY",
+  "shared_development_validation_patterns": [],
+  "third_model_replication_freeze": "BROAD_RECURRENT_READ_ONLY",
+  "thresholds_retuned": false
+}

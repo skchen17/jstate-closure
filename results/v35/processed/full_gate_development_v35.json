@@ -1,0 +1,111 @@
+{
+  "both_pass": true,
+  "formal_depth_authorized": true,
+  "high_level_pass": true,
+  "models": {
+    "F": {
+      "cosine": 1.0,
+      "families_passing": 5,
+      "family": {
+        "boolean_logic": {
+          "cosine": 1.0,
+          "pass": true,
+          "removed": 1.0,
+          "restored": 1.0,
+          "rows": 16,
+          "valid_rows": 16
+        },
+        "modular_arithmetic": {
+          "cosine": 1.0,
+          "pass": true,
+          "removed": 1.0,
+          "restored": 1.0,
+          "rows": 16,
+          "valid_rows": 16
+        },
+        "short_graph_traversal": {
+          "cosine": 1.0,
+          "pass": true,
+          "removed": 1.0,
+          "restored": 1.0,
+          "rows": 16,
+          "valid_rows": 16
+        },
+        "simple_state_transition": {
+          "cosine": 1.0,
+          "pass": true,
+          "removed": 1.0,
+          "restored": 1.0,
+          "rows": 16,
+          "valid_rows": 16
+        },
+        "variable_binding": {
+          "cosine": 1.0,
+          "pass": true,
+          "removed": 1.0,
+          "restored": 1.0,
+          "rows": 16,
+          "valid_rows": 16
+        }
+      },
+      "pass": true,
+      "removed": 1.0,
+      "restored": 1.0,
+      "rows": 80,
+      "valid_rows": 80
+    },
+    "Q": {
+      "cosine": 1.0,
+      "families_passing": 5,
+      "family": {
+        "boolean_logic": {
+          "cosine": 1.0,
+          "pass": true,
+          "removed": 1.0,
+          "restored": 1.0,
+          "rows": 16,
+          "valid_rows": 16
+        },
+        "modular_arithmetic": {
+          "cosine": 1.0,
+          "pass": true,
+          "removed": 1.0,
+          "restored": 1.0,
+          "rows": 16,
+          "valid_rows": 16
+        },
+        "short_graph_traversal": {
+          "cosine": 1.0,
+          "pass": true,
+          "removed": 1.0,
+          "restored": 1.0,
+          "rows": 16,
+          "valid_rows": 15
+        },
+        "simple_state_transition": {
+          "cosine": 1.0,
+          "pass": true,
+          "removed": 1.0,
+          "restored": 1.0,
+          "rows": 16,
+          "valid_rows": 15
+        },
+        "variable_binding": {
+          "cosine": 1.0,
+          "pass": true,
+          "removed": 1.0,
+          "restored": 1.0,
+          "rows": 16,
+          "valid_rows": 15
+        }
+      },
+      "pass": true,
+      "removed": 1.0,
+      "restored": 1.0,
+      "rows": 80,
+      "valid_rows": 77
+    }
+  },
+  "role": "development",
+  "thresholds_retuned": false
+}

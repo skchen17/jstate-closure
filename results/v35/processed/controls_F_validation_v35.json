@@ -1,0 +1,40 @@
+{
+  "files_sha256": {
+    "audit": "67db07e10c1f5bdd5788784b38a0a4966e2bfc7fbf15e3502bb0c7865c4db3bf",
+    "rows": "b49f560617c2f5b3960071c13b6614d91519e2eebc700de6b0d5a9d94ad09b21"
+  },
+  "model_key": "F",
+  "primary_KV": "recipient-native",
+  "quartiles": {
+    "Q1": {
+      "all_six_read_hashes_different_fraction": 1.0,
+      "joint_minus_rec_restore_median": 5.582966064459658,
+      "joint_restore_median": 0.3388399150921445,
+      "rec_only_restore_median": -5.390724226035121,
+      "valid_states": 10
+    },
+    "Q2": {
+      "all_six_read_hashes_different_fraction": 1.0,
+      "joint_minus_rec_restore_median": 2.718741147931249,
+      "joint_restore_median": 0.3090278197830526,
+      "rec_only_restore_median": -2.3656092274539438,
+      "valid_states": 10
+    },
+    "Q3": {
+      "all_six_read_hashes_different_fraction": 1.0,
+      "joint_minus_rec_restore_median": 4.1818553124900415,
+      "joint_restore_median": 0.48331197581112845,
+      "rec_only_restore_median": -3.6368603184506862,
+      "valid_states": 10
+    },
+    "Q4": {
+      "all_six_read_hashes_different_fraction": 1.0,
+      "joint_minus_rec_restore_median": 4.377050944982686,
+      "joint_restore_median": 0.354413769014813,
+      "rec_only_restore_median": -4.1273305888283565,
+      "valid_states": 10
+    }
+  },
+  "secondary_small_subset": true,
+  "states": 10
+}

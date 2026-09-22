@@ -1,0 +1,61 @@
+{
+  "KV_depth_condition_rule": "full depth unless a smaller same-organization finalist qualifies in both models",
+  "KV_states": [
+    "v13-validation-05d731c8f0bdc2e968f7",
+    "v13-validation-253cf50776ef3871350a",
+    "v13-validation-1aea6269de195483948a",
+    "v13-validation-006efd77b166c04b2abc",
+    "v13-validation-01738d754d1e67f5a86c"
+  ],
+  "context_conv_rec_states": [
+    "v13-validation-05d731c8f0bdc2e968f7",
+    "v13-validation-0fdf64cf023c6264d4de",
+    "v13-validation-253cf50776ef3871350a",
+    "v13-validation-4e8fb1f3c82266e15b2e",
+    "v13-validation-1aea6269de195483948a",
+    "v13-validation-2e3af9ded272c695ab5c",
+    "v13-validation-006efd77b166c04b2abc",
+    "v13-validation-080c44bc9c2f581b8115",
+    "v13-validation-01738d754d1e67f5a86c",
+    "v13-validation-01c0dafbbc339d5eb895"
+  ],
+  "control_probe_count": 6,
+  "flow_probe_index": 0,
+  "flow_states": [
+    "v13-validation-0fdf64cf023c6264d4de",
+    "v13-validation-4e8fb1f3c82266e15b2e",
+    "v13-validation-2e3af9ded272c695ab5c",
+    "v13-validation-080c44bc9c2f581b8115",
+    "v13-validation-01c0dafbbc339d5eb895"
+  ],
+  "quartiles": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4"
+  ],
+  "role": "validation",
+  "two_states_per_family": {
+    "boolean_logic": [
+      "v13-validation-05d731c8f0bdc2e968f7",
+      "v13-validation-0fdf64cf023c6264d4de"
+    ],
+    "modular_arithmetic": [
+      "v13-validation-253cf50776ef3871350a",
+      "v13-validation-4e8fb1f3c82266e15b2e"
+    ],
+    "short_graph_traversal": [
+      "v13-validation-1aea6269de195483948a",
+      "v13-validation-2e3af9ded272c695ab5c"
+    ],
+    "simple_state_transition": [
+      "v13-validation-006efd77b166c04b2abc",
+      "v13-validation-080c44bc9c2f581b8115"
+    ],
+    "variable_binding": [
+      "v13-validation-01738d754d1e67f5a86c",
+      "v13-validation-01c0dafbbc339d5eb895"
+    ]
+  },
+  "validation_responses_used_for_selection": false
+}

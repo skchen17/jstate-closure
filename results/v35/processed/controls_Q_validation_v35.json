@@ -1,0 +1,40 @@
+{
+  "files_sha256": {
+    "audit": "1586a4aaf2031f44741f5c53c0a6bdf94b1aa74767d99d04ce6fea1f6c5a38e6",
+    "rows": "a1219fddc393c37e0be4bbecd34c560bd4571abbae2aca90544954c336cea018"
+  },
+  "model_key": "Q",
+  "primary_KV": "recipient-native",
+  "quartiles": {
+    "Q1": {
+      "all_six_read_hashes_different_fraction": 1.0,
+      "joint_minus_rec_restore_median": 3.1818149372625175,
+      "joint_restore_median": 0.16387664165861587,
+      "rec_only_restore_median": -3.2645301634475663,
+      "valid_states": 10
+    },
+    "Q2": {
+      "all_six_read_hashes_different_fraction": 1.0,
+      "joint_minus_rec_restore_median": 1.9818296540221394,
+      "joint_restore_median": 0.06283195741918769,
+      "rec_only_restore_median": -1.78435219584052,
+      "valid_states": 10
+    },
+    "Q3": {
+      "all_six_read_hashes_different_fraction": 1.0,
+      "joint_minus_rec_restore_median": 2.3374471190163355,
+      "joint_restore_median": 0.30084229135377905,
+      "rec_only_restore_median": -1.9834836507543265,
+      "valid_states": 10
+    },
+    "Q4": {
+      "all_six_read_hashes_different_fraction": 1.0,
+      "joint_minus_rec_restore_median": 2.494032846615713,
+      "joint_restore_median": 0.26407753359080516,
+      "rec_only_restore_median": -2.2211351419125607,
+      "valid_states": 10
+    }
+  },
+  "secondary_small_subset": true,
+  "states": 10
+}

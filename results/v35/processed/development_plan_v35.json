@@ -1,0 +1,103 @@
+{
+  "candidate_priority_frozen_before_validation": [
+    "LATE_Q3_Q4",
+    "PROGRESSIVE_CUMULATIVE",
+    "SERIAL_Q3_TO_Q4",
+    "SERIAL_Q2_TO_Q3",
+    "SERIAL_Q2_TO_Q4",
+    "COMPLEMENTARY_Q3_Q4",
+    "COMPLEMENTARY_Q2_Q3",
+    "COMPLEMENTARY_Q2_Q4",
+    "COMPLEMENTARY_Q1_Q4",
+    "COMPLEMENTARY_Q1_Q3",
+    "COMPLEMENTARY_Q1_Q2",
+    "REDUNDANT_Q3_Q4",
+    "REDUNDANT_Q2_Q3",
+    "REDUNDANT_Q2_Q4",
+    "REDUNDANT_Q1_Q4",
+    "REDUNDANT_Q1_Q3",
+    "REDUNDANT_Q1_Q2",
+    "LOCALIZED_Q4",
+    "LOCALIZED_Q3",
+    "LOCALIZED_Q2",
+    "LOCALIZED_Q1",
+    "LOCALIZED_Q3_Q4",
+    "LOCALIZED_Q2_Q3",
+    "LOCALIZED_Q1_Q2",
+    "LOCALIZED_Q2_Q4",
+    "LOCALIZED_Q1_Q4",
+    "LOCALIZED_Q1_Q3",
+    "LOCALIZED_Q1_Q2_Q3",
+    "LOCALIZED_Q2_Q3_Q4",
+    "FULL_DEPTH_ONLY"
+  ],
+  "global_single_layer_search_authorized": false,
+  "model_refinement": {
+    "F": {
+      "qualified_coarse_regions": [
+        "Q2_Q3",
+        "Q3_Q4"
+      ],
+      "selected_region": "Q3_Q4",
+      "selection_rule": "first qualified region in frozen REFINE_PRIORITY",
+      "three_layer_windows": {
+        "Q3_Q4_W1": [
+          12,
+          13,
+          14
+        ],
+        "Q3_Q4_W10": [
+          21,
+          22,
+          23
+        ],
+        "Q3_Q4_W4": [
+          15,
+          16,
+          17
+        ],
+        "Q3_Q4_W7": [
+          18,
+          19,
+          20
+        ]
+      }
+    },
+    "Q": {
+      "qualified_coarse_regions": [
+        "Q3_Q4"
+      ],
+      "selected_region": "Q3_Q4",
+      "selection_rule": "first qualified region in frozen REFINE_PRIORITY",
+      "three_layer_windows": {
+        "Q3_Q4_W1": [
+          16,
+          17,
+          18
+        ],
+        "Q3_Q4_W10": [
+          28,
+          29,
+          30
+        ],
+        "Q3_Q4_W4": [
+          20,
+          21,
+          22
+        ],
+        "Q3_Q4_W7": [
+          24,
+          25,
+          26
+        ]
+      }
+    }
+  },
+  "role": "development",
+  "shared_development_candidates": [
+    "COMPLEMENTARY_Q3_Q4",
+    "LOCALIZED_Q3_Q4",
+    "FULL_DEPTH_ONLY"
+  ],
+  "validation_responses_seen": false
+}

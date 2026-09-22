@@ -1,0 +1,528 @@
+{
+  "CROSS_MODEL_REPLICATION_AUTHORIZED": false,
+  "H2_REMAINS": true,
+  "H3_AUTHORIZED": false,
+  "candidate_tests": {
+    "GLOBAL_k32": {
+      "LOFO": {
+        "development:boolean_logic": {
+          "family_success_fraction": {
+            "boolean_logic": 0.0
+          },
+          "median_cosine": 0.7772797517806456,
+          "median_magnitude": 0.8195129635831331,
+          "median_relative_l2": 0.6300012704329,
+          "pass": false,
+          "rows": 12,
+          "success_fraction": 0.0,
+          "valid_rows": 12
+        },
+        "development:modular_arithmetic": {
+          "family_success_fraction": {
+            "modular_arithmetic": 0.0
+          },
+          "median_cosine": 0.8079070413655796,
+          "median_magnitude": 0.8017740323805227,
+          "median_relative_l2": 0.5927365949800838,
+          "pass": false,
+          "rows": 12,
+          "success_fraction": 0.0,
+          "valid_rows": 12
+        },
+        "development:short_graph_traversal": {
+          "family_success_fraction": {
+            "short_graph_traversal": 0.0
+          },
+          "median_cosine": 0.6871437887593406,
+          "median_magnitude": 0.8781059279901557,
+          "median_relative_l2": 0.7434409529154489,
+          "pass": false,
+          "rows": 12,
+          "success_fraction": 0.0,
+          "valid_rows": 12
+        },
+        "development:simple_state_transition": {
+          "family_success_fraction": {
+            "simple_state_transition": 0.0
+          },
+          "median_cosine": 0.7844456515106153,
+          "median_magnitude": 0.7316659398721979,
+          "median_relative_l2": 0.6270992553466584,
+          "pass": false,
+          "rows": 12,
+          "success_fraction": 0.0,
+          "valid_rows": 12
+        },
+        "development:variable_binding": {
+          "family_success_fraction": {
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.7411915767889354,
+          "median_magnitude": 0.7749298854289949,
+          "median_relative_l2": 0.678641224190913,
+          "pass": false,
+          "rows": 12,
+          "success_fraction": 0.0,
+          "valid_rows": 12
+        },
+        "validation:boolean_logic": {
+          "family_success_fraction": {
+            "boolean_logic": 0.0
+          },
+          "median_cosine": 0.8191223449514169,
+          "median_magnitude": 0.8097616170006444,
+          "median_relative_l2": 0.5763793421473253,
+          "pass": false,
+          "rows": 24,
+          "success_fraction": 0.0,
+          "valid_rows": 24
+        },
+        "validation:modular_arithmetic": {
+          "family_success_fraction": {
+            "modular_arithmetic": 0.0
+          },
+          "median_cosine": 0.798818328926245,
+          "median_magnitude": 0.7482959285125201,
+          "median_relative_l2": 0.6033349006055213,
+          "pass": false,
+          "rows": 24,
+          "success_fraction": 0.0,
+          "valid_rows": 24
+        },
+        "validation:short_graph_traversal": {
+          "family_success_fraction": {
+            "short_graph_traversal": 0.0
+          },
+          "median_cosine": 0.7506646967111562,
+          "median_magnitude": 0.864548342169655,
+          "median_relative_l2": 0.6793236399277707,
+          "pass": false,
+          "rows": 24,
+          "success_fraction": 0.0,
+          "valid_rows": 24
+        },
+        "validation:simple_state_transition": {
+          "family_success_fraction": {
+            "simple_state_transition": 0.0
+          },
+          "median_cosine": 0.7758514548155979,
+          "median_magnitude": 0.7611205439286792,
+          "median_relative_l2": 0.6336413843382411,
+          "pass": false,
+          "rows": 24,
+          "success_fraction": 0.0,
+          "valid_rows": 24
+        },
+        "validation:variable_binding": {
+          "family_success_fraction": {
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.7894643671734033,
+          "median_magnitude": 0.8884261922026245,
+          "median_relative_l2": 0.6224225953339451,
+          "pass": false,
+          "rows": 24,
+          "success_fraction": 0.0,
+          "valid_rows": 24
+        }
+      },
+      "axes": {
+        "development:JOINT_OOD": {
+          "family_success_fraction": {
+            "boolean_logic": 0.0,
+            "modular_arithmetic": 0.0,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.7909954576721234,
+          "median_magnitude": 0.847872617688213,
+          "median_relative_l2": 0.6191817720545754,
+          "pass": false,
+          "rows": 60,
+          "success_fraction": 0.0,
+          "valid_rows": 60
+        },
+        "development:STATE_OOD": {
+          "family_success_fraction": {
+            "boolean_logic": 0.0,
+            "modular_arithmetic": 0.25,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.08333333333333333
+          },
+          "median_cosine": 0.863518824773281,
+          "median_magnitude": 0.911599474207585,
+          "median_relative_l2": 0.508520980800371,
+          "pass": false,
+          "rows": 60,
+          "success_fraction": 0.06666666666666667,
+          "valid_rows": 60
+        },
+        "development:TOKEN_OOD": {
+          "family_success_fraction": {
+            "boolean_logic": 0.0,
+            "modular_arithmetic": 0.0,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.7771790522785142,
+          "median_magnitude": 0.8404305113707955,
+          "median_relative_l2": 0.6296782906637266,
+          "pass": false,
+          "rows": 20,
+          "success_fraction": 0.0,
+          "valid_rows": 20
+        },
+        "validation:JOINT_OOD": {
+          "family_success_fraction": {
+            "boolean_logic": 0.0,
+            "modular_arithmetic": 0.0,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.8089224340593169,
+          "median_magnitude": 0.8174994884359308,
+          "median_relative_l2": 0.5937109151173998,
+          "pass": false,
+          "rows": 120,
+          "success_fraction": 0.0,
+          "valid_rows": 120
+        },
+        "validation:STATE_OOD": {
+          "family_success_fraction": {
+            "boolean_logic": 0.125,
+            "modular_arithmetic": 0.125,
+            "short_graph_traversal": 0.125,
+            "simple_state_transition": 0.16666666666666666,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.8780521562011864,
+          "median_magnitude": 0.9123296115994564,
+          "median_relative_l2": 0.48732472730383836,
+          "pass": false,
+          "rows": 120,
+          "success_fraction": 0.10833333333333334,
+          "valid_rows": 120
+        }
+      },
+      "decoder_condition": "GLOBAL_k32",
+      "pass_LOFO": false,
+      "pass_axes": false,
+      "qualified": false
+    },
+    "GLOBAL_k64": {
+      "LOFO": {
+        "development:boolean_logic": {
+          "family_success_fraction": {
+            "boolean_logic": 0.0
+          },
+          "median_cosine": 0.800109139754824,
+          "median_magnitude": 0.8213153626739588,
+          "median_relative_l2": 0.6000563834820385,
+          "pass": false,
+          "rows": 12,
+          "success_fraction": 0.0,
+          "valid_rows": 12
+        },
+        "development:modular_arithmetic": {
+          "family_success_fraction": {
+            "modular_arithmetic": 0.0
+          },
+          "median_cosine": 0.818443662367377,
+          "median_magnitude": 0.8417537430906743,
+          "median_relative_l2": 0.5792497792894866,
+          "pass": false,
+          "rows": 12,
+          "success_fraction": 0.0,
+          "valid_rows": 12
+        },
+        "development:short_graph_traversal": {
+          "family_success_fraction": {
+            "short_graph_traversal": 0.0
+          },
+          "median_cosine": 0.6981048728317525,
+          "median_magnitude": 0.8547266018449728,
+          "median_relative_l2": 0.7235655246011501,
+          "pass": false,
+          "rows": 12,
+          "success_fraction": 0.0,
+          "valid_rows": 12
+        },
+        "development:simple_state_transition": {
+          "family_success_fraction": {
+            "simple_state_transition": 0.0
+          },
+          "median_cosine": 0.8352961015179399,
+          "median_magnitude": 0.7595078511720563,
+          "median_relative_l2": 0.5554268175443409,
+          "pass": false,
+          "rows": 12,
+          "success_fraction": 0.0,
+          "valid_rows": 12
+        },
+        "development:variable_binding": {
+          "family_success_fraction": {
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.7549875907270951,
+          "median_magnitude": 0.7826964632762139,
+          "median_relative_l2": 0.66353124970986,
+          "pass": false,
+          "rows": 12,
+          "success_fraction": 0.0,
+          "valid_rows": 12
+        },
+        "validation:boolean_logic": {
+          "family_success_fraction": {
+            "boolean_logic": 0.0
+          },
+          "median_cosine": 0.816659689757159,
+          "median_magnitude": 0.8362868318769251,
+          "median_relative_l2": 0.5808187579162687,
+          "pass": false,
+          "rows": 24,
+          "success_fraction": 0.0,
+          "valid_rows": 24
+        },
+        "validation:modular_arithmetic": {
+          "family_success_fraction": {
+            "modular_arithmetic": 0.041666666666666664
+          },
+          "median_cosine": 0.8206959843771751,
+          "median_magnitude": 0.7629553248368774,
+          "median_relative_l2": 0.5775337702738157,
+          "pass": false,
+          "rows": 24,
+          "success_fraction": 0.041666666666666664,
+          "valid_rows": 24
+        },
+        "validation:short_graph_traversal": {
+          "family_success_fraction": {
+            "short_graph_traversal": 0.0
+          },
+          "median_cosine": 0.8046702149382567,
+          "median_magnitude": 0.8482622196719043,
+          "median_relative_l2": 0.6092453403787531,
+          "pass": false,
+          "rows": 24,
+          "success_fraction": 0.0,
+          "valid_rows": 24
+        },
+        "validation:simple_state_transition": {
+          "family_success_fraction": {
+            "simple_state_transition": 0.0
+          },
+          "median_cosine": 0.8135352056277925,
+          "median_magnitude": 0.7700361807507099,
+          "median_relative_l2": 0.5954602638805753,
+          "pass": false,
+          "rows": 24,
+          "success_fraction": 0.0,
+          "valid_rows": 24
+        },
+        "validation:variable_binding": {
+          "family_success_fraction": {
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.7874948433126283,
+          "median_magnitude": 0.8930136859711303,
+          "median_relative_l2": 0.6176518527467592,
+          "pass": false,
+          "rows": 24,
+          "success_fraction": 0.0,
+          "valid_rows": 24
+        }
+      },
+      "axes": {
+        "development:JOINT_OOD": {
+          "family_success_fraction": {
+            "boolean_logic": 0.0,
+            "modular_arithmetic": 0.08333333333333333,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.8091443493459545,
+          "median_magnitude": 0.8462613045133343,
+          "median_relative_l2": 0.5953499315811877,
+          "pass": false,
+          "rows": 60,
+          "success_fraction": 0.016666666666666666,
+          "valid_rows": 60
+        },
+        "development:STATE_OOD": {
+          "family_success_fraction": {
+            "boolean_logic": 0.4166666666666667,
+            "modular_arithmetic": 0.4166666666666667,
+            "short_graph_traversal": 0.16666666666666666,
+            "simple_state_transition": 0.25,
+            "variable_binding": 0.25
+          },
+          "median_cosine": 0.9427830098491987,
+          "median_magnitude": 0.9582235441106782,
+          "median_relative_l2": 0.3355945972667584,
+          "pass": false,
+          "rows": 60,
+          "success_fraction": 0.3,
+          "valid_rows": 60
+        },
+        "development:TOKEN_OOD": {
+          "family_success_fraction": {
+            "boolean_logic": 0.0,
+            "modular_arithmetic": 0.0,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.8189055443516493,
+          "median_magnitude": 0.845993133866934,
+          "median_relative_l2": 0.588560562781956,
+          "pass": false,
+          "rows": 20,
+          "success_fraction": 0.0,
+          "valid_rows": 20
+        },
+        "validation:JOINT_OOD": {
+          "family_success_fraction": {
+            "boolean_logic": 0.0,
+            "modular_arithmetic": 0.041666666666666664,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.8281955076071943,
+          "median_magnitude": 0.82594924479677,
+          "median_relative_l2": 0.5644144680797912,
+          "pass": false,
+          "rows": 120,
+          "success_fraction": 0.008333333333333333,
+          "valid_rows": 120
+        },
+        "validation:STATE_OOD": {
+          "family_success_fraction": {
+            "boolean_logic": 0.16666666666666666,
+            "modular_arithmetic": 0.2916666666666667,
+            "short_graph_traversal": 0.25,
+            "simple_state_transition": 0.2916666666666667,
+            "variable_binding": 0.2916666666666667
+          },
+          "median_cosine": 0.9417389319288227,
+          "median_magnitude": 0.9477723775642283,
+          "median_relative_l2": 0.3415551632258128,
+          "pass": false,
+          "rows": 120,
+          "success_fraction": 0.25833333333333336,
+          "valid_rows": 120
+        }
+      },
+      "decoder_condition": "GLOBAL_k64",
+      "pass_LOFO": false,
+      "pass_axes": false,
+      "qualified": false
+    },
+    "TRANSPORTED_LOCAL_k32": {
+      "LOFO": {},
+      "axes": {
+        "development:JOINT_OOD": {
+          "family_success_fraction": {
+            "boolean_logic": 0.0,
+            "modular_arithmetic": 0.0,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.8010487992323718,
+          "median_magnitude": 0.8782577304085265,
+          "median_relative_l2": 0.5995794561283947,
+          "pass": false,
+          "rows": 60,
+          "success_fraction": 0.0,
+          "valid_rows": 60
+        },
+        "validation:JOINT_OOD": {
+          "family_success_fraction": {
+            "boolean_logic": 0.0,
+            "modular_arithmetic": 0.0,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.8228937233904048,
+          "median_magnitude": 0.8361811050914245,
+          "median_relative_l2": 0.571182170131125,
+          "pass": false,
+          "rows": 120,
+          "success_fraction": 0.0,
+          "valid_rows": 120
+        }
+      },
+      "decoder_condition": "TRANSPORTED_LOCAL_RIDGE_k32",
+      "pass_LOFO": true,
+      "pass_axes": false,
+      "qualified": false
+    },
+    "TRANSPORTED_LOCAL_k64": {
+      "LOFO": {},
+      "axes": {
+        "development:JOINT_OOD": {
+          "family_success_fraction": {
+            "boolean_logic": 0.08333333333333333,
+            "modular_arithmetic": 0.08333333333333333,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.8066926334315372,
+          "median_magnitude": 0.8817206872710459,
+          "median_relative_l2": 0.5996695731389485,
+          "pass": false,
+          "rows": 60,
+          "success_fraction": 0.03333333333333333,
+          "valid_rows": 60
+        },
+        "validation:JOINT_OOD": {
+          "family_success_fraction": {
+            "boolean_logic": 0.041666666666666664,
+            "modular_arithmetic": 0.041666666666666664,
+            "short_graph_traversal": 0.0,
+            "simple_state_transition": 0.0,
+            "variable_binding": 0.0
+          },
+          "median_cosine": 0.8302843740138353,
+          "median_magnitude": 0.8408429643140573,
+          "median_relative_l2": 0.5622789796623354,
+          "pass": false,
+          "rows": 120,
+          "success_fraction": 0.016666666666666666,
+          "valid_rows": 120
+        }
+      },
+      "decoder_condition": "TRANSPORTED_LOCAL_RIDGE_k64",
+      "pass_LOFO": true,
+      "pass_axes": false,
+      "qualified": false
+    }
+  },
+  "final_opened": false,
+  "finalist_priority": [
+    "GLOBAL_k32",
+    "GLOBAL_k64",
+    "TRANSPORTED_LOCAL_k32",
+    "TRANSPORTED_LOCAL_k64"
+  ],
+  "independent_final_responses_observed": false,
+  "independent_final_state_count_sealed": 50,
+  "reason": "No candidate passes all frozen development and validation causal OOD gates",
+  "rule": "first_priority_candidate_passing_state_token_joint_and_family_OOD_development_validation",
+  "selected_finalist": null,
+  "source_hashes": {
+    "global_development": "842773d05e29c3216eb97693cb8e0d7d917af815a076c65786818cc4ba703db3",
+    "global_validation": "3c804a8c4957d401b06d8649f6dbf6a204a30fcd04e3691f5275fe5376c9cc76",
+    "transport_development": "bc5c2cc8b2f044ff8887fbb15fa2f89ca1618620635960f081b81555b8dfe8f3",
+    "transport_validation": "5df21c18586d6af655f39fff1ebba3ae314a7aae8787629234797fbd1f4b263d"
+  },
+  "transported_local_primary_map": "RIDGE (first frozen transport method); Procrustes remains diagnostic"
+}

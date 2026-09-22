@@ -1,0 +1,208 @@
+{
+  "horizon_tokens_frozen_prewrite": true,
+  "independent_final_opened": false,
+  "profiles": {
+    "1": {
+      "EXACT_CONV": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.5,
+          "variable_binding": 0.5
+        },
+        "median_cosine": 0.9484589157916294,
+        "median_magnitude": 0.9596240499587796,
+        "median_relative_l2": 0.3352437718765111,
+        "pass": false,
+        "rows": 10,
+        "success_fraction": 0.4,
+        "valid_rows": 10
+      },
+      "EXACT_REC_CONV": {
+        "family_success_fraction": {
+          "boolean_logic": 0.5,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 0.5,
+          "simple_state_transition": 1.0,
+          "variable_binding": 0.5
+        },
+        "median_cosine": 0.9741498341010366,
+        "median_magnitude": 1.0017879247478472,
+        "median_relative_l2": 0.2265960062406373,
+        "pass": true,
+        "rows": 10,
+        "success_fraction": 0.7,
+        "valid_rows": 10
+      },
+      "GLOBAL_k32": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.85602087237998,
+        "median_magnitude": 0.887667041451001,
+        "median_relative_l2": 0.5349719922828222,
+        "pass": false,
+        "rows": 10,
+        "success_fraction": 0.0,
+        "valid_rows": 10
+      },
+      "GLOBAL_k64": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.8767697460620233,
+        "median_magnitude": 0.926039503282513,
+        "median_relative_l2": 0.49997290558111984,
+        "pass": false,
+        "rows": 10,
+        "success_fraction": 0.0,
+        "valid_rows": 10
+      }
+    },
+    "2": {
+      "EXACT_CONV": {
+        "family_success_fraction": {
+          "boolean_logic": 0.5,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 0.5,
+          "simple_state_transition": 0.5,
+          "variable_binding": 1.0
+        },
+        "median_cosine": 0.9660855618683675,
+        "median_magnitude": 0.9414229012599572,
+        "median_relative_l2": 0.2642790867683539,
+        "pass": true,
+        "rows": 10,
+        "success_fraction": 0.7,
+        "valid_rows": 10
+      },
+      "EXACT_REC_CONV": {
+        "family_success_fraction": {
+          "boolean_logic": 1.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 0.5,
+          "simple_state_transition": 1.0,
+          "variable_binding": 1.0
+        },
+        "median_cosine": 0.981254412088318,
+        "median_magnitude": 0.9543350377030462,
+        "median_relative_l2": 0.19375121939814927,
+        "pass": true,
+        "rows": 10,
+        "success_fraction": 0.9,
+        "valid_rows": 10
+      },
+      "GLOBAL_k32": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.8825511021903001,
+        "median_magnitude": 0.8621080278248822,
+        "median_relative_l2": 0.5095149671909942,
+        "pass": false,
+        "rows": 10,
+        "success_fraction": 0.0,
+        "valid_rows": 10
+      },
+      "GLOBAL_k64": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.8920366667634774,
+        "median_magnitude": 0.8483275982104862,
+        "median_relative_l2": 0.5180696725787475,
+        "pass": false,
+        "rows": 10,
+        "success_fraction": 0.0,
+        "valid_rows": 10
+      }
+    },
+    "4": {
+      "EXACT_CONV": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.5,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.5
+        },
+        "median_cosine": 0.9317285439646673,
+        "median_magnitude": 0.9255375977810917,
+        "median_relative_l2": 0.3680485301196615,
+        "pass": false,
+        "rows": 10,
+        "success_fraction": 0.2,
+        "valid_rows": 10
+      },
+      "EXACT_REC_CONV": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 1.0,
+          "short_graph_traversal": 0.5,
+          "simple_state_transition": 0.5,
+          "variable_binding": 1.0
+        },
+        "median_cosine": 0.958973566994598,
+        "median_magnitude": 0.9222009828187444,
+        "median_relative_l2": 0.2854859345103272,
+        "pass": true,
+        "rows": 10,
+        "success_fraction": 0.6,
+        "valid_rows": 10
+      },
+      "GLOBAL_k32": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.7467369976297431,
+        "median_magnitude": 0.8023220857893687,
+        "median_relative_l2": 0.6923024763220391,
+        "pass": false,
+        "rows": 10,
+        "success_fraction": 0.0,
+        "valid_rows": 10
+      },
+      "GLOBAL_k64": {
+        "family_success_fraction": {
+          "boolean_logic": 0.0,
+          "modular_arithmetic": 0.0,
+          "short_graph_traversal": 0.0,
+          "simple_state_transition": 0.0,
+          "variable_binding": 0.0
+        },
+        "median_cosine": 0.7701341009647729,
+        "median_magnitude": 0.827077360385628,
+        "median_relative_l2": 0.6411409254348259,
+        "pass": false,
+        "rows": 10,
+        "success_fraction": 0.0,
+        "valid_rows": 10
+      }
+    }
+  },
+  "response_sha256": "d7d89a6c2f4c07160281493d8de4e7de565fdcfb09fe06c3095112972b39e072",
+  "role": "validation",
+  "rows": 120,
+  "states": 10
+}

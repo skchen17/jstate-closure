@@ -1,0 +1,221 @@
+{
+  "basis_fit_uses_ONLY_TOKEN_TRAIN": true,
+  "gram_sha256": "772408093b76528b56b607db3f59d0311e8cd4f7ca57b5b54b67bad81c5ca16b",
+  "matrix_sha256": "0d17662ef0784b844d9b747f3da6a36539c8af17d76a318df1a39f4a4f4ebf90",
+  "models": {
+    "FAMILY_boolean_logic": {
+      "basis_path": "/data/CSK/J-space-project/v30-write-work/basis_FAMILY_boolean_logic_v30.npy",
+      "basis_sha256": "c899f2859477d4c754ba590a6c2da4028ac88b0ba8def69cf13c44fcfa425409",
+      "eigenvalue_sha256": "fc29994db5aa5a9d5fc815281050c90af3ef2ef9cdd3bf398fb132e2423e6021",
+      "mean_sha256": "9b40327442e0ad7f0b043161022dc65d2aeb09875ddba515e14420a05b5ca91d",
+      "rank": 143,
+      "ranks": {
+        "r90": 48,
+        "r95": 59,
+        "r99": 79
+      },
+      "tested_k": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "training_rows": 144
+    },
+    "FAMILY_modular_arithmetic": {
+      "basis_path": "/data/CSK/J-space-project/v30-write-work/basis_FAMILY_modular_arithmetic_v30.npy",
+      "basis_sha256": "49804befb388af3282fecf901fe4f3dc1b884fe5849938a7667806b7ac065cc5",
+      "eigenvalue_sha256": "8b4b0e2428cc14b515e0c7e0b4593159a1bdd36e2cf9cadb34f5b00c6f0e4170",
+      "mean_sha256": "a2a279676a4e4e3a227bf6444fded76e8139fbc9ee72732e78a42df2f0446bb0",
+      "rank": 143,
+      "ranks": {
+        "r90": 48,
+        "r95": 58,
+        "r99": 75
+      },
+      "tested_k": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "training_rows": 144
+    },
+    "FAMILY_short_graph_traversal": {
+      "basis_path": "/data/CSK/J-space-project/v30-write-work/basis_FAMILY_short_graph_traversal_v30.npy",
+      "basis_sha256": "506681d1be8f852739e8ee7ce26e9106fda599ee876a3fbd5d0018a932bd4a24",
+      "eigenvalue_sha256": "aee9476d12b32101ae948c586f5f92cdd429583f14838eb9e9c7b59c681254b4",
+      "mean_sha256": "94d77f55a3e79ffa7e4feae31c0405ad220607af6e31f2d50c1342092f2ac0bd",
+      "rank": 143,
+      "ranks": {
+        "r90": 50,
+        "r95": 60,
+        "r99": 77
+      },
+      "tested_k": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "training_rows": 144
+    },
+    "FAMILY_simple_state_transition": {
+      "basis_path": "/data/CSK/J-space-project/v30-write-work/basis_FAMILY_simple_state_transition_v30.npy",
+      "basis_sha256": "ef80da22f9f86a167711fbd18e2202bc9bfd84668313a8e670d67cf14b05a4c6",
+      "eigenvalue_sha256": "4927c53ef4d731475669c211a25e65148e857b05e3186c0da516cdadbbcab37f",
+      "mean_sha256": "afd12edf67fc0ab21219ae3802690aa3fca25005a9070320ae7d6ad22559141e",
+      "rank": 143,
+      "ranks": {
+        "r90": 51,
+        "r95": 61,
+        "r99": 79
+      },
+      "tested_k": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "training_rows": 144
+    },
+    "FAMILY_variable_binding": {
+      "basis_path": "/data/CSK/J-space-project/v30-write-work/basis_FAMILY_variable_binding_v30.npy",
+      "basis_sha256": "422ae32a24131c6d5589dd0fde47325df5cced92a8cf43a4c7729f9194f159ff",
+      "eigenvalue_sha256": "992ea351a51e91137911571586f8fcf80af4a1c6da25030019f988a4cceb484b",
+      "mean_sha256": "f5163b7d99c7037b1898092bcfc5bde2d40ed48d797cb8708ecd9641146bd0bf",
+      "rank": 143,
+      "ranks": {
+        "r90": 49,
+        "r95": 59,
+        "r99": 78
+      },
+      "tested_k": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "training_rows": 144
+    },
+    "GLOBAL": {
+      "basis_path": "/data/CSK/J-space-project/v30-write-work/basis_GLOBAL_v30.npy",
+      "basis_sha256": "371aa65ff0f79261ff9726a3f39645cbc23bc8641345f3a52d7631e97824d2c5",
+      "eigenvalue_sha256": "d6a1541af0e7db2e74a10aa127c858fda1e99af24d8c7db1964835faa980647b",
+      "mean_sha256": "9b7bff5a2eb12398c7f6c8a7a3b4698982350606a56e84bbe4a675c85d655d44",
+      "rank": 719,
+      "ranks": {
+        "r90": 74,
+        "r95": 131,
+        "r99": 320
+      },
+      "tested_k": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "training_rows": 720
+    },
+    "LOFO_boolean_logic": {
+      "basis_path": "/data/CSK/J-space-project/v30-write-work/basis_LOFO_boolean_logic_v30.npy",
+      "basis_sha256": "bea60272a1f2e188f1f97e8b2d939ed49cf2592fdbeeed284924c6ff9fec8a26",
+      "eigenvalue_sha256": "7aa6f7fa9ba111e4e2a87bc2b15cfb4c175060cb06733e0e504d35f9b53012c2",
+      "mean_sha256": "9738d042fbe7189b0717812399e510dfa3fb65aa608a18637baa6f01d52b5ff1",
+      "rank": 575,
+      "ranks": {
+        "r90": 69,
+        "r95": 112,
+        "r99": 256
+      },
+      "tested_k": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "training_rows": 576
+    },
+    "LOFO_modular_arithmetic": {
+      "basis_path": "/data/CSK/J-space-project/v30-write-work/basis_LOFO_modular_arithmetic_v30.npy",
+      "basis_sha256": "3ae9e51aef69f4a38a3179030a2eb59a6508d72f2185d8a11547a68bfa60fdd7",
+      "eigenvalue_sha256": "3d8e8a49944de9ecf7f14914393d7d40f4b2bfeab64ba11f245bb8ab4fbb20c5",
+      "mean_sha256": "0e6f5df1b5099ccca5e8b1fc7cd1ec30b8ff71428e77fab9c2f6fb4ba741091f",
+      "rank": 575,
+      "ranks": {
+        "r90": 70,
+        "r95": 113,
+        "r99": 260
+      },
+      "tested_k": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "training_rows": 576
+    },
+    "LOFO_short_graph_traversal": {
+      "basis_path": "/data/CSK/J-space-project/v30-write-work/basis_LOFO_short_graph_traversal_v30.npy",
+      "basis_sha256": "bcd5cecd0d50037747f7f912adffcb7d24cf74e1d3d581d0a24f78fbdca6074a",
+      "eigenvalue_sha256": "6b5d10cdc7226cd213418200fa9ce1d3110ae3e7c712d8f8741769eaa596fd09",
+      "mean_sha256": "db4f99cdcff628ad4cb91707c695a0993aa8f5fb70091df94da27b11b9cc1611",
+      "rank": 575,
+      "ranks": {
+        "r90": 72,
+        "r95": 122,
+        "r99": 279
+      },
+      "tested_k": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "training_rows": 576
+    },
+    "LOFO_simple_state_transition": {
+      "basis_path": "/data/CSK/J-space-project/v30-write-work/basis_LOFO_simple_state_transition_v30.npy",
+      "basis_sha256": "16d7c07ba5c7a46ab7e5c63f7fe37b784cfc7cc4d99e39c336087cb3608617d4",
+      "eigenvalue_sha256": "bca6a6f9469919ead58e714978edab805c697388063675f162d157388ae4677d",
+      "mean_sha256": "ea55688f5863d0edc26c407769bbc3bc92240a26a9226c4a31733ff396ff416e",
+      "rank": 575,
+      "ranks": {
+        "r90": 72,
+        "r95": 122,
+        "r99": 277
+      },
+      "tested_k": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "training_rows": 576
+    },
+    "LOFO_variable_binding": {
+      "basis_path": "/data/CSK/J-space-project/v30-write-work/basis_LOFO_variable_binding_v30.npy",
+      "basis_sha256": "d97e5e843d0cf2e577cac337ec8893a7e8d439a8f811d93aa9f7f5b37f7791bd",
+      "eigenvalue_sha256": "4abb248c5e40670a2ab5726713ea2e51667eb50f27e2abd8313d4a968ffc8baf",
+      "mean_sha256": "1f051c9bce5e603c01af95bbde93aa3d34763abe2bc51ba612c4f7a608464327",
+      "rank": 575,
+      "ranks": {
+        "r90": 70,
+        "r95": 113,
+        "r99": 257
+      },
+      "tested_k": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "training_rows": 576
+    }
+  },
+  "no_future_response_observed_in_fit": true,
+  "scratch_not_committed": true,
+  "train_rows": 720,
+  "training_rows_sha256": "93df54c0f9882e9dc7dca7053fdd6ac944b6b64230a061131044cdc54cbaeaad",
+  "write_dimension": 13369344
+}

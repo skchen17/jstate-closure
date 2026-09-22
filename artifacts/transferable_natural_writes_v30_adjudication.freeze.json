@@ -1,0 +1,34 @@
+{
+  "adjudication_sha256": "60178a47687c4d6c0f00f2af3b9494874e7a9e98a7ea4e0dc6662f27a2684508",
+  "base_freeze_digest": "21816450b59d10929de62379cd212abae80cbd1997a5ad7725bcd78b7851cd36",
+  "created_utc": "2026-09-22T08:08:49.304119+00:00",
+  "final_opened": false,
+  "freeze_digest": "e29529c64d159e57e8faedcf956c9b488b6b1d907b052bc4279bd6fa6eca95ba",
+  "input_sha256": {
+    "artifacts/transferable_natural_writes_v30_conv_depth_development.freeze.json": "68023433baccaf5b9bf734ff5adb9b97362a11442aa754ba015a77463232eddc",
+    "artifacts/transferable_natural_writes_v30_conv_depth_validation.freeze.json": "34e6a6e15fc25f1ece12b3732ca3e2b62f9d017ca3cf38a93afb9fa57ac6429f",
+    "artifacts/transferable_natural_writes_v30_coordinate_controls_development.freeze.json": "3efbc60dfc36f5d10409f06c97f6cbd301e6eb911b38131f183f0a378c2304bc",
+    "artifacts/transferable_natural_writes_v30_coordinate_controls_validation.freeze.json": "a9fe2ca0346ddb3c83bf6db008a04e3a88ef6d47908f8c369e206aef8c59300e",
+    "artifacts/transferable_natural_writes_v30_final_opening.freeze.json": "d26cf91699c4b7c69405921d29054067b68823ca384a5776a820451b85cb6078",
+    "artifacts/transferable_natural_writes_v30_horizon_development.freeze.json": "18b8b17890310b66b1887f5043b67ab45f3b65a4fb14cfc3e10d40e895840226",
+    "artifacts/transferable_natural_writes_v30_horizon_validation.freeze.json": "413c4873ce25010100d4641684c0035adb406b74918489a37ac5dc93e3907c4d",
+    "artifacts/transferable_natural_writes_v30_rank120_fit.freeze.json": "9e7cd5d6943308ede7206ea5461743d0fd193004c2b30ae45478380840fdb57e",
+    "results/v30/processed/v30_adjudication.json": "60178a47687c4d6c0f00f2af3b9494874e7a9e98a7ea4e0dc6662f27a2684508",
+    "src/jclosure/experiments/adjudicate_v30.py": "4949069e2b1c07ee56d948a0a610ddb30b56655057dcf6888aba36229d9f4b24"
+  },
+  "outcomes": {
+    "V30_A_GLOBAL_CAUSAL_WRITE_SUBSPACE_CONFIRMED": false,
+    "V30_B_SHARED_CAUSAL_WRITE_COORDINATES_CONFIRMED": false,
+    "V30_C_STATE_DEPENDENT_WRITE_ATLAS": false,
+    "V30_D_TOKEN_OOD_WRITE_GENERALIZATION": false,
+    "V30_E_FAMILY_OOD_WRITE_GENERALIZATION": false,
+    "V30_F_CONV_CARRIER_LOCALIZED_IN_DEPTH": false,
+    "V30_G_CONV_CARRIER_DISTRIBUTED_ACROSS_DEPTH": false,
+    "V30_H_REC_CONDITIONALLY_REFINES_CONV_WRITE": true,
+    "V30_I_LOCAL_COMPACT_WRITE_ONLY": false,
+    "V30_J_WRITE_EFFECT_DIMENSION_NOT_SATURATED": true,
+    "V30_K_NO_SHARED_WRITE_COORDINATE_IDENTIFIED": true
+  },
+  "protocol_version": "transferable_natural_writes_v30_adjudication",
+  "schema_version": 39
+}

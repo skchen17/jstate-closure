@@ -1,0 +1,3410 @@
+{
+  "LOFO_basis_rule": "global fitting rows excluding held-out family",
+  "amplitudes": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "attention_layers": [
+    3,
+    7,
+    11,
+    15,
+    19,
+    23,
+    27,
+    31
+  ],
+  "basis_fit_contrasts_per_state": 8,
+  "basis_fit_pair_ids_per_state": {
+    "v13-train-031a21553616f87e2d59": [
+      "a294d32db2f6ab9f",
+      "76eeac365f715d90",
+      "76b8d5bbf3bb61fe",
+      "45553178768a9af5",
+      "9eff460a8d713c1b",
+      "5f2eb0feb2e808c5",
+      "15dbd358e2e04b82",
+      "282170a9a0199d5a"
+    ],
+    "v13-train-0556e8c5d5b502eaabd9": [
+      "685465e1c6016bb7",
+      "e9ec38d3d8b87791",
+      "8d1dd9d7cfb0a084",
+      "4968051f67ddb74a",
+      "43dd3568235d87ee",
+      "b02b99c61bc9ed60",
+      "5933dcf5e62a5109",
+      "942efbff842ad002"
+    ],
+    "v13-train-05e6e9a37dd5903b30b0": [
+      "d328c33219a654a5",
+      "c44d895a00958f83",
+      "c09c0c2d3ec4770d",
+      "a8df4bfb80ed4fba",
+      "7a0d190cdd0446d2",
+      "45a22f2a39d9d9c5",
+      "57ebb70295e36a97",
+      "42539c9f30edb309"
+    ],
+    "v13-train-082c2ef1c85a767c08c8": [
+      "e66f17a9197e8116",
+      "5d41467b5fa7bd54",
+      "84ee36c2eba9fb91",
+      "558ad73cd7ba8400",
+      "8f3a5bd86c9ec947",
+      "833c24cfdd4fe522",
+      "388aebd2fd91528e",
+      "33c135ede8487417"
+    ],
+    "v13-train-0ca8af4744e0afd0dd89": [
+      "0780538ab5af1140",
+      "957d1e4e6f818333",
+      "b3697f3e795ea87b",
+      "def0eafb1b0a9256",
+      "044f917974f052d8",
+      "3483c04b68a3a844",
+      "224c498a7f13ccc1",
+      "579334d87fdd486d"
+    ],
+    "v13-train-0e4ad2ffe18abda9dfa4": [
+      "52263ee6f31b2f06",
+      "a46730892ce79f06",
+      "7237e2774f2dd187",
+      "9e48c8e2859187d3",
+      "8743dcb939158212",
+      "402ab43b2d1049af",
+      "cba051dfb627871c",
+      "43e0876c15fb24a1"
+    ],
+    "v13-train-0e751c184f60ff393ab7": [
+      "d328c33219a654a5",
+      "c44d895a00958f83",
+      "c09c0c2d3ec4770d",
+      "a8df4bfb80ed4fba",
+      "7a0d190cdd0446d2",
+      "45a22f2a39d9d9c5",
+      "57ebb70295e36a97",
+      "42539c9f30edb309"
+    ],
+    "v13-train-0fa7172fd8d21c4314d1": [
+      "a294d32db2f6ab9f",
+      "76eeac365f715d90",
+      "76b8d5bbf3bb61fe",
+      "45553178768a9af5",
+      "9eff460a8d713c1b",
+      "5f2eb0feb2e808c5",
+      "15dbd358e2e04b82",
+      "282170a9a0199d5a"
+    ],
+    "v13-train-1bd17a84036ad2d2d464": [
+      "e1115082386ca8a8",
+      "a15a0c6f580afee6",
+      "3bc0747297d67872",
+      "0a17fd90294a9408",
+      "2553b9f518e9032f",
+      "529b0c4814a60f06",
+      "b69d258257fb7648",
+      "7529d4e4ba404be9"
+    ],
+    "v13-train-1c211d4d983334909db9": [
+      "da705031571e5383",
+      "0aae6c1752bc1518",
+      "951f007fcd640ea7",
+      "82c99419ab2ca39a",
+      "755e0758fb3ca9ca",
+      "451686798e79bffa",
+      "a530748a9d635a96",
+      "34918c4d7145223f"
+    ],
+    "v13-train-1cb497d2cb96588e8a91": [
+      "a294d32db2f6ab9f",
+      "76eeac365f715d90",
+      "76b8d5bbf3bb61fe",
+      "45553178768a9af5",
+      "9eff460a8d713c1b",
+      "5f2eb0feb2e808c5",
+      "15dbd358e2e04b82",
+      "282170a9a0199d5a"
+    ],
+    "v13-train-1ce1a3dc82159d1b3ec8": [
+      "685465e1c6016bb7",
+      "e9ec38d3d8b87791",
+      "8d1dd9d7cfb0a084",
+      "4968051f67ddb74a",
+      "43dd3568235d87ee",
+      "b02b99c61bc9ed60",
+      "5933dcf5e62a5109",
+      "942efbff842ad002"
+    ],
+    "v13-train-1d25a938991de62d2ce6": [
+      "0780538ab5af1140",
+      "957d1e4e6f818333",
+      "b3697f3e795ea87b",
+      "def0eafb1b0a9256",
+      "044f917974f052d8",
+      "3483c04b68a3a844",
+      "224c498a7f13ccc1",
+      "579334d87fdd486d"
+    ],
+    "v13-train-20fe0923b4534a888c70": [
+      "1f8c10ef9be93368",
+      "b57a9e84024c09b6",
+      "e813c01a2d9e7515",
+      "13e7da7493687c4a",
+      "0e376cf37db47dca",
+      "b93f94eae1468aa9",
+      "b4c8b803b37098ce",
+      "dba1e4bced5152a0"
+    ],
+    "v13-train-21db79bec30f0364db0d": [
+      "d328c33219a654a5",
+      "c44d895a00958f83",
+      "c09c0c2d3ec4770d",
+      "a8df4bfb80ed4fba",
+      "7a0d190cdd0446d2",
+      "45a22f2a39d9d9c5",
+      "57ebb70295e36a97",
+      "42539c9f30edb309"
+    ],
+    "v13-train-291feba055b73a4a977b": [
+      "1f8c10ef9be93368",
+      "b57a9e84024c09b6",
+      "e813c01a2d9e7515",
+      "13e7da7493687c4a",
+      "0e376cf37db47dca",
+      "b93f94eae1468aa9",
+      "b4c8b803b37098ce",
+      "dba1e4bced5152a0"
+    ],
+    "v13-train-29a28ce66a8d197d90c6": [
+      "e1115082386ca8a8",
+      "a15a0c6f580afee6",
+      "3bc0747297d67872",
+      "0a17fd90294a9408",
+      "2553b9f518e9032f",
+      "529b0c4814a60f06",
+      "b69d258257fb7648",
+      "7529d4e4ba404be9"
+    ],
+    "v13-train-35529c7d2053028fd1f3": [
+      "da705031571e5383",
+      "0aae6c1752bc1518",
+      "951f007fcd640ea7",
+      "82c99419ab2ca39a",
+      "755e0758fb3ca9ca",
+      "451686798e79bffa",
+      "a530748a9d635a96",
+      "34918c4d7145223f"
+    ],
+    "v13-train-37575a9bb40f2c3a178f": [
+      "0780538ab5af1140",
+      "957d1e4e6f818333",
+      "b3697f3e795ea87b",
+      "def0eafb1b0a9256",
+      "044f917974f052d8",
+      "3483c04b68a3a844",
+      "224c498a7f13ccc1",
+      "579334d87fdd486d"
+    ],
+    "v13-train-39f3b99368bdc2f01da2": [
+      "a294d32db2f6ab9f",
+      "76eeac365f715d90",
+      "76b8d5bbf3bb61fe",
+      "45553178768a9af5",
+      "9eff460a8d713c1b",
+      "5f2eb0feb2e808c5",
+      "15dbd358e2e04b82",
+      "282170a9a0199d5a"
+    ],
+    "v13-train-3f9bf8b1546b823ae74b": [
+      "0780538ab5af1140",
+      "957d1e4e6f818333",
+      "b3697f3e795ea87b",
+      "def0eafb1b0a9256",
+      "044f917974f052d8",
+      "3483c04b68a3a844",
+      "224c498a7f13ccc1",
+      "579334d87fdd486d"
+    ],
+    "v13-train-457f1eeaa3c3c6ff5400": [
+      "52263ee6f31b2f06",
+      "a46730892ce79f06",
+      "7237e2774f2dd187",
+      "9e48c8e2859187d3",
+      "8743dcb939158212",
+      "402ab43b2d1049af",
+      "cba051dfb627871c",
+      "43e0876c15fb24a1"
+    ],
+    "v13-train-4dad09829d6e18eb5f14": [
+      "d328c33219a654a5",
+      "c44d895a00958f83",
+      "c09c0c2d3ec4770d",
+      "a8df4bfb80ed4fba",
+      "7a0d190cdd0446d2",
+      "45a22f2a39d9d9c5",
+      "57ebb70295e36a97",
+      "42539c9f30edb309"
+    ],
+    "v13-train-4f2d9106b148b5226ded": [
+      "da705031571e5383",
+      "0aae6c1752bc1518",
+      "951f007fcd640ea7",
+      "82c99419ab2ca39a",
+      "755e0758fb3ca9ca",
+      "451686798e79bffa",
+      "a530748a9d635a96",
+      "34918c4d7145223f"
+    ],
+    "v13-train-519e779a6d7e0a26f70e": [
+      "1f8c10ef9be93368",
+      "b57a9e84024c09b6",
+      "e813c01a2d9e7515",
+      "0e376cf37db47dca",
+      "b93f94eae1468aa9",
+      "b4c8b803b37098ce",
+      "dba1e4bced5152a0",
+      "685465e1c6016bb7"
+    ],
+    "v13-train-548e8a98087111949a53": [
+      "52263ee6f31b2f06",
+      "a46730892ce79f06",
+      "7237e2774f2dd187",
+      "9e48c8e2859187d3",
+      "8743dcb939158212",
+      "402ab43b2d1049af",
+      "cba051dfb627871c",
+      "43e0876c15fb24a1"
+    ],
+    "v13-train-551f383b519f280c1a95": [
+      "e1115082386ca8a8",
+      "a15a0c6f580afee6",
+      "3bc0747297d67872",
+      "0a17fd90294a9408",
+      "2553b9f518e9032f",
+      "529b0c4814a60f06",
+      "b69d258257fb7648",
+      "7529d4e4ba404be9"
+    ],
+    "v13-train-568495d9d6a8bd02a6d7": [
+      "d328c33219a654a5",
+      "c44d895a00958f83",
+      "c09c0c2d3ec4770d",
+      "a8df4bfb80ed4fba",
+      "7a0d190cdd0446d2",
+      "45a22f2a39d9d9c5",
+      "57ebb70295e36a97",
+      "42539c9f30edb309"
+    ],
+    "v13-train-58a1e3e8f9009e8f4a70": [
+      "0780538ab5af1140",
+      "957d1e4e6f818333",
+      "b3697f3e795ea87b",
+      "def0eafb1b0a9256",
+      "044f917974f052d8",
+      "3483c04b68a3a844",
+      "224c498a7f13ccc1",
+      "579334d87fdd486d"
+    ],
+    "v13-train-5b458394cf0907592b3b": [
+      "e66f17a9197e8116",
+      "5d41467b5fa7bd54",
+      "84ee36c2eba9fb91",
+      "558ad73cd7ba8400",
+      "8f3a5bd86c9ec947",
+      "833c24cfdd4fe522",
+      "388aebd2fd91528e",
+      "33c135ede8487417"
+    ],
+    "v13-train-5eb06770b917e9e1b9da": [
+      "da705031571e5383",
+      "0aae6c1752bc1518",
+      "951f007fcd640ea7",
+      "82c99419ab2ca39a",
+      "755e0758fb3ca9ca",
+      "451686798e79bffa",
+      "a530748a9d635a96",
+      "34918c4d7145223f"
+    ],
+    "v13-train-625784697070f106a54c": [
+      "a294d32db2f6ab9f",
+      "76eeac365f715d90",
+      "76b8d5bbf3bb61fe",
+      "45553178768a9af5",
+      "9eff460a8d713c1b",
+      "5f2eb0feb2e808c5",
+      "15dbd358e2e04b82",
+      "282170a9a0199d5a"
+    ],
+    "v13-train-62a58cf7971c0740186a": [
+      "685465e1c6016bb7",
+      "e9ec38d3d8b87791",
+      "8d1dd9d7cfb0a084",
+      "4968051f67ddb74a",
+      "43dd3568235d87ee",
+      "b02b99c61bc9ed60",
+      "5933dcf5e62a5109",
+      "942efbff842ad002"
+    ],
+    "v13-train-66554ec02edd864b7386": [
+      "1f8c10ef9be93368",
+      "b57a9e84024c09b6",
+      "e813c01a2d9e7515",
+      "13e7da7493687c4a",
+      "0e376cf37db47dca",
+      "b93f94eae1468aa9",
+      "b4c8b803b37098ce",
+      "dba1e4bced5152a0"
+    ],
+    "v13-train-68b2f9b138f446b837c2": [
+      "685465e1c6016bb7",
+      "e9ec38d3d8b87791",
+      "8d1dd9d7cfb0a084",
+      "4968051f67ddb74a",
+      "43dd3568235d87ee",
+      "b02b99c61bc9ed60",
+      "5933dcf5e62a5109",
+      "942efbff842ad002"
+    ],
+    "v13-train-6b096f33da83c92dd724": [
+      "da705031571e5383",
+      "0aae6c1752bc1518",
+      "951f007fcd640ea7",
+      "82c99419ab2ca39a",
+      "755e0758fb3ca9ca",
+      "451686798e79bffa",
+      "a530748a9d635a96",
+      "34918c4d7145223f"
+    ],
+    "v13-train-76c27f99eaef3bc688f2": [
+      "0780538ab5af1140",
+      "957d1e4e6f818333",
+      "b3697f3e795ea87b",
+      "def0eafb1b0a9256",
+      "044f917974f052d8",
+      "3483c04b68a3a844",
+      "224c498a7f13ccc1",
+      "579334d87fdd486d"
+    ],
+    "v13-train-76ea923579e8102079af": [
+      "685465e1c6016bb7",
+      "e9ec38d3d8b87791",
+      "8d1dd9d7cfb0a084",
+      "4968051f67ddb74a",
+      "43dd3568235d87ee",
+      "b02b99c61bc9ed60",
+      "5933dcf5e62a5109",
+      "942efbff842ad002"
+    ],
+    "v13-train-795c77452bdb65b57f58": [
+      "685465e1c6016bb7",
+      "e9ec38d3d8b87791",
+      "8d1dd9d7cfb0a084",
+      "4968051f67ddb74a",
+      "43dd3568235d87ee",
+      "b02b99c61bc9ed60",
+      "5933dcf5e62a5109",
+      "942efbff842ad002"
+    ],
+    "v13-train-7b3b317fdbe1eb4fb829": [
+      "d328c33219a654a5",
+      "c44d895a00958f83",
+      "c09c0c2d3ec4770d",
+      "a8df4bfb80ed4fba",
+      "7a0d190cdd0446d2",
+      "45a22f2a39d9d9c5",
+      "57ebb70295e36a97",
+      "42539c9f30edb309"
+    ],
+    "v13-train-7fe0b195341d02064fed": [
+      "e66f17a9197e8116",
+      "5d41467b5fa7bd54",
+      "84ee36c2eba9fb91",
+      "558ad73cd7ba8400",
+      "8f3a5bd86c9ec947",
+      "833c24cfdd4fe522",
+      "388aebd2fd91528e",
+      "33c135ede8487417"
+    ],
+    "v13-train-8121a620d56bb3aacef3": [
+      "1f8c10ef9be93368",
+      "b57a9e84024c09b6",
+      "e813c01a2d9e7515",
+      "13e7da7493687c4a",
+      "0e376cf37db47dca",
+      "b93f94eae1468aa9",
+      "b4c8b803b37098ce",
+      "dba1e4bced5152a0"
+    ],
+    "v13-train-82e9d8525ce745f7428d": [
+      "0780538ab5af1140",
+      "957d1e4e6f818333",
+      "b3697f3e795ea87b",
+      "def0eafb1b0a9256",
+      "044f917974f052d8",
+      "3483c04b68a3a844",
+      "224c498a7f13ccc1",
+      "579334d87fdd486d"
+    ],
+    "v13-train-843bf4c817278e7a3551": [
+      "52263ee6f31b2f06",
+      "a46730892ce79f06",
+      "7237e2774f2dd187",
+      "9e48c8e2859187d3",
+      "8743dcb939158212",
+      "402ab43b2d1049af",
+      "cba051dfb627871c",
+      "43e0876c15fb24a1"
+    ],
+    "v13-train-852c8d866cb50e3b651b": [
+      "d328c33219a654a5",
+      "c44d895a00958f83",
+      "c09c0c2d3ec4770d",
+      "a8df4bfb80ed4fba",
+      "7a0d190cdd0446d2",
+      "45a22f2a39d9d9c5",
+      "57ebb70295e36a97",
+      "42539c9f30edb309"
+    ],
+    "v13-train-87a97177259d9343affa": [
+      "52263ee6f31b2f06",
+      "a46730892ce79f06",
+      "7237e2774f2dd187",
+      "9e48c8e2859187d3",
+      "8743dcb939158212",
+      "402ab43b2d1049af",
+      "cba051dfb627871c",
+      "43e0876c15fb24a1"
+    ],
+    "v13-train-87b9689c0e20bd809124": [
+      "e66f17a9197e8116",
+      "5d41467b5fa7bd54",
+      "84ee36c2eba9fb91",
+      "558ad73cd7ba8400",
+      "8f3a5bd86c9ec947",
+      "833c24cfdd4fe522",
+      "388aebd2fd91528e",
+      "33c135ede8487417"
+    ],
+    "v13-train-8f04f1ac9cd7254f4031": [
+      "d328c33219a654a5",
+      "c44d895a00958f83",
+      "c09c0c2d3ec4770d",
+      "a8df4bfb80ed4fba",
+      "7a0d190cdd0446d2",
+      "45a22f2a39d9d9c5",
+      "57ebb70295e36a97",
+      "42539c9f30edb309"
+    ],
+    "v13-train-8fb746417042ce7de1d1": [
+      "0780538ab5af1140",
+      "957d1e4e6f818333",
+      "b3697f3e795ea87b",
+      "def0eafb1b0a9256",
+      "044f917974f052d8",
+      "3483c04b68a3a844",
+      "224c498a7f13ccc1",
+      "579334d87fdd486d"
+    ],
+    "v13-train-91f2bb843831ad36f334": [
+      "e1115082386ca8a8",
+      "a15a0c6f580afee6",
+      "3bc0747297d67872",
+      "0a17fd90294a9408",
+      "2553b9f518e9032f",
+      "529b0c4814a60f06",
+      "b69d258257fb7648",
+      "7529d4e4ba404be9"
+    ],
+    "v13-train-97276997805885494499": [
+      "e66f17a9197e8116",
+      "5d41467b5fa7bd54",
+      "84ee36c2eba9fb91",
+      "558ad73cd7ba8400",
+      "8f3a5bd86c9ec947",
+      "833c24cfdd4fe522",
+      "388aebd2fd91528e",
+      "33c135ede8487417"
+    ],
+    "v13-train-9ebb7221b0cd1647e246": [
+      "a294d32db2f6ab9f",
+      "76eeac365f715d90",
+      "76b8d5bbf3bb61fe",
+      "45553178768a9af5",
+      "9eff460a8d713c1b",
+      "5f2eb0feb2e808c5",
+      "15dbd358e2e04b82",
+      "282170a9a0199d5a"
+    ],
+    "v13-train-9edce97ec84587722765": [
+      "1f8c10ef9be93368",
+      "b57a9e84024c09b6",
+      "e813c01a2d9e7515",
+      "13e7da7493687c4a",
+      "0e376cf37db47dca",
+      "b93f94eae1468aa9",
+      "b4c8b803b37098ce",
+      "dba1e4bced5152a0"
+    ],
+    "v13-train-a7a677c5cae562a33ba2": [
+      "a294d32db2f6ab9f",
+      "76eeac365f715d90",
+      "76b8d5bbf3bb61fe",
+      "45553178768a9af5",
+      "9eff460a8d713c1b",
+      "5f2eb0feb2e808c5",
+      "15dbd358e2e04b82",
+      "282170a9a0199d5a"
+    ],
+    "v13-train-a8e731a2dca5501e742b": [
+      "1f8c10ef9be93368",
+      "b57a9e84024c09b6",
+      "e813c01a2d9e7515",
+      "13e7da7493687c4a",
+      "0e376cf37db47dca",
+      "b93f94eae1468aa9",
+      "b4c8b803b37098ce",
+      "dba1e4bced5152a0"
+    ],
+    "v13-train-aaa78f7b650214144cef": [
+      "e66f17a9197e8116",
+      "5d41467b5fa7bd54",
+      "84ee36c2eba9fb91",
+      "558ad73cd7ba8400",
+      "8f3a5bd86c9ec947",
+      "833c24cfdd4fe522",
+      "388aebd2fd91528e",
+      "33c135ede8487417"
+    ],
+    "v13-train-aad3c723bee9a55401e9": [
+      "685465e1c6016bb7",
+      "e9ec38d3d8b87791",
+      "8d1dd9d7cfb0a084",
+      "4968051f67ddb74a",
+      "43dd3568235d87ee",
+      "b02b99c61bc9ed60",
+      "5933dcf5e62a5109",
+      "942efbff842ad002"
+    ],
+    "v13-train-ac2db5fcfee4b8cff97f": [
+      "da705031571e5383",
+      "0aae6c1752bc1518",
+      "951f007fcd640ea7",
+      "82c99419ab2ca39a",
+      "755e0758fb3ca9ca",
+      "451686798e79bffa",
+      "a530748a9d635a96",
+      "34918c4d7145223f"
+    ],
+    "v13-train-accc4a18b77bef5342df": [
+      "1f8c10ef9be93368",
+      "b57a9e84024c09b6",
+      "e813c01a2d9e7515",
+      "13e7da7493687c4a",
+      "0e376cf37db47dca",
+      "b93f94eae1468aa9",
+      "b4c8b803b37098ce",
+      "dba1e4bced5152a0"
+    ],
+    "v13-train-b060b67de1cad08d0591": [
+      "0780538ab5af1140",
+      "957d1e4e6f818333",
+      "b3697f3e795ea87b",
+      "def0eafb1b0a9256",
+      "044f917974f052d8",
+      "3483c04b68a3a844",
+      "224c498a7f13ccc1",
+      "579334d87fdd486d"
+    ],
+    "v13-train-b0c1c613e293661abb0b": [
+      "e1115082386ca8a8",
+      "a15a0c6f580afee6",
+      "3bc0747297d67872",
+      "0a17fd90294a9408",
+      "2553b9f518e9032f",
+      "529b0c4814a60f06",
+      "b69d258257fb7648",
+      "7529d4e4ba404be9"
+    ],
+    "v13-train-b1cdc0bb5ea37cf26767": [
+      "da705031571e5383",
+      "0aae6c1752bc1518",
+      "951f007fcd640ea7",
+      "82c99419ab2ca39a",
+      "755e0758fb3ca9ca",
+      "451686798e79bffa",
+      "a530748a9d635a96",
+      "34918c4d7145223f"
+    ],
+    "v13-train-b2cfefbddc2d87ae95fa": [
+      "1f8c10ef9be93368",
+      "b57a9e84024c09b6",
+      "e813c01a2d9e7515",
+      "13e7da7493687c4a",
+      "0e376cf37db47dca",
+      "b93f94eae1468aa9",
+      "b4c8b803b37098ce",
+      "dba1e4bced5152a0"
+    ],
+    "v13-train-b80d29134a7481034172": [
+      "685465e1c6016bb7",
+      "e9ec38d3d8b87791",
+      "8d1dd9d7cfb0a084",
+      "4968051f67ddb74a",
+      "43dd3568235d87ee",
+      "b02b99c61bc9ed60",
+      "5933dcf5e62a5109",
+      "942efbff842ad002"
+    ],
+    "v13-train-ba678f59c495c8d854e4": [
+      "0780538ab5af1140",
+      "957d1e4e6f818333",
+      "b3697f3e795ea87b",
+      "def0eafb1b0a9256",
+      "044f917974f052d8",
+      "3483c04b68a3a844",
+      "224c498a7f13ccc1",
+      "579334d87fdd486d"
+    ],
+    "v13-train-bca6d7b686d862770652": [
+      "685465e1c6016bb7",
+      "e9ec38d3d8b87791",
+      "8d1dd9d7cfb0a084",
+      "4968051f67ddb74a",
+      "43dd3568235d87ee",
+      "b02b99c61bc9ed60",
+      "5933dcf5e62a5109",
+      "942efbff842ad002"
+    ],
+    "v13-train-bea1ff39c1cdeeafecf2": [
+      "52263ee6f31b2f06",
+      "a46730892ce79f06",
+      "7237e2774f2dd187",
+      "9e48c8e2859187d3",
+      "8743dcb939158212",
+      "402ab43b2d1049af",
+      "cba051dfb627871c",
+      "43e0876c15fb24a1"
+    ],
+    "v13-train-c0fb3fe6d4a1e8f1f517": [
+      "52263ee6f31b2f06",
+      "a46730892ce79f06",
+      "7237e2774f2dd187",
+      "9e48c8e2859187d3",
+      "8743dcb939158212",
+      "402ab43b2d1049af",
+      "cba051dfb627871c",
+      "43e0876c15fb24a1"
+    ],
+    "v13-train-c528ec1a01dfefe18639": [
+      "52263ee6f31b2f06",
+      "a46730892ce79f06",
+      "7237e2774f2dd187",
+      "9e48c8e2859187d3",
+      "8743dcb939158212",
+      "402ab43b2d1049af",
+      "cba051dfb627871c",
+      "43e0876c15fb24a1"
+    ],
+    "v13-train-cc73fc86043360d7cec5": [
+      "a294d32db2f6ab9f",
+      "76eeac365f715d90",
+      "76b8d5bbf3bb61fe",
+      "45553178768a9af5",
+      "9eff460a8d713c1b",
+      "5f2eb0feb2e808c5",
+      "15dbd358e2e04b82",
+      "282170a9a0199d5a"
+    ],
+    "v13-train-d13ba051a3375628f5a3": [
+      "52263ee6f31b2f06",
+      "a46730892ce79f06",
+      "7237e2774f2dd187",
+      "9e48c8e2859187d3",
+      "8743dcb939158212",
+      "402ab43b2d1049af",
+      "cba051dfb627871c",
+      "43e0876c15fb24a1"
+    ],
+    "v13-train-d3ed47d528b5e53eda09": [
+      "e1115082386ca8a8",
+      "a15a0c6f580afee6",
+      "3bc0747297d67872",
+      "0a17fd90294a9408",
+      "2553b9f518e9032f",
+      "529b0c4814a60f06",
+      "b69d258257fb7648",
+      "7529d4e4ba404be9"
+    ],
+    "v13-train-d4335fbce5b7d3d713a6": [
+      "685465e1c6016bb7",
+      "e9ec38d3d8b87791",
+      "8d1dd9d7cfb0a084",
+      "4968051f67ddb74a",
+      "43dd3568235d87ee",
+      "b02b99c61bc9ed60",
+      "5933dcf5e62a5109",
+      "942efbff842ad002"
+    ],
+    "v13-train-d487a8295f0c6479ee6f": [
+      "a294d32db2f6ab9f",
+      "76eeac365f715d90",
+      "76b8d5bbf3bb61fe",
+      "45553178768a9af5",
+      "9eff460a8d713c1b",
+      "5f2eb0feb2e808c5",
+      "15dbd358e2e04b82",
+      "282170a9a0199d5a"
+    ],
+    "v13-train-d5c47ee8fb02d0b5f801": [
+      "e1115082386ca8a8",
+      "a15a0c6f580afee6",
+      "3bc0747297d67872",
+      "0a17fd90294a9408",
+      "2553b9f518e9032f",
+      "529b0c4814a60f06",
+      "b69d258257fb7648",
+      "7529d4e4ba404be9"
+    ],
+    "v13-train-dce429725bc4d3a9609b": [
+      "e66f17a9197e8116",
+      "5d41467b5fa7bd54",
+      "84ee36c2eba9fb91",
+      "558ad73cd7ba8400",
+      "8f3a5bd86c9ec947",
+      "833c24cfdd4fe522",
+      "388aebd2fd91528e",
+      "33c135ede8487417"
+    ],
+    "v13-train-dfebe3ea50c8c00778c1": [
+      "da705031571e5383",
+      "0aae6c1752bc1518",
+      "951f007fcd640ea7",
+      "82c99419ab2ca39a",
+      "755e0758fb3ca9ca",
+      "451686798e79bffa",
+      "a530748a9d635a96",
+      "34918c4d7145223f"
+    ],
+    "v13-train-e406d530e539f9512efe": [
+      "e1115082386ca8a8",
+      "a15a0c6f580afee6",
+      "3bc0747297d67872",
+      "0a17fd90294a9408",
+      "2553b9f518e9032f",
+      "529b0c4814a60f06",
+      "b69d258257fb7648",
+      "7529d4e4ba404be9"
+    ],
+    "v13-train-e4586f03be7a98d9d91a": [
+      "e66f17a9197e8116",
+      "5d41467b5fa7bd54",
+      "84ee36c2eba9fb91",
+      "558ad73cd7ba8400",
+      "8f3a5bd86c9ec947",
+      "833c24cfdd4fe522",
+      "388aebd2fd91528e",
+      "33c135ede8487417"
+    ],
+    "v13-train-e45b874df8db82aeaac9": [
+      "da705031571e5383",
+      "0aae6c1752bc1518",
+      "951f007fcd640ea7",
+      "82c99419ab2ca39a",
+      "755e0758fb3ca9ca",
+      "451686798e79bffa",
+      "a530748a9d635a96",
+      "34918c4d7145223f"
+    ],
+    "v13-train-e48ce19ac7ecad3a042d": [
+      "da705031571e5383",
+      "0aae6c1752bc1518",
+      "951f007fcd640ea7",
+      "82c99419ab2ca39a",
+      "755e0758fb3ca9ca",
+      "451686798e79bffa",
+      "a530748a9d635a96",
+      "34918c4d7145223f"
+    ],
+    "v13-train-e559ba5d09818e05b85a": [
+      "52263ee6f31b2f06",
+      "a46730892ce79f06",
+      "7237e2774f2dd187",
+      "9e48c8e2859187d3",
+      "8743dcb939158212",
+      "402ab43b2d1049af",
+      "cba051dfb627871c",
+      "43e0876c15fb24a1"
+    ],
+    "v13-train-e76d53887adc7d87efd7": [
+      "e66f17a9197e8116",
+      "5d41467b5fa7bd54",
+      "84ee36c2eba9fb91",
+      "558ad73cd7ba8400",
+      "8f3a5bd86c9ec947",
+      "833c24cfdd4fe522",
+      "388aebd2fd91528e",
+      "33c135ede8487417"
+    ],
+    "v13-train-eb13ef3ee0dc4595479c": [
+      "d328c33219a654a5",
+      "c44d895a00958f83",
+      "c09c0c2d3ec4770d",
+      "a8df4bfb80ed4fba",
+      "7a0d190cdd0446d2",
+      "45a22f2a39d9d9c5",
+      "57ebb70295e36a97",
+      "42539c9f30edb309"
+    ],
+    "v13-train-ec043e404a88ebd26b31": [
+      "a294d32db2f6ab9f",
+      "76eeac365f715d90",
+      "76b8d5bbf3bb61fe",
+      "45553178768a9af5",
+      "9eff460a8d713c1b",
+      "5f2eb0feb2e808c5",
+      "15dbd358e2e04b82",
+      "282170a9a0199d5a"
+    ],
+    "v13-train-eef9accb656affcadbe4": [
+      "e66f17a9197e8116",
+      "5d41467b5fa7bd54",
+      "84ee36c2eba9fb91",
+      "558ad73cd7ba8400",
+      "8f3a5bd86c9ec947",
+      "833c24cfdd4fe522",
+      "388aebd2fd91528e",
+      "33c135ede8487417"
+    ],
+    "v13-train-f0f912ca66219fc627f7": [
+      "e1115082386ca8a8",
+      "a15a0c6f580afee6",
+      "3bc0747297d67872",
+      "0a17fd90294a9408",
+      "2553b9f518e9032f",
+      "529b0c4814a60f06",
+      "b69d258257fb7648",
+      "7529d4e4ba404be9"
+    ],
+    "v13-train-f2b1dff3eb31a8b55edc": [
+      "1f8c10ef9be93368",
+      "b57a9e84024c09b6",
+      "e813c01a2d9e7515",
+      "13e7da7493687c4a",
+      "0e376cf37db47dca",
+      "b93f94eae1468aa9",
+      "b4c8b803b37098ce",
+      "dba1e4bced5152a0"
+    ],
+    "v13-train-f407815e355831cd21c4": [
+      "e1115082386ca8a8",
+      "a15a0c6f580afee6",
+      "3bc0747297d67872",
+      "0a17fd90294a9408",
+      "2553b9f518e9032f",
+      "529b0c4814a60f06",
+      "b69d258257fb7648",
+      "7529d4e4ba404be9"
+    ],
+    "v13-train-ff92dbf6cbbe3a3c1d80": [
+      "d328c33219a654a5",
+      "c44d895a00958f83",
+      "c09c0c2d3ec4770d",
+      "a8df4bfb80ed4fba",
+      "7a0d190cdd0446d2",
+      "45a22f2a39d9d9c5",
+      "57ebb70295e36a97",
+      "42539c9f30edb309"
+    ]
+  },
+  "conv_groups": {
+    "half": [
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14
+      ],
+      [
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ]
+    ],
+    "leave_quartile_out": [
+      [
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22
+      ]
+    ],
+    "prefix": [
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ]
+    ],
+    "quartile": [
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      [
+        8,
+        9,
+        10,
+        12,
+        13,
+        14
+      ],
+      [
+        16,
+        17,
+        18,
+        20,
+        21,
+        22
+      ],
+      [
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ]
+    ],
+    "single": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ],
+      [
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10
+      ],
+      [
+        12
+      ],
+      [
+        13
+      ],
+      [
+        14
+      ],
+      [
+        16
+      ],
+      [
+        17
+      ],
+      [
+        18
+      ],
+      [
+        20
+      ],
+      [
+        21
+      ],
+      [
+        22
+      ],
+      [
+        24
+      ],
+      [
+        25
+      ],
+      [
+        26
+      ],
+      [
+        28
+      ],
+      [
+        29
+      ],
+      [
+        30
+      ]
+    ],
+    "suffix": [
+      [
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      [
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      [
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ]
+    ]
+  },
+  "conv_layers": [
+    0,
+    1,
+    2,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    20,
+    21,
+    22,
+    24,
+    25,
+    26,
+    28,
+    29,
+    30
+  ],
+  "conv_minimal_selection_rule": "development-only smallest nested prefix/suffix/half/quartile passing reciprocal gate; fallback full24",
+  "conv_profile_states": {
+    "development": [
+      {
+        "base_trial_id": "v13-train-71e7b39859dab11a92f6",
+        "pair_id": "cb9b2bf0fbd0f3c9"
+      },
+      {
+        "base_trial_id": "v13-train-30734b090e24c582a82e",
+        "pair_id": "cb9b2bf0fbd0f3c9"
+      },
+      {
+        "base_trial_id": "v13-train-0a9ae94f9e7b9b270f3b",
+        "pair_id": "4e8388d46b469c53"
+      },
+      {
+        "base_trial_id": "v13-train-8a4a057584590537fa72",
+        "pair_id": "cb9b2bf0fbd0f3c9"
+      },
+      {
+        "base_trial_id": "v13-train-9dac075bf4c3c97539ff",
+        "pair_id": "aad695dc12460e01"
+      },
+      {
+        "base_trial_id": "v13-train-e57989d408b33c3cb146",
+        "pair_id": "28d99fdeddf6c664"
+      },
+      {
+        "base_trial_id": "v13-train-af1ca48b9af9b6f65d64",
+        "pair_id": "cb9b2bf0fbd0f3c9"
+      },
+      {
+        "base_trial_id": "v13-train-7c4fe9e1dea36b0632bd",
+        "pair_id": "cb9b2bf0fbd0f3c9"
+      },
+      {
+        "base_trial_id": "v13-train-613ac8611969925b452b",
+        "pair_id": "3ce9a1d837cfb841"
+      },
+      {
+        "base_trial_id": "v13-train-28bc547e851c9ec3b7f4",
+        "pair_id": "32c727332c1c6b19"
+      }
+    ],
+    "validation": [
+      {
+        "base_trial_id": "v13-validation-38f4f71e36f79ae9e4bf",
+        "pair_id": "4e8388d46b469c53"
+      },
+      {
+        "base_trial_id": "v13-validation-81ea187fd5459f41462b",
+        "pair_id": "32c727332c1c6b19"
+      },
+      {
+        "base_trial_id": "v13-validation-c261575705156736ad4c",
+        "pair_id": "b513c56604be6862"
+      },
+      {
+        "base_trial_id": "v13-validation-0a32c4dc8ce85d795cb1",
+        "pair_id": "4e8388d46b469c53"
+      },
+      {
+        "base_trial_id": "v13-validation-f11e37faa88c5e2a2705",
+        "pair_id": "32c727332c1c6b19"
+      },
+      {
+        "base_trial_id": "v13-validation-71608f3192587bd473f5",
+        "pair_id": "28d99fdeddf6c664"
+      },
+      {
+        "base_trial_id": "v13-validation-c1c782de39fcffc2cd79",
+        "pair_id": "aad695dc12460e01"
+      },
+      {
+        "base_trial_id": "v13-validation-bbac0a971e9c1241f909",
+        "pair_id": "28d99fdeddf6c664"
+      },
+      {
+        "base_trial_id": "v13-validation-9a0ce75a396b88860677",
+        "pair_id": "28d99fdeddf6c664"
+      },
+      {
+        "base_trial_id": "v13-validation-46fbd300d6923d2ded62",
+        "pair_id": "b513c56604be6862"
+      }
+    ]
+  },
+  "coordinate_extract_rule": "orthogonal projection of source held-out natural write into TRAIN-only source local basis",
+  "development_holdout_ids": [
+    "v13-train-71e7b39859dab11a92f6",
+    "v13-train-30734b090e24c582a82e",
+    "v13-train-e06236a62a27dbbdce9d",
+    "v13-train-2f833416b08a8bb0ac10",
+    "v13-train-ee727de12be75d57f5a3",
+    "v13-train-0844f8bf5b94913f4264",
+    "v13-train-0a9ae94f9e7b9b270f3b",
+    "v13-train-8a4a057584590537fa72",
+    "v13-train-19fbb1914210d47d9c4e",
+    "v13-train-d86533d1bdc6f68bf70a",
+    "v13-train-03683bcb3fdf2df733b9",
+    "v13-train-457d8a2b91d68332f280",
+    "v13-train-9dac075bf4c3c97539ff",
+    "v13-train-e57989d408b33c3cb146",
+    "v13-train-7487530e3842e120f1d0",
+    "v13-train-3bd07877647c7bbdd762",
+    "v13-train-518debb42e213377c07c",
+    "v13-train-a6b46f2b4f8a8101c81a",
+    "v13-train-af1ca48b9af9b6f65d64",
+    "v13-train-7c4fe9e1dea36b0632bd",
+    "v13-train-fb3cd48d257cc14b0ca8",
+    "v13-train-5a1750c3b6abd8af6179",
+    "v13-train-e2ff5ec7050a89160c2e",
+    "v13-train-3ac0fe8a829fead9bb89",
+    "v13-train-613ac8611969925b452b",
+    "v13-train-28bc547e851c9ec3b7f4",
+    "v13-train-f92a57ba5db7c39aa273",
+    "v13-train-04419ae0ffdc8537c790",
+    "v13-train-bfce3b2bc7dcfcb50151",
+    "v13-train-9a569f57e49995904850"
+  ],
+  "eval_pairs": {
+    "development": {
+      "v13-train-03683bcb3fdf2df733b9": {
+        "heldout_token_pair_ids": [
+          "cb9b2bf0fbd0f3c9",
+          "aad695dc12460e01"
+        ],
+        "state_OOD_pair_ids": [
+          "0a17fd90294a9408",
+          "b02b99c61bc9ed60"
+        ]
+      },
+      "v13-train-04419ae0ffdc8537c790": {
+        "heldout_token_pair_ids": [
+          "3ce9a1d837cfb841",
+          "cb9b2bf0fbd0f3c9"
+        ],
+        "state_OOD_pair_ids": [
+          "e66f17a9197e8116",
+          "c44d895a00958f83"
+        ]
+      },
+      "v13-train-0844f8bf5b94913f4264": {
+        "heldout_token_pair_ids": [
+          "cb9b2bf0fbd0f3c9",
+          "4e8388d46b469c53"
+        ],
+        "state_OOD_pair_ids": [
+          "755e0758fb3ca9ca",
+          "a8df4bfb80ed4fba"
+        ]
+      },
+      "v13-train-0a9ae94f9e7b9b270f3b": {
+        "heldout_token_pair_ids": [
+          "4e8388d46b469c53",
+          "cb9b2bf0fbd0f3c9"
+        ],
+        "state_OOD_pair_ids": [
+          "c44d895a00958f83",
+          "42539c9f30edb309"
+        ]
+      },
+      "v13-train-19fbb1914210d47d9c4e": {
+        "heldout_token_pair_ids": [
+          "32c727332c1c6b19",
+          "b513c56604be6862"
+        ],
+        "state_OOD_pair_ids": [
+          "0aae6c1752bc1518",
+          "0780538ab5af1140"
+        ]
+      },
+      "v13-train-28bc547e851c9ec3b7f4": {
+        "heldout_token_pair_ids": [
+          "32c727332c1c6b19",
+          "3ce9a1d837cfb841"
+        ],
+        "state_OOD_pair_ids": [
+          "957d1e4e6f818333",
+          "5933dcf5e62a5109"
+        ]
+      },
+      "v13-train-2f833416b08a8bb0ac10": {
+        "heldout_token_pair_ids": [
+          "3ce9a1d837cfb841",
+          "4e8388d46b469c53"
+        ],
+        "state_OOD_pair_ids": [
+          "8f3a5bd86c9ec947",
+          "b02b99c61bc9ed60"
+        ]
+      },
+      "v13-train-30734b090e24c582a82e": {
+        "heldout_token_pair_ids": [
+          "cb9b2bf0fbd0f3c9",
+          "32c727332c1c6b19"
+        ],
+        "state_OOD_pair_ids": [
+          "b57a9e84024c09b6",
+          "5f2eb0feb2e808c5"
+        ]
+      },
+      "v13-train-3ac0fe8a829fead9bb89": {
+        "heldout_token_pair_ids": [
+          "aad695dc12460e01",
+          "cb9b2bf0fbd0f3c9"
+        ],
+        "state_OOD_pair_ids": [
+          "957d1e4e6f818333",
+          "1f8c10ef9be93368"
+        ]
+      },
+      "v13-train-3bd07877647c7bbdd762": {
+        "heldout_token_pair_ids": [
+          "862d2c7053bdef4e",
+          "32c727332c1c6b19"
+        ],
+        "state_OOD_pair_ids": [
+          "c09c0c2d3ec4770d",
+          "e9ec38d3d8b87791"
+        ]
+      },
+      "v13-train-457d8a2b91d68332f280": {
+        "heldout_token_pair_ids": [
+          "862d2c7053bdef4e",
+          "aad695dc12460e01"
+        ],
+        "state_OOD_pair_ids": [
+          "7237e2774f2dd187",
+          "9e48c8e2859187d3"
+        ]
+      },
+      "v13-train-518debb42e213377c07c": {
+        "heldout_token_pair_ids": [
+          "3ce9a1d837cfb841",
+          "4e8388d46b469c53"
+        ],
+        "state_OOD_pair_ids": [
+          "833c24cfdd4fe522",
+          "402ab43b2d1049af"
+        ]
+      },
+      "v13-train-5a1750c3b6abd8af6179": {
+        "heldout_token_pair_ids": [
+          "3ce9a1d837cfb841",
+          "32c727332c1c6b19"
+        ],
+        "state_OOD_pair_ids": [
+          "def0eafb1b0a9256",
+          "b02b99c61bc9ed60"
+        ]
+      },
+      "v13-train-613ac8611969925b452b": {
+        "heldout_token_pair_ids": [
+          "3ce9a1d837cfb841",
+          "b513c56604be6862"
+        ],
+        "state_OOD_pair_ids": [
+          "8f3a5bd86c9ec947",
+          "4968051f67ddb74a"
+        ]
+      },
+      "v13-train-71e7b39859dab11a92f6": {
+        "heldout_token_pair_ids": [
+          "cb9b2bf0fbd0f3c9",
+          "3ce9a1d837cfb841"
+        ],
+        "state_OOD_pair_ids": [
+          "43e0876c15fb24a1",
+          "34918c4d7145223f"
+        ]
+      },
+      "v13-train-7487530e3842e120f1d0": {
+        "heldout_token_pair_ids": [
+          "aad695dc12460e01",
+          "4e8388d46b469c53"
+        ],
+        "state_OOD_pair_ids": [
+          "3483c04b68a3a844",
+          "15dbd358e2e04b82"
+        ]
+      },
+      "v13-train-7c4fe9e1dea36b0632bd": {
+        "heldout_token_pair_ids": [
+          "cb9b2bf0fbd0f3c9",
+          "aad695dc12460e01"
+        ],
+        "state_OOD_pair_ids": [
+          "224c498a7f13ccc1",
+          "3483c04b68a3a844"
+        ]
+      },
+      "v13-train-8a4a057584590537fa72": {
+        "heldout_token_pair_ids": [
+          "cb9b2bf0fbd0f3c9",
+          "862d2c7053bdef4e"
+        ],
+        "state_OOD_pair_ids": [
+          "951f007fcd640ea7",
+          "755e0758fb3ca9ca"
+        ]
+      },
+      "v13-train-9a569f57e49995904850": {
+        "heldout_token_pair_ids": [
+          "3ce9a1d837cfb841",
+          "32c727332c1c6b19"
+        ],
+        "state_OOD_pair_ids": [
+          "13e7da7493687c4a",
+          "57ebb70295e36a97"
+        ]
+      },
+      "v13-train-9dac075bf4c3c97539ff": {
+        "heldout_token_pair_ids": [
+          "aad695dc12460e01",
+          "cb9b2bf0fbd0f3c9"
+        ],
+        "state_OOD_pair_ids": [
+          "43e0876c15fb24a1",
+          "957d1e4e6f818333"
+        ]
+      },
+      "v13-train-a6b46f2b4f8a8101c81a": {
+        "heldout_token_pair_ids": [
+          "3ce9a1d837cfb841",
+          "862d2c7053bdef4e"
+        ],
+        "state_OOD_pair_ids": [
+          "da705031571e5383",
+          "388aebd2fd91528e"
+        ]
+      },
+      "v13-train-af1ca48b9af9b6f65d64": {
+        "heldout_token_pair_ids": [
+          "cb9b2bf0fbd0f3c9",
+          "28d99fdeddf6c664"
+        ],
+        "state_OOD_pair_ids": [
+          "a8df4bfb80ed4fba",
+          "951f007fcd640ea7"
+        ]
+      },
+      "v13-train-bfce3b2bc7dcfcb50151": {
+        "heldout_token_pair_ids": [
+          "aad695dc12460e01",
+          "cb9b2bf0fbd0f3c9"
+        ],
+        "state_OOD_pair_ids": [
+          "3bc0747297d67872",
+          "d328c33219a654a5"
+        ]
+      },
+      "v13-train-d86533d1bdc6f68bf70a": {
+        "heldout_token_pair_ids": [
+          "4e8388d46b469c53",
+          "862d2c7053bdef4e"
+        ],
+        "state_OOD_pair_ids": [
+          "3483c04b68a3a844",
+          "dba1e4bced5152a0"
+        ]
+      },
+      "v13-train-e06236a62a27dbbdce9d": {
+        "heldout_token_pair_ids": [
+          "aad695dc12460e01",
+          "cb9b2bf0fbd0f3c9"
+        ],
+        "state_OOD_pair_ids": [
+          "b3697f3e795ea87b",
+          "33c135ede8487417"
+        ]
+      },
+      "v13-train-e2ff5ec7050a89160c2e": {
+        "heldout_token_pair_ids": [
+          "aad695dc12460e01",
+          "28d99fdeddf6c664"
+        ],
+        "state_OOD_pair_ids": [
+          "c44d895a00958f83",
+          "da705031571e5383"
+        ]
+      },
+      "v13-train-e57989d408b33c3cb146": {
+        "heldout_token_pair_ids": [
+          "28d99fdeddf6c664",
+          "4e8388d46b469c53"
+        ],
+        "state_OOD_pair_ids": [
+          "45a22f2a39d9d9c5",
+          "57ebb70295e36a97"
+        ]
+      },
+      "v13-train-ee727de12be75d57f5a3": {
+        "heldout_token_pair_ids": [
+          "4e8388d46b469c53",
+          "32c727332c1c6b19"
+        ],
+        "state_OOD_pair_ids": [
+          "685465e1c6016bb7",
+          "a530748a9d635a96"
+        ]
+      },
+      "v13-train-f92a57ba5db7c39aa273": {
+        "heldout_token_pair_ids": [
+          "b513c56604be6862",
+          "cb9b2bf0fbd0f3c9"
+        ],
+        "state_OOD_pair_ids": [
+          "a8df4bfb80ed4fba",
+          "e66f17a9197e8116"
+        ]
+      },
+      "v13-train-fb3cd48d257cc14b0ca8": {
+        "heldout_token_pair_ids": [
+          "3ce9a1d837cfb841",
+          "862d2c7053bdef4e"
+        ],
+        "state_OOD_pair_ids": [
+          "a46730892ce79f06",
+          "e1115082386ca8a8"
+        ]
+      }
+    },
+    "independent_final": {
+      "v13-train-015802b440758786adbd": {
+        "heldout_token_pair_ids": [
+          "66783de12006c20c",
+          "d99d502b32d4f014"
+        ],
+        "state_OOD_pair_ids": [
+          "4968051f67ddb74a",
+          "82c99419ab2ca39a"
+        ]
+      },
+      "v13-train-0a96a7b58b35601a1861": {
+        "heldout_token_pair_ids": [
+          "b317a23b30b0c35d",
+          "34e5f215486e231e"
+        ],
+        "state_OOD_pair_ids": [
+          "b02b99c61bc9ed60",
+          "558ad73cd7ba8400"
+        ]
+      },
+      "v13-train-0aee721725e13c9a5155": {
+        "heldout_token_pair_ids": [
+          "d7655933ab15bcd3",
+          "6924e783ee66a8e1"
+        ],
+        "state_OOD_pair_ids": [
+          "b93f94eae1468aa9",
+          "9eff460a8d713c1b"
+        ]
+      },
+      "v13-train-0ca5c350681a71c1a735": {
+        "heldout_token_pair_ids": [
+          "0cea8d9ca24fa15d",
+          "6924e783ee66a8e1"
+        ],
+        "state_OOD_pair_ids": [
+          "e66f17a9197e8116",
+          "b57a9e84024c09b6"
+        ]
+      },
+      "v13-train-14c0fe3aa3f35eb119be": {
+        "heldout_token_pair_ids": [
+          "34e5f215486e231e",
+          "b317a23b30b0c35d"
+        ],
+        "state_OOD_pair_ids": [
+          "044f917974f052d8",
+          "5933dcf5e62a5109"
+        ]
+      },
+      "v13-train-172e17d2519ede92ce24": {
+        "heldout_token_pair_ids": [
+          "34e5f215486e231e",
+          "d99d502b32d4f014"
+        ],
+        "state_OOD_pair_ids": [
+          "8743dcb939158212",
+          "5d41467b5fa7bd54"
+        ]
+      },
+      "v13-train-1836d347acad40917b4b": {
+        "heldout_token_pair_ids": [
+          "d7655933ab15bcd3",
+          "4352abe394014dad"
+        ],
+        "state_OOD_pair_ids": [
+          "13e7da7493687c4a",
+          "b02b99c61bc9ed60"
+        ]
+      },
+      "v13-train-23e0d87a9f4348f754f9": {
+        "heldout_token_pair_ids": [
+          "0cea8d9ca24fa15d",
+          "d7655933ab15bcd3"
+        ],
+        "state_OOD_pair_ids": [
+          "c44d895a00958f83",
+          "388aebd2fd91528e"
+        ]
+      },
+      "v13-train-3fb31be762dd16e63dcb": {
+        "heldout_token_pair_ids": [
+          "34e5f215486e231e",
+          "d99d502b32d4f014"
+        ],
+        "state_OOD_pair_ids": [
+          "45a22f2a39d9d9c5",
+          "388aebd2fd91528e"
+        ]
+      },
+      "v13-train-43ce8d62d85beb69fddb": {
+        "heldout_token_pair_ids": [
+          "d99d502b32d4f014",
+          "66783de12006c20c"
+        ],
+        "state_OOD_pair_ids": [
+          "45a22f2a39d9d9c5",
+          "451686798e79bffa"
+        ]
+      },
+      "v13-train-4519b8490a56816b87d5": {
+        "heldout_token_pair_ids": [
+          "4352abe394014dad",
+          "b317a23b30b0c35d"
+        ],
+        "state_OOD_pair_ids": [
+          "224c498a7f13ccc1",
+          "43e0876c15fb24a1"
+        ]
+      },
+      "v13-train-4bca562e7f22d7413254": {
+        "heldout_token_pair_ids": [
+          "4352abe394014dad",
+          "b317a23b30b0c35d"
+        ],
+        "state_OOD_pair_ids": [
+          "0aae6c1752bc1518",
+          "0e376cf37db47dca"
+        ]
+      },
+      "v13-train-4ce5b99fb76d94aef5c1": {
+        "heldout_token_pair_ids": [
+          "6924e783ee66a8e1",
+          "34e5f215486e231e"
+        ],
+        "state_OOD_pair_ids": [
+          "388aebd2fd91528e",
+          "34918c4d7145223f"
+        ]
+      },
+      "v13-train-4dde6d95575c1c998281": {
+        "heldout_token_pair_ids": [
+          "d99d502b32d4f014",
+          "6924e783ee66a8e1"
+        ],
+        "state_OOD_pair_ids": [
+          "8f3a5bd86c9ec947",
+          "b3697f3e795ea87b"
+        ]
+      },
+      "v13-train-65c1f83d55a79df24098": {
+        "heldout_token_pair_ids": [
+          "4352abe394014dad",
+          "d7655933ab15bcd3"
+        ],
+        "state_OOD_pair_ids": [
+          "dba1e4bced5152a0",
+          "a8df4bfb80ed4fba"
+        ]
+      },
+      "v13-train-6b70bab3600fecdf0260": {
+        "heldout_token_pair_ids": [
+          "66783de12006c20c",
+          "4352abe394014dad"
+        ],
+        "state_OOD_pair_ids": [
+          "dba1e4bced5152a0",
+          "3bc0747297d67872"
+        ]
+      },
+      "v13-train-745d22653b11e2399e02": {
+        "heldout_token_pair_ids": [
+          "d99d502b32d4f014",
+          "0cea8d9ca24fa15d"
+        ],
+        "state_OOD_pair_ids": [
+          "755e0758fb3ca9ca",
+          "282170a9a0199d5a"
+        ]
+      },
+      "v13-train-79eb6f5f3873b6798e4b": {
+        "heldout_token_pair_ids": [
+          "4352abe394014dad",
+          "d7655933ab15bcd3"
+        ],
+        "state_OOD_pair_ids": [
+          "e9ec38d3d8b87791",
+          "957d1e4e6f818333"
+        ]
+      },
+      "v13-train-7fdfaaf8d19ee35639df": {
+        "heldout_token_pair_ids": [
+          "34e5f215486e231e",
+          "b317a23b30b0c35d"
+        ],
+        "state_OOD_pair_ids": [
+          "1f8c10ef9be93368",
+          "2553b9f518e9032f"
+        ]
+      },
+      "v13-train-859438bb72b121567b15": {
+        "heldout_token_pair_ids": [
+          "b317a23b30b0c35d",
+          "0cea8d9ca24fa15d"
+        ],
+        "state_OOD_pair_ids": [
+          "82c99419ab2ca39a",
+          "0a17fd90294a9408"
+        ]
+      },
+      "v13-train-8e6db906861af73d5b35": {
+        "heldout_token_pair_ids": [
+          "d7655933ab15bcd3",
+          "4352abe394014dad"
+        ],
+        "state_OOD_pair_ids": [
+          "942efbff842ad002",
+          "84ee36c2eba9fb91"
+        ]
+      },
+      "v13-train-8ece75ea5e1f5a0452cf": {
+        "heldout_token_pair_ids": [
+          "d7655933ab15bcd3",
+          "34e5f215486e231e"
+        ],
+        "state_OOD_pair_ids": [
+          "755e0758fb3ca9ca",
+          "451686798e79bffa"
+        ]
+      },
+      "v13-train-99a15b38e5d3f058ffca": {
+        "heldout_token_pair_ids": [
+          "66783de12006c20c",
+          "d99d502b32d4f014"
+        ],
+        "state_OOD_pair_ids": [
+          "a8df4bfb80ed4fba",
+          "a15a0c6f580afee6"
+        ]
+      },
+      "v13-train-9a2a3bc0517fcc7070c9": {
+        "heldout_token_pair_ids": [
+          "4352abe394014dad",
+          "d7655933ab15bcd3"
+        ],
+        "state_OOD_pair_ids": [
+          "34918c4d7145223f",
+          "76b8d5bbf3bb61fe"
+        ]
+      },
+      "v13-train-9be578a28bcf55e55e4a": {
+        "heldout_token_pair_ids": [
+          "34e5f215486e231e",
+          "d7655933ab15bcd3"
+        ],
+        "state_OOD_pair_ids": [
+          "9eff460a8d713c1b",
+          "45a22f2a39d9d9c5"
+        ]
+      },
+      "v13-train-9c82ba6169f4d9785aab": {
+        "heldout_token_pair_ids": [
+          "d7655933ab15bcd3",
+          "0cea8d9ca24fa15d"
+        ],
+        "state_OOD_pair_ids": [
+          "45a22f2a39d9d9c5",
+          "755e0758fb3ca9ca"
+        ]
+      },
+      "v13-train-a660bb33a5f5b1ac230b": {
+        "heldout_token_pair_ids": [
+          "d7655933ab15bcd3",
+          "d99d502b32d4f014"
+        ],
+        "state_OOD_pair_ids": [
+          "76b8d5bbf3bb61fe",
+          "e1115082386ca8a8"
+        ]
+      },
+      "v13-train-aa8d050a8c516f8a7d67": {
+        "heldout_token_pair_ids": [
+          "4352abe394014dad",
+          "d7655933ab15bcd3"
+        ],
+        "state_OOD_pair_ids": [
+          "8743dcb939158212",
+          "0a17fd90294a9408"
+        ]
+      },
+      "v13-train-b3a34b99ada006c36906": {
+        "heldout_token_pair_ids": [
+          "d99d502b32d4f014",
+          "66783de12006c20c"
+        ],
+        "state_OOD_pair_ids": [
+          "a530748a9d635a96",
+          "43dd3568235d87ee"
+        ]
+      },
+      "v13-train-b43ee7d5eb4a5a65df5c": {
+        "heldout_token_pair_ids": [
+          "66783de12006c20c",
+          "b317a23b30b0c35d"
+        ],
+        "state_OOD_pair_ids": [
+          "76b8d5bbf3bb61fe",
+          "0780538ab5af1140"
+        ]
+      },
+      "v13-train-c0b2d5a979555fb1a759": {
+        "heldout_token_pair_ids": [
+          "34e5f215486e231e",
+          "6924e783ee66a8e1"
+        ],
+        "state_OOD_pair_ids": [
+          "c44d895a00958f83",
+          "b93f94eae1468aa9"
+        ]
+      },
+      "v13-train-c22caba6305f6fe12e0d": {
+        "heldout_token_pair_ids": [
+          "34e5f215486e231e",
+          "66783de12006c20c"
+        ],
+        "state_OOD_pair_ids": [
+          "dba1e4bced5152a0",
+          "45a22f2a39d9d9c5"
+        ]
+      },
+      "v13-train-c4c57e707753e3b2fe07": {
+        "heldout_token_pair_ids": [
+          "d99d502b32d4f014",
+          "6924e783ee66a8e1"
+        ],
+        "state_OOD_pair_ids": [
+          "957d1e4e6f818333",
+          "5d41467b5fa7bd54"
+        ]
+      },
+      "v13-train-c6bc8bdefd8854c01312": {
+        "heldout_token_pair_ids": [
+          "34e5f215486e231e",
+          "6924e783ee66a8e1"
+        ],
+        "state_OOD_pair_ids": [
+          "13e7da7493687c4a",
+          "529b0c4814a60f06"
+        ]
+      },
+      "v13-train-cda3dfaa79b5758c56da": {
+        "heldout_token_pair_ids": [
+          "6924e783ee66a8e1",
+          "34e5f215486e231e"
+        ],
+        "state_OOD_pair_ids": [
+          "a8df4bfb80ed4fba",
+          "da705031571e5383"
+        ]
+      },
+      "v13-train-d7adac70a9a9c9b51555": {
+        "heldout_token_pair_ids": [
+          "34e5f215486e231e",
+          "0cea8d9ca24fa15d"
+        ],
+        "state_OOD_pair_ids": [
+          "3483c04b68a3a844",
+          "044f917974f052d8"
+        ]
+      },
+      "v13-train-d8e9854547da1155fbbb": {
+        "heldout_token_pair_ids": [
+          "d99d502b32d4f014",
+          "4352abe394014dad"
+        ],
+        "state_OOD_pair_ids": [
+          "5933dcf5e62a5109",
+          "c44d895a00958f83"
+        ]
+      },
+      "v13-train-dba32d1851ebd3d7ad31": {
+        "heldout_token_pair_ids": [
+          "4352abe394014dad",
+          "b317a23b30b0c35d"
+        ],
+        "state_OOD_pair_ids": [
+          "402ab43b2d1049af",
+          "685465e1c6016bb7"
+        ]
+      },
+      "v13-train-de541c31947a01d67e50": {
+        "heldout_token_pair_ids": [
+          "0cea8d9ca24fa15d",
+          "4352abe394014dad"
+        ],
+        "state_OOD_pair_ids": [
+          "8d1dd9d7cfb0a084",
+          "5933dcf5e62a5109"
+        ]
+      },
+      "v13-train-de812da95c0e9255cf7c": {
+        "heldout_token_pair_ids": [
+          "34e5f215486e231e",
+          "b317a23b30b0c35d"
+        ],
+        "state_OOD_pair_ids": [
+          "9e48c8e2859187d3",
+          "15dbd358e2e04b82"
+        ]
+      },
+      "v13-train-debb57585736f4985c75": {
+        "heldout_token_pair_ids": [
+          "6924e783ee66a8e1",
+          "d99d502b32d4f014"
+        ],
+        "state_OOD_pair_ids": [
+          "e813c01a2d9e7515",
+          "0a17fd90294a9408"
+        ]
+      },
+      "v13-train-e5389f487281cf6b5e66": {
+        "heldout_token_pair_ids": [
+          "4352abe394014dad",
+          "0cea8d9ca24fa15d"
+        ],
+        "state_OOD_pair_ids": [
+          "3bc0747297d67872",
+          "044f917974f052d8"
+        ]
+      },
+      "v13-train-e6afc867491ac27f1bd3": {
+        "heldout_token_pair_ids": [
+          "0cea8d9ca24fa15d",
+          "4352abe394014dad"
+        ],
+        "state_OOD_pair_ids": [
+          "7529d4e4ba404be9",
+          "8743dcb939158212"
+        ]
+      },
+      "v13-train-e8a2e1e03247c2b1e98a": {
+        "heldout_token_pair_ids": [
+          "66783de12006c20c",
+          "b317a23b30b0c35d"
+        ],
+        "state_OOD_pair_ids": [
+          "cba051dfb627871c",
+          "224c498a7f13ccc1"
+        ]
+      },
+      "v13-train-efb4d5c269e8efcdc8ae": {
+        "heldout_token_pair_ids": [
+          "6924e783ee66a8e1",
+          "d7655933ab15bcd3"
+        ],
+        "state_OOD_pair_ids": [
+          "755e0758fb3ca9ca",
+          "84ee36c2eba9fb91"
+        ]
+      },
+      "v13-train-f0ced412eb2a40c1e31d": {
+        "heldout_token_pair_ids": [
+          "66783de12006c20c",
+          "34e5f215486e231e"
+        ],
+        "state_OOD_pair_ids": [
+          "e1115082386ca8a8",
+          "282170a9a0199d5a"
+        ]
+      },
+      "v13-train-f85642a5ba5b63926a41": {
+        "heldout_token_pair_ids": [
+          "34e5f215486e231e",
+          "4352abe394014dad"
+        ],
+        "state_OOD_pair_ids": [
+          "579334d87fdd486d",
+          "e9ec38d3d8b87791"
+        ]
+      },
+      "v13-train-faf79f644a7c610ce334": {
+        "heldout_token_pair_ids": [
+          "d99d502b32d4f014",
+          "4352abe394014dad"
+        ],
+        "state_OOD_pair_ids": [
+          "a15a0c6f580afee6",
+          "7a0d190cdd0446d2"
+        ]
+      },
+      "v13-train-fd1f7493ad28ef74ad68": {
+        "heldout_token_pair_ids": [
+          "4352abe394014dad",
+          "d7655933ab15bcd3"
+        ],
+        "state_OOD_pair_ids": [
+          "def0eafb1b0a9256",
+          "13e7da7493687c4a"
+        ]
+      },
+      "v13-train-fe27046ae0ca93adaafc": {
+        "heldout_token_pair_ids": [
+          "b317a23b30b0c35d",
+          "d99d502b32d4f014"
+        ],
+        "state_OOD_pair_ids": [
+          "0e376cf37db47dca",
+          "e1115082386ca8a8"
+        ]
+      }
+    },
+    "validation": {
+      "v13-validation-01448449182a942eaedc": {
+        "heldout_token_pair_ids": [
+          "4e8388d46b469c53",
+          "32c727332c1c6b19"
+        ],
+        "state_OOD_pair_ids": [
+          "5933dcf5e62a5109",
+          "33c135ede8487417"
+        ]
+      },
+      "v13-validation-0a32c4dc8ce85d795cb1": {
+        "heldout_token_pair_ids": [
+          "4e8388d46b469c53",
+          "862d2c7053bdef4e"
+        ],
+        "state_OOD_pair_ids": [
+          "0e376cf37db47dca",
+          "7529d4e4ba404be9"
+        ]
+      },
+      "v13-validation-108db015bab1935a3e55": {
+        "heldout_token_pair_ids": [
+          "862d2c7053bdef4e",
+          "28d99fdeddf6c664"
+        ],
+        "state_OOD_pair_ids": [
+          "b02b99c61bc9ed60",
+          "a8df4bfb80ed4fba"
+        ]
+      },
+      "v13-validation-174417864cf9e2c12c88": {
+        "heldout_token_pair_ids": [
+          "cb9b2bf0fbd0f3c9",
+          "862d2c7053bdef4e"
+        ],
+        "state_OOD_pair_ids": [
+          "224c498a7f13ccc1",
+          "0780538ab5af1140"
+        ]
+      },
+      "v13-validation-1a7fb3fbed142677abf2": {
+        "heldout_token_pair_ids": [
+          "3ce9a1d837cfb841",
+          "28d99fdeddf6c664"
+        ],
+        "state_OOD_pair_ids": [
+          "82c99419ab2ca39a",
+          "45a22f2a39d9d9c5"
+        ]
+      },
+      "v13-validation-2b4de293d53ae6d833b0": {
+        "heldout_token_pair_ids": [
+          "32c727332c1c6b19",
+          "28d99fdeddf6c664"
+        ],
+        "state_OOD_pair_ids": [
+          "451686798e79bffa",
+          "0a17fd90294a9408"
+        ]
+      },
+      "v13-validation-302b28507225e25f151c": {
+        "heldout_token_pair_ids": [
+          "32c727332c1c6b19",
+          "3ce9a1d837cfb841"
+        ],
+        "state_OOD_pair_ids": [
+          "33c135ede8487417",
+          "e9ec38d3d8b87791"
+        ]
+      },
+      "v13-validation-38f4f71e36f79ae9e4bf": {
+        "heldout_token_pair_ids": [
+          "4e8388d46b469c53",
+          "32c727332c1c6b19"
+        ],
+        "state_OOD_pair_ids": [
+          "4968051f67ddb74a",
+          "76eeac365f715d90"
+        ]
+      },
+      "v13-validation-4126d29807a08be95dbf": {
+        "heldout_token_pair_ids": [
+          "4e8388d46b469c53",
+          "3ce9a1d837cfb841"
+        ],
+        "state_OOD_pair_ids": [
+          "0e376cf37db47dca",
+          "dba1e4bced5152a0"
+        ]
+      },
+      "v13-validation-423aa4444ea4b2729d7e": {
+        "heldout_token_pair_ids": [
+          "aad695dc12460e01",
+          "b513c56604be6862"
+        ],
+        "state_OOD_pair_ids": [
+          "43e0876c15fb24a1",
+          "3483c04b68a3a844"
+        ]
+      },
+      "v13-validation-43d85b3d07f59d8242e7": {
+        "heldout_token_pair_ids": [
+          "28d99fdeddf6c664",
+          "cb9b2bf0fbd0f3c9"
+        ],
+        "state_OOD_pair_ids": [
+          "942efbff842ad002",
+          "84ee36c2eba9fb91"
+        ]
+      },
+      "v13-validation-45b1e6b899846030b689": {
+        "heldout_token_pair_ids": [
+          "28d99fdeddf6c664",
+          "4e8388d46b469c53"
+        ],
+        "state_OOD_pair_ids": [
+          "43dd3568235d87ee",
+          "388aebd2fd91528e"
+        ]
+      },
+      "v13-validation-46fbd300d6923d2ded62": {
+        "heldout_token_pair_ids": [
+          "b513c56604be6862",
+          "cb9b2bf0fbd0f3c9"
+        ],
+        "state_OOD_pair_ids": [
+          "dba1e4bced5152a0",
+          "755e0758fb3ca9ca"
+        ]
+      },
+      "v13-validation-50c61d6af65d59ec6c06": {
+        "heldout_token_pair_ids": [
+          "aad695dc12460e01",
+          "862d2c7053bdef4e"
+        ],
+        "state_OOD_pair_ids": [
+          "dba1e4bced5152a0",
+          "a530748a9d635a96"
+        ]
+      },
+      "v13-validation-5181cf3c972ff15b8d93": {
+        "heldout_token_pair_ids": [
+          "aad695dc12460e01",
+          "3ce9a1d837cfb841"
+        ],
+        "state_OOD_pair_ids": [
+          "3483c04b68a3a844",
+          "d328c33219a654a5"
+        ]
+      },
+      "v13-validation-5191e867ada03ad15f07": {
+        "heldout_token_pair_ids": [
+          "b513c56604be6862",
+          "3ce9a1d837cfb841"
+        ],
+        "state_OOD_pair_ids": [
+          "c44d895a00958f83",
+          "34918c4d7145223f"
+        ]
+      },
+      "v13-validation-51edbf93ee4cb8558e28": {
+        "heldout_token_pair_ids": [
+          "cb9b2bf0fbd0f3c9",
+          "32c727332c1c6b19"
+        ],
+        "state_OOD_pair_ids": [
+          "4968051f67ddb74a",
+          "942efbff842ad002"
+        ]
+      },
+      "v13-validation-526ec1b89ad430c96e60": {
+        "heldout_token_pair_ids": [
+          "862d2c7053bdef4e",
+          "b513c56604be6862"
+        ],
+        "state_OOD_pair_ids": [
+          "9e48c8e2859187d3",
+          "43dd3568235d87ee"
+        ]
+      },
+      "v13-validation-572620683928d47d21c6": {
+        "heldout_token_pair_ids": [
+          "862d2c7053bdef4e",
+          "28d99fdeddf6c664"
+        ],
+        "state_OOD_pair_ids": [
+          "951f007fcd640ea7",
+          "45a22f2a39d9d9c5"
+        ]
+      },
+      "v13-validation-587428b4ef890f0e02a6": {
+        "heldout_token_pair_ids": [
+          "32c727332c1c6b19",
+          "28d99fdeddf6c664"
+        ],
+        "state_OOD_pair_ids": [
+          "7237e2774f2dd187",
+          "a8df4bfb80ed4fba"
+        ]
+      },
+      "v13-validation-5c9a98c5144a4c16b30b": {
+        "heldout_token_pair_ids": [
+          "b513c56604be6862",
+          "28d99fdeddf6c664"
+        ],
+        "state_OOD_pair_ids": [
+          "224c498a7f13ccc1",
+          "dba1e4bced5152a0"
+        ]
+      },
+      "v13-validation-67c2af31b374dc30fa54": {
+        "heldout_token_pair_ids": [
+          "28d99fdeddf6c664",
+          "3ce9a1d837cfb841"
+        ],
+        "state_OOD_pair_ids": [
+          "b93f94eae1468aa9",
+          "d328c33219a654a5"
+        ]
+      },
+      "v13-validation-67ddd9205eb97f11f011": {
+        "heldout_token_pair_ids": [
+          "cb9b2bf0fbd0f3c9",
+          "b513c56604be6862"
+        ],
+        "state_OOD_pair_ids": [
+          "7529d4e4ba404be9",
+          "0a17fd90294a9408"
+        ]
+      },
+      "v13-validation-6a813aadad50bc513576": {
+        "heldout_token_pair_ids": [
+          "862d2c7053bdef4e",
+          "aad695dc12460e01"
+        ],
+        "state_OOD_pair_ids": [
+          "0e376cf37db47dca",
+          "7529d4e4ba404be9"
+        ]
+      },
+      "v13-validation-71608f3192587bd473f5": {
+        "heldout_token_pair_ids": [
+          "28d99fdeddf6c664",
+          "aad695dc12460e01"
+        ],
+        "state_OOD_pair_ids": [
+          "b57a9e84024c09b6",
+          "3483c04b68a3a844"
+        ]
+      },
+      "v13-validation-78f7b0d75a864054fc37": {
+        "heldout_token_pair_ids": [
+          "b513c56604be6862",
+          "cb9b2bf0fbd0f3c9"
+        ],
+        "state_OOD_pair_ids": [
+          "224c498a7f13ccc1",
+          "0aae6c1752bc1518"
+        ]
+      },
+      "v13-validation-7cb5032eaaadc3b090bc": {
+        "heldout_token_pair_ids": [
+          "b513c56604be6862",
+          "862d2c7053bdef4e"
+        ],
+        "state_OOD_pair_ids": [
+          "4968051f67ddb74a",
+          "b69d258257fb7648"
+        ]
+      },
+      "v13-validation-807ded1335bfc718e38d": {
+        "heldout_token_pair_ids": [
+          "28d99fdeddf6c664",
+          "aad695dc12460e01"
+        ],
+        "state_OOD_pair_ids": [
+          "57ebb70295e36a97",
+          "a8df4bfb80ed4fba"
+        ]
+      },
+      "v13-validation-81ea187fd5459f41462b": {
+        "heldout_token_pair_ids": [
+          "32c727332c1c6b19",
+          "aad695dc12460e01"
+        ],
+        "state_OOD_pair_ids": [
+          "b93f94eae1468aa9",
+          "e9ec38d3d8b87791"
+        ]
+      },
+      "v13-validation-821652e06168d9046b05": {
+        "heldout_token_pair_ids": [
+          "cb9b2bf0fbd0f3c9",
+          "28d99fdeddf6c664"
+        ],
+        "state_OOD_pair_ids": [
+          "7237e2774f2dd187",
+          "c09c0c2d3ec4770d"
+        ]
+      },
+      "v13-validation-8865b614fcf87df97b51": {
+        "heldout_token_pair_ids": [
+          "862d2c7053bdef4e",
+          "aad695dc12460e01"
+        ],
+        "state_OOD_pair_ids": [
+          "34918c4d7145223f",
+          "15dbd358e2e04b82"
+        ]
+      },
+      "v13-validation-89c51a45abf3a5818ec4": {
+        "heldout_token_pair_ids": [
+          "b513c56604be6862",
+          "32c727332c1c6b19"
+        ],
+        "state_OOD_pair_ids": [
+          "a46730892ce79f06",
+          "951f007fcd640ea7"
+        ]
+      },
+      "v13-validation-8bdadb644251c3ec2e49": {
+        "heldout_token_pair_ids": [
+          "b513c56604be6862",
+          "862d2c7053bdef4e"
+        ],
+        "state_OOD_pair_ids": [
+          "45a22f2a39d9d9c5",
+          "b02b99c61bc9ed60"
+        ]
+      },
+      "v13-validation-95ff87267da7a65cd3d1": {
+        "heldout_token_pair_ids": [
+          "cb9b2bf0fbd0f3c9",
+          "b513c56604be6862"
+        ],
+        "state_OOD_pair_ids": [
+          "cba051dfb627871c",
+          "951f007fcd640ea7"
+        ]
+      },
+      "v13-validation-9a0ce75a396b88860677": {
+        "heldout_token_pair_ids": [
+          "28d99fdeddf6c664",
+          "cb9b2bf0fbd0f3c9"
+        ],
+        "state_OOD_pair_ids": [
+          "8d1dd9d7cfb0a084",
+          "57ebb70295e36a97"
+        ]
+      },
+      "v13-validation-a439a3f577028a5c14fb": {
+        "heldout_token_pair_ids": [
+          "3ce9a1d837cfb841",
+          "32c727332c1c6b19"
+        ],
+        "state_OOD_pair_ids": [
+          "402ab43b2d1049af",
+          "e1115082386ca8a8"
+        ]
+      },
+      "v13-validation-a895cdb2f15c99bd0732": {
+        "heldout_token_pair_ids": [
+          "862d2c7053bdef4e",
+          "32c727332c1c6b19"
+        ],
+        "state_OOD_pair_ids": [
+          "84ee36c2eba9fb91",
+          "13e7da7493687c4a"
+        ]
+      },
+      "v13-validation-a8d65e457fc56a9ce6cf": {
+        "heldout_token_pair_ids": [
+          "3ce9a1d837cfb841",
+          "32c727332c1c6b19"
+        ],
+        "state_OOD_pair_ids": [
+          "0aae6c1752bc1518",
+          "0a17fd90294a9408"
+        ]
+      },
+      "v13-validation-a92a44b4743c86437560": {
+        "heldout_token_pair_ids": [
+          "4e8388d46b469c53",
+          "32c727332c1c6b19"
+        ],
+        "state_OOD_pair_ids": [
+          "5f2eb0feb2e808c5",
+          "57ebb70295e36a97"
+        ]
+      },
+      "v13-validation-adf205feb34bdf5c5e31": {
+        "heldout_token_pair_ids": [
+          "28d99fdeddf6c664",
+          "862d2c7053bdef4e"
+        ],
+        "state_OOD_pair_ids": [
+          "e9ec38d3d8b87791",
+          "7a0d190cdd0446d2"
+        ]
+      },
+      "v13-validation-ae47df4b124b4299a3ce": {
+        "heldout_token_pair_ids": [
+          "32c727332c1c6b19",
+          "b513c56604be6862"
+        ],
+        "state_OOD_pair_ids": [
+          "43e0876c15fb24a1",
+          "3483c04b68a3a844"
+        ]
+      },
+      "v13-validation-b367090876b33ed19cb5": {
+        "heldout_token_pair_ids": [
+          "aad695dc12460e01",
+          "28d99fdeddf6c664"
+        ],
+        "state_OOD_pair_ids": [
+          "0aae6c1752bc1518",
+          "a294d32db2f6ab9f"
+        ]
+      },
+      "v13-validation-b5b774a50ffc539b970c": {
+        "heldout_token_pair_ids": [
+          "aad695dc12460e01",
+          "28d99fdeddf6c664"
+        ],
+        "state_OOD_pair_ids": [
+          "558ad73cd7ba8400",
+          "451686798e79bffa"
+        ]
+      },
+      "v13-validation-ba2839b02e03a52c1090": {
+        "heldout_token_pair_ids": [
+          "28d99fdeddf6c664",
+          "32c727332c1c6b19"
+        ],
+        "state_OOD_pair_ids": [
+          "76eeac365f715d90",
+          "a46730892ce79f06"
+        ]
+      },
+      "v13-validation-bbac0a971e9c1241f909": {
+        "heldout_token_pair_ids": [
+          "28d99fdeddf6c664",
+          "cb9b2bf0fbd0f3c9"
+        ],
+        "state_OOD_pair_ids": [
+          "76eeac365f715d90",
+          "45a22f2a39d9d9c5"
+        ]
+      },
+      "v13-validation-bd13e5217c3bfc437f5a": {
+        "heldout_token_pair_ids": [
+          "4e8388d46b469c53",
+          "28d99fdeddf6c664"
+        ],
+        "state_OOD_pair_ids": [
+          "b02b99c61bc9ed60",
+          "b69d258257fb7648"
+        ]
+      },
+      "v13-validation-c1c782de39fcffc2cd79": {
+        "heldout_token_pair_ids": [
+          "aad695dc12460e01",
+          "862d2c7053bdef4e"
+        ],
+        "state_OOD_pair_ids": [
+          "e1115082386ca8a8",
+          "b69d258257fb7648"
+        ]
+      },
+      "v13-validation-c261575705156736ad4c": {
+        "heldout_token_pair_ids": [
+          "b513c56604be6862",
+          "32c727332c1c6b19"
+        ],
+        "state_OOD_pair_ids": [
+          "e813c01a2d9e7515",
+          "451686798e79bffa"
+        ]
+      },
+      "v13-validation-c9481643002aa3edc769": {
+        "heldout_token_pair_ids": [
+          "3ce9a1d837cfb841",
+          "aad695dc12460e01"
+        ],
+        "state_OOD_pair_ids": [
+          "76eeac365f715d90",
+          "451686798e79bffa"
+        ]
+      },
+      "v13-validation-d2c6e65e0b99a9ca20b8": {
+        "heldout_token_pair_ids": [
+          "4e8388d46b469c53",
+          "862d2c7053bdef4e"
+        ],
+        "state_OOD_pair_ids": [
+          "8d1dd9d7cfb0a084",
+          "0aae6c1752bc1518"
+        ]
+      },
+      "v13-validation-d362630c0a25f900dcdb": {
+        "heldout_token_pair_ids": [
+          "aad695dc12460e01",
+          "b513c56604be6862"
+        ],
+        "state_OOD_pair_ids": [
+          "c44d895a00958f83",
+          "76eeac365f715d90"
+        ]
+      },
+      "v13-validation-dc173bd56c3324a70646": {
+        "heldout_token_pair_ids": [
+          "4e8388d46b469c53",
+          "cb9b2bf0fbd0f3c9"
+        ],
+        "state_OOD_pair_ids": [
+          "b93f94eae1468aa9",
+          "dba1e4bced5152a0"
+        ]
+      },
+      "v13-validation-ddd60c9ebdc90f40e182": {
+        "heldout_token_pair_ids": [
+          "4e8388d46b469c53",
+          "b513c56604be6862"
+        ],
+        "state_OOD_pair_ids": [
+          "e9ec38d3d8b87791",
+          "685465e1c6016bb7"
+        ]
+      },
+      "v13-validation-e493904837459951a121": {
+        "heldout_token_pair_ids": [
+          "32c727332c1c6b19",
+          "4e8388d46b469c53"
+        ],
+        "state_OOD_pair_ids": [
+          "5933dcf5e62a5109",
+          "42539c9f30edb309"
+        ]
+      },
+      "v13-validation-e88c7cb88e8dd939da89": {
+        "heldout_token_pair_ids": [
+          "32c727332c1c6b19",
+          "aad695dc12460e01"
+        ],
+        "state_OOD_pair_ids": [
+          "45a22f2a39d9d9c5",
+          "4968051f67ddb74a"
+        ]
+      },
+      "v13-validation-eef3acb1fd88009d323e": {
+        "heldout_token_pair_ids": [
+          "aad695dc12460e01",
+          "3ce9a1d837cfb841"
+        ],
+        "state_OOD_pair_ids": [
+          "9eff460a8d713c1b",
+          "45a22f2a39d9d9c5"
+        ]
+      },
+      "v13-validation-eff0218c70c1f5862910": {
+        "heldout_token_pair_ids": [
+          "4e8388d46b469c53",
+          "aad695dc12460e01"
+        ],
+        "state_OOD_pair_ids": [
+          "833c24cfdd4fe522",
+          "579334d87fdd486d"
+        ]
+      },
+      "v13-validation-f11e37faa88c5e2a2705": {
+        "heldout_token_pair_ids": [
+          "32c727332c1c6b19",
+          "3ce9a1d837cfb841"
+        ],
+        "state_OOD_pair_ids": [
+          "a15a0c6f580afee6",
+          "3bc0747297d67872"
+        ]
+      },
+      "v13-validation-f9a60eb6ed325c6dd812": {
+        "heldout_token_pair_ids": [
+          "aad695dc12460e01",
+          "862d2c7053bdef4e"
+        ],
+        "state_OOD_pair_ids": [
+          "def0eafb1b0a9256",
+          "33c135ede8487417"
+        ]
+      },
+      "v13-validation-fad392f7cbae09a42bff": {
+        "heldout_token_pair_ids": [
+          "32c727332c1c6b19",
+          "862d2c7053bdef4e"
+        ],
+        "state_OOD_pair_ids": [
+          "c09c0c2d3ec4770d",
+          "044f917974f052d8"
+        ]
+      }
+    }
+  },
+  "family_basis_rule": "same global fitting rule within family",
+  "final_rule": "first_priority_candidate_passing_state_token_joint_and_family_OOD_development_validation",
+  "finalist_priority": [
+    "GLOBAL_k32",
+    "GLOBAL_k64",
+    "TRANSPORTED_LOCAL_k32",
+    "TRANSPORTED_LOCAL_k64"
+  ],
+  "fit_state_ids": [
+    "v13-train-eef9accb656affcadbe4",
+    "v13-train-1cb497d2cb96588e8a91",
+    "v13-train-0e751c184f60ff393ab7",
+    "v13-train-548e8a98087111949a53",
+    "v13-train-519e779a6d7e0a26f70e",
+    "v13-train-d4335fbce5b7d3d713a6",
+    "v13-train-e45b874df8db82aeaac9",
+    "v13-train-1bd17a84036ad2d2d464",
+    "v13-train-82e9d8525ce745f7428d",
+    "v13-train-e76d53887adc7d87efd7",
+    "v13-train-625784697070f106a54c",
+    "v13-train-21db79bec30f0364db0d",
+    "v13-train-c0fb3fe6d4a1e8f1f517",
+    "v13-train-b2cfefbddc2d87ae95fa",
+    "v13-train-62a58cf7971c0740186a",
+    "v13-train-ac2db5fcfee4b8cff97f",
+    "v13-train-29a28ce66a8d197d90c6",
+    "v13-train-37575a9bb40f2c3a178f",
+    "v13-train-7fe0b195341d02064fed",
+    "v13-train-cc73fc86043360d7cec5",
+    "v13-train-852c8d866cb50e3b651b",
+    "v13-train-457f1eeaa3c3c6ff5400",
+    "v13-train-accc4a18b77bef5342df",
+    "v13-train-0556e8c5d5b502eaabd9",
+    "v13-train-5eb06770b917e9e1b9da",
+    "v13-train-d3ed47d528b5e53eda09",
+    "v13-train-0ca8af4744e0afd0dd89",
+    "v13-train-97276997805885494499",
+    "v13-train-031a21553616f87e2d59",
+    "v13-train-eb13ef3ee0dc4595479c",
+    "v13-train-843bf4c817278e7a3551",
+    "v13-train-f2b1dff3eb31a8b55edc",
+    "v13-train-aad3c723bee9a55401e9",
+    "v13-train-4f2d9106b148b5226ded",
+    "v13-train-b0c1c613e293661abb0b",
+    "v13-train-ba678f59c495c8d854e4",
+    "v13-train-87b9689c0e20bd809124",
+    "v13-train-0fa7172fd8d21c4314d1",
+    "v13-train-4dad09829d6e18eb5f14",
+    "v13-train-87a97177259d9343affa",
+    "v13-train-291feba055b73a4a977b",
+    "v13-train-1ce1a3dc82159d1b3ec8",
+    "v13-train-dfebe3ea50c8c00778c1",
+    "v13-train-e406d530e539f9512efe",
+    "v13-train-58a1e3e8f9009e8f4a70",
+    "v13-train-dce429725bc4d3a9609b",
+    "v13-train-d487a8295f0c6479ee6f",
+    "v13-train-ff92dbf6cbbe3a3c1d80",
+    "v13-train-e559ba5d09818e05b85a",
+    "v13-train-9edce97ec84587722765",
+    "v13-train-b80d29134a7481034172",
+    "v13-train-b1cdc0bb5ea37cf26767",
+    "v13-train-f407815e355831cd21c4",
+    "v13-train-76c27f99eaef3bc688f2",
+    "v13-train-082c2ef1c85a767c08c8",
+    "v13-train-a7a677c5cae562a33ba2",
+    "v13-train-8f04f1ac9cd7254f4031",
+    "v13-train-c528ec1a01dfefe18639",
+    "v13-train-8121a620d56bb3aacef3",
+    "v13-train-bca6d7b686d862770652",
+    "v13-train-35529c7d2053028fd1f3",
+    "v13-train-551f383b519f280c1a95",
+    "v13-train-b060b67de1cad08d0591",
+    "v13-train-aaa78f7b650214144cef",
+    "v13-train-ec043e404a88ebd26b31",
+    "v13-train-7b3b317fdbe1eb4fb829",
+    "v13-train-bea1ff39c1cdeeafecf2",
+    "v13-train-20fe0923b4534a888c70",
+    "v13-train-795c77452bdb65b57f58",
+    "v13-train-e48ce19ac7ecad3a042d",
+    "v13-train-d5c47ee8fb02d0b5f801",
+    "v13-train-8fb746417042ce7de1d1",
+    "v13-train-e4586f03be7a98d9d91a",
+    "v13-train-39f3b99368bdc2f01da2",
+    "v13-train-568495d9d6a8bd02a6d7",
+    "v13-train-0e4ad2ffe18abda9dfa4",
+    "v13-train-66554ec02edd864b7386",
+    "v13-train-76ea923579e8102079af",
+    "v13-train-6b096f33da83c92dd724",
+    "v13-train-91f2bb843831ad36f334",
+    "v13-train-1d25a938991de62d2ce6",
+    "v13-train-5b458394cf0907592b3b",
+    "v13-train-9ebb7221b0cd1647e246",
+    "v13-train-05e6e9a37dd5903b30b0",
+    "v13-train-d13ba051a3375628f5a3",
+    "v13-train-a8e731a2dca5501e742b",
+    "v13-train-68b2f9b138f446b837c2",
+    "v13-train-1c211d4d983334909db9",
+    "v13-train-f0f912ca66219fc627f7",
+    "v13-train-3f9bf8b1546b823ae74b"
+  ],
+  "future_probe_count": 4,
+  "future_responses_observed_before_plan": 0,
+  "gates": {
+    "cosine_min": 0.9,
+    "families_required": 4,
+    "magnitude_max": 1.2,
+    "magnitude_min": 0.8,
+    "relative_l2_max": 0.3,
+    "success_fraction_min": 0.5
+  },
+  "global_basis_rule": "centered response-blind PCA from 90 fit states x 8 frozen TOKEN_TRAIN pairs",
+  "historical_final_opened": false,
+  "horizons": [
+    1,
+    2,
+    4
+  ],
+  "independent_final_ids": [
+    "v13-train-9be578a28bcf55e55e4a",
+    "v13-train-859438bb72b121567b15",
+    "v13-train-79eb6f5f3873b6798e4b",
+    "v13-train-aa8d050a8c516f8a7d67",
+    "v13-train-015802b440758786adbd",
+    "v13-train-debb57585736f4985c75",
+    "v13-train-43ce8d62d85beb69fddb",
+    "v13-train-c0b2d5a979555fb1a759",
+    "v13-train-4dde6d95575c1c998281",
+    "v13-train-1836d347acad40917b4b",
+    "v13-train-6b70bab3600fecdf0260",
+    "v13-train-0ca5c350681a71c1a735",
+    "v13-train-99a15b38e5d3f058ffca",
+    "v13-train-23e0d87a9f4348f754f9",
+    "v13-train-d8e9854547da1155fbbb",
+    "v13-train-4519b8490a56816b87d5",
+    "v13-train-c4c57e707753e3b2fe07",
+    "v13-train-a660bb33a5f5b1ac230b",
+    "v13-train-0a96a7b58b35601a1861",
+    "v13-train-e6afc867491ac27f1bd3",
+    "v13-train-fe27046ae0ca93adaafc",
+    "v13-train-14c0fe3aa3f35eb119be",
+    "v13-train-efb4d5c269e8efcdc8ae",
+    "v13-train-c22caba6305f6fe12e0d",
+    "v13-train-8e6db906861af73d5b35",
+    "v13-train-e8a2e1e03247c2b1e98a",
+    "v13-train-dba32d1851ebd3d7ad31",
+    "v13-train-745d22653b11e2399e02",
+    "v13-train-172e17d2519ede92ce24",
+    "v13-train-cda3dfaa79b5758c56da",
+    "v13-train-9c82ba6169f4d9785aab",
+    "v13-train-c6bc8bdefd8854c01312",
+    "v13-train-0aee721725e13c9a5155",
+    "v13-train-7fdfaaf8d19ee35639df",
+    "v13-train-9a2a3bc0517fcc7070c9",
+    "v13-train-b3a34b99ada006c36906",
+    "v13-train-f85642a5ba5b63926a41",
+    "v13-train-de812da95c0e9255cf7c",
+    "v13-train-4ce5b99fb76d94aef5c1",
+    "v13-train-faf79f644a7c610ce334",
+    "v13-train-e5389f487281cf6b5e66",
+    "v13-train-8ece75ea5e1f5a0452cf",
+    "v13-train-fd1f7493ad28ef74ad68",
+    "v13-train-f0ced412eb2a40c1e31d",
+    "v13-train-65c1f83d55a79df24098",
+    "v13-train-d7adac70a9a9c9b51555",
+    "v13-train-b43ee7d5eb4a5a65df5c",
+    "v13-train-3fb31be762dd16e63dcb",
+    "v13-train-de541c31947a01d67e50",
+    "v13-train-4bca562e7f22d7413254"
+  ],
+  "independent_final_opened": false,
+  "k_grid": [
+    8,
+    16,
+    32,
+    64
+  ],
+  "local_basis_rule": "all eligible TOKEN_TRAIN pair contrasts in target state; never held-out-token write",
+  "seen_state_token_OOD_pairs": {
+    "v13-train-082c2ef1c85a767c08c8": [
+      "b513c56604be6862",
+      "3ce9a1d837cfb841"
+    ],
+    "v13-train-0fa7172fd8d21c4314d1": [
+      "b513c56604be6862",
+      "cb9b2bf0fbd0f3c9"
+    ],
+    "v13-train-1cb497d2cb96588e8a91": [
+      "28d99fdeddf6c664",
+      "4e8388d46b469c53"
+    ],
+    "v13-train-39f3b99368bdc2f01da2": [
+      "b513c56604be6862",
+      "862d2c7053bdef4e"
+    ],
+    "v13-train-7fe0b195341d02064fed": [
+      "32c727332c1c6b19",
+      "4e8388d46b469c53"
+    ],
+    "v13-train-87b9689c0e20bd809124": [
+      "862d2c7053bdef4e",
+      "aad695dc12460e01"
+    ],
+    "v13-train-a7a677c5cae562a33ba2": [
+      "aad695dc12460e01",
+      "3ce9a1d837cfb841"
+    ],
+    "v13-train-cc73fc86043360d7cec5": [
+      "cb9b2bf0fbd0f3c9",
+      "32c727332c1c6b19"
+    ],
+    "v13-train-e4586f03be7a98d9d91a": [
+      "cb9b2bf0fbd0f3c9",
+      "28d99fdeddf6c664"
+    ],
+    "v13-train-eef9accb656affcadbe4": [
+      "3ce9a1d837cfb841",
+      "32c727332c1c6b19"
+    ]
+  },
+  "transport_fit_rule": "TRAIN-token-only paired source/target local coordinates; ridge alpha=1 and orthogonal Procrustes fixed",
+  "transport_methods": [
+    "GLOBAL_FIXED",
+    "FAMILY_FIXED",
+    "LOCAL_ORACLE",
+    "TRANSPORTED_LOCAL_RIDGE",
+    "TRANSPORTED_LOCAL_PROCRUSTES",
+    "RAW_SOURCE_DELTA_CONTROL"
+  ],
+  "transport_ridge_alpha": 1.0,
+  "transport_source_state": {
+    "v13-train-015802b440758786adbd:66783de12006c20c": "v13-train-21db79bec30f0364db0d",
+    "v13-train-015802b440758786adbd:d99d502b32d4f014": "v13-train-0e751c184f60ff393ab7",
+    "v13-train-03683bcb3fdf2df733b9:aad695dc12460e01": "v13-train-aad3c723bee9a55401e9",
+    "v13-train-03683bcb3fdf2df733b9:cb9b2bf0fbd0f3c9": "v13-train-852c8d866cb50e3b651b",
+    "v13-train-04419ae0ffdc8537c790:3ce9a1d837cfb841": "v13-train-d13ba051a3375628f5a3",
+    "v13-train-04419ae0ffdc8537c790:cb9b2bf0fbd0f3c9": "v13-train-0e4ad2ffe18abda9dfa4",
+    "v13-train-0844f8bf5b94913f4264:4e8388d46b469c53": "v13-train-ac2db5fcfee4b8cff97f",
+    "v13-train-0844f8bf5b94913f4264:cb9b2bf0fbd0f3c9": "v13-train-e45b874df8db82aeaac9",
+    "v13-train-0a96a7b58b35601a1861:34e5f215486e231e": "v13-train-0556e8c5d5b502eaabd9",
+    "v13-train-0a96a7b58b35601a1861:b317a23b30b0c35d": "v13-train-843bf4c817278e7a3551",
+    "v13-train-0a9ae94f9e7b9b270f3b:4e8388d46b469c53": "v13-train-7fe0b195341d02064fed",
+    "v13-train-0a9ae94f9e7b9b270f3b:cb9b2bf0fbd0f3c9": "v13-train-97276997805885494499",
+    "v13-train-0aee721725e13c9a5155:6924e783ee66a8e1": "v13-train-a7a677c5cae562a33ba2",
+    "v13-train-0aee721725e13c9a5155:d7655933ab15bcd3": "v13-train-c528ec1a01dfefe18639",
+    "v13-train-0ca5c350681a71c1a735:0cea8d9ca24fa15d": "v13-train-aad3c723bee9a55401e9",
+    "v13-train-0ca5c350681a71c1a735:6924e783ee66a8e1": "v13-train-031a21553616f87e2d59",
+    "v13-train-14c0fe3aa3f35eb119be:34e5f215486e231e": "v13-train-87a97177259d9343affa",
+    "v13-train-14c0fe3aa3f35eb119be:b317a23b30b0c35d": "v13-train-87a97177259d9343affa",
+    "v13-train-172e17d2519ede92ce24:34e5f215486e231e": "v13-train-58a1e3e8f9009e8f4a70",
+    "v13-train-172e17d2519ede92ce24:d99d502b32d4f014": "v13-train-76c27f99eaef3bc688f2",
+    "v13-train-1836d347acad40917b4b:4352abe394014dad": "v13-train-0e751c184f60ff393ab7",
+    "v13-train-1836d347acad40917b4b:d7655933ab15bcd3": "v13-train-519e779a6d7e0a26f70e",
+    "v13-train-19fbb1914210d47d9c4e:32c727332c1c6b19": "v13-train-031a21553616f87e2d59",
+    "v13-train-19fbb1914210d47d9c4e:b513c56604be6862": "v13-train-ba678f59c495c8d854e4",
+    "v13-train-23e0d87a9f4348f754f9:0cea8d9ca24fa15d": "v13-train-0556e8c5d5b502eaabd9",
+    "v13-train-23e0d87a9f4348f754f9:d7655933ab15bcd3": "v13-train-cc73fc86043360d7cec5",
+    "v13-train-28bc547e851c9ec3b7f4:32c727332c1c6b19": "v13-train-3f9bf8b1546b823ae74b",
+    "v13-train-28bc547e851c9ec3b7f4:3ce9a1d837cfb841": "v13-train-9ebb7221b0cd1647e246",
+    "v13-train-2f833416b08a8bb0ac10:3ce9a1d837cfb841": "v13-train-21db79bec30f0364db0d",
+    "v13-train-2f833416b08a8bb0ac10:4e8388d46b469c53": "v13-train-548e8a98087111949a53",
+    "v13-train-30734b090e24c582a82e:32c727332c1c6b19": "v13-train-c0fb3fe6d4a1e8f1f517",
+    "v13-train-30734b090e24c582a82e:cb9b2bf0fbd0f3c9": "v13-train-1bd17a84036ad2d2d464",
+    "v13-train-3ac0fe8a829fead9bb89:aad695dc12460e01": "v13-train-20fe0923b4534a888c70",
+    "v13-train-3ac0fe8a829fead9bb89:cb9b2bf0fbd0f3c9": "v13-train-551f383b519f280c1a95",
+    "v13-train-3bd07877647c7bbdd762:32c727332c1c6b19": "v13-train-4dad09829d6e18eb5f14",
+    "v13-train-3bd07877647c7bbdd762:862d2c7053bdef4e": "v13-train-b1cdc0bb5ea37cf26767",
+    "v13-train-3fb31be762dd16e63dcb:34e5f215486e231e": "v13-train-f0f912ca66219fc627f7",
+    "v13-train-3fb31be762dd16e63dcb:d99d502b32d4f014": "v13-train-76ea923579e8102079af",
+    "v13-train-43ce8d62d85beb69fddb:66783de12006c20c": "v13-train-e45b874df8db82aeaac9",
+    "v13-train-43ce8d62d85beb69fddb:d99d502b32d4f014": "v13-train-b2cfefbddc2d87ae95fa",
+    "v13-train-4519b8490a56816b87d5:4352abe394014dad": "v13-train-7fe0b195341d02064fed",
+    "v13-train-4519b8490a56816b87d5:b317a23b30b0c35d": "v13-train-f2b1dff3eb31a8b55edc",
+    "v13-train-457d8a2b91d68332f280:862d2c7053bdef4e": "v13-train-cc73fc86043360d7cec5",
+    "v13-train-457d8a2b91d68332f280:aad695dc12460e01": "v13-train-0ca8af4744e0afd0dd89",
+    "v13-train-4bca562e7f22d7413254:4352abe394014dad": "v13-train-91f2bb843831ad36f334",
+    "v13-train-4bca562e7f22d7413254:b317a23b30b0c35d": "v13-train-9ebb7221b0cd1647e246",
+    "v13-train-4ce5b99fb76d94aef5c1:34e5f215486e231e": "v13-train-795c77452bdb65b57f58",
+    "v13-train-4ce5b99fb76d94aef5c1:6924e783ee66a8e1": "v13-train-8f04f1ac9cd7254f4031",
+    "v13-train-4dde6d95575c1c998281:6924e783ee66a8e1": "v13-train-0e751c184f60ff393ab7",
+    "v13-train-4dde6d95575c1c998281:d99d502b32d4f014": "v13-train-548e8a98087111949a53",
+    "v13-train-518debb42e213377c07c:3ce9a1d837cfb841": "v13-train-e559ba5d09818e05b85a",
+    "v13-train-518debb42e213377c07c:4e8388d46b469c53": "v13-train-87b9689c0e20bd809124",
+    "v13-train-5a1750c3b6abd8af6179:32c727332c1c6b19": "v13-train-a7a677c5cae562a33ba2",
+    "v13-train-5a1750c3b6abd8af6179:3ce9a1d837cfb841": "v13-train-b060b67de1cad08d0591",
+    "v13-train-613ac8611969925b452b:3ce9a1d837cfb841": "v13-train-e4586f03be7a98d9d91a",
+    "v13-train-613ac8611969925b452b:b513c56604be6862": "v13-train-5b458394cf0907592b3b",
+    "v13-train-65c1f83d55a79df24098:4352abe394014dad": "v13-train-9ebb7221b0cd1647e246",
+    "v13-train-65c1f83d55a79df24098:d7655933ab15bcd3": "v13-train-0e4ad2ffe18abda9dfa4",
+    "v13-train-6b70bab3600fecdf0260:4352abe394014dad": "v13-train-aad3c723bee9a55401e9",
+    "v13-train-6b70bab3600fecdf0260:66783de12006c20c": "v13-train-accc4a18b77bef5342df",
+    "v13-train-71e7b39859dab11a92f6:3ce9a1d837cfb841": "v13-train-519e779a6d7e0a26f70e",
+    "v13-train-71e7b39859dab11a92f6:cb9b2bf0fbd0f3c9": "v13-train-29a28ce66a8d197d90c6",
+    "v13-train-745d22653b11e2399e02:0cea8d9ca24fa15d": "v13-train-ff92dbf6cbbe3a3c1d80",
+    "v13-train-745d22653b11e2399e02:d99d502b32d4f014": "v13-train-4dad09829d6e18eb5f14",
+    "v13-train-7487530e3842e120f1d0:4e8388d46b469c53": "v13-train-ff92dbf6cbbe3a3c1d80",
+    "v13-train-7487530e3842e120f1d0:aad695dc12460e01": "v13-train-4dad09829d6e18eb5f14",
+    "v13-train-79eb6f5f3873b6798e4b:4352abe394014dad": "v13-train-d4335fbce5b7d3d713a6",
+    "v13-train-79eb6f5f3873b6798e4b:d7655933ab15bcd3": "v13-train-1cb497d2cb96588e8a91",
+    "v13-train-7c4fe9e1dea36b0632bd:aad695dc12460e01": "v13-train-082c2ef1c85a767c08c8",
+    "v13-train-7c4fe9e1dea36b0632bd:cb9b2bf0fbd0f3c9": "v13-train-e48ce19ac7ecad3a042d",
+    "v13-train-7fdfaaf8d19ee35639df:34e5f215486e231e": "v13-train-8f04f1ac9cd7254f4031",
+    "v13-train-7fdfaaf8d19ee35639df:b317a23b30b0c35d": "v13-train-082c2ef1c85a767c08c8",
+    "v13-train-859438bb72b121567b15:0cea8d9ca24fa15d": "v13-train-82e9d8525ce745f7428d",
+    "v13-train-859438bb72b121567b15:b317a23b30b0c35d": "v13-train-519e779a6d7e0a26f70e",
+    "v13-train-8a4a057584590537fa72:862d2c7053bdef4e": "v13-train-f2b1dff3eb31a8b55edc",
+    "v13-train-8a4a057584590537fa72:cb9b2bf0fbd0f3c9": "v13-train-7fe0b195341d02064fed",
+    "v13-train-8e6db906861af73d5b35:4352abe394014dad": "v13-train-e559ba5d09818e05b85a",
+    "v13-train-8e6db906861af73d5b35:d7655933ab15bcd3": "v13-train-9edce97ec84587722765",
+    "v13-train-8ece75ea5e1f5a0452cf:34e5f215486e231e": "v13-train-68b2f9b138f446b837c2",
+    "v13-train-8ece75ea5e1f5a0452cf:d7655933ab15bcd3": "v13-train-05e6e9a37dd5903b30b0",
+    "v13-train-99a15b38e5d3f058ffca:66783de12006c20c": "v13-train-f2b1dff3eb31a8b55edc",
+    "v13-train-99a15b38e5d3f058ffca:d99d502b32d4f014": "v13-train-f2b1dff3eb31a8b55edc",
+    "v13-train-9a2a3bc0517fcc7070c9:4352abe394014dad": "v13-train-bca6d7b686d862770652",
+    "v13-train-9a2a3bc0517fcc7070c9:d7655933ab15bcd3": "v13-train-e48ce19ac7ecad3a042d",
+    "v13-train-9a569f57e49995904850:32c727332c1c6b19": "v13-train-6b096f33da83c92dd724",
+    "v13-train-9a569f57e49995904850:3ce9a1d837cfb841": "v13-train-66554ec02edd864b7386",
+    "v13-train-9be578a28bcf55e55e4a:34e5f215486e231e": "v13-train-b2cfefbddc2d87ae95fa",
+    "v13-train-9be578a28bcf55e55e4a:d7655933ab15bcd3": "v13-train-0e751c184f60ff393ab7",
+    "v13-train-9c82ba6169f4d9785aab:0cea8d9ca24fa15d": "v13-train-ec043e404a88ebd26b31",
+    "v13-train-9c82ba6169f4d9785aab:d7655933ab15bcd3": "v13-train-c528ec1a01dfefe18639",
+    "v13-train-9dac075bf4c3c97539ff:aad695dc12460e01": "v13-train-9edce97ec84587722765",
+    "v13-train-9dac075bf4c3c97539ff:cb9b2bf0fbd0f3c9": "v13-train-87b9689c0e20bd809124",
+    "v13-train-a660bb33a5f5b1ac230b:d7655933ab15bcd3": "v13-train-5eb06770b917e9e1b9da",
+    "v13-train-a660bb33a5f5b1ac230b:d99d502b32d4f014": "v13-train-0ca8af4744e0afd0dd89",
+    "v13-train-a6b46f2b4f8a8101c81a:3ce9a1d837cfb841": "v13-train-58a1e3e8f9009e8f4a70",
+    "v13-train-a6b46f2b4f8a8101c81a:862d2c7053bdef4e": "v13-train-87b9689c0e20bd809124",
+    "v13-train-aa8d050a8c516f8a7d67:4352abe394014dad": "v13-train-0e751c184f60ff393ab7",
+    "v13-train-aa8d050a8c516f8a7d67:d7655933ab15bcd3": "v13-train-625784697070f106a54c",
+    "v13-train-af1ca48b9af9b6f65d64:28d99fdeddf6c664": "v13-train-082c2ef1c85a767c08c8",
+    "v13-train-af1ca48b9af9b6f65d64:cb9b2bf0fbd0f3c9": "v13-train-bca6d7b686d862770652",
+    "v13-train-b3a34b99ada006c36906:66783de12006c20c": "v13-train-b060b67de1cad08d0591",
+    "v13-train-b3a34b99ada006c36906:d99d502b32d4f014": "v13-train-bea1ff39c1cdeeafecf2",
+    "v13-train-b43ee7d5eb4a5a65df5c:66783de12006c20c": "v13-train-68b2f9b138f446b837c2",
+    "v13-train-b43ee7d5eb4a5a65df5c:b317a23b30b0c35d": "v13-train-5b458394cf0907592b3b",
+    "v13-train-bfce3b2bc7dcfcb50151:aad695dc12460e01": "v13-train-5b458394cf0907592b3b",
+    "v13-train-bfce3b2bc7dcfcb50151:cb9b2bf0fbd0f3c9": "v13-train-3f9bf8b1546b823ae74b",
+    "v13-train-c0b2d5a979555fb1a759:34e5f215486e231e": "v13-train-e45b874df8db82aeaac9",
+    "v13-train-c0b2d5a979555fb1a759:6924e783ee66a8e1": "v13-train-ac2db5fcfee4b8cff97f",
+    "v13-train-c22caba6305f6fe12e0d:34e5f215486e231e": "v13-train-76c27f99eaef3bc688f2",
+    "v13-train-c22caba6305f6fe12e0d:66783de12006c20c": "v13-train-87a97177259d9343affa",
+    "v13-train-c4c57e707753e3b2fe07:6924e783ee66a8e1": "v13-train-aad3c723bee9a55401e9",
+    "v13-train-c4c57e707753e3b2fe07:d99d502b32d4f014": "v13-train-ba678f59c495c8d854e4",
+    "v13-train-c6bc8bdefd8854c01312:34e5f215486e231e": "v13-train-bea1ff39c1cdeeafecf2",
+    "v13-train-c6bc8bdefd8854c01312:6924e783ee66a8e1": "v13-train-e48ce19ac7ecad3a042d",
+    "v13-train-cda3dfaa79b5758c56da:34e5f215486e231e": "v13-train-58a1e3e8f9009e8f4a70",
+    "v13-train-cda3dfaa79b5758c56da:6924e783ee66a8e1": "v13-train-58a1e3e8f9009e8f4a70",
+    "v13-train-d7adac70a9a9c9b51555:0cea8d9ca24fa15d": "v13-train-a8e731a2dca5501e742b",
+    "v13-train-d7adac70a9a9c9b51555:34e5f215486e231e": "v13-train-6b096f33da83c92dd724",
+    "v13-train-d86533d1bdc6f68bf70a:4e8388d46b469c53": "v13-train-f2b1dff3eb31a8b55edc",
+    "v13-train-d86533d1bdc6f68bf70a:862d2c7053bdef4e": "v13-train-97276997805885494499",
+    "v13-train-d8e9854547da1155fbbb:4352abe394014dad": "v13-train-4f2d9106b148b5226ded",
+    "v13-train-d8e9854547da1155fbbb:d99d502b32d4f014": "v13-train-457f1eeaa3c3c6ff5400",
+    "v13-train-dba32d1851ebd3d7ad31:4352abe394014dad": "v13-train-dfebe3ea50c8c00778c1",
+    "v13-train-dba32d1851ebd3d7ad31:b317a23b30b0c35d": "v13-train-87b9689c0e20bd809124",
+    "v13-train-de541c31947a01d67e50:0cea8d9ca24fa15d": "v13-train-a8e731a2dca5501e742b",
+    "v13-train-de541c31947a01d67e50:4352abe394014dad": "v13-train-5b458394cf0907592b3b",
+    "v13-train-de812da95c0e9255cf7c:34e5f215486e231e": "v13-train-b060b67de1cad08d0591",
+    "v13-train-de812da95c0e9255cf7c:b317a23b30b0c35d": "v13-train-082c2ef1c85a767c08c8",
+    "v13-train-debb57585736f4985c75:6924e783ee66a8e1": "v13-train-eef9accb656affcadbe4",
+    "v13-train-debb57585736f4985c75:d99d502b32d4f014": "v13-train-82e9d8525ce745f7428d",
+    "v13-train-e06236a62a27dbbdce9d:aad695dc12460e01": "v13-train-519e779a6d7e0a26f70e",
+    "v13-train-e06236a62a27dbbdce9d:cb9b2bf0fbd0f3c9": "v13-train-b2cfefbddc2d87ae95fa",
+    "v13-train-e2ff5ec7050a89160c2e:28d99fdeddf6c664": "v13-train-082c2ef1c85a767c08c8",
+    "v13-train-e2ff5ec7050a89160c2e:aad695dc12460e01": "v13-train-795c77452bdb65b57f58",
+    "v13-train-e5389f487281cf6b5e66:0cea8d9ca24fa15d": "v13-train-76ea923579e8102079af",
+    "v13-train-e5389f487281cf6b5e66:4352abe394014dad": "v13-train-f0f912ca66219fc627f7",
+    "v13-train-e57989d408b33c3cb146:28d99fdeddf6c664": "v13-train-e406d530e539f9512efe",
+    "v13-train-e57989d408b33c3cb146:4e8388d46b469c53": "v13-train-b80d29134a7481034172",
+    "v13-train-e6afc867491ac27f1bd3:0cea8d9ca24fa15d": "v13-train-0556e8c5d5b502eaabd9",
+    "v13-train-e6afc867491ac27f1bd3:4352abe394014dad": "v13-train-0556e8c5d5b502eaabd9",
+    "v13-train-e8a2e1e03247c2b1e98a:66783de12006c20c": "v13-train-1ce1a3dc82159d1b3ec8",
+    "v13-train-e8a2e1e03247c2b1e98a:b317a23b30b0c35d": "v13-train-4dad09829d6e18eb5f14",
+    "v13-train-ee727de12be75d57f5a3:32c727332c1c6b19": "v13-train-ac2db5fcfee4b8cff97f",
+    "v13-train-ee727de12be75d57f5a3:4e8388d46b469c53": "v13-train-1cb497d2cb96588e8a91",
+    "v13-train-efb4d5c269e8efcdc8ae:6924e783ee66a8e1": "v13-train-b1cdc0bb5ea37cf26767",
+    "v13-train-efb4d5c269e8efcdc8ae:d7655933ab15bcd3": "v13-train-87a97177259d9343affa",
+    "v13-train-f0ced412eb2a40c1e31d:34e5f215486e231e": "v13-train-0e4ad2ffe18abda9dfa4",
+    "v13-train-f0ced412eb2a40c1e31d:66783de12006c20c": "v13-train-e4586f03be7a98d9d91a",
+    "v13-train-f85642a5ba5b63926a41:34e5f215486e231e": "v13-train-20fe0923b4534a888c70",
+    "v13-train-f85642a5ba5b63926a41:4352abe394014dad": "v13-train-b060b67de1cad08d0591",
+    "v13-train-f92a57ba5db7c39aa273:b513c56604be6862": "v13-train-0e4ad2ffe18abda9dfa4",
+    "v13-train-f92a57ba5db7c39aa273:cb9b2bf0fbd0f3c9": "v13-train-39f3b99368bdc2f01da2",
+    "v13-train-faf79f644a7c610ce334:4352abe394014dad": "v13-train-8fb746417042ce7de1d1",
+    "v13-train-faf79f644a7c610ce334:d99d502b32d4f014": "v13-train-551f383b519f280c1a95",
+    "v13-train-fb3cd48d257cc14b0ca8:3ce9a1d837cfb841": "v13-train-c528ec1a01dfefe18639",
+    "v13-train-fb3cd48d257cc14b0ca8:862d2c7053bdef4e": "v13-train-082c2ef1c85a767c08c8",
+    "v13-train-fd1f7493ad28ef74ad68:4352abe394014dad": "v13-train-9ebb7221b0cd1647e246",
+    "v13-train-fd1f7493ad28ef74ad68:d7655933ab15bcd3": "v13-train-1d25a938991de62d2ce6",
+    "v13-train-fe27046ae0ca93adaafc:b317a23b30b0c35d": "v13-train-1ce1a3dc82159d1b3ec8",
+    "v13-train-fe27046ae0ca93adaafc:d99d502b32d4f014": "v13-train-1ce1a3dc82159d1b3ec8",
+    "v13-validation-01448449182a942eaedc:32c727332c1c6b19": "v13-train-b80d29134a7481034172",
+    "v13-validation-01448449182a942eaedc:4e8388d46b469c53": "v13-train-e406d530e539f9512efe",
+    "v13-validation-0a32c4dc8ce85d795cb1:4e8388d46b469c53": "v13-train-4f2d9106b148b5226ded",
+    "v13-validation-0a32c4dc8ce85d795cb1:862d2c7053bdef4e": "v13-train-457f1eeaa3c3c6ff5400",
+    "v13-validation-108db015bab1935a3e55:28d99fdeddf6c664": "v13-train-20fe0923b4534a888c70",
+    "v13-validation-108db015bab1935a3e55:862d2c7053bdef4e": "v13-train-ec043e404a88ebd26b31",
+    "v13-validation-174417864cf9e2c12c88:862d2c7053bdef4e": "v13-train-0fa7172fd8d21c4314d1",
+    "v13-validation-174417864cf9e2c12c88:cb9b2bf0fbd0f3c9": "v13-train-d487a8295f0c6479ee6f",
+    "v13-validation-1a7fb3fbed142677abf2:28d99fdeddf6c664": "v13-train-1cb497d2cb96588e8a91",
+    "v13-validation-1a7fb3fbed142677abf2:3ce9a1d837cfb841": "v13-train-29a28ce66a8d197d90c6",
+    "v13-validation-2b4de293d53ae6d833b0:28d99fdeddf6c664": "v13-train-62a58cf7971c0740186a",
+    "v13-validation-2b4de293d53ae6d833b0:32c727332c1c6b19": "v13-train-37575a9bb40f2c3a178f",
+    "v13-validation-302b28507225e25f151c:32c727332c1c6b19": "v13-train-1ce1a3dc82159d1b3ec8",
+    "v13-validation-302b28507225e25f151c:3ce9a1d837cfb841": "v13-train-e406d530e539f9512efe",
+    "v13-validation-38f4f71e36f79ae9e4bf:32c727332c1c6b19": "v13-train-e76d53887adc7d87efd7",
+    "v13-validation-38f4f71e36f79ae9e4bf:4e8388d46b469c53": "v13-train-82e9d8525ce745f7428d",
+    "v13-validation-4126d29807a08be95dbf:3ce9a1d837cfb841": "v13-train-ec043e404a88ebd26b31",
+    "v13-validation-4126d29807a08be95dbf:4e8388d46b469c53": "v13-train-7b3b317fdbe1eb4fb829",
+    "v13-validation-423aa4444ea4b2729d7e:aad695dc12460e01": "v13-train-d487a8295f0c6479ee6f",
+    "v13-validation-423aa4444ea4b2729d7e:b513c56604be6862": "v13-train-0fa7172fd8d21c4314d1",
+    "v13-validation-43d85b3d07f59d8242e7:28d99fdeddf6c664": "v13-train-76ea923579e8102079af",
+    "v13-validation-43d85b3d07f59d8242e7:cb9b2bf0fbd0f3c9": "v13-train-a8e731a2dca5501e742b",
+    "v13-validation-45b1e6b899846030b689:28d99fdeddf6c664": "v13-train-9edce97ec84587722765",
+    "v13-validation-45b1e6b899846030b689:4e8388d46b469c53": "v13-train-dce429725bc4d3a9609b",
+    "v13-validation-46fbd300d6923d2ded62:b513c56604be6862": "v13-train-05e6e9a37dd5903b30b0",
+    "v13-validation-46fbd300d6923d2ded62:cb9b2bf0fbd0f3c9": "v13-train-39f3b99368bdc2f01da2",
+    "v13-validation-50c61d6af65d59ec6c06:862d2c7053bdef4e": "v13-train-551f383b519f280c1a95",
+    "v13-validation-50c61d6af65d59ec6c06:aad695dc12460e01": "v13-train-8fb746417042ce7de1d1",
+    "v13-validation-5181cf3c972ff15b8d93:3ce9a1d837cfb841": "v13-train-87a97177259d9343affa",
+    "v13-validation-5181cf3c972ff15b8d93:aad695dc12460e01": "v13-train-ff92dbf6cbbe3a3c1d80",
+    "v13-validation-5191e867ada03ad15f07:3ce9a1d837cfb841": "v13-train-e48ce19ac7ecad3a042d",
+    "v13-validation-5191e867ada03ad15f07:b513c56604be6862": "v13-train-e48ce19ac7ecad3a042d",
+    "v13-validation-51edbf93ee4cb8558e28:32c727332c1c6b19": "v13-train-29a28ce66a8d197d90c6",
+    "v13-validation-51edbf93ee4cb8558e28:cb9b2bf0fbd0f3c9": "v13-train-62a58cf7971c0740186a",
+    "v13-validation-526ec1b89ad430c96e60:862d2c7053bdef4e": "v13-train-0e4ad2ffe18abda9dfa4",
+    "v13-validation-526ec1b89ad430c96e60:b513c56604be6862": "v13-train-e4586f03be7a98d9d91a",
+    "v13-validation-572620683928d47d21c6:28d99fdeddf6c664": "v13-train-c0fb3fe6d4a1e8f1f517",
+    "v13-validation-572620683928d47d21c6:862d2c7053bdef4e": "v13-train-548e8a98087111949a53",
+    "v13-validation-587428b4ef890f0e02a6:28d99fdeddf6c664": "v13-train-37575a9bb40f2c3a178f",
+    "v13-validation-587428b4ef890f0e02a6:32c727332c1c6b19": "v13-train-0e751c184f60ff393ab7",
+    "v13-validation-5c9a98c5144a4c16b30b:28d99fdeddf6c664": "v13-train-0556e8c5d5b502eaabd9",
+    "v13-validation-5c9a98c5144a4c16b30b:b513c56604be6862": "v13-train-accc4a18b77bef5342df",
+    "v13-validation-67c2af31b374dc30fa54:28d99fdeddf6c664": "v13-train-97276997805885494499",
+    "v13-validation-67c2af31b374dc30fa54:3ce9a1d837cfb841": "v13-train-457f1eeaa3c3c6ff5400",
+    "v13-validation-67ddd9205eb97f11f011:b513c56604be6862": "v13-train-20fe0923b4534a888c70",
+    "v13-validation-67ddd9205eb97f11f011:cb9b2bf0fbd0f3c9": "v13-train-795c77452bdb65b57f58",
+    "v13-validation-6a813aadad50bc513576:862d2c7053bdef4e": "v13-train-e45b874df8db82aeaac9",
+    "v13-validation-6a813aadad50bc513576:aad695dc12460e01": "v13-train-625784697070f106a54c",
+    "v13-validation-71608f3192587bd473f5:28d99fdeddf6c664": "v13-train-b80d29134a7481034172",
+    "v13-validation-71608f3192587bd473f5:aad695dc12460e01": "v13-train-291feba055b73a4a977b",
+    "v13-validation-78f7b0d75a864054fc37:b513c56604be6862": "v13-train-e4586f03be7a98d9d91a",
+    "v13-validation-78f7b0d75a864054fc37:cb9b2bf0fbd0f3c9": "v13-train-1d25a938991de62d2ce6",
+    "v13-validation-7cb5032eaaadc3b090bc:862d2c7053bdef4e": "v13-train-8fb746417042ce7de1d1",
+    "v13-validation-7cb5032eaaadc3b090bc:b513c56604be6862": "v13-train-8f04f1ac9cd7254f4031",
+    "v13-validation-807ded1335bfc718e38d:28d99fdeddf6c664": "v13-train-5eb06770b917e9e1b9da",
+    "v13-validation-807ded1335bfc718e38d:aad695dc12460e01": "v13-train-852c8d866cb50e3b651b",
+    "v13-validation-81ea187fd5459f41462b:32c727332c1c6b19": "v13-train-1bd17a84036ad2d2d464",
+    "v13-validation-81ea187fd5459f41462b:aad695dc12460e01": "v13-train-1cb497d2cb96588e8a91",
+    "v13-validation-821652e06168d9046b05:28d99fdeddf6c664": "v13-train-76c27f99eaef3bc688f2",
+    "v13-validation-821652e06168d9046b05:cb9b2bf0fbd0f3c9": "v13-train-b80d29134a7481034172",
+    "v13-validation-8865b614fcf87df97b51:862d2c7053bdef4e": "v13-train-0556e8c5d5b502eaabd9",
+    "v13-validation-8865b614fcf87df97b51:aad695dc12460e01": "v13-train-accc4a18b77bef5342df",
+    "v13-validation-89c51a45abf3a5818ec4:32c727332c1c6b19": "v13-train-0556e8c5d5b502eaabd9",
+    "v13-validation-89c51a45abf3a5818ec4:b513c56604be6862": "v13-train-f2b1dff3eb31a8b55edc",
+    "v13-validation-8bdadb644251c3ec2e49:862d2c7053bdef4e": "v13-train-1c211d4d983334909db9",
+    "v13-validation-8bdadb644251c3ec2e49:b513c56604be6862": "v13-train-0e4ad2ffe18abda9dfa4",
+    "v13-validation-95ff87267da7a65cd3d1:b513c56604be6862": "v13-train-62a58cf7971c0740186a",
+    "v13-validation-95ff87267da7a65cd3d1:cb9b2bf0fbd0f3c9": "v13-train-e76d53887adc7d87efd7",
+    "v13-validation-9a0ce75a396b88860677:28d99fdeddf6c664": "v13-train-a8e731a2dca5501e742b",
+    "v13-validation-9a0ce75a396b88860677:cb9b2bf0fbd0f3c9": "v13-train-6b096f33da83c92dd724",
+    "v13-validation-a439a3f577028a5c14fb:32c727332c1c6b19": "v13-train-625784697070f106a54c",
+    "v13-validation-a439a3f577028a5c14fb:3ce9a1d837cfb841": "v13-train-d4335fbce5b7d3d713a6",
+    "v13-validation-a895cdb2f15c99bd0732:32c727332c1c6b19": "v13-train-852c8d866cb50e3b651b",
+    "v13-validation-a895cdb2f15c99bd0732:862d2c7053bdef4e": "v13-train-457f1eeaa3c3c6ff5400",
+    "v13-validation-a8d65e457fc56a9ce6cf:32c727332c1c6b19": "v13-train-d487a8295f0c6479ee6f",
+    "v13-validation-a8d65e457fc56a9ce6cf:3ce9a1d837cfb841": "v13-train-f407815e355831cd21c4",
+    "v13-validation-a92a44b4743c86437560:32c727332c1c6b19": "v13-train-9ebb7221b0cd1647e246",
+    "v13-validation-a92a44b4743c86437560:4e8388d46b469c53": "v13-train-66554ec02edd864b7386",
+    "v13-validation-adf205feb34bdf5c5e31:28d99fdeddf6c664": "v13-train-f2b1dff3eb31a8b55edc",
+    "v13-validation-adf205feb34bdf5c5e31:862d2c7053bdef4e": "v13-train-aad3c723bee9a55401e9",
+    "v13-validation-ae47df4b124b4299a3ce:32c727332c1c6b19": "v13-train-0ca8af4744e0afd0dd89",
+    "v13-validation-ae47df4b124b4299a3ce:b513c56604be6862": "v13-train-0556e8c5d5b502eaabd9",
+    "v13-validation-b367090876b33ed19cb5:28d99fdeddf6c664": "v13-train-6b096f33da83c92dd724",
+    "v13-validation-b367090876b33ed19cb5:aad695dc12460e01": "v13-train-6b096f33da83c92dd724",
+    "v13-validation-b5b774a50ffc539b970c:28d99fdeddf6c664": "v13-train-c528ec1a01dfefe18639",
+    "v13-validation-b5b774a50ffc539b970c:aad695dc12460e01": "v13-train-8f04f1ac9cd7254f4031",
+    "v13-validation-ba2839b02e03a52c1090:28d99fdeddf6c664": "v13-train-852c8d866cb50e3b651b",
+    "v13-validation-ba2839b02e03a52c1090:32c727332c1c6b19": "v13-train-0ca8af4744e0afd0dd89",
+    "v13-validation-bbac0a971e9c1241f909:28d99fdeddf6c664": "v13-train-35529c7d2053028fd1f3",
+    "v13-validation-bbac0a971e9c1241f909:cb9b2bf0fbd0f3c9": "v13-train-7b3b317fdbe1eb4fb829",
+    "v13-validation-bd13e5217c3bfc437f5a:28d99fdeddf6c664": "v13-train-7fe0b195341d02064fed",
+    "v13-validation-bd13e5217c3bfc437f5a:4e8388d46b469c53": "v13-train-0556e8c5d5b502eaabd9",
+    "v13-validation-c1c782de39fcffc2cd79:862d2c7053bdef4e": "v13-train-35529c7d2053028fd1f3",
+    "v13-validation-c1c782de39fcffc2cd79:aad695dc12460e01": "v13-train-c528ec1a01dfefe18639",
+    "v13-validation-c261575705156736ad4c:32c727332c1c6b19": "v13-train-0ca8af4744e0afd0dd89",
+    "v13-validation-c261575705156736ad4c:b513c56604be6862": "v13-train-d3ed47d528b5e53eda09",
+    "v13-validation-c9481643002aa3edc769:3ce9a1d837cfb841": "v13-train-ac2db5fcfee4b8cff97f",
+    "v13-validation-c9481643002aa3edc769:aad695dc12460e01": "v13-train-62a58cf7971c0740186a",
+    "v13-validation-d2c6e65e0b99a9ca20b8:4e8388d46b469c53": "v13-train-d13ba051a3375628f5a3",
+    "v13-validation-d2c6e65e0b99a9ca20b8:862d2c7053bdef4e": "v13-train-39f3b99368bdc2f01da2",
+    "v13-validation-d362630c0a25f900dcdb:aad695dc12460e01": "v13-train-e76d53887adc7d87efd7",
+    "v13-validation-d362630c0a25f900dcdb:b513c56604be6862": "v13-train-37575a9bb40f2c3a178f",
+    "v13-validation-dc173bd56c3324a70646:4e8388d46b469c53": "v13-train-b060b67de1cad08d0591",
+    "v13-validation-dc173bd56c3324a70646:cb9b2bf0fbd0f3c9": "v13-train-ec043e404a88ebd26b31",
+    "v13-validation-ddd60c9ebdc90f40e182:4e8388d46b469c53": "v13-train-0e4ad2ffe18abda9dfa4",
+    "v13-validation-ddd60c9ebdc90f40e182:b513c56604be6862": "v13-train-d13ba051a3375628f5a3",
+    "v13-validation-e493904837459951a121:32c727332c1c6b19": "v13-train-e4586f03be7a98d9d91a",
+    "v13-validation-e493904837459951a121:4e8388d46b469c53": "v13-train-39f3b99368bdc2f01da2",
+    "v13-validation-e88c7cb88e8dd939da89:32c727332c1c6b19": "v13-train-f407815e355831cd21c4",
+    "v13-validation-e88c7cb88e8dd939da89:aad695dc12460e01": "v13-train-dce429725bc4d3a9609b",
+    "v13-validation-eef3acb1fd88009d323e:3ce9a1d837cfb841": "v13-train-a8e731a2dca5501e742b",
+    "v13-validation-eef3acb1fd88009d323e:aad695dc12460e01": "v13-train-9ebb7221b0cd1647e246",
+    "v13-validation-eff0218c70c1f5862910:4e8388d46b469c53": "v13-train-8f04f1ac9cd7254f4031",
+    "v13-validation-eff0218c70c1f5862910:aad695dc12460e01": "v13-train-8121a620d56bb3aacef3",
+    "v13-validation-f11e37faa88c5e2a2705:32c727332c1c6b19": "v13-train-87b9689c0e20bd809124",
+    "v13-validation-f11e37faa88c5e2a2705:3ce9a1d837cfb841": "v13-train-87a97177259d9343affa",
+    "v13-validation-f9a60eb6ed325c6dd812:862d2c7053bdef4e": "v13-train-d487a8295f0c6479ee6f",
+    "v13-validation-f9a60eb6ed325c6dd812:aad695dc12460e01": "v13-train-dce429725bc4d3a9609b",
+    "v13-validation-fad392f7cbae09a42bff:32c727332c1c6b19": "v13-train-c528ec1a01dfefe18639",
+    "v13-validation-fad392f7cbae09a42bff:862d2c7053bdef4e": "v13-train-e48ce19ac7ecad3a042d"
+  },
+  "validation_ids": [
+    "v13-validation-38f4f71e36f79ae9e4bf",
+    "v13-validation-81ea187fd5459f41462b",
+    "v13-validation-51edbf93ee4cb8558e28",
+    "v13-validation-95ff87267da7a65cd3d1",
+    "v13-validation-587428b4ef890f0e02a6",
+    "v13-validation-c9481643002aa3edc769",
+    "v13-validation-2b4de293d53ae6d833b0",
+    "v13-validation-d362630c0a25f900dcdb",
+    "v13-validation-a439a3f577028a5c14fb",
+    "v13-validation-572620683928d47d21c6",
+    "v13-validation-6a813aadad50bc513576",
+    "v13-validation-1a7fb3fbed142677abf2",
+    "v13-validation-c261575705156736ad4c",
+    "v13-validation-0a32c4dc8ce85d795cb1",
+    "v13-validation-807ded1335bfc718e38d",
+    "v13-validation-ae47df4b124b4299a3ce",
+    "v13-validation-a895cdb2f15c99bd0732",
+    "v13-validation-67c2af31b374dc30fa54",
+    "v13-validation-5c9a98c5144a4c16b30b",
+    "v13-validation-ba2839b02e03a52c1090",
+    "v13-validation-adf205feb34bdf5c5e31",
+    "v13-validation-89c51a45abf3a5818ec4",
+    "v13-validation-8865b614fcf87df97b51",
+    "v13-validation-bd13e5217c3bfc437f5a",
+    "v13-validation-f11e37faa88c5e2a2705",
+    "v13-validation-71608f3192587bd473f5",
+    "v13-validation-174417864cf9e2c12c88",
+    "v13-validation-423aa4444ea4b2729d7e",
+    "v13-validation-821652e06168d9046b05",
+    "v13-validation-01448449182a942eaedc",
+    "v13-validation-302b28507225e25f151c",
+    "v13-validation-a8d65e457fc56a9ce6cf",
+    "v13-validation-e88c7cb88e8dd939da89",
+    "v13-validation-5181cf3c972ff15b8d93",
+    "v13-validation-45b1e6b899846030b689",
+    "v13-validation-f9a60eb6ed325c6dd812",
+    "v13-validation-c1c782de39fcffc2cd79",
+    "v13-validation-bbac0a971e9c1241f909",
+    "v13-validation-b5b774a50ffc539b970c",
+    "v13-validation-50c61d6af65d59ec6c06",
+    "v13-validation-eff0218c70c1f5862910",
+    "v13-validation-67ddd9205eb97f11f011",
+    "v13-validation-dc173bd56c3324a70646",
+    "v13-validation-108db015bab1935a3e55",
+    "v13-validation-7cb5032eaaadc3b090bc",
+    "v13-validation-fad392f7cbae09a42bff",
+    "v13-validation-4126d29807a08be95dbf",
+    "v13-validation-5191e867ada03ad15f07",
+    "v13-validation-9a0ce75a396b88860677",
+    "v13-validation-46fbd300d6923d2ded62",
+    "v13-validation-ddd60c9ebdc90f40e182",
+    "v13-validation-b367090876b33ed19cb5",
+    "v13-validation-a92a44b4743c86437560",
+    "v13-validation-526ec1b89ad430c96e60",
+    "v13-validation-eef3acb1fd88009d323e",
+    "v13-validation-78f7b0d75a864054fc37",
+    "v13-validation-8bdadb644251c3ec2e49",
+    "v13-validation-d2c6e65e0b99a9ca20b8",
+    "v13-validation-43d85b3d07f59d8242e7",
+    "v13-validation-e493904837459951a121"
+  ]
+}

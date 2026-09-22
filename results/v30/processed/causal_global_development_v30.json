@@ -1,0 +1,188 @@
+{
+  "basis_fit_hash": "1eb4a16c418734ef30cf7c531650bd8bcd4d29ac4849bac7cbaa06757dd695a0",
+  "four_frozen_probes": true,
+  "independent_final_opened": false,
+  "pair_tests": 140,
+  "profiles": {
+    "EXACT_CONV": {
+      "family_success_fraction": {
+        "boolean_logic": 0.39285714285714285,
+        "modular_arithmetic": 0.6071428571428571,
+        "short_graph_traversal": 0.35714285714285715,
+        "simple_state_transition": 0.35714285714285715,
+        "variable_binding": 0.35714285714285715
+      },
+      "median_cosine": 0.9493511947668696,
+      "median_magnitude": 0.9678346614196448,
+      "median_relative_l2": 0.3177300966426825,
+      "pass": false,
+      "rows": 140,
+      "success_fraction": 0.4142857142857143,
+      "valid_rows": 140
+    },
+    "EXACT_KV": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.3317728368907461,
+      "median_magnitude": 0.19266926953292718,
+      "median_relative_l2": 0.959047605446583,
+      "pass": false,
+      "rows": 140,
+      "success_fraction": 0.0,
+      "valid_rows": 140
+    },
+    "EXACT_REC_CONV": {
+      "family_success_fraction": {
+        "boolean_logic": 0.6785714285714286,
+        "modular_arithmetic": 0.7857142857142857,
+        "short_graph_traversal": 0.5714285714285714,
+        "simple_state_transition": 0.7142857142857143,
+        "variable_binding": 0.6428571428571429
+      },
+      "median_cosine": 0.9699820861808703,
+      "median_magnitude": 0.9717067922664098,
+      "median_relative_l2": 0.2433800919190472,
+      "pass": true,
+      "rows": 140,
+      "success_fraction": 0.6785714285714286,
+      "valid_rows": 140
+    },
+    "FAMILY_k32": {
+      "family_success_fraction": {
+        "boolean_logic": 0.07142857142857142,
+        "modular_arithmetic": 0.07142857142857142,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.8505595292667725,
+      "median_magnitude": 0.877596909679053,
+      "median_relative_l2": 0.5273998724684603,
+      "pass": false,
+      "rows": 140,
+      "success_fraction": 0.02857142857142857,
+      "valid_rows": 140
+    },
+    "FAMILY_k64": {
+      "family_success_fraction": {
+        "boolean_logic": 0.32142857142857145,
+        "modular_arithmetic": 0.32142857142857145,
+        "short_graph_traversal": 0.14285714285714285,
+        "simple_state_transition": 0.14285714285714285,
+        "variable_binding": 0.21428571428571427
+      },
+      "median_cosine": 0.8963336814909144,
+      "median_magnitude": 0.90480727360621,
+      "median_relative_l2": 0.459600750467583,
+      "pass": false,
+      "rows": 140,
+      "success_fraction": 0.22857142857142856,
+      "valid_rows": 140
+    },
+    "GLOBAL_k16": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.03571428571428571
+      },
+      "median_cosine": 0.7941504126743738,
+      "median_magnitude": 0.8553796645025328,
+      "median_relative_l2": 0.6164262664941182,
+      "pass": false,
+      "rows": 140,
+      "success_fraction": 0.007142857142857143,
+      "valid_rows": 140
+    },
+    "GLOBAL_k32": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.10714285714285714,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.03571428571428571
+      },
+      "median_cosine": 0.8301403095170921,
+      "median_magnitude": 0.8751889583590661,
+      "median_relative_l2": 0.5642932477161872,
+      "pass": false,
+      "rows": 140,
+      "success_fraction": 0.02857142857142857,
+      "valid_rows": 140
+    },
+    "GLOBAL_k64": {
+      "family_success_fraction": {
+        "boolean_logic": 0.17857142857142858,
+        "modular_arithmetic": 0.21428571428571427,
+        "short_graph_traversal": 0.07142857142857142,
+        "simple_state_transition": 0.10714285714285714,
+        "variable_binding": 0.10714285714285714
+      },
+      "median_cosine": 0.8752404001589167,
+      "median_magnitude": 0.895649932748565,
+      "median_relative_l2": 0.4926028339965637,
+      "pass": false,
+      "rows": 140,
+      "success_fraction": 0.1357142857142857,
+      "valid_rows": 140
+    },
+    "GLOBAL_k8": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.7429126478562114,
+      "median_magnitude": 0.840173904093513,
+      "median_relative_l2": 0.6764919530503536,
+      "pass": false,
+      "rows": 140,
+      "success_fraction": 0.0,
+      "valid_rows": 140
+    },
+    "LOFO_k32": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.0,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.0
+      },
+      "median_cosine": 0.799918390307991,
+      "median_magnitude": 0.8343245562374755,
+      "median_relative_l2": 0.6081011950690597,
+      "pass": false,
+      "rows": 140,
+      "success_fraction": 0.0,
+      "valid_rows": 140
+    },
+    "LOFO_k64": {
+      "family_success_fraction": {
+        "boolean_logic": 0.0,
+        "modular_arithmetic": 0.07142857142857142,
+        "short_graph_traversal": 0.0,
+        "simple_state_transition": 0.0,
+        "variable_binding": 0.07142857142857142
+      },
+      "median_cosine": 0.8522624818661253,
+      "median_magnitude": 0.86489410828685,
+      "median_relative_l2": 0.5370578441817321,
+      "pass": false,
+      "rows": 140,
+      "success_fraction": 0.02857142857142857,
+      "valid_rows": 140
+    }
+  },
+  "response_sha256": "842773d05e29c3216eb97693cb8e0d7d917af815a076c65786818cc4ba703db3",
+  "role": "development",
+  "rows": 1540,
+  "states": 40
+}

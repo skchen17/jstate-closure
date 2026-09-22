@@ -1,0 +1,18 @@
+protocol_version: transferable_natural_writes_v30
+name: Generality and Geometry of Transferable Natural Writes
+subtitle: Is There a Shared Causal Write Language Across States, Tokens, and Tasks?
+parent_commit: c247c82020b265e9589493262562851234825113
+seed: 300030
+families: [boolean_logic, modular_arithmetic, short_graph_traversal, simple_state_transition, variable_binding]
+roles: {calibration_per_family: 5, development_per_family: 24, validation_per_family: 12, independent_final_per_family: 10}
+token_library: {calibration_common_rank_max: 1024, eligibility_rank_max: 1024, anchor_token_id: 25, exclude_special_and_blank: true, train_pairs: 72, validation_pairs: 8, final_pairs: 8}
+write_channels: [REC, Conv, KV, REC+Conv]
+readout_layer: 30
+k_grid: [8, 16, 32, 64]
+future_probe_count: 4
+amplitudes: [0.5, 1.0, 1.5]
+causal_gate: {cosine_min: 0.90, magnitude_min: 0.80, magnitude_max: 1.20, relative_l2_max: 0.30, success_fraction_min: 0.50, families_required: 4}
+conv_groups: {quartiles: 4, half: 2, single_layers: 24, development_minimal_set_only: true}
+finalist_priority: [GLOBAL_k32, GLOBAL_k64, TRANSPORTED_LOCAL_k32, TRANSPORTED_LOCAL_k64]
+final_rule: first_priority_candidate_passing_state_token_joint_and_family_OOD_development_validation
+authorization: {H2_REMAINS: true, H3_AUTHORIZED: false, DYNAMIC_STATE_SEARCH_AUTHORIZED: false, AUTONOMOUS_CONTROLLER_AUTHORIZED: false, CROSS_MODEL_REPLICATION_AUTHORIZED: false}

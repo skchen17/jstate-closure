@@ -1,0 +1,97 @@
+{
+  "V1_V29_records_mutated": false,
+  "config": {
+    "amplitudes": [
+      0.5,
+      1.0,
+      1.5
+    ],
+    "authorization": {
+      "AUTONOMOUS_CONTROLLER_AUTHORIZED": false,
+      "CROSS_MODEL_REPLICATION_AUTHORIZED": false,
+      "DYNAMIC_STATE_SEARCH_AUTHORIZED": false,
+      "H2_REMAINS": true,
+      "H3_AUTHORIZED": false
+    },
+    "causal_gate": {
+      "cosine_min": 0.9,
+      "families_required": 4,
+      "magnitude_max": 1.2,
+      "magnitude_min": 0.8,
+      "relative_l2_max": 0.3,
+      "success_fraction_min": 0.5
+    },
+    "conv_groups": {
+      "development_minimal_set_only": true,
+      "half": 2,
+      "quartiles": 4,
+      "single_layers": 24
+    },
+    "families": [
+      "boolean_logic",
+      "modular_arithmetic",
+      "short_graph_traversal",
+      "simple_state_transition",
+      "variable_binding"
+    ],
+    "final_rule": "first_priority_candidate_passing_state_token_joint_and_family_OOD_development_validation",
+    "finalist_priority": [
+      "GLOBAL_k32",
+      "GLOBAL_k64",
+      "TRANSPORTED_LOCAL_k32",
+      "TRANSPORTED_LOCAL_k64"
+    ],
+    "future_probe_count": 4,
+    "k_grid": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "name": "Generality and Geometry of Transferable Natural Writes",
+    "parent_commit": "c247c82020b265e9589493262562851234825113",
+    "protocol_version": "transferable_natural_writes_v30",
+    "readout_layer": 30,
+    "roles": {
+      "calibration_per_family": 5,
+      "development_per_family": 24,
+      "independent_final_per_family": 10,
+      "validation_per_family": 12
+    },
+    "seed": 300030,
+    "subtitle": "Is There a Shared Causal Write Language Across States, Tokens, and Tasks?",
+    "token_library": {
+      "anchor_token_id": 25,
+      "calibration_common_rank_max": 1024,
+      "eligibility_rank_max": 1024,
+      "exclude_special_and_blank": true,
+      "final_pairs": 8,
+      "train_pairs": 72,
+      "validation_pairs": 8
+    },
+    "write_channels": [
+      "REC",
+      "Conv",
+      "KV",
+      "REC+Conv"
+    ]
+  },
+  "config_sha256": "81e1d7c0fc11d6392943a8c256aef68db915d55cb6d379f7577d5417eaee874f",
+  "created_utc": "2026-09-22T06:11:03.117503+00:00",
+  "cumulative_report_at_start_sha256": "b8590cadf6391f60b4dbc49db0007a36dc3e07d9b6112fd882135ea3e85960a3",
+  "freeze_digest": "21816450b59d10929de62379cd212abae80cbd1997a5ad7725bcd78b7851cd36",
+  "frozen_history_sha256": {
+    "artifacts/natural_write_content_v29_all_reports.freeze.json": "bff8174e2e51bfd302a07a70876fc87afe06fd1eb77fd6c286e3d24cd8237242",
+    "artifacts/natural_write_content_v29_final.freeze.json": "4f1318fa9896f2e4b241529ad8d4dae3b3268f72922631f7cba2b5199b124877",
+    "reports/V28_COMPLETE_REPORT.md": "69ded83ce65b854a38c607f0dbc32be154f5f2dca56c2a701f4ec79a380f8f48",
+    "reports/V29_ALL_REPORTS.md": "c75d5fc2651fe13f5fdaf4ab78570d4636b77e1cf32ef6d4f2ab6cfb75d1ecee",
+    "reports/V29_COMPLETE_REPORT.md": "795bd2da28bae2586895886d492c4c810d392aecd4f3511f74be5c50abb71aaf",
+    "results/v29/processed/v29_adjudication.json": "ea7f53125c520cf355bd394dffddc883ca63f199d0aaac9b98136fc62c775d1c",
+    "results/v29/processed/v29_integrity_index.json": "1b5db8ccccc18078af92dad3b8586fa222e767fff0aa73d3c4fdf0bcdec69b65"
+  },
+  "historical_final_opened": false,
+  "parent_commit": "c247c82020b265e9589493262562851234825113",
+  "protocol_sha256": "59cfab17441da8a679f91959df2fb25f3713a6adbdf7bd824a1223a886571d64",
+  "protocol_version": "transferable_natural_writes_v30",
+  "schema_version": 39
+}

@@ -1,0 +1,49 @@
+{
+  "base_freeze_digest": "21816450b59d10929de62379cd212abae80cbd1997a5ad7725bcd78b7851cd36",
+  "coverage": {
+    "calibration": {
+      "final_min": 8,
+      "train_median": 72.0,
+      "train_min": 72,
+      "validation_min": 8
+    },
+    "development": {
+      "final_min": 7,
+      "train_median": 72.0,
+      "train_min": 70,
+      "validation_min": 6
+    },
+    "independent_final": {
+      "final_min": 8,
+      "train_median": 72.0,
+      "train_min": 71,
+      "validation_min": 6
+    },
+    "validation": {
+      "final_min": 7,
+      "train_median": 72.0,
+      "train_min": 71,
+      "validation_min": 7
+    }
+  },
+  "created_utc": "2026-09-22T06:14:35.036363+00:00",
+  "freeze_digest": "06a62592ed8d4d70e91034dff4a75bf4d4addf75f728963ae08cfda652d0cc29",
+  "future_response_observed_before_freeze": 0,
+  "input_sha256": {
+    "results/v28/processed/design_v28.json": "912563719fe415dc24aa8b523d797ccc3e380b3bf247d99998f3b859ff79202c",
+    "results/v29/processed/design_v29.json": "de0362b631fb00bdfa8c7dc36cadff1abc5ce104f952e6a331f67a9887476573",
+    "results/v30/processed/design_v30.json": "1690fa894bd54455a47241d2c9db23c912b6f8304de7ec6dbd99433dc5266b04",
+    "results/v30/processed/prewrite_calibration_v30.json": "83d57ccfcf026e018966f83622d01705e5f31a3334756a1d669eddf78cf79d8c",
+    "src/jclosure/experiments/design_v30.py": "874f9c4c1dad25191216d70609013c550be33f1ede4deb5bd58a9b58322eb80d"
+  },
+  "library_hash": "31f57f4c0ca63c1838c32e5fb3ba0829b7c261eb9d3db8666793b493d6ea1775",
+  "natural_write_observed_before_freeze": false,
+  "protocol_version": "transferable_natural_writes_v30_design",
+  "role_hashes": {
+    "calibration": "042114f94b4618a1aa11b16d88456fc6f222487e53f09d106d14f425af946244",
+    "development": "c27c16aac168d8bde68d21118762147623ee9ccab550026aedc1ba9abe4a1fb6",
+    "independent_final": "4d401e347e18bc3fc665001f6f1d7ef641d527139d64beb97c03d957a0d77f0c",
+    "validation": "e46011646fa13801d1fe10a52cd00e0eb2133db95a7e29b9e0be33bb749c9dd3"
+  },
+  "schema_version": 39
+}

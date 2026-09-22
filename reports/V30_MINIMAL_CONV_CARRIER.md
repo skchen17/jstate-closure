@@ -1,0 +1,3 @@
+# Minimal Conv Carrier — V30
+
+The frozen development-only rule searched 19 nested/group candidates; none passed the four-probe strong gate. Full 24-layer Conv was therefore the **fallback**, not a successful small carrier. Selected set `FULL_CONV`, layers `[0, 1, 2, 4, 5, 6, 8, 9, 10, 12, 13, 14, 16, 17, 18, 20, 21, 22, 24, 25, 26, 28, 29, 30]`, SHA-256 `e3e5cfd2c0df818db77d9198d8fae8251fd7c15dcca213b62ce1a4bc3748725c`. The full set failed development (L2 0.390) but passed validation (L2 0.280). Validation-only passing subsets were not promoted or searched adaptively. Neither localized-small-set V30-F nor distributed-necessary V30-G is established.

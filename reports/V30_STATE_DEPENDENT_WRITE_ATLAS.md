@@ -1,0 +1,3 @@
+# State-Dependent Write Atlas — V30
+
+The 32D local principal-cosine median is 0.986 development and 0.986 validation. Some directions rotate (development median maximum principal angle 41.463°), but principal angles alone are descriptive. The defining atlas criterion requires target local k≤64 causal sufficiency on held-out tokens **and** train-only transport recovery after a weaker fixed global basis. The local oracle fails (validation k64 causal L2 0.556); therefore V30-C is not established. V29 same-background compression remains valid only for its tested regime. A fourth possibility—token-dependent write directions exceeding the tested compact span—remains open.

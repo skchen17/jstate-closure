@@ -1,0 +1,67 @@
+protocol_version: computational_origin_v36
+name: Computational Origin of REC–Conv Conditional Effects
+subtitle: Does Conv Change How Persistent Recurrent State Is Read?
+parent_commit: 9c272d501f6c0beb6ee0bf6c643dbdc77aef9475
+model_spec_source: configs/functional_mediation_v34.yaml
+models: [Q, F]
+seed: 360136
+source_exclusions: [28, 29, 30, 31, 32, 33, 34, 35]
+families: [boolean_logic, modular_arithmetic, short_graph_traversal, simple_state_transition, variable_binding]
+roles_per_family: {calibration: 4, development: 16, validation: 8, independent_final: 8}
+panel_source: results/v18/processed/crossed_state_{source}_{family}_v18.parquet
+role_source: {calibration: train, development: train, validation: validation, independent_final: train}
+prompt_semantic_pairing: same base_trial_id and prompt in Q and F
+token_selection:
+  rank_max: 8192
+  choice: deterministic hash of seed/model/state/token among frozen V32 or V33 candidate library and prefix-rank eligibility
+  future_probes: first six usable top-ranked prefix tokens
+  third_natural_token: next distinct hash-min eligible library token; response-blind
+  current_token_write_or_future_response_used_for_selection: false
+primary_KV: recipient-native
+factorial: [Y00, Y10, Y01, Y11, Ydonor]
+shared_endpoint: five V34 blocks, six model-local frozen probes, calibration-clean scaling
+relative_depth_groups:
+  Q1: [0, 1, 2, 3, 4, 5]
+  Q2: [6, 7, 8, 9, 10, 11]
+  Q3: [12, 13, 14, 15, 16, 17]
+  Q4: [18, 19, 20, 21, 22, 23]
+local_representative_positions: [2, 8, 14, 20]
+optional_late_boundary_position: null
+local_hidden_reference: recipient-native Conv-only continuation at each layer
+local_factorial: [L00, L10, L01, L11]
+operator_comparison: [recipient_A, matching_donor_B, third_natural_C]
+native_equations:
+  Q: S_new = exp(g)*S + beta*k outer (v - k^T(exp(g)*S)); raw_read = q^T*S_new
+  F: S_new = dA*S + dBx; raw_read = C^T*S_new + D*x
+  verified_against_runtime_before_formal: true
+  source_sha256:
+    Q: 395439341ea5ba4dd14c103e830383caa75686cfaf6b693dd7efb58622224da6
+    F: 1a30acb01cc62b253d53230aa50205395ff5aadbcd7411315542a8d385c8253a
+decomposition_terms: [OLD_STATE, STATE_DEPENDENT_REMOVAL_OR_DECAY, CURRENT_UPDATE, DIRECT_SKIP, POST_READ_NORMALIZATION_GATING]
+high_level_gate:
+  positive_fraction_min: 0.80
+  median_reduction_min: 0.20
+  median_alignment_min: 0.50
+  families_required: 4
+  family_positive_fraction_min: 0.80
+  family_median_reduction_min: 0.20
+  family_median_alignment_min: 0.50
+  bootstrap_lower_reduction_gt: 0.0
+  bootstrap_lower_alignment_min: 0.25
+bootstrap: {iterations: 2000, seed: 360136, lower_tail: 0.025, unit: state}
+operator_gate:
+  local_predicted_observed_cosine_min: 0.90
+  state_magnitude_rank_correlation_min: 0.70
+  matched_superiority_fraction_min: 0.80
+  families_required: 4
+  local_downstream_fraction_min: 0.20
+  local_downstream_families_required: 4
+  denominator_benefit_floor_absolute: 1.0
+  near_zero_vector_norm_floor: 1.0e-6
+  no_posthoc_threshold_retuning: true
+finalists: [READ_OPERATOR_MATCHING, OLD_STATE_READ_DOMINANT, UPDATE_READ_INTERACTION, POST_READ_NONLINEARITY]
+final_rule: independent final opens only for the same predeclared mechanism class passing both models in development and validation
+composition_rule: only after local operator law passes both development and validation
+task_grounded_rule: only after computational mechanism passes
+controls: [EXACT_NATIVE_REPLAY, REC_RECIPIENT_CONV, REC_DONOR_CONV, WRONG_TOKEN_CONV, WRONG_TOKEN_REC, SHUFFLED_OPERATOR_COMPONENTS, SIGN_FLIPPED_DELTA_S, DONOR_MIXER_OUTPUT_UPPER_BOUND, NATURAL_REC_CONV]
+historical_independent_finals_reopen: false

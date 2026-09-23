@@ -1,0 +1,163 @@
+{
+  "both_models_same_class_operator_and_causal_pass": false,
+  "final_responses_seen": false,
+  "local_candidate_class": "READ_OPERATOR_MATCHING",
+  "models": {
+    "F": {
+      "bootstrap_ci_state_median_local_fraction": [
+        0.013023560341408186,
+        0.04246810566477534
+      ],
+      "bootstrap_ci_state_median_matched_fraction": [
+        0.2916666666666667,
+        0.5833333333333334
+      ],
+      "dependent_update_norm_median": 0.0,
+      "family": {
+        "boolean_logic": {
+          "local_causal_pass": false,
+          "median_local_downstream_fraction": 0.03367049402810465,
+          "median_magnitude_rank_spearman": 1.0,
+          "median_matched_superiority_fraction": 0.27083333333333337,
+          "median_predicted_observed_cosine": 1.0,
+          "n_states": 8,
+          "prediction_pass": false
+        },
+        "modular_arithmetic": {
+          "local_causal_pass": false,
+          "median_local_downstream_fraction": 0.00731241176605453,
+          "median_magnitude_rank_spearman": 1.0,
+          "median_matched_superiority_fraction": 0.5833333333333333,
+          "median_predicted_observed_cosine": 1.0,
+          "n_states": 8,
+          "prediction_pass": false
+        },
+        "short_graph_traversal": {
+          "local_causal_pass": false,
+          "median_local_downstream_fraction": 0.04031769216762688,
+          "median_magnitude_rank_spearman": 1.0,
+          "median_matched_superiority_fraction": 0.2916666666666667,
+          "median_predicted_observed_cosine": 1.0,
+          "n_states": 8,
+          "prediction_pass": false
+        },
+        "simple_state_transition": {
+          "local_causal_pass": false,
+          "median_local_downstream_fraction": 0.019443182131016278,
+          "median_magnitude_rank_spearman": 1.0,
+          "median_matched_superiority_fraction": 0.4375,
+          "median_predicted_observed_cosine": 1.0,
+          "n_states": 8,
+          "prediction_pass": false
+        },
+        "variable_binding": {
+          "local_causal_pass": false,
+          "median_local_downstream_fraction": 0.049182211457226496,
+          "median_magnitude_rank_spearman": 1.0,
+          "median_matched_superiority_fraction": 0.5416666666666666,
+          "median_predicted_observed_cosine": 1.0,
+          "n_states": 8,
+          "prediction_pass": false
+        }
+      },
+      "fixed_to_natural_interaction_median": 0.10893103111015584,
+      "local_downstream_gate_pass": false,
+      "normalization_gain_median": 0.0952117372524147,
+      "old_term_norm_median": 640.5125045776367,
+      "prediction_gate_pass": false,
+      "probe_layer_rows": 960,
+      "same_class_operator_and_causal_pass": false,
+      "state_count": 40,
+      "state_table_sha256": "fe2ed6781653bf0c289de94856272df6fd7ada1b6eea86386d54448c6bbb002f",
+      "whole": {
+        "local_causal_pass": false,
+        "median_local_downstream_fraction": 0.028218617688873675,
+        "median_magnitude_rank_spearman": 1.0,
+        "median_matched_superiority_fraction": 0.4166666666666667,
+        "median_predicted_observed_cosine": 1.0,
+        "n_states": 40,
+        "prediction_pass": false
+      }
+    },
+    "Q": {
+      "bootstrap_ci_state_median_local_fraction": [
+        0.020121565656811478,
+        0.04029344480857815
+      ],
+      "bootstrap_ci_state_median_matched_fraction": [
+        0.25,
+        0.2916666666666667
+      ],
+      "dependent_update_norm_median": 0.11831074953079224,
+      "family": {
+        "boolean_logic": {
+          "local_causal_pass": false,
+          "median_local_downstream_fraction": 0.033319525102710815,
+          "median_magnitude_rank_spearman": 1.0,
+          "median_matched_superiority_fraction": 0.20833333333333331,
+          "median_predicted_observed_cosine": 1.0,
+          "n_states": 8,
+          "prediction_pass": false
+        },
+        "modular_arithmetic": {
+          "local_causal_pass": false,
+          "median_local_downstream_fraction": 0.04458383287939632,
+          "median_magnitude_rank_spearman": 1.0,
+          "median_matched_superiority_fraction": 0.22916666666666669,
+          "median_predicted_observed_cosine": 1.0,
+          "n_states": 8,
+          "prediction_pass": false
+        },
+        "short_graph_traversal": {
+          "local_causal_pass": false,
+          "median_local_downstream_fraction": 0.020121565656811478,
+          "median_magnitude_rank_spearman": 1.0,
+          "median_matched_superiority_fraction": 0.25,
+          "median_predicted_observed_cosine": 1.0,
+          "n_states": 8,
+          "prediction_pass": false
+        },
+        "simple_state_transition": {
+          "local_causal_pass": false,
+          "median_local_downstream_fraction": 0.03145017929677057,
+          "median_magnitude_rank_spearman": 1.0,
+          "median_matched_superiority_fraction": 0.27083333333333337,
+          "median_predicted_observed_cosine": 1.0,
+          "n_states": 8,
+          "prediction_pass": false
+        },
+        "variable_binding": {
+          "local_causal_pass": false,
+          "median_local_downstream_fraction": 0.026507801999940062,
+          "median_magnitude_rank_spearman": 1.0,
+          "median_matched_superiority_fraction": 0.2916666666666667,
+          "median_predicted_observed_cosine": 1.0,
+          "n_states": 8,
+          "prediction_pass": false
+        }
+      },
+      "fixed_to_natural_interaction_median": 0.18690776348347943,
+      "local_downstream_gate_pass": false,
+      "normalization_gain_median": 154.3951285404666,
+      "old_term_norm_median": 0.5748393088579178,
+      "prediction_gate_pass": false,
+      "probe_layer_rows": 960,
+      "same_class_operator_and_causal_pass": false,
+      "state_count": 40,
+      "state_table_sha256": "d6b09c1231d4cd63ad4eb8bbb9a4a585e10a95ff85cc97afee2f93a010340657",
+      "whole": {
+        "local_causal_pass": false,
+        "median_local_downstream_fraction": 0.032023236466376954,
+        "median_magnitude_rank_spearman": 1.0,
+        "median_matched_superiority_fraction": 0.25,
+        "median_predicted_observed_cosine": 1.0,
+        "n_states": 40,
+        "prediction_pass": false
+      }
+    }
+  },
+  "role": "validation",
+  "six_probes_not_independent": true,
+  "state_independence_unit": true,
+  "thresholds_retuned": false
+}

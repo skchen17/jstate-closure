@@ -1198,3 +1198,9 @@ Parent `09a00a67e5a286a05e47730c43586bce94b8095a`; V33 base freeze `aa843d414c7a
 ## V35 — Hierarchical Decomposition
 
 独立最终预先选定 `FULL_DEPTH_ONLY`；两模型确认=通过。 V35 正式结局：无确认项。 第三模型冻结对象：`BROAD_RECURRENT_READ_ONLY`。详见 `reports/V35_COMPLETE_REPORT.md` 与 `reports/V35_ALL_REPORTS.md`。
+
+<!-- V36_START -->
+## V36 — Computational Origin of REC–Conv Conditional Effects
+
+V35 审计追加修订：Q2+Q3+Q4 在开发/验证两模型均过强门槛，但候选生成遗漏，历史最终不能追认。V36 新面板高层 REC×Conv 条件收益再次通过；两模型原生固定输入公式对局部 raw read 零误差。然而供体 Conv 匹配优势与四层单层下游恢复率都低于预定门槛，未找到可进入独立最终的共同机制。40+40 最终状态保持封存；跨层组合与语义任务测试未授权。详见 `reports/V36_COMPLETE_REPORT.md` 和 `reports/V36_ALL_REPORTS.md`。
+<!-- V36_END -->

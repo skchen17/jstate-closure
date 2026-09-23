@@ -1,0 +1,79 @@
+{
+  "both_pass": true,
+  "formal_mechanism_authorized": true,
+  "models": {
+    "F": {
+      "bootstrap_lower_reduction": 0.34324147340725364,
+      "families": {
+        "boolean_logic": {
+          "median_reduction": 0.355926191895176,
+          "positive_fraction": 1.0,
+          "states": 16
+        },
+        "modular_arithmetic": {
+          "median_reduction": 0.39418380419707577,
+          "positive_fraction": 1.0,
+          "states": 16
+        },
+        "short_graph_traversal": {
+          "median_reduction": 0.3936770226934162,
+          "positive_fraction": 1.0,
+          "states": 16
+        },
+        "simple_state_transition": {
+          "median_reduction": 0.44730564178182997,
+          "positive_fraction": 1.0,
+          "states": 16
+        },
+        "variable_binding": {
+          "median_reduction": 0.26404164612758174,
+          "positive_fraction": 1.0,
+          "states": 16
+        }
+      },
+      "families_passing": 5,
+      "median_reduction": 0.379663630203325,
+      "pass": true,
+      "positive_fraction": 1.0,
+      "states": 80
+    },
+    "Q": {
+      "bootstrap_lower_reduction": 0.2750171610692279,
+      "families": {
+        "boolean_logic": {
+          "median_reduction": 0.2989415106878506,
+          "positive_fraction": 1.0,
+          "states": 16
+        },
+        "modular_arithmetic": {
+          "median_reduction": 0.3978203934141701,
+          "positive_fraction": 1.0,
+          "states": 16
+        },
+        "short_graph_traversal": {
+          "median_reduction": 0.3262246118372479,
+          "positive_fraction": 0.9375,
+          "states": 16
+        },
+        "simple_state_transition": {
+          "median_reduction": 0.24549104880823777,
+          "positive_fraction": 1.0,
+          "states": 16
+        },
+        "variable_binding": {
+          "median_reduction": 0.30331363226901875,
+          "positive_fraction": 1.0,
+          "states": 16
+        }
+      },
+      "families_passing": 5,
+      "median_reduction": 0.3085920481821544,
+      "pass": true,
+      "positive_fraction": 0.9875,
+      "states": 80
+    }
+  },
+  "role": "development",
+  "same_semantic_state_ids": true,
+  "thresholds_retuned": false
+}

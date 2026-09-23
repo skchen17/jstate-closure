@@ -1,0 +1,36 @@
+{
+  "eligibility": {
+    "CROSS_LAYER_OPERATOR_CONDITIONING": false,
+    "LOCAL_STATE_OPERATOR_INTERACTION": false,
+    "OLD_STATE_DOMINANT": false,
+    "POST_READ_TRANSFORMATION": false,
+    "READ_OPERATOR_MATCHING": true,
+    "UPDATE_READ_COUPLING": false
+  },
+  "finalist_priority": [
+    "CROSS_LAYER_OPERATOR_CONDITIONING",
+    "READ_OPERATOR_MATCHING",
+    "LOCAL_STATE_OPERATOR_INTERACTION",
+    "UPDATE_READ_COUPLING",
+    "OLD_STATE_DOMINANT",
+    "POST_READ_TRANSFORMATION"
+  ],
+  "full_output_copy_not_eligible": true,
+  "independent_final_outcomes_seen_at_opening": false,
+  "independent_final_pool_sealed_before_all_interventions": true,
+  "independent_final_states_per_model": 40,
+  "level_two_local_computation_not_claimed_as_level_three_or_four": true,
+  "opened": true,
+  "reasons": {
+    "CROSS_LAYER_OPERATOR_CONDITIONING": "development prospective downstream ordering gate failed; validation not opened",
+    "LOCAL_STATE_OPERATOR_INTERACTION": "not implemented/tested as a bilateral development+validation mechanism",
+    "OLD_STATE_DOMINANT": "not implemented/tested as a bilateral development+validation mechanism",
+    "POST_READ_TRANSFORMATION": "not implemented/tested as a bilateral development+validation mechanism",
+    "READ_OPERATOR_MATCHING": "prospective native local read law passed both models in development and validation",
+    "UPDATE_READ_COUPLING": "not implemented/tested as a bilateral development+validation mechanism"
+  },
+  "selected_class": "READ_OPERATOR_MATCHING",
+  "v18_training_source_in_final": false,
+  "v36_results_reused": false,
+  "version": "V37"
+}

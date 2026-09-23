@@ -1,0 +1,1343 @@
+{
+  "five_family_counts": {
+    "boolean_logic": 8,
+    "modular_arithmetic": 8,
+    "short_graph_traversal": 8,
+    "simple_state_transition": 8,
+    "variable_binding": 8
+  },
+  "historical_program_overlap": false,
+  "historical_prompt_overlap": false,
+  "items": [
+    {
+      "ast": {
+        "horizon": 2,
+        "kind": "mixed_boolean_pairs",
+        "labels": [
+          [
+            "B",
+            "E"
+          ],
+          [
+            "C",
+            "J"
+          ]
+        ],
+        "left": [
+          1,
+          0
+        ],
+        "operators": [
+          "AND",
+          "OR"
+        ],
+        "right": [
+          1,
+          1
+        ]
+      },
+      "base_trial_id": "v37-independent_final-boolean_logic-f95033f400fc604ed125",
+      "family": "boolean_logic",
+      "final_answer": "1",
+      "generator_index": 0,
+      "generator_seed": 20281014,
+      "horizon": 2,
+      "program_hash": "f95033f400fc604ed1250f5251f0575e3a60e92a10c04c8d8573119396f03c11",
+      "prompt": "Boolean expressions: B=1, E=1, compute B AND E; C=0, J=1, compute C OR J. Evaluate each independently. Output exactly 2 result bits in order, separated by single spaces and no explanation:",
+      "prompt_sha256": "37ad5493c61dac6ed8fa796419437655ec54e701a006a1125d17adf6befdc2c7",
+      "role": "independent_final",
+      "semantic_actions": [
+        "1",
+        "1"
+      ],
+      "source_role": "independent_final",
+      "variant": "mixed_boolean_pairs"
+    },
+    {
+      "ast": {
+        "horizon": 2,
+        "kind": "mixed_boolean_pairs",
+        "labels": [
+          [
+            "G",
+            "L"
+          ],
+          [
+            "J",
+            "C"
+          ]
+        ],
+        "left": [
+          1,
+          0
+        ],
+        "operators": [
+          "AND",
+          "AND"
+        ],
+        "right": [
+          0,
+          0
+        ]
+      },
+      "base_trial_id": "v37-independent_final-boolean_logic-99aa3a7f5cb7a3bd0255",
+      "family": "boolean_logic",
+      "final_answer": "0",
+      "generator_index": 1,
+      "generator_seed": 20281014,
+      "horizon": 2,
+      "program_hash": "99aa3a7f5cb7a3bd0255f9bcd2a3a5f62670d780a9634cfc5801653b5207c1f0",
+      "prompt": "Boolean expressions: G=1, L=0, compute G AND L; J=0, C=0, compute J AND C. Evaluate each independently. Output exactly 2 result bits in order, separated by single spaces and no explanation:",
+      "prompt_sha256": "3235d388a6a9dcc0a891c929a8c747580c223ddec7a5e0d3af488f9a94a09129",
+      "role": "independent_final",
+      "semantic_actions": [
+        "0",
+        "0"
+      ],
+      "source_role": "independent_final",
+      "variant": "mixed_boolean_pairs"
+    },
+    {
+      "ast": {
+        "horizon": 2,
+        "kind": "mixed_boolean_pairs",
+        "labels": [
+          [
+            "H",
+            "E"
+          ],
+          [
+            "F",
+            "J"
+          ]
+        ],
+        "left": [
+          1,
+          1
+        ],
+        "operators": [
+          "XOR",
+          "OR"
+        ],
+        "right": [
+          1,
+          1
+        ]
+      },
+      "base_trial_id": "v37-independent_final-boolean_logic-78cfd552c71f6382430c",
+      "family": "boolean_logic",
+      "final_answer": "1",
+      "generator_index": 2,
+      "generator_seed": 20281014,
+      "horizon": 2,
+      "program_hash": "78cfd552c71f6382430c789d39b5de5d4735fb35e290e411b34b9eab10c4cf0a",
+      "prompt": "Boolean expressions: H=1, E=1, compute H XOR E; F=1, J=1, compute F OR J. Evaluate each independently. Output exactly 2 result bits in order, separated by single spaces and no explanation:",
+      "prompt_sha256": "559eebf69a24c2126736e4c642e65d0be011133d754e2bd0f3a8a8edf81783f3",
+      "role": "independent_final",
+      "semantic_actions": [
+        "0",
+        "1"
+      ],
+      "source_role": "independent_final",
+      "variant": "mixed_boolean_pairs"
+    },
+    {
+      "ast": {
+        "horizon": 2,
+        "kind": "mixed_boolean_pairs",
+        "labels": [
+          [
+            "F",
+            "G"
+          ],
+          [
+            "H",
+            "I"
+          ]
+        ],
+        "left": [
+          0,
+          1
+        ],
+        "operators": [
+          "AND",
+          "OR"
+        ],
+        "right": [
+          0,
+          1
+        ]
+      },
+      "base_trial_id": "v37-independent_final-boolean_logic-5b421f73eb541642f856",
+      "family": "boolean_logic",
+      "final_answer": "1",
+      "generator_index": 3,
+      "generator_seed": 20281014,
+      "horizon": 2,
+      "program_hash": "5b421f73eb541642f85601ed176cbc3cd9afc8d4f89d3347de03b7d61163b78e",
+      "prompt": "Boolean expressions: F=0, G=0, compute F AND G; H=1, I=1, compute H OR I. Evaluate each independently. Output exactly 2 result bits in order, separated by single spaces and no explanation:",
+      "prompt_sha256": "ec309d7a1338be06c8b3fcfde587a1411cc2484575f37e799a4d55bebded81e9",
+      "role": "independent_final",
+      "semantic_actions": [
+        "0",
+        "1"
+      ],
+      "source_role": "independent_final",
+      "variant": "mixed_boolean_pairs"
+    },
+    {
+      "ast": {
+        "horizon": 2,
+        "kind": "mixed_boolean_pairs",
+        "labels": [
+          [
+            "H",
+            "L"
+          ],
+          [
+            "I",
+            "C"
+          ]
+        ],
+        "left": [
+          0,
+          0
+        ],
+        "operators": [
+          "XOR",
+          "XOR"
+        ],
+        "right": [
+          1,
+          1
+        ]
+      },
+      "base_trial_id": "v37-independent_final-boolean_logic-e7a1a0873d43c33d0fc5",
+      "family": "boolean_logic",
+      "final_answer": "1",
+      "generator_index": 4,
+      "generator_seed": 20281014,
+      "horizon": 2,
+      "program_hash": "e7a1a0873d43c33d0fc5393c053755ffd23f0365c5cc88d93fc0c70b3c0162ed",
+      "prompt": "Boolean expressions: H=0, L=1, compute H XOR L; I=0, C=1, compute I XOR C. Evaluate each independently. Output exactly 2 result bits in order, separated by single spaces and no explanation:",
+      "prompt_sha256": "987fad9c91a15413db68dba5ee9cc673b3f74ecb318d7f8dc65f481b3b223594",
+      "role": "independent_final",
+      "semantic_actions": [
+        "1",
+        "1"
+      ],
+      "source_role": "independent_final",
+      "variant": "mixed_boolean_pairs"
+    },
+    {
+      "ast": {
+        "horizon": 2,
+        "kind": "mixed_boolean_pairs",
+        "labels": [
+          [
+            "I",
+            "J"
+          ],
+          [
+            "I",
+            "E"
+          ]
+        ],
+        "left": [
+          0,
+          1
+        ],
+        "operators": [
+          "OR",
+          "AND"
+        ],
+        "right": [
+          1,
+          0
+        ]
+      },
+      "base_trial_id": "v37-independent_final-boolean_logic-3fc6d63962617896b4a7",
+      "family": "boolean_logic",
+      "final_answer": "0",
+      "generator_index": 5,
+      "generator_seed": 20281014,
+      "horizon": 2,
+      "program_hash": "3fc6d63962617896b4a7f6e28479df30523b82444bdd3b62107cd310f3529431",
+      "prompt": "Boolean expressions: I=0, J=1, compute I OR J; I=1, E=0, compute I AND E. Evaluate each independently. Output exactly 2 result bits in order, separated by single spaces and no explanation:",
+      "prompt_sha256": "ecb071efb947d7bd2438a4568ebd64fa36ea788ecad704eb0dd4506cab7c241f",
+      "role": "independent_final",
+      "semantic_actions": [
+        "1",
+        "0"
+      ],
+      "source_role": "independent_final",
+      "variant": "mixed_boolean_pairs"
+    },
+    {
+      "ast": {
+        "horizon": 2,
+        "kind": "mixed_boolean_pairs",
+        "labels": [
+          [
+            "L",
+            "H"
+          ],
+          [
+            "L",
+            "K"
+          ]
+        ],
+        "left": [
+          0,
+          1
+        ],
+        "operators": [
+          "AND",
+          "XOR"
+        ],
+        "right": [
+          0,
+          0
+        ]
+      },
+      "base_trial_id": "v37-independent_final-boolean_logic-c212abe9761c4a7224b9",
+      "family": "boolean_logic",
+      "final_answer": "1",
+      "generator_index": 6,
+      "generator_seed": 20281014,
+      "horizon": 2,
+      "program_hash": "c212abe9761c4a7224b91e8c9993392fb281c1971ce4ab40b10fdec1373b107b",
+      "prompt": "Boolean expressions: L=0, H=0, compute L AND H; L=1, K=0, compute L XOR K. Evaluate each independently. Output exactly 2 result bits in order, separated by single spaces and no explanation:",
+      "prompt_sha256": "75478c501fa10d0f2b46ce6e85e1041ebe64b872ecd24999e5e7909b487e0d0a",
+      "role": "independent_final",
+      "semantic_actions": [
+        "0",
+        "1"
+      ],
+      "source_role": "independent_final",
+      "variant": "mixed_boolean_pairs"
+    },
+    {
+      "ast": {
+        "horizon": 2,
+        "kind": "mixed_boolean_pairs",
+        "labels": [
+          [
+            "C",
+            "G"
+          ],
+          [
+            "C",
+            "A"
+          ]
+        ],
+        "left": [
+          1,
+          0
+        ],
+        "operators": [
+          "AND",
+          "XOR"
+        ],
+        "right": [
+          1,
+          0
+        ]
+      },
+      "base_trial_id": "v37-independent_final-boolean_logic-69c6c3075f60497dad86",
+      "family": "boolean_logic",
+      "final_answer": "0",
+      "generator_index": 7,
+      "generator_seed": 20281014,
+      "horizon": 2,
+      "program_hash": "69c6c3075f60497dad8678968ab0b8316c5e9c3bf8b0b9ba36e87e4cbb1a94c7",
+      "prompt": "Boolean expressions: C=1, G=1, compute C AND G; C=0, A=0, compute C XOR A. Evaluate each independently. Output exactly 2 result bits in order, separated by single spaces and no explanation:",
+      "prompt_sha256": "8a5f5f09499950a5bf5579a87578614601d610f4d6302d1408e8a1ebe2fe7ac0",
+      "role": "independent_final",
+      "semantic_actions": [
+        "1",
+        "0"
+      ],
+      "source_role": "independent_final",
+      "variant": "mixed_boolean_pairs"
+    },
+    {
+      "ast": {
+        "kind": "wide_modular_recurrence",
+        "modulus": 15,
+        "reported_states": 2,
+        "start": 3,
+        "step": 1
+      },
+      "base_trial_id": "v37-independent_final-modular_arithmetic-f822abf9f6711ade9c31",
+      "family": "modular_arithmetic",
+      "final_answer": "4",
+      "generator_index": 4,
+      "generator_seed": 20381017,
+      "horizon": 2,
+      "program_hash": "f822abf9f6711ade9c317e886dd403d4b0b7d76983c16b6c039caab3cb78e2bc",
+      "prompt": "Modular recurrence: x0 = 3. For each step, add 1 modulo 15. Starting with x0, give x0 through x1 as exactly 2 space-separated integers. Answer only with the integers:",
+      "prompt_sha256": "26f232713bab1a66a3c4b4a9a1d2d3e7bb29a198c285cc6bcc2037150bd780ec",
+      "role": "independent_final",
+      "semantic_actions": [
+        "3",
+        "4"
+      ],
+      "source_role": "independent_final",
+      "variant": "short_modular"
+    },
+    {
+      "ast": {
+        "kind": "wide_modular_recurrence",
+        "modulus": 10,
+        "reported_states": 2,
+        "start": 7,
+        "step": -1
+      },
+      "base_trial_id": "v37-independent_final-modular_arithmetic-85cd8dbc125560bc68a9",
+      "family": "modular_arithmetic",
+      "final_answer": "6",
+      "generator_index": 23,
+      "generator_seed": 20381017,
+      "horizon": 2,
+      "program_hash": "85cd8dbc125560bc68a91a3585fda856fde0eb3022c74dfbc0bf6ea366adaaf2",
+      "prompt": "Modular recurrence: x0 = 7. For each step, subtract 1 modulo 10. Starting with x0, give x0 through x1 as exactly 2 space-separated integers. Answer only with the integers:",
+      "prompt_sha256": "ad625a10479ce3491cd994b64475331bd536f26e1bfc7a58277e900b791fb760",
+      "role": "independent_final",
+      "semantic_actions": [
+        "7",
+        "6"
+      ],
+      "source_role": "independent_final",
+      "variant": "short_modular"
+    },
+    {
+      "ast": {
+        "kind": "wide_modular_recurrence",
+        "modulus": 13,
+        "reported_states": 2,
+        "start": 3,
+        "step": -2
+      },
+      "base_trial_id": "v37-independent_final-modular_arithmetic-fd14c76f029233d785ee",
+      "family": "modular_arithmetic",
+      "final_answer": "1",
+      "generator_index": 26,
+      "generator_seed": 20381017,
+      "horizon": 2,
+      "program_hash": "fd14c76f029233d785eeee7199543fd508b5808887bf0485b9ef9b0ff7b720a2",
+      "prompt": "Modular recurrence: x0 = 3. For each step, subtract 2 modulo 13. Starting with x0, give x0 through x1 as exactly 2 space-separated integers. Answer only with the integers:",
+      "prompt_sha256": "42f170ab8c273fac72112ab7571864f5356feac334b32cb60a854e3d1ba2d7c6",
+      "role": "independent_final",
+      "semantic_actions": [
+        "3",
+        "1"
+      ],
+      "source_role": "independent_final",
+      "variant": "short_modular"
+    },
+    {
+      "ast": {
+        "kind": "wide_modular_recurrence",
+        "modulus": 11,
+        "reported_states": 2,
+        "start": 0,
+        "step": 1
+      },
+      "base_trial_id": "v37-independent_final-modular_arithmetic-207e60892b287f4f515c",
+      "family": "modular_arithmetic",
+      "final_answer": "1",
+      "generator_index": 36,
+      "generator_seed": 20381017,
+      "horizon": 2,
+      "program_hash": "207e60892b287f4f515c933438794b6bf93aa444d98280bc4716a9bb50966360",
+      "prompt": "Modular recurrence: x0 = 0. For each step, add 1 modulo 11. Starting with x0, give x0 through x1 as exactly 2 space-separated integers. Answer only with the integers:",
+      "prompt_sha256": "7ee3fc041f84cccc40eb2c4f18f55b9f5ef7bae19533bc9ef9dac696f73870a8",
+      "role": "independent_final",
+      "semantic_actions": [
+        "0",
+        "1"
+      ],
+      "source_role": "independent_final",
+      "variant": "short_modular"
+    },
+    {
+      "ast": {
+        "kind": "wide_modular_recurrence",
+        "modulus": 10,
+        "reported_states": 2,
+        "start": 7,
+        "step": 2
+      },
+      "base_trial_id": "v37-independent_final-modular_arithmetic-1a1dc68398ae1e05ec63",
+      "family": "modular_arithmetic",
+      "final_answer": "9",
+      "generator_index": 53,
+      "generator_seed": 20381017,
+      "horizon": 2,
+      "program_hash": "1a1dc68398ae1e05ec63e0a4dc4807725901243b9bd35763c06c288b62775709",
+      "prompt": "Modular recurrence: x0 = 7. For each step, add 2 modulo 10. Starting with x0, give x0 through x1 as exactly 2 space-separated integers. Answer only with the integers:",
+      "prompt_sha256": "02761cc1d4e489fef45a7750da37251df1b36f5f1448a2901e92e84d487febac",
+      "role": "independent_final",
+      "semantic_actions": [
+        "7",
+        "9"
+      ],
+      "source_role": "independent_final",
+      "variant": "short_modular"
+    },
+    {
+      "ast": {
+        "kind": "wide_modular_recurrence",
+        "modulus": 13,
+        "reported_states": 2,
+        "start": 0,
+        "step": 2
+      },
+      "base_trial_id": "v37-independent_final-modular_arithmetic-f5b477d45fea85f8fe07",
+      "family": "modular_arithmetic",
+      "final_answer": "2",
+      "generator_index": 54,
+      "generator_seed": 20381017,
+      "horizon": 2,
+      "program_hash": "f5b477d45fea85f8fe0764321b3f57598da8ae1f4f23a4768688d3590208e3c3",
+      "prompt": "Modular recurrence: x0 = 0. For each step, add 2 modulo 13. Starting with x0, give x0 through x1 as exactly 2 space-separated integers. Answer only with the integers:",
+      "prompt_sha256": "30866098925b82ab623dfde8eead84bfd8907a1a5e7a734b95cc4205b3b45753",
+      "role": "independent_final",
+      "semantic_actions": [
+        "0",
+        "2"
+      ],
+      "source_role": "independent_final",
+      "variant": "short_modular"
+    },
+    {
+      "ast": {
+        "kind": "wide_modular_recurrence",
+        "modulus": 15,
+        "reported_states": 2,
+        "start": 11,
+        "step": -2
+      },
+      "base_trial_id": "v37-independent_final-modular_arithmetic-9d68858dee6c11b16720",
+      "family": "modular_arithmetic",
+      "final_answer": "9",
+      "generator_index": 66,
+      "generator_seed": 20381017,
+      "horizon": 2,
+      "program_hash": "9d68858dee6c11b167200cb53760b211ed6c687a94f6eaaa57eae497a751f158",
+      "prompt": "Modular recurrence: x0 = 11. For each step, subtract 2 modulo 15. Starting with x0, give x0 through x1 as exactly 2 space-separated integers. Answer only with the integers:",
+      "prompt_sha256": "ac4d6e8876f0fdb92e7c6d2ae0e0d7fd73ed1d9b6a3e9e37f84c83973ff08be1",
+      "role": "independent_final",
+      "semantic_actions": [
+        "11",
+        "9"
+      ],
+      "source_role": "independent_final",
+      "variant": "short_modular"
+    },
+    {
+      "ast": {
+        "kind": "wide_modular_recurrence",
+        "modulus": 11,
+        "reported_states": 2,
+        "start": 8,
+        "step": 2
+      },
+      "base_trial_id": "v37-independent_final-modular_arithmetic-e5c4cf654aba024cef83",
+      "family": "modular_arithmetic",
+      "final_answer": "10",
+      "generator_index": 79,
+      "generator_seed": 20381017,
+      "horizon": 2,
+      "program_hash": "e5c4cf654aba024cef83d0b6526abbe1eb6924555ac1d52b73542072df592cf9",
+      "prompt": "Modular recurrence: x0 = 8. For each step, add 2 modulo 11. Starting with x0, give x0 through x1 as exactly 2 space-separated integers. Answer only with the integers:",
+      "prompt_sha256": "54949eabee1d3bad29de0fc3bcbe9167d7bbb71130e60cda08f4eec42a569a6a",
+      "role": "independent_final",
+      "semantic_actions": [
+        "8",
+        "10"
+      ],
+      "source_role": "independent_final",
+      "variant": "short_modular"
+    },
+    {
+      "ast": {
+        "horizon": 5,
+        "kind": "wide_directed_cycle",
+        "nodes": [
+          "G",
+          "D",
+          "J",
+          "H",
+          "L",
+          "E"
+        ],
+        "start": "H"
+      },
+      "base_trial_id": "v37-independent_final-short_graph_traversal-1318c3e9ff653b6e6f63",
+      "family": "short_graph_traversal",
+      "final_answer": "J",
+      "generator_index": 0,
+      "generator_seed": 20481020,
+      "horizon": 5,
+      "program_hash": "1318c3e9ff653b6e6f63edde19d8e51cb3e455631abee51c3f95b4638e709155",
+      "prompt": "Directed edges: G->D, D->J, J->H, H->L, L->E, E->G. Start at H and follow one edge per step. Output the node after each of exactly 5 steps, space-separated, with no explanation:",
+      "prompt_sha256": "e6d3b6e6fde1b1a0192b195a6218964a260a70b5352f5a8eec50a689e847bd3a",
+      "role": "independent_final",
+      "semantic_actions": [
+        "L",
+        "E",
+        "G",
+        "D",
+        "J"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_directed_cycle"
+    },
+    {
+      "ast": {
+        "horizon": 5,
+        "kind": "wide_directed_cycle",
+        "nodes": [
+          "I",
+          "B",
+          "K",
+          "D",
+          "L",
+          "C",
+          "A",
+          "E"
+        ],
+        "start": "A"
+      },
+      "base_trial_id": "v37-independent_final-short_graph_traversal-97bfeb0a0c98a9784bac",
+      "family": "short_graph_traversal",
+      "final_answer": "D",
+      "generator_index": 1,
+      "generator_seed": 20481020,
+      "horizon": 5,
+      "program_hash": "97bfeb0a0c98a9784baccf837d3392eda6459c226cc033564db4f18435fed176",
+      "prompt": "Directed edges: I->B, B->K, K->D, D->L, L->C, C->A, A->E, E->I. Start at A and follow one edge per step. Output the node after each of exactly 5 steps, space-separated, with no explanation:",
+      "prompt_sha256": "68c08774a3fd78fc870fb10235ec0c2e78a038d8af37fbecd9d1dbdf31799fcc",
+      "role": "independent_final",
+      "semantic_actions": [
+        "E",
+        "I",
+        "B",
+        "K",
+        "D"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_directed_cycle"
+    },
+    {
+      "ast": {
+        "horizon": 5,
+        "kind": "wide_directed_cycle",
+        "nodes": [
+          "H",
+          "F",
+          "L",
+          "G",
+          "A",
+          "C",
+          "E",
+          "K"
+        ],
+        "start": "C"
+      },
+      "base_trial_id": "v37-independent_final-short_graph_traversal-a66f2a9d6f79f0468ecb",
+      "family": "short_graph_traversal",
+      "final_answer": "L",
+      "generator_index": 2,
+      "generator_seed": 20481020,
+      "horizon": 5,
+      "program_hash": "a66f2a9d6f79f0468ecb10063a491585fea3a71e0b267768c060a6d030580968",
+      "prompt": "Directed edges: H->F, F->L, L->G, G->A, A->C, C->E, E->K, K->H. Start at C and follow one edge per step. Output the node after each of exactly 5 steps, space-separated, with no explanation:",
+      "prompt_sha256": "4f48aa50b96ccf745675ff00c0b78adb292c5cbf362c3c593f63abaaedf4eab8",
+      "role": "independent_final",
+      "semantic_actions": [
+        "E",
+        "K",
+        "H",
+        "F",
+        "L"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_directed_cycle"
+    },
+    {
+      "ast": {
+        "horizon": 5,
+        "kind": "wide_directed_cycle",
+        "nodes": [
+          "K",
+          "J",
+          "L"
+        ],
+        "start": "K"
+      },
+      "base_trial_id": "v37-independent_final-short_graph_traversal-e32332b0ee43a5f83ec9",
+      "family": "short_graph_traversal",
+      "final_answer": "L",
+      "generator_index": 3,
+      "generator_seed": 20481020,
+      "horizon": 5,
+      "program_hash": "e32332b0ee43a5f83ec9d97e628f96d308ea1ea132b77f64514726532a4db0c3",
+      "prompt": "Directed edges: K->J, J->L, L->K. Start at K and follow one edge per step. Output the node after each of exactly 5 steps, space-separated, with no explanation:",
+      "prompt_sha256": "3b6f348cc24c11f5b4d885b9d3d8e821551ff21abfdbb8a495d1ab84f096d661",
+      "role": "independent_final",
+      "semantic_actions": [
+        "J",
+        "L",
+        "K",
+        "J",
+        "L"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_directed_cycle"
+    },
+    {
+      "ast": {
+        "horizon": 5,
+        "kind": "wide_directed_cycle",
+        "nodes": [
+          "G",
+          "J",
+          "B",
+          "D",
+          "F"
+        ],
+        "start": "D"
+      },
+      "base_trial_id": "v37-independent_final-short_graph_traversal-af962f31a8d44b20da2c",
+      "family": "short_graph_traversal",
+      "final_answer": "D",
+      "generator_index": 4,
+      "generator_seed": 20481020,
+      "horizon": 5,
+      "program_hash": "af962f31a8d44b20da2cf63afd2fb6e1629f8a281b292fdfb03d8b9e6d52d768",
+      "prompt": "Directed edges: G->J, J->B, B->D, D->F, F->G. Start at D and follow one edge per step. Output the node after each of exactly 5 steps, space-separated, with no explanation:",
+      "prompt_sha256": "26606d2492ce3874461bb23ed656401c73bc30a368ff81a47c583d6e8d72afaf",
+      "role": "independent_final",
+      "semantic_actions": [
+        "F",
+        "G",
+        "J",
+        "B",
+        "D"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_directed_cycle"
+    },
+    {
+      "ast": {
+        "horizon": 5,
+        "kind": "wide_directed_cycle",
+        "nodes": [
+          "B",
+          "K",
+          "I",
+          "L"
+        ],
+        "start": "L"
+      },
+      "base_trial_id": "v37-independent_final-short_graph_traversal-cea00edd6e5ab5f1f379",
+      "family": "short_graph_traversal",
+      "final_answer": "B",
+      "generator_index": 5,
+      "generator_seed": 20481020,
+      "horizon": 5,
+      "program_hash": "cea00edd6e5ab5f1f379f0f476c2ccd2933fc4c00559c0fe6f156a051e2e2663",
+      "prompt": "Directed edges: B->K, K->I, I->L, L->B. Start at L and follow one edge per step. Output the node after each of exactly 5 steps, space-separated, with no explanation:",
+      "prompt_sha256": "6491bdabedbb2e50e7857f5d109c2dd6ddbfef78208233db6810e27119b972db",
+      "role": "independent_final",
+      "semantic_actions": [
+        "B",
+        "K",
+        "I",
+        "L",
+        "B"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_directed_cycle"
+    },
+    {
+      "ast": {
+        "horizon": 5,
+        "kind": "wide_directed_cycle",
+        "nodes": [
+          "J",
+          "L",
+          "I",
+          "C",
+          "H"
+        ],
+        "start": "H"
+      },
+      "base_trial_id": "v37-independent_final-short_graph_traversal-b7d8b01860c19c4c9a89",
+      "family": "short_graph_traversal",
+      "final_answer": "H",
+      "generator_index": 6,
+      "generator_seed": 20481020,
+      "horizon": 5,
+      "program_hash": "b7d8b01860c19c4c9a89c1e0965725a26fa951f5e454fbd663d5d281072d4546",
+      "prompt": "Directed edges: J->L, L->I, I->C, C->H, H->J. Start at H and follow one edge per step. Output the node after each of exactly 5 steps, space-separated, with no explanation:",
+      "prompt_sha256": "c5bd4c9acc6d035e142497f53f19c2486a1b15452320f04b4ddc50931237ed33",
+      "role": "independent_final",
+      "semantic_actions": [
+        "J",
+        "L",
+        "I",
+        "C",
+        "H"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_directed_cycle"
+    },
+    {
+      "ast": {
+        "horizon": 5,
+        "kind": "wide_directed_cycle",
+        "nodes": [
+          "I",
+          "J",
+          "E",
+          "B",
+          "A",
+          "L",
+          "K"
+        ],
+        "start": "K"
+      },
+      "base_trial_id": "v37-independent_final-short_graph_traversal-44b2f3bb517716fb3758",
+      "family": "short_graph_traversal",
+      "final_answer": "A",
+      "generator_index": 7,
+      "generator_seed": 20481020,
+      "horizon": 5,
+      "program_hash": "44b2f3bb517716fb3758b31c062da5b73717613e95ae73cbfdd5c4022fbed3a4",
+      "prompt": "Directed edges: I->J, J->E, E->B, B->A, A->L, L->K, K->I. Start at K and follow one edge per step. Output the node after each of exactly 5 steps, space-separated, with no explanation:",
+      "prompt_sha256": "b6312c007809c684dc5631f8c5add0d7ac6d6cc2fee62c6c84895e5ef040b0d9",
+      "role": "independent_final",
+      "semantic_actions": [
+        "I",
+        "J",
+        "E",
+        "B",
+        "A"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_directed_cycle"
+    },
+    {
+      "ast": {
+        "kind": "clocked_finite_state_machine",
+        "start": "L",
+        "states": [
+          "E",
+          "B",
+          "L",
+          "A",
+          "K",
+          "G"
+        ],
+        "updates": 3
+      },
+      "base_trial_id": "v37-independent_final-simple_state_transition-c897040b0433c9e9abe5",
+      "family": "simple_state_transition",
+      "final_answer": "G",
+      "generator_index": 0,
+      "generator_seed": 20581023,
+      "horizon": 3,
+      "program_hash": "c897040b0433c9e9abe524b64e7f0915d1b32c6fb7a54c4ef7f66802d2fd7cde",
+      "prompt": "State-transition edges: E -> B, B -> L, L -> A, A -> K, K -> G, G -> E. Start at L and follow one transition per tick. Output the state after each of exactly 3 ticks, space-separated, with no explanation:",
+      "prompt_sha256": "bc4e4ef5e7a73bdc01be859efa21480454bf55f4fb6c28e3928d75d2a7408027",
+      "role": "independent_final",
+      "semantic_actions": [
+        "A",
+        "K",
+        "G"
+      ],
+      "source_role": "independent_final",
+      "variant": "clocked_cycle_machine"
+    },
+    {
+      "ast": {
+        "kind": "clocked_finite_state_machine",
+        "start": "L",
+        "states": [
+          "J",
+          "F",
+          "H",
+          "I",
+          "L"
+        ],
+        "updates": 3
+      },
+      "base_trial_id": "v37-independent_final-simple_state_transition-2db9ca332287d04852fd",
+      "family": "simple_state_transition",
+      "final_answer": "H",
+      "generator_index": 1,
+      "generator_seed": 20581023,
+      "horizon": 3,
+      "program_hash": "2db9ca332287d04852fd3fb52adb99eebb7fcf5f90f8dba35a3e2ef263cd2aac",
+      "prompt": "State-transition edges: J -> F, F -> H, H -> I, I -> L, L -> J. Start at L and follow one transition per tick. Output the state after each of exactly 3 ticks, space-separated, with no explanation:",
+      "prompt_sha256": "a659e32b42453cbc8d0e905645a963cefd45b805bb730dab65eccbc73b3eee8d",
+      "role": "independent_final",
+      "semantic_actions": [
+        "J",
+        "F",
+        "H"
+      ],
+      "source_role": "independent_final",
+      "variant": "clocked_cycle_machine"
+    },
+    {
+      "ast": {
+        "kind": "clocked_finite_state_machine",
+        "start": "L",
+        "states": [
+          "L",
+          "G",
+          "D",
+          "B",
+          "I",
+          "A"
+        ],
+        "updates": 3
+      },
+      "base_trial_id": "v37-independent_final-simple_state_transition-871ac7418559478a5503",
+      "family": "simple_state_transition",
+      "final_answer": "B",
+      "generator_index": 2,
+      "generator_seed": 20581023,
+      "horizon": 3,
+      "program_hash": "871ac7418559478a5503c34ebc04d915643af18dcb979c86a6a975693b46d051",
+      "prompt": "State-transition edges: L -> G, G -> D, D -> B, B -> I, I -> A, A -> L. Start at L and follow one transition per tick. Output the state after each of exactly 3 ticks, space-separated, with no explanation:",
+      "prompt_sha256": "9035d4f290cbf9818546fd1bc4f460577de2dc6d0d5e49090b43f90236070de7",
+      "role": "independent_final",
+      "semantic_actions": [
+        "G",
+        "D",
+        "B"
+      ],
+      "source_role": "independent_final",
+      "variant": "clocked_cycle_machine"
+    },
+    {
+      "ast": {
+        "kind": "clocked_finite_state_machine",
+        "start": "A",
+        "states": [
+          "A",
+          "H",
+          "B",
+          "F",
+          "D"
+        ],
+        "updates": 3
+      },
+      "base_trial_id": "v37-independent_final-simple_state_transition-7031b5617beddb0484b1",
+      "family": "simple_state_transition",
+      "final_answer": "F",
+      "generator_index": 3,
+      "generator_seed": 20581023,
+      "horizon": 3,
+      "program_hash": "7031b5617beddb0484b13d019927efc7d1b758cace6d9293181e2d31c0e8de25",
+      "prompt": "State-transition edges: A -> H, H -> B, B -> F, F -> D, D -> A. Start at A and follow one transition per tick. Output the state after each of exactly 3 ticks, space-separated, with no explanation:",
+      "prompt_sha256": "bd17e6ecd54820c9a8c225e9b930eaa64c47c41cf1a39887e3c9ef95b1dab586",
+      "role": "independent_final",
+      "semantic_actions": [
+        "H",
+        "B",
+        "F"
+      ],
+      "source_role": "independent_final",
+      "variant": "clocked_cycle_machine"
+    },
+    {
+      "ast": {
+        "kind": "clocked_finite_state_machine",
+        "start": "C",
+        "states": [
+          "C",
+          "D",
+          "J",
+          "G",
+          "E",
+          "K"
+        ],
+        "updates": 3
+      },
+      "base_trial_id": "v37-independent_final-simple_state_transition-acdb05a563c03efda011",
+      "family": "simple_state_transition",
+      "final_answer": "G",
+      "generator_index": 5,
+      "generator_seed": 20581023,
+      "horizon": 3,
+      "program_hash": "acdb05a563c03efda01115fe66b7f0cf08eec14d62b41fd133af0d722ba28737",
+      "prompt": "State-transition edges: C -> D, D -> J, J -> G, G -> E, E -> K, K -> C. Start at C and follow one transition per tick. Output the state after each of exactly 3 ticks, space-separated, with no explanation:",
+      "prompt_sha256": "984551d595852901a3d0b1aacaaa6e710c395c8e6e71b3731ed6b39abf02e7d9",
+      "role": "independent_final",
+      "semantic_actions": [
+        "D",
+        "J",
+        "G"
+      ],
+      "source_role": "independent_final",
+      "variant": "clocked_cycle_machine"
+    },
+    {
+      "ast": {
+        "kind": "clocked_finite_state_machine",
+        "start": "L",
+        "states": [
+          "I",
+          "H",
+          "D",
+          "E",
+          "L"
+        ],
+        "updates": 3
+      },
+      "base_trial_id": "v37-independent_final-simple_state_transition-f664906d9da5dda6ac70",
+      "family": "simple_state_transition",
+      "final_answer": "D",
+      "generator_index": 6,
+      "generator_seed": 20581023,
+      "horizon": 3,
+      "program_hash": "f664906d9da5dda6ac70255fbba26bceedc43e506a4d969ba9934df08e3215db",
+      "prompt": "State-transition edges: I -> H, H -> D, D -> E, E -> L, L -> I. Start at L and follow one transition per tick. Output the state after each of exactly 3 ticks, space-separated, with no explanation:",
+      "prompt_sha256": "42611324106f0f79902b2e45560782c546652876332c7d4bceb8320f825907cb",
+      "role": "independent_final",
+      "semantic_actions": [
+        "I",
+        "H",
+        "D"
+      ],
+      "source_role": "independent_final",
+      "variant": "clocked_cycle_machine"
+    },
+    {
+      "ast": {
+        "kind": "clocked_finite_state_machine",
+        "start": "L",
+        "states": [
+          "L",
+          "C",
+          "K",
+          "F"
+        ],
+        "updates": 3
+      },
+      "base_trial_id": "v37-independent_final-simple_state_transition-d70ccc88cad255b8c9fc",
+      "family": "simple_state_transition",
+      "final_answer": "F",
+      "generator_index": 7,
+      "generator_seed": 20581023,
+      "horizon": 3,
+      "program_hash": "d70ccc88cad255b8c9fcb74a25f401e846d8cb96bd31e69edcea91155fb765ec",
+      "prompt": "State-transition edges: L -> C, C -> K, K -> F, F -> L. Start at L and follow one transition per tick. Output the state after each of exactly 3 ticks, space-separated, with no explanation:",
+      "prompt_sha256": "59e3e261b58cd1c1928dffc5920d8ed2cc259c634475609b614e8e3f3a8613f8",
+      "role": "independent_final",
+      "semantic_actions": [
+        "C",
+        "K",
+        "F"
+      ],
+      "source_role": "independent_final",
+      "variant": "clocked_cycle_machine"
+    },
+    {
+      "ast": {
+        "kind": "clocked_finite_state_machine",
+        "start": "J",
+        "states": [
+          "H",
+          "K",
+          "A",
+          "J",
+          "G"
+        ],
+        "updates": 3
+      },
+      "base_trial_id": "v37-independent_final-simple_state_transition-05cc708415e4cf5a66d5",
+      "family": "simple_state_transition",
+      "final_answer": "K",
+      "generator_index": 8,
+      "generator_seed": 20581023,
+      "horizon": 3,
+      "program_hash": "05cc708415e4cf5a66d55e479da19c3f09ce045fd9d093fb8fc08c902a9f6e77",
+      "prompt": "State-transition edges: H -> K, K -> A, A -> J, J -> G, G -> H. Start at J and follow one transition per tick. Output the state after each of exactly 3 ticks, space-separated, with no explanation:",
+      "prompt_sha256": "0d65aa7376ffdd9b69c8f1a3e80685a62b68cdb491f9fdc7e117ce967d695cc1",
+      "role": "independent_final",
+      "semantic_actions": [
+        "G",
+        "H",
+        "K"
+      ],
+      "source_role": "independent_final",
+      "variant": "clocked_cycle_machine"
+    },
+    {
+      "ast": {
+        "bindings": {
+          "W": 0,
+          "X": 6,
+          "Y": 5,
+          "Z": 4
+        },
+        "horizon": 2,
+        "kind": "wide_variable_lookup",
+        "queries": [
+          "Y",
+          "Z"
+        ]
+      },
+      "base_trial_id": "v37-independent_final-variable_binding-da02abb9de6ad8cc93bf",
+      "family": "variable_binding",
+      "final_answer": "4",
+      "generator_index": 0,
+      "generator_seed": 20681026,
+      "horizon": 2,
+      "program_hash": "da02abb9de6ad8cc93bf169ff258a17121f57e077f11a30b47fbd46971bdb254",
+      "prompt": "Bindings: W=0, X=6, Y=5, Z=4. Queries: Y Z. Output exactly 2 bound digits in order, space-separated, with no explanation:",
+      "prompt_sha256": "59a480375509e31552f184d69c50ff9d6e4345d905ec51905b80c5ccce374249",
+      "role": "independent_final",
+      "semantic_actions": [
+        "5",
+        "4"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_variable_lookup"
+    },
+    {
+      "ast": {
+        "bindings": {
+          "W": 2,
+          "X": 5,
+          "Y": 8,
+          "Z": 3
+        },
+        "horizon": 2,
+        "kind": "wide_variable_lookup",
+        "queries": [
+          "Y",
+          "W"
+        ]
+      },
+      "base_trial_id": "v37-independent_final-variable_binding-4d3e58424d13d727596f",
+      "family": "variable_binding",
+      "final_answer": "2",
+      "generator_index": 1,
+      "generator_seed": 20681026,
+      "horizon": 2,
+      "program_hash": "4d3e58424d13d727596ff2136eb32c0819d2f5737fb852f3a90cac5344ccbc49",
+      "prompt": "Bindings: W=2, X=5, Y=8, Z=3. Queries: Y W. Output exactly 2 bound digits in order, space-separated, with no explanation:",
+      "prompt_sha256": "0d4624142892e64d07c5d62aade9cf36b9d4cd9de4053d0f5a109ff1aa7fc092",
+      "role": "independent_final",
+      "semantic_actions": [
+        "8",
+        "2"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_variable_lookup"
+    },
+    {
+      "ast": {
+        "bindings": {
+          "W": 4,
+          "X": 8,
+          "Y": 1,
+          "Z": 2
+        },
+        "horizon": 2,
+        "kind": "wide_variable_lookup",
+        "queries": [
+          "Z",
+          "Y"
+        ]
+      },
+      "base_trial_id": "v37-independent_final-variable_binding-c05c302326c04e73775a",
+      "family": "variable_binding",
+      "final_answer": "1",
+      "generator_index": 2,
+      "generator_seed": 20681026,
+      "horizon": 2,
+      "program_hash": "c05c302326c04e73775aabd23b762d23bbcdc2fee1d36b0bb4007b39c9af0dfc",
+      "prompt": "Bindings: W=4, X=8, Y=1, Z=2. Queries: Z Y. Output exactly 2 bound digits in order, space-separated, with no explanation:",
+      "prompt_sha256": "8d20da7807209d78e98ae4b9c046e377bedf956616d8dc21a15890ce581e0180",
+      "role": "independent_final",
+      "semantic_actions": [
+        "2",
+        "1"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_variable_lookup"
+    },
+    {
+      "ast": {
+        "bindings": {
+          "W": 5,
+          "X": 8,
+          "Y": 9,
+          "Z": 4
+        },
+        "horizon": 2,
+        "kind": "wide_variable_lookup",
+        "queries": [
+          "X",
+          "X"
+        ]
+      },
+      "base_trial_id": "v37-independent_final-variable_binding-73298ceadb06d5a32ee7",
+      "family": "variable_binding",
+      "final_answer": "8",
+      "generator_index": 3,
+      "generator_seed": 20681026,
+      "horizon": 2,
+      "program_hash": "73298ceadb06d5a32ee734eb883e00dfdce32ceb2217fed57a22a2d1468045ab",
+      "prompt": "Bindings: W=5, X=8, Y=9, Z=4. Queries: X X. Output exactly 2 bound digits in order, space-separated, with no explanation:",
+      "prompt_sha256": "09c2ea03dd25ae59f48aac092bf4b54259deec72ce967f41ccf91a7f1bd275a5",
+      "role": "independent_final",
+      "semantic_actions": [
+        "8",
+        "8"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_variable_lookup"
+    },
+    {
+      "ast": {
+        "bindings": {
+          "W": 8,
+          "X": 1,
+          "Y": 7,
+          "Z": 6
+        },
+        "horizon": 2,
+        "kind": "wide_variable_lookup",
+        "queries": [
+          "Y",
+          "X"
+        ]
+      },
+      "base_trial_id": "v37-independent_final-variable_binding-dd1b1fe577d800cd2300",
+      "family": "variable_binding",
+      "final_answer": "1",
+      "generator_index": 5,
+      "generator_seed": 20681026,
+      "horizon": 2,
+      "program_hash": "dd1b1fe577d800cd230055a79e7ac3af84d428c11da60bbb8f2852b905504dd5",
+      "prompt": "Bindings: W=8, X=1, Y=7, Z=6. Queries: Y X. Output exactly 2 bound digits in order, space-separated, with no explanation:",
+      "prompt_sha256": "a3d256b36cffb3b4de9fada6f6a9b6502b0041786e51f61ad40ccdd776cc6381",
+      "role": "independent_final",
+      "semantic_actions": [
+        "7",
+        "1"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_variable_lookup"
+    },
+    {
+      "ast": {
+        "bindings": {
+          "W": 7,
+          "X": 5,
+          "Y": 9,
+          "Z": 1
+        },
+        "horizon": 2,
+        "kind": "wide_variable_lookup",
+        "queries": [
+          "Y",
+          "Z"
+        ]
+      },
+      "base_trial_id": "v37-independent_final-variable_binding-87ebb021a92975f450c1",
+      "family": "variable_binding",
+      "final_answer": "1",
+      "generator_index": 6,
+      "generator_seed": 20681026,
+      "horizon": 2,
+      "program_hash": "87ebb021a92975f450c16154051d446ea28e2da4ea2ff2d1ba5e5a6337c7fa6b",
+      "prompt": "Bindings: W=7, X=5, Y=9, Z=1. Queries: Y Z. Output exactly 2 bound digits in order, space-separated, with no explanation:",
+      "prompt_sha256": "85a04d3179f0020df70ce8e9d450c4acc8705f64a8dd5157f2eb4e086b03ca6e",
+      "role": "independent_final",
+      "semantic_actions": [
+        "9",
+        "1"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_variable_lookup"
+    },
+    {
+      "ast": {
+        "bindings": {
+          "W": 2,
+          "X": 1,
+          "Y": 8,
+          "Z": 5
+        },
+        "horizon": 2,
+        "kind": "wide_variable_lookup",
+        "queries": [
+          "W",
+          "Z"
+        ]
+      },
+      "base_trial_id": "v37-independent_final-variable_binding-974b41e90a7c7267aadd",
+      "family": "variable_binding",
+      "final_answer": "5",
+      "generator_index": 7,
+      "generator_seed": 20681026,
+      "horizon": 2,
+      "program_hash": "974b41e90a7c7267aadd4f795575e4741ace197786cac59f0fdf6c3219e1c749",
+      "prompt": "Bindings: W=2, X=1, Y=8, Z=5. Queries: W Z. Output exactly 2 bound digits in order, space-separated, with no explanation:",
+      "prompt_sha256": "c4c99ab5286e4b929bc62b2314679b5521cc7f36ae758b5a0b64a2a1bc3e6b0a",
+      "role": "independent_final",
+      "semantic_actions": [
+        "2",
+        "5"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_variable_lookup"
+    },
+    {
+      "ast": {
+        "bindings": {
+          "W": 8,
+          "X": 9,
+          "Y": 6,
+          "Z": 3
+        },
+        "horizon": 2,
+        "kind": "wide_variable_lookup",
+        "queries": [
+          "Z",
+          "X"
+        ]
+      },
+      "base_trial_id": "v37-independent_final-variable_binding-3c6b394b5a0581eb8946",
+      "family": "variable_binding",
+      "final_answer": "9",
+      "generator_index": 8,
+      "generator_seed": 20681026,
+      "horizon": 2,
+      "program_hash": "3c6b394b5a0581eb8946ab9f1d425208a9f38387dc7de4635948ce1396155e43",
+      "prompt": "Bindings: W=8, X=9, Y=6, Z=3. Queries: Z X. Output exactly 2 bound digits in order, space-separated, with no explanation:",
+      "prompt_sha256": "392b840dde743819bfc1afeabc88c5f767053137a1708d3bb4cc4633f9a874da",
+      "role": "independent_final",
+      "semantic_actions": [
+        "3",
+        "9"
+      ],
+      "source_role": "independent_final",
+      "variant": "wide_variable_lookup"
+    }
+  ],
+  "model_response_observed_before_seal": false,
+  "role": "independent_final"
+}

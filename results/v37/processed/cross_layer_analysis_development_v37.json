@@ -1,0 +1,139 @@
+{
+  "both_models_cross_layer_pass": false,
+  "independent_final_seen": false,
+  "mechanism_level": "cross-layer local operator prediction plus natural downstream order",
+  "models": {
+    "F": {
+      "Q3_Q4_and_downstream_native": true,
+      "cross_layer_gate_pass": false,
+      "direct_vs_indirect_Q2_not_identified_by_this_test": true,
+      "families": {
+        "boolean_logic": {
+          "eligible_cosine": 16,
+          "median_factor_change_fraction": 1.0,
+          "median_future_order_accuracy": 0.5,
+          "median_hidden_change_norm": 4.6567007303237915,
+          "median_mixer_change_cosine": 1.0,
+          "pass": false,
+          "states": 16
+        },
+        "modular_arithmetic": {
+          "eligible_cosine": 16,
+          "median_factor_change_fraction": 1.0,
+          "median_future_order_accuracy": 0.5,
+          "median_hidden_change_norm": 4.777560830116272,
+          "median_mixer_change_cosine": 1.0,
+          "pass": false,
+          "states": 16
+        },
+        "short_graph_traversal": {
+          "eligible_cosine": 16,
+          "median_factor_change_fraction": 1.0,
+          "median_future_order_accuracy": 0.625,
+          "median_hidden_change_norm": 6.89661431312561,
+          "median_mixer_change_cosine": 1.0,
+          "pass": false,
+          "states": 16
+        },
+        "simple_state_transition": {
+          "eligible_cosine": 16,
+          "median_factor_change_fraction": 1.0,
+          "median_future_order_accuracy": 0.5,
+          "median_hidden_change_norm": 5.177699685096741,
+          "median_mixer_change_cosine": 1.0,
+          "pass": false,
+          "states": 16
+        },
+        "variable_binding": {
+          "eligible_cosine": 16,
+          "median_factor_change_fraction": 1.0,
+          "median_future_order_accuracy": 0.375,
+          "median_hidden_change_norm": 5.147868871688843,
+          "median_mixer_change_cosine": 1.0,
+          "pass": false,
+          "states": 16
+        }
+      },
+      "only_Q2_upstream_outputs_patched": true,
+      "state_table_sha256": "c99ed842b324c022032b26482af2776019cf6538f81d4683815a8cfac96cac36",
+      "states": 80,
+      "whole": {
+        "eligible_cosine": 80,
+        "median_factor_change_fraction": 1.0,
+        "median_future_order_accuracy": 0.5,
+        "median_hidden_change_norm": 5.039476156234741,
+        "median_mixer_change_cosine": 1.0,
+        "pass": false,
+        "states": 80
+      }
+    },
+    "Q": {
+      "Q3_Q4_and_downstream_native": true,
+      "cross_layer_gate_pass": false,
+      "direct_vs_indirect_Q2_not_identified_by_this_test": true,
+      "families": {
+        "boolean_logic": {
+          "eligible_cosine": 16,
+          "median_factor_change_fraction": 1.0,
+          "median_future_order_accuracy": 0.5,
+          "median_hidden_change_norm": 8.68211054801941,
+          "median_mixer_change_cosine": 1.0,
+          "pass": false,
+          "states": 16
+        },
+        "modular_arithmetic": {
+          "eligible_cosine": 16,
+          "median_factor_change_fraction": 1.0,
+          "median_future_order_accuracy": 0.5,
+          "median_hidden_change_norm": 9.243852853775024,
+          "median_mixer_change_cosine": 1.0,
+          "pass": false,
+          "states": 16
+        },
+        "short_graph_traversal": {
+          "eligible_cosine": 16,
+          "median_factor_change_fraction": 1.0,
+          "median_future_order_accuracy": 0.625,
+          "median_hidden_change_norm": 4.126426577568054,
+          "median_mixer_change_cosine": 1.0,
+          "pass": false,
+          "states": 16
+        },
+        "simple_state_transition": {
+          "eligible_cosine": 16,
+          "median_factor_change_fraction": 1.0,
+          "median_future_order_accuracy": 0.375,
+          "median_hidden_change_norm": 5.543329834938049,
+          "median_mixer_change_cosine": 1.0,
+          "pass": false,
+          "states": 16
+        },
+        "variable_binding": {
+          "eligible_cosine": 16,
+          "median_factor_change_fraction": 1.0,
+          "median_future_order_accuracy": 0.75,
+          "median_hidden_change_norm": 6.633370041847229,
+          "median_mixer_change_cosine": 1.0,
+          "pass": true,
+          "states": 16
+        }
+      },
+      "only_Q2_upstream_outputs_patched": true,
+      "state_table_sha256": "2006c44e14c684b604a74d58e27b60320d9da9d94980cdcbb2ee58513b4c3e9c",
+      "states": 80,
+      "whole": {
+        "eligible_cosine": 80,
+        "median_factor_change_fraction": 1.0,
+        "median_future_order_accuracy": 0.5,
+        "median_hidden_change_norm": 6.459635972976685,
+        "median_mixer_change_cosine": 1.0,
+        "pass": false,
+        "states": 80
+      }
+    }
+  },
+  "role": "development",
+  "six_probes_and_four_sites_repeated_within_state": true,
+  "state_independent_unit": true,
+  "thresholds_retuned": false
+}

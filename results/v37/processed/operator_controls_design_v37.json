@@ -1,0 +1,37 @@
+{
+  "anchor": "predicted state response at operator A; no observed validation counterfactual used as anchor",
+  "development_fit_only": true,
+  "evaluation_role": "validation",
+  "metric_unit": "state; six probes and positions are repeated measurements",
+  "models": [
+    "Q",
+    "F"
+  ],
+  "native_baseline": "V37 frozen factor prediction, never fit to validation",
+  "operator_targets": [
+    "B",
+    "C"
+  ],
+  "positions": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "B23",
+    "B34"
+  ],
+  "rank": 16,
+  "rotation_scope": "one fixed rank-16 orthogonal map in a development-only source subspace per model, stage, position and target operator",
+  "scalar_gain_scope": "one scalar per model, stage, position and target operator",
+  "schema_version": 1,
+  "stages": [
+    "raw",
+    "mixer"
+  ],
+  "state_targets": [
+    "B",
+    "C"
+  ],
+  "training_role": "development",
+  "validation_refit_allowed": false
+}

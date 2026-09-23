@@ -1,0 +1,166 @@
+{
+  "both_models_local_prediction_pass": true,
+  "independent_final_seen": false,
+  "models": {
+    "F": {
+      "families": {
+        "boolean_logic": {
+          "cosine": 1.0,
+          "mixer_cosine": 1.0,
+          "mixer_ordering": 1.0,
+          "mixer_rank": 1.0,
+          "ordering": 1.0,
+          "pass": true,
+          "rank": 1.0,
+          "states": 8
+        },
+        "modular_arithmetic": {
+          "cosine": 1.0,
+          "mixer_cosine": 1.0,
+          "mixer_ordering": 1.0,
+          "mixer_rank": 1.0,
+          "ordering": 1.0,
+          "pass": true,
+          "rank": 1.0,
+          "states": 8
+        },
+        "short_graph_traversal": {
+          "cosine": 1.0,
+          "mixer_cosine": 1.0,
+          "mixer_ordering": 1.0,
+          "mixer_rank": 1.0,
+          "ordering": 1.0,
+          "pass": true,
+          "rank": 1.0,
+          "states": 8
+        },
+        "simple_state_transition": {
+          "cosine": 1.0,
+          "mixer_cosine": 1.0,
+          "mixer_ordering": 1.0,
+          "mixer_rank": 1.0,
+          "ordering": 1.0,
+          "pass": true,
+          "rank": 1.0,
+          "states": 8
+        },
+        "variable_binding": {
+          "cosine": 1.0,
+          "mixer_cosine": 1.0,
+          "mixer_ordering": 1.0,
+          "mixer_rank": 1.0,
+          "ordering": 1.0,
+          "pass": true,
+          "rank": 1.0,
+          "states": 8
+        }
+      },
+      "local_fraction_ci_state": [
+        0.012447306875970914,
+        0.040915073909027
+      ],
+      "local_tensor_law_not_equated_to_global_mechanism": true,
+      "median_fixed_to_natural_ratio": 0.11095250347483024,
+      "median_local_benefit_fraction": 0.032670730098688386,
+      "prediction_gate_pass": true,
+      "raw_cosine_ci_state": [
+        1.0,
+        1.0
+      ],
+      "state_table_sha256": "edc3bf6a30c5f8b92e98faa6dc9819ee6ff788f12b0834cb1a97071cac9ff216",
+      "states": 40,
+      "whole": {
+        "cosine": 1.0,
+        "mixer_cosine": 1.0,
+        "mixer_ordering": 1.0,
+        "mixer_rank": 1.0,
+        "ordering": 1.0,
+        "pass": true,
+        "rank": 1.0,
+        "states": 40
+      }
+    },
+    "Q": {
+      "families": {
+        "boolean_logic": {
+          "cosine": 1.0,
+          "mixer_cosine": 1.0,
+          "mixer_ordering": 1.0,
+          "mixer_rank": 1.0,
+          "ordering": 1.0,
+          "pass": true,
+          "rank": 1.0,
+          "states": 8
+        },
+        "modular_arithmetic": {
+          "cosine": 1.0,
+          "mixer_cosine": 1.0,
+          "mixer_ordering": 1.0,
+          "mixer_rank": 1.0,
+          "ordering": 1.0,
+          "pass": true,
+          "rank": 1.0,
+          "states": 8
+        },
+        "short_graph_traversal": {
+          "cosine": 1.0,
+          "mixer_cosine": 1.0,
+          "mixer_ordering": 1.0,
+          "mixer_rank": 1.0,
+          "ordering": 1.0,
+          "pass": true,
+          "rank": 1.0,
+          "states": 8
+        },
+        "simple_state_transition": {
+          "cosine": 1.0,
+          "mixer_cosine": 1.0,
+          "mixer_ordering": 1.0,
+          "mixer_rank": 1.0,
+          "ordering": 1.0,
+          "pass": true,
+          "rank": 1.0,
+          "states": 8
+        },
+        "variable_binding": {
+          "cosine": 1.0,
+          "mixer_cosine": 1.0,
+          "mixer_ordering": 1.0,
+          "mixer_rank": 1.0,
+          "ordering": 1.0,
+          "pass": true,
+          "rank": 1.0,
+          "states": 8
+        }
+      },
+      "local_fraction_ci_state": [
+        0.016213009145878317,
+        0.03135426272864525
+      ],
+      "local_tensor_law_not_equated_to_global_mechanism": true,
+      "median_fixed_to_natural_ratio": 0.201495723265655,
+      "median_local_benefit_fraction": 0.02311103496491388,
+      "prediction_gate_pass": true,
+      "raw_cosine_ci_state": [
+        1.0,
+        1.0
+      ],
+      "state_table_sha256": "54498d1c8c0b30aa266e7d2c30513e66b88ef983a816e9d20b52858ebc5c7482",
+      "states": 40,
+      "whole": {
+        "cosine": 1.0,
+        "mixer_cosine": 1.0,
+        "mixer_ordering": 1.0,
+        "mixer_rank": 1.0,
+        "ordering": 1.0,
+        "pass": true,
+        "rank": 1.0,
+        "states": 40
+      }
+    }
+  },
+  "role": "validation",
+  "six_probes_and_six_positions_repeated_within_state": true,
+  "state_independent_unit": true,
+  "thresholds_retuned": false
+}

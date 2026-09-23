@@ -1,0 +1,217 @@
+{
+  "both_pass": true,
+  "high_level_both_pass": true,
+  "models": {
+    "F": {
+      "full_read": {
+        "cosine": 0.9999999999993864,
+        "eligible": 40,
+        "families_passing": 5,
+        "family": {
+          "boolean_logic": {
+            "cosine": 0.9999999999993986,
+            "eligible": 8,
+            "pass": true,
+            "removed": 1.000000010976638,
+            "restored": 0.9999999896494809,
+            "states": 8
+          },
+          "modular_arithmetic": {
+            "cosine": 0.9999999999984732,
+            "eligible": 8,
+            "pass": true,
+            "removed": 0.9999999801182105,
+            "restored": 1.0000000575361536,
+            "states": 8
+          },
+          "short_graph_traversal": {
+            "cosine": 0.999999999999603,
+            "eligible": 8,
+            "pass": true,
+            "removed": 1.0000000418651669,
+            "restored": 1.0000000616314755,
+            "states": 8
+          },
+          "simple_state_transition": {
+            "cosine": 0.9999999999996719,
+            "eligible": 8,
+            "pass": true,
+            "removed": 0.9999999953851049,
+            "restored": 1.0000000170660934,
+            "states": 8
+          },
+          "variable_binding": {
+            "cosine": 0.9999999999990943,
+            "eligible": 8,
+            "pass": true,
+            "removed": 0.9999999928861375,
+            "restored": 1.0000000515880774,
+            "states": 8
+          }
+        },
+        "pass": true,
+        "removed": 1.0000000057654717,
+        "restored": 1.0000000309642028,
+        "states": 40
+      },
+      "q2_q3_q4_secondary": {
+        "cosine": 0.9434302582225009,
+        "eligible": 40,
+        "families_passing": 5,
+        "family": {
+          "boolean_logic": {
+            "cosine": 0.9589934400890701,
+            "eligible": 8,
+            "pass": true,
+            "removed": 0.8926512941306758,
+            "restored": 0.9157877535294858,
+            "states": 8
+          },
+          "modular_arithmetic": {
+            "cosine": 0.8881442372874939,
+            "eligible": 8,
+            "pass": true,
+            "removed": 0.9429522485016669,
+            "restored": 0.9502108035088557,
+            "states": 8
+          },
+          "short_graph_traversal": {
+            "cosine": 0.9682205785667024,
+            "eligible": 8,
+            "pass": true,
+            "removed": 0.9194468751435327,
+            "restored": 0.9562347727519835,
+            "states": 8
+          },
+          "simple_state_transition": {
+            "cosine": 0.9556081052480192,
+            "eligible": 8,
+            "pass": true,
+            "removed": 0.8583196618999703,
+            "restored": 0.8926475307704561,
+            "states": 8
+          },
+          "variable_binding": {
+            "cosine": 0.9316176855293798,
+            "eligible": 8,
+            "pass": true,
+            "removed": 0.8333884224162758,
+            "restored": 0.9173685261577839,
+            "states": 8
+          }
+        },
+        "pass": true,
+        "removed": 0.8841821330871154,
+        "restored": 0.9237824251335325,
+        "states": 40
+      }
+    },
+    "Q": {
+      "full_read": {
+        "cosine": 0.9999999999999041,
+        "eligible": 35,
+        "families_passing": 5,
+        "family": {
+          "boolean_logic": {
+            "cosine": 0.999999999999911,
+            "eligible": 8,
+            "pass": true,
+            "removed": 1.0000000013128378,
+            "restored": 0.9999999907093263,
+            "states": 8
+          },
+          "modular_arithmetic": {
+            "cosine": 0.9999999999999145,
+            "eligible": 8,
+            "pass": true,
+            "removed": 1.000000006170226,
+            "restored": 1.0000000019546484,
+            "states": 8
+          },
+          "short_graph_traversal": {
+            "cosine": 0.9999999999998094,
+            "eligible": 5,
+            "pass": true,
+            "removed": 0.9999999931782699,
+            "restored": 0.9999999925422348,
+            "states": 8
+          },
+          "simple_state_transition": {
+            "cosine": 0.9999999999998845,
+            "eligible": 6,
+            "pass": true,
+            "removed": 0.9999999989756392,
+            "restored": 0.999999994718838,
+            "states": 8
+          },
+          "variable_binding": {
+            "cosine": 0.9999999999999218,
+            "eligible": 8,
+            "pass": true,
+            "removed": 1.0000000028138278,
+            "restored": 1.000000001525974,
+            "states": 8
+          }
+        },
+        "pass": true,
+        "removed": 1.000000003597378,
+        "restored": 0.9999999967778851,
+        "states": 40
+      },
+      "q2_q3_q4_secondary": {
+        "cosine": 0.9223537806278197,
+        "eligible": 35,
+        "families_passing": 5,
+        "family": {
+          "boolean_logic": {
+            "cosine": 0.8630628597040527,
+            "eligible": 8,
+            "pass": true,
+            "removed": 0.989037372177094,
+            "restored": 0.7051802394397326,
+            "states": 8
+          },
+          "modular_arithmetic": {
+            "cosine": 0.8947926532629207,
+            "eligible": 8,
+            "pass": true,
+            "removed": 1.0711753416173453,
+            "restored": 0.7101687523420677,
+            "states": 8
+          },
+          "short_graph_traversal": {
+            "cosine": 0.9223537806278197,
+            "eligible": 5,
+            "pass": true,
+            "removed": 1.079673535102245,
+            "restored": 0.6965603433482025,
+            "states": 8
+          },
+          "simple_state_transition": {
+            "cosine": 0.9432564081694372,
+            "eligible": 6,
+            "pass": true,
+            "removed": 0.9584024205888079,
+            "restored": 0.8512574025861019,
+            "states": 8
+          },
+          "variable_binding": {
+            "cosine": 0.9648440312686586,
+            "eligible": 8,
+            "pass": true,
+            "removed": 0.9538381110205985,
+            "restored": 0.9196935580140602,
+            "states": 8
+          }
+        },
+        "pass": true,
+        "removed": 0.997799723080683,
+        "restored": 0.7707802052737462,
+        "states": 40
+      }
+    }
+  },
+  "role": "validation",
+  "secondary_triple_both_pass": true,
+  "thresholds_retuned": false
+}

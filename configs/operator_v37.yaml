@@ -1,0 +1,56 @@
+protocol_version: computational_origin_v37
+name: Computational Origin of REC–Conv Conditional Effects
+subtitle: State × Read-Operator Matching and Cross-Layer Recurrent Conditioning
+parent_commit: d7b93f041706a60895f0294c9e75c9cb6363a4f6
+model_spec_source: configs/functional_mediation_v34.yaml
+models: [Q, F]
+seed: 370137
+sample_pool_seeds: {calibration: 20281011, development: 20281012, validation: 20281013, independent_final: 20281014}
+families: [boolean_logic, modular_arithmetic, short_graph_traversal, simple_state_transition, variable_binding]
+roles_per_family: {calibration: 4, development: 16, validation: 8, independent_final: 8}
+panel_source: data/v37/{role}_pool_v37.json
+pool_policy: >-
+  All four roles use newly generated, historical-disjoint task programs and
+  prompts. Validation and independent final are separately sealed new pools.
+  No V18 train-source state is used in formal development, validation or final.
+exclude_versions: [28, 29, 30, 31, 32, 33, 34, 35, 36]
+relative_depth_groups:
+  Q1: [0, 1, 2, 3, 4, 5]
+  Q2: [6, 7, 8, 9, 10, 11]
+  Q3: [12, 13, 14, 15, 16, 17]
+  Q4: [18, 19, 20, 21, 22, 23]
+local_relative_positions: {P1: 2, P2: 8, P3: 14, P4: 20, B23: 12, B34: 18}
+token_selection:
+  rank_max: 8192
+  future_probes: 6
+  natural_branches: 3
+  response_blind: true
+high_level_gate:
+  positive_fraction_min: 0.80
+  median_donor_error_reduction_min: 0.20
+  families_required: 4
+full_read_gate: {median_removed_min: 0.90, median_restored_min: 0.90, median_cosine_min: 0.90, families_required: 4}
+q2_q3_q4_secondary_gate: {median_removed_min: 0.50, median_restored_min: 0.50, median_cosine_min: 0.80, families_required: 4}
+operator_gate:
+  local_effect_cosine_min: 0.90
+  relative_magnitude_rank_min: 0.70
+  pairwise_ordering_min: 0.80
+  families_required: 4
+cross_layer_gate:
+  prospective_cosine_min: 0.80
+  ordering_accuracy_min: 0.75
+  families_required: 4
+  roles_required: [development, validation]
+benefit_denominator_absolute_floor: 1.0
+bootstrap: {unit: state, iterations: 2000, lower_tail: 0.025, seed: 360236}
+finalist_priority:
+  - CROSS_LAYER_OPERATOR_CONDITIONING
+  - READ_OPERATOR_MATCHING
+  - LOCAL_STATE_OPERATOR_INTERACTION
+  - UPDATE_READ_COUPLING
+  - OLD_STATE_DOMINANT
+  - POST_READ_TRANSFORMATION
+independent_final_rule: >-
+  Open only after the same predeclared mechanism class passes development and
+  validation in both models; no earlier V35/V36 final response may be reused.
+historical_reports_immutable: true

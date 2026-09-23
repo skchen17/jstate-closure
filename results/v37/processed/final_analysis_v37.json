@@ -1,0 +1,177 @@
+{
+  "both_models_local_read_law_pass": true,
+  "cross_layer_mechanism_not_claimed": true,
+  "level_two_local_computation_only": true,
+  "models": {
+    "F": {
+      "families": {
+        "boolean_logic": {
+          "pass": true,
+          "scores": {
+            "mixer_cosine": 1.0,
+            "mixer_ordering": 1.0,
+            "mixer_rank": 1.0,
+            "raw_cosine": 1.0,
+            "raw_ordering": 1.0,
+            "raw_rank": 1.0
+          },
+          "states": 8
+        },
+        "modular_arithmetic": {
+          "pass": true,
+          "scores": {
+            "mixer_cosine": 1.0,
+            "mixer_ordering": 1.0,
+            "mixer_rank": 1.0,
+            "raw_cosine": 1.0,
+            "raw_ordering": 1.0,
+            "raw_rank": 1.0
+          },
+          "states": 8
+        },
+        "short_graph_traversal": {
+          "pass": true,
+          "scores": {
+            "mixer_cosine": 1.0,
+            "mixer_ordering": 1.0,
+            "mixer_rank": 1.0,
+            "raw_cosine": 1.0,
+            "raw_ordering": 1.0,
+            "raw_rank": 1.0
+          },
+          "states": 8
+        },
+        "simple_state_transition": {
+          "pass": true,
+          "scores": {
+            "mixer_cosine": 1.0,
+            "mixer_ordering": 1.0,
+            "mixer_rank": 1.0,
+            "raw_cosine": 1.0,
+            "raw_ordering": 1.0,
+            "raw_rank": 1.0
+          },
+          "states": 8
+        },
+        "variable_binding": {
+          "pass": true,
+          "scores": {
+            "mixer_cosine": 1.0,
+            "mixer_ordering": 1.0,
+            "mixer_rank": 1.0,
+            "raw_cosine": 1.0,
+            "raw_ordering": 1.0,
+            "raw_rank": 1.0
+          },
+          "states": 8
+        }
+      },
+      "files_sha256": {
+        "proof": "732a9e1aaf90865605ba132bda64744cd0809e0ef7bcfcd70e2436a470eb6897",
+        "rows": "37fd2c8fae456064e06c6627d9670ef6bdfe88a49b42d2e271e7261198f5ec36"
+      },
+      "local_read_law_pass": true,
+      "local_rows": 1440,
+      "max_mixer_error": 0.0,
+      "max_raw_error": 0.0,
+      "model": "F",
+      "natural_downstream_task_effect_tested": false,
+      "states": 40,
+      "whole": {
+        "mixer_cosine": 1.0,
+        "mixer_ordering": 1.0,
+        "mixer_rank": 1.0,
+        "raw_cosine": 1.0,
+        "raw_ordering": 1.0,
+        "raw_rank": 1.0
+      }
+    },
+    "Q": {
+      "families": {
+        "boolean_logic": {
+          "pass": true,
+          "scores": {
+            "mixer_cosine": 1.0,
+            "mixer_ordering": 1.0,
+            "mixer_rank": 1.0,
+            "raw_cosine": 1.0,
+            "raw_ordering": 1.0,
+            "raw_rank": 1.0
+          },
+          "states": 8
+        },
+        "modular_arithmetic": {
+          "pass": true,
+          "scores": {
+            "mixer_cosine": 1.0,
+            "mixer_ordering": 1.0,
+            "mixer_rank": 1.0,
+            "raw_cosine": 1.0,
+            "raw_ordering": 1.0,
+            "raw_rank": 1.0
+          },
+          "states": 8
+        },
+        "short_graph_traversal": {
+          "pass": true,
+          "scores": {
+            "mixer_cosine": 1.0,
+            "mixer_ordering": 1.0,
+            "mixer_rank": 1.0,
+            "raw_cosine": 1.0,
+            "raw_ordering": 1.0,
+            "raw_rank": 1.0
+          },
+          "states": 8
+        },
+        "simple_state_transition": {
+          "pass": true,
+          "scores": {
+            "mixer_cosine": 1.0,
+            "mixer_ordering": 1.0,
+            "mixer_rank": 1.0,
+            "raw_cosine": 1.0,
+            "raw_ordering": 1.0,
+            "raw_rank": 1.0
+          },
+          "states": 8
+        },
+        "variable_binding": {
+          "pass": true,
+          "scores": {
+            "mixer_cosine": 1.0,
+            "mixer_ordering": 1.0,
+            "mixer_rank": 1.0,
+            "raw_cosine": 1.0,
+            "raw_ordering": 1.0,
+            "raw_rank": 1.0
+          },
+          "states": 8
+        }
+      },
+      "files_sha256": {
+        "proof": "1cb32946518575b99d80b9acbe3261d256b533fb37d64a9d3af8ecfa36d6f341",
+        "rows": "899f524430e497087c7feee307041088f09e6a45d2b4f1c78a50c19381c1dca7"
+      },
+      "local_read_law_pass": true,
+      "local_rows": 1440,
+      "max_mixer_error": 0.0,
+      "max_raw_error": 0.0,
+      "model": "Q",
+      "natural_downstream_task_effect_tested": false,
+      "states": 40,
+      "whole": {
+        "mixer_cosine": 1.0,
+        "mixer_ordering": 1.0,
+        "mixer_rank": 1.0,
+        "raw_cosine": 1.0,
+        "raw_ordering": 1.0,
+        "raw_rank": 1.0
+      }
+    }
+  },
+  "selected_class": "READ_OPERATOR_MATCHING",
+  "task_function_not_tested": true,
+  "v36_outcomes_excluded": true,
+  "version": "V37"
+}

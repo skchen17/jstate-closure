@@ -1204,3 +1204,11 @@ Parent `09a00a67e5a286a05e47730c43586bce94b8095a`; V33 base freeze `aa843d414c7a
 
 V35 审计追加修订：Q2+Q3+Q4 在开发/验证两模型均过强门槛，但候选生成遗漏，历史最终不能追认。V36 新面板高层 REC×Conv 条件收益再次通过；两模型原生固定输入公式对局部 raw read 零误差。然而供体 Conv 匹配优势与四层单层下游恢复率都低于预定门槛，未找到可进入独立最终的共同机制。40+40 最终状态保持封存；跨层组合与语义任务测试未授权。详见 `reports/V36_COMPLETE_REPORT.md` 和 `reports/V36_ALL_REPORTS.md`。
 <!-- V36_END -->
+
+<!-- V37_START -->
+## V37 — Computational Origin of REC–Conv Conditional Effects
+
+结论：V37 以新独立样本重新确认高层 REC–Conv 条件效应和读出接口。最高支持层级为 `LEVEL_2_LOCAL_COMPUTATION`；局部读算子类通过开发和独立正式验证；跨层 Q2→后层下游排序的开发判据失败；局部原生计算等价不得提升为跨层或任务语义机制。已开放 `READ_OPERATOR_MATCHING`；独立最终两模型局部读算子门槛通过，详见 `final_analysis_v37.json`。
+
+完整专题和机器记录：`reports/V37_COMPLETE_REPORT.md`、`reports/V37_ALL_REPORTS.md`、`results/v37/processed/v37_integrity_index.json`。
+<!-- V37_END -->

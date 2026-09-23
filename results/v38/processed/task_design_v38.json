@@ -1,0 +1,338 @@
+{
+  "diagnostic_scope": "first answer token after one common newline probe; no task-changing fork",
+  "models": {
+    "F": {
+      "candidate_labels_by_family": {
+        "boolean_logic": {
+          "labels": {
+            "0": 539,
+            "1": 540
+          },
+          "total_labels": 2
+        },
+        "modular_arithmetic": {
+          "labels": {
+            "0": 539,
+            "1": 540,
+            "2": 541,
+            "3": 542,
+            "4": 543,
+            "6": 545,
+            "9": 548
+          },
+          "total_labels": 11
+        },
+        "short_graph_traversal": {
+          "labels": {
+            "A": 894,
+            "B": 969,
+            "C": 901,
+            "D": 950,
+            "E": 991,
+            "F": 1000,
+            "G": 1083,
+            "H": 1010,
+            "I": 883,
+            "J": 1178,
+            "K": 1185,
+            "L": 1025
+          },
+          "total_labels": 12
+        },
+        "simple_state_transition": {
+          "labels": {
+            "A": 894,
+            "C": 901,
+            "D": 950,
+            "E": 991,
+            "F": 1000,
+            "H": 1010,
+            "I": 883,
+            "J": 1178,
+            "K": 1185,
+            "L": 1025
+          },
+          "total_labels": 10
+        },
+        "variable_binding": {
+          "labels": {
+            "0": 539,
+            "1": 540,
+            "2": 541,
+            "3": 542,
+            "4": 543,
+            "5": 544,
+            "6": 545,
+            "7": 546,
+            "8": 547,
+            "9": 548
+          },
+          "total_labels": 10
+        }
+      },
+      "neutral_probe_token_id": 709,
+      "tokenizer_source": "/data/CSK/J-space-project/models/Falcon-H1-1.5B-Base-06d7330"
+    },
+    "Q": {
+      "candidate_labels_by_family": {
+        "boolean_logic": {
+          "labels": {
+            "0": 15,
+            "1": 16
+          },
+          "total_labels": 2
+        },
+        "modular_arithmetic": {
+          "labels": {
+            "0": 15,
+            "1": 16,
+            "2": 17,
+            "3": 18,
+            "4": 19,
+            "6": 21,
+            "9": 24
+          },
+          "total_labels": 11
+        },
+        "short_graph_traversal": {
+          "labels": {
+            "A": 357,
+            "B": 417,
+            "C": 351,
+            "D": 414,
+            "E": 458,
+            "F": 426,
+            "G": 469,
+            "H": 462,
+            "I": 353,
+            "J": 604,
+            "K": 710,
+            "L": 436
+          },
+          "total_labels": 12
+        },
+        "simple_state_transition": {
+          "labels": {
+            "A": 357,
+            "C": 351,
+            "D": 414,
+            "E": 458,
+            "F": 426,
+            "H": 462,
+            "I": 353,
+            "J": 604,
+            "K": 710,
+            "L": 436
+          },
+          "total_labels": 10
+        },
+        "variable_binding": {
+          "labels": {
+            "0": 15,
+            "1": 16,
+            "2": 17,
+            "3": 18,
+            "4": 19,
+            "5": 20,
+            "6": 21,
+            "7": 22,
+            "8": 23,
+            "9": 24
+          },
+          "total_labels": 10
+        }
+      },
+      "neutral_probe_token_id": 198,
+      "tokenizer_source": "/home/user/.cache/huggingface/hub/models--Qwen--Qwen3.5-4B/snapshots/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+    }
+  },
+  "roles": {
+    "development": [
+      {
+        "correct_first_action": "0",
+        "family": "boolean_logic",
+        "program_hash": "881b7b0c717e35264d014ae8aa29d60f6bbf29f0f4db97544fd3141c62cdedad",
+        "state_id": "v38-development-boolean_logic-881b7b0c717e35264d01"
+      },
+      {
+        "correct_first_action": "0",
+        "family": "boolean_logic",
+        "program_hash": "fc722012f4bcf150585bd1b0c1410d1f866520007c47a0fa43b1de16952d9c26",
+        "state_id": "v38-development-boolean_logic-fc722012f4bcf150585b"
+      },
+      {
+        "correct_first_action": "0",
+        "family": "boolean_logic",
+        "program_hash": "2970362f8b3e1fd62a3815ad9b00f83c9b9f1ad79e7182ebd9d2f144a70cef61",
+        "state_id": "v38-development-boolean_logic-2970362f8b3e1fd62a38"
+      },
+      {
+        "correct_first_action": "1",
+        "family": "boolean_logic",
+        "program_hash": "b96f9ce784a3d46ad7352af2f7916ffbd1f6012b5b356768b9772fee651c76b8",
+        "state_id": "v38-development-boolean_logic-b96f9ce784a3d46ad735"
+      },
+      {
+        "correct_first_action": "12",
+        "family": "modular_arithmetic",
+        "program_hash": "24a6a9477f25fd2493e3f1f48eb45a938fa28297bd42c9a8b0c792c086cc3f0b",
+        "state_id": "v38-development-modular_arithmetic-24a6a9477f25fd2493e3"
+      },
+      {
+        "correct_first_action": "4",
+        "family": "modular_arithmetic",
+        "program_hash": "5b530a8dcf9531de17a1e4a84b2405ef129f9520dd29bd7aa8bcc1aa3c6f44d4",
+        "state_id": "v38-development-modular_arithmetic-5b530a8dcf9531de17a1"
+      },
+      {
+        "correct_first_action": "10",
+        "family": "modular_arithmetic",
+        "program_hash": "5170aca2a1731b4d7154a4c41b4feef9f5cd1cc7424fb284d092cc408968751b",
+        "state_id": "v38-development-modular_arithmetic-5170aca2a1731b4d7154"
+      },
+      {
+        "correct_first_action": "4",
+        "family": "modular_arithmetic",
+        "program_hash": "e0991b408ceac254bc0014a1dcf2dc80c0bea31813a4c44c521b5d829a1fb0fc",
+        "state_id": "v38-development-modular_arithmetic-e0991b408ceac254bc00"
+      },
+      {
+        "correct_first_action": "D",
+        "family": "short_graph_traversal",
+        "program_hash": "62c386206f2efe01e168ff3fff38564ff37d79aa069a21f09f29d4c8bb3120f7",
+        "state_id": "v38-development-short_graph_traversal-62c386206f2efe01e168"
+      },
+      {
+        "correct_first_action": "I",
+        "family": "short_graph_traversal",
+        "program_hash": "00c57e0ac4809f32846a483e3f24a0fbb3b11ceace6a10bf899c8524ff72f2c7",
+        "state_id": "v38-development-short_graph_traversal-00c57e0ac4809f32846a"
+      },
+      {
+        "correct_first_action": "J",
+        "family": "short_graph_traversal",
+        "program_hash": "3dd1997973e61074d19c633b725e58aee4e0429a99c8896de0e08867d6c03ef6",
+        "state_id": "v38-development-short_graph_traversal-3dd1997973e61074d19c"
+      },
+      {
+        "correct_first_action": "F",
+        "family": "short_graph_traversal",
+        "program_hash": "39715023033b6b6103b28167d40d8bf82756caf50d2058e2cc35273f5ab93af5",
+        "state_id": "v38-development-short_graph_traversal-39715023033b6b6103b2"
+      },
+      {
+        "correct_first_action": "F",
+        "family": "simple_state_transition",
+        "program_hash": "bbd609a85ccf62bbcb53022cff286a6d2d162b4d0e923f411bebf8e6517fc6f0",
+        "state_id": "v38-development-simple_state_transition-bbd609a85ccf62bbcb53"
+      },
+      {
+        "correct_first_action": "L",
+        "family": "simple_state_transition",
+        "program_hash": "948c19df1a4cff2e6da2cd9807c3f5c2ef908ce654c14d411b6efdde1f112ebb",
+        "state_id": "v38-development-simple_state_transition-948c19df1a4cff2e6da2"
+      },
+      {
+        "correct_first_action": "H",
+        "family": "simple_state_transition",
+        "program_hash": "97fe9926ca9c65e8416a1627c041e045656a8fa9eb59eed96b6c0dd09c87958b",
+        "state_id": "v38-development-simple_state_transition-97fe9926ca9c65e8416a"
+      },
+      {
+        "correct_first_action": "C",
+        "family": "simple_state_transition",
+        "program_hash": "470e131f5abe4ad5c5658cace162b830864c2d74d388e89497dc373f807268c3",
+        "state_id": "v38-development-simple_state_transition-470e131f5abe4ad5c565"
+      },
+      {
+        "correct_first_action": "6",
+        "family": "variable_binding",
+        "program_hash": "acd60907d706cea04bbf464df4eedbe5edffe09d2e641363cf31321d7814ad1c",
+        "state_id": "v38-development-variable_binding-acd60907d706cea04bbf"
+      },
+      {
+        "correct_first_action": "7",
+        "family": "variable_binding",
+        "program_hash": "f69dee57e2994a64de5962985065e163b7c8f0778f3569e172253186d2f1e210",
+        "state_id": "v38-development-variable_binding-f69dee57e2994a64de59"
+      },
+      {
+        "correct_first_action": "9",
+        "family": "variable_binding",
+        "program_hash": "b6c45c16093c747f87e41d70d8343a5484d45a85fe19a88c867b8918c3ebcb8c",
+        "state_id": "v38-development-variable_binding-b6c45c16093c747f87e4"
+      },
+      {
+        "correct_first_action": "5",
+        "family": "variable_binding",
+        "program_hash": "d085a01254a8c294a275c53cb723446e13d9e958a8b9f9bc63467f6a69254f3d",
+        "state_id": "v38-development-variable_binding-d085a01254a8c294a275"
+      }
+    ],
+    "validation": [
+      {
+        "correct_first_action": "0",
+        "family": "boolean_logic",
+        "program_hash": "beee608c84f42b1cafe0a198fc3930ef4ffceab6d059116b0012c2e7bbc893c3",
+        "state_id": "v38-validation-boolean_logic-beee608c84f42b1cafe0"
+      },
+      {
+        "correct_first_action": "1",
+        "family": "boolean_logic",
+        "program_hash": "75f399bc291bbbaf1894c7f57ee9644d2600ece080b2cd7fae496d7bcd76f928",
+        "state_id": "v38-validation-boolean_logic-75f399bc291bbbaf1894"
+      },
+      {
+        "correct_first_action": "4",
+        "family": "modular_arithmetic",
+        "program_hash": "cd219ba0688036db15931ef6cbf7d0cb8971da107688e97bfe81300b17eb82ea",
+        "state_id": "v38-validation-modular_arithmetic-cd219ba0688036db1593"
+      },
+      {
+        "correct_first_action": "13",
+        "family": "modular_arithmetic",
+        "program_hash": "1be747fabbd232daed16acd9d7e36f93443fb9151bc23e59dc1bb4f3eb3d8442",
+        "state_id": "v38-validation-modular_arithmetic-1be747fabbd232daed16"
+      },
+      {
+        "correct_first_action": "K",
+        "family": "short_graph_traversal",
+        "program_hash": "621e5baafc6540c219a7a1bc52bfa461712173bc059a624f59c014460b1d0c11",
+        "state_id": "v38-validation-short_graph_traversal-621e5baafc6540c219a7"
+      },
+      {
+        "correct_first_action": "I",
+        "family": "short_graph_traversal",
+        "program_hash": "90e3632719e952de865ac9d120ebba8144ec40eeda3c7fb8ce588176f5b9e805",
+        "state_id": "v38-validation-short_graph_traversal-90e3632719e952de865a"
+      },
+      {
+        "correct_first_action": "A",
+        "family": "simple_state_transition",
+        "program_hash": "1e6a963f86ec00d172286b316cfecf733f8bc335cb83267bbb4f88a144bb5f3e",
+        "state_id": "v38-validation-simple_state_transition-1e6a963f86ec00d17228"
+      },
+      {
+        "correct_first_action": "C",
+        "family": "simple_state_transition",
+        "program_hash": "934f74c9b02eb06becd40a4aea3c0b44c370948ddd9a21585cb321fec7fa7d82",
+        "state_id": "v38-validation-simple_state_transition-934f74c9b02eb06becd4"
+      },
+      {
+        "correct_first_action": "3",
+        "family": "variable_binding",
+        "program_hash": "bbf7d79a6dd571d35e54614c393697929e7ec5433f02512df1b9874f383ab318",
+        "state_id": "v38-validation-variable_binding-bbf7d79a6dd571d35e54"
+      },
+      {
+        "correct_first_action": "8",
+        "family": "variable_binding",
+        "program_hash": "dd1f91c566a2df988b00489d4cc5655e5d8d5b627487868b363efc0c10083a88",
+        "state_id": "v38-validation-variable_binding-dd1f91c566a2df988b00"
+      }
+    ]
+  },
+  "semantic_surface_type_S_T_forks_available": false,
+  "strict_task_grounding_possible": false,
+  "task_ground_truth_source": "frozen_v38_generator_semantic_actions_first"
+}

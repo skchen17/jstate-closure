@@ -1,0 +1,39 @@
+{
+  "both_pass": true,
+  "gate": {
+    "families_required": 4,
+    "median_donor_error_reduction_min": 0.2,
+    "positive_fraction_min": 0.8
+  },
+  "model_passes": {
+    "F": true,
+    "Q": true
+  },
+  "model_summaries": {
+    "F": {
+      "families_passing": 5,
+      "files_sha256": {
+        "rows": "ad9f58c75d6dfb91204886ce2c90ce1f8cc8fff4334cef89166929cf59f98846",
+        "vectors": "9a68823543f5db48649c56909211e34f9cef10dec68a737b2e3d75bd4de868bc"
+      },
+      "median_reduction": 0.38294771258548077,
+      "model": "F",
+      "positive_fraction": 1.0,
+      "role": "development",
+      "states": 80
+    },
+    "Q": {
+      "families_passing": 5,
+      "files_sha256": {
+        "rows": "ea0eb1f4c885d94eb1ee79016bf0ef8a71e38b86d690cb0ba67144bd03425768",
+        "vectors": "df2e0ca784f7c24f7ea2eb5110916dafce3b3eb5b19e0daa6614359f37f7dec7"
+      },
+      "median_reduction": 0.43508524857174036,
+      "model": "Q",
+      "positive_fraction": 0.9875,
+      "role": "development",
+      "states": 80
+    }
+  },
+  "role": "development"
+}

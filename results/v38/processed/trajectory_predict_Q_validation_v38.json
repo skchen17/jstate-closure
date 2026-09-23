@@ -1,0 +1,19 @@
+{
+  "R111_observed_before_prediction_freeze": false,
+  "files_sha256": {
+    "rows": "2c6df18c8f0705352c51168fe37c01efe3f00c46bef7a1f6e24be54138ef7a1d",
+    "vectors": "5d219cef56bab471f3789d9faf4f19ccb7e624c328aa8d0b63e3b0bdad28d08a"
+  },
+  "model": "Q",
+  "prediction_formulas": {
+    "I23": "E110 - E100 - E010",
+    "I234": "E111 - E110 - E101 - E011 + E100 + E010 + E001",
+    "I24": "E101 - E100 - E001",
+    "I34": "E011 - E010 - E001",
+    "additive": "E100 + E010 + E001",
+    "second_order": "E110 + E101 + E011 - E100 - E010 - E001",
+    "source_note": "Standard inclusion-exclusion resolves formatting artifacts in user-pasted expressions."
+  },
+  "role": "validation",
+  "states": 40
+}

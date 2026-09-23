@@ -1,0 +1,678 @@
+{
+  "five_family_counts": {
+    "boolean_logic": 4,
+    "modular_arithmetic": 4,
+    "short_graph_traversal": 4,
+    "simple_state_transition": 4,
+    "variable_binding": 4
+  },
+  "historical_program_overlap": false,
+  "historical_prompt_overlap": false,
+  "items": [
+    {
+      "ast": {
+        "horizon": 2,
+        "kind": "mixed_boolean_pairs",
+        "labels": [
+          [
+            "I",
+            "K"
+          ],
+          [
+            "I",
+            "B"
+          ]
+        ],
+        "left": [
+          0,
+          0
+        ],
+        "operators": [
+          "OR",
+          "AND"
+        ],
+        "right": [
+          1,
+          0
+        ]
+      },
+      "base_trial_id": "v38-calibration-boolean_logic-d0c2bae10f3585158202",
+      "family": "boolean_logic",
+      "final_answer": "0",
+      "generator_index": 0,
+      "generator_seed": 20281121,
+      "horizon": 2,
+      "program_hash": "d0c2bae10f35851582024f8a037907534c6edcbc702b144e92d6849de40aceb8",
+      "prompt": "Boolean expressions: I=0, K=1, compute I OR K; I=0, B=0, compute I AND B. Evaluate each independently. Output exactly 2 result bits in order, separated by single spaces and no explanation:",
+      "prompt_sha256": "44776feda078a5a6cae52425ff68c9d9adbcd9bc1f261f050305b8c66dc1c327",
+      "role": "calibration",
+      "semantic_actions": [
+        "1",
+        "0"
+      ],
+      "source_role": "calibration",
+      "variant": "mixed_boolean_pairs"
+    },
+    {
+      "ast": {
+        "horizon": 2,
+        "kind": "mixed_boolean_pairs",
+        "labels": [
+          [
+            "H",
+            "L"
+          ],
+          [
+            "H",
+            "I"
+          ]
+        ],
+        "left": [
+          1,
+          0
+        ],
+        "operators": [
+          "OR",
+          "XOR"
+        ],
+        "right": [
+          1,
+          1
+        ]
+      },
+      "base_trial_id": "v38-calibration-boolean_logic-318d6d6c92f591305175",
+      "family": "boolean_logic",
+      "final_answer": "1",
+      "generator_index": 1,
+      "generator_seed": 20281121,
+      "horizon": 2,
+      "program_hash": "318d6d6c92f5913051757ed3adbe76f9d44dfa4675c70b583d06a6f13c334069",
+      "prompt": "Boolean expressions: H=1, L=1, compute H OR L; H=0, I=1, compute H XOR I. Evaluate each independently. Output exactly 2 result bits in order, separated by single spaces and no explanation:",
+      "prompt_sha256": "e6de41eb176cd280f25ae61744845f8178a08f235f395ae845984d84c4100fe5",
+      "role": "calibration",
+      "semantic_actions": [
+        "1",
+        "1"
+      ],
+      "source_role": "calibration",
+      "variant": "mixed_boolean_pairs"
+    },
+    {
+      "ast": {
+        "horizon": 2,
+        "kind": "mixed_boolean_pairs",
+        "labels": [
+          [
+            "H",
+            "G"
+          ],
+          [
+            "H",
+            "F"
+          ]
+        ],
+        "left": [
+          0,
+          0
+        ],
+        "operators": [
+          "XOR",
+          "OR"
+        ],
+        "right": [
+          0,
+          0
+        ]
+      },
+      "base_trial_id": "v38-calibration-boolean_logic-6a9ba6fec12954018295",
+      "family": "boolean_logic",
+      "final_answer": "0",
+      "generator_index": 2,
+      "generator_seed": 20281121,
+      "horizon": 2,
+      "program_hash": "6a9ba6fec1295401829550c9a73ac7a72fb503fc7340a5910fea4a35372f61fe",
+      "prompt": "Boolean expressions: H=0, G=0, compute H XOR G; H=0, F=0, compute H OR F. Evaluate each independently. Output exactly 2 result bits in order, separated by single spaces and no explanation:",
+      "prompt_sha256": "686f6d42c77e0abd97fa96285919a0b0b1dd8854f35b229c470869cc5ff69016",
+      "role": "calibration",
+      "semantic_actions": [
+        "0",
+        "0"
+      ],
+      "source_role": "calibration",
+      "variant": "mixed_boolean_pairs"
+    },
+    {
+      "ast": {
+        "horizon": 2,
+        "kind": "mixed_boolean_pairs",
+        "labels": [
+          [
+            "G",
+            "C"
+          ],
+          [
+            "K",
+            "B"
+          ]
+        ],
+        "left": [
+          1,
+          1
+        ],
+        "operators": [
+          "OR",
+          "XOR"
+        ],
+        "right": [
+          1,
+          0
+        ]
+      },
+      "base_trial_id": "v38-calibration-boolean_logic-8c4d0aa403e852266b27",
+      "family": "boolean_logic",
+      "final_answer": "1",
+      "generator_index": 3,
+      "generator_seed": 20281121,
+      "horizon": 2,
+      "program_hash": "8c4d0aa403e852266b276c9064c5f3126014d6b12109d895c6c96e4e05201061",
+      "prompt": "Boolean expressions: G=1, C=1, compute G OR C; K=1, B=0, compute K XOR B. Evaluate each independently. Output exactly 2 result bits in order, separated by single spaces and no explanation:",
+      "prompt_sha256": "ca459f5b712943e5eb701e60470d5f48cfa393215d3f23664646793bffa2f8cd",
+      "role": "calibration",
+      "semantic_actions": [
+        "1",
+        "1"
+      ],
+      "source_role": "calibration",
+      "variant": "mixed_boolean_pairs"
+    },
+    {
+      "ast": {
+        "kind": "wide_modular_recurrence",
+        "modulus": 15,
+        "reported_states": 2,
+        "start": 11,
+        "step": -1
+      },
+      "base_trial_id": "v38-calibration-modular_arithmetic-a0197bd247d347d693cd",
+      "family": "modular_arithmetic",
+      "final_answer": "10",
+      "generator_index": 139,
+      "generator_seed": 20381124,
+      "horizon": 2,
+      "program_hash": "a0197bd247d347d693cd6b3298cbbb6257b1d00ead3c64d46ca1ec0c459e7cd3",
+      "prompt": "Modular recurrence: x0 = 11. For each step, subtract 1 modulo 15. Starting with x0, give x0 through x1 as exactly 2 space-separated integers. Answer only with the integers:",
+      "prompt_sha256": "536ee76b1d72b8abde0aa8636684ca02402c3aaf16dc2ec277b2757d989e5f26",
+      "role": "calibration",
+      "semantic_actions": [
+        "11",
+        "10"
+      ],
+      "source_role": "calibration",
+      "variant": "short_modular"
+    },
+    {
+      "ast": {
+        "kind": "wide_modular_recurrence",
+        "modulus": 13,
+        "reported_states": 2,
+        "start": 6,
+        "step": 2
+      },
+      "base_trial_id": "v38-calibration-modular_arithmetic-527de66b2591532716cf",
+      "family": "modular_arithmetic",
+      "final_answer": "8",
+      "generator_index": 162,
+      "generator_seed": 20381124,
+      "horizon": 2,
+      "program_hash": "527de66b2591532716cf0d7a45f951963c22ca37779542541033d7fdcfe42d4c",
+      "prompt": "Modular recurrence: x0 = 6. For each step, add 2 modulo 13. Starting with x0, give x0 through x1 as exactly 2 space-separated integers. Answer only with the integers:",
+      "prompt_sha256": "f79011db4d06c0b8ea53756b33ba0be6c8d35644e76b12d0828a52db2a01b4a9",
+      "role": "calibration",
+      "semantic_actions": [
+        "6",
+        "8"
+      ],
+      "source_role": "calibration",
+      "variant": "short_modular"
+    },
+    {
+      "ast": {
+        "kind": "wide_modular_recurrence",
+        "modulus": 14,
+        "reported_states": 2,
+        "start": 0,
+        "step": 2
+      },
+      "base_trial_id": "v38-calibration-modular_arithmetic-9689980d7f34549db823",
+      "family": "modular_arithmetic",
+      "final_answer": "2",
+      "generator_index": 181,
+      "generator_seed": 20381124,
+      "horizon": 2,
+      "program_hash": "9689980d7f34549db823cf36b27386e23d9932ef18d5874b013b296d388246e5",
+      "prompt": "Modular recurrence: x0 = 0. For each step, add 2 modulo 14. Starting with x0, give x0 through x1 as exactly 2 space-separated integers. Answer only with the integers:",
+      "prompt_sha256": "5dd8fbef0500534a9bffbdcf8d38a89d76aa23a8cf4c201407d201455319044a",
+      "role": "calibration",
+      "semantic_actions": [
+        "0",
+        "2"
+      ],
+      "source_role": "calibration",
+      "variant": "short_modular"
+    },
+    {
+      "ast": {
+        "kind": "wide_modular_recurrence",
+        "modulus": 13,
+        "reported_states": 2,
+        "start": 5,
+        "step": -1
+      },
+      "base_trial_id": "v38-calibration-modular_arithmetic-ec5ee2b3e4aa191432be",
+      "family": "modular_arithmetic",
+      "final_answer": "4",
+      "generator_index": 186,
+      "generator_seed": 20381124,
+      "horizon": 2,
+      "program_hash": "ec5ee2b3e4aa191432bea950d270621219f6a2ca7615c16bf59e50052af9b60e",
+      "prompt": "Modular recurrence: x0 = 5. For each step, subtract 1 modulo 13. Starting with x0, give x0 through x1 as exactly 2 space-separated integers. Answer only with the integers:",
+      "prompt_sha256": "23ae3d917ac24b66390d9b0558e51cf58d902867f85f9c46b65f4f9b89225038",
+      "role": "calibration",
+      "semantic_actions": [
+        "5",
+        "4"
+      ],
+      "source_role": "calibration",
+      "variant": "short_modular"
+    },
+    {
+      "ast": {
+        "horizon": 5,
+        "kind": "wide_directed_cycle",
+        "nodes": [
+          "F",
+          "E",
+          "K",
+          "C",
+          "J",
+          "A",
+          "H"
+        ],
+        "start": "E"
+      },
+      "base_trial_id": "v38-calibration-short_graph_traversal-0646c331dd179c9272cf",
+      "family": "short_graph_traversal",
+      "final_answer": "H",
+      "generator_index": 0,
+      "generator_seed": 20481127,
+      "horizon": 5,
+      "program_hash": "0646c331dd179c9272cfe98358a8acaf90132f60b2d50f654449c1a893f34632",
+      "prompt": "Directed edges: F->E, E->K, K->C, C->J, J->A, A->H, H->F. Start at E and follow one edge per step. Output the node after each of exactly 5 steps, space-separated, with no explanation:",
+      "prompt_sha256": "78f9ad2175b729cb04cd4fa21645905a34cf59feefde93c24945ece7da2120ee",
+      "role": "calibration",
+      "semantic_actions": [
+        "K",
+        "C",
+        "J",
+        "A",
+        "H"
+      ],
+      "source_role": "calibration",
+      "variant": "wide_directed_cycle"
+    },
+    {
+      "ast": {
+        "horizon": 5,
+        "kind": "wide_directed_cycle",
+        "nodes": [
+          "J",
+          "L",
+          "K",
+          "G",
+          "D"
+        ],
+        "start": "K"
+      },
+      "base_trial_id": "v38-calibration-short_graph_traversal-bf3c741268bdb6635cf6",
+      "family": "short_graph_traversal",
+      "final_answer": "K",
+      "generator_index": 1,
+      "generator_seed": 20481127,
+      "horizon": 5,
+      "program_hash": "bf3c741268bdb6635cf62b83491a5b254e6678bf29611a2c3815ed9c60f5c306",
+      "prompt": "Directed edges: J->L, L->K, K->G, G->D, D->J. Start at K and follow one edge per step. Output the node after each of exactly 5 steps, space-separated, with no explanation:",
+      "prompt_sha256": "c39ae05f3bfb1d485bc11c44accf13925b5a428269e3f1cfd931e01bac50d55b",
+      "role": "calibration",
+      "semantic_actions": [
+        "G",
+        "D",
+        "J",
+        "L",
+        "K"
+      ],
+      "source_role": "calibration",
+      "variant": "wide_directed_cycle"
+    },
+    {
+      "ast": {
+        "horizon": 5,
+        "kind": "wide_directed_cycle",
+        "nodes": [
+          "D",
+          "H",
+          "B"
+        ],
+        "start": "B"
+      },
+      "base_trial_id": "v38-calibration-short_graph_traversal-8703ecf76996734102bc",
+      "family": "short_graph_traversal",
+      "final_answer": "H",
+      "generator_index": 2,
+      "generator_seed": 20481127,
+      "horizon": 5,
+      "program_hash": "8703ecf76996734102bca4e2bb70cf4e0b77c2918c05a779f3c420633c21c240",
+      "prompt": "Directed edges: D->H, H->B, B->D. Start at B and follow one edge per step. Output the node after each of exactly 5 steps, space-separated, with no explanation:",
+      "prompt_sha256": "46f685eb71dda371020536991b8a590747abc8060de146f322e4ada1160c1628",
+      "role": "calibration",
+      "semantic_actions": [
+        "D",
+        "H",
+        "B",
+        "D",
+        "H"
+      ],
+      "source_role": "calibration",
+      "variant": "wide_directed_cycle"
+    },
+    {
+      "ast": {
+        "horizon": 5,
+        "kind": "wide_directed_cycle",
+        "nodes": [
+          "H",
+          "A",
+          "K",
+          "E",
+          "L",
+          "C",
+          "J"
+        ],
+        "start": "J"
+      },
+      "base_trial_id": "v38-calibration-short_graph_traversal-1cc6481f8491b9ae716f",
+      "family": "short_graph_traversal",
+      "final_answer": "L",
+      "generator_index": 3,
+      "generator_seed": 20481127,
+      "horizon": 5,
+      "program_hash": "1cc6481f8491b9ae716f12b797b039b282e573eada660ebde571dacb8e44ae4a",
+      "prompt": "Directed edges: H->A, A->K, K->E, E->L, L->C, C->J, J->H. Start at J and follow one edge per step. Output the node after each of exactly 5 steps, space-separated, with no explanation:",
+      "prompt_sha256": "9a3df79802913c504b297b52ba107209246c29dd86655256589eb022c8043f91",
+      "role": "calibration",
+      "semantic_actions": [
+        "H",
+        "A",
+        "K",
+        "E",
+        "L"
+      ],
+      "source_role": "calibration",
+      "variant": "wide_directed_cycle"
+    },
+    {
+      "ast": {
+        "kind": "clocked_finite_state_machine",
+        "start": "D",
+        "states": [
+          "K",
+          "D",
+          "A",
+          "H"
+        ],
+        "updates": 3
+      },
+      "base_trial_id": "v38-calibration-simple_state_transition-d9b9973107fc8997b8d1",
+      "family": "simple_state_transition",
+      "final_answer": "K",
+      "generator_index": 0,
+      "generator_seed": 20581130,
+      "horizon": 3,
+      "program_hash": "d9b9973107fc8997b8d15da1fb59e12b909039750ffdb9e485afb79535239ff9",
+      "prompt": "State-transition edges: K -> D, D -> A, A -> H, H -> K. Start at D and follow one transition per tick. Output the state after each of exactly 3 ticks, space-separated, with no explanation:",
+      "prompt_sha256": "c2089691d215e12192e3f7d951126bc163b7d37dc42a0ae55d4dea58cfa5840a",
+      "role": "calibration",
+      "semantic_actions": [
+        "A",
+        "H",
+        "K"
+      ],
+      "source_role": "calibration",
+      "variant": "clocked_cycle_machine"
+    },
+    {
+      "ast": {
+        "kind": "clocked_finite_state_machine",
+        "start": "I",
+        "states": [
+          "I",
+          "L",
+          "D",
+          "E",
+          "K",
+          "G"
+        ],
+        "updates": 3
+      },
+      "base_trial_id": "v38-calibration-simple_state_transition-1b06dd3a807412eaaa36",
+      "family": "simple_state_transition",
+      "final_answer": "E",
+      "generator_index": 1,
+      "generator_seed": 20581130,
+      "horizon": 3,
+      "program_hash": "1b06dd3a807412eaaa360c3cb5800641de0f4be491dc91b7312fef2e88be290a",
+      "prompt": "State-transition edges: I -> L, L -> D, D -> E, E -> K, K -> G, G -> I. Start at I and follow one transition per tick. Output the state after each of exactly 3 ticks, space-separated, with no explanation:",
+      "prompt_sha256": "119845395cdbdf5d70d84c3245dd89446190a03bba539bbba5c8aeceacd05a6a",
+      "role": "calibration",
+      "semantic_actions": [
+        "L",
+        "D",
+        "E"
+      ],
+      "source_role": "calibration",
+      "variant": "clocked_cycle_machine"
+    },
+    {
+      "ast": {
+        "kind": "clocked_finite_state_machine",
+        "start": "K",
+        "states": [
+          "H",
+          "K",
+          "E",
+          "J",
+          "I",
+          "C"
+        ],
+        "updates": 3
+      },
+      "base_trial_id": "v38-calibration-simple_state_transition-bcb316da879c400c363e",
+      "family": "simple_state_transition",
+      "final_answer": "I",
+      "generator_index": 3,
+      "generator_seed": 20581130,
+      "horizon": 3,
+      "program_hash": "bcb316da879c400c363ecf19c14f8ea1a4c9bfac33409053432745ff999923d5",
+      "prompt": "State-transition edges: H -> K, K -> E, E -> J, J -> I, I -> C, C -> H. Start at K and follow one transition per tick. Output the state after each of exactly 3 ticks, space-separated, with no explanation:",
+      "prompt_sha256": "b815ae06c48aa7d3ab8f8616c3328a7c5451e81eadb2324af00a23b4f7b48440",
+      "role": "calibration",
+      "semantic_actions": [
+        "E",
+        "J",
+        "I"
+      ],
+      "source_role": "calibration",
+      "variant": "clocked_cycle_machine"
+    },
+    {
+      "ast": {
+        "kind": "clocked_finite_state_machine",
+        "start": "F",
+        "states": [
+          "I",
+          "F",
+          "L",
+          "A",
+          "C"
+        ],
+        "updates": 3
+      },
+      "base_trial_id": "v38-calibration-simple_state_transition-45f273ac5343d839298f",
+      "family": "simple_state_transition",
+      "final_answer": "C",
+      "generator_index": 4,
+      "generator_seed": 20581130,
+      "horizon": 3,
+      "program_hash": "45f273ac5343d839298fda7cc15d6527bd751c749ec7a4a60b0d49458a0ecdd2",
+      "prompt": "State-transition edges: I -> F, F -> L, L -> A, A -> C, C -> I. Start at F and follow one transition per tick. Output the state after each of exactly 3 ticks, space-separated, with no explanation:",
+      "prompt_sha256": "b0858cbb10ed747295f88dd8c7d8a0ab10b2318af74fb5b4f8dc900ac1e96840",
+      "role": "calibration",
+      "semantic_actions": [
+        "L",
+        "A",
+        "C"
+      ],
+      "source_role": "calibration",
+      "variant": "clocked_cycle_machine"
+    },
+    {
+      "ast": {
+        "bindings": {
+          "W": 7,
+          "X": 4,
+          "Y": 0,
+          "Z": 1
+        },
+        "horizon": 2,
+        "kind": "wide_variable_lookup",
+        "queries": [
+          "X",
+          "Z"
+        ]
+      },
+      "base_trial_id": "v38-calibration-variable_binding-e2badc881ee09908473c",
+      "family": "variable_binding",
+      "final_answer": "1",
+      "generator_index": 0,
+      "generator_seed": 20681133,
+      "horizon": 2,
+      "program_hash": "e2badc881ee09908473cbc8bcd3207c5f1b05223a8b17a352fa638b19a703ab5",
+      "prompt": "Bindings: W=7, X=4, Y=0, Z=1. Queries: X Z. Output exactly 2 bound digits in order, space-separated, with no explanation:",
+      "prompt_sha256": "5d1f6ddd824f4b41717ecd9d1530e7a446552d8772fbbd13d7b800d3a0e2fd48",
+      "role": "calibration",
+      "semantic_actions": [
+        "4",
+        "1"
+      ],
+      "source_role": "calibration",
+      "variant": "wide_variable_lookup"
+    },
+    {
+      "ast": {
+        "bindings": {
+          "W": 2,
+          "X": 7,
+          "Y": 9,
+          "Z": 0
+        },
+        "horizon": 2,
+        "kind": "wide_variable_lookup",
+        "queries": [
+          "X",
+          "W"
+        ]
+      },
+      "base_trial_id": "v38-calibration-variable_binding-0fb8ee3ea0a8137b4d10",
+      "family": "variable_binding",
+      "final_answer": "2",
+      "generator_index": 1,
+      "generator_seed": 20681133,
+      "horizon": 2,
+      "program_hash": "0fb8ee3ea0a8137b4d10404a4a01478cbb392dd2e3a0bd7e6825ade54d0e74a5",
+      "prompt": "Bindings: W=2, X=7, Y=9, Z=0. Queries: X W. Output exactly 2 bound digits in order, space-separated, with no explanation:",
+      "prompt_sha256": "5c28b9dcf6a81248925bb02afc0b9004b61e761cd2e7e536717c5221e94ae7de",
+      "role": "calibration",
+      "semantic_actions": [
+        "7",
+        "2"
+      ],
+      "source_role": "calibration",
+      "variant": "wide_variable_lookup"
+    },
+    {
+      "ast": {
+        "bindings": {
+          "W": 5,
+          "X": 4,
+          "Y": 7,
+          "Z": 2
+        },
+        "horizon": 2,
+        "kind": "wide_variable_lookup",
+        "queries": [
+          "W",
+          "X"
+        ]
+      },
+      "base_trial_id": "v38-calibration-variable_binding-a91b6bd5e15e9d6f68a6",
+      "family": "variable_binding",
+      "final_answer": "4",
+      "generator_index": 2,
+      "generator_seed": 20681133,
+      "horizon": 2,
+      "program_hash": "a91b6bd5e15e9d6f68a6112da475fc90e7058675e56a595172abaf52b2a42b76",
+      "prompt": "Bindings: W=5, X=4, Y=7, Z=2. Queries: W X. Output exactly 2 bound digits in order, space-separated, with no explanation:",
+      "prompt_sha256": "b69f47a9cd07b6f0587bfd21b2eda8f8977eb445a0aa409e6ec560ab23998ee4",
+      "role": "calibration",
+      "semantic_actions": [
+        "5",
+        "4"
+      ],
+      "source_role": "calibration",
+      "variant": "wide_variable_lookup"
+    },
+    {
+      "ast": {
+        "bindings": {
+          "W": 4,
+          "X": 9,
+          "Y": 8,
+          "Z": 1
+        },
+        "horizon": 2,
+        "kind": "wide_variable_lookup",
+        "queries": [
+          "X",
+          "X"
+        ]
+      },
+      "base_trial_id": "v38-calibration-variable_binding-7dfd9fb439de3122eb32",
+      "family": "variable_binding",
+      "final_answer": "9",
+      "generator_index": 3,
+      "generator_seed": 20681133,
+      "horizon": 2,
+      "program_hash": "7dfd9fb439de3122eb3230453c758c1daa2c5868bdd3d811500c6c325550b6eb",
+      "prompt": "Bindings: W=4, X=9, Y=8, Z=1. Queries: X X. Output exactly 2 bound digits in order, space-separated, with no explanation:",
+      "prompt_sha256": "721a15ea5813d18c65687e0f393287d69bc303c1e73a676aa851e523cdb14506",
+      "role": "calibration",
+      "semantic_actions": [
+        "9",
+        "9"
+      ],
+      "source_role": "calibration",
+      "variant": "wide_variable_lookup"
+    }
+  ],
+  "model_response_observed_before_seal": false,
+  "role": "calibration"
+}

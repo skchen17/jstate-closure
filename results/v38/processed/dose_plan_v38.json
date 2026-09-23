@@ -1,0 +1,45 @@
+{
+  "conditions": [
+    "R000",
+    "R100",
+    "R010",
+    "R001",
+    "R110",
+    "R101",
+    "R011",
+    "R111"
+  ],
+  "interpolation": "recipient_REC + lambda*(donor_REC-recipient_REC) on donor Conv background",
+  "lambda_1_is_exact_natural_donor_REC": true,
+  "lambdas": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "model": "F",
+  "no_cross_model_dose_class": true,
+  "off_manifold_diagnostic_only": true,
+  "role": "development",
+  "state_ids": [
+    "v38-development-boolean_logic-881b7b0c717e35264d01",
+    "v38-development-boolean_logic-fc722012f4bcf150585b",
+    "v38-development-boolean_logic-2970362f8b3e1fd62a38",
+    "v38-development-boolean_logic-b96f9ce784a3d46ad735",
+    "v38-development-modular_arithmetic-24a6a9477f25fd2493e3",
+    "v38-development-modular_arithmetic-5b530a8dcf9531de17a1",
+    "v38-development-modular_arithmetic-5170aca2a1731b4d7154",
+    "v38-development-modular_arithmetic-e0991b408ceac254bc00",
+    "v38-development-short_graph_traversal-62c386206f2efe01e168",
+    "v38-development-short_graph_traversal-00c57e0ac4809f32846a",
+    "v38-development-short_graph_traversal-3dd1997973e61074d19c",
+    "v38-development-short_graph_traversal-39715023033b6b6103b2",
+    "v38-development-simple_state_transition-bbd609a85ccf62bbcb53",
+    "v38-development-simple_state_transition-948c19df1a4cff2e6da2",
+    "v38-development-simple_state_transition-97fe9926ca9c65e8416a",
+    "v38-development-simple_state_transition-470e131f5abe4ad5c565",
+    "v38-development-variable_binding-acd60907d706cea04bbf",
+    "v38-development-variable_binding-f69dee57e2994a64de59",
+    "v38-development-variable_binding-b6c45c16093c747f87e4",
+    "v38-development-variable_binding-d085a01254a8c294a275"
+  ]
+}

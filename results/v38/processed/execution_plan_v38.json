@@ -1,0 +1,396 @@
+{
+  "conditions": {
+    "R000": [],
+    "R001": [
+      "Q4"
+    ],
+    "R010": [
+      "Q3"
+    ],
+    "R011": [
+      "Q3",
+      "Q4"
+    ],
+    "R100": [
+      "Q2"
+    ],
+    "R101": [
+      "Q2",
+      "Q4"
+    ],
+    "R110": [
+      "Q2",
+      "Q3"
+    ],
+    "R111": [
+      "Q2",
+      "Q3",
+      "Q4"
+    ]
+  },
+  "denominator_floor": 1.0,
+  "finalist_priority": [
+    "ADDITIVE_TRAJECTORY",
+    "PAIRWISE_TRAJECTORY",
+    "HIGHER_ORDER_TRAJECTORY"
+  ],
+  "formulas": {
+    "I23": "E110 - E100 - E010",
+    "I234": "E111 - E110 - E101 - E011 + E100 + E010 + E001",
+    "I24": "E101 - E100 - E001",
+    "I34": "E011 - E010 - E001",
+    "additive": "E100 + E010 + E001",
+    "second_order": "E110 + E101 + E011 - E100 - E010 - E001",
+    "source_note": "Standard inclusion-exclusion resolves formatting artifacts in user-pasted expressions."
+  },
+  "gates": {
+    "high_level_gate": {
+      "families_required": 4,
+      "median_donor_error_reduction_min": 0.2,
+      "positive_fraction_min": 0.8
+    },
+    "q234_reconstruction_gate": {
+      "families_required": 4,
+      "median_cosine_min": 0.8,
+      "median_fraction_min": 0.5
+    }
+  },
+  "groups": {
+    "F": {
+      "Q1": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Q2": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "Q3": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "Q4": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    "Q": {
+      "Q1": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "Q2": [
+        8,
+        9,
+        10,
+        12,
+        13,
+        14
+      ],
+      "Q3": [
+        16,
+        17,
+        18,
+        20,
+        21,
+        22
+      ],
+      "Q4": [
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ]
+    }
+  },
+  "independent_final_rule": "Open only after one shared preregistered composition class passes development and validation in both models. Choose the simplest passing class, before any independent-final response is observed.",
+  "response_observed_before_freeze": false,
+  "roles": {
+    "calibration": [
+      "v38-calibration-boolean_logic-d0c2bae10f3585158202",
+      "v38-calibration-boolean_logic-318d6d6c92f591305175",
+      "v38-calibration-boolean_logic-6a9ba6fec12954018295",
+      "v38-calibration-boolean_logic-8c4d0aa403e852266b27",
+      "v38-calibration-modular_arithmetic-a0197bd247d347d693cd",
+      "v38-calibration-modular_arithmetic-527de66b2591532716cf",
+      "v38-calibration-modular_arithmetic-9689980d7f34549db823",
+      "v38-calibration-modular_arithmetic-ec5ee2b3e4aa191432be",
+      "v38-calibration-short_graph_traversal-0646c331dd179c9272cf",
+      "v38-calibration-short_graph_traversal-bf3c741268bdb6635cf6",
+      "v38-calibration-short_graph_traversal-8703ecf76996734102bc",
+      "v38-calibration-short_graph_traversal-1cc6481f8491b9ae716f",
+      "v38-calibration-simple_state_transition-d9b9973107fc8997b8d1",
+      "v38-calibration-simple_state_transition-1b06dd3a807412eaaa36",
+      "v38-calibration-simple_state_transition-bcb316da879c400c363e",
+      "v38-calibration-simple_state_transition-45f273ac5343d839298f",
+      "v38-calibration-variable_binding-e2badc881ee09908473c",
+      "v38-calibration-variable_binding-0fb8ee3ea0a8137b4d10",
+      "v38-calibration-variable_binding-a91b6bd5e15e9d6f68a6",
+      "v38-calibration-variable_binding-7dfd9fb439de3122eb32"
+    ],
+    "development": [
+      "v38-development-boolean_logic-881b7b0c717e35264d01",
+      "v38-development-boolean_logic-fc722012f4bcf150585b",
+      "v38-development-boolean_logic-2970362f8b3e1fd62a38",
+      "v38-development-boolean_logic-b96f9ce784a3d46ad735",
+      "v38-development-boolean_logic-2341dc557a772970db22",
+      "v38-development-boolean_logic-19e5e8c1ece78197933a",
+      "v38-development-boolean_logic-d0a0c8f889f7cb438794",
+      "v38-development-boolean_logic-91640db76276bc6b27d3",
+      "v38-development-boolean_logic-7919117631ce661ff91e",
+      "v38-development-boolean_logic-d7d11dfa4e6f4407b180",
+      "v38-development-boolean_logic-15edec1ffbdebae875bc",
+      "v38-development-boolean_logic-f19c463adaca5b1bb53c",
+      "v38-development-boolean_logic-7500f04e55f81adc7d89",
+      "v38-development-boolean_logic-9fefc25560faf68cdf38",
+      "v38-development-boolean_logic-f0abc8094f97f37238e7",
+      "v38-development-boolean_logic-694f4cc5816be48be79a",
+      "v38-development-modular_arithmetic-24a6a9477f25fd2493e3",
+      "v38-development-modular_arithmetic-5b530a8dcf9531de17a1",
+      "v38-development-modular_arithmetic-5170aca2a1731b4d7154",
+      "v38-development-modular_arithmetic-e0991b408ceac254bc00",
+      "v38-development-modular_arithmetic-30975a20554b57552ea9",
+      "v38-development-modular_arithmetic-0435741036cbaef2876c",
+      "v38-development-modular_arithmetic-6de95ee89b8cf4a9af17",
+      "v38-development-modular_arithmetic-5a0eeaf3615ce83aca3a",
+      "v38-development-modular_arithmetic-e0b592846709f46b47db",
+      "v38-development-modular_arithmetic-d400c80d869fc68ffc1b",
+      "v38-development-modular_arithmetic-803744ce6d49ed8b1eec",
+      "v38-development-modular_arithmetic-bfc5fe49410f6b575b93",
+      "v38-development-modular_arithmetic-fb56638ae172b0c47853",
+      "v38-development-modular_arithmetic-a0dd8079312e63b6335b",
+      "v38-development-modular_arithmetic-270c8e558fc034935718",
+      "v38-development-modular_arithmetic-a9b5043d1b68c2ad8e48",
+      "v38-development-short_graph_traversal-62c386206f2efe01e168",
+      "v38-development-short_graph_traversal-00c57e0ac4809f32846a",
+      "v38-development-short_graph_traversal-3dd1997973e61074d19c",
+      "v38-development-short_graph_traversal-39715023033b6b6103b2",
+      "v38-development-short_graph_traversal-6643f3804baccc3d130c",
+      "v38-development-short_graph_traversal-28e8e7f268ed92ea8375",
+      "v38-development-short_graph_traversal-e3102e44759adebce0ee",
+      "v38-development-short_graph_traversal-0876b9168cc73ec48b86",
+      "v38-development-short_graph_traversal-c9cfd448d9c0f0ff6988",
+      "v38-development-short_graph_traversal-bbc9acec74d13b0bc0eb",
+      "v38-development-short_graph_traversal-d6fffe79fd916c69e7c4",
+      "v38-development-short_graph_traversal-a23e44d44ae7f3637b1d",
+      "v38-development-short_graph_traversal-81315bd321e0ae79a8f9",
+      "v38-development-short_graph_traversal-9b60f1bbf658a3e7f60d",
+      "v38-development-short_graph_traversal-aace0d78514070ecbcc1",
+      "v38-development-short_graph_traversal-07e38d237b9b0f9025e3",
+      "v38-development-simple_state_transition-bbd609a85ccf62bbcb53",
+      "v38-development-simple_state_transition-948c19df1a4cff2e6da2",
+      "v38-development-simple_state_transition-97fe9926ca9c65e8416a",
+      "v38-development-simple_state_transition-470e131f5abe4ad5c565",
+      "v38-development-simple_state_transition-696f084684d0e3209dfb",
+      "v38-development-simple_state_transition-2c7a66cc4dc7ed1c8401",
+      "v38-development-simple_state_transition-dcf908a0660226e3da4b",
+      "v38-development-simple_state_transition-3b2667330aada586293e",
+      "v38-development-simple_state_transition-97d0d292d87e8c08b483",
+      "v38-development-simple_state_transition-cc260f68d6ffa38d9943",
+      "v38-development-simple_state_transition-4b856db5ea467b1ebc00",
+      "v38-development-simple_state_transition-9d9330976fa3841e11ec",
+      "v38-development-simple_state_transition-82f8d84903fc4fe2180c",
+      "v38-development-simple_state_transition-84cf4181364eba7cae84",
+      "v38-development-simple_state_transition-46d36646a46b9298018c",
+      "v38-development-simple_state_transition-5cbde009794299a1f52a",
+      "v38-development-variable_binding-acd60907d706cea04bbf",
+      "v38-development-variable_binding-f69dee57e2994a64de59",
+      "v38-development-variable_binding-b6c45c16093c747f87e4",
+      "v38-development-variable_binding-d085a01254a8c294a275",
+      "v38-development-variable_binding-e9b3090df89f4b275b3c",
+      "v38-development-variable_binding-ebb49e0ce0e97743d305",
+      "v38-development-variable_binding-7a4af90c78a761c77c9e",
+      "v38-development-variable_binding-e57af0956f1e9d516c68",
+      "v38-development-variable_binding-ac86c5f6823552868f7a",
+      "v38-development-variable_binding-bb3f112117e51ca59a4e",
+      "v38-development-variable_binding-6149da0c757305957294",
+      "v38-development-variable_binding-8532d077445bc70cc955",
+      "v38-development-variable_binding-fe19f8c53473f052d33f",
+      "v38-development-variable_binding-dba53d848462bac7e718",
+      "v38-development-variable_binding-495fa49c9e27b30ab821",
+      "v38-development-variable_binding-7d532845838dda361a70"
+    ],
+    "independent_final": [
+      "v38-independent_final-boolean_logic-58b0301579fb550842b5",
+      "v38-independent_final-boolean_logic-123510f1dc39995bf535",
+      "v38-independent_final-boolean_logic-144e4e2993c86221045b",
+      "v38-independent_final-boolean_logic-cf92d000ee55aadc254c",
+      "v38-independent_final-boolean_logic-108c68c449da5c2d1a54",
+      "v38-independent_final-boolean_logic-e6543ae9b16bc9408dd9",
+      "v38-independent_final-boolean_logic-7b7962f5387b8d51db3d",
+      "v38-independent_final-boolean_logic-494675ee804109fb3e07",
+      "v38-independent_final-modular_arithmetic-22bcca2541c606b76cd8",
+      "v38-independent_final-modular_arithmetic-9cbdbf2e2170f10de65e",
+      "v38-independent_final-modular_arithmetic-3f0b600ca08bcb49ca8a",
+      "v38-independent_final-modular_arithmetic-329416a87fba5b02fc2f",
+      "v38-independent_final-modular_arithmetic-34d0950a2b71c3923fb6",
+      "v38-independent_final-modular_arithmetic-34a35a9a9bb7a67e2192",
+      "v38-independent_final-modular_arithmetic-f6bf11b70957e8c86806",
+      "v38-independent_final-modular_arithmetic-feac2603cc1aa134ecd7",
+      "v38-independent_final-short_graph_traversal-729b46603e760c7cfab8",
+      "v38-independent_final-short_graph_traversal-2e57469f35d3d7c132e4",
+      "v38-independent_final-short_graph_traversal-fe8741a49fbd48cf7057",
+      "v38-independent_final-short_graph_traversal-c95a286c8ce93a7d93b5",
+      "v38-independent_final-short_graph_traversal-9e295b354be8d3eb2d77",
+      "v38-independent_final-short_graph_traversal-a75d042bcffcd167b439",
+      "v38-independent_final-short_graph_traversal-3cd17fa45b308b20f67d",
+      "v38-independent_final-short_graph_traversal-685a201cfd8047b367ea",
+      "v38-independent_final-simple_state_transition-7a13728c43c1991f0c3e",
+      "v38-independent_final-simple_state_transition-a2df3e2162d975bca73b",
+      "v38-independent_final-simple_state_transition-ad1586c8e0a6a2437de8",
+      "v38-independent_final-simple_state_transition-f7517af71b5f054cec7a",
+      "v38-independent_final-simple_state_transition-448f41519294449302b6",
+      "v38-independent_final-simple_state_transition-0841cd113fde9e36b959",
+      "v38-independent_final-simple_state_transition-fdcaa25cbf672723282e",
+      "v38-independent_final-simple_state_transition-03235773b8ec0b525aaa",
+      "v38-independent_final-variable_binding-b62924e7808acdb7d5e6",
+      "v38-independent_final-variable_binding-fe500be1aafdfe4c5d28",
+      "v38-independent_final-variable_binding-56ddbd3e76ff654a9173",
+      "v38-independent_final-variable_binding-652b1d850b3b729c8444",
+      "v38-independent_final-variable_binding-62a92cee6101420ea21c",
+      "v38-independent_final-variable_binding-2c38f23e5ffe33c587a4",
+      "v38-independent_final-variable_binding-40766a62d7c5b36556fc",
+      "v38-independent_final-variable_binding-bc02d23848a95c076cea"
+    ],
+    "validation": [
+      "v38-validation-boolean_logic-beee608c84f42b1cafe0",
+      "v38-validation-boolean_logic-75f399bc291bbbaf1894",
+      "v38-validation-boolean_logic-a366e4961b9a05039560",
+      "v38-validation-boolean_logic-cb197741c4487b62c455",
+      "v38-validation-boolean_logic-c8c1bb6f7d8d3314cf85",
+      "v38-validation-boolean_logic-3fc568e31291c81339f3",
+      "v38-validation-boolean_logic-01a638e169c881941f51",
+      "v38-validation-boolean_logic-fe18b304cda12a5bc857",
+      "v38-validation-modular_arithmetic-cd219ba0688036db1593",
+      "v38-validation-modular_arithmetic-1be747fabbd232daed16",
+      "v38-validation-modular_arithmetic-fcf5a583de6e6c57c60d",
+      "v38-validation-modular_arithmetic-b2a2a543af8bb9906559",
+      "v38-validation-modular_arithmetic-7012655727ecd5bcb21b",
+      "v38-validation-modular_arithmetic-421065435794afe8a61d",
+      "v38-validation-modular_arithmetic-401513decfc8a53980ca",
+      "v38-validation-modular_arithmetic-af69849b4ac645dba299",
+      "v38-validation-short_graph_traversal-621e5baafc6540c219a7",
+      "v38-validation-short_graph_traversal-90e3632719e952de865a",
+      "v38-validation-short_graph_traversal-b1bd699998c5da91a62c",
+      "v38-validation-short_graph_traversal-bb7ed0119a8cf9588907",
+      "v38-validation-short_graph_traversal-eaf071772e89bbe5a82a",
+      "v38-validation-short_graph_traversal-222b6b40122a0ca3dea2",
+      "v38-validation-short_graph_traversal-022357c668b9048e7482",
+      "v38-validation-short_graph_traversal-bf07764bf7adcd316d26",
+      "v38-validation-simple_state_transition-1e6a963f86ec00d17228",
+      "v38-validation-simple_state_transition-934f74c9b02eb06becd4",
+      "v38-validation-simple_state_transition-a7cef5cf2ad1a616b678",
+      "v38-validation-simple_state_transition-f4606d53af67c09de47a",
+      "v38-validation-simple_state_transition-97b7248e1f558fd55ce1",
+      "v38-validation-simple_state_transition-ad96a616050d7d4afb44",
+      "v38-validation-simple_state_transition-5aded41cc63222de3506",
+      "v38-validation-simple_state_transition-596547ed643b6e205a0a",
+      "v38-validation-variable_binding-bbf7d79a6dd571d35e54",
+      "v38-validation-variable_binding-dd1f91c566a2df988b00",
+      "v38-validation-variable_binding-eb2c716864c3b9aa2a41",
+      "v38-validation-variable_binding-ee5e508c3a734f5c5347",
+      "v38-validation-variable_binding-487ca197109fd3b2b981",
+      "v38-validation-variable_binding-a5897d6272beeb9f88b1",
+      "v38-validation-variable_binding-1468797691089a251f5b",
+      "v38-validation-variable_binding-c244659d407c3c72461a"
+    ]
+  },
+  "stage_order": [
+    [
+      "R000",
+      "R100",
+      "R010",
+      "R001"
+    ],
+    [
+      "R110",
+      "R101",
+      "R011"
+    ],
+    [
+      "additive_prediction",
+      "second_order_prediction"
+    ],
+    [
+      "R111"
+    ]
+  ],
+  "task_subsets": {
+    "development": {
+      "boolean_logic": [
+        "v38-development-boolean_logic-881b7b0c717e35264d01",
+        "v38-development-boolean_logic-fc722012f4bcf150585b",
+        "v38-development-boolean_logic-2970362f8b3e1fd62a38",
+        "v38-development-boolean_logic-b96f9ce784a3d46ad735"
+      ],
+      "modular_arithmetic": [
+        "v38-development-modular_arithmetic-24a6a9477f25fd2493e3",
+        "v38-development-modular_arithmetic-5b530a8dcf9531de17a1",
+        "v38-development-modular_arithmetic-5170aca2a1731b4d7154",
+        "v38-development-modular_arithmetic-e0991b408ceac254bc00"
+      ],
+      "short_graph_traversal": [
+        "v38-development-short_graph_traversal-62c386206f2efe01e168",
+        "v38-development-short_graph_traversal-00c57e0ac4809f32846a",
+        "v38-development-short_graph_traversal-3dd1997973e61074d19c",
+        "v38-development-short_graph_traversal-39715023033b6b6103b2"
+      ],
+      "simple_state_transition": [
+        "v38-development-simple_state_transition-bbd609a85ccf62bbcb53",
+        "v38-development-simple_state_transition-948c19df1a4cff2e6da2",
+        "v38-development-simple_state_transition-97fe9926ca9c65e8416a",
+        "v38-development-simple_state_transition-470e131f5abe4ad5c565"
+      ],
+      "variable_binding": [
+        "v38-development-variable_binding-acd60907d706cea04bbf",
+        "v38-development-variable_binding-f69dee57e2994a64de59",
+        "v38-development-variable_binding-b6c45c16093c747f87e4",
+        "v38-development-variable_binding-d085a01254a8c294a275"
+      ]
+    },
+    "validation": {
+      "boolean_logic": [
+        "v38-validation-boolean_logic-beee608c84f42b1cafe0",
+        "v38-validation-boolean_logic-75f399bc291bbbaf1894"
+      ],
+      "modular_arithmetic": [
+        "v38-validation-modular_arithmetic-cd219ba0688036db1593",
+        "v38-validation-modular_arithmetic-1be747fabbd232daed16"
+      ],
+      "short_graph_traversal": [
+        "v38-validation-short_graph_traversal-621e5baafc6540c219a7",
+        "v38-validation-short_graph_traversal-90e3632719e952de865a"
+      ],
+      "simple_state_transition": [
+        "v38-validation-simple_state_transition-1e6a963f86ec00d17228",
+        "v38-validation-simple_state_transition-934f74c9b02eb06becd4"
+      ],
+      "variable_binding": [
+        "v38-validation-variable_binding-bbf7d79a6dd571d35e54",
+        "v38-validation-variable_binding-dd1f91c566a2df988b00"
+      ]
+    }
+  }
+}

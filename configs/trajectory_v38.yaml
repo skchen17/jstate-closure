@@ -1,0 +1,64 @@
+protocol_version: trajectory_composition_v38
+name: Trajectory-Level Causal Composition of Persistent State
+subtitle: How Do Distributed REC-State Effects Compose into Future Behavior?
+parent_commit: ef075e85025eb634b0a02fecadc16c8a4a6811e9
+model_spec_source: configs/functional_mediation_v34.yaml
+models: [Q, F]
+seed: 380138
+sample_pool_seeds: {calibration: 20281121, development: 20281122, validation: 20281123, independent_final: 20281124}
+families: [boolean_logic, modular_arithmetic, short_graph_traversal, simple_state_transition, variable_binding]
+roles_per_family: {calibration: 4, development: 16, validation: 8, independent_final: 8}
+panel_source: data/v38/{role}_pool_v38.json
+pool_policy: >-
+  All four roles use newly generated, historical-disjoint task programs and
+  prompts. Validation and independent final are separately sealed before any
+  V38 formal intervention outcomes. V18 training-source states are excluded.
+relative_depth_groups:
+  Q1: [0, 1, 2, 3, 4, 5]
+  Q2: [6, 7, 8, 9, 10, 11]
+  Q3: [12, 13, 14, 15, 16, 17]
+  Q4: [18, 19, 20, 21, 22, 23]
+primary_groups: [Q2, Q3, Q4]
+primary_baseline: donor_Conv_recipient_REC_recipient_KV
+conditions:
+  R000: []
+  R100: [Q2]
+  R010: [Q3]
+  R001: [Q4]
+  R110: [Q2, Q3]
+  R101: [Q2, Q4]
+  R011: [Q3, Q4]
+  R111: [Q2, Q3, Q4]
+stage_order:
+  - [R000, R100, R010, R001]
+  - [R110, R101, R011]
+  - [additive_prediction, second_order_prediction]
+  - [R111]
+token_selection: {rank_max: 8192, future_probes: 6, natural_branches: 3, response_blind: true}
+high_level_gate: {positive_fraction_min: 0.80, median_donor_error_reduction_min: 0.20, families_required: 4}
+q234_reconstruction_gate: {median_fraction_min: 0.50, median_cosine_min: 0.80, families_required: 4}
+composition_gates:
+  additive: {relative_error_max: 0.30, cosine_min: 0.90, families_required: 4, second_order_improvement_material_min: 0.20}
+  pairwise: {relative_error_max: 0.30, cosine_min: 0.90, improvement_min: 0.30, families_required: 4}
+  higher_order: {threeway_fraction_min: 0.20, projected_sign_stability_min: 0.75, families_required: 4}
+effect_norm_floor: 1.0
+benefit_denominator_absolute_floor: 1.0
+bootstrap: {unit: state, iterations: 2000, lower_tail: 0.025, seed: 380238}
+primary_interaction_formulas:
+  additive: E100 + E010 + E001
+  I23: E110 - E100 - E010
+  I24: E101 - E100 - E001
+  I34: E011 - E010 - E001
+  second_order: E110 + E101 + E011 - E100 - E010 - E001
+  I234: E111 - E110 - E101 - E011 + E100 + E010 + E001
+  source_note: Standard inclusion-exclusion resolves formatting artifacts in user-pasted expressions.
+q1_control_per_family: {development: 4, validation: 2}
+task_phase_b_per_family: {development: 4, validation: 2}
+dose_lambdas: [0.25, 0.50, 1.00]
+dose_diagnostic_only: true
+finalist_priority: [ADDITIVE_TRAJECTORY, PAIRWISE_TRAJECTORY, HIGHER_ORDER_TRAJECTORY]
+independent_final_rule: >-
+  Open only after one shared preregistered composition class passes development
+  and validation in both models. Choose the simplest passing class, before any
+  independent-final response is observed.
+historical_reports_immutable: true

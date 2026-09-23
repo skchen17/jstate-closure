@@ -1212,3 +1212,9 @@ V35 审计追加修订：Q2+Q3+Q4 在开发/验证两模型均过强门槛，但
 
 完整专题和机器记录：`reports/V37_COMPLETE_REPORT.md`、`reports/V37_ALL_REPORTS.md`、`results/v37/processed/v37_integrity_index.json`。
 <!-- V37_END -->
+
+<!-- V38_START -->
+## V38 — Trajectory-Level Causal Composition of Persistent State
+
+Q/F both replicate REC–Conv high-level benefit and natural Q234 effect. F has a replicated model-specific higher-order trajectory term; Q has no preregistered class, so no shared class and no independent-final opening. Task-grounded and temporal claims remain unestablished. See `reports/V38_COMPLETE_REPORT.md` and `reports/V38_ALL_REPORTS.md`.
+<!-- V38_END -->

@@ -1,0 +1,30 @@
+{
+  "distribution_shift_disclose": "Modular arithmetic is horizon 2 in calibration/development and horizon 3 in validation/final.",
+  "formal_outcomes_observed_before_plan": false,
+  "historical_program_prompt_overlap_allowed": false,
+  "horizon_override": {
+    "independent_final": {
+      "modular_arithmetic": 3
+    },
+    "validation": {
+      "modular_arithmetic": 3
+    }
+  },
+  "other_family_horizons_unchanged": true,
+  "previous_roles_unchanged": [
+    "calibration",
+    "development"
+  ],
+  "reason": "Historical-disjoint horizon-2 modular program space exhausted after 4 of 8 validation candidates; no model responses had been observed.",
+  "remaining_roles": [
+    "validation",
+    "independent_final"
+  ],
+  "schema_version": 1,
+  "selection_seeds_unchanged": {
+    "calibration": 20281121,
+    "development": 20281122,
+    "independent_final": 20281124,
+    "validation": 20281123
+  }
+}

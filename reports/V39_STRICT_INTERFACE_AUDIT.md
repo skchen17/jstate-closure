@@ -1,0 +1,3 @@
+# V39 — Strict Interface Audit
+
+V39 calibration: Falcon 20 and Qwen 20 states each passed native/instrumented bitwise replay, exact REC writeback and actual eight-condition formula equality. Maximum algebra residuals: F 6.66e-16, Q 1.78e-15. Expanded trace hook passed 20/20 Falcon and 20/20 Qwen bitwise tests; Falcon primitive hook passed 480/480 state×layer tests. Six-probe endpoint predictions were frozen before R111; recipient KV and donor Conv were unchanged by REC subset interventions. Off-manifold shuffling/sign-flip and interface-copy controls are explicitly non-natural. This is a V39-specific audit, not a reuse of V36 results.

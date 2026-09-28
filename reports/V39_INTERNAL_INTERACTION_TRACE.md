@@ -1,0 +1,3 @@
+# V39 — Internal Interaction Trace
+
+One frozen future probe per state was traced under all eight conditions for 20 development states/model. Falcon: 11520 state×layer×stage measurements, 26 stage/layer pairs satisfy the 0.20 ratio, 0.75 state-prevalence, 4-family and next-layer-persistence rule. Earliest persistent stages: {"ATTENTION_OUTPUT": 19, "B": 20, "C": 21, "DA": 20, "MLP_OUTPUT": 22, "POSTCONV_B_GROUP": 20, "POSTCONV_C_GROUP": 21, "POSTCONV_INPUT": 20, "POSTCONV_X": 21, "TRANSFORMED_CONTROL": 20, "TRUE_UPDATE": 20, "X": 21}. Qwen: 4480 measurements and 0 qualifying stage/layer pairs. Actual I234 and E tensors for every traced state/layer/stage are in hash-indexed NPZ banks. This is descriptive localization, not mediation.

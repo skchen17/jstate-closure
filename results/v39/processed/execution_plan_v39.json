@@ -1,0 +1,428 @@
+{
+  "candidate_order": [
+    "F1_POSTCONV_READ_FACTOR_C",
+    "F2_POSTCONV_UPDATE_FACTORS_X_B",
+    "F3_DECAY_CONTROL_DT_DA",
+    "F4_RECURRENT_STATE_INPUT_S",
+    "F5_RECURRENT_UPDATE_DBX",
+    "F6_OUTPUT_GATE",
+    "F7_COMBINED_RECURRENCE_INPUTS",
+    "F8_RESIDUAL_INPUT_CONTEXT"
+  ],
+  "candidate_selection_policy": "pilot calibration or predeclared development discovery subset only; freeze one finalist before confirmatory development intervention outcomes",
+  "conditions": {
+    "R000": [],
+    "R001": [
+      "Q4"
+    ],
+    "R010": [
+      "Q3"
+    ],
+    "R011": [
+      "Q3",
+      "Q4"
+    ],
+    "R100": [
+      "Q2"
+    ],
+    "R101": [
+      "Q2",
+      "Q4"
+    ],
+    "R110": [
+      "Q2",
+      "Q3"
+    ],
+    "R111": [
+      "Q2",
+      "Q3",
+      "Q4"
+    ]
+  },
+  "denominator_floor": 1.0,
+  "finalist_priority": "earliest primitive factor family passing screening removal; no validation-based selection",
+  "formulas": {
+    "cosine": "<I234,E111>/(||I234||||E111||)",
+    "f": "||I234||/||E111||",
+    "p": "<I234,E111>/||E111||^2",
+    "second_order_prediction": "E110+E101+E011-E100-E010-E001",
+    "threeway": "E111-E110-E101-E011+E100+E010+E001"
+  },
+  "gates": {
+    "falcon_higher_order_gate": {
+      "families_required": 4,
+      "norm_fraction_min": 0.3,
+      "second_order_relative_error_min_exclusive": 0.3,
+      "sign_stability_min": 0.75
+    },
+    "high_level_gate": {
+      "families_required": 4,
+      "median_donor_error_reduction_min": 0.2,
+      "positive_fraction_min": 0.8
+    },
+    "internal_emergence_gate": {
+      "families_required": 4,
+      "fraction_min": 0.2,
+      "next_boundary_persistence_required": true,
+      "state_prevalence_min": 0.75
+    },
+    "necessity_gate": {
+      "families_required": 4,
+      "median_remaining_norm_ratio_max": 0.7,
+      "median_removed_direction_min": 0.5
+    },
+    "q234_gate": {
+      "families_required": 4,
+      "median_cosine_min": 0.8,
+      "median_fraction_min": 0.5
+    },
+    "q4_rotation_gate": {
+      "downstream_rotation_fraction_min": 0.5,
+      "families_required": 4,
+      "local_direction_cosine_min": 0.9
+    },
+    "sufficiency_gate": {
+      "families_required": 4,
+      "median_cosine_min": 0.8,
+      "median_restored_direction_min": 0.5
+    }
+  },
+  "groups": {
+    "F": {
+      "Q1": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Q2": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "Q3": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "Q4": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    "Q": {
+      "Q1": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "Q2": [
+        8,
+        9,
+        10,
+        12,
+        13,
+        14
+      ],
+      "Q3": [
+        16,
+        17,
+        18,
+        20,
+        21,
+        22
+      ],
+      "Q4": [
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ]
+    }
+  },
+  "independent_final_rule": "Falcon only after high-level, Q234, higher-order and one frozen primitive mediator each pass development and validation; Qwen remains sealed absent separate qualification",
+  "internal_trace_subsets": {
+    "development": {
+      "boolean_logic": [
+        "v39-development-boolean_logic-5e37805a9a2f1339a239",
+        "v39-development-boolean_logic-e3b30159cd622ad850f7",
+        "v39-development-boolean_logic-7e978f393ca4649afda3",
+        "v39-development-boolean_logic-a5e6896e1196b436dc57"
+      ],
+      "modular_arithmetic": [
+        "v39-development-modular_arithmetic-e95e958638f649cd004d",
+        "v39-development-modular_arithmetic-2455eddf38b892e8efb1",
+        "v39-development-modular_arithmetic-12b198ddf157f3ba7408",
+        "v39-development-modular_arithmetic-de7e7da020f2154d45e8"
+      ],
+      "short_graph_traversal": [
+        "v39-development-short_graph_traversal-4ea58276f7def4985fdb",
+        "v39-development-short_graph_traversal-024eaadbce9faa4caeb2",
+        "v39-development-short_graph_traversal-bd874bd45909436e2837",
+        "v39-development-short_graph_traversal-56bdaea953fc61202cc9"
+      ],
+      "simple_state_transition": [
+        "v39-development-simple_state_transition-56d3c2c8675b52143c21",
+        "v39-development-simple_state_transition-ef8c28ee1642f7f832c6",
+        "v39-development-simple_state_transition-97234ea364ccde843a53",
+        "v39-development-simple_state_transition-68f713ae6648c18caa1f"
+      ],
+      "variable_binding": [
+        "v39-development-variable_binding-b9f50a80cc5ddfa06cef",
+        "v39-development-variable_binding-ea198b01034df257c72b",
+        "v39-development-variable_binding-43f46aeb4558ba9d8581",
+        "v39-development-variable_binding-6f890648591da72e691a"
+      ]
+    },
+    "validation": {
+      "boolean_logic": [
+        "v39-validation-boolean_logic-ffcc395ad659e21ffa54",
+        "v39-validation-boolean_logic-42f6bd4ca2d71242a449"
+      ],
+      "modular_arithmetic": [
+        "v39-validation-modular_arithmetic-1b601e4db654629eb15b",
+        "v39-validation-modular_arithmetic-698d99ac616bfae5ce12"
+      ],
+      "short_graph_traversal": [
+        "v39-validation-short_graph_traversal-4b1fdb77b4957073cc10",
+        "v39-validation-short_graph_traversal-8317b8994bc03a0cf967"
+      ],
+      "simple_state_transition": [
+        "v39-validation-simple_state_transition-bdda98c38b8f91890b75",
+        "v39-validation-simple_state_transition-a7af359b9b7f5ce19197"
+      ],
+      "variable_binding": [
+        "v39-validation-variable_binding-3b62786da1251a2cd6e9",
+        "v39-validation-variable_binding-cbb7268109b322324057"
+      ]
+    }
+  },
+  "response_observed_before_freeze": false,
+  "roles": {
+    "calibration": [
+      "v39-calibration-boolean_logic-4e001e02861de5631651",
+      "v39-calibration-boolean_logic-a9ef45fffd5ea7ec7a6a",
+      "v39-calibration-boolean_logic-db7faae9d44cc530c1f3",
+      "v39-calibration-boolean_logic-1adf266cff8c906f932e",
+      "v39-calibration-modular_arithmetic-754d2fa97c989c6d6a70",
+      "v39-calibration-modular_arithmetic-5a43cbe299c6512b730a",
+      "v39-calibration-modular_arithmetic-576009920bc9bb78df0a",
+      "v39-calibration-modular_arithmetic-5a4d5f4ffbc81352650a",
+      "v39-calibration-short_graph_traversal-36c176073f9dc37e9e30",
+      "v39-calibration-short_graph_traversal-a138ed60ab09d88d961e",
+      "v39-calibration-short_graph_traversal-5e9c68789ba30166b53a",
+      "v39-calibration-short_graph_traversal-a462858e14f7bc929ca4",
+      "v39-calibration-simple_state_transition-85766ccdc9772c396237",
+      "v39-calibration-simple_state_transition-b607d1505be13a7b4121",
+      "v39-calibration-simple_state_transition-c73d699f3cd784333a31",
+      "v39-calibration-simple_state_transition-3f152b0e3b841136b141",
+      "v39-calibration-variable_binding-1ede29bab5b1b62e8986",
+      "v39-calibration-variable_binding-c6dab3a11c2e3fb6379e",
+      "v39-calibration-variable_binding-24f53dc7e007842705c2",
+      "v39-calibration-variable_binding-6fdffb9dd818e79fb48e"
+    ],
+    "development": [
+      "v39-development-boolean_logic-5e37805a9a2f1339a239",
+      "v39-development-boolean_logic-e3b30159cd622ad850f7",
+      "v39-development-boolean_logic-7e978f393ca4649afda3",
+      "v39-development-boolean_logic-a5e6896e1196b436dc57",
+      "v39-development-boolean_logic-6e2f2ca5f35b655580df",
+      "v39-development-boolean_logic-d984d4bd0e45bfba3138",
+      "v39-development-boolean_logic-b1a97888bbcb84fab8b5",
+      "v39-development-boolean_logic-ec52cb3cd0be13cce083",
+      "v39-development-boolean_logic-f1b61babfb2c664d17db",
+      "v39-development-boolean_logic-e9bac63d23ebf5179f99",
+      "v39-development-boolean_logic-0b9fc0ce880920a96c62",
+      "v39-development-boolean_logic-2043a2a7d45a78a6fdb6",
+      "v39-development-boolean_logic-560880b7aa35f530caa1",
+      "v39-development-boolean_logic-61c66aa4ff67837496a6",
+      "v39-development-boolean_logic-f7851cc259efb2337029",
+      "v39-development-boolean_logic-1b9bb98a0787d00057d0",
+      "v39-development-modular_arithmetic-e95e958638f649cd004d",
+      "v39-development-modular_arithmetic-2455eddf38b892e8efb1",
+      "v39-development-modular_arithmetic-12b198ddf157f3ba7408",
+      "v39-development-modular_arithmetic-de7e7da020f2154d45e8",
+      "v39-development-modular_arithmetic-1cdf94465562f6ea075e",
+      "v39-development-modular_arithmetic-afecc794fa7ee77a88a1",
+      "v39-development-modular_arithmetic-0f564ff3b8f80f93c932",
+      "v39-development-modular_arithmetic-905cd6de7bbfc31a4f73",
+      "v39-development-modular_arithmetic-8259f9ca2593d6a43be7",
+      "v39-development-modular_arithmetic-3d55b27034985972d3f9",
+      "v39-development-modular_arithmetic-6805fdcb8769445ad691",
+      "v39-development-modular_arithmetic-d2d2718f14f1b7298841",
+      "v39-development-modular_arithmetic-707253909862200041d0",
+      "v39-development-modular_arithmetic-ab5be77a7229d6afc3cb",
+      "v39-development-modular_arithmetic-7f96d9efc94ce449b07d",
+      "v39-development-modular_arithmetic-c15047dba5cc0d2cac9b",
+      "v39-development-short_graph_traversal-4ea58276f7def4985fdb",
+      "v39-development-short_graph_traversal-024eaadbce9faa4caeb2",
+      "v39-development-short_graph_traversal-bd874bd45909436e2837",
+      "v39-development-short_graph_traversal-56bdaea953fc61202cc9",
+      "v39-development-short_graph_traversal-a48dfa7e8a9f062d5f99",
+      "v39-development-short_graph_traversal-fb74985bf5bbd3fad538",
+      "v39-development-short_graph_traversal-26dbd6fee04cc7b25286",
+      "v39-development-short_graph_traversal-c949eb974706c389b861",
+      "v39-development-short_graph_traversal-21ca93fed52f08057b66",
+      "v39-development-short_graph_traversal-66e035f79c8ea2f4bdf3",
+      "v39-development-short_graph_traversal-0a45cc9ad3bd98d01ee4",
+      "v39-development-short_graph_traversal-e490cfb3eba47da9b8e3",
+      "v39-development-short_graph_traversal-ffd5269452987532a0ed",
+      "v39-development-short_graph_traversal-d83a9a7ad6ea1b449643",
+      "v39-development-short_graph_traversal-481cad7f448befdb7796",
+      "v39-development-short_graph_traversal-7a9c3de05f72029c611b",
+      "v39-development-simple_state_transition-56d3c2c8675b52143c21",
+      "v39-development-simple_state_transition-ef8c28ee1642f7f832c6",
+      "v39-development-simple_state_transition-97234ea364ccde843a53",
+      "v39-development-simple_state_transition-68f713ae6648c18caa1f",
+      "v39-development-simple_state_transition-a2d87374ff6ae1c76fe0",
+      "v39-development-simple_state_transition-bc1f4f1c69e72a130353",
+      "v39-development-simple_state_transition-a95950740b1c33a3a9d2",
+      "v39-development-simple_state_transition-f25cd6019f6b0bda02e1",
+      "v39-development-simple_state_transition-97a0f8a1a25931ed81c3",
+      "v39-development-simple_state_transition-e76f83d8fb4ab9d56838",
+      "v39-development-simple_state_transition-087085996d62f9517875",
+      "v39-development-simple_state_transition-adff79faea9a91d78c28",
+      "v39-development-simple_state_transition-ef21c5738b33717d6c69",
+      "v39-development-simple_state_transition-7bc9b5507eaec43761a1",
+      "v39-development-simple_state_transition-0b4eeef10410891f47db",
+      "v39-development-simple_state_transition-e5760b09ec6ffc58c586",
+      "v39-development-variable_binding-b9f50a80cc5ddfa06cef",
+      "v39-development-variable_binding-ea198b01034df257c72b",
+      "v39-development-variable_binding-43f46aeb4558ba9d8581",
+      "v39-development-variable_binding-6f890648591da72e691a",
+      "v39-development-variable_binding-ce64e815a67ab26bb529",
+      "v39-development-variable_binding-a708d00efa41dc99dbb0",
+      "v39-development-variable_binding-a0dbe8a886bcdf5d59c6",
+      "v39-development-variable_binding-66a53b38a1901c5f6549",
+      "v39-development-variable_binding-9028fd9f395cfebd1d6b",
+      "v39-development-variable_binding-5d4bf999db03d91c9e00",
+      "v39-development-variable_binding-560f0e0f34041f38f4d7",
+      "v39-development-variable_binding-7cb559bce5fe41762ddb",
+      "v39-development-variable_binding-33cead1d9d49bad868ed",
+      "v39-development-variable_binding-7c93c32901b3de719554",
+      "v39-development-variable_binding-240916fee7689434ea5b",
+      "v39-development-variable_binding-bf4d9ad47e004afde017"
+    ],
+    "independent_final": [
+      "v39-independent_final-boolean_logic-4e27846b4ed77017fad8",
+      "v39-independent_final-boolean_logic-b9f89057b60be5cf53d1",
+      "v39-independent_final-boolean_logic-21845d739fb606cd914f",
+      "v39-independent_final-boolean_logic-2b245b54170a01d292fe",
+      "v39-independent_final-boolean_logic-6c9c77116fcd6a8a7347",
+      "v39-independent_final-boolean_logic-e5efc4077c38f1775219",
+      "v39-independent_final-boolean_logic-90fc50c6edead8220af8",
+      "v39-independent_final-boolean_logic-aca38cda465092f8b890",
+      "v39-independent_final-modular_arithmetic-f526abfc4c8e504c76a4",
+      "v39-independent_final-modular_arithmetic-b48a129c4d886cb8dbde",
+      "v39-independent_final-modular_arithmetic-2c311ea30d334422de1a",
+      "v39-independent_final-modular_arithmetic-cc1b0fc15155ab50449d",
+      "v39-independent_final-modular_arithmetic-38cc6561dc5c6eeacee0",
+      "v39-independent_final-modular_arithmetic-a3aeb664641539df4bcc",
+      "v39-independent_final-modular_arithmetic-c44bdc2b78c430a2921c",
+      "v39-independent_final-modular_arithmetic-89d2008be89a2da9477c",
+      "v39-independent_final-short_graph_traversal-0de6f94fb29379b3bad8",
+      "v39-independent_final-short_graph_traversal-0ff17c0ac6f1db83d5f9",
+      "v39-independent_final-short_graph_traversal-bc0d886cc0b4bbc66050",
+      "v39-independent_final-short_graph_traversal-86f15c241b4c834543af",
+      "v39-independent_final-short_graph_traversal-fa52a13f90eaea558459",
+      "v39-independent_final-short_graph_traversal-ca6131678d9ab3881e95",
+      "v39-independent_final-short_graph_traversal-49c91cfcf19b983058a5",
+      "v39-independent_final-short_graph_traversal-ce8e3f728da016259b68",
+      "v39-independent_final-simple_state_transition-5dec7626f9d7079392e6",
+      "v39-independent_final-simple_state_transition-5fbf57b79e3840c3f5d0",
+      "v39-independent_final-simple_state_transition-b3153142444bba1edbcd",
+      "v39-independent_final-simple_state_transition-a66e7dd263bfb5dea08c",
+      "v39-independent_final-simple_state_transition-3bf0dd2b4d49d7886fc3",
+      "v39-independent_final-simple_state_transition-8c256e1a3d25fc6b1b7e",
+      "v39-independent_final-simple_state_transition-bcb256f6fc76540b6f3b",
+      "v39-independent_final-simple_state_transition-0ac65ea370273b8c06c7",
+      "v39-independent_final-variable_binding-878e00bfa6e95e087f76",
+      "v39-independent_final-variable_binding-5f9696b2570735512b55",
+      "v39-independent_final-variable_binding-0c604e8fa9558ab03bdf",
+      "v39-independent_final-variable_binding-51e28d0093b3c25da939",
+      "v39-independent_final-variable_binding-de52a62a3cd1c26cdc95",
+      "v39-independent_final-variable_binding-bd1e08ed828ead03f21d",
+      "v39-independent_final-variable_binding-1476156b1b72383e7ca9",
+      "v39-independent_final-variable_binding-fd6c52130008104285c3"
+    ],
+    "validation": [
+      "v39-validation-boolean_logic-ffcc395ad659e21ffa54",
+      "v39-validation-boolean_logic-42f6bd4ca2d71242a449",
+      "v39-validation-boolean_logic-026f81b32e1df34bc985",
+      "v39-validation-boolean_logic-cf350d954c404f220874",
+      "v39-validation-boolean_logic-ac0db00c2b183ca39cc9",
+      "v39-validation-boolean_logic-a06c627a5fad75b3ae78",
+      "v39-validation-boolean_logic-27253cb6c2c9723a1aa4",
+      "v39-validation-boolean_logic-14e1ec6fe9defc1920ca",
+      "v39-validation-modular_arithmetic-1b601e4db654629eb15b",
+      "v39-validation-modular_arithmetic-698d99ac616bfae5ce12",
+      "v39-validation-modular_arithmetic-388fc9018aed79fd8575",
+      "v39-validation-modular_arithmetic-ba5d4256d19b8b20c0bf",
+      "v39-validation-modular_arithmetic-eac8ddc234a56c7242eb",
+      "v39-validation-modular_arithmetic-160cbb05f5164fd79c34",
+      "v39-validation-modular_arithmetic-33dd52e09c93b66879aa",
+      "v39-validation-modular_arithmetic-e39dc5a61b7558acc935",
+      "v39-validation-short_graph_traversal-4b1fdb77b4957073cc10",
+      "v39-validation-short_graph_traversal-8317b8994bc03a0cf967",
+      "v39-validation-short_graph_traversal-931c2a0110bbcaaff694",
+      "v39-validation-short_graph_traversal-eeb94b80b54b938f0d2a",
+      "v39-validation-short_graph_traversal-052a65fa2d67442b5202",
+      "v39-validation-short_graph_traversal-af8762309476af9d159f",
+      "v39-validation-short_graph_traversal-5f8c47a94b3f4a787f05",
+      "v39-validation-short_graph_traversal-d7f50e7da738d63aa5cc",
+      "v39-validation-simple_state_transition-bdda98c38b8f91890b75",
+      "v39-validation-simple_state_transition-a7af359b9b7f5ce19197",
+      "v39-validation-simple_state_transition-9f9e707bb6001ecb9d99",
+      "v39-validation-simple_state_transition-bd4c3e20f65841d51de4",
+      "v39-validation-simple_state_transition-1a9ceccbcae30fa37b8e",
+      "v39-validation-simple_state_transition-2354a14e2153025d33de",
+      "v39-validation-simple_state_transition-9423fa998221f5fb979b",
+      "v39-validation-simple_state_transition-ead0211f48378fed4a44",
+      "v39-validation-variable_binding-3b62786da1251a2cd6e9",
+      "v39-validation-variable_binding-cbb7268109b322324057",
+      "v39-validation-variable_binding-c6f8c05f2deeb082ddf9",
+      "v39-validation-variable_binding-cf38b49cadbf5ec8a4b7",
+      "v39-validation-variable_binding-c0bae70fd090fa77047a",
+      "v39-validation-variable_binding-c675a387fdc5e5a7f8a8",
+      "v39-validation-variable_binding-ba3f2bbd67231bde4c2d",
+      "v39-validation-variable_binding-68c8536adcb847dd631f"
+    ]
+  },
+  "stage_order": [
+    [
+      "R000",
+      "R100",
+      "R010",
+      "R001"
+    ],
+    [
+      "R110",
+      "R101",
+      "R011"
+    ],
+    [
+      "additive_prediction",
+      "second_order_prediction"
+    ],
+    [
+      "R111"
+    ]
+  ]
+}

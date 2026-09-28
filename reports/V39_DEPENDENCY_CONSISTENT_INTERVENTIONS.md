@@ -1,0 +1,3 @@
+# V39 — Dependency Consistent Interventions
+
+The Falcon-native primitive hook passed 480/480 calibration state×layer no-intervention bitwise replay tests across logits, cache and five endpoint blocks. A candidate replacement occurs inside native recurrence at C, x/B, dt, S, dBx, gate or mixer input; dependent dA/dBx/S′/read/norm/mixer and all later layers are recomputed. Requested and realized replacement hashes matched in the pilot. Predictions were evaluated in float32 and cast to each native dtype; quantization gaps are recorded per intervention. Off-manifold status is explicit. Formal development mediation was **not** opened because the pilot produced no finalist.

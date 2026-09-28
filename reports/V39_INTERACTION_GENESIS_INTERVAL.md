@@ -1,0 +1,3 @@
+# V39 — Interaction Genesis Interval
+
+At the registered persistence threshold, Falcon attention output first qualifies at layer 19; B, dt/dA and dBx qualify at layer 20; C and x at layer 21. The common residual `BLOCK_OUTPUT` reaches 4/5-family prevalence only at the final layer 23, so it cannot satisfy the required *next-layer* persistence there. Recurrent state S and post-update S′ do not qualify by this relative threshold. A stable descriptive factor interval exists, but a unique **causal genesis interval is not identified**. First nonzero interaction and first threshold crossing are different claims. Qwen has no qualifying persistent stage on the traced subset.

@@ -1,0 +1,90 @@
+{
+  "candidate_order": [
+    "F1_POSTCONV_READ_FACTOR_C",
+    "F2_POSTCONV_UPDATE_FACTORS_X_B",
+    "F3_DECAY_CONTROL_DT_DA",
+    "F4_RECURRENT_STATE_INPUT_S",
+    "F5_RECURRENT_UPDATE_DBX",
+    "F6_OUTPUT_GATE",
+    "F7_COMBINED_RECURRENCE_INPUTS",
+    "F8_RESIDUAL_INPUT_CONTEXT"
+  ],
+  "pilot_gate": {
+    "families_required": 4,
+    "median_remaining_norm_ratio_max": 0.7,
+    "median_removed_direction_min": 0.5
+  },
+  "pilot_pool": "calibration",
+  "pilot_probe_index": 0,
+  "primary_finalist_rule": "earliest listed eligible factor passing pilot removal gate; freeze before development removal",
+  "quantization": "float32 factor prediction then cast to native factor dtype; requested/realized hashes audited",
+  "selection_uses_formal_removal_outcomes": false,
+  "selection_uses_validation": false,
+  "sites": {
+    "F1_POSTCONV_READ_FACTOR_C": {
+      "eligible": true,
+      "layer": 21,
+      "rule": "earliest Q2/Q3/Q4 layer with >=4/5 family prevalence >=0.75 at ratio >=0.20 and next-layer persistence",
+      "trace_stages": [
+        "C"
+      ]
+    },
+    "F2_POSTCONV_UPDATE_FACTORS_X_B": {
+      "eligible": true,
+      "layer": 21,
+      "rule": "earliest Q2/Q3/Q4 layer with >=4/5 family prevalence >=0.75 at ratio >=0.20 and next-layer persistence",
+      "trace_stages": [
+        "X",
+        "B"
+      ]
+    },
+    "F3_DECAY_CONTROL_DT_DA": {
+      "eligible": true,
+      "layer": 20,
+      "rule": "earliest Q2/Q3/Q4 layer with >=4/5 family prevalence >=0.75 at ratio >=0.20 and next-layer persistence",
+      "trace_stages": [
+        "TRANSFORMED_CONTROL"
+      ]
+    },
+    "F4_RECURRENT_STATE_INPUT_S": {
+      "eligible": false,
+      "layer": null,
+      "rule": "earliest Q2/Q3/Q4 layer with >=4/5 family prevalence >=0.75 at ratio >=0.20 and next-layer persistence",
+      "trace_stages": [
+        "S"
+      ]
+    },
+    "F5_RECURRENT_UPDATE_DBX": {
+      "eligible": true,
+      "layer": 20,
+      "rule": "earliest Q2/Q3/Q4 layer with >=4/5 family prevalence >=0.75 at ratio >=0.20 and next-layer persistence",
+      "trace_stages": [
+        "TRUE_UPDATE"
+      ]
+    },
+    "F6_OUTPUT_GATE": {
+      "eligible": false,
+      "layer": null,
+      "rule": "earliest Q2/Q3/Q4 layer with >=4/5 family prevalence >=0.75 at ratio >=0.20 and next-layer persistence",
+      "trace_stages": [
+        "OUTPUT_GATE"
+      ]
+    },
+    "F7_COMBINED_RECURRENCE_INPUTS": {
+      "eligible": false,
+      "layer": null,
+      "rule": "earliest Q2/Q3/Q4 layer with >=4/5 family prevalence >=0.75 at ratio >=0.20 and next-layer persistence",
+      "trace_stages": [
+        "S_PRIME"
+      ]
+    },
+    "F8_RESIDUAL_INPUT_CONTEXT": {
+      "eligible": false,
+      "layer": null,
+      "rule": "earliest Q2/Q3/Q4 layer with >=4/5 family prevalence >=0.75 at ratio >=0.20 and next-layer persistence",
+      "trace_stages": [
+        "MIXER_INPUT"
+      ]
+    }
+  }
+}

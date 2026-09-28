@@ -1,0 +1,3 @@
+# V39 — Eight Condition Factorial
+
+Both models completed natural R000/R100/R010/R001, then R110/R101/R011, then frozen additive and second-order predictions, then R111 on 80 fresh development states. Conv was donor-native, KV recipient-native, and exact native REC subsets were written; no later-output copy entered the factorial. Per-state six-probe vectors and predictions are in `trajectory_*_development_v39.npz` with Parquet proof records and stage freezes. Corrected `p=<I234,E111>/||E111||²`, `f=||I234||/||E111||`, and cosine obey `p=f·cos` at maximum recorded numerical error below 1e-15. Validation/final outcomes were not observed.

@@ -1218,3 +1218,8 @@ V35 审计追加修订：Q2+Q3+Q4 在开发/验证两模型均过强门槛，但
 
 Q/F both replicate REC–Conv high-level benefit and natural Q234 effect. F has a replicated model-specific higher-order trajectory term; Q has no preregistered class, so no shared class and no independent-final opening. Task-grounded and temporal claims remain unestablished. See `reports/V38_COMPLETE_REPORT.md` and `reports/V38_ALL_REPORTS.md`.
 <!-- V38_END -->
+
+
+## V39 — Genesis and Causal Mediation of Higher-Order Recurrent-State Interaction
+
+V39 development replicated the Falcon higher-order Q2×Q3×Q4 endpoint interaction (f=0.554, corrected p=0.072; 5/5 families) and found a smaller Qwen interaction (f=0.197). A new four-role historical-disjoint pool and both model designs were sealed before formal outcomes; native replay, REC writeback and true eight-condition metric equality passed. Late Falcon internal interaction was traced, but four single-layer primitive-factor calibration screens did not qualify a mediator. A null finalist was frozen. Under the predeclared gate, formal mediation, validation, independent final and task-grounding were not opened. No causal origin or independent-final claim is made. V38's ambiguous projection label is corrected only by an append-only amendment. Full evidence: `reports/V39_ALL_REPORTS.md`, `reports/V39_COMPLETE_REPORT.md`, and `results/v39/processed/v39_integrity_index.json`.

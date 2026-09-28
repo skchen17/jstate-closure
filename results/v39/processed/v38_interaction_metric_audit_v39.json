@@ -1,0 +1,71 @@
+{
+  "audit_status": "V38_PROJECTION_LABEL_AMBIGUOUS; ADD_APPEND_ONLY_AMENDMENT",
+  "corrected_fraction_definition": "norm(I234)/norm(E111)",
+  "corrected_p_definition": "dot(I234,E111)/norm(E111)^2",
+  "cosine_definition": "dot(I234,E111)/(norm(I234)*norm(E111))",
+  "sign_stability_definition": "max(fraction positive old projection, fraction negative old projection)",
+  "source_vector_sha256": {
+    "results/v38/processed/trajectory_full_F_development_v38.npz": "c44e3d2b6e4c3b59d70979acaa89a0c95b0ab1af5dafff88601af6e209da01ee",
+    "results/v38/processed/trajectory_full_F_validation_v38.npz": "d144a46b0c08f28a17e1f1cc32f26b3ec49d63c563c7909189ecace59d2894ff",
+    "results/v38/processed/trajectory_full_Q_development_v38.npz": "12e54a8130b0dbd3d25431a91e336aabc93aff1b0cf4d3324e4b57f7a231abc3",
+    "results/v38/processed/trajectory_full_Q_validation_v38.npz": "afe9127234e55b3adbd0e542fdd318813b82f8812c3d8dceb258af077d0afd16",
+    "results/v38/processed/trajectory_pairs_F_development_v38.npz": "6ac2e5465744680bf11196d15c3c31ec0d34e28cd8a42de24112e2cc75111cf4",
+    "results/v38/processed/trajectory_pairs_F_validation_v38.npz": "2be5d55430fbcb9636b754d057b837afdd2c39effba65b8da1b616653b0599d5",
+    "results/v38/processed/trajectory_pairs_Q_development_v38.npz": "7b1bdb35ea528fb594e45afc18706e73288630a6fea596f11a9e62a18bd50803",
+    "results/v38/processed/trajectory_pairs_Q_validation_v38.npz": "55245cce6a29eaba4d039815be91f0fe2dbf5f2cdaeb08a80c561b3e5e33969a",
+    "results/v38/processed/trajectory_singles_F_development_v38.npz": "6b0285e5948cb1962ac3aae4c4c52bff3edb97465dff410406f3829a841b5ea3",
+    "results/v38/processed/trajectory_singles_F_validation_v38.npz": "08b23707732eeec3341a2cd3f242ab369d75fcb5f0f6bb52339eed83cd3227a2",
+    "results/v38/processed/trajectory_singles_Q_development_v38.npz": "a0aae1f7434f9a9f0d1323cc0b25e8615fceb478b10a23671213b8a522b9559b",
+    "results/v38/processed/trajectory_singles_Q_validation_v38.npz": "462fbe63038ae40813609d5d0bfd5010dfe68c71ba1e6b22eea2bb75b9bf70d3"
+  },
+  "summaries": {
+    "F_development": {
+      "max_abs_identity_error": 1.1102230246251565e-16,
+      "max_projection_bound_excess": -0.19802780501129066,
+      "median_cosine": 0.17708810647282514,
+      "median_f": 0.6016483497038905,
+      "median_old_length_projection": 0.821560135722859,
+      "median_p": 0.09172782117566497,
+      "sign_stability": 0.9625,
+      "states": 80,
+      "v38_higher_order_gate_unchanged": true
+    },
+    "F_validation": {
+      "max_abs_identity_error": 2.7755575615628914e-17,
+      "max_projection_bound_excess": -0.22365917627303245,
+      "median_cosine": 0.13598416640243105,
+      "median_f": 0.49638267760437377,
+      "median_old_length_projection": 0.6189978797218041,
+      "median_p": 0.06587438234649162,
+      "sign_stability": 0.925,
+      "states": 40,
+      "v38_higher_order_gate_unchanged": true
+    },
+    "Q_development": {
+      "max_abs_identity_error": 1.3877787807814457e-17,
+      "max_projection_bound_excess": -0.05779504588057024,
+      "median_cosine": 0.024808374891355817,
+      "median_f": 0.16072821168766935,
+      "median_old_length_projection": 0.0482566473024566,
+      "median_p": 0.003988395327724748,
+      "sign_stability": 0.6,
+      "states": 80,
+      "v38_higher_order_gate_unchanged": true
+    },
+    "Q_validation": {
+      "max_abs_identity_error": 2.7755575615628914e-17,
+      "max_projection_bound_excess": -0.06444133626613208,
+      "median_cosine": 0.05601237893606183,
+      "median_f": 0.1844374039125365,
+      "median_old_length_projection": 0.09603708951377372,
+      "median_p": 0.009481515734408266,
+      "sign_stability": 0.65,
+      "states": 40,
+      "v38_higher_order_gate_unchanged": true
+    }
+  },
+  "table_sha256": "640f56ceaecb437f1050291f0e2811ccc806b291f1d928c85f1bc34cac4c573d",
+  "v38_analysis_source_sha256": "16a27bfecf5385b5cfb7463cddae5567908e03e5125dbd79406af29357fe40da",
+  "v38_formal_classification_unchanged": true,
+  "v38_old_projection_definition": "dot(I234,E111)/max(norm(E111),1.0): signed length component"
+}

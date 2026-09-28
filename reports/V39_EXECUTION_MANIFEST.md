@@ -1,0 +1,3 @@
+# V39 — Execution Manifest
+
+The machine record `results/v39/processed/v39_execution_manifest.json` enumerates stage outcomes and freeze artifacts. Stages 0–6 completed, with a frozen null finalist; formal mediator development, validation, independent final and Phase C were not opened. All 180 fresh pool programs/prompts are mutually disjoint and historical-disjoint; formal horizon is constant across roles. `v39_integrity_index.json` hashes code, configs, pools, stage seals, machine results, reports, and retained local NPZ banks. NPZ tensor banks are intentionally not committed to Git, but their hashes and paths are committed.

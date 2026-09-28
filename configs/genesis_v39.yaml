@@ -1,0 +1,48 @@
+protocol_version: interaction_genesis_v39
+name: Genesis and Causal Mediation of Higher-Order Recurrent-State Interaction
+parent_commit: 3c33f945b22b7f66a90835861bdb829072a1ea38
+model_spec_source: configs/functional_mediation_v34.yaml
+models: [F, Q]
+primary_model: F
+comparative_model: Q
+seed: 390139
+sample_pool_seeds: {calibration: 20290921, development: 20290922, validation: 20290923, independent_final: 20290924}
+families: [boolean_logic, modular_arithmetic, short_graph_traversal, simple_state_transition, variable_binding]
+roles_per_family: {calibration: 4, development: 16, validation: 8, independent_final: 8}
+formal_generator_horizon: {boolean_logic: 3, modular_arithmetic: 3, short_graph_traversal: 3, simple_state_transition: 3, variable_binding: 3}
+calibration_generator_horizon: {boolean_logic: 3, modular_arithmetic: 3, short_graph_traversal: 3, simple_state_transition: 3, variable_binding: 3}
+pool_policy: fresh historical-disjoint programs and prompts; all formal roles share identical generator horizon by family
+relative_depth_groups:
+  Q1: [0, 1, 2, 3, 4, 5]
+  Q2: [6, 7, 8, 9, 10, 11]
+  Q3: [12, 13, 14, 15, 16, 17]
+  Q4: [18, 19, 20, 21, 22, 23]
+primary_groups: [Q2, Q3, Q4]
+conditions:
+  R000: []
+  R100: [Q2]
+  R010: [Q3]
+  R001: [Q4]
+  R110: [Q2, Q3]
+  R101: [Q2, Q4]
+  R011: [Q3, Q4]
+  R111: [Q2, Q3, Q4]
+factorial_order: [[R000, R100, R010, R001], [R110, R101, R011], [additive_prediction, second_order_prediction], [R111]]
+endpoint_reference: exact V38 model-specific target_bundle and calibration_clean_scales; six new response-blind probes per state
+token_selection: {rank_max: 8192, future_probes: 6, natural_branches: 3, response_blind: true}
+high_level_gate: {positive_fraction_min: 0.80, median_donor_error_reduction_min: 0.20, families_required: 4}
+q234_gate: {median_fraction_min: 0.50, median_cosine_min: 0.80, families_required: 4}
+falcon_higher_order_gate: {second_order_relative_error_min_exclusive: 0.30, norm_fraction_min: 0.30, sign_stability_min: 0.75, families_required: 4}
+effect_norm_floor: 1.0
+internal_effect_norm_floor: 1.0e-6
+internal_emergence_gate: {fraction_min: 0.20, state_prevalence_min: 0.75, families_required: 4, next_boundary_persistence_required: true}
+candidate_families_order: [F1_POSTCONV_READ_FACTOR_C, F2_POSTCONV_UPDATE_FACTORS_X_B, F3_DECAY_CONTROL_DT_DA, F4_RECURRENT_STATE_INPUT_S, F5_RECURRENT_UPDATE_DBX, F6_OUTPUT_GATE, F7_COMBINED_RECURRENCE_INPUTS, F8_RESIDUAL_INPUT_CONTEXT]
+candidate_screening: pilot calibration or predeclared development discovery subset only; freeze one finalist before confirmatory development intervention outcomes
+necessity_gate: {median_removed_direction_min: 0.50, median_remaining_norm_ratio_max: 0.70, families_required: 4}
+sufficiency_gate: {median_restored_direction_min: 0.50, median_cosine_min: 0.80, families_required: 4}
+q4_rotation_gate: {local_direction_cosine_min: 0.90, downstream_rotation_fraction_min: 0.50, families_required: 4}
+bootstrap: {unit: state, iterations: 2000, lower_tail: 0.025, seed: 390239}
+internal_trace_per_family: {development: 4, validation: 2}
+finalist_priority: earliest primitive factor family passing screening removal; no validation-based selection
+independent_final_rule: Falcon only after high-level, Q234, higher-order and one frozen primitive mediator each pass development and validation; Qwen remains sealed absent separate qualification
+historical_reports_immutable: true

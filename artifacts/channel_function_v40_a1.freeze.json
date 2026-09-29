@@ -1,0 +1,16 @@
+{
+  "correction": "Reject recipient/donor prompt collisions during response-blind generation; keep initial freeze immutable.",
+  "created_utc": "2026-09-29T08:49:23.449613+00:00",
+  "freeze_digest": "54bd22fae3a3dcc799084e9ce2978bfdd7c959199aeec2596c413632d2a388bd",
+  "initial_base_freeze_digest": "3abf46aed3ee39e7881073fb7e36b8181da45ef10644b55ad4880b752802f44b",
+  "initial_sample_pool_files_written": false,
+  "intervention_outcomes_observed": false,
+  "protocol_version": "channel_function_v40_a1",
+  "reason": "Initial pool run stopped before writing records: distinct transition programs could share a recipient prompt.",
+  "schema_version": 1,
+  "source_sha256": {
+    "src/jclosure/experiments/design_v40_a1.py": "31ab166a9c3adddc8e55c33b24907577f22e0a15a2e04f57bb016eefbf135f32",
+    "src/jclosure/experiments/sample_pool_v40_a1.py": "bae19e0eb43e2803b09224c5da35c07dfcf2637dd1684ffe3b487090f049af9f",
+    "src/jclosure/protocol_v40_a1.py": "f60f3f0f37bb2aff0c28f794c522ba9584a729bd459b47f5b68cf014ff23ade6"
+  }
+}

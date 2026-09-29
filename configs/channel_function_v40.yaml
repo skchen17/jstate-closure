@@ -1,0 +1,30 @@
+protocol_version: channel_function_v40
+name: Functional and Temporal Decomposition of Persistent State in Hybrid Language Models
+parent_commit: 0dea89c9296737ba713411c11de97184ba8c9eba
+model_spec_source: configs/functional_mediation_v34.yaml
+models: [Q, F]
+primary_model: Q
+comparison_model: F
+families: [variable_binding, state_transition, long_context_dependency, boolean_logic]
+roles_per_family: {calibration: 4, development: 16, validation: 8, independent_final: 8}
+pool_seeds: {calibration: 204001, development: 204002, validation: 204003, independent_final: 204004}
+pool_policy: fresh task programs and prompts, disjoint across roles and from earlier data; all roles sealed before intervention outcomes
+fork_policy: one natural token difference in otherwise identical encoded prompt; reject nonmatching tokenization before outcome runs
+conditions:
+  BASE: []
+  REC_only: [REC]
+  Conv_only: [Conv]
+  KV_only: [KV]
+  REC_Conv: [REC, Conv]
+  REC_Conv_KV: [REC, Conv, KV]
+control_conditions: [surface_only, irrelevant_history, same_prefix_natural_token_mismatch, shuffled_state]
+primary_endpoint: externally_generated_task_variable_recovery
+secondary_endpoint: donor_vector_fidelity
+delays: [0, 1, 2, 4, 8, 16, 32]
+delay_policy: fixed shared neutral continuation tokens; no fitted decay law assumed
+trajectory_groups: [early, middle, late]
+trajectory_policy: Qwen REC primary; natural downstream computation; no output copying
+state_unit: task_state
+bootstrap: {iterations: 2000, seed: 204040, lower_tail: 0.025, unit: task_state}
+validation_policy: no selection or protocol changes using validation; independent_final remains sealed until development and validation reviewed
+claims_policy: channel-specific causal profile only; no semantic-storage or universal-mechanism claim without task/time evidence

@@ -1,0 +1,9 @@
+# V40 — Frozen Starting Point
+
+V40 starts from the pushed V39 commit `0dea89c9296737ba713411c11de97184ba8c9eba` without changing V39 results or seals. V39's development interaction is background motivation, not a V40 outcome. Its primitive-mediator, validation, and independent-final branches remained unopened; V40 does not inherit their qualification.
+
+The V40 base protocol is `artifacts/channel_function_v40.freeze.json`. During the first response-blind pool run, distinct state-transition programs were found to share recipient prompt text. No pool file and no model intervention outcome had been written. The base freeze was preserved. `artifacts/channel_function_v40_a1.freeze.json` is an append-only startup amendment that requires prompt-level collision rejection; all operative V40 pool and design seals use the `channel_function_v40_a1` prefix.
+
+The amended sample-pool manifest at `data/v40/sample_pool_manifest_v40.json` records four disjoint roles: calibration 16, development 64, validation 32, and independent final 32 task states, each split evenly across the four user-specified families. Program and prompt hashes are disjoint across roles and from indexed historical sources. External answers were generated before model execution. Both model-specific tokenizer audits found exactly one differing natural token per paired prompt, with otherwise identical encoded prefix and suffix. No V40 model forward or intervention outcome was observed in constructing these records.
+
+V40's primary model is Qwen3.5-4B; Falcon-H1-1.5B-Base is a comparison, not a required mechanism match. The experiment must not claim channel roles, decay lifetimes, or trajectory mediation until task-grounded causal runs and controls are recorded. The independent-final pool remains sealed against outcome inspection and selection.

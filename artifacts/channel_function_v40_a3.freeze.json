@@ -1,0 +1,60 @@
+{
+  "a2_continuation_audit_sha256": {
+    "results/v40/processed/continuation_audit_F_a2.json": "79c4743dad95d60330f11aeae70c454665bdeb7584cf3320b85cde3e9d27948d",
+    "results/v40/processed/continuation_audit_Q_a2.json": "9ba257fafc05b747a815824e4c24fc541ac8a865da79372667a84d24b4d45dbd"
+  },
+  "a2_raw_pilot_is_not_formal_v40_evidence": true,
+  "config": {
+    "answer_alphabets": {
+      "boolean_logic": "01",
+      "long_context_dependency": "0123456789",
+      "state_transition": "ABCD",
+      "variable_binding": "0123456789"
+    },
+    "conditions": [
+      "BASE",
+      "REC_only",
+      "Conv_only",
+      "KV_only",
+      "REC_Conv",
+      "REC_Conv_KV"
+    ],
+    "equality_policy": "exact native cache writeback mandatory; split/full numerical mismatch recorded and reviewed before formal development",
+    "full_calibration_delays": [
+      0
+    ],
+    "full_policy": "all 16 sealed calibration states per model, no formal claims",
+    "models": [
+      "Q",
+      "F"
+    ],
+    "native_donor_reference": true,
+    "neutral_text": " neutral",
+    "operative_continuation": "sequential single-token native cached steps for both models",
+    "parent_a2": "artifacts/channel_function_v40_a2.freeze.json",
+    "pilot_delays": [
+      0,
+      1,
+      32
+    ],
+    "pilot_policy": "first sealed calibration state per model, no formal claims",
+    "protocol_version": "channel_function_v40_calibration_a3",
+    "reason": "Falcon cached multi-token continuation diverged from direct and tokenwise continuation in calibration pilot",
+    "role": "calibration",
+    "split_full_audit": "direct full prompt with use_cache=true versus tokenwise native continuation at delay zero; report full-vocabulary max absolute difference and answer prediction",
+    "validation_and_final": "remain unopened"
+  },
+  "config_sha256": "979dc407c1ddb6cbf6ea5f87be4bdbd2f627fe4e2f259756753d253730765f3b",
+  "created_utc": "2026-09-29T12:07:25.241659+00:00",
+  "formal_development_outcomes_observed": false,
+  "freeze_digest": "5a453c0545cdaf8c940a4f6b3e4b7ec5e673a449f80c52206fb01f40601302f2",
+  "parent_a2_digest": "b3986743a8792a2d491ef78063abae34bcb9d5e0902d7cda380517259df47fe5",
+  "protocol_version": "channel_function_v40_a3",
+  "schema_version": 1,
+  "source_sha256": {
+    "scripts/audit_v40_continuation.py": "e73f49a4a49aab0d69e41a0797b518a9a9eb490c0fad161d4d71c8ac93933813",
+    "src/jclosure/experiments/calibration_v40_a3.py": "62153fb6382a9ee0258d5fc8e73fd6d27034a821ef1ed1966097fb76318c52eb",
+    "src/jclosure/protocol_v40_a3.py": "503a3d633f34113456c8d5b41f5b81157c6728db723a866b816b065d8cc650ad"
+  },
+  "validation_and_final_unopened": true
+}

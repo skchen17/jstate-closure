@@ -1,0 +1,440 @@
+{
+  "development_validation_final_unopened": true,
+  "models": {
+    "F": {
+      "families": {
+        "boolean_logic": {
+          "baseline_qualified_pairs": 0,
+          "conditions": {
+            "BASE": {
+              "donor_recovered_count": 3,
+              "donor_recovered_fraction": 0.75,
+              "median_margin_shift_from_base": 0.0,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "Conv_only": {
+              "donor_recovered_count": 3,
+              "donor_recovered_fraction": 0.75,
+              "median_margin_shift_from_base": 0.0625,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "DONOR_NATIVE": {
+              "donor_recovered_count": 2,
+              "donor_recovered_fraction": 0.5,
+              "median_margin_shift_from_base": 0.125,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "KV_only": {
+              "donor_recovered_count": 3,
+              "donor_recovered_fraction": 0.75,
+              "median_margin_shift_from_base": 0.03125,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "REC_Conv": {
+              "donor_recovered_count": 2,
+              "donor_recovered_fraction": 0.5,
+              "median_margin_shift_from_base": 0.046875,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "REC_Conv_KV": {
+              "donor_recovered_count": 2,
+              "donor_recovered_fraction": 0.5,
+              "median_margin_shift_from_base": 0.125,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "REC_only": {
+              "donor_recovered_count": 3,
+              "donor_recovered_fraction": 0.75,
+              "median_margin_shift_from_base": -0.015625,
+              "qualified_pair_donor_recovered_count": 0
+            }
+          },
+          "donor_native_correct": 2,
+          "recipient_native_correct": 1,
+          "states": 4
+        },
+        "long_context_dependency": {
+          "baseline_qualified_pairs": 0,
+          "conditions": {
+            "BASE": {
+              "donor_recovered_count": 0,
+              "donor_recovered_fraction": 0,
+              "median_margin_shift_from_base": 0.0,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "Conv_only": {
+              "donor_recovered_count": 0,
+              "donor_recovered_fraction": 0,
+              "median_margin_shift_from_base": 0.34375,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "DONOR_NATIVE": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.65625,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "KV_only": {
+              "donor_recovered_count": 0,
+              "donor_recovered_fraction": 0,
+              "median_margin_shift_from_base": 0.3125,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "REC_Conv": {
+              "donor_recovered_count": 0,
+              "donor_recovered_fraction": 0,
+              "median_margin_shift_from_base": 0.34375,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "REC_Conv_KV": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.65625,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "REC_only": {
+              "donor_recovered_count": 0,
+              "donor_recovered_fraction": 0,
+              "median_margin_shift_from_base": 0.03125,
+              "qualified_pair_donor_recovered_count": 0
+            }
+          },
+          "donor_native_correct": 1,
+          "recipient_native_correct": 1,
+          "states": 4
+        },
+        "state_transition": {
+          "baseline_qualified_pairs": 0,
+          "conditions": {
+            "BASE": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.0,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "Conv_only": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.109375,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "DONOR_NATIVE": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.3125,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "KV_only": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.203125,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "REC_Conv": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.0625,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "REC_Conv_KV": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.3125,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "REC_only": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.015625,
+              "qualified_pair_donor_recovered_count": 0
+            }
+          },
+          "donor_native_correct": 1,
+          "recipient_native_correct": 1,
+          "states": 4
+        },
+        "variable_binding": {
+          "baseline_qualified_pairs": 0,
+          "conditions": {
+            "BASE": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.0,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "Conv_only": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.40625,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "DONOR_NATIVE": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 1.09375,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "KV_only": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.640625,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "REC_Conv": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.40625,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "REC_Conv_KV": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 1.09375,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "REC_only": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.0,
+              "qualified_pair_donor_recovered_count": 0
+            }
+          },
+          "donor_native_correct": 1,
+          "recipient_native_correct": 0,
+          "states": 4
+        }
+      },
+      "invalid_records": [],
+      "model": "F",
+      "native_swap_exact_rows": 80,
+      "split_full_constrained_prediction_agreement": 1,
+      "split_full_max_abs_logit_max": 1.0,
+      "split_full_max_abs_logit_median": 0.5,
+      "states": 16,
+      "valid_condition_rows": 112
+    },
+    "Q": {
+      "families": {
+        "boolean_logic": {
+          "baseline_qualified_pairs": 2,
+          "conditions": {
+            "BASE": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.0,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "Conv_only": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 1.6875,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "DONOR_NATIVE": {
+              "donor_recovered_count": 3,
+              "donor_recovered_fraction": 0.75,
+              "median_margin_shift_from_base": 5.0,
+              "qualified_pair_donor_recovered_count": 2
+            },
+            "KV_only": {
+              "donor_recovered_count": 3,
+              "donor_recovered_fraction": 0.75,
+              "median_margin_shift_from_base": 4.25,
+              "qualified_pair_donor_recovered_count": 2
+            },
+            "REC_Conv": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 1.75,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "REC_Conv_KV": {
+              "donor_recovered_count": 3,
+              "donor_recovered_fraction": 0.75,
+              "median_margin_shift_from_base": 5.0,
+              "qualified_pair_donor_recovered_count": 2
+            },
+            "REC_only": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.0,
+              "qualified_pair_donor_recovered_count": 0
+            }
+          },
+          "donor_native_correct": 3,
+          "recipient_native_correct": 3,
+          "states": 4
+        },
+        "long_context_dependency": {
+          "baseline_qualified_pairs": 3,
+          "conditions": {
+            "BASE": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.0,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "Conv_only": {
+              "donor_recovered_count": 3,
+              "donor_recovered_fraction": 0.75,
+              "median_margin_shift_from_base": 4.0625,
+              "qualified_pair_donor_recovered_count": 2
+            },
+            "DONOR_NATIVE": {
+              "donor_recovered_count": 4,
+              "donor_recovered_fraction": 1,
+              "median_margin_shift_from_base": 8.625,
+              "qualified_pair_donor_recovered_count": 3
+            },
+            "KV_only": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 2.875,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "REC_Conv": {
+              "donor_recovered_count": 3,
+              "donor_recovered_fraction": 0.75,
+              "median_margin_shift_from_base": 4.0625,
+              "qualified_pair_donor_recovered_count": 2
+            },
+            "REC_Conv_KV": {
+              "donor_recovered_count": 4,
+              "donor_recovered_fraction": 1,
+              "median_margin_shift_from_base": 8.625,
+              "qualified_pair_donor_recovered_count": 3
+            },
+            "REC_only": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.1875,
+              "qualified_pair_donor_recovered_count": 0
+            }
+          },
+          "donor_native_correct": 4,
+          "recipient_native_correct": 3,
+          "states": 4
+        },
+        "state_transition": {
+          "baseline_qualified_pairs": 3,
+          "conditions": {
+            "BASE": {
+              "donor_recovered_count": 0,
+              "donor_recovered_fraction": 0,
+              "median_margin_shift_from_base": 0.0,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "Conv_only": {
+              "donor_recovered_count": 2,
+              "donor_recovered_fraction": 0.5,
+              "median_margin_shift_from_base": 2.375,
+              "qualified_pair_donor_recovered_count": 2
+            },
+            "DONOR_NATIVE": {
+              "donor_recovered_count": 4,
+              "donor_recovered_fraction": 1,
+              "median_margin_shift_from_base": 3.625,
+              "qualified_pair_donor_recovered_count": 3
+            },
+            "KV_only": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 1.125,
+              "qualified_pair_donor_recovered_count": 1
+            },
+            "REC_Conv": {
+              "donor_recovered_count": 3,
+              "donor_recovered_fraction": 0.75,
+              "median_margin_shift_from_base": 2.5,
+              "qualified_pair_donor_recovered_count": 3
+            },
+            "REC_Conv_KV": {
+              "donor_recovered_count": 4,
+              "donor_recovered_fraction": 1,
+              "median_margin_shift_from_base": 3.625,
+              "qualified_pair_donor_recovered_count": 3
+            },
+            "REC_only": {
+              "donor_recovered_count": 1,
+              "donor_recovered_fraction": 0.25,
+              "median_margin_shift_from_base": 0.1875,
+              "qualified_pair_donor_recovered_count": 1
+            }
+          },
+          "donor_native_correct": 4,
+          "recipient_native_correct": 3,
+          "states": 4
+        },
+        "variable_binding": {
+          "baseline_qualified_pairs": 4,
+          "conditions": {
+            "BASE": {
+              "donor_recovered_count": 0,
+              "donor_recovered_fraction": 0,
+              "median_margin_shift_from_base": 0.0,
+              "qualified_pair_donor_recovered_count": 0
+            },
+            "Conv_only": {
+              "donor_recovered_count": 3,
+              "donor_recovered_fraction": 0.75,
+              "median_margin_shift_from_base": 3.9375,
+              "qualified_pair_donor_recovered_count": 3
+            },
+            "DONOR_NATIVE": {
+              "donor_recovered_count": 4,
+              "donor_recovered_fraction": 1,
+              "median_margin_shift_from_base": 7.9375,
+              "qualified_pair_donor_recovered_count": 4
+            },
+            "KV_only": {
+              "donor_recovered_count": 2,
+              "donor_recovered_fraction": 0.5,
+              "median_margin_shift_from_base": 3.5625,
+              "qualified_pair_donor_recovered_count": 2
+            },
+            "REC_Conv": {
+              "donor_recovered_count": 3,
+              "donor_recovered_fraction": 0.75,
+              "median_margin_shift_from_base": 4.0625,
+              "qualified_pair_donor_recovered_count": 3
+            },
+            "REC_Conv_KV": {
+              "donor_recovered_count": 4,
+              "donor_recovered_fraction": 1,
+              "median_margin_shift_from_base": 7.9375,
+              "qualified_pair_donor_recovered_count": 4
+            },
+            "REC_only": {
+              "donor_recovered_count": 0,
+              "donor_recovered_fraction": 0,
+              "median_margin_shift_from_base": 0.25,
+              "qualified_pair_donor_recovered_count": 0
+            }
+          },
+          "donor_native_correct": 4,
+          "recipient_native_correct": 4,
+          "states": 4
+        }
+      },
+      "invalid_records": [],
+      "model": "Q",
+      "native_swap_exact_rows": 80,
+      "split_full_constrained_prediction_agreement": 1,
+      "split_full_max_abs_logit_max": 0.46875,
+      "split_full_max_abs_logit_median": 0.251953125,
+      "states": 16,
+      "valid_condition_rows": 112
+    }
+  },
+  "raw_files": {
+    "F": {
+      "path": "results/v40/raw/calibration_F_a3-full-20260929T121407150442Z.jsonl",
+      "sha256": "50d01e33384c5c3dea9e3b12cc0a2854e75c647d3bae82e57453a5677cf520db"
+    },
+    "Q": {
+      "path": "results/v40/raw/calibration_Q_a3-full-20260929T120920469858Z.jsonl",
+      "sha256": "d7e1819e93c4c10693f9d998436f2d58a1bfa5e351057142cf6f34109ab1edc5"
+    }
+  },
+  "status": "CALIBRATION_ONLY_NOT_FORMAL_V40_EVIDENCE"
+}

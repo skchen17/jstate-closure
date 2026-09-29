@@ -1,0 +1,125 @@
+{
+  "development_validation_final_unopened": true,
+  "formal_readout_not_yet_frozen": true,
+  "input_files": {
+    "F": {
+      "path": "results/v40/processed/answer_form_audit_F_v40.json",
+      "sha256": "d628b082968310aea1bbb050e460671a989b5368dc17d068011266316cfc7474"
+    },
+    "Q": {
+      "path": "results/v40/processed/answer_form_audit_Q_v40.json",
+      "sha256": "f5fac790ef20e2b7915672c526bc97b25088c35cba80f8f63e85dbf38f9d5aff"
+    }
+  },
+  "status": "CALIBRATION_ONLY_ANSWER_FORM_ADJUDICATION",
+  "totals": {
+    "F": {
+      "after_one_space": 4,
+      "direct": 0,
+      "families": {
+        "boolean_logic": {
+          "after_one_space": {
+            "both_correct": 4,
+            "donor_correct": 4,
+            "recipient_correct": 4
+          },
+          "direct": {
+            "both_correct": 0,
+            "donor_correct": 2,
+            "recipient_correct": 1
+          }
+        },
+        "long_context_dependency": {
+          "after_one_space": {
+            "both_correct": 0,
+            "donor_correct": 1,
+            "recipient_correct": 0
+          },
+          "direct": {
+            "both_correct": 0,
+            "donor_correct": 1,
+            "recipient_correct": 1
+          }
+        },
+        "state_transition": {
+          "after_one_space": {
+            "both_correct": 0,
+            "donor_correct": 1,
+            "recipient_correct": 1
+          },
+          "direct": {
+            "both_correct": 0,
+            "donor_correct": 1,
+            "recipient_correct": 1
+          }
+        },
+        "variable_binding": {
+          "after_one_space": {
+            "both_correct": 0,
+            "donor_correct": 1,
+            "recipient_correct": 0
+          },
+          "direct": {
+            "both_correct": 0,
+            "donor_correct": 1,
+            "recipient_correct": 0
+          }
+        }
+      }
+    },
+    "Q": {
+      "after_one_space": 14,
+      "direct": 12,
+      "families": {
+        "boolean_logic": {
+          "after_one_space": {
+            "both_correct": 2,
+            "donor_correct": 3,
+            "recipient_correct": 3
+          },
+          "direct": {
+            "both_correct": 2,
+            "donor_correct": 3,
+            "recipient_correct": 3
+          }
+        },
+        "long_context_dependency": {
+          "after_one_space": {
+            "both_correct": 4,
+            "donor_correct": 4,
+            "recipient_correct": 4
+          },
+          "direct": {
+            "both_correct": 3,
+            "donor_correct": 4,
+            "recipient_correct": 3
+          }
+        },
+        "state_transition": {
+          "after_one_space": {
+            "both_correct": 4,
+            "donor_correct": 4,
+            "recipient_correct": 4
+          },
+          "direct": {
+            "both_correct": 3,
+            "donor_correct": 4,
+            "recipient_correct": 3
+          }
+        },
+        "variable_binding": {
+          "after_one_space": {
+            "both_correct": 4,
+            "donor_correct": 4,
+            "recipient_correct": 4
+          },
+          "direct": {
+            "both_correct": 4,
+            "donor_correct": 4,
+            "recipient_correct": 4
+          }
+        }
+      }
+    }
+  }
+}

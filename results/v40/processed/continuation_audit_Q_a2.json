@@ -1,0 +1,177 @@
+{
+  "calibration_only": true,
+  "model": "Q",
+  "protocol_freeze_digest": "b3986743a8792a2d491ef78063abae34bcb9d5e0902d7cda380517259df47fe5",
+  "rows": [
+    {
+      "max_abs": {
+        "batched_vs_direct_true": 0.21875,
+        "batched_vs_tokenwise": 0.21875,
+        "direct_true_vs_false": 0.0,
+        "tokenwise_vs_direct_true": 0.25
+      },
+      "predictions": {
+        "batched": {
+          "candidate_logits": {
+            "0": 21.0,
+            "1": 20.0,
+            "2": 19.875,
+            "3": 20.5,
+            "4": 23.75,
+            "5": 22.25,
+            "6": 19.25,
+            "7": 18.625,
+            "8": 17.875,
+            "9": 19.25
+          },
+          "donor_minus_recipient_logit": -2.75,
+          "donor_recovered": false,
+          "predicted_answer": "4",
+          "recipient_correct": true
+        },
+        "direct_use_cache_false": {
+          "candidate_logits": {
+            "0": 21.0,
+            "1": 20.0,
+            "2": 19.875,
+            "3": 20.5,
+            "4": 23.75,
+            "5": 22.25,
+            "6": 19.25,
+            "7": 18.5,
+            "8": 17.875,
+            "9": 19.25
+          },
+          "donor_minus_recipient_logit": -2.75,
+          "donor_recovered": false,
+          "predicted_answer": "4",
+          "recipient_correct": true
+        },
+        "direct_use_cache_true": {
+          "candidate_logits": {
+            "0": 21.0,
+            "1": 20.0,
+            "2": 19.875,
+            "3": 20.5,
+            "4": 23.75,
+            "5": 22.25,
+            "6": 19.25,
+            "7": 18.5,
+            "8": 17.875,
+            "9": 19.25
+          },
+          "donor_minus_recipient_logit": -2.75,
+          "donor_recovered": false,
+          "predicted_answer": "4",
+          "recipient_correct": true
+        },
+        "tokenwise": {
+          "candidate_logits": {
+            "0": 20.875,
+            "1": 20.0,
+            "2": 19.75,
+            "3": 20.375,
+            "4": 23.625,
+            "5": 22.125,
+            "6": 19.25,
+            "7": 18.5,
+            "8": 17.875,
+            "9": 19.125
+          },
+          "donor_minus_recipient_logit": -2.75,
+          "donor_recovered": false,
+          "predicted_answer": "4",
+          "recipient_correct": true
+        }
+      },
+      "role": "recipient",
+      "suffix_tokens": 24
+    },
+    {
+      "max_abs": {
+        "batched_vs_direct_true": 0.25,
+        "batched_vs_tokenwise": 0.1875,
+        "direct_true_vs_false": 0.0,
+        "tokenwise_vs_direct_true": 0.25
+      },
+      "predictions": {
+        "batched": {
+          "candidate_logits": {
+            "0": 24.25,
+            "1": 20.25,
+            "2": 18.75,
+            "3": 18.75,
+            "4": 18.75,
+            "5": 21.5,
+            "6": 18.125,
+            "7": 17.75,
+            "8": 17.375,
+            "9": 17.875
+          },
+          "donor_minus_recipient_logit": 5.5,
+          "donor_recovered": true,
+          "predicted_answer": "0",
+          "recipient_correct": false
+        },
+        "direct_use_cache_false": {
+          "candidate_logits": {
+            "0": 24.25,
+            "1": 20.375,
+            "2": 18.875,
+            "3": 19.0,
+            "4": 19.0,
+            "5": 21.75,
+            "6": 18.375,
+            "7": 18.0,
+            "8": 17.625,
+            "9": 18.125
+          },
+          "donor_minus_recipient_logit": 5.25,
+          "donor_recovered": true,
+          "predicted_answer": "0",
+          "recipient_correct": false
+        },
+        "direct_use_cache_true": {
+          "candidate_logits": {
+            "0": 24.25,
+            "1": 20.375,
+            "2": 18.875,
+            "3": 19.0,
+            "4": 19.0,
+            "5": 21.75,
+            "6": 18.375,
+            "7": 18.0,
+            "8": 17.625,
+            "9": 18.125
+          },
+          "donor_minus_recipient_logit": 5.25,
+          "donor_recovered": true,
+          "predicted_answer": "0",
+          "recipient_correct": false
+        },
+        "tokenwise": {
+          "candidate_logits": {
+            "0": 24.25,
+            "1": 20.25,
+            "2": 18.75,
+            "3": 18.75,
+            "4": 18.875,
+            "5": 21.625,
+            "6": 18.25,
+            "7": 17.75,
+            "8": 17.5,
+            "9": 18.0
+          },
+          "donor_minus_recipient_logit": 5.375,
+          "donor_recovered": true,
+          "predicted_answer": "0",
+          "recipient_correct": false
+        }
+      },
+      "role": "donor",
+      "suffix_tokens": 24
+    }
+  ],
+  "source_sha256": "e73f49a4a49aab0d69e41a0797b518a9a9eb490c0fad161d4d71c8ac93933813",
+  "state_id": "v40-variable_binding-82c76f767197fb8e426c"
+}

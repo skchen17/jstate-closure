@@ -1,0 +1,25 @@
+protocol_version: channel_function_v40_calibration_a2
+parent_startup_commit: fa10df5257d1c1eb32fc872bb23f706d9a69dce2
+parent_amendment: artifacts/channel_function_v40_a1.freeze.json
+models: [Q, F]
+role: calibration
+conditions: [BASE, REC_only, Conv_only, KV_only, REC_Conv, REC_Conv_KV]
+native_donor_reference: true
+neutral_text: ' neutral'
+calibration_delays: [0, 1, 32]
+answer_alphabets:
+  variable_binding: '0123456789'
+  state_transition: 'ABCD'
+  long_context_dependency: '0123456789'
+  boolean_logic: '01'
+primary_score: constrained_argmax_over_predeclared_family_alphabet
+secondary_score: donor_minus_recipient_answer_logit_margin
+score_policy: candidate IDs are tokenizer.encode(answer, add_special_tokens=false); all must be unique single tokens before model load
+fork_policy: exact same encoded prefix and suffix, one differing natural token, preserve both native branches
+cache_policy: clone native cache; write donor REC/Conv and only donor last-token KV according to frozen condition map; audit exact requested and untouched fields
+continuation_policy: append d fixed neutral tokens immediately after fork, then shared encoded suffix; downstream native forward only
+calibration_status: diagnostic only; no V40 success claim or validation/final opening
+split_full_equivalence: record maximum absolute logit difference for native recipient and donor at delay 0; do not silently treat numerical drift as equality
+invalid_policy: retain invalid state/condition records with explicit reason; do not drop from denominator silently
+model_load_policy: local frozen Qwen/Falcon revisions and hashes; CUDA_VISIBLE_DEVICES may remap physical GPU
+raw_record_policy: immutable JSONL per unique run_id; reruns use a new run_id

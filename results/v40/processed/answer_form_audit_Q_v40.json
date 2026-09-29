@@ -1,0 +1,1179 @@
+{
+  "development_validation_final_unopened": true,
+  "families": {
+    "boolean_logic": {
+      "after_one_space": {
+        "both_correct": 2,
+        "donor_correct": 3,
+        "recipient_correct": 3
+      },
+      "direct": {
+        "both_correct": 2,
+        "donor_correct": 3,
+        "recipient_correct": 3
+      }
+    },
+    "long_context_dependency": {
+      "after_one_space": {
+        "both_correct": 4,
+        "donor_correct": 4,
+        "recipient_correct": 4
+      },
+      "direct": {
+        "both_correct": 3,
+        "donor_correct": 4,
+        "recipient_correct": 3
+      }
+    },
+    "state_transition": {
+      "after_one_space": {
+        "both_correct": 4,
+        "donor_correct": 4,
+        "recipient_correct": 4
+      },
+      "direct": {
+        "both_correct": 3,
+        "donor_correct": 4,
+        "recipient_correct": 3
+      }
+    },
+    "variable_binding": {
+      "after_one_space": {
+        "both_correct": 4,
+        "donor_correct": 4,
+        "recipient_correct": 4
+      },
+      "direct": {
+        "both_correct": 4,
+        "donor_correct": 4,
+        "recipient_correct": 4
+      }
+    }
+  },
+  "leading_space_token_id": 220,
+  "model": "Q",
+  "rows": [
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 19.125,
+          "1": 17.75,
+          "2": 17.875,
+          "3": 18.0,
+          "4": 22.625,
+          "5": 20.625,
+          "6": 17.75,
+          "7": 16.375,
+          "8": 16.5,
+          "9": 18.0
+        },
+        "donor_minus_recipient_logit": -3.5,
+        "donor_recovered": false,
+        "predicted_answer": "4",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 21.0,
+          "1": 20.0,
+          "2": 19.875,
+          "3": 20.5,
+          "4": 23.75,
+          "5": 22.25,
+          "6": 19.25,
+          "7": 18.5,
+          "8": 17.875,
+          "9": 19.25
+        },
+        "donor_minus_recipient_logit": -2.75,
+        "donor_recovered": false,
+        "predicted_answer": "4",
+        "recipient_correct": true
+      },
+      "family": "variable_binding",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-variable_binding-82c76f767197fb8e426c"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 22.875,
+          "1": 18.125,
+          "2": 17.125,
+          "3": 16.875,
+          "4": 17.25,
+          "5": 20.875,
+          "6": 17.5,
+          "7": 16.625,
+          "8": 16.625,
+          "9": 17.25
+        },
+        "donor_minus_recipient_logit": 5.625,
+        "donor_recovered": true,
+        "predicted_answer": "0",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 24.25,
+          "1": 20.375,
+          "2": 18.875,
+          "3": 19.0,
+          "4": 19.0,
+          "5": 21.75,
+          "6": 18.375,
+          "7": 18.0,
+          "8": 17.625,
+          "9": 18.125
+        },
+        "donor_minus_recipient_logit": 5.25,
+        "donor_recovered": true,
+        "predicted_answer": "0",
+        "recipient_correct": false
+      },
+      "family": "variable_binding",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-variable_binding-82c76f767197fb8e426c"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 20.625,
+          "1": 19.5,
+          "2": 18.875,
+          "3": 18.5,
+          "4": 18.625,
+          "5": 19.625,
+          "6": 19.125,
+          "7": 20.875,
+          "8": 20.125,
+          "9": 23.0
+        },
+        "donor_minus_recipient_logit": -4.125,
+        "donor_recovered": false,
+        "predicted_answer": "9",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 20.625,
+          "1": 20.375,
+          "2": 19.75,
+          "3": 19.625,
+          "4": 19.5,
+          "5": 20.75,
+          "6": 20.375,
+          "7": 22.0,
+          "8": 20.75,
+          "9": 23.0
+        },
+        "donor_minus_recipient_logit": -3.25,
+        "donor_recovered": false,
+        "predicted_answer": "9",
+        "recipient_correct": true
+      },
+      "family": "variable_binding",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-variable_binding-6d760f1ff59a90584e99"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 19.625,
+          "1": 19.625,
+          "2": 23.0,
+          "3": 19.5,
+          "4": 18.25,
+          "5": 19.25,
+          "6": 18.25,
+          "7": 20.25,
+          "8": 19.375,
+          "9": 19.5
+        },
+        "donor_minus_recipient_logit": 3.5,
+        "donor_recovered": true,
+        "predicted_answer": "2",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 20.375,
+          "1": 21.125,
+          "2": 23.625,
+          "3": 20.625,
+          "4": 19.25,
+          "5": 20.125,
+          "6": 19.25,
+          "7": 21.5,
+          "8": 20.375,
+          "9": 20.875
+        },
+        "donor_minus_recipient_logit": 2.75,
+        "donor_recovered": true,
+        "predicted_answer": "2",
+        "recipient_correct": false
+      },
+      "family": "variable_binding",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-variable_binding-6d760f1ff59a90584e99"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 18.75,
+          "1": 17.75,
+          "2": 18.25,
+          "3": 18.0,
+          "4": 22.625,
+          "5": 18.75,
+          "6": 18.0,
+          "7": 16.875,
+          "8": 19.625,
+          "9": 18.125
+        },
+        "donor_minus_recipient_logit": -4.375,
+        "donor_recovered": false,
+        "predicted_answer": "4",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 20.625,
+          "1": 20.0,
+          "2": 19.875,
+          "3": 20.375,
+          "4": 23.875,
+          "5": 20.875,
+          "6": 19.625,
+          "7": 19.25,
+          "8": 21.125,
+          "9": 20.375
+        },
+        "donor_minus_recipient_logit": -4.0,
+        "donor_recovered": false,
+        "predicted_answer": "4",
+        "recipient_correct": true
+      },
+      "family": "variable_binding",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-variable_binding-9b7dc6ab0d38ca77c4e1"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 19.875,
+          "1": 19.75,
+          "2": 23.0,
+          "3": 19.125,
+          "4": 18.625,
+          "5": 18.625,
+          "6": 18.75,
+          "7": 18.125,
+          "8": 20.625,
+          "9": 19.875
+        },
+        "donor_minus_recipient_logit": 4.375,
+        "donor_recovered": true,
+        "predicted_answer": "2",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 20.625,
+          "1": 21.25,
+          "2": 23.5,
+          "3": 20.5,
+          "4": 19.75,
+          "5": 19.375,
+          "6": 19.5,
+          "7": 19.625,
+          "8": 21.5,
+          "9": 21.125
+        },
+        "donor_minus_recipient_logit": 3.75,
+        "donor_recovered": true,
+        "predicted_answer": "2",
+        "recipient_correct": false
+      },
+      "family": "variable_binding",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-variable_binding-9b7dc6ab0d38ca77c4e1"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 20.0,
+          "1": 18.125,
+          "2": 17.5,
+          "3": 16.75,
+          "4": 16.75,
+          "5": 17.5,
+          "6": 17.75,
+          "7": 22.875,
+          "8": 17.875,
+          "9": 16.375
+        },
+        "donor_minus_recipient_logit": -5.0,
+        "donor_recovered": false,
+        "predicted_answer": "7",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 21.25,
+          "1": 20.25,
+          "2": 18.5,
+          "3": 18.25,
+          "4": 18.375,
+          "5": 18.875,
+          "6": 19.375,
+          "7": 24.0,
+          "8": 19.0,
+          "9": 18.0
+        },
+        "donor_minus_recipient_logit": -5.0,
+        "donor_recovered": false,
+        "predicted_answer": "7",
+        "recipient_correct": true
+      },
+      "family": "variable_binding",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-variable_binding-a5d11c0138902188d4bd"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 20.125,
+          "1": 18.0,
+          "2": 17.5,
+          "3": 17.25,
+          "4": 16.75,
+          "5": 17.875,
+          "6": 18.125,
+          "7": 18.0,
+          "8": 23.0,
+          "9": 17.875
+        },
+        "donor_minus_recipient_logit": 5.0,
+        "donor_recovered": true,
+        "predicted_answer": "8",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 21.5,
+          "1": 20.25,
+          "2": 18.75,
+          "3": 19.25,
+          "4": 18.0,
+          "5": 19.0,
+          "6": 19.25,
+          "7": 20.125,
+          "8": 23.75,
+          "9": 19.125
+        },
+        "donor_minus_recipient_logit": 3.625,
+        "donor_recovered": true,
+        "predicted_answer": "8",
+        "recipient_correct": false
+      },
+      "family": "variable_binding",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-variable_binding-a5d11c0138902188d4bd"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "A": 2.859375,
+          "B": 4.40625,
+          "C": 3.4375,
+          "D": 5.09375
+        },
+        "donor_minus_recipient_logit": -1.65625,
+        "donor_recovered": false,
+        "predicted_answer": "D",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "A": 21.75,
+          "B": 23.375,
+          "C": 22.375,
+          "D": 22.625
+        },
+        "donor_minus_recipient_logit": -0.25,
+        "donor_recovered": false,
+        "predicted_answer": "B",
+        "recipient_correct": false
+      },
+      "family": "state_transition",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-state_transition-3eac0c193c2f0367dbe9"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "A": 3.78125,
+          "B": 3.390625,
+          "C": 3.921875,
+          "D": 3.671875
+        },
+        "donor_minus_recipient_logit": 0.25,
+        "donor_recovered": true,
+        "predicted_answer": "C",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "A": 22.5,
+          "B": 21.625,
+          "C": 23.625,
+          "D": 21.25
+        },
+        "donor_minus_recipient_logit": 2.375,
+        "donor_recovered": true,
+        "predicted_answer": "C",
+        "recipient_correct": false
+      },
+      "family": "state_transition",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-state_transition-3eac0c193c2f0367dbe9"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "A": 5.15625,
+          "B": 3.046875,
+          "C": 3.546875,
+          "D": 3.53125
+        },
+        "donor_minus_recipient_logit": -1.625,
+        "donor_recovered": false,
+        "predicted_answer": "A",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "A": 24.375,
+          "B": 21.25,
+          "C": 22.0,
+          "D": 21.0
+        },
+        "donor_minus_recipient_logit": -3.375,
+        "donor_recovered": false,
+        "predicted_answer": "A",
+        "recipient_correct": true
+      },
+      "family": "state_transition",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-state_transition-ea2dff1e94b7ed74c187"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "A": 2.171875,
+          "B": 4.34375,
+          "C": 4.0625,
+          "D": 5.75
+        },
+        "donor_minus_recipient_logit": 3.578125,
+        "donor_recovered": true,
+        "predicted_answer": "D",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "A": 21.625,
+          "B": 23.25,
+          "C": 22.75,
+          "D": 23.5
+        },
+        "donor_minus_recipient_logit": 1.875,
+        "donor_recovered": true,
+        "predicted_answer": "D",
+        "recipient_correct": false
+      },
+      "family": "state_transition",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-state_transition-ea2dff1e94b7ed74c187"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "A": 2.328125,
+          "B": 4.625,
+          "C": 4.0,
+          "D": 5.65625
+        },
+        "donor_minus_recipient_logit": -1.03125,
+        "donor_recovered": false,
+        "predicted_answer": "D",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "A": 21.625,
+          "B": 23.0,
+          "C": 22.75,
+          "D": 23.125
+        },
+        "donor_minus_recipient_logit": -0.125,
+        "donor_recovered": false,
+        "predicted_answer": "D",
+        "recipient_correct": true
+      },
+      "family": "state_transition",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-state_transition-16de12774e804cd4b998"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "A": 4.15625,
+          "B": 5.09375,
+          "C": 4.0625,
+          "D": 3.28125
+        },
+        "donor_minus_recipient_logit": 1.8125,
+        "donor_recovered": true,
+        "predicted_answer": "B",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "A": 22.125,
+          "B": 23.125,
+          "C": 22.375,
+          "D": 21.125
+        },
+        "donor_minus_recipient_logit": 2.0,
+        "donor_recovered": true,
+        "predicted_answer": "B",
+        "recipient_correct": false
+      },
+      "family": "state_transition",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-state_transition-16de12774e804cd4b998"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "A": 1.4453125,
+          "B": 4.875,
+          "C": 2.203125,
+          "D": 4.34375
+        },
+        "donor_minus_recipient_logit": -3.4296875,
+        "donor_recovered": false,
+        "predicted_answer": "B",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "A": 21.375,
+          "B": 24.25,
+          "C": 21.625,
+          "D": 22.375
+        },
+        "donor_minus_recipient_logit": -2.875,
+        "donor_recovered": false,
+        "predicted_answer": "B",
+        "recipient_correct": true
+      },
+      "family": "state_transition",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-state_transition-7da07bf0d264f3804964"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "A": 5.09375,
+          "B": 4.25,
+          "C": 2.15625,
+          "D": 4.3125
+        },
+        "donor_minus_recipient_logit": 0.84375,
+        "donor_recovered": true,
+        "predicted_answer": "A",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "A": 24.0,
+          "B": 22.375,
+          "C": 20.875,
+          "D": 21.5
+        },
+        "donor_minus_recipient_logit": 1.625,
+        "donor_recovered": true,
+        "predicted_answer": "A",
+        "recipient_correct": false
+      },
+      "family": "state_transition",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-state_transition-7da07bf0d264f3804964"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 17.75,
+          "1": 18.25,
+          "2": 16.625,
+          "3": 16.625,
+          "4": 18.625,
+          "5": 16.75,
+          "6": 16.25,
+          "7": 16.75,
+          "8": 21.125,
+          "9": 16.75
+        },
+        "donor_minus_recipient_logit": -2.5,
+        "donor_recovered": false,
+        "predicted_answer": "8",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 20.375,
+          "1": 21.25,
+          "2": 18.625,
+          "3": 19.125,
+          "4": 21.0,
+          "5": 18.75,
+          "6": 18.75,
+          "7": 19.875,
+          "8": 24.125,
+          "9": 19.375
+        },
+        "donor_minus_recipient_logit": -3.125,
+        "donor_recovered": false,
+        "predicted_answer": "8",
+        "recipient_correct": true
+      },
+      "family": "long_context_dependency",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-long_context_dependency-22a9909c988f1f6a98ee"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 17.75,
+          "1": 18.125,
+          "2": 16.875,
+          "3": 16.875,
+          "4": 20.875,
+          "5": 17.5,
+          "6": 15.6875,
+          "7": 16.75,
+          "8": 15.6875,
+          "9": 16.375
+        },
+        "donor_minus_recipient_logit": 5.1875,
+        "donor_recovered": true,
+        "predicted_answer": "4",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 20.5,
+          "1": 21.25,
+          "2": 19.0,
+          "3": 19.75,
+          "4": 24.125,
+          "5": 19.75,
+          "6": 17.875,
+          "7": 19.25,
+          "8": 17.5,
+          "9": 18.125
+        },
+        "donor_minus_recipient_logit": 6.625,
+        "donor_recovered": true,
+        "predicted_answer": "4",
+        "recipient_correct": false
+      },
+      "family": "long_context_dependency",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-long_context_dependency-22a9909c988f1f6a98ee"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 18.875,
+          "1": 19.625,
+          "2": 21.125,
+          "3": 17.75,
+          "4": 16.75,
+          "5": 17.0,
+          "6": 15.8125,
+          "7": 16.25,
+          "8": 16.25,
+          "9": 16.75
+        },
+        "donor_minus_recipient_logit": -5.3125,
+        "donor_recovered": false,
+        "predicted_answer": "2",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 21.375,
+          "1": 22.75,
+          "2": 24.0,
+          "3": 20.25,
+          "4": 18.75,
+          "5": 18.75,
+          "6": 17.75,
+          "7": 18.5,
+          "8": 18.375,
+          "9": 19.25
+        },
+        "donor_minus_recipient_logit": -6.25,
+        "donor_recovered": false,
+        "predicted_answer": "2",
+        "recipient_correct": true
+      },
+      "family": "long_context_dependency",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-long_context_dependency-2de8481b7f62a7ab32ba"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 18.0,
+          "1": 18.625,
+          "2": 15.75,
+          "3": 15.5,
+          "4": 15.125,
+          "5": 15.875,
+          "6": 21.0,
+          "7": 17.125,
+          "8": 15.8125,
+          "9": 16.25
+        },
+        "donor_minus_recipient_logit": 5.25,
+        "donor_recovered": true,
+        "predicted_answer": "6",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 20.5,
+          "1": 21.75,
+          "2": 17.75,
+          "3": 18.125,
+          "4": 17.75,
+          "5": 18.5,
+          "6": 24.5,
+          "7": 20.125,
+          "8": 18.125,
+          "9": 18.625
+        },
+        "donor_minus_recipient_logit": 6.75,
+        "donor_recovered": true,
+        "predicted_answer": "6",
+        "recipient_correct": false
+      },
+      "family": "long_context_dependency",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-long_context_dependency-2de8481b7f62a7ab32ba"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 18.875,
+          "1": 19.875,
+          "2": 18.125,
+          "3": 18.0,
+          "4": 19.875,
+          "5": 18.625,
+          "6": 17.25,
+          "7": 17.75,
+          "8": 17.625,
+          "9": 18.625
+        },
+        "donor_minus_recipient_logit": 0.0,
+        "donor_recovered": false,
+        "predicted_answer": "1",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 21.25,
+          "1": 22.375,
+          "2": 19.875,
+          "3": 20.25,
+          "4": 22.625,
+          "5": 20.625,
+          "6": 19.25,
+          "7": 20.0,
+          "8": 19.625,
+          "9": 21.125
+        },
+        "donor_minus_recipient_logit": 0.25,
+        "donor_recovered": true,
+        "predicted_answer": "4",
+        "recipient_correct": false
+      },
+      "family": "long_context_dependency",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-long_context_dependency-e6577dc970863ee5b101"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 17.5,
+          "1": 17.625,
+          "2": 16.375,
+          "3": 16.375,
+          "4": 20.875,
+          "5": 17.125,
+          "6": 15.3125,
+          "7": 15.375,
+          "8": 15.0,
+          "9": 16.625
+        },
+        "donor_minus_recipient_logit": 3.25,
+        "donor_recovered": true,
+        "predicted_answer": "4",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 20.25,
+          "1": 21.0,
+          "2": 18.75,
+          "3": 19.375,
+          "4": 24.375,
+          "5": 19.625,
+          "6": 17.5,
+          "7": 17.75,
+          "8": 16.75,
+          "9": 18.625
+        },
+        "donor_minus_recipient_logit": 3.375,
+        "donor_recovered": true,
+        "predicted_answer": "4",
+        "recipient_correct": false
+      },
+      "family": "long_context_dependency",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-long_context_dependency-e6577dc970863ee5b101"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 16.875,
+          "1": 17.375,
+          "2": 17.75,
+          "3": 16.375,
+          "4": 21.0,
+          "5": 16.875,
+          "6": 15.0,
+          "7": 15.6875,
+          "8": 14.5,
+          "9": 15.1875
+        },
+        "donor_minus_recipient_logit": -4.125,
+        "donor_recovered": false,
+        "predicted_answer": "4",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 19.75,
+          "1": 20.625,
+          "2": 20.125,
+          "3": 19.5,
+          "4": 24.875,
+          "5": 19.5,
+          "6": 17.375,
+          "7": 18.25,
+          "8": 16.375,
+          "9": 17.125
+        },
+        "donor_minus_recipient_logit": -5.125,
+        "donor_recovered": false,
+        "predicted_answer": "4",
+        "recipient_correct": true
+      },
+      "family": "long_context_dependency",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-long_context_dependency-6e113b9f19e71ec3e72e"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 19.875,
+          "1": 19.375,
+          "2": 19.75,
+          "3": 18.125,
+          "4": 17.875,
+          "5": 18.5,
+          "6": 17.75,
+          "7": 19.125,
+          "8": 17.875,
+          "9": 18.125
+        },
+        "donor_minus_recipient_logit": 2.0,
+        "donor_recovered": true,
+        "predicted_answer": "0",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 22.375,
+          "1": 21.875,
+          "2": 21.75,
+          "3": 20.375,
+          "4": 19.75,
+          "5": 20.5,
+          "6": 19.75,
+          "7": 21.75,
+          "8": 19.75,
+          "9": 20.125
+        },
+        "donor_minus_recipient_logit": 2.625,
+        "donor_recovered": true,
+        "predicted_answer": "0",
+        "recipient_correct": false
+      },
+      "family": "long_context_dependency",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-long_context_dependency-6e113b9f19e71ec3e72e"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 22.0,
+          "1": 19.875
+        },
+        "donor_minus_recipient_logit": -2.125,
+        "donor_recovered": false,
+        "predicted_answer": "0",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 25.25,
+          "1": 22.25
+        },
+        "donor_minus_recipient_logit": -3.0,
+        "donor_recovered": false,
+        "predicted_answer": "0",
+        "recipient_correct": true
+      },
+      "family": "boolean_logic",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-boolean_logic-902ba575559101886830"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 19.125,
+          "1": 22.875
+        },
+        "donor_minus_recipient_logit": 3.75,
+        "donor_recovered": true,
+        "predicted_answer": "1",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 21.75,
+          "1": 26.125
+        },
+        "donor_minus_recipient_logit": 4.375,
+        "donor_recovered": true,
+        "predicted_answer": "1",
+        "recipient_correct": false
+      },
+      "family": "boolean_logic",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-boolean_logic-902ba575559101886830"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 19.0,
+          "1": 22.625
+        },
+        "donor_minus_recipient_logit": -3.625,
+        "donor_recovered": false,
+        "predicted_answer": "1",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 21.5,
+          "1": 26.125
+        },
+        "donor_minus_recipient_logit": -4.625,
+        "donor_recovered": false,
+        "predicted_answer": "1",
+        "recipient_correct": true
+      },
+      "family": "boolean_logic",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-boolean_logic-ea2d806b649614520c14"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 21.25,
+          "1": 21.875
+        },
+        "donor_minus_recipient_logit": -0.625,
+        "donor_recovered": false,
+        "predicted_answer": "1",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 23.5,
+          "1": 25.375
+        },
+        "donor_minus_recipient_logit": -1.875,
+        "donor_recovered": false,
+        "predicted_answer": "1",
+        "recipient_correct": true
+      },
+      "family": "boolean_logic",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-boolean_logic-ea2d806b649614520c14"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 21.125,
+          "1": 22.0
+        },
+        "donor_minus_recipient_logit": 0.875,
+        "donor_recovered": true,
+        "predicted_answer": "1",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 23.25,
+          "1": 25.375
+        },
+        "donor_minus_recipient_logit": 2.125,
+        "donor_recovered": true,
+        "predicted_answer": "1",
+        "recipient_correct": false
+      },
+      "family": "boolean_logic",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-boolean_logic-4151f06f106b5f17d922"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 19.125,
+          "1": 22.75
+        },
+        "donor_minus_recipient_logit": 3.625,
+        "donor_recovered": true,
+        "predicted_answer": "1",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 21.5,
+          "1": 26.125
+        },
+        "donor_minus_recipient_logit": 4.625,
+        "donor_recovered": true,
+        "predicted_answer": "1",
+        "recipient_correct": false
+      },
+      "family": "boolean_logic",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-boolean_logic-4151f06f106b5f17d922"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 22.0,
+          "1": 19.875
+        },
+        "donor_minus_recipient_logit": -2.125,
+        "donor_recovered": false,
+        "predicted_answer": "0",
+        "recipient_correct": true
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 25.125,
+          "1": 22.125
+        },
+        "donor_minus_recipient_logit": -3.0,
+        "donor_recovered": false,
+        "predicted_answer": "0",
+        "recipient_correct": true
+      },
+      "family": "boolean_logic",
+      "leading_space_token_id": 220,
+      "role": "recipient",
+      "state_id": "v40-boolean_logic-d92eef32aaa58ca2d400"
+    },
+    {
+      "after_one_space": {
+        "candidate_logits": {
+          "0": 19.375,
+          "1": 23.0
+        },
+        "donor_minus_recipient_logit": 3.625,
+        "donor_recovered": true,
+        "predicted_answer": "1",
+        "recipient_correct": false
+      },
+      "direct": {
+        "candidate_logits": {
+          "0": 21.75,
+          "1": 26.125
+        },
+        "donor_minus_recipient_logit": 4.375,
+        "donor_recovered": true,
+        "predicted_answer": "1",
+        "recipient_correct": false
+      },
+      "family": "boolean_logic",
+      "leading_space_token_id": 220,
+      "role": "donor",
+      "state_id": "v40-boolean_logic-d92eef32aaa58ca2d400"
+    }
+  ],
+  "source_sha256": "7b795809299ace8ee165a2dc436a4d0606a4bc07da69ebddcb4e1bb2825b8b3c",
+  "status": "CALIBRATION_ONLY_ANSWER_FORM_AUDIT"
+}

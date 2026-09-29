@@ -1,0 +1,21 @@
+protocol_version: channel_function_v40_calibration_a3
+parent_a2: artifacts/channel_function_v40_a2.freeze.json
+reason: Falcon cached multi-token continuation diverged from direct and tokenwise continuation in calibration pilot
+operative_continuation: sequential single-token native cached steps for both models
+models: [Q, F]
+role: calibration
+conditions: [BASE, REC_only, Conv_only, KV_only, REC_Conv, REC_Conv_KV]
+native_donor_reference: true
+neutral_text: ' neutral'
+pilot_delays: [0, 1, 32]
+full_calibration_delays: [0]
+answer_alphabets:
+  variable_binding: '0123456789'
+  state_transition: 'ABCD'
+  long_context_dependency: '0123456789'
+  boolean_logic: '01'
+split_full_audit: direct full prompt with use_cache=true versus tokenwise native continuation at delay zero; report full-vocabulary max absolute difference and answer prediction
+equality_policy: exact native cache writeback mandatory; split/full numerical mismatch recorded and reviewed before formal development
+pilot_policy: first sealed calibration state per model, no formal claims
+full_policy: all 16 sealed calibration states per model, no formal claims
+validation_and_final: remain unopened

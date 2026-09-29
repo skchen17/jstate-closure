@@ -1,0 +1,58 @@
+{
+  "calibration_only": true,
+  "delays": [
+    0
+  ],
+  "invalid_reasons": [],
+  "invalid_states": 0,
+  "mode": "full",
+  "model": "Q",
+  "preflight": {
+    "answer_ids": {
+      "boolean_logic": {
+        "0": 15,
+        "1": 16
+      },
+      "long_context_dependency": {
+        "0": 15,
+        "1": 16,
+        "2": 17,
+        "3": 18,
+        "4": 19,
+        "5": 20,
+        "6": 21,
+        "7": 22,
+        "8": 23,
+        "9": 24
+      },
+      "state_transition": {
+        "A": 32,
+        "B": 33,
+        "C": 34,
+        "D": 35
+      },
+      "variable_binding": {
+        "0": 15,
+        "1": 16,
+        "2": 17,
+        "3": 18,
+        "4": 19,
+        "5": 20,
+        "6": 21,
+        "7": 22,
+        "8": 23,
+        "9": 24
+      }
+    },
+    "neutral_token_id": 20002,
+    "no_model_forward": true,
+    "states_preflighted": 16,
+    "states_selected": 16
+  },
+  "raw_path": "results/v40/raw/calibration_Q_a3-full-20260929T120920469858Z.jsonl",
+  "raw_sha256": "d7e1819e93c4c10693f9d998436f2d58a1bfa5e351057142cf6f34109ab1edc5",
+  "run_id": "a3-full-20260929T120920469858Z",
+  "states_selected": 16,
+  "valid_rows": 112,
+  "validation_and_final_unopened": true
+}

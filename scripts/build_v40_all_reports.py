@@ -6,6 +6,8 @@ from pathlib import Path
 
 ORDER = (
     "V40_FROZEN_STARTING_POINT.md",
+    "V40_CALIBRATION_A3.md",
+    "V40_ANSWER_FORM_AUDIT.md",
     "V40_CHANNEL_FUNCTION_PROFILE.md",
     "V40_TASK_GROUNDED_RESULTS.md",
     "V40_TEMPORAL_PERSISTENCE.md",
@@ -18,7 +20,7 @@ ORDER = (
 def build(root: Path) -> Path:
     reports = root / "reports"
     lines = ["# V40 — All Reports", "",
-             "Startup checkpoint only; this bundle contains no intervention outcomes.", ""]
+             "Calibration checkpoint only; no formal development or held-out intervention outcomes.", ""]
     for name in ORDER:
         path = reports / name
         content = path.read_text(encoding="utf-8").strip()

@@ -1,0 +1,79 @@
+{
+  "append_only_sensitivity_not_replacement": true,
+  "mismatch_details": [
+    {
+      "cached_prediction": "B",
+      "condition": "DONOR_NATIVE",
+      "direct_prediction": "A",
+      "family": "state_transition",
+      "max_full_vocab_abs": 0.25,
+      "state_id": "v40-state_transition-9f41f0acf1a22b3abf7b"
+    },
+    {
+      "cached_prediction": "0",
+      "condition": "BASE",
+      "direct_prediction": "2",
+      "family": "long_context_dependency",
+      "max_full_vocab_abs": 0.3125,
+      "state_id": "v40-long_context_dependency-7563590907bf6b69bd97"
+    }
+  ],
+  "mismatched_state_ids": [
+    "v40-long_context_dependency-7563590907bf6b69bd97",
+    "v40-state_transition-9f41f0acf1a22b3abf7b"
+  ],
+  "model": "Q",
+  "original_qualified_states": 41,
+  "policy": "exclude an entire task state if either native BASE or DONOR_NATIVE cached prediction differs from direct full prediction; retain primary all-state analysis unchanged",
+  "primary_analysis_sha256": "a44484dfa109f680b7946cc534faae17a2d313efef2e85a9ccf671146681b8bf",
+  "raw_sha256": "8acd1f8ac7a1767b13e055e91a2b9b10248ff10bcb74ffa73cf3c126a58ce503",
+  "role": "development",
+  "strict_donor_recovery": {
+    "BASE": {
+      "n": 40,
+      "recovered": 0
+    },
+    "Conv_only": {
+      "n": 40,
+      "recovered": 10
+    },
+    "DONOR_NATIVE": {
+      "n": 40,
+      "recovered": 40
+    },
+    "KV_only": {
+      "n": 40,
+      "recovered": 26
+    },
+    "REC_Conv": {
+      "n": 40,
+      "recovered": 11
+    },
+    "REC_Conv_KV": {
+      "n": 40,
+      "recovered": 40
+    },
+    "REC_only": {
+      "n": 40,
+      "recovered": 0
+    }
+  },
+  "strict_matched_control_differences": {
+    "same_prefix_mismatch": {
+      "mean_recconv_minus_control": 0.3548387096774194,
+      "n": 31
+    },
+    "shuffled_REC_Conv": {
+      "mean_recconv_minus_control": 0.275,
+      "n": 40
+    }
+  },
+  "strict_qualified_by_family": {
+    "boolean_logic": 9,
+    "long_context_dependency": 11,
+    "state_transition": 4,
+    "variable_binding": 16
+  },
+  "strict_qualified_states": 40,
+  "strict_qwen_interpretability_gate": true
+}

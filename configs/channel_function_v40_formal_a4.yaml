@@ -1,0 +1,36 @@
+protocol_version: channel_function_v40_formal_a4
+parent: artifacts/channel_function_v40_a3_answer_form_adjudication.freeze.json
+primary_model: Q
+comparison_model: F
+roles: [development, validation, independent_final]
+readout: after_one_space
+readout_rule: append one tokenizer-verified space token after the shared suffix, then constrain argmax to the predeclared family alphabet
+conditions: [BASE, REC_only, Conv_only, KV_only, REC_Conv, REC_Conv_KV, DONOR_NATIVE]
+control_conditions: [surface_only, irrelevant_history, same_prefix_mismatch, shuffled_REC_Conv]
+control_marker_pair: ['2', '7']
+answer_alphabets:
+  variable_binding: '0123456789'
+  state_transition: 'ABCD'
+  long_context_dependency: '0123456789'
+  boolean_logic: '01'
+control_policy: derive controls from each sealed task without model outcomes; preserve the task answer for surface/history controls; use a third natural value for mismatch where possible; shuffled donor must come from another sealed state with equal pre-fork token length
+functional_delay: 0
+temporal_delays: [0, 1, 2, 4, 8, 16, 32]
+trajectory_delays: [0, 8]
+trajectory_conditions: [R000, R100, R010, R001, R110, R101, R011, R111]
+trajectory_layer_groups: three ordered, nonoverlapping thirds of the model recurrent layers
+unit: task_state
+bootstrap_iterations: 2000
+bootstrap_seed: 204040
+confidence_level: 0.95
+qualification: both native recipient and native donor must recover their own external labels under the frozen readout
+qualification_reporting: report every sealed state and the qualified subset; never replace the all-state primary denominator with a selected subset
+qwen_primary_interpretability_gate:
+  minimum_development_qualified_states: 32
+  minimum_development_families_with_four_qualified: 3
+  minimum_validation_qualified_states: 16
+final_opening_policy: review sealed development and validation analyses before independent-final execution; no design or threshold changes based on held-out outcomes
+temporal_policy: report empirical effect by delay and family before any lifetime estimate; estimate a half-life only when an identifiable crossing exists, otherwise report not identifiable
+model_comparison_policy: Falcon is descriptive when its native paired qualification gate is not met; do not infer universal roles or global model incompetence
+invalid_policy: preserve invalid state/condition rows with reasons; never silently remove them from the all-state denominator
+raw_policy: immutable JSONL per new run ID; never overwrite or delete prior partitions

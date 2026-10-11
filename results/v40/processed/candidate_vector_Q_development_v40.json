@@ -1,0 +1,100 @@
+{
+  "channels": {
+    "BASE": {
+      "identifiable_state_denominator": 41,
+      "mean_gap_closed": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "n": 41
+      },
+      "median_gap_closed": 0.0
+    },
+    "Conv_only": {
+      "identifiable_state_denominator": 41,
+      "mean_gap_closed": {
+        "ci95": [
+          0.23677669733193,
+          0.3388128510283352
+        ],
+        "mean": 0.28912809933938327,
+        "n": 41
+      },
+      "median_gap_closed": 0.2793453053208629
+    },
+    "DONOR_NATIVE": {
+      "identifiable_state_denominator": 41,
+      "mean_gap_closed": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "mean": 1.0,
+        "n": 41
+      },
+      "median_gap_closed": 1.0
+    },
+    "KV_only": {
+      "identifiable_state_denominator": 41,
+      "mean_gap_closed": {
+        "ci95": [
+          0.4798482545047514,
+          0.5959025627959982
+        ],
+        "mean": 0.53604980915917,
+        "n": 41
+      },
+      "median_gap_closed": 0.533300979951208
+    },
+    "REC_Conv": {
+      "identifiable_state_denominator": 41,
+      "mean_gap_closed": {
+        "ci95": [
+          0.2490545471651177,
+          0.3507250738879916
+        ],
+        "mean": 0.2984231082013057,
+        "n": 41
+      },
+      "median_gap_closed": 0.27826453882478885
+    },
+    "REC_Conv_KV": {
+      "identifiable_state_denominator": 41,
+      "mean_gap_closed": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "mean": 1.0,
+        "n": 41
+      },
+      "median_gap_closed": 1.0
+    },
+    "REC_only": {
+      "identifiable_state_denominator": 41,
+      "mean_gap_closed": {
+        "ci95": [
+          -0.00225147407549737,
+          0.007658784230481531
+        ],
+        "mean": 0.002661249751989545,
+        "n": 41
+      },
+      "median_gap_closed": 0.0073775818755410505
+    }
+  },
+  "exploratory_operationalization": true,
+  "functional_raw_sha256": "8acd1f8ac7a1767b13e055e91a2b9b10248ff10bcb74ffa73cf3c126a58ce503",
+  "identifiable_qualified_states": 41,
+  "metric": "1 - ||candidate-donor||_2 / ||native_BASE-native_DONOR||_2",
+  "model": "Q",
+  "native_qualified_states": 41,
+  "nonidentifiable_state_ids": [],
+  "primary_analysis_sha256": "a44484dfa109f680b7946cc534faae17a2d313efef2e85a9ccf671146681b8bf",
+  "role": "development",
+  "sealed_states": 64,
+  "secondary_only": true,
+  "vector_scope": "mean-centered task answer-alphabet logits only"
+}

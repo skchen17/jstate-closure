@@ -1,0 +1,59 @@
+{
+  "append_only_sensitivity_not_replacement": true,
+  "mismatch_details": [],
+  "mismatched_state_ids": [],
+  "model": "F",
+  "original_qualified_states": 10,
+  "policy": "exclude an entire task state if either native BASE or DONOR_NATIVE cached prediction differs from direct full prediction; retain primary all-state analysis unchanged",
+  "primary_analysis_sha256": "2b06d042ddcce795389ccc8916f3a5e221347df93bd9346b0237916532964410",
+  "raw_sha256": "8e388557676989f064d2d155df304da7bf2649e20b895bbb41d03641543a14dc",
+  "role": "validation",
+  "strict_donor_recovery": {
+    "BASE": {
+      "n": 10,
+      "recovered": 0
+    },
+    "Conv_only": {
+      "n": 10,
+      "recovered": 3
+    },
+    "DONOR_NATIVE": {
+      "n": 10,
+      "recovered": 10
+    },
+    "KV_only": {
+      "n": 10,
+      "recovered": 5
+    },
+    "REC_Conv": {
+      "n": 10,
+      "recovered": 5
+    },
+    "REC_Conv_KV": {
+      "n": 10,
+      "recovered": 10
+    },
+    "REC_only": {
+      "n": 10,
+      "recovered": 0
+    }
+  },
+  "strict_matched_control_differences": {
+    "same_prefix_mismatch": {
+      "mean_recconv_minus_control": 0.0,
+      "n": 2
+    },
+    "shuffled_REC_Conv": {
+      "mean_recconv_minus_control": 0.3333333333333333,
+      "n": 9
+    }
+  },
+  "strict_qualified_by_family": {
+    "boolean_logic": 8,
+    "long_context_dependency": 1,
+    "state_transition": 0,
+    "variable_binding": 1
+  },
+  "strict_qualified_states": 10,
+  "strict_qwen_interpretability_gate": null
+}

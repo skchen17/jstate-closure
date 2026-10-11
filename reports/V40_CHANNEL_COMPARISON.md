@@ -1,7 +1,12 @@
 # V40 — Channel Comparison
 
-Status: **calibration-only comparison; formal cross-model results not run**.
+Qwen is the primary model; Falcon is a descriptive comparison when its paired native-answer baseline is insufficient.
+Identical channel roles were never required.
 
-Qwen3.5-4B is primary for functional theory construction; Falcon-H1-1.5B-Base is secondary. Both share the same externally generated task states, but token IDs and native recurrent-layer layouts are model-specific. Each model has its own sealed single-token fork audit in `results/v40/processed/design_Q_v40.json` and `results/v40/processed/design_F_v40.json`.
+| Role | Qwen qualified | Qwen gate | Falcon qualified | Falcon scope |
+|---|---:|---|---:|---|
+| development | 41/64 | True | 18/64 | descriptive only; no preregistered Falcon gate |
+| validation | 22/32 | True | 10/32 | descriptive only; no preregistered Falcon gate |
+| independent_final | 19/32 | True | 8/32 | descriptive only; no preregistered Falcon gate |
 
-Calibration shows the initial direct-answer readout is not equally interpretable across models; a leading-space answer audit improves Falcon's Boolean baseline but not the other families. See `V40_ANSWER_FORM_AUDIT.md`. This does not establish an architecture-specific channel role or global model deficit. A difference in mechanisms is permitted; identical channel roles are not assumed.
+A weak Falcon baseline here is an assay limitation, not a general claim about Falcon ability or its channel ontology.

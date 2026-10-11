@@ -1,0 +1,1001 @@
+{
+  "common_qualified_states": 12,
+  "functional_raw_sha256": "0220588ece0cae1f8d11489036f5aceedfa25ef373827095c5c56d24fcfd3ab1",
+  "model": "Q",
+  "no_decay_law_fitted": true,
+  "observed_grid_half_crossings": {
+    "Conv_only": {
+      "common_qualified_state_count": 12,
+      "common_state_median_margin_effects": [
+        1.8125,
+        1.625,
+        0.8125,
+        0.6875,
+        0.5,
+        0.375,
+        0.25
+      ],
+      "criterion": "first delay at or below half of delay-zero absolute median effect, remaining below at all later tested delays",
+      "observed_grid_half_crossing": null
+    },
+    "KV_only": {
+      "common_qualified_state_count": 12,
+      "common_state_median_margin_effects": [
+        5.875,
+        5.96875,
+        6.5,
+        6.6875,
+        6.9375,
+        6.875,
+        6.5625
+      ],
+      "criterion": "first delay at or below half of delay-zero absolute median effect, remaining below at all later tested delays",
+      "observed_grid_half_crossing": null
+    },
+    "REC_Conv": {
+      "common_qualified_state_count": 12,
+      "common_state_median_margin_effects": [
+        1.875,
+        1.9375,
+        1.0625,
+        0.8125,
+        0.6875,
+        0.5625,
+        0.4375
+      ],
+      "criterion": "first delay at or below half of delay-zero absolute median effect, remaining below at all later tested delays",
+      "observed_grid_half_crossing": null
+    },
+    "REC_Conv_KV": {
+      "common_qualified_state_count": 12,
+      "common_state_median_margin_effects": [
+        8.5625,
+        9.625,
+        8.5,
+        7.9375,
+        7.6875,
+        7.25,
+        7.125
+      ],
+      "criterion": "first delay at or below half of delay-zero absolute median effect, remaining below at all later tested delays",
+      "observed_grid_half_crossing": null
+    },
+    "REC_only": {
+      "common_qualified_state_count": 12,
+      "common_state_median_margin_effects": [
+        0.0,
+        0.1875,
+        0.0625,
+        0.078125,
+        0.0625,
+        0.0625,
+        0.0
+      ],
+      "criterion": "first delay at or below half of delay-zero absolute median effect, remaining below at all later tested delays",
+      "observed_grid_half_crossing": null
+    }
+  },
+  "phase": "temporal",
+  "profiles": {
+    "0": {
+      "channels": {
+        "BASE": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 3,
+          "margin_effect": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "n": 19
+          },
+          "median_fraction_of_native_ceiling": 0.0,
+          "median_margin_effect": 0.0,
+          "native_ceiling_positive_states": 19,
+          "qualified_denominator": 19,
+          "qualified_recovery": 0
+        },
+        "Conv_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 5,
+          "margin_effect": {
+            "ci95": [
+              2.1775082236842107,
+              3.8306332236842104
+            ],
+            "mean": 2.9753289473684212,
+            "n": 19
+          },
+          "median_fraction_of_native_ceiling": 0.3815789473684211,
+          "median_margin_effect": 2.375,
+          "native_ceiling_positive_states": 19,
+          "qualified_denominator": 19,
+          "qualified_recovery": 3
+        },
+        "DONOR_NATIVE": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 21,
+          "margin_effect": {
+            "ci95": [
+              6.828371710526316,
+              8.954029605263157
+            ],
+            "mean": 7.894736842105263,
+            "n": 19
+          },
+          "median_fraction_of_native_ceiling": 1.0,
+          "median_margin_effect": 8.625,
+          "native_ceiling_positive_states": 19,
+          "qualified_denominator": 19,
+          "qualified_recovery": 19
+        },
+        "KV_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 17,
+          "margin_effect": {
+            "ci95": [
+              4.391447368421052,
+              5.782894736842105
+            ],
+            "mean": 5.159539473684211,
+            "n": 19
+          },
+          "median_fraction_of_native_ceiling": 0.7105263157894737,
+          "median_margin_effect": 5.5,
+          "native_ceiling_positive_states": 19,
+          "qualified_denominator": 19,
+          "qualified_recovery": 15
+        },
+        "REC_Conv": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 7,
+          "margin_effect": {
+            "ci95": [
+              2.2269325657894736,
+              3.967228618421052
+            ],
+            "mean": 3.0748355263157894,
+            "n": 19
+          },
+          "median_fraction_of_native_ceiling": 0.38636363636363635,
+          "median_margin_effect": 2.375,
+          "native_ceiling_positive_states": 19,
+          "qualified_denominator": 19,
+          "qualified_recovery": 5
+        },
+        "REC_Conv_KV": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 21,
+          "margin_effect": {
+            "ci95": [
+              6.769654605263158,
+              8.954111842105263
+            ],
+            "mean": 7.894736842105263,
+            "n": 19
+          },
+          "median_fraction_of_native_ceiling": 1.0,
+          "median_margin_effect": 8.625,
+          "native_ceiling_positive_states": 19,
+          "qualified_denominator": 19,
+          "qualified_recovery": 19
+        },
+        "REC_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 3,
+          "margin_effect": {
+            "ci95": [
+              0.018092105263157895,
+              0.1587376644736841
+            ],
+            "mean": 0.08634868421052631,
+            "n": 19
+          },
+          "median_fraction_of_native_ceiling": 0.010869565217391304,
+          "median_margin_effect": 0.0625,
+          "native_ceiling_positive_states": 19,
+          "qualified_denominator": 19,
+          "qualified_recovery": 0
+        }
+      },
+      "complete_states": 32,
+      "qualified_by_family": {
+        "boolean_logic": 4,
+        "long_context_dependency": 5,
+        "state_transition": 2,
+        "variable_binding": 8
+      },
+      "qualified_states": 19
+    },
+    "1": {
+      "channels": {
+        "BASE": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 3,
+          "margin_effect": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.0,
+          "median_margin_effect": 0.0,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 0
+        },
+        "Conv_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 9,
+          "margin_effect": {
+            "ci95": [
+              1.9118607954545455,
+              3.632102272727273
+            ],
+            "mean": 2.742897727272727,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.3191923774954628,
+          "median_margin_effect": 2.625,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 6
+        },
+        "DONOR_NATIVE": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 24,
+          "margin_effect": {
+            "ci95": [
+              6.276775568181819,
+              9.244460227272727
+            ],
+            "mean": 7.791193181818182,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 1.0,
+          "median_margin_effect": 9.6875,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 22
+        },
+        "KV_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 15,
+          "margin_effect": {
+            "ci95": [
+              3.4075284090909093,
+              5.542649147727273
+            ],
+            "mean": 4.484375,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.6071428571428571,
+          "median_margin_effect": 4.0625,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 13
+        },
+        "REC_Conv": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 9,
+          "margin_effect": {
+            "ci95": [
+              2.178977272727273,
+              4.079616477272727
+            ],
+            "mean": 3.132102272727273,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.35185185185185186,
+          "median_margin_effect": 3.125,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 6
+        },
+        "REC_Conv_KV": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 24,
+          "margin_effect": {
+            "ci95": [
+              6.363565340909091,
+              9.160582386363636
+            ],
+            "mean": 7.791193181818182,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 1.0,
+          "median_margin_effect": 9.6875,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 22
+        },
+        "REC_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 3,
+          "margin_effect": {
+            "ci95": [
+              0.21875,
+              0.6008522727272727
+            ],
+            "mean": 0.3963068181818182,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.04000904159132007,
+          "median_margin_effect": 0.25,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 0
+        }
+      },
+      "complete_states": 32,
+      "qualified_by_family": {
+        "boolean_logic": 4,
+        "long_context_dependency": 8,
+        "state_transition": 2,
+        "variable_binding": 8
+      },
+      "qualified_states": 22
+    },
+    "16": {
+      "channels": {
+        "BASE": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 2,
+          "margin_effect": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.0,
+          "median_margin_effect": 0.0,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 0
+        },
+        "Conv_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 2,
+          "margin_effect": {
+            "ci95": [
+              0.620703125,
+              1.2982954545454546
+            ],
+            "mean": 0.9346590909090909,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.12390350877192982,
+          "median_margin_effect": 0.765625,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 1
+        },
+        "DONOR_NATIVE": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 23,
+          "margin_effect": {
+            "ci95": [
+              4.679669744318182,
+              6.782848011363635
+            ],
+            "mean": 5.761363636363637,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 1.0,
+          "median_margin_effect": 6.5625,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 22
+        },
+        "KV_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 19,
+          "margin_effect": {
+            "ci95": [
+              3.622816051136364,
+              5.568181818181818
+            ],
+            "mean": 4.581676136363637,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.7602599179206566,
+          "median_margin_effect": 4.5,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 18
+        },
+        "REC_Conv": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 2,
+          "margin_effect": {
+            "ci95": [
+              0.7208451704545454,
+              1.5469460227272724
+            ],
+            "mean": 1.1058238636363635,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.16063596491228072,
+          "median_margin_effect": 0.8125,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 1
+        },
+        "REC_Conv_KV": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 23,
+          "margin_effect": {
+            "ci95": [
+              4.716495028409091,
+              6.845312499999999
+            ],
+            "mean": 5.761363636363637,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 1.0,
+          "median_margin_effect": 6.5625,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 22
+        },
+        "REC_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 2,
+          "margin_effect": {
+            "ci95": [
+              0.07810724431818182,
+              0.2833806818181818
+            ],
+            "mean": 0.17400568181818182,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.02204457364341085,
+          "median_margin_effect": 0.125,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 0
+        }
+      },
+      "complete_states": 32,
+      "qualified_by_family": {
+        "boolean_logic": 4,
+        "long_context_dependency": 8,
+        "state_transition": 3,
+        "variable_binding": 7
+      },
+      "qualified_states": 22
+    },
+    "2": {
+      "channels": {
+        "BASE": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 1,
+          "margin_effect": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.0,
+          "median_margin_effect": 0.0,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 0
+        },
+        "Conv_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 5,
+          "margin_effect": {
+            "ci95": [
+              1.170419034090909,
+              2.3523792613636356
+            ],
+            "mean": 1.7258522727272727,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.1878255836388192,
+          "median_margin_effect": 1.4375,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 4
+        },
+        "DONOR_NATIVE": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 24,
+          "margin_effect": {
+            "ci95": [
+              5.6277698863636365,
+              8.132173295454546
+            ],
+            "mean": 6.921875,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 1.0,
+          "median_margin_effect": 8.5,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 22
+        },
+        "KV_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 20,
+          "margin_effect": {
+            "ci95": [
+              3.931551846590909,
+              5.920454545454546
+            ],
+            "mean": 4.915482954545454,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.7832550860719875,
+          "median_margin_effect": 5.0,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 19
+        },
+        "REC_Conv": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 5,
+          "margin_effect": {
+            "ci95": [
+              1.3506036931818182,
+              2.6761363636363638
+            ],
+            "mean": 1.9928977272727273,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.2241631607828791,
+          "median_margin_effect": 1.8125,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 4
+        },
+        "REC_Conv_KV": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 24,
+          "margin_effect": {
+            "ci95": [
+              5.671555397727273,
+              8.139417613636361
+            ],
+            "mean": 6.921875,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 1.0,
+          "median_margin_effect": 8.5,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 22
+        },
+        "REC_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 1,
+          "margin_effect": {
+            "ci95": [
+              0.14204545454545456,
+              0.4431818181818182
+            ],
+            "mean": 0.2784090909090909,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.02163561076604555,
+          "median_margin_effect": 0.125,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 0
+        }
+      },
+      "complete_states": 32,
+      "qualified_by_family": {
+        "boolean_logic": 4,
+        "long_context_dependency": 8,
+        "state_transition": 2,
+        "variable_binding": 8
+      },
+      "qualified_states": 22
+    },
+    "32": {
+      "channels": {
+        "BASE": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 2,
+          "margin_effect": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "n": 14
+          },
+          "median_fraction_of_native_ceiling": 0.0,
+          "median_margin_effect": 0.0,
+          "native_ceiling_positive_states": 14,
+          "qualified_denominator": 14,
+          "qualified_recovery": 0
+        },
+        "Conv_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 2,
+          "margin_effect": {
+            "ci95": [
+              0.30351562499999996,
+              0.8839285714285714
+            ],
+            "mean": 0.5825892857142857,
+            "n": 14
+          },
+          "median_fraction_of_native_ceiling": 0.06195528609321713,
+          "median_margin_effect": 0.375,
+          "native_ceiling_positive_states": 14,
+          "qualified_denominator": 14,
+          "qualified_recovery": 0
+        },
+        "DONOR_NATIVE": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 18,
+          "margin_effect": {
+            "ci95": [
+              4.303404017857143,
+              6.8840680803571415
+            ],
+            "mean": 5.574776785714286,
+            "n": 14
+          },
+          "median_fraction_of_native_ceiling": 1.0,
+          "median_margin_effect": 6.75,
+          "native_ceiling_positive_states": 14,
+          "qualified_denominator": 14,
+          "qualified_recovery": 14
+        },
+        "KV_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 14,
+          "margin_effect": {
+            "ci95": [
+              3.5300502232142854,
+              6.03822544642857
+            ],
+            "mean": 4.822544642857143,
+            "n": 14
+          },
+          "median_fraction_of_native_ceiling": 0.9137931034482759,
+          "median_margin_effect": 5.375,
+          "native_ceiling_positive_states": 14,
+          "qualified_denominator": 14,
+          "qualified_recovery": 12
+        },
+        "REC_Conv": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 2,
+          "margin_effect": {
+            "ci95": [
+              0.38272879464285714,
+              1.0345982142857142
+            ],
+            "mean": 0.6796875,
+            "n": 14
+          },
+          "median_fraction_of_native_ceiling": 0.07416529830322934,
+          "median_margin_effect": 0.5546875,
+          "native_ceiling_positive_states": 14,
+          "qualified_denominator": 14,
+          "qualified_recovery": 0
+        },
+        "REC_Conv_KV": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 18,
+          "margin_effect": {
+            "ci95": [
+              4.246623883928572,
+              6.787974330357143
+            ],
+            "mean": 5.574776785714286,
+            "n": 14
+          },
+          "median_fraction_of_native_ceiling": 1.0,
+          "median_margin_effect": 6.75,
+          "native_ceiling_positive_states": 14,
+          "qualified_denominator": 14,
+          "qualified_recovery": 14
+        },
+        "REC_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 3,
+          "margin_effect": {
+            "ci95": [
+              0.017857142857142856,
+              0.21428571428571427
+            ],
+            "mean": 0.10714285714285714,
+            "n": 14
+          },
+          "median_fraction_of_native_ceiling": 0.0,
+          "median_margin_effect": 0.0,
+          "native_ceiling_positive_states": 14,
+          "qualified_denominator": 14,
+          "qualified_recovery": 0
+        }
+      },
+      "complete_states": 32,
+      "qualified_by_family": {
+        "boolean_logic": 4,
+        "long_context_dependency": 2,
+        "state_transition": 2,
+        "variable_binding": 6
+      },
+      "qualified_states": 14
+    },
+    "4": {
+      "channels": {
+        "BASE": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 1,
+          "margin_effect": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "n": 23
+          },
+          "median_fraction_of_native_ceiling": 0.0,
+          "median_margin_effect": 0.0,
+          "native_ceiling_positive_states": 23,
+          "qualified_denominator": 23,
+          "qualified_recovery": 0
+        },
+        "Conv_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 2,
+          "margin_effect": {
+            "ci95": [
+              0.882319972826087,
+              1.868308423913043
+            ],
+            "mean": 1.345788043478261,
+            "n": 23
+          },
+          "median_fraction_of_native_ceiling": 0.16666666666666666,
+          "median_margin_effect": 0.875,
+          "native_ceiling_positive_states": 23,
+          "qualified_denominator": 23,
+          "qualified_recovery": 1
+        },
+        "DONOR_NATIVE": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 24,
+          "margin_effect": {
+            "ci95": [
+              4.7574218749999995,
+              7.336956521739131
+            ],
+            "mean": 6.108695652173913,
+            "n": 23
+          },
+          "median_fraction_of_native_ceiling": 1.0,
+          "median_margin_effect": 7.375,
+          "native_ceiling_positive_states": 23,
+          "qualified_denominator": 23,
+          "qualified_recovery": 23
+        },
+        "KV_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 19,
+          "margin_effect": {
+            "ci95": [
+              3.4774116847826084,
+              5.49867527173913
+            ],
+            "mean": 4.455842391304348,
+            "n": 23
+          },
+          "median_fraction_of_native_ceiling": 0.8275862068965517,
+          "median_margin_effect": 4.125,
+          "native_ceiling_positive_states": 23,
+          "qualified_denominator": 23,
+          "qualified_recovery": 18
+        },
+        "REC_Conv": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 3,
+          "margin_effect": {
+            "ci95": [
+              1.0760190217391303,
+              2.1970108695652173
+            ],
+            "mean": 1.5971467391304348,
+            "n": 23
+          },
+          "median_fraction_of_native_ceiling": 0.1864406779661017,
+          "median_margin_effect": 1.375,
+          "native_ceiling_positive_states": 23,
+          "qualified_denominator": 23,
+          "qualified_recovery": 2
+        },
+        "REC_Conv_KV": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 24,
+          "margin_effect": {
+            "ci95": [
+              4.768919836956521,
+              7.337143342391304
+            ],
+            "mean": 6.108695652173913,
+            "n": 23
+          },
+          "median_fraction_of_native_ceiling": 1.0,
+          "median_margin_effect": 7.375,
+          "native_ceiling_positive_states": 23,
+          "qualified_denominator": 23,
+          "qualified_recovery": 23
+        },
+        "REC_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 1,
+          "margin_effect": {
+            "ci95": [
+              0.13858695652173914,
+              0.4076086956521739
+            ],
+            "mean": 0.26290760869565216,
+            "n": 23
+          },
+          "median_fraction_of_native_ceiling": 0.028169014084507043,
+          "median_margin_effect": 0.125,
+          "native_ceiling_positive_states": 23,
+          "qualified_denominator": 23,
+          "qualified_recovery": 0
+        }
+      },
+      "complete_states": 32,
+      "qualified_by_family": {
+        "boolean_logic": 4,
+        "long_context_dependency": 8,
+        "state_transition": 4,
+        "variable_binding": 7
+      },
+      "qualified_states": 23
+    },
+    "8": {
+      "channels": {
+        "BASE": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 1,
+          "margin_effect": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.0,
+          "median_margin_effect": 0.0,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 0
+        },
+        "Conv_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 3,
+          "margin_effect": {
+            "ci95": [
+              0.8195312499999999,
+              1.7672230113636354
+            ],
+            "mean": 1.2684659090909092,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.12295839753466872,
+          "median_margin_effect": 0.8125,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 2
+        },
+        "DONOR_NATIVE": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 23,
+          "margin_effect": {
+            "ci95": [
+              5.042578125,
+              7.318252840909091
+            ],
+            "mean": 6.204545454545454,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 1.0,
+          "median_margin_effect": 7.125,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 22
+        },
+        "KV_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 20,
+          "margin_effect": {
+            "ci95": [
+              3.7613636363636362,
+              5.6164772727272725
+            ],
+            "mean": 4.681818181818182,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.7874608150470219,
+          "median_margin_effect": 4.5625,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 19
+        },
+        "REC_Conv": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 3,
+          "margin_effect": {
+            "ci95": [
+              0.986434659090909,
+              2.0583096590909085
+            ],
+            "mean": 1.4950284090909092,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.1765536723163842,
+          "median_margin_effect": 0.9375,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 2
+        },
+        "REC_Conv_KV": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 23,
+          "margin_effect": {
+            "ci95": [
+              5.013884943181819,
+              7.3189453125
+            ],
+            "mean": 6.204545454545454,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 1.0,
+          "median_margin_effect": 7.125,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 22
+        },
+        "REC_only": {
+          "all_state_denominator": 32,
+          "donor_recovered_all_states": 1,
+          "margin_effect": {
+            "ci95": [
+              0.11997514204545455,
+              0.3678977272727273
+            ],
+            "mean": 0.23224431818181818,
+            "n": 22
+          },
+          "median_fraction_of_native_ceiling": 0.03159203980099502,
+          "median_margin_effect": 0.1875,
+          "native_ceiling_positive_states": 22,
+          "qualified_denominator": 22,
+          "qualified_recovery": 0
+        }
+      },
+      "complete_states": 32,
+      "qualified_by_family": {
+        "boolean_logic": 4,
+        "long_context_dependency": 8,
+        "state_transition": 3,
+        "variable_binding": 7
+      },
+      "qualified_states": 22
+    }
+  },
+  "role": "independent_final",
+  "sealed_states": 32,
+  "temporal_raw_sha256": "0dcc60f5f3af09c59f37c8be82489dfd8d5f52cf9139cdefb85a696b28773324"
+}

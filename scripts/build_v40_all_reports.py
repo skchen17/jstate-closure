@@ -19,8 +19,12 @@ ORDER = (
 
 def build(root: Path) -> Path:
     reports = root / "reports"
+    complete = (reports / "V40_COMPLETE_REPORT.md").read_text(encoding="utf-8")
+    status = ("Execution-complete formal V40 report bundle; calibration and formal outcomes are distinguished below."
+              if complete.startswith("# V40 — Complete Report\n") else
+              "Progress checkpoint; formal branches not yet complete.")
     lines = ["# V40 — All Reports", "",
-             "Calibration checkpoint only; no formal development or held-out intervention outcomes.", ""]
+             status, ""]
     for name in ORDER:
         path = reports / name
         content = path.read_text(encoding="utf-8").strip()

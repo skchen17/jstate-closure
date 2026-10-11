@@ -1,0 +1,31 @@
+protocol_version: channel_function_v40_trajectory_a5
+parent: artifacts/channel_function_v40_a4.freeze.json
+model: Q
+roles: [development, validation, independent_final]
+readout: after_one_space
+delays: [0, 8]
+recurrent_layer_grouping: split the 24 ordered native recurrent layers into three fixed consecutive groups of eight
+common_background: native recipient cache with donor Conv at every Conv layer, recipient KV at every attention layer
+conditions:
+  R000: []
+  R100: [early]
+  R010: [middle]
+  R001: [late]
+  R110: [early, middle]
+  R101: [early, late]
+  R011: [middle, late]
+  R111: [early, middle, late]
+additional_references: [BASE, DONOR_NATIVE]
+readout_checkpoints: [first_continuation_token, post_neutral_if_any, final_answer_space]
+capture_layers: last native recurrent layer in each fixed group
+record: [external_task_answer, candidate_logits, recurrent_state_norms, conv_state_norms, recurrent_state_hashes, conv_state_hashes, hidden_cosines_to_native_donor_and_common_background]
+causal_contrast: R111-R110-R101-R011+R100+R010+R001-R000 on donor-minus-recipient answer logit margin
+bootstrap_iterations: 2000
+bootstrap_seed: 204050
+task_grounded_gate:
+  minimum_native_qualified_states: 16
+  positive_bootstrap_lower_bound: 0.0
+  positive_family_medians_required: 3
+interpretation: contrast is a task-grounded depth-composition diagnostic, not proof of a unique primitive mediator or general storage semantics
+controls: exact selected REC writes, untouched Conv and KV, recipient and donor native references, no future output copying
+raw_policy: immutable unique-run JSONL; retain invalid states with reason

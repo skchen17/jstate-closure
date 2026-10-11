@@ -1,0 +1,368 @@
+{
+  "baseline_qualification_gate": null,
+  "channels": {
+    "BASE": {
+      "all_state_denominator": 32,
+      "donor_recovered_all_states": 7,
+      "donor_recovered_qualified": 0,
+      "margin_shift_vs_base": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "n": 8
+      },
+      "qualified_denominator": 8,
+      "qualified_rate": 0.0,
+      "recovery_delta_vs_base": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "n": 8
+      },
+      "valid_state_denominator": 32
+    },
+    "Conv_only": {
+      "all_state_denominator": 32,
+      "donor_recovered_all_states": 8,
+      "donor_recovered_qualified": 1,
+      "margin_shift_vs_base": {
+        "ci95": [
+          0.768798828125,
+          1.7398956298828123
+        ],
+        "mean": 1.1798095703125,
+        "n": 8
+      },
+      "qualified_denominator": 8,
+      "qualified_rate": 0.125,
+      "recovery_delta_vs_base": {
+        "ci95": [
+          0.0,
+          0.375
+        ],
+        "mean": 0.125,
+        "n": 8
+      },
+      "valid_state_denominator": 32
+    },
+    "DONOR_NATIVE": {
+      "all_state_denominator": 32,
+      "donor_recovered_all_states": 16,
+      "donor_recovered_qualified": 8,
+      "margin_shift_vs_base": {
+        "ci95": [
+          2.96240234375,
+          3.3881866455078127
+        ],
+        "mean": 3.169189453125,
+        "n": 8
+      },
+      "qualified_denominator": 8,
+      "qualified_rate": 1.0,
+      "recovery_delta_vs_base": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "mean": 1.0,
+        "n": 8
+      },
+      "valid_state_denominator": 32
+    },
+    "KV_only": {
+      "all_state_denominator": 32,
+      "donor_recovered_all_states": 12,
+      "donor_recovered_qualified": 4,
+      "margin_shift_vs_base": {
+        "ci95": [
+          0.9058135986328125,
+          2.215493774414062
+        ],
+        "mean": 1.6080322265625,
+        "n": 8
+      },
+      "qualified_denominator": 8,
+      "qualified_rate": 0.5,
+      "recovery_delta_vs_base": {
+        "ci95": [
+          0.125,
+          0.875
+        ],
+        "mean": 0.5,
+        "n": 8
+      },
+      "valid_state_denominator": 32
+    },
+    "REC_Conv": {
+      "all_state_denominator": 32,
+      "donor_recovered_all_states": 11,
+      "donor_recovered_qualified": 4,
+      "margin_shift_vs_base": {
+        "ci95": [
+          0.8811981201171875,
+          1.8277709960937498
+        ],
+        "mean": 1.29052734375,
+        "n": 8
+      },
+      "qualified_denominator": 8,
+      "qualified_rate": 0.5,
+      "recovery_delta_vs_base": {
+        "ci95": [
+          0.125,
+          0.875
+        ],
+        "mean": 0.5,
+        "n": 8
+      },
+      "valid_state_denominator": 32
+    },
+    "REC_Conv_KV": {
+      "all_state_denominator": 32,
+      "donor_recovered_all_states": 16,
+      "donor_recovered_qualified": 8,
+      "margin_shift_vs_base": {
+        "ci95": [
+          2.9577392578125,
+          3.3759765625
+        ],
+        "mean": 3.169189453125,
+        "n": 8
+      },
+      "qualified_denominator": 8,
+      "qualified_rate": 1.0,
+      "recovery_delta_vs_base": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "mean": 1.0,
+        "n": 8
+      },
+      "valid_state_denominator": 32
+    },
+    "REC_only": {
+      "all_state_denominator": 32,
+      "donor_recovered_all_states": 7,
+      "donor_recovered_qualified": 0,
+      "margin_shift_vs_base": {
+        "ci95": [
+          -0.013681030273437499,
+          0.057861328125
+        ],
+        "mean": 0.0230712890625,
+        "n": 8
+      },
+      "qualified_denominator": 8,
+      "qualified_rate": 0.0,
+      "recovery_delta_vs_base": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "n": 8
+      },
+      "valid_state_denominator": 32
+    }
+  },
+  "complete_states": 32,
+  "controls": {
+    "irrelevant_history": {
+      "by_condition": {
+        "BASE": {
+          "correct": 4,
+          "n": 32,
+          "paired_donor": 4
+        },
+        "DONOR_NATIVE": {
+          "correct": 4,
+          "n": 32,
+          "paired_donor": 4
+        },
+        "REC_Conv_KV": {
+          "correct": 4,
+          "n": 32,
+          "paired_donor": 4
+        }
+      },
+      "correct_task_rows": 12,
+      "invalid_rows": 0,
+      "paired_donor_recovery_rows": 12,
+      "unavailable_rows": 0,
+      "valid_rows": 96
+    },
+    "same_prefix_mismatch": {
+      "by_condition": {
+        "ALT_NATIVE": {
+          "correct": 2,
+          "n": 24,
+          "paired_donor": 7
+        },
+        "ALT_REC_Conv": {
+          "correct": 3,
+          "n": 24,
+          "paired_donor": 7
+        }
+      },
+      "correct_task_rows": 5,
+      "invalid_rows": 0,
+      "paired_donor_recovery_rows": 14,
+      "unavailable_rows": 8,
+      "valid_rows": 48
+    },
+    "shuffled_REC_Conv": {
+      "by_condition": {
+        "SHUFFLED": {
+          "correct": 13,
+          "n": 32,
+          "paired_donor": 7
+        }
+      },
+      "correct_task_rows": 13,
+      "invalid_rows": 0,
+      "paired_donor_recovery_rows": 7,
+      "unavailable_rows": 0,
+      "valid_rows": 32
+    },
+    "surface_only": {
+      "by_condition": {
+        "BASE": {
+          "correct": 10,
+          "n": 32,
+          "paired_donor": 10
+        },
+        "DONOR_NATIVE": {
+          "correct": 11,
+          "n": 32,
+          "paired_donor": 11
+        },
+        "REC_Conv_KV": {
+          "correct": 11,
+          "n": 32,
+          "paired_donor": 11
+        }
+      },
+      "correct_task_rows": 32,
+      "invalid_rows": 0,
+      "paired_donor_recovery_rows": 32,
+      "unavailable_rows": 0,
+      "valid_rows": 96
+    }
+  },
+  "families": {
+    "boolean_logic": {
+      "complete_states": 8,
+      "donor_recovered": {
+        "BASE": 0,
+        "Conv_only": 1,
+        "DONOR_NATIVE": 8,
+        "KV_only": 4,
+        "REC_Conv": 4,
+        "REC_Conv_KV": 8,
+        "REC_only": 0
+      },
+      "qualified_states": 8,
+      "sealed_states": 8
+    },
+    "long_context_dependency": {
+      "complete_states": 8,
+      "donor_recovered": {
+        "BASE": 0,
+        "Conv_only": 0,
+        "DONOR_NATIVE": 0,
+        "KV_only": 0,
+        "REC_Conv": 0,
+        "REC_Conv_KV": 0,
+        "REC_only": 0
+      },
+      "qualified_states": 0,
+      "sealed_states": 8
+    },
+    "state_transition": {
+      "complete_states": 8,
+      "donor_recovered": {
+        "BASE": 0,
+        "Conv_only": 0,
+        "DONOR_NATIVE": 0,
+        "KV_only": 0,
+        "REC_Conv": 0,
+        "REC_Conv_KV": 0,
+        "REC_only": 0
+      },
+      "qualified_states": 0,
+      "sealed_states": 8
+    },
+    "variable_binding": {
+      "complete_states": 8,
+      "donor_recovered": {
+        "BASE": 0,
+        "Conv_only": 0,
+        "DONOR_NATIVE": 0,
+        "KV_only": 0,
+        "REC_Conv": 0,
+        "REC_Conv_KV": 0,
+        "REC_only": 0
+      },
+      "qualified_states": 0,
+      "sealed_states": 8
+    }
+  },
+  "invalid_states": [],
+  "model": "F",
+  "phase": "functional",
+  "qualified_state_ids": [
+    "v40-boolean_logic-68235c16d0adcbef2f14",
+    "v40-boolean_logic-722f1e8a2ba828f7f477",
+    "v40-boolean_logic-77e0987160065c8a0520",
+    "v40-boolean_logic-7eb10e848f27f61bf687",
+    "v40-boolean_logic-8346d27b68a816390b3f",
+    "v40-boolean_logic-a521d8bd346b68fb8222",
+    "v40-boolean_logic-e10ce59748d5c102165d",
+    "v40-boolean_logic-eda90d366691fe82d3c3"
+  ],
+  "qualified_states": 8,
+  "raw_sha256": "aec2b1a3514ecefd00d7220a76d492793bae15048d8bc983b41809bbe79487d0",
+  "recconv_recovery_vs_matched_controls": {
+    "same_prefix_mismatch": {
+      "ci95": null,
+      "mean": null,
+      "n": 0
+    },
+    "shuffled_REC_Conv": {
+      "ci95": [
+        0.125,
+        0.875
+      ],
+      "mean": 0.5,
+      "n": 8
+    }
+  },
+  "recconv_vs_conv_margin": {
+    "ci95": [
+      0.013916015625,
+      0.20984802246093745
+    ],
+    "mean": 0.1107177734375,
+    "n": 8
+  },
+  "recconv_vs_conv_recovery": {
+    "ci95": [
+      0.125,
+      0.75
+    ],
+    "mean": 0.375,
+    "n": 8
+  },
+  "role": "independent_final",
+  "sealed_states": 32,
+  "split_full": {
+    "audits": 64,
+    "candidate_prediction_agrees": 62,
+    "max_full_vocab_abs": 0.875
+  }
+}

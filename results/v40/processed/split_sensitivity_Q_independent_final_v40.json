@@ -1,0 +1,70 @@
+{
+  "append_only_sensitivity_not_replacement": true,
+  "mismatch_details": [
+    {
+      "cached_prediction": "2",
+      "condition": "DONOR_NATIVE",
+      "direct_prediction": "1",
+      "family": "long_context_dependency",
+      "max_full_vocab_abs": 0.21875,
+      "state_id": "v40-long_context_dependency-3091ef94a1cc2fb22508"
+    }
+  ],
+  "mismatched_state_ids": [
+    "v40-long_context_dependency-3091ef94a1cc2fb22508"
+  ],
+  "model": "Q",
+  "original_qualified_states": 19,
+  "policy": "exclude an entire task state if either native BASE or DONOR_NATIVE cached prediction differs from direct full prediction; retain primary all-state analysis unchanged",
+  "primary_analysis_sha256": "559eecaefde02eaa737ca9061fb313ec3321b3aaeb1538e7c26ee6f75b027c50",
+  "raw_sha256": "0220588ece0cae1f8d11489036f5aceedfa25ef373827095c5c56d24fcfd3ab1",
+  "role": "independent_final",
+  "strict_donor_recovery": {
+    "BASE": {
+      "n": 19,
+      "recovered": 0
+    },
+    "Conv_only": {
+      "n": 19,
+      "recovered": 3
+    },
+    "DONOR_NATIVE": {
+      "n": 19,
+      "recovered": 19
+    },
+    "KV_only": {
+      "n": 19,
+      "recovered": 15
+    },
+    "REC_Conv": {
+      "n": 19,
+      "recovered": 5
+    },
+    "REC_Conv_KV": {
+      "n": 19,
+      "recovered": 19
+    },
+    "REC_only": {
+      "n": 19,
+      "recovered": 0
+    }
+  },
+  "strict_matched_control_differences": {
+    "same_prefix_mismatch": {
+      "mean_recconv_minus_control": 0.26666666666666666,
+      "n": 15
+    },
+    "shuffled_REC_Conv": {
+      "mean_recconv_minus_control": 0.2631578947368421,
+      "n": 19
+    }
+  },
+  "strict_qualified_by_family": {
+    "boolean_logic": 4,
+    "long_context_dependency": 5,
+    "state_transition": 2,
+    "variable_binding": 8
+  },
+  "strict_qualified_states": 19,
+  "strict_qwen_interpretability_gate": null
+}
